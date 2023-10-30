@@ -1,8 +1,6 @@
 <template>
-  <v-app>
-    <v-content align="center">
-      <router-view></router-view>
-    </v-content>
+  <v-app class="d-flex align-items-center">
+    <router-view></router-view>
   </v-app>
 </template>
 

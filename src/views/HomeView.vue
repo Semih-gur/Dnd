@@ -1,22 +1,43 @@
 <template>
   <h1 class="text-center">Dragonborne Tavern</h1>
-  <v-container>
-    <v-row justify="center">
-      <v-col cols="4">
-        <v-card class="text-center">Classes</v-card>
+  <div class="center">
+    <v-row justify="center" row-height="5">
+      <v-col cols="3">
+        <v-card class="text-center">
+          <v-img class="align-center" src="../assets/image.png"
+            ><h1>Character Creator</h1></v-img
+          >
+        </v-card>
       </v-col>
-      <v-col cols="4"> <v-card class="text-center">Races</v-card> </v-col>
+      <v-col cols="3">
+        <v-card @click="goWiki()" class="text-center">
+          <v-img class="align-center" src="../assets/image.png"
+            ><h1>Wiki</h1></v-img
+          >
+        </v-card>
+      </v-col>
     </v-row>
-    <v-row justify="center">
-      <v-col cols="4"> <v-card class="text-center">Spells</v-card> </v-col>
-      <v-col cols="4"> <v-card class="text-center">Feats</v-card> </v-col>
-    </v-row>
-    <v-row justify="center">
-      <v-col cols="8"> <v-card class="text-center">Coming Soon</v-card></v-col>
-    </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>
-export default {};
+import router from "@/router";
+
+export default {
+  methods: {
+    goWiki() {
+      router.push("/wiki");
+    },
+    goChar() {
+      router.push("/ccreator");
+    },
+  },
+};
 </script>
+
+<style>
+.center {
+  width: 90%;
+  margin: auto;
+}
+</style>
