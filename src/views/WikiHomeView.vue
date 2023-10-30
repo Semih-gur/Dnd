@@ -9,8 +9,8 @@
       </v-col>
       <v-col cols="3">
         <v-card class="text-center"
-          ><v-card class="text-center">
-            <v-card-title>Races</v-card-title>
+          ><v-card @click="races()" class="text-center">
+            <v-card-title >Races</v-card-title>
             <v-img src="../assets/image.png"></v-img> </v-card
         ></v-card>
       </v-col>
@@ -39,8 +39,8 @@ import router from "@/router";
 
 export default {
   methods: {
-    about() {
-      router.push("/about");
+    races() {
+      router.push("/wiki/races");
     },
   },
 };
