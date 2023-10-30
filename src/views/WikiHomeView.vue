@@ -2,7 +2,7 @@
   <div class="center">
     <v-row justify="center" row-height="5">
       <v-col cols="3">
-        <v-card class="text-center">
+        <v-card @click="classes()" class="text-center">
           <v-card-title>Classes</v-card-title>
           <v-img src="../assets/image.png"></v-img>
         </v-card>
@@ -39,6 +39,10 @@ import router from "@/router";
 
 export default {
   methods: {
+    classes(){
+  router.push("wiki/classes")
+},
+
     races() {
       router.push("/wiki/races");
     },
