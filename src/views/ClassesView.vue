@@ -1,12 +1,8 @@
 <template>
-    <div>
-        <ClassesView></ClassesView>
-    </div>
+  <div></div>
 </template>
 
 <script>
-
-export default {
-
-};
+export default {};
 </script>
+p
