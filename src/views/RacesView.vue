@@ -40,10 +40,10 @@ export default {
       {id:1,label:"Dwarf",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
       {id:2,label:"Elf",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
       {id:3,label:"Gnome",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
-      {id:3,label:"Half-Elf",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
-      {id:3,label:"Halfling",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
-      {id:3,label:"Half-Orc",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
-      {id:3,label:"Tiefling",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
+      {id:4,label:"Half-Elf",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
+      {id:5,label:"Halfling",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
+      {id:6,label:"Half-Orc",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
+      {id:7,label:"Tiefling",desc:"Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",bonus:"+2 Str"},
       ]
 
     }),
