@@ -191,9 +191,9 @@
                   <div class="d-flex justify-center">
                     <v-btn               
                     @click="goTo(sub.title)"
-                    class=" pa-3 mb-2 "
+                    class=" mb-2 "
                     color="rgb(54, 61, 68)"
-                    icon="mdi"
+                    :append-icon="sub.icon"
                     >
                   </v-btn>
                   </div>
@@ -417,10 +417,12 @@ export default {
         {
           title: "Ancestral Guardian",
           value: 1,
+          icon:"mdi-book"
         },
         {
           title: "Battlerager",
           value: 2,
+          icon:"mdi-school"
         },
         {
           title: "Beast",
