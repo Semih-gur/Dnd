@@ -25,7 +25,7 @@
     </div>
     <div class="mt-5">
       <div class="bg-grey-darken-4 center pa-5">
-        <h3>Hit Points</h3>
+        <h2>Hit Points</h2>
 
         <p class="mt-2">
           <strong>Hit Dice:</strong> 1d12.
@@ -34,7 +34,7 @@
           Constitution Modifier for every level after).
         </p>
         <br />
-        <h3>Proficiencies</h3>
+        <h2>Proficiencies</h2>
 
         <p>
           <strong>Armor:</strong> Light Armor, Medium Armor, Shields.
@@ -49,7 +49,7 @@
           Intimidation, Nature, Perception, and Survival
         </p>
         <br />
-        <h3>Starting Equipment</h3>
+        <h2>Starting Equipment</h2>
         <p>
           <strong>(a)-</strong>A greataxe <strong>(b)-</strong>Any martial melee
           weapon
@@ -114,7 +114,8 @@
               <br />
             </v-col>
               <v-col>
-                <h1>Unarmored Defense</h1>
+                <h2 class="elevation-10 pa-5">Unarmored Defense</h2>
+                <br>
               <p>
                 While you are not wearing any armor, your armor class equals 10
                 + your Dexterity modifier + your Constitution modifier. You can
@@ -127,12 +128,13 @@
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h3>Level 2</h3>
+              <h2>Level 2</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h1>Danger Sense</h1>
+                  <h2 class="elevation-10 pa-5">Danger Sense</h2>
+                  <br>
               <p>
                 At 2nd level, you gain an uncanny sense of when things nearby
                 aren't as they should be, giving you an edge when you dodge away
@@ -145,7 +147,8 @@
               
             </v-col>
             <v-col>
-              <h1>Reckless Attack</h1>
+              <h2 class="elevation-10 pa-5">Reckless Attack</h2>
+              <br>
               <p>
                 Starting at 2nd level, you can throw aside all concern for
                 defense to attack with fierce desperation. When you make your
@@ -160,42 +163,48 @@
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h3>Level 3</h3>
+              <h2 >Level 3</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Primal Knowledge (Optional)</h1>
+              <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
+              <br>
               <p>
                 You gain proficiency in one skill of your choice from the list
                 of skills available to barbarians at 1st level.
               </p>
               <br />
-              <h1>Primal Path</h1>
-              <b
+              <h2 class="elevation-10 pa-5">Primal Path</h2>
+              <br>
+              <p
                 >At 3rd level, you choose a path that shapes the nature of your
                 rage. Your choice grants you features at 3rd level and again at
-                6th, 10th, and 14th levels.</b
+                6th, 10th, and 14th levels.</p
               >
               <br>
-              <div v-for="sub in subclasses"
-                :key="sub.sub">
-                <v-btn 
-                @click="goTo(sub.title)"
-                class="pa-3 ma-2"
-                color="rgb(54, 61, 68)"
-                icon="mdi-cloud-upload"
-              >
-              </v-btn>
-              {{sub.title}}
-            </div>
+              <v-row>
+                <v-col v-for="sub in subclasses" :key="sub.sub">
+                  <div class="d-flex justify-center ">
+                    <v-btn               
+                    @click="goTo(sub.title)"
+                    class=" pa-3 mb-2 "
+                    color="rgb(54, 61, 68)"
+                    icon="mdi"
+                    >
+                  </v-btn>
+                  </div>
+                    <p class="text-center">{{ sub.title }}</p>
+                </v-col>
+              </v-row>
               
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h3>Level 4</h3>
+              <h2>Level 4</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Ability Score Improvement</h1>
+              <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
+              <br>
               <p>
                 When you reach 4th level, and again at 8th, 12th, 16th, and 19th
                 level, you can increase one ability score of your choice by 2,
@@ -207,16 +216,18 @@
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h3>Level 5</h3>
+              <h2>Level 5</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Extra Attack</h1>
+              <h2 class="elevation-10 pa-5">Extra Attack</h2>
+              <br>
               <p>
                 Beginning at 5th level, you can attack twice, instead of once,
                 whenever you take the Attack action on your turn.
               </p>
               <br />
-              <h1>Fast Movement</h1>
+              <h2 class="elevation-10 pa-5">Fast Movement</h2>
+              <br>
               <p>
                 Starting at 5th level, your speed increases by 10 feet while you
                 aren't wearing heavy armor
@@ -225,10 +236,11 @@
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h3>Level 7</h3>
+              <h2>Level 7</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Feral Instinct</h1>
+              <h2 class="elevation-10 pa-5">Feral Instinct</h2>
+              <br>
               <p>You have advantage on initiative rolls.</p>
               <p>
                 Additionally, if you are surprised at the beginning of combat
@@ -237,7 +249,8 @@
                 on that turn.
               </p>
               <br />
-              <h1>Instinctive Pounce (Optional)</h1>
+              <h2 class="elevation-10 pa-5">Instinctive Pounce (Optional)</h2>
+              <br>
               <p>
                 At 7th level, as part of the bonus action you take to enter your
                 rage, you can move up to half your speed.
@@ -246,10 +259,11 @@
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h3>Level 9</h3>
+              <h2>Level 9</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Brutal Critical</h1>
+              <h2 class="elevation-10 pa-5">Brutal Critical</h2>
+              <br>
               <p>
                 You can roll one additional weapon damage die when determining
                 the extra damage for a critical hit with a melee attack.
@@ -262,10 +276,11 @@
           </v-expansion-panel>
           <v-expansion-panel>
             <v-expansion-panel-title>
-              <h3>Level 10</h3>
+              <h2>Level 10</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Primal Knowledge (Optional)</h1>
+              <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
+              <br>
               <p>
                 You gain proficiency in one skill of your choice from the list
                 of skills available to barbarians at 1st level.
@@ -274,10 +289,11 @@
           </v-expansion-panel>
           <v-expansion-panel>
             <v-expansion-panel-title>
-              <h3>Level 11</h3>
+              <h2>Level 11</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Relentless Rage</h1>
+              <h2 class="elevation-10 pa-5">Relentless Rage</h2>
+              <br>
               <p>
                 Your rage can keep you fighting despite grievous wounds. If you
                 drop to 0 hit points while you're raging and don't die outright,
@@ -293,10 +309,11 @@
           </v-expansion-panel>
           <v-expansion-panel>
             <v-expansion-panel-title>
-              <h3>Level 15</h3>
+              <h2 >Level 15</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Persistent Rage</h1>
+              <h2 class="elevation-10 pa-5">Persistent Rage</h2>
+              <br>
               <p>
                 Your rage is so fierce that it ends early only if you fall
                 unconscious or if you choose to end it.
@@ -305,10 +322,11 @@
           </v-expansion-panel>
           <v-expansion-panel>
             <v-expansion-panel-title>
-              <h3>Level 18</h3>
+              <h2>Level 18</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Indomitable Might</h1>
+              <h2 class="elevation-10 pa-5">Indomitable Might</h2>
+              <br>
               <p>
                 If your total for a Strength check is less than your Strength
                 score, you can use that score in place of the total.
@@ -317,10 +335,11 @@
           </v-expansion-panel>
           <v-expansion-panel class="mb-10">
             <v-expansion-panel-title>
-              <h3>Level 20</h3>
+              <h2 >Level 20</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Primal Champion</h1>
+              <h2 class="elevation-10 pa-5">Primal Champion</h2>
+              <br>
               <p>
                 You embody the power of the wilds. Your Strength and
                 Constitution scores increase by 4. Your maximum for those scores
@@ -394,6 +413,7 @@ export default {
           feature: "Rage, Unarmored Defense",
           rages: "2",
           rageDamage: "+2",
+          title:""
         },
         {
           level: "2",
