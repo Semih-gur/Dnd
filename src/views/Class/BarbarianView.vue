@@ -334,7 +334,7 @@ export default {
           value: 1,
         },
         {
-          title: "Battlerager ",
+          title: "Battlerager",
           value: 2,
         },
         {

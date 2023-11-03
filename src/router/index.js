@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import WikiHomeView from "../views/WikiHomeView.vue";
 import HomeViewVue from "@/views/HomeView.vue";
 import RacesView from "@/views/RacesView.vue";
-import ClassesView from "@/views/ClassesView.vue"
-import BarbarianView from "@/views/Class/BarbarianView.vue"
+import ClassesView from "@/views/ClassesView.vue";
+import BarbarianView from "@/views/Class/BarbarianView.vue";
+import SubclassView from "@/views/Class/SubclassView.vue";
 
 const routes = [
   {
@@ -31,7 +32,16 @@ const routes = [
     name: "Barbarian",
     component: BarbarianView,
   },
-  
+  {
+    path: "/wiki/classes/barbarian/ancestral_guardian",
+    name: "Ancestral Guardian",
+    component: SubclassView,
+  },
+  {
+    path: "/wiki/classes/barbarian/battlerager",
+    name: "Battlerager",
+    component: SubclassView,
+  },
 ];
 
 const router = createRouter({
