@@ -1,0 +1,16 @@
+/*<v-expansion-panels class="center">
+<v-expansion-panel
+class="mt-2"
+title="Level 1"
+text=""
+>
+
+</v-expansion-panel>
+
+<v-expansion-panel
+class="mt-2"
+title="Level 2"
+text="aaaa" >
+
+</v-expansion-panel>
+</v-expansion-panels>*/
