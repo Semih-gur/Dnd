@@ -166,13 +166,16 @@
               <h2 >Level 3</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
-              <br>
-              <p>
-                You gain proficiency in one skill of your choice from the list
-                of skills available to barbarians at 1st level.
-              </p>
-              <br />
+              <v-row>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
+                  <br>
+                  <p>
+                    You gain proficiency in one skill of your choice from the list
+                    of skills available to barbarians at 1st level.
+                  </p>
+                </v-col>
+              <v-col>
               <h2 class="elevation-10 pa-5">Primal Path</h2>
               <br>
               <p
@@ -180,10 +183,12 @@
                 rage. Your choice grants you features at 3rd level and again at
                 6th, 10th, and 14th levels.</p
               >
+            </v-col>
+            </v-row>
               <br>
               <v-row>
                 <v-col v-for="sub in subclasses" :key="sub.sub">
-                  <div class="d-flex justify-center ">
+                  <div class="d-flex justify-center">
                     <v-btn               
                     @click="goTo(sub.title)"
                     class=" pa-3 mb-2 "
@@ -203,15 +208,19 @@
               <h2>Level 4</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-              <br>
-              <p>
-                When you reach 4th level, and again at 8th, 12th, 16th, and 19th
-                level, you can increase one ability score of your choice by 2,
-                or you can increase two ability scores of your choice by 1. As
-                normal, you can't increase an ability score above 20 using this
-                feature.
-              </p>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
+                  <br>
+                  <p>
+                    When you reach 4th level, and again at 8th, 12th, 16th, and 19th
+                    level, you can increase one ability score of your choice by 2,
+                    or you can increase two ability scores of your choice by 1. As
+                    normal, you can't increase an ability score above 20 using this
+                    feature.
+                  </p>
+                </v-col>
+              </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
@@ -219,19 +228,27 @@
               <h2>Level 5</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Extra Attack</h2>
-              <br>
-              <p>
-                Beginning at 5th level, you can attack twice, instead of once,
-                whenever you take the Attack action on your turn.
-              </p>
-              <br />
-              <h2 class="elevation-10 pa-5">Fast Movement</h2>
-              <br>
-              <p>
-                Starting at 5th level, your speed increases by 10 feet while you
-                aren't wearing heavy armor
-              </p>
+              <v-row>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Extra Attack</h2>
+                  <br>
+                  <p>
+                    You can attack twice, instead of once,
+                    whenever you take the Attack action on your turn.
+                  </p>
+                  <br />
+                </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Fast Movement</h2>
+                  <br>
+                  <p>
+                    Your speed increases by 10 feet while you
+                    aren't wearing heavy armor
+                  </p>
+                </v-col>
+              </v-row>
+              
+              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
@@ -239,7 +256,8 @@
               <h2>Level 7</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Feral Instinct</h2>
+              <v-row>
+                <v-col><h2 class="elevation-10 pa-5">Feral Instinct</h2>
               <br>
               <p>You have advantage on initiative rolls.</p>
               <p>
@@ -248,13 +266,16 @@
                 turn, but only if you enter your rage before doing anything else
                 on that turn.
               </p>
-              <br />
-              <h2 class="elevation-10 pa-5">Instinctive Pounce (Optional)</h2>
+              <br /></v-col>
+                <v-col><h2 class="elevation-10 pa-5">Instinctive Pounce (Optional)</h2>
               <br>
               <p>
                 At 7th level, as part of the bonus action you take to enter your
                 rage, you can move up to half your speed.
-              </p>
+              </p></v-col>
+              </v-row>
+              
+              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
@@ -262,7 +283,8 @@
               <h2>Level 9</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Brutal Critical</h2>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6"><h2 class="elevation-10 pa-5">Brutal Critical</h2>
               <br>
               <p>
                 You can roll one additional weapon damage die when determining
@@ -271,7 +293,9 @@
               <p>
                 This increases to two additional dice at 13th level and three
                 additional dice at 17th level.
-              </p>
+              </p></v-col>
+              </v-row>
+              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel>
@@ -279,12 +303,16 @@
               <h2>Level 10</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
-              <br>
-              <p>
-                You gain proficiency in one skill of your choice from the list
-                of skills available to barbarians at 1st level.
-              </p>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
+                  <br>
+                  <p>
+                    You gain proficiency in one skill of your choice from the list
+                    of skills available to barbarians at 1st level.
+                  </p>
+                </v-col>
+              </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel>
@@ -292,7 +320,8 @@
               <h2>Level 11</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Relentless Rage</h2>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6"><h2 class="elevation-10 pa-5">Relentless Rage</h2>
               <br>
               <p>
                 Your rage can keep you fighting despite grievous wounds. If you
@@ -304,7 +333,9 @@
               <p>
                 Each time you use this feature after the first, the DC increases
                 by 5. When you finish a short or long rest, the DC resets to 10.
-              </p>
+              </p></v-col>
+              </v-row>
+              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel>
@@ -312,12 +343,17 @@
               <h2 >Level 15</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Persistent Rage</h2>
-              <br>
-              <p>
-                Your rage is so fierce that it ends early only if you fall
-                unconscious or if you choose to end it.
-              </p>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Persistent Rage</h2>
+                    <br>
+                    <p>
+                      Your rage is so fierce that it ends early only if you fall
+                      unconscious or if you choose to end it.
+                    </p>
+                </v-col>
+              </v-row>
+              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel>
@@ -325,12 +361,17 @@
               <h2>Level 18</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Indomitable Might</h2>
-              <br>
-              <p>
-                If your total for a Strength check is less than your Strength
-                score, you can use that score in place of the total.
-              </p>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                <h2 class="elevation-10 pa-5">Indomitable Might</h2>
+                <br>
+                <p>
+                  If your total for a Strength check is less than your Strength
+                  score, you can use that score in place of the total.
+                </p></v-col>
+              </v-row>
+              
+              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel class="mb-10">
@@ -338,13 +379,18 @@
               <h2 >Level 20</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h2 class="elevation-10 pa-5">Primal Champion</h2>
-              <br>
-              <p>
-                You embody the power of the wilds. Your Strength and
-                Constitution scores increase by 4. Your maximum for those scores
-                is now 24.
-              </p>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Primal Champion</h2>
+                    <br>
+                    <p>
+                      You embody the power of the wilds. Your Strength and
+                      Constitution scores increase by 4. Your maximum for those scores
+                      is now 24.
+                    </p>
+                </v-col>
+              </v-row>
+              
             </v-expansion-panel-text>
           </v-expansion-panel>
         </v-expansion-panels>
