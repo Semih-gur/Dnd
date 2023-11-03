@@ -1,23 +1,24 @@
 <template>
-  <div height="center">
-    <div>
-      <v-table class="center">
-        <thead>
-          <tr>
-            <th class="text-left">Level</th>
-            <th class="text-left">Proficiency Bonus</th>
-            <th class="text-left">Unlocked</th>
-            <th class="text-left">Rages</th>
-            <th class="text-left">Rage Damage</th>
+  
+  <div >
+    <div class="d-flex justify-center"  >
+      <v-table>
+        <thead >
+          <tr >
+            <th class="text-center">Level</th>
+            <th class="text-center">Proficiency Bonus</th>
+            <th class="text-center">Unlocked</th>
+            <th class="text-center">Rages</th>
+            <th class="text-center">Rage Damage</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in levels" :key="item.level">
+          <tr  v-for="item in levels" :key="item.level">
             <td>{{ item.level }}</td>
-            <td>{{ item.profBonus }}</td>
-            <td>{{ item.feature }}</td>
-            <td>{{ item.rages }}</td>
-            <td>{{ item.rageDamage }}</td>
+            <td class="text-center">{{ item.profBonus }}</td>
+            <td class="text-center">{{ item.feature }}</td>
+            <td class="text-center">{{ item.rages }}</td>
+            <td class="text-center">{{ item.rageDamage }}</td>
           </tr>
         </tbody>
       </v-table>
@@ -63,10 +64,13 @@
         <v-expansion-panels v-model="panel">
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h3>Level 1</h3>
+              <h2>Level 1</h2>
             </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <h1>Rage</h1>
+            <v-expansion-panel-text >
+              <v-row>
+                <v-col>
+              <h2 class="elevation-10 pa-5" >Rage</h2>
+              <br>
               <p>
                 On your turn, you can enter a rage as a <b>bonus action.</b>
               </p>
@@ -108,12 +112,17 @@
                 finish a long rest before you can rage again
               </p>
               <br />
-              <h1>Unarmored Defense</h1>
+            </v-col>
+              <v-col>
+                <h1>Unarmored Defense</h1>
               <p>
                 While you are not wearing any armor, your armor class equals 10
                 + your Dexterity modifier + your Constitution modifier. You can
                 use a shield and still gain this benefit.
               </p>
+              </v-col>
+              
+            </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
@@ -121,7 +130,9 @@
               <h3>Level 2</h3>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <h1>Danger Sense</h1>
+              <v-row>
+                <v-col>
+                  <h1>Danger Sense</h1>
               <p>
                 At 2nd level, you gain an uncanny sense of when things nearby
                 aren't as they should be, giving you an edge when you dodge away
@@ -131,6 +142,9 @@
                 incapacitated.
               </p>
               <br />
+              
+            </v-col>
+            <v-col>
               <h1>Reckless Attack</h1>
               <p>
                 Starting at 2nd level, you can throw aside all concern for
@@ -140,6 +154,8 @@
                 Strength during this turn, but attack rolls against you have
                 advantage until your next turn.
               </p>
+            </v-col>
+              </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
@@ -159,15 +175,19 @@
                 rage. Your choice grants you features at 3rd level and again at
                 6th, 10th, and 14th levels.</b
               >
-              <v-btn
+              <br>
+              <div v-for="sub in subclasses"
+                :key="sub.sub">
+                <v-btn 
                 @click="goTo(sub.title)"
                 class="pa-3 ma-2"
-                v-for="sub in subclasses"
-                :key="sub.sub"
                 color="rgb(54, 61, 68)"
+                icon="mdi-cloud-upload"
               >
-                <p class="redText">{{ sub.title }}</p>
               </v-btn>
+              {{sub.title}}
+            </div>
+              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
