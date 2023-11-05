@@ -1,6 +1,5 @@
 <template>
-  
-  <div >
+  <div class="mt-15" >
     <div class="d-flex justify-center"  >
       <v-table>
         <thead >
@@ -193,7 +192,7 @@
                     @click="goTo(sub.title)"
                     class=" mb-2 "
                     color="rgb(54, 61, 68)"
-                    :append-icon="sub.icon"
+                    :icon=sub.icon
                     >
                   </v-btn>
                   </div>
@@ -284,7 +283,7 @@
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
-                <v-col cols="6"><h2 class="elevation-10 pa-5">Brutal Critical</h2>
+                <v-col cols="6" ><h2 class="elevation-10 pa-5">Brutal Critical</h2>
               <br>
               <p>
                 You can roll one additional weapon damage die when determining

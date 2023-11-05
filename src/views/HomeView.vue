@@ -1,5 +1,9 @@
 <template>
-  <h1 class="text-center">Dragonborne Tavern</h1>
+  <div class="title mt-15">
+    <h1 class="text-center">Dragonborne Tavern</h1>
+    <br>
+  <p>Ut exercitation laboris magna do. Deserunt cupidatat elit sit amet anim. Magna ipsum et cillum amet eu enim nostrud sit in tempor anim aliquip culpa reprehenderit. Ex laboris commodo sunt cupidatat aliqua labore irure mollit ullamco laborum dolore reprehenderit.</p>
+  </div>
   <div class="center">
     <v-row justify="center" row-height="5">
       <v-col cols="3">
@@ -36,6 +40,11 @@ export default {
 </script>
 
 <style>
+.title{
+  width: 50%;
+  align-self: center;
+}
+
 .center {
   width: 90%;
   margin: auto;
