@@ -1,13 +1,7 @@
 <template>
   <div class="center mt-16">
     <v-row justify="center" row-height="5">
-      <v-col
-        class=""
-        v-for="(cclass, index) in classes"
-        :key="cclass.id"
-        lg="3"
-        md="4"
-      >
+      <v-col v-for="(cclass, index) in classes" :key="cclass.id" lg="3" md="4">
         <v-card
           @click="goTo(cclass.label)"
           height="300"

@@ -1,8 +1,8 @@
 <template>
-  <div class="center">
+  <div class="center mt-15">
     <v-row justify="center" row-height="5">
       <v-col
-        class="mr-n5"
+        class=""
         v-for="(race, index) in races"
         :key="race.id"
         lg="3"
