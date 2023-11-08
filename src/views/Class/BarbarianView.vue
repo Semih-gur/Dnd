@@ -602,10 +602,7 @@ export default {
 </script>
 
 <style>
-.redText {
-  color: rgb(94, 94, 223);
-  cursor: pointer;
-}
+
 .center {
   width: 80%;
 }

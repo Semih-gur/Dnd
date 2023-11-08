@@ -25,6 +25,8 @@ import router from "@/router";
 
 export default {
   name: "App",
+  
+
   methods: {
     home() {
       router.push("/");
