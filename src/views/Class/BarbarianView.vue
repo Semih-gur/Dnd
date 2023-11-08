@@ -192,8 +192,8 @@
                     @click="goTo(sub.title)"
                     class=" mb-2 "
                     color="rgb(54, 61, 68)"
-                    :icon=sub.icon
                     >
+                    <font-awesome-icon icon="sub.icon" />
                   </v-btn>
                   </div>
                     <p class="text-center">{{ sub.title }}</p>
@@ -401,7 +401,10 @@
 <script>
 import router from "@/router";
 
+
 export default {
+  
+
   methods: {
     goTo(label) {
       router.push(
@@ -421,7 +424,7 @@ export default {
         {
           title: "Battlerager",
           value: 2,
-          icon:"mdi-school"
+          icon:"paw"
         },
         {
           title: "Beast",
