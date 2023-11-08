@@ -186,14 +186,14 @@
             </v-row>
               <br>
               <v-row>
-                <v-col v-for="sub in subclasses" :key="sub.sub">
+                <v-col v-for="sub, in subclasses" :key="sub.sub">
                   <div class="d-flex justify-center">
                     <v-btn               
                     @click="goTo(sub.title)"
                     class=" mb-2 "
                     color="rgb(54, 61, 68)"
                     >
-                    <font-awesome-icon icon="sub.icon" />
+                    <font-awesome-icon :icon="['fab',icon]"/>
                   </v-btn>
                   </div>
                     <p class="text-center">{{ sub.title }}</p>
@@ -415,6 +415,7 @@ export default {
 
   data() {
     return {
+      icon:"user-secret",
       subclasses: [
         {
           title: "Ancestral Guardian",
@@ -429,30 +430,37 @@ export default {
         {
           title: "Beast",
           value: 3,
+          icon:"paw"
         },
         {
           title: "Berserker",
           value: 4,
+          icon:"paw"
         },
         {
           title: "Giant",
           value: 5,
+          icon:"paw"
         },
         {
           title: "Storm Herald",
           value: 6,
+          icon:"paw"
         },
         {
           title: "Totem Warrior",
           value: 7,
+          icon:"paw"
         },
         {
           title: "Wild Magic",
           value: 8,
+          icon:"paw"
         },
         {
           title: "Zealot",
           value: 9,
+          icon:"paw"
         },
       ],
       panel: [0],

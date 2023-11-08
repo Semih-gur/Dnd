@@ -14,9 +14,9 @@
 export default {
   computed: {
     subClass: function () {
-      for (let index = 0; index < this.class.length; index++) {
-        if (this.class[index].name == this.url) {
-          return this.class[index];
+      for (let i = 0; i < this.class.length; i++) {
+        if (this.class[i].name == this.url) {
+          return this.class[i];
         }
       }
       return "nothing";
