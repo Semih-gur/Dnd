@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-15" >
-    <div class="d-flex justify-center"  >
+  <div class="mt-15">
+    <div class="d-flex justify-center">
       <v-table>
-        <thead >
-          <tr >
+        <thead>
+          <tr>
             <th class="text-center">Level</th>
             <th class="text-center">Proficiency Bonus</th>
             <th class="text-center">Unlocked</th>
@@ -12,7 +12,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr  v-for="item in levels" :key="item.level">
+          <tr v-for="item in levels" :key="item.level">
             <td>{{ item.level }}</td>
             <td class="text-center">{{ item.profBonus }}</td>
             <td class="text-center">{{ item.feature }}</td>
@@ -65,64 +65,64 @@
             <v-expansion-panel-title>
               <h2>Level 1</h2>
             </v-expansion-panel-title>
-            <v-expansion-panel-text >
+            <v-expansion-panel-text>
               <v-row>
                 <v-col>
-              <h2 class="elevation-10 pa-5" >Rage</h2>
-              <br>
-              <p>
-                On your turn, you can enter a rage as a <b>bonus action.</b>
-              </p>
-              <br />
-              <p>
-                While raging, you gain the following benefits if you aren't
-                wearing heavy armor:
-              </p>
-              <br />
-              <p>
-                --You have advantage on Strength checks and Strength saving
-                throws.
-              </p>
-              <p>
-                --When you make a melee weapon attack using Strength, you gain a
-                bonus to the damage roll that increases as you gain levels as a
-                barbarian, as shown in the Rage Damage column of the Barbarian
-                table.
-              </p>
-              <p>
-                --You have resistance to bludgeoning, piercing, and slashing
-                damage.
-              </p>
-              <br />
-              <p>
-                If you are able to cast spells, you can't cast them or
-                concentrate on them while raging.
-              </p>
-              <p>
-                Your rage lasts for 1 minute. It ends early if you are knocked
-                unconscious or if your turn ends and you haven't attacked a
-                hostile creature since your last turn or taken damage since
-                then. You can also end your rage on your turn as a bonus action.
-              </p>
-              <br />
-              <p>
-                Once you have raged the number of times shown for your barbarian
-                level in the Rages column of the Barbarian table, you must
-                finish a long rest before you can rage again
-              </p>
-              <br />
-            </v-col>
-              <v-col>
-                <h2 class="elevation-10 pa-5">Unarmored Defense</h2>
-                <br>
-              <p>
-                While you are not wearing any armor, your armor class equals 10
-                + your Dexterity modifier + your Constitution modifier. You can
-                use a shield and still gain this benefit.
-              </p>
-              </v-col>
-              
-            </v-row>
+                  <h2 class="elevation-10 pa-5">Rage</h2>
+                  <br />
+                  <p>
+                    On your turn, you can enter a rage as a <b>bonus action.</b>
+                  </p>
+                  <br />
+                  <p>
+                    While raging, you gain the following benefits if you aren't
+                    wearing heavy armor:
+                  </p>
+                  <br />
+                  <p>
+                    --You have advantage on Strength checks and Strength saving
+                    throws.
+                  </p>
+                  <p>
+                    --When you make a melee weapon attack using Strength, you
+                    gain a bonus to the damage roll that increases as you gain
+                    levels as a barbarian, as shown in the Rage Damage column of
+                    the Barbarian table.
+                  </p>
+                  <p>
+                    --You have resistance to bludgeoning, piercing, and slashing
+                    damage.
+                  </p>
+                  <br />
+                  <p>
+                    If you are able to cast spells, you can't cast them or
+                    concentrate on them while raging.
+                  </p>
+                  <p>
+                    Your rage lasts for 1 minute. It ends early if you are
+                    knocked unconscious or if your turn ends and you haven't
+                    attacked a hostile creature since your last turn or taken
+                    damage since then. You can also end your rage on your turn
+                    as a bonus action.
+                  </p>
+                  <br />
+                  <p>
+                    Once you have raged the number of times shown for your
+                    barbarian level in the Rages column of the Barbarian table,
+                    you must finish a long rest before you can rage again
+                  </p>
+                  <br />
+                </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Unarmored Defense</h2>
+                  <br />
+                  <p>
+                    While you are not wearing any armor, your armor class equals
+                    10 + your Dexterity modifier + your Constitution modifier.
+                    You can use a shield and still gain this benefit.
+                  </p>
+                </v-col>
+              </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
@@ -133,73 +133,75 @@
               <v-row>
                 <v-col>
                   <h2 class="elevation-10 pa-5">Danger Sense</h2>
-                  <br>
-              <p>
-                At 2nd level, you gain an uncanny sense of when things nearby
-                aren't as they should be, giving you an edge when you dodge away
-                from danger. You have advantage on Dexterity saving throws
-                against effects that you can see, such as traps and spells. To
-                gain this benefit, you can't be blinded, deafened, or
-                incapacitated.
-              </p>
-              <br />
-              
-            </v-col>
-            <v-col>
-              <h2 class="elevation-10 pa-5">Reckless Attack</h2>
-              <br>
-              <p>
-                Starting at 2nd level, you can throw aside all concern for
-                defense to attack with fierce desperation. When you make your
-                first attack on your turn, you can decide to attack recklessly.
-                Doing so gives you advantage on melee weapon attack rolls using
-                Strength during this turn, but attack rolls against you have
-                advantage until your next turn.
-              </p>
-            </v-col>
+                  <br />
+                  <p>
+                    At 2nd level, you gain an uncanny sense of when things
+                    nearby aren't as they should be, giving you an edge when you
+                    dodge away from danger. You have advantage on Dexterity
+                    saving throws against effects that you can see, such as
+                    traps and spells. To gain this benefit, you can't be
+                    blinded, deafened, or incapacitated.
+                  </p>
+                  <br />
+                </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Reckless Attack</h2>
+                  <br />
+                  <p>
+                    Starting at 2nd level, you can throw aside all concern for
+                    defense to attack with fierce desperation. When you make
+                    your first attack on your turn, you can decide to attack
+                    recklessly. Doing so gives you advantage on melee weapon
+                    attack rolls using Strength during this turn, but attack
+                    rolls against you have advantage until your next turn.
+                  </p>
+                </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h2 >Level 3</h2>
+              <h2>Level 3</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
                   <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
-                  <br>
+                  <br />
                   <p>
-                    You gain proficiency in one skill of your choice from the list
-                    of skills available to barbarians at 1st level.
+                    You gain proficiency in one skill of your choice from the
+                    list of skills available to barbarians at 1st level.
                   </p>
                 </v-col>
-              <v-col>
-              <h2 class="elevation-10 pa-5">Primal Path</h2>
-              <br>
-              <p
-                >At 3rd level, you choose a path that shapes the nature of your
-                rage. Your choice grants you features at 3rd level and again at
-                6th, 10th, and 14th levels.</p
-              >
-            </v-col>
-            </v-row>
-              <br>
-              <v-row>
-                <v-col v-for="sub, in subclasses" :key="sub.sub">
-                  <div class="d-flex justify-center">
-                    <v-btn               
-                    @click="goTo(sub.title)"
-                    class=" mb-2 "
-                    color="rgb(54, 61, 68)"
-                    >
-                    <font-awesome-icon :icon="['fab',icon]"/>
-                  </v-btn>
-                  </div>
-                    <p class="text-center">{{ sub.title }}</p>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Primal Path</h2>
+                  <br />
+                  <p>
+                    At 3rd level, you choose a path that shapes the nature of
+                    your rage. Your choice grants you features at 3rd level and
+                    again at 6th, 10th, and 14th levels.
+                  </p>
                 </v-col>
               </v-row>
-              
+              <br />
+              <v-row>
+                <v-col v-for="(sub, index) in subclasses" :key="index">
+                  <div class="d-flex justify-center">
+                    <v-btn
+                      @click="goTo(sub.title)"
+                      class="mb-2"
+                      color="rgb(54, 61, 68)"
+                    >
+                      <font-awesome-icon
+                        class="fab fa"
+                        :icon="['fa', icons[index]]"
+                        :key="index"
+                      />
+                    </v-btn>
+                  </div>
+                  <p class="text-center">{{ sub.title }}</p>
+                </v-col>
+              </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
@@ -210,13 +212,13 @@
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
                   <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br>
+                  <br />
                   <p>
-                    When you reach 4th level, and again at 8th, 12th, 16th, and 19th
-                    level, you can increase one ability score of your choice by 2,
-                    or you can increase two ability scores of your choice by 1. As
-                    normal, you can't increase an ability score above 20 using this
-                    feature.
+                    When you reach 4th level, and again at 8th, 12th, 16th, and
+                    19th level, you can increase one ability score of your
+                    choice by 2, or you can increase two ability scores of your
+                    choice by 1. As normal, you can't increase an ability score
+                    above 20 using this feature.
                   </p>
                 </v-col>
               </v-row>
@@ -230,24 +232,22 @@
               <v-row>
                 <v-col>
                   <h2 class="elevation-10 pa-5">Extra Attack</h2>
-                  <br>
+                  <br />
                   <p>
-                    You can attack twice, instead of once,
-                    whenever you take the Attack action on your turn.
+                    You can attack twice, instead of once, whenever you take the
+                    Attack action on your turn.
                   </p>
                   <br />
                 </v-col>
                 <v-col>
                   <h2 class="elevation-10 pa-5">Fast Movement</h2>
-                  <br>
+                  <br />
                   <p>
-                    Your speed increases by 10 feet while you
-                    aren't wearing heavy armor
+                    Your speed increases by 10 feet while you aren't wearing
+                    heavy armor
                   </p>
                 </v-col>
               </v-row>
-              
-              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
@@ -256,25 +256,29 @@
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row>
-                <v-col><h2 class="elevation-10 pa-5">Feral Instinct</h2>
-              <br>
-              <p>You have advantage on initiative rolls.</p>
-              <p>
-                Additionally, if you are surprised at the beginning of combat
-                and aren't incapacitated, you can act normally on your first
-                turn, but only if you enter your rage before doing anything else
-                on that turn.
-              </p>
-              <br /></v-col>
-                <v-col><h2 class="elevation-10 pa-5">Instinctive Pounce (Optional)</h2>
-              <br>
-              <p>
-                At 7th level, as part of the bonus action you take to enter your
-                rage, you can move up to half your speed.
-              </p></v-col>
+                <v-col
+                  ><h2 class="elevation-10 pa-5">Feral Instinct</h2>
+                  <br />
+                  <p>You have advantage on initiative rolls.</p>
+                  <p>
+                    Additionally, if you are surprised at the beginning of
+                    combat and aren't incapacitated, you can act normally on
+                    your first turn, but only if you enter your rage before
+                    doing anything else on that turn.
+                  </p>
+                  <br
+                /></v-col>
+                <v-col
+                  ><h2 class="elevation-10 pa-5">
+                    Instinctive Pounce (Optional)
+                  </h2>
+                  <br />
+                  <p>
+                    At 7th level, as part of the bonus action you take to enter
+                    your rage, you can move up to half your speed.
+                  </p></v-col
+                >
               </v-row>
-              
-              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel expand v-model="panel">
@@ -283,18 +287,20 @@
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
-                <v-col cols="6" ><h2 class="elevation-10 pa-5">Brutal Critical</h2>
-              <br>
-              <p>
-                You can roll one additional weapon damage die when determining
-                the extra damage for a critical hit with a melee attack.
-              </p>
-              <p>
-                This increases to two additional dice at 13th level and three
-                additional dice at 17th level.
-              </p></v-col>
+                <v-col cols="6"
+                  ><h2 class="elevation-10 pa-5">Brutal Critical</h2>
+                  <br />
+                  <p>
+                    You can roll one additional weapon damage die when
+                    determining the extra damage for a critical hit with a melee
+                    attack.
+                  </p>
+                  <p>
+                    This increases to two additional dice at 13th level and
+                    three additional dice at 17th level.
+                  </p></v-col
+                >
               </v-row>
-              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel>
@@ -305,10 +311,10 @@
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
                   <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
-                  <br>
+                  <br />
                   <p>
-                    You gain proficiency in one skill of your choice from the list
-                    of skills available to barbarians at 1st level.
+                    You gain proficiency in one skill of your choice from the
+                    list of skills available to barbarians at 1st level.
                   </p>
                 </v-col>
               </v-row>
@@ -320,39 +326,40 @@
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
-                <v-col cols="6"><h2 class="elevation-10 pa-5">Relentless Rage</h2>
-              <br>
-              <p>
-                Your rage can keep you fighting despite grievous wounds. If you
-                drop to 0 hit points while you're raging and don't die outright,
-                you can make a DC 10 Constitution saving throw. If you succeed,
-                you drop to 1 hit point instead.
-              </p>
-              <br />
-              <p>
-                Each time you use this feature after the first, the DC increases
-                by 5. When you finish a short or long rest, the DC resets to 10.
-              </p></v-col>
+                <v-col cols="6"
+                  ><h2 class="elevation-10 pa-5">Relentless Rage</h2>
+                  <br />
+                  <p>
+                    Your rage can keep you fighting despite grievous wounds. If
+                    you drop to 0 hit points while you're raging and don't die
+                    outright, you can make a DC 10 Constitution saving throw. If
+                    you succeed, you drop to 1 hit point instead.
+                  </p>
+                  <br />
+                  <p>
+                    Each time you use this feature after the first, the DC
+                    increases by 5. When you finish a short or long rest, the DC
+                    resets to 10.
+                  </p></v-col
+                >
               </v-row>
-              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel>
             <v-expansion-panel-title>
-              <h2 >Level 15</h2>
+              <h2>Level 15</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
                   <h2 class="elevation-10 pa-5">Persistent Rage</h2>
-                    <br>
-                    <p>
-                      Your rage is so fierce that it ends early only if you fall
-                      unconscious or if you choose to end it.
-                    </p>
+                  <br />
+                  <p>
+                    Your rage is so fierce that it ends early only if you fall
+                    unconscious or if you choose to end it.
+                  </p>
                 </v-col>
               </v-row>
-              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel>
@@ -362,34 +369,33 @@
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
-                <h2 class="elevation-10 pa-5">Indomitable Might</h2>
-                <br>
-                <p>
-                  If your total for a Strength check is less than your Strength
-                  score, you can use that score in place of the total.
-                </p></v-col>
+                  <h2 class="elevation-10 pa-5">Indomitable Might</h2>
+                  <br />
+                  <p>
+                    If your total for a Strength check is less than your
+                    Strength score, you can use that score in place of the
+                    total.
+                  </p></v-col
+                >
               </v-row>
-              
-              
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel class="mb-10">
             <v-expansion-panel-title>
-              <h2 >Level 20</h2>
+              <h2>Level 20</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
                   <h2 class="elevation-10 pa-5">Primal Champion</h2>
-                    <br>
-                    <p>
-                      You embody the power of the wilds. Your Strength and
-                      Constitution scores increase by 4. Your maximum for those scores
-                      is now 24.
-                    </p>
+                  <br />
+                  <p>
+                    You embody the power of the wilds. Your Strength and
+                    Constitution scores increase by 4. Your maximum for those
+                    scores is now 24.
+                  </p>
                 </v-col>
               </v-row>
-              
             </v-expansion-panel-text>
           </v-expansion-panel>
         </v-expansion-panels>
@@ -401,10 +407,7 @@
 <script>
 import router from "@/router";
 
-
 export default {
-  
-
   methods: {
     goTo(label) {
       router.push(
@@ -415,53 +418,45 @@ export default {
 
   data() {
     return {
-      icon:"user-secret",
       subclasses: [
         {
           title: "Ancestral Guardian",
-          value: 1,
-          icon:"mdi-book"
         },
         {
           title: "Battlerager",
-          value: 2,
-          icon:"paw"
         },
         {
           title: "Beast",
-          value: 3,
-          icon:"paw"
         },
         {
           title: "Berserker",
-          value: 4,
-          icon:"paw"
         },
         {
           title: "Giant",
-          value: 5,
-          icon:"paw"
         },
         {
           title: "Storm Herald",
-          value: 6,
-          icon:"paw"
         },
         {
           title: "Totem Warrior",
-          value: 7,
-          icon:"paw"
         },
         {
           title: "Wild Magic",
-          value: 8,
-          icon:"paw"
         },
         {
           title: "Zealot",
-          value: 9,
-          icon:"paw"
         },
+      ],
+      icons: [
+        "user-secret",
+        "user-secret",
+        "user-secret",
+        "user-secret",
+        "user-secret",
+        "user-secret",
+        "user-secret",
+        "user-secret",
+        "user-secret",
       ],
       panel: [0],
       levels: [
@@ -471,7 +466,7 @@ export default {
           feature: "Rage, Unarmored Defense",
           rages: "2",
           rageDamage: "+2",
-          title:""
+          title: "",
         },
         {
           level: "2",
@@ -613,7 +608,6 @@ export default {
 </script>
 
 <style>
-
 .center {
   width: 80%;
 }

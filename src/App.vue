@@ -1,19 +1,21 @@
 <template>
   <v-app class="d-flex align-items-center">
     <div class="mb-5">
-      <v-app-bar scroll-behavior="collapse" scroll-threshold="50" elevation="3">
+      <v-app-bar elevation="3">
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon
           @click="home()"
           icon="mdi-home"
         ></v-app-bar-nav-icon>
-        <v-breadcrumbs :items="['1', '2', '3']"></v-breadcrumbs>
+        <v-app-bar-title>
+          {{ navTitle.replace("_", " ").toUpperCase() }}
+        </v-app-bar-title>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-btn @click="races()" icon="mdi-account"></v-btn>
         <v-btn @click="classes()" icon="mdi-axe"></v-btn>
-        <v-app-bar-title> </v-app-bar-title>
+        <v-spacer></v-spacer>
       </v-app-bar>
     </div>
     <router-view></router-view>
@@ -25,7 +27,18 @@ import router from "@/router";
 
 export default {
   name: "App",
-  
+  computed: {
+    navTitle: function () {
+      if (this.$route.href == undefined) {
+        return "Home";
+      } else {
+        return this.$route.href.split("/").pop();
+      }
+    },
+  },
+  data() {
+    return {};
+  },
 
   methods: {
     home() {
@@ -39,9 +52,6 @@ export default {
     races() {
       router.push("/wiki/races");
     },
-  },
-  data() {
-    return {};
   },
 };
 </script>
