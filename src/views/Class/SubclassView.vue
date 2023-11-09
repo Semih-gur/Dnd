@@ -4,7 +4,8 @@
       <v-card-title>Level {{ sub.lvl }}</v-card-title>
       <v-card-text>
         <h3>{{ sub.title }}</h3>
-        <p>{{ sub.desc }}</p>
+        <p style="white-space: pre-wrap;">{{ sub.desc }}</p>
+        <br>
       </v-card-text>
     </v-card>
   </div>

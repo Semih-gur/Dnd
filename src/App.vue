@@ -8,7 +8,7 @@
           icon="mdi-home"
         ></v-app-bar-nav-icon>
         <v-app-bar-title>
-          {{ navTitle.replace("_", " ").toUpperCase() }}
+          {{ navTitle.replace("_", " ") }}
         </v-app-bar-title>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
@@ -29,10 +29,11 @@ export default {
   name: "App",
   computed: {
     navTitle: function () {
-      if (this.$route.href == undefined) {
+      if (this.$route.path === '/') {
         return "Home";
       } else {
-        return this.$route.href.split("/").pop();
+        const lastPart = this.$route.href.split("/").pop();
+        return lastPart.charAt(0).toUpperCase() + lastPart.slice(1);
       }
     },
   },
