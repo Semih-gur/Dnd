@@ -3,18 +3,39 @@
     <div class="mb-5">
       <v-app-bar elevation="3">
         <v-spacer></v-spacer>
-        <v-app-bar-nav-icon
-          @click="home()"
-          icon="mdi-home"
-        ></v-app-bar-nav-icon>
+        <v-spacer></v-spacer>
+        <v-btn size="x-large" @click="home()">
+          <v-icon>mdi-home</v-icon>
+          <v-tooltip activator="parent" location="bottom">Home</v-tooltip>
+        </v-btn>
         <v-app-bar-title>
           {{ navTitle.replace("_", " ") }}
         </v-app-bar-title>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
-        <v-btn @click="races()" icon="mdi-account"></v-btn>
-        <v-btn @click="classes()" icon="mdi-axe"></v-btn>
+        <v-btn @click="races()">
+          <v-icon size="x-large">mdi-account</v-icon>
+          <v-tooltip activator="parent" location="bottom">Races</v-tooltip>
+        </v-btn>
+        <v-btn @click="classes()">
+          <v-icon size="x-large">mdi-axe</v-icon>
+          <v-tooltip activator="parent" location="bottom">Classes</v-tooltip>
+        </v-btn>
+        <v-btn @click="classes()">
+          <v-icon size="x-large">mdi-auto-fix</v-icon>
+          <v-tooltip activator="parent" location="bottom">Spells</v-tooltip>
+        </v-btn>
+        <v-btn @click="classes()">
+          <v-icon size="x-large">mdi-account-star</v-icon>
+          <v-tooltip activator="parent" location="bottom"
+            >Backgrounds</v-tooltip
+          >
+        </v-btn>
+        <v-btn @click="classes()">
+          <v-icon size="x-large">mdi-feather</v-icon>
+          <v-tooltip activator="parent" location="bottom">Feats</v-tooltip>
+        </v-btn>
         <v-spacer></v-spacer>
       </v-app-bar>
     </div>
@@ -29,7 +50,11 @@ export default {
   name: "App",
   computed: {
     navTitle: function () {
+<<<<<<< Updated upstream
       if (this.$route.path === "/") {
+=======
+      if (this.$route.href == undefined || this.$route.href == "") {
+>>>>>>> Stashed changes
         return "Home";
       } else {
         const lastPart = this.$route.href.split("/").pop();

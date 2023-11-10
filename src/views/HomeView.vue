@@ -1,8 +1,14 @@
 <template>
   <div class="title mt-15">
-    <h1 class="text-center">Dragonborne Tavern</h1>
-    <br>
-  <p>Ut exercitation laboris magna do. Deserunt cupidatat elit sit amet anim. Magna ipsum et cillum amet eu enim nostrud sit in tempor anim aliquip culpa reprehenderit. Ex laboris commodo sunt cupidatat aliqua labore irure mollit ullamco laborum dolore reprehenderit.</p>
+    <h1 class="text-center">Beholder's Tavern</h1>
+    <br />
+    <p class="text-center">
+      Welcome to Beholder's Tavern where we want to help you with your Dungeons
+      and Dragons 5th Edition needs. From character creation to information
+      about classes, races, spells and more.
+    </p>
+    <br />
+    <p class="text-center">Continue your journey by clicking images below:</p>
   </div>
   <div class="center">
     <v-row justify="center" row-height="5">
@@ -40,7 +46,7 @@ export default {
 </script>
 
 <style>
-.title{
+.title {
   width: 50%;
   align-self: center;
 }
