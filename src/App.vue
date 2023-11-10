@@ -50,11 +50,7 @@ export default {
   name: "App",
   computed: {
     navTitle: function () {
-<<<<<<< Updated upstream
       if (this.$route.path === "/") {
-=======
-      if (this.$route.href == undefined || this.$route.href == "") {
->>>>>>> Stashed changes
         return "Home";
       } else {
         const lastPart = this.$route.href.split("/").pop();
