@@ -29,7 +29,7 @@ export default {
   name: "App",
   computed: {
     navTitle: function () {
-      if (this.$route.path === '/') {
+      if (this.$route.path === "/") {
         return "Home";
       } else {
         const lastPart = this.$route.href.split("/").pop();
