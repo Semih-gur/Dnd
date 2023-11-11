@@ -42,6 +42,41 @@ const routes = [
     name: "Battlerager",
     component: SubclassView,
   },
+  {
+    path: "/wiki/classes/barbarian/beast",
+    name: "Beast",
+    component: SubclassView,
+  },
+  {
+    path: "/wiki/classes/barbarian/berserker",
+    name: "Berserker",
+    component: SubclassView,
+  },
+  {
+    path: "/wiki/classes/barbarian/giant",
+    name: "Giant",
+    component: SubclassView,
+  },
+  {
+    path: "/wiki/classes/barbarian/storm_herald",
+    name: "Storm",
+    component: SubclassView,
+  },
+  {
+    path: "/wiki/classes/barbarian/totem_warrior",
+    name: "Totem",
+    component: SubclassView,
+  },
+  {
+    path: "/wiki/classes/barbarian/wild_magic",
+    name: "Wild",
+    component: SubclassView,
+  },
+  {
+    path: "/wiki/classes/barbarian/zealot",
+    name: "Zealot",
+    component: SubclassView,
+  },
 ];
 
 const router = createRouter({
