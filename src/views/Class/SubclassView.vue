@@ -2,7 +2,7 @@
   <div class="center mt-16">
     <v-card v-for="sub in subClass.sub" :key="sub.lvl" class="">
       <v-card-title>Level {{ sub.lvl }}</v-card-title>
-      <v-card-text>
+      <v-card-text  >
         <h3>{{ sub.title }}</h3>
         <p style="white-space: pre-wrap;">{{ sub.desc }}</p>
         <br>
