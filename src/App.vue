@@ -3,7 +3,6 @@
     <div class="mb-5">
       <v-app-bar elevation="3">
         <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
         <v-btn size="x-large" @click="home()">
           <v-icon>mdi-home</v-icon>
           <v-tooltip activator="parent" location="bottom">Home</v-tooltip>
@@ -11,9 +10,6 @@
         <v-app-bar-title>
           {{ navTitle.replace("_", " ") }}
         </v-app-bar-title>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
-        <v-spacer></v-spacer>
         <v-btn @click="races()">
           <v-icon size="x-large">mdi-account</v-icon>
           <v-tooltip activator="parent" location="bottom">Races</v-tooltip>
