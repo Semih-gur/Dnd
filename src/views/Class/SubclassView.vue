@@ -171,8 +171,7 @@ export default {
               lvl: "6",
               title: "Storm Soul",
               desc:
-                "The storm grants you benefits even when your aura isn't active. The benefits are based on the environment you chose for your Storm Aura.\n\n" +
-                <b> aaaa </b>,
+                "The storm grants you benefits even when your aura isn't active. The benefits are based on the environment you chose for your Storm Aura.\n\n"
             },
             { lvl: "", title: "", desc: "" },
             { lvl: "", title: "", desc: "" },
