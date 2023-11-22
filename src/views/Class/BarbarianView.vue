@@ -250,6 +250,21 @@
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 6</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
+                  <br />
+                  <p>You gain a new feature from the subclass you chose</p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
               <h2>Level 7</h2>
@@ -308,14 +323,19 @@
               <h2>Level 10</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
+              <v-row>
+                <v-col>
                   <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
                   <br />
                   <p>
                     You gain proficiency in one skill of your choice from the
                     list of skills available to barbarians at 1st level.
                   </p>
+                </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Subclass feature</h2>
+                  <br />
+                  <p>You gain a new feature from the subclass you chose</p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -342,6 +362,20 @@
                     resets to 10.
                   </p></v-col
                 >
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 14</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
+                  <br />
+                  <p>You gain a new feature from the subclass you chose</p>
+                </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
