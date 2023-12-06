@@ -5,6 +5,7 @@ import RacesView from "@/views/RacesView.vue";
 import ClassesView from "@/views/ClassesView.vue";
 import BarbarianView from "@/views/Class/BarbarianView.vue";
 import SubclassView from "@/views/Class/SubclassView.vue";
+import SRaceView from "@/views/SRaceView.vue";
 
 const routes = [
   {
@@ -23,6 +24,12 @@ const routes = [
     component: RacesView,
   },
   {
+    path: "/wiki/races/:label",
+    name: "SRace",
+    component: SRaceView,
+  },
+
+  {
     path: "/wiki/classes",
     name: "Classes",
     component: ClassesView,
@@ -32,7 +39,7 @@ const routes = [
     name: "Barbarian",
     component: BarbarianView,
   },
-  
+
   {
     path: "/wiki/classes/barbarian/:subclass",
     name: "Subclass",

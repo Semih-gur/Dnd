@@ -4,7 +4,7 @@
       <v-card-title>{{ sub.lvl }}</v-card-title>
       <v-card-text>
         <h3>{{ sub.title }}</h3>
-        <p style="white-space: pre-wrap">{{ sub.desc }}</p>
+        <span style="white-space: pre-wrap" v-html="sub.desc"></span>
         <br />
       </v-card-text>
     </v-card>
@@ -165,12 +165,12 @@ export default {
             {
               lvl: "Level 3",
               title: "Storm Aura",
-              desc: "When you select this path at 3rd level, you emanate a stormy, magical aura while you rage. The aura extends 10 feet from you in every direction, but not through total cover.\n\nYour aura has an effect that activates when you enter your rage, and you can activate the effect again on each of your turns as a bonus action. Choose desert, sea, or tundra. Your aura's effect depends on that chosen environment, as detailed below. You can change your environment choice whenever you gain a level in this class.\n\nIf your aura's effects require a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.\n\nDesert: When this effect is activated, all other creatures in your aura take 2 fire damage each. The damage increases when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level.\n\nSea: When this effect is activated, you can choose one other creature you can see in your aura. The target must make a Dexterity saving throw. The target takes 1d6 lightning damage on a failed save, or half as much damage on a successful one. The damage increases when you reach certain levels in this class, increasing to 2d6 at 10th level, 3d6 at 15th level, and 4d6 at 20th level.\n\nTundra: When this effect is activated, each creature of your choice in your aura gains 2 temporary hit points, as icy spirits inure it to suffering. The temporary hit points increase when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level.",
+              desc: "When you select this path at 3rd level, you emanate a stormy, magical aura while you rage. The aura extends 10 feet from you in every direction, but not through total cover.\n\nYour aura has an effect that activates when you enter your rage, and you can activate the effect again on each of your turns as a bonus action. Choose desert, sea, or tundra. Your aura's effect depends on that chosen environment, as detailed below. You can change your environment choice whenever you gain a level in this class.\n\nIf your aura's effects require a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.\n\n<b>Desert:</b> When this effect is activated, all other creatures in your aura take 2 fire damage each. The damage increases when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level.\n\n<b>Sea:</b> When this effect is activated, you can choose one other creature you can see in your aura. The target must make a Dexterity saving throw. The target takes 1d6 lightning damage on a failed save, or half as much damage on a successful one. The damage increases when you reach certain levels in this class, increasing to 2d6 at 10th level, 3d6 at 15th level, and 4d6 at 20th level.\n\n<b>Tundra:</b> When this effect is activated, each creature of your choice in your aura gains 2 temporary hit points, as icy spirits inure it to suffering. The temporary hit points increase when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level.",
             },
             {
               lvl: "Level 6",
               title: "Storm Soul",
-              desc: "The storm grants you benefits even when your aura isn't active. The benefits are based on the environment you chose for your Storm Aura.\n\nDesert: You gain resistance to fire damage, and you don’t suffer the effects of extreme heat, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch a flammable object that isn't being worn or carried by anyone else and set it on fire.\n\nSea: You gain resistance to lightning damage, and you can breathe underwater. You also gain a swimming speed of 30 feet.\n\nTundra: You gain resistance to cold damage, and you don’t suffer the effects of extreme cold, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch water and turn a 5-foot cube of it into ice, which melts after 1 minute. This action fails if a creature is in the cube.",
+              desc: "The storm grants you benefits even when your aura isn't active. The benefits are based on the environment you chose for your Storm Aura.\n\n<b>Desert</b>: You gain resistance to fire damage, and you don’t suffer the effects of extreme heat, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch a flammable object that isn't being worn or carried by anyone else and set it on fire.\n\n<b>Sea</b>: You gain resistance to lightning damage, and you can breathe underwater. You also gain a swimming speed of 30 feet.\n\n<b>Tundra:</b> You gain resistance to cold damage, and you don’t suffer the effects of extreme cold, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch water and turn a 5-foot cube of it into ice, which melts after 1 minute. This action fails if a creature is in the cube.",
             },
             {
               lvl: "Level 10",
@@ -180,24 +180,28 @@ export default {
             {
               lvl: "Level 14",
               title: "Raging Storm",
-              desc: "The power of the storm you channel grows mightier, lashing out at your foes. The effect is based on the environment you chose for your Storm Aura.\n\nDesert. Immediately after a creature in your aura hits you with an attack, you can use your reaction to force that creature to make a Dexterity saving throw. On a failed save, the creature takes fire damage equal to half your Barbarian level.\n\nSea: When you hit a creature in your aura with an attack, you can use your reaction to force that creature to make a Strength saving throw. On a failed save, the creature is knocked prone, as if struck by a wave.\n\nTundra: Whenever the effect of your Storm Aura is activated, you can choose one creature you can see in the aura. That creature must succeed on a Strength saving throw, or its speed is reduced to 0 until the start of your next turn, as magical frost covers it.",
+              desc: "The power of the storm you channel grows mightier, lashing out at your foes. The effect is based on the environment you chose for your Storm Aura.\n\n<b>Desert</b>. Immediately after a creature in your aura hits you with an attack, you can use your reaction to force that creature to make a Dexterity saving throw. On a failed save, the creature takes fire damage equal to half your Barbarian level.\n\n<b>Sea</b>: When you hit a creature in your aura with an attack, you can use your reaction to force that creature to make a Strength saving throw. On a failed save, the creature is knocked prone, as if struck by a wave.\n\n<b>Tundra:</b> Whenever the effect of your Storm Aura is activated, you can choose one creature you can see in the aura. That creature must succeed on a Strength saving throw, or its speed is reduced to 0 until the start of your next turn, as magical frost covers it.",
             },
           ],
         },
         {
           name: "totem_warrior",
           sub: [
-            { lvl: "Level 3", title: "Spirit Seeker", desc: "aaa" },
-            { lvl: "", title: "AA", desc: "" },
+            {
+              lvl: "Level 3",
+              title: "Spirit Seeker",
+              desc: "Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the <a>Beast Sense</a> and <a>Speak With Animals </a>spells, but only as rituals",
+            },
+            {
+              lvl: "",
+              title: "AA",
+              desc: "",
+            },
             { lvl: "Level 10", title: "", desc: "" },
             {
               lvl: "Level 14",
               title: "",
-              desc: (
-                <p>
-                  <b></b>
-                </p>
-              ),
+              desc: "<p> aaaa <p>",
             },
           ],
         },
