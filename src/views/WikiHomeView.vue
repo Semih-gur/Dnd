@@ -10,7 +10,7 @@
       <v-col cols="3">
         <v-card class="text-center"
           ><v-card @click="races()" class="text-center">
-            <v-card-title >Races</v-card-title>
+            <v-card-title>Races</v-card-title>
             <v-img src="../assets/image.png"></v-img> </v-card
         ></v-card>
       </v-col>
@@ -18,7 +18,7 @@
     <v-row justify="center">
       <v-col cols="3">
         <v-card class="text-center"
-          ><v-card class="text-center">
+          ><v-card @click="spells()" class="text-center">
             <v-card-title>Spells</v-card-title>
             <v-img src="../assets/image.png"></v-img> </v-card
         ></v-card>
@@ -39,12 +39,16 @@ import router from "@/router";
 
 export default {
   methods: {
-    classes(){
-  router.push("wiki/classes")
-},
+    classes() {
+      router.push("wiki/classes");
+    },
 
     races() {
       router.push("/wiki/races");
+    },
+
+    spells() {
+      router.push("/wiki/spells");
     },
   },
 };

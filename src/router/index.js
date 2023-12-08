@@ -6,6 +6,8 @@ import ClassesView from "@/views/ClassesView.vue";
 import BarbarianView from "@/views/Class/BarbarianView.vue";
 import SubclassView from "@/views/Class/SubclassView.vue";
 import SRaceView from "@/views/SRaceView.vue";
+import SpellsView from "@/views/SpellView/SpellView.vue";
+import CspellView from "@/views/SpellView/CSpellView.vue";
 
 const routes = [
   {
@@ -34,6 +36,18 @@ const routes = [
     name: "Classes",
     component: ClassesView,
   },
+  {
+    path: "/wiki/spells",
+    name: "Spells",
+    component: SpellsView,
+  },
+
+  {
+    path: "/wiki/spells/:label",
+    name: "cSpells",
+    component: CspellView,
+  },
+
   {
     path: "/wiki/classes/barbarian",
     name: "Barbarian",

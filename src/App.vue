@@ -18,7 +18,7 @@
           <v-icon size="x-large">mdi-axe</v-icon>
           <v-tooltip activator="parent" location="bottom">Classes</v-tooltip>
         </v-btn>
-        <v-btn @click="classes()">
+        <v-btn @click="spells()">
           <v-icon size="x-large">mdi-auto-fix</v-icon>
           <v-tooltip activator="parent" location="bottom">Spells</v-tooltip>
         </v-btn>
@@ -69,6 +69,9 @@ export default {
 
     races() {
       router.push("/wiki/races");
+    },
+    spells() {
+      router.push("/wiki/spells");
     },
   },
 };
