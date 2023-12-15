@@ -23,6 +23,9 @@
               </thead>
               <tbody>
                 <tr v-for="spell in cSpells" :key="spell.name">
+                  <v-tooltip activator="parent" location="">
+                    <SpellDesc
+                  /></v-tooltip>
                   <td>{{ spell.name }}</td>
                   <td class="text-center">{{ spell.school }}</td>
                   <td class="text-center">{{ spell.castTime }}</td>
@@ -42,12 +45,38 @@
     </v-card>
   </div>
 </template>
+
 <script>
+import router from "@/router";
+import SpellDesc from "./SpellDesc.vue";
+
 export default {
+  methods: {
+    class() {
+      router.push("/");
+    },
+  },
+
   data: () => ({
     tab: null,
 
     cSpells: [
+      {
+        name: "aaa",
+        school: "s1",
+        castTime: "c1",
+        range: "r1",
+        duration: "d1",
+        components: "V",
+      },
+      {
+        name: "aaa",
+        school: "s1",
+        castTime: "c1",
+        range: "r1",
+        duration: "d1",
+        components: "V",
+      },
       {
         name: "aaa",
         school: "s1",
