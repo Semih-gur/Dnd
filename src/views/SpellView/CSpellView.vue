@@ -1,7 +1,7 @@
 <template>
   <div class="center mt-15">
     <v-card>
-      <v-tabs v-model="tab" bg-color="primary">
+      <v-tabs v-model="tab">
         <v-tab value="one">Item One</v-tab>
         <v-tab value="two">Item Two</v-tab>
         <v-tab value="three">Item Three</v-tab>
@@ -23,10 +23,16 @@
               </thead>
               <tbody>
                 <tr v-for="spell in cSpells" :key="spell.name">
-                  <v-tooltip activator="parent" location="">
-                    <SpellDesc
-                  /></v-tooltip>
-                  <td>{{ spell.name }}</td>
+                  <td>
+                    {{ spell.name }}
+                    <v-tooltip activator="parent" width="80%" location="end">
+                      Pariatur velit ad amet Lorem ullamco non ex qui. Ex
+                      commodo proident do eu consequat commodo amet magna nisi
+                      labore deserunt dolore elit. Laborum magna do tempor
+                      mollit. Ea quis aliqua culpa nisi quis commodo fugiat
+                      ipsum magna tempor Lorem deserunt consectetur.
+                    </v-tooltip>
+                  </td>
                   <td class="text-center">{{ spell.school }}</td>
                   <td class="text-center">{{ spell.castTime }}</td>
                   <td class="text-center">{{ spell.range }}</td>
@@ -48,7 +54,6 @@
 
 <script>
 import router from "@/router";
-import SpellDesc from "./SpellDesc.vue";
 
 export default {
   methods: {
@@ -62,28 +67,28 @@ export default {
 
     cSpells: [
       {
-        name: "aaa",
-        school: "s1",
-        castTime: "c1",
-        range: "r1",
-        duration: "d1",
-        components: "V",
+        name: "Fireball",
+        school: "Evocation",
+        castTime: "Action",
+        range: "120ft / 20ft radius",
+        duration: "-",
+        components: "V,S,M",
       },
       {
-        name: "aaa",
-        school: "s1",
-        castTime: "c1",
-        range: "r1",
-        duration: "d1",
-        components: "V",
+        name: "Bone Chill",
+        school: "Necromancy",
+        castTime: "Action",
+        range: "Touch",
+        duration: "-",
+        components: "V,S",
       },
       {
-        name: "aaa",
-        school: "s1",
-        castTime: "c1",
-        range: "r1",
-        duration: "d1",
-        components: "V",
+        name: "Healing Word",
+        school: "Evocation",
+        castTime: "Bonus Action",
+        range: "30ft",
+        duration: "-",
+        components: "V,S,M",
       },
     ],
   }),
