@@ -1,5 +1,6 @@
 <template>
   <div class="mt-15">
+    <!-- Summary table of the class -->
     <div class="d-flex justify-center">
       <v-table>
         <thead>
@@ -22,6 +23,7 @@
         </tbody>
       </v-table>
     </div>
+    <!-- Lvl 1 abilities and characteristic -->
     <div class="mt-5">
       <div class="bg-grey-darken-4 center pa-5">
         <h2>Hit Points</h2>
@@ -59,6 +61,8 @@
           An explorer's pack and four javelins
         </p>
       </div>
+
+      <!-- All levels that an ability is gained. -->
       <div class="center mt-5">
         <v-expansion-panels v-model="panel">
           <v-expansion-panel expand v-model="panel">
