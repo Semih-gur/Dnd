@@ -14,8 +14,6 @@
             <v-img src="../assets/image.png"></v-img> </v-card
         ></v-card>
       </v-col>
-    </v-row>
-    <v-row justify="center">
       <v-col cols="3">
         <v-card class="text-center"
           ><v-card @click="spells()" class="text-center">
@@ -23,10 +21,26 @@
             <v-img src="../assets/image.png"></v-img> </v-card
         ></v-card>
       </v-col>
-      <v-col cols="3">
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="2">
+        <v-card class="text-center"
+          ><v-card @click="bg()" class="text-center">
+            <v-card-title>Backgrounds</v-card-title>
+            <v-img src="../assets/image.png"></v-img> </v-card
+        ></v-card>
+      </v-col>
+      <v-col cols="2">
         <v-card class="text-center"
           ><v-card class="text-center">
-            <v-card-title>Backgrounds</v-card-title>
+            <v-card-title>Feats</v-card-title>
+            <v-img src="../assets/image.png"></v-img> </v-card
+        ></v-card>
+      </v-col>
+      <v-col cols="2">
+        <v-card class="text-center"
+          ><v-card class="text-center">
+            <v-card-title>Items</v-card-title>
             <v-img src="../assets/image.png"></v-img> </v-card
         ></v-card>
       </v-col>
@@ -39,6 +53,10 @@ import router from "@/router";
 
 export default {
   methods: {
+    bg() {
+      router.push("wiki/backgrounds");
+    },
+
     classes() {
       router.push("wiki/classes");
     },
