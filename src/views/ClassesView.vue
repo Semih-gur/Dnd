@@ -4,7 +4,7 @@
       <v-col
         v-for="(cclass, index) in classes"
         :key="cclass.id"
-        xl="2"
+        xl="3"
         lg="3"
         md="4"
       >

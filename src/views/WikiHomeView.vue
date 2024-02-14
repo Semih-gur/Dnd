@@ -23,21 +23,21 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col cols="2">
+      <v-col cols="3">
         <v-card class="text-center"
           ><v-card @click="bg()" class="text-center">
             <v-card-title>Backgrounds</v-card-title>
             <v-img src="../assets/image.png"></v-img> </v-card
         ></v-card>
       </v-col>
-      <v-col cols="2">
+      <v-col cols="3">
         <v-card class="text-center"
           ><v-card class="text-center">
             <v-card-title>Feats</v-card-title>
             <v-img src="../assets/image.png"></v-img> </v-card
         ></v-card>
       </v-col>
-      <v-col cols="2">
+      <v-col cols="3">
         <v-card class="text-center"
           ><v-card class="text-center">
             <v-card-title>Items</v-card-title>

@@ -1,0 +1,2 @@
+1- More user tips and exp for pages and button.
+2- Change layout so you can use more of the screen.
