@@ -1,7 +1,7 @@
 <template>
   <div class="mt-15">
     <!-- Summary table of the class -->
-    <div class="d-flex justify-center">
+    <div class="center">
       <v-table>
         <thead>
           <tr>
@@ -29,36 +29,35 @@
         <h2>Hit Points</h2>
 
         <p class="mt-2">
-          <strong>Hit Dice:</strong> 1d12.
+          <strong>Hit Dice:</strong> 1d8.
           <br />
-          <strong>Health:</strong> 12 + Constitution Modifier (+1d12 +
+          <strong>Health:</strong> 8 + Constitution Modifier (+1d8 +
           Constitution Modifier for every level after).
         </p>
         <br />
         <h2>Proficiencies</h2>
 
         <p>
-          <strong>Armor:</strong> Light Armor, Medium Armor, Shields.
+          <strong>Armor:</strong> Light Armor,.
           <br />
-          <strong>Weapons:</strong> Simple Weapons, Martial Weapons.
+          <strong>Weapons:</strong> Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords.
           <br />
-          <strong>Tools:</strong> None.
+          <strong>Tools:</strong> Three musical instruments of your choice.
           <br />
-          <strong>Saving Throws:</strong> Strenght, Constitution
+          <strong>Saving Throws:</strong> Dexterity, Charisma
           <br />
-          <strong>Skills(Choose 2):</strong> Animal Handling, Athletics,
-          Intimidation, Nature, Perception, and Survival
+          <strong>Skills(Choose 2):</strong> Choose any three
         </p>
         <br />
         <h2>Starting Equipment</h2>
         <p>
-          <strong>(a)-</strong>A greataxe <strong>(b)-</strong>Any martial melee
-          weapon
+          <strong>(a)-</strong>A raiper <strong>(b)-</strong>A longsword <strong>(c)-</strong>Any simple weapon
           <br />
-          <strong>(a)-</strong>two handaxes <strong>(b)-</strong> Any simple
-          weapon
+          <strong>(a)-</strong>A diplomat's pack <strong>(b)-</strong> An entertainer's pack
           <br />
-          An explorer's pack and four javelins
+          <strong>(a)-</strong>A Lute <strong>(b)-</strong> Any other musical instrument
+          <br>
+          Leather armor and a dagger
         </p>
       </div>
 
