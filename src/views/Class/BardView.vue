@@ -332,6 +332,31 @@
                     above 20 using this feature.
                   </p>
                 </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">
+                    Bardic Versatility (Optional)
+                  </h2>
+                  <br />
+                  <p>
+                    Whenever you reach a level in this class that grants the
+                    Ability Score Improvement feature, you can do one of the
+                    following, representing a change in focus as you use your
+                    skills and magic:
+                  </p>
+                  <br />
+                  <ul>
+                    <li>
+                      Replace one of the skills you chose for the Expertise
+                      feature with one of your other skill proficiencies that
+                      isn't benefiting from Expertise.
+                    </li>
+                    <li>
+                      Replace one cantrip you learned from this class's
+                      Spellcasting feature with another cantrip from the bard
+                      spell list.
+                    </li>
+                  </ul>
+                </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -342,21 +367,14 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Extra Attack</h2>
+                  <h2 class="elevation-10 pa-5">Font of Inspiration</h2>
                   <br />
                   <p>
-                    You can attack twice, instead of once, whenever you take the
-                    Attack action on your turn.
+                    Beginning when you reach 5th level, you regain all of your
+                    expended uses of Bardic Inspiration when you finish a short
+                    or long rest.
                   </p>
                   <br />
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Fast Movement</h2>
-                  <br />
-                  <p>
-                    Your speed increases by 10 feet while you aren't wearing
-                    heavy armor
-                  </p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -367,7 +385,26 @@
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
-                <v-col cols="6">
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Countercharm</h2>
+                  <br />
+                  <p>
+                    At 6th level, you gain the ability to use musical notes or
+                    words of power to disrupt mind-influencing effects. As an
+                    action, you can start a performance that lasts until the end
+                    of your next turn.
+                  </p>
+                  <br />
+                  <p>
+                    During that time, you and any friendly creatures within 30
+                    feet of you have advantage on saving throws against being
+                    frightened or charmed. A creature must be able to hear you
+                    to gain this benefit. The performance ends early if you are
+                    incapacitated or silenced or if you voluntarily end it (no
+                    action required).
+                  </p>
+                </v-col>
+                <v-col>
                   <h2 class="elevation-10 pa-5">Subclass Feature</h2>
                   <br />
                   <p>You gain a new feature from the subclass you chose</p>
@@ -375,60 +412,26 @@
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
-
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h2>Level 7</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col
-                  ><h2 class="elevation-10 pa-5">Feral Instinct</h2>
-                  <br />
-                  <p>You have advantage on initiative rolls.</p>
-                  <p>
-                    Additionally, if you are surprised at the beginning of
-                    combat and aren't incapacitated, you can act normally on
-                    your first turn, but only if you enter your rage before
-                    doing anything else on that turn.
-                  </p>
-                  <br
-                /></v-col>
-                <v-col
-                  ><h2 class="elevation-10 pa-5">
-                    Instinctive Pounce (Optional)
-                  </h2>
-                  <br />
-                  <p>
-                    At 7th level, as part of the bonus action you take to enter
-                    your rage, you can move up to half your speed.
-                  </p></v-col
-                >
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 9</h2>
+              <h2>Level 8</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
-                <v-col cols="6"
-                  ><h2 class="elevation-10 pa-5">Brutal Critical</h2>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
                   <br />
                   <p>
-                    You can roll one additional weapon damage die when
-                    determining the extra damage for a critical hit with a melee
-                    attack.
+                    You can increase one ability score of your choice by 2, or
+                    you can increase two ability scores of your choice by 1. As
+                    normal, you can't increase an ability score above 20 using
+                    this feature.
                   </p>
-                  <p>
-                    This increases to two additional dice at 13th level and
-                    three additional dice at 17th level.
-                  </p></v-col
-                >
+                </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+
           <v-expansion-panel>
             <v-expansion-panel-title>
               <h2>Level 10</h2>
@@ -436,46 +439,40 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
+                  <h2 class="elevation-10 pa-5">Magical Secrets</h2>
                   <br />
                   <p>
-                    You gain proficiency in one skill of your choice from the
-                    list of skills available to barbarians at 1st level.
+                    By 10th level, you have plundered magical knowledge from a
+                    wide spectrum of disciplines. Choose two spells from any
+                    classes, including this one. A spell you choose must be of a
+                    level you can cast, as shown on the Bard table, or a
+                    cantrip.
                   </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Subclass feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose</p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
-          <v-expansion-panel>
+
+          <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
-              <h2>Level 11</h2>
+              <h2>Level 12</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
-                <v-col cols="6"
-                  ><h2 class="elevation-10 pa-5">Relentless Rage</h2>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
                   <br />
                   <p>
-                    Your rage can keep you fighting despite grievous wounds. If
-                    you drop to 0 hit points while you're raging and don't die
-                    outright, you can make a DC 10 Constitution saving throw. If
-                    you succeed, you drop to 1 hit point instead.
+                    You can increase one ability score of your choice by 2, or
+                    you can increase two ability scores of your choice by 1. As
+                    normal, you can't increase an ability score above 20 using
+                    this feature.
                   </p>
-                  <br />
-                  <p>
-                    Each time you use this feature after the first, the DC
-                    increases by 5. When you finish a short or long rest, the DC
-                    resets to 10.
-                  </p></v-col
-                >
+                </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+
           <v-expansion-panel>
             <v-expansion-panel-title>
               <h2>Level 14</h2>
@@ -490,41 +487,7 @@
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 15</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Persistent Rage</h2>
-                  <br />
-                  <p>
-                    Your rage is so fierce that it ends early only if you fall
-                    unconscious or if you choose to end it.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 18</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Indomitable Might</h2>
-                  <br />
-                  <p>
-                    If your total for a Strength check is less than your
-                    Strength score, you can use that score in place of the
-                    total.
-                  </p></v-col
-                >
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
+
           <v-expansion-panel class="mb-10">
             <v-expansion-panel-title>
               <h2>Level 20</h2>
@@ -532,12 +495,11 @@
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Primal Champion</h2>
+                  <h2 class="elevation-10 pa-5">Superior Inspiration</h2>
                   <br />
                   <p>
-                    You embody the power of the wilds. Your Strength and
-                    Constitution scores increase by 4. Your maximum for those
-                    scores is now 24.
+                    At 20th level, when you roll initiative and have no uses of
+                    Bardic Inspiration left, you regain one use.
                   </p>
                 </v-col>
               </v-row>
@@ -590,15 +552,14 @@ export default {
         },
       ],
       icons: [
-        "shield",
-        "hand-fist",
-        "dog",
-        "face-angry",
-        "mountain",
-        "cloud-bolt",
-        "paw",
+        "plus",
+        "comment",
         "hand-sparkles",
-        "cross",
+        "book",
+        "ghost",
+        "cloud-bolt",
+        "khanda",
+        "user-secret",
       ],
       panel: [0],
       levels: [
