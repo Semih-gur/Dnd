@@ -68,7 +68,7 @@ const routes = [
   },
 
   {
-    path: "/wiki/classes/barbarian/:subclass",
+    path: "/wiki/classes/:class/:subclass",
     name: "Subclass",
     component: SubclassView,
   },

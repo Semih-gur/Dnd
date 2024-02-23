@@ -518,7 +518,7 @@ export default {
   methods: {
     goTo(label) {
       router.push(
-        "/wiki/classes/barbarian/" + label.replace(" ", "_").toLowerCase()
+        "/wiki/classes/bard/" + label.replace(" ", "_").toLowerCase()
       );
     },
   },
