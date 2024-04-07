@@ -1,11 +1,10 @@
-1- More user tips and exp for pages and button.
-2- Change layout so you can use more of the screen.
 
 !! Barbarian Totem Warr
 !! Bard Creation
+!! Bard Spirits
+!!
 
 
 
 
-
-{ lvl: "Level 6", title: "", desc: "" },
+{ lvl: "", title: "", desc: "" },
