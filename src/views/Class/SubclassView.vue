@@ -30,12 +30,105 @@ export default {
 
       class: [
         {
-          name:"glamour",
-          sub:[
-          { lvl: "Level 3", title: "Mantle of Inspiration", desc: "When you join the College of Glamour at 3rd level, you gain the ability to weave a song of fey magic that imbues your allies with vigor and speed.\n\nAs a bonus action, you can expend one use of your Bardic Inspiration to grant yourself a wondrous appearance. When you do so, choose a number of creatures you can see and who can see you within 60 feet of you, up to a number equal to your Charisma modifier (minimum of one). Each of them gains 5 temporary hit points. When a creature gains these temporary hit points, it can immediately use its reaction to move up to its speed, without provoking opportunity attacks.\n\nThe number of temporary hit points increases when you reach certain levels in this class, increasing to 8 at 5th level, 11 at 10th level, and 14 at 15th level." },
-          { lvl: "", title: "Enthralling Performance", desc: "Starting at 3rd level, you can charge your performance with seductive, fey magic.\n\nIf you perform for at least 1 minute, you can attempt to inspire wonder in your audience by singing, reciting a poem, or dancing. At the end of the performance, choose a number of humanoids within 60 feet of you who watched and listened to all of it, up to a number equal to your Charisma modifier (minimum of one). Each target must succeed on a Wisdom saving throw against your spell save DC or be charmed by you. While charmed in this way, the target idolizes you, it speaks glowingly of you to anyone who speaks to it, and it hinders anyone who opposes you, avoiding violence unless it was already inclined to fight on your behalf. This effect ends on a target after 1 hour, if it takes any damage, if you attack it, or if it witnesses you attacking or damaging any of its allies.\n\nIf a target succeeds on its saving throw, the target has no hint that you tried to charm it.\n\nOnce you use this feature, you can’t use it again until you finish a short or long rest." },
-          { lvl: "Level 6", title: "Mantle of Majesty", desc: "At 6th level, you gain the ability to cloak yourself in a fey magic that makes others want to serve you. As a bonus action, you cast Command, without expending a spell slot, and you take on an appearance of unearthly beauty for 1 minute or until your concentration ends (as if you were concentrating on a spell). During this time, you can cast Command as a bonus action on each of your turns, without expending a spell slot.\n\nAny creature charmed by you automatically fails its saving throw against the Command you cast with this feature.\n\nOnce you use this feature, you can’t use it again until you finish a long rest." },
-          { lvl: "Level 14", title: "Unbreakable Majesty", desc: "At 14th level, your appearance permanently gains an otherworldly aspect that makes you look more lovely and fierce.\n\nIn addition, as a bonus action, you can assume a magically majestic presence for 1 minute or until you are incapacitated. For the duration, whenever any creature tries to attack you for the first time on a turn, the attacker must make a Charisma saving throw against your spell save DC. On a failed save, it can't attack you on this turn, and it must choose a new target for its attack or the attack is wasted. On a successful save, it can attack you on this turn, but it has disadvantage on any saving throw it makes against your spells on your next turn.\n\nOnce you assume this majestic presence, you can't do so again until you finish a short or long rest." },
+          name: "lore",
+          sub: [
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+          ],
+        },
+        {
+          name: "lore",
+          sub: [
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+          ],
+        },
+        {
+          name: "swords",
+          sub: [
+            {
+              lvl: "Level 3",
+              title: "Bonus Proficiencies",
+              desc: "When you join the College of Swords at 3rd level, you gain proficiency with medium armor and the scimitar.\nIf you’re proficient with a simple or martial melee weapon, you can use it as a spellcasting focus for your bard spells.",
+            },
+            {
+              lvl: "",
+              title: "Fighting Style",
+              desc: "At 3rd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.\n<ul><li><strong>Dueling:</strong></li></ul>",
+            },
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+          ],
+        },
+        {
+          name: "spirits",
+          sub: [
+            {
+              lvl: "Level 3",
+              title: "Guiding Whispers",
+              desc: "At 3rd level, you can reach out to spirits to guide you and others. You learn the Guidance cantrip, which doesn’t count against the number of bard cantrips you know. For you, it has a range of 60 feet when you cast it.",
+            },
+            {
+              lvl: "",
+              title: "Spiritual Focus",
+              desc: "At 3rd level, you employ tools that aid you in channeling spirits, be they historical figures or fictional archetypes. You can use the following objects as a spellcasting focus for your bard spells: a candle, crystal ball, skull, spirit board, or tarokka deck.\nStarting at 6th level, when you cast a bard spell that deals damage or restores hit points through the Spiritual Focus, roll a d6, and you gain a bonus to one damage or healing roll of the spell equal to the number rolled.",
+            },
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+          ],
+        },
+        {
+          name: "lore",
+          sub: [
+            {
+              lvl: "Level 3",
+              title: "Bonus Proficiencies",
+              desc: "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
+            },
+            {
+              lvl: "",
+              title: "Cutting Words",
+              desc: "Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll. You can choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed.",
+            },
+            {
+              lvl: "Level 6",
+              title: "Additional Magical Secrets",
+              desc: "At 6th level, you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know.",
+            },
+            {
+              lvl: "Level 14",
+              title: "Peerless Skill",
+              desc: "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the DM tells you whether you succeed or fail.",
+            },
+          ],
+        },
+        {
+          name: "glamour",
+          sub: [
+            {
+              lvl: "Level 3",
+              title: "Mantle of Inspiration",
+              desc: "When you join the College of Glamour at 3rd level, you gain the ability to weave a song of fey magic that imbues your allies with vigor and speed.\n\nAs a bonus action, you can expend one use of your Bardic Inspiration to grant yourself a wondrous appearance. When you do so, choose a number of creatures you can see and who can see you within 60 feet of you, up to a number equal to your Charisma modifier (minimum of one). Each of them gains 5 temporary hit points. When a creature gains these temporary hit points, it can immediately use its reaction to move up to its speed, without provoking opportunity attacks.\n\nThe number of temporary hit points increases when you reach certain levels in this class, increasing to 8 at 5th level, 11 at 10th level, and 14 at 15th level.",
+            },
+            {
+              lvl: "",
+              title: "Enthralling Performance",
+              desc: "Starting at 3rd level, you can charge your performance with seductive, fey magic.\n\nIf you perform for at least 1 minute, you can attempt to inspire wonder in your audience by singing, reciting a poem, or dancing. At the end of the performance, choose a number of humanoids within 60 feet of you who watched and listened to all of it, up to a number equal to your Charisma modifier (minimum of one). Each target must succeed on a Wisdom saving throw against your spell save DC or be charmed by you. While charmed in this way, the target idolizes you, it speaks glowingly of you to anyone who speaks to it, and it hinders anyone who opposes you, avoiding violence unless it was already inclined to fight on your behalf. This effect ends on a target after 1 hour, if it takes any damage, if you attack it, or if it witnesses you attacking or damaging any of its allies.\n\nIf a target succeeds on its saving throw, the target has no hint that you tried to charm it.\n\nOnce you use this feature, you can’t use it again until you finish a short or long rest.",
+            },
+            {
+              lvl: "Level 6",
+              title: "Mantle of Majesty",
+              desc: "At 6th level, you gain the ability to cloak yourself in a fey magic that makes others want to serve you. As a bonus action, you cast Command, without expending a spell slot, and you take on an appearance of unearthly beauty for 1 minute or until your concentration ends (as if you were concentrating on a spell). During this time, you can cast Command as a bonus action on each of your turns, without expending a spell slot.\n\nAny creature charmed by you automatically fails its saving throw against the Command you cast with this feature.\n\nOnce you use this feature, you can’t use it again until you finish a long rest.",
+            },
+            {
+              lvl: "Level 14",
+              title: "Unbreakable Majesty",
+              desc: "At 14th level, your appearance permanently gains an otherworldly aspect that makes you look more lovely and fierce.\n\nIn addition, as a bonus action, you can assume a magically majestic presence for 1 minute or until you are incapacitated. For the duration, whenever any creature tries to attack you for the first time on a turn, the attacker must make a Charisma saving throw against your spell save DC. On a failed save, it can't attack you on this turn, and it must choose a new target for its attack or the attack is wasted. On a successful save, it can attack you on this turn, but it has disadvantage on any saving throw it makes against your spells on your next turn.\n\nOnce you assume this majestic presence, you can't do so again until you finish a short or long rest.",
+            },
           ],
         },
         {
@@ -86,7 +179,11 @@ export default {
               title: "Animating Performance",
               desc: "By 6th level, as an action, you can animate one Large or smaller nonmagical item within 30 feet of you that isn’t being worn or carried. The animate item uses the Dancing Item stat block, which uses your proficiency bonus (PB), The item is friendly to you and your companions and obeys your commands. It lives for 1 hour, until it is reduced to 0 hit points, or until you die.\n\nIn combat, the item shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the item can take any action of its choice, not just Dodge.\n\nWhen you use your Bardic Inspiration feature, you can command the item as part of the same bonus action you use for Bardic Inspiration.\n\nOnce you animate an item with this feature, you can't do so again until you finish a long rest, unless you expend a spell slot of 3rd level or higher to use this feature again. You can have only one item animated by this feature at a time; if you use this action and already have a dancing item from this feature, the first one immediately becomes inanimate.",
             },
-            { lvl: "", title: "", desc: "<h3>Dancing Item</h3>\n<b>Armor Class:</b> 16(Natural Armor)\n<b>Hit Points:</b> 10 + 5 times your bard level\n<b>Speed:</b> 30ft.. fly 30ft." },
+            {
+              lvl: "",
+              title: "",
+              desc: "<h3>Dancing Item</h3>\n<b>Armor Class:</b> 16(Natural Armor)\n<b>Hit Points:</b> 10 + 5 times your bard level\n<b>Speed:</b> 30ft.. fly 30ft.",
+            },
             {
               lvl: "Level 14",
               title: "Creative Crescendo",
