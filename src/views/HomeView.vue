@@ -14,14 +14,14 @@
     <v-row justify="center" row-height="5">
       <v-col cols="3">
         <v-card class="text-center">
-          <v-img class="align-center" src="../assets/image.png"
+          <v-img class="align-center" src="../assets/cCreator.png"
             ><h1>Character Creator</h1></v-img
           >
         </v-card>
       </v-col>
       <v-col cols="3">
         <v-card @click="goWiki()" class="text-center">
-          <v-img class="align-center" src="../assets/image.png"
+          <v-img class="align-center" src="../assets/wiki.png"
             ><h1>Wiki</h1></v-img
           >
         </v-card>
