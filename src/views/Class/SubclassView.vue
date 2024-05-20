@@ -495,6 +495,24 @@ export default {
             },
           ],
         },
+        {
+          name: "zealot",
+          sub: [
+            {
+              lvl: "Level 3",
+              title: "Divine Fury",
+              desc: "Starting when you choose this path at 3rd level, you can channel divine fury into your weapon strikes. While you're raging, the first creature you hit on each of your turns with a weapon attack takes extra damage equal to 1d6 + half your Barbarian level. The extra damage is necrotic or radiant; you choose the type of damage when you gain this feature.",
+            },
+            {
+              lvl: "",
+              title: "Warrior of the Gods",
+              desc: "At 3rd level, your soul is marked for endless battle. If a spell, such as Raise Dead, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you.",
+            },
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+            { lvl: "", title: "", desc: "" },
+          ],
+        },
       ],
     };
   },
