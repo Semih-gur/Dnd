@@ -24,6 +24,7 @@
           <v-img class="align-center" src="../assets/wiki.png"
             ><h1>Wiki</h1></v-img
           >
+          {{ BookOpenText }}
         </v-card>
       </v-col>
     </v-row>
