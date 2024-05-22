@@ -1,11 +1,6 @@
 
-!! Barbarian Totem Warr
-!! Bard Creation
 !! Bard Spirits
 !!
-
-
-
 
 { lvl: "", title: "", desc: "" },
 
