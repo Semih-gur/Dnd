@@ -14,16 +14,18 @@
     <v-row justify="center" row-height="5">
       <v-col cols="3">
         <v-card class="text-center">
-          <v-img class="align-center" src="../assets/cCreator.png"
-            ><h1>Character Creator</h1></v-img
-          >
+          <v-img class="align-center" src="../assets/cCreator.png"></v-img>
+          <div class="text-overlay">
+            <p class="text">Character Creator</p>
+          </div>
         </v-card>
       </v-col>
       <v-col cols="3">
         <v-card @click="goWiki()" class="text-center">
-          <v-img class="align-center" src="../assets/wiki.png"
-            ><h1>Wiki</h1></v-img
-          >
+          <v-img class="align-center" src="../assets/wiki.png"></v-img>
+          <div class="text-overlay">
+            <p class="text">Wiki</p>
+          </div>
           {{ BookOpenText }}
         </v-card>
       </v-col>
@@ -47,6 +49,21 @@ export default {
 </script>
 
 <style>
+.text-overlay {
+  position: absolute;
+  top: 50%; /* Adjust vertical position */
+  left: 50%; /* Adjust horizontal position */
+  transform: translate(-50%, -50%);
+
+  padding: 10px; /* Adjust padding */
+}
+
+.text {
+  color: white; /* Text color */
+  font-size: 32px; /* Font size */
+  white-space: nowrap;
+}
+
 .title {
   width: 50%;
   align-self: center;
