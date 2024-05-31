@@ -5,6 +5,7 @@ import RacesView from "@/views/RacesView.vue";
 import ClassesView from "@/views/ClassesView.vue";
 import BarbarianView from "@/views/Class/BarbarianView.vue";
 import BardView from "@/views/Class/BardView.vue";
+import ClericView from "@/views/Class/ClericView.vue";
 import SubclassView from "@/views/Class/SubclassView.vue";
 import SRaceView from "@/views/SRaceView.vue";
 import SpellsView from "@/views/SpellView/SpellView.vue";
@@ -67,6 +68,11 @@ const routes = [
     component: BardView,
   },
 
+  {
+    path: "/wiki/classes/cleric",
+    name: "Cleric",
+    component: ClericView,
+  },
   {
     path: "/wiki/classes/:class/:subclass",
     name: "Subclass",

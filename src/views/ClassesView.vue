@@ -31,6 +31,15 @@
             <v-card class="v-card--reveal" v-if="cclass.active">
               <v-card-text>{{ cclass.desc }}</v-card-text>
               <v-card-text>{{ cclass.pref }}</v-card-text>
+              <v-card-text v-if="cclass.complexity == 1" class="complexity1"
+                >Low</v-card-text
+              >
+              <v-card-text v-if="cclass.complexity == 2" class="complexity2"
+                >Medium</v-card-text
+              >
+              <v-card-text v-if="cclass.complexity == 3" class="complexity3"
+                >High</v-card-text
+              >
             </v-card>
           </v-expand-transition>
         </v-card>
@@ -64,6 +73,7 @@ export default {
         desc: "A fierce warrior of primitive background who can enter a battle rage",
         pref: "Strenght / Constitution",
         art: require("../assets/classes/barbarian.png"),
+        complexity: 1,
       },
       {
         id: 1,
@@ -71,6 +81,7 @@ export default {
         desc: "An inspiring magician whose power echoes the music of creation",
         pref: "Charisma",
         art: require("../assets/classes/bard.png"),
+        complexity: 2,
       },
       {
         id: 2,
@@ -78,6 +89,7 @@ export default {
         desc: "A priestly champion who wields divine magic in service of a higher power",
         pref: "Wisdom",
         art: require("../assets/classes/cleric.png"),
+        complexity: 2,
       },
       {
         id: 3,
@@ -85,6 +97,7 @@ export default {
         desc: "A mage wielding the powers of nature— moonlight and plant growth, fire and lightning—and adopting animal forms",
         pref: "Wisdom",
         art: require("../assets/classes/druid.png"),
+        complexity: 3,
       },
       {
         id: 4,
@@ -92,6 +105,7 @@ export default {
         desc: "A master of martial combat, skilled with a variety of weapons and armor",
         pref: "Strength / Dexterity",
         art: require("../assets/classes/fighter.png"),
+        complexity: 1,
       },
       {
         id: 5,
@@ -99,6 +113,7 @@ export default {
         desc: "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",
         pref: "Wisdom / Dexterity",
         art: require("../assets/classes/monk.png"),
+        complexity: 2,
       },
       {
         id: 6,
@@ -106,6 +121,7 @@ export default {
         desc: "A holy warrior bound to a sacred oath, harnessing power of divine",
         pref: "Strength / Charisma",
         art: require("../assets/classes/paladin.png"),
+        complexity: 1,
       },
       {
         id: 7,
@@ -113,6 +129,7 @@ export default {
         desc: "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
         pref: "Dexterity",
         art: require("../assets/classes/ranger.png"),
+        complexity: 1,
       },
       {
         id: 8,
@@ -120,6 +137,7 @@ export default {
         desc: "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
         pref: "Dexterity",
         art: require("../assets/classes/rogue.png"),
+        complexity: 1,
       },
       {
         id: 9,
@@ -127,6 +145,7 @@ export default {
         desc: "A spell-caster who draws on inherent magic from a gift or bloodline",
         pref: "Charisma",
         art: require("../assets/classes/sorcerer.png"),
+        complexity: 3,
       },
 
       {
@@ -135,6 +154,7 @@ export default {
         desc: "A wielder of magic that is derived from a bargain with an extra-planar entity",
         pref: "Charisma",
         art: require("../assets/classes/warlock.png"),
+        complexity: 3,
       },
       {
         id: 11,
@@ -142,6 +162,7 @@ export default {
         desc: "A scholarly magic-user capable of manipulating the structures of reality",
         pref: "Intelligence",
         art: require("../assets/classes/wizard.png"),
+        complexity: 3,
       },
     ],
   }),
@@ -149,12 +170,22 @@ export default {
 </script>
 
 <style>
+.complexity1 {
+  color: greenyellow;
+}
+.complexity2 {
+  color: orange;
+}
+.complexity3 {
+  color: red;
+}
+
 .v-card--reveal {
   pointer-events: none;
   bottom: 0;
   opacity: 1 !important;
   position: absolute;
   width: 100%;
-  height: 50%;
+  height: 70%;
 }
 </style>
