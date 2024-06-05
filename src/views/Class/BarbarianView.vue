@@ -40,7 +40,8 @@
         <p>
           <strong>Armor:</strong> Light Armor,.
           <br />
-          <strong>Weapons:</strong> Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords.
+          <strong>Weapons:</strong> Simple Weapons, Hand Crossbows, Longswords,
+          Rapiers, Shortswords.
           <br />
           <strong>Tools:</strong> Three musical instruments of your choice.
           <br />
@@ -51,12 +52,15 @@
         <br />
         <h2>Starting Equipment</h2>
         <p>
-          <strong>(a)-</strong>A raiper <strong>(b)-</strong>A longsword <strong>(c)-</strong>Any simple weapon
+          <strong>(a)-</strong>A raiper <strong>(b)-</strong>A longsword
+          <strong>(c)-</strong>Any simple weapon
           <br />
-          <strong>(a)-</strong>A diplomat's pack <strong>(b)-</strong> An entertainer's pack
+          <strong>(a)-</strong>A diplomat's pack <strong>(b)-</strong> An
+          entertainer's pack
           <br />
-          <strong>(a)-</strong>A Lute <strong>(b)-</strong> Any other musical instrument
-          <br>
+          <strong>(a)-</strong>A Lute <strong>(b)-</strong> Any other musical
+          instrument
+          <br />
           Leather armor and a dagger
         </p>
       </div>
