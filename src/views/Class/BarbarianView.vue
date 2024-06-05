@@ -1,18 +1,59 @@
 <template>
   <div class="mt-15">
+    <div class="mb-5">
+      <div class="bg-grey-darken-4 center pa-5">
+        <h2>Hit Points</h2>
+
+        <p class="mt-2">
+          <strong>Hit Dice:</strong> 1d8.
+          <br />
+          <strong>Health:</strong> 8 + Constitution Modifier (+1d8 +
+          Constitution Modifier for every level after).
+        </p>
+        <br />
+        <h2>Proficiencies</h2>
+
+        <p>
+          <strong>Armor:</strong> Light Armor,.
+          <br />
+          <strong>Weapons:</strong> Simple Weapons, Hand Crossbows, Longswords,
+          Rapiers, Shortswords.
+          <br />
+          <strong>Tools:</strong> Three musical instruments of your choice.
+          <br />
+          <strong>Saving Throws:</strong> Dexterity, Charisma
+          <br />
+          <strong>Skills(Choose 2):</strong> Choose any three
+        </p>
+        <br />
+        <h2>Starting Equipment</h2>
+        <p>
+          <strong>(a)-</strong>A raiper <strong>(b)-</strong>A longsword
+          <strong>(c)-</strong>Any simple weapon
+          <br />
+          <strong>(a)-</strong>A diplomat's pack <strong>(b)-</strong> An
+          entertainer's pack
+          <br />
+          <strong>(a)-</strong>A Lute <strong>(b)-</strong> Any other musical
+          instrument
+          <br />
+          Leather armor and a dagger
+        </p>
+      </div>
+    </div>
     <!-- Summary table of the class -->
     <div class="center">
       <v-card>
         <v-row>
-          <v-col class="text-center"> Level </v-col>
-          <v-col class="text-center"> Proficiency Bonus </v-col>
-          <v-col class="text-center"> Unlocked </v-col>
-          <v-col class="text-center"> Rages </v-col>
-          <v-col class="text-center"> Rage Damage </v-col>
+          <v-col class="text-center tableText"> Level </v-col>
+          <v-col class="text-center tableText"> Proficiency Bonus </v-col>
+          <v-col class="text-center tableText"> Unlocked </v-col>
+          <v-col class="text-center tableText"> Rages </v-col>
+          <v-col class="text-center tableText"> Rage Damage </v-col>
         </v-row>
         <v-divider class="mb-3 mt-2"></v-divider>
       </v-card>
-      <v-card v-for="item in levels" :key="item.level">
+      <v-card class="card" v-for="item in levels" :key="item.level">
         <div>
           <v-row @click="clicked(item.level)">
             <v-col class="text-center tableText">
@@ -115,25 +156,47 @@
               </p>
             </v-col>
           </v-row>
-          <v-row class="dropdown" v-if="clickedRow == 3 && item.level == 3">
-            <v-col>
-              <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
-              <br />
-              <p>
-                You gain proficiency in one skill of your choice from the list
-                of skills available to barbarians at 1st level.
-              </p>
-            </v-col>
-            <v-col>
-              <h2 class="elevation-10 pa-5">Primal Path</h2>
-              <br />
-              <p>
-                At 3rd level, you choose a path that shapes the nature of your
-                rage. Your choice grants you features at 3rd level and again at
-                6th, 10th, and 14th levels.
-              </p>
-            </v-col>
-          </v-row>
+
+          <div class="dropdown" v-if="clickedRow == 3 && item.level == 3">
+            <v-row>
+              <v-col>
+                <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
+                <br />
+                <p>
+                  You gain proficiency in one skill of your choice from the list
+                  of skills available to barbarians at 1st level.
+                </p>
+              </v-col>
+              <v-col>
+                <h2 class="elevation-10 pa-5">Primal Path</h2>
+                <br />
+                <p>
+                  At 3rd level, you choose a path that shapes the nature of your
+                  rage. Your choice grants you features at 3rd level and again
+                  at 6th, 10th, and 14th levels.
+                </p>
+              </v-col>
+            </v-row>
+            <v-row class="mt-5 mb-5">
+              <v-col v-for="(sub, index) in subclasses" :key="index">
+                <div class="d-flex justify-center">
+                  <v-btn
+                    @click="goTo(sub.title)"
+                    class="mb-2"
+                    color="rgb(54, 61, 68)"
+                  >
+                    <font-awesome-icon
+                      class="fab fa"
+                      :icon="['fa', icons[index]]"
+                      :key="index"
+                    />
+                  </v-btn>
+                </div>
+                <p class="text-center">{{ sub.title }}</p>
+              </v-col>
+            </v-row>
+          </div>
+
           <v-row
             class="d-flex justify-center dropdown"
             v-if="clickedRow == 4 && item.level == 4"
@@ -307,219 +370,6 @@
       </v-card>
     </div>
     <!-- Lvl 1 abilities and characteristic -->
-    <div class="mt-5">
-      <div class="bg-grey-darken-4 center pa-5">
-        <h2>Hit Points</h2>
-
-        <p class="mt-2">
-          <strong>Hit Dice:</strong> 1d8.
-          <br />
-          <strong>Health:</strong> 8 + Constitution Modifier (+1d8 +
-          Constitution Modifier for every level after).
-        </p>
-        <br />
-        <h2>Proficiencies</h2>
-
-        <p>
-          <strong>Armor:</strong> Light Armor,.
-          <br />
-          <strong>Weapons:</strong> Simple Weapons, Hand Crossbows, Longswords,
-          Rapiers, Shortswords.
-          <br />
-          <strong>Tools:</strong> Three musical instruments of your choice.
-          <br />
-          <strong>Saving Throws:</strong> Dexterity, Charisma
-          <br />
-          <strong>Skills(Choose 2):</strong> Choose any three
-        </p>
-        <br />
-        <h2>Starting Equipment</h2>
-        <p>
-          <strong>(a)-</strong>A raiper <strong>(b)-</strong>A longsword
-          <strong>(c)-</strong>Any simple weapon
-          <br />
-          <strong>(a)-</strong>A diplomat's pack <strong>(b)-</strong> An
-          entertainer's pack
-          <br />
-          <strong>(a)-</strong>A Lute <strong>(b)-</strong> Any other musical
-          instrument
-          <br />
-          Leather armor and a dagger
-        </p>
-      </div>
-      <!-- All levels that an ability is gained. -->
-      <div class="center mt-5">
-        <v-expansion-panels v-model="panel">
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 7</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col
-                  ><h2 class="elevation-10 pa-5">Feral Instinct</h2>
-                  <br />
-                  <p>You have advantage on initiative rolls.</p>
-                  <p>
-                    Additionally, if you are surprised at the beginning of
-                    combat and aren't incapacitated, you can act normally on
-                    your first turn, but only if you enter your rage before
-                    doing anything else on that turn.
-                  </p>
-                  <br
-                /></v-col>
-                <v-col
-                  ><h2 class="elevation-10 pa-5">
-                    Instinctive Pounce (Optional)
-                  </h2>
-                  <br />
-                  <p>
-                    At 7th level, as part of the bonus action you take to enter
-                    your rage, you can move up to half your speed.
-                  </p></v-col
-                >
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 9</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6"
-                  ><h2 class="elevation-10 pa-5">Brutal Critical</h2>
-                  <br />
-                  <p>
-                    You can roll one additional weapon damage die when
-                    determining the extra damage for a critical hit with a melee
-                    attack.
-                  </p>
-                  <p>
-                    This increases to two additional dice at 13th level and
-                    three additional dice at 17th level.
-                  </p></v-col
-                >
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 10</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
-                  <br />
-                  <p>
-                    You gain proficiency in one skill of your choice from the
-                    list of skills available to barbarians at 1st level.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Subclass feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 11</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6"
-                  ><h2 class="elevation-10 pa-5">Relentless Rage</h2>
-                  <br />
-                  <p>
-                    Your rage can keep you fighting despite grievous wounds. If
-                    you drop to 0 hit points while you're raging and don't die
-                    outright, you can make a DC 10 Constitution saving throw. If
-                    you succeed, you drop to 1 hit point instead.
-                  </p>
-                  <br />
-                  <p>
-                    Each time you use this feature after the first, the DC
-                    increases by 5. When you finish a short or long rest, the DC
-                    resets to 10.
-                  </p></v-col
-                >
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 14</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 15</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Persistent Rage</h2>
-                  <br />
-                  <p>
-                    Your rage is so fierce that it ends early only if you fall
-                    unconscious or if you choose to end it.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 18</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Indomitable Might</h2>
-                  <br />
-                  <p>
-                    If your total for a Strength check is less than your
-                    Strength score, you can use that score in place of the
-                    total.
-                  </p></v-col
-                >
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel class="mb-10">
-            <v-expansion-panel-title>
-              <h2>Level 20</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Primal Champion</h2>
-                  <br />
-                  <p>
-                    You embody the power of the wilds. Your Strength and
-                    Constitution scores increase by 4. Your maximum for those
-                    scores is now 24.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-        </v-expansion-panels>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -738,10 +588,19 @@ export default {
 </script>
 
 <style>
+.card {
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: rgb(63, 63, 63);
+}
+
 .dropdown {
   margin-top: 10px;
   margin-left: 20px;
   margin-bottom: 10px;
+  cursor: default;
 }
 
 .tableText {
