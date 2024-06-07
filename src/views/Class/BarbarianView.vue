@@ -53,9 +53,9 @@
         </v-row>
         <v-divider class="mb-3 mt-2"></v-divider>
       </v-card>
-      <v-card class="card" v-for="item in levels" :key="item.level">
+      <v-card v-for="item in levels" :key="item.level">
         <div>
-          <v-row @click="clicked(item.level)">
+          <v-row class="card" @click="clicked(item.level)">
             <v-col class="text-center tableText">
               {{ item.level }}
             </v-col>
