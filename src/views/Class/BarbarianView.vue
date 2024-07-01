@@ -5,44 +5,44 @@
         <h2>Hit Points</h2>
 
         <p class="mt-2">
-          <strong>Hit Dice:</strong> 1d8.
+          <strong>Hit Dice:</strong> 1d12.
           <br />
-          <strong>Health:</strong> 8 + Constitution Modifier (+1d8 +
+          <strong>Health:</strong> 12 + your Constitution modifier (+1d8 +
           Constitution Modifier for every level after).
         </p>
         <br />
         <h2>Proficiencies</h2>
 
         <p>
-          <strong>Armor:</strong> Light Armor,.
+          <strong>Armor:</strong> Light armor, medium armor, shields
           <br />
-          <strong>Weapons:</strong> Simple Weapons, Hand Crossbows, Longswords,
-          Rapiers, Shortswords.
+          <strong>Weapons:</strong> Simple weapons, martial weapons
           <br />
-          <strong>Tools:</strong> Three musical instruments of your choice.
+          <strong>Tools:</strong> None
           <br />
-          <strong>Saving Throws:</strong> Dexterity, Charisma
+          <strong>Saving Throws:</strong> Strength, Constitution
           <br />
-          <strong>Skills(Choose 2):</strong> Choose any three
+          <strong>Skills(Choose 2):</strong> Choose two from Animal Handling,
+          Athletics, Intimidation, Nature, Perception, and Survival
         </p>
         <br />
         <h2>Starting Equipment</h2>
         <p>
-          <strong>(a)-</strong>A raiper <strong>(b)-</strong>A longsword
-          <strong>(c)-</strong>Any simple weapon
+          <strong>(a)-</strong>A greataxe <strong>(b)-</strong>Any martial melee
+          weapon
+
           <br />
-          <strong>(a)-</strong>A diplomat's pack <strong>(b)-</strong> An
-          entertainer's pack
+          <strong>(a)-</strong>Two handaxes <strong>(b)-</strong> Any simple
+          weapon
           <br />
-          <strong>(a)-</strong>A Lute <strong>(b)-</strong> Any other musical
-          instrument
+
           <br />
-          Leather armor and a dagger
+          An explorer's pack and four javelins
         </p>
       </div>
     </div>
     <!-- Summary table of the class -->
-    <div class="center">
+    <div class="center mb-5">
       <v-card>
         <v-row>
           <v-col class="text-center tableText"> Level </v-col>
@@ -608,6 +608,6 @@ export default {
 }
 
 .center {
-  width: 80%;
+  width: 95%;
 }
 </style>
