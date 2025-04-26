@@ -1,7 +1,7 @@
 <template>
   <div class="mt-15">
     <!-- Summary table of the class -->
-    <div class="center">
+    <div style="width: 1525px" class="center">
       <v-table>
         <thead>
           <tr>
@@ -10,6 +10,7 @@
             <th class="text-center">Unlocked</th>
             <th class="text-center">Rages</th>
             <th class="text-center">Rage Damage</th>
+            <th class="text-center">Weapon Mastery</th>
           </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
             <td class="text-center">{{ item.feature }}</td>
             <td class="text-center">{{ item.rages }}</td>
             <td class="text-center">{{ item.rageDamage }}</td>
+            <td class="text-center">{{ item.weaponMastery }}</td>
           </tr>
         </tbody>
       </v-table>
@@ -29,35 +31,32 @@
         <h2>Hit Points</h2>
 
         <p class="mt-2">
-          <strong>Hit Dice:</strong> 1d8.
+          <strong>Hit Dice:</strong> D12 per Barbarian Level.
           <br />
-          <strong>Health:</strong> 8 + Constitution Modifier (+1d8 +
-          Constitution Modifier for every level after).
         </p>
         <br />
         <h2>Proficiencies</h2>
 
         <p>
-          <strong>Armor:</strong> Light Armor,.
           <br />
-          <strong>Weapons:</strong> Simple Weapons, Hand Crossbows, Longswords, Rapiers, Shortswords.
+          <strong>Saving Throws:</strong> Strenght, Constitution
           <br />
-          <strong>Tools:</strong> Three musical instruments of your choice.
-          <br />
-          <strong>Saving Throws:</strong> Dexterity, Charisma
-          <br />
-          <strong>Skills(Choose 2):</strong> Choose any three
+          <v-divider class="ma-1" :thickness="3"></v-divider
+          ><strong>Skill Proficiencies:</strong> Choose 2: Animal Handling,
+          Athletics, Intimidation, Nature, Perception, or Survival
+          <v-divider class="ma-1" :thickness="3"></v-divider>
+
+          <strong>Weapons:</strong> Simple and Martial weapons
+          <v-divider class="ma-1" :thickness="3"></v-divider>
+          <strong>Armor:</strong> Light and Medium armor and Shields
+          <v-divider class="ma-1" :thickness="3"></v-divider>
         </p>
         <br />
         <h2>Starting Equipment</h2>
         <p>
-          <strong>(a)-</strong>A raiper <strong>(b)-</strong>A longsword <strong>(c)-</strong>Any simple weapon
+          <strong>(A)-</strong>Greataxe, 4 Handaxes, Explorer’s Pack, and 15 GP;
           <br />
-          <strong>(a)-</strong>A diplomat's pack <strong>(b)-</strong> An entertainer's pack
-          <br />
-          <strong>(a)-</strong>A Lute <strong>(b)-</strong> Any other musical instrument
-          <br>
-          Leather armor and a dagger
+          <strong>(B)-</strong>75 GP
         </p>
       </div>
 
@@ -74,55 +73,79 @@
                   <h2 class="elevation-10 pa-5">Rage</h2>
                   <br />
                   <p>
-                    On your turn, you can enter a rage as a <b>bonus action.</b>
+                    You can enter your Rage the number of times shown for your
+                    Barbarian level in the Rages column of the Barbarian
+                    Features table. You regain one expended use when you finish
+                    a Short Rest, and you regain all expended uses when you
+                    finish a Long Rest.
+                  </p>
+                  <br />
+                  <p>While active, your Rage follows the rules below.</p>
+                  <br />
+                  <p>
+                    <strong>Damage Resistance. </strong>You have Resistance to
+                    Bludgeoning, Piercing, and Slashing damage.
                   </p>
                   <br />
                   <p>
-                    While raging, you gain the following benefits if you aren't
-                    wearing heavy armor:
+                    <strong>Rage Damage.</strong> When you make an attack using
+                    Strength—with either a weapon or an Unarmed Strike—and deal
+                    damage to the target, you gain a bonus to the damage that
+                    increases as you gain levels as a Barbarian, as shown in the
+                    Rage Damage column of the Barbarian Features table.
                   </p>
                   <br />
                   <p>
-                    --You have advantage on Strength checks and Strength saving
-                    throws.
-                  </p>
-                  <p>
-                    --When you make a melee weapon attack using Strength, you
-                    gain a bonus to the damage roll that increases as you gain
-                    levels as a barbarian, as shown in the Rage Damage column of
-                    the Barbarian table.
-                  </p>
-                  <p>
-                    --You have resistance to bludgeoning, piercing, and slashing
-                    damage.
+                    <strong>Strength Advantage. </strong>You have Advantage on
+                    Strength checks and Strength saving throws.
                   </p>
                   <br />
                   <p>
-                    If you are able to cast spells, you can't cast them or
-                    concentrate on them while raging.
-                  </p>
-                  <p>
-                    Your rage lasts for 1 minute. It ends early if you are
-                    knocked unconscious or if your turn ends and you haven't
-                    attacked a hostile creature since your last turn or taken
-                    damage since then. You can also end your rage on your turn
-                    as a bonus action.
+                    <strong>No Concentration or Spells. </strong>You can't
+                    maintain Concentration, and you can't cast spells.
                   </p>
                   <br />
                   <p>
-                    Once you have raged the number of times shown for your
-                    barbarian level in the Rages column of the Barbarian table,
-                    you must finish a long rest before you can rage again
+                    <strong>Duration. </strong>The Rage lasts until the end of
+                    your next turn, and it ends early if you don Heavy armor or
+                    have the Incapacitated condition. If your Rage is still
+                    active on your next turn, you can extend the Rage for
+                    another round by doing one of the following:
                   </p>
                   <br />
+                  <ul class="ml-5">
+                    <li>Make an attack roll against an enemy.</li>
+                    <li>Force an enemy to make a saving throw.</li>
+                    <li>Take a Bonus Action to extend your Rage.</li>
+                  </ul>
+                  <br />
+                  Each time the Rage is extended, it lasts until the end of your
+                  next turn. You can maintain a Rage for up to 10 minutes.
                 </v-col>
                 <v-col>
                   <h2 class="elevation-10 pa-5">Unarmored Defense</h2>
                   <br />
                   <p>
-                    While you are not wearing any armor, your armor class equals
-                    10 + your Dexterity modifier + your Constitution modifier.
-                    You can use a shield and still gain this benefit.
+                    While you aren't wearing any armor, your base Armor Class
+                    equals 10 plus your Dexterity and Constitution modifiers.
+                    You can use a Shield and still gain this benefit.
+                  </p>
+                </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Level 1: Weapon Mastery</h2>
+                  <p>
+                    Your training with weapons allows you to use the mastery
+                    properties of two kinds of Simple or Martial Melee weapons
+                    of your choice, such as Greataxes and Handaxes. Whenever you
+                    finish a Long Rest, you can practice weapon drills and
+                    change one of those weapon choices.
+                  </p>
+                  <br />
+                  <p>
+                    When you reach certain Barbarian levels, you gain the
+                    ability to use the mastery properties of more kinds of
+                    weapons, as shown in the Weapon Mastery column of the
+                    Barbarian Features table.
                   </p>
                 </v-col>
               </v-row>
@@ -138,12 +161,10 @@
                   <h2 class="elevation-10 pa-5">Danger Sense</h2>
                   <br />
                   <p>
-                    At 2nd level, you gain an uncanny sense of when things
-                    nearby aren't as they should be, giving you an edge when you
-                    dodge away from danger. You have advantage on Dexterity
-                    saving throws against effects that you can see, such as
-                    traps and spells. To gain this benefit, you can't be
-                    blinded, deafened, or incapacitated.
+                    You gain an uncanny sense of when things aren't as they
+                    should be, giving you an edge when you dodge perils. You
+                    have Advantage on Dexterity saving throws unless you have
+                    the Incapacitated condition.
                   </p>
                   <br />
                 </v-col>
@@ -151,12 +172,12 @@
                   <h2 class="elevation-10 pa-5">Reckless Attack</h2>
                   <br />
                   <p>
-                    Starting at 2nd level, you can throw aside all concern for
-                    defense to attack with fierce desperation. When you make
-                    your first attack on your turn, you can decide to attack
-                    recklessly. Doing so gives you advantage on melee weapon
-                    attack rolls using Strength during this turn, but attack
-                    rolls against you have advantage until your next turn.
+                    You can throw aside all concern for defense to attack with
+                    increased ferocity. When you make your first attack roll on
+                    your turn, you can decide to attack recklessly. Doing so
+                    gives you Advantage on attack rolls using Strength until the
+                    start of your next turn, but attack rolls against you have
+                    Advantage during that time.
                   </p>
                 </v-col>
               </v-row>
@@ -172,17 +193,30 @@
                   <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
                   <br />
                   <p>
-                    You gain proficiency in one skill of your choice from the
-                    list of skills available to barbarians at 1st level.
+                    You gain proficiency in another skill of your choice from
+                    the skill list available to Barbarians at level 1.
+                  </p>
+                  <br />
+                  <p>
+                    In addition, while your Rage is active, you can channel
+                    primal power when you attempt certain tasks; whenever you
+                    make an ability check using one of the following skills, you
+                    can make it as a Strength check even if it normally uses a
+                    different ability: Acrobatics, Intimidation, Perception,
+                    Stealth, or Survival. When you use this ability, your
+                    Strength represents primal power coursing through you,
+                    honing your agility, bearing, and senses.
                   </p>
                 </v-col>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Primal Path</h2>
+                  <h2 class="elevation-10 pa-5">Barbarian Subclasses</h2>
                   <br />
                   <p>
-                    At 3rd level, you choose a path that shapes the nature of
-                    your rage. Your choice grants you features at 3rd level and
-                    again at 6th, 10th, and 14th levels.
+                    You gain a Barbarian subclass of your choice.A subclass is a
+                    specialization that grants you features at certain Barbarian
+                    levels. For the rest of your career, you gain each of your
+                    subclass’s features that are of your Barbarian level or
+                    lower.
                   </p>
                 </v-col>
               </v-row>
@@ -217,11 +251,9 @@
                   <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
                   <br />
                   <p>
-                    When you reach 4th level, and again at 8th, 12th, 16th, and
-                    19th level, you can increase one ability score of your
-                    choice by 2, or you can increase two ability scores of your
-                    choice by 1. As normal, you can't increase an ability score
-                    above 20 using this feature.
+                    You gain the Ability Score Improvement feat or another feat
+                    of your choice for which you qualify. You gain this feature
+                    again at Barbarian levels 8, 12, and 16.
                   </p>
                 </v-col>
               </v-row>
@@ -237,7 +269,7 @@
                   <h2 class="elevation-10 pa-5">Extra Attack</h2>
                   <br />
                   <p>
-                    You can attack twice, instead of once, whenever you take the
+                    You can attack twice instead of once whenever you take the
                     Attack action on your turn.
                   </p>
                   <br />
@@ -246,8 +278,8 @@
                   <h2 class="elevation-10 pa-5">Fast Movement</h2>
                   <br />
                   <p>
-                    Your speed increases by 10 feet while you aren't wearing
-                    heavy armor
+                    YYour speed increases by 10 feet while you aren't wearing
+                    Heavy armor.
                   </p>
                 </v-col>
               </v-row>
@@ -457,67 +489,44 @@ export default {
     return {
       subclasses: [
         {
-          title: "Ancestral Guardian",
-        },
-        {
-          title: "Battlerager",
-        },
-        {
-          title: "Beast",
-        },
-        {
           title: "Berserker",
         },
         {
-          title: "Giant",
+          title: "Wild Heart",
         },
         {
-          title: "Storm Herald",
-        },
-        {
-          title: "Totem Warrior",
-        },
-        {
-          title: "Wild Magic",
+          title: "World Tree",
         },
         {
           title: "Zealot",
         },
       ],
-      icons: [
-        "shield",
-        "hand-fist",
-        "dog",
-        "face-angry",
-        "mountain",
-        "cloud-bolt",
-        "paw",
-        "hand-sparkles",
-        "cross",
-      ],
+      icons: ["face-angry", "paw", "tree", "cross"],
       panel: [0],
       levels: [
         {
           level: "1",
           profBonus: "+2",
-          feature: "Rage, Unarmored Defense",
+          feature: "	Rage, Unarmored Defense, Weapon Mastery",
           rages: "2",
           rageDamage: "+2",
-          title: "",
+          weaponMastery: "2",
         },
         {
           level: "2",
           profBonus: "+2",
-          feature: "Reckless Attack, Danger Sense",
+          feature: "Danger Sense, Reckless Attack, ",
           rages: "2",
           rageDamage: "+2",
+          weaponMastery: "2",
         },
         {
           level: "3",
           profBonus: "+2",
-          feature: "Primal Path, Primal Knowledge (Optional)",
+          feature: "	Barbarian Subclass, Primal Knowledge",
           rages: "3",
           rageDamage: "+2",
+          weaponMastery: "2",
         },
         {
           level: "4",
@@ -525,118 +534,135 @@ export default {
           feature: "Ability Score Improvement",
           rages: "3",
           rageDamage: "+2",
+          weaponMastery: "3",
         },
         {
           level: "5",
-          profBonus: "+2",
+          profBonus: "+3",
           feature: "Extra Attack, Fast Movement",
           rages: "3",
           rageDamage: "+2",
+          weaponMastery: "3",
         },
         {
           level: "6",
-          profBonus: "+2",
-          feature: "Path feature",
+          profBonus: "+3",
+          feature: "Subclass Feature	",
           rages: "4",
-          rageDamage: "+2",
+          rageDamage: "+3",
+          weaponMastery: "3",
         },
         {
           level: "7",
-          profBonus: "+2",
-          feature: "Feral Instinct, Instinctive Pounce (Optional)",
+          profBonus: "+3",
+          feature: "Feral Instinct, Instinctive Pounce",
           rages: "4",
           rageDamage: "+2",
+          weaponMastery: "3",
         },
         {
           level: "8",
-          profBonus: "+2",
+          profBonus: "+3",
           feature: "Ability Score Improvement",
           rages: "4",
           rageDamage: "+2",
+          weaponMastery: "3",
         },
         {
           level: "9",
-          profBonus: "+2",
-          feature: "Brutal Critical (1 die)",
+          profBonus: "+4",
+          feature: "	Brutal Strike",
           rages: "4",
           rageDamage: "+3",
+          weaponMastery: "3",
         },
         {
           level: "10",
-          profBonus: "+2",
-          feature: "Path feature, Primal Knowledge (Optional)",
+          profBonus: "+4",
+          feature: "Subclass feature",
           rages: "4",
           rageDamage: "+3",
+          weaponMastery: "4",
         },
         {
           level: "11",
-          profBonus: "+2",
+          profBonus: "+4",
           feature: "Relentless Rage",
           rages: "4",
           rageDamage: "+3",
+          weaponMastery: "4",
         },
         {
           level: "12",
-          profBonus: "+2",
+          profBonus: "+4",
           feature: "Ability Score Improvement",
           rages: "5",
           rageDamage: "+3",
+          weaponMastery: "4",
         },
         {
           level: "13",
-          profBonus: "+2",
-          feature: "Brutal Critical (2 dice)",
+          profBonus: "+5",
+          feature: "	Improved Brutal Strike",
           rages: "5",
           rageDamage: "+3",
+          weaponMastery: "4",
         },
         {
           level: "14",
-          profBonus: "+2",
-          feature: "Path feature",
+          profBonus: "+5",
+          feature: "	Subclass feature",
           rages: "5",
           rageDamage: "+3",
+          weaponMastery: "4",
         },
         {
           level: "15",
-          profBonus: "+2",
+          profBonus: "+5",
           feature: "Persistent Rage",
           rages: "5",
           rageDamage: "+3",
+          weaponMastery: "4",
         },
         {
           level: "16",
-          profBonus: "+2",
+          profBonus: "+5",
           feature: "Ability Score Improvement",
           rages: "5",
           rageDamage: "+4",
+          weaponMastery: "4",
         },
         {
           level: "17",
-          profBonus: "+2",
-          feature: "Brutal Critical (3 dice)",
+          profBonus: "+6",
+          feature: "	Improved Brutal Strike",
           rages: "6",
           rageDamage: "+4",
+          weaponMastery: "4",
         },
         {
           level: "18",
-          profBonus: "+2",
+          profBonus: "+6",
           feature: "Indomitable Might",
           rages: "6",
           rageDamage: "+4",
+          weaponMastery: "4",
         },
         {
           level: "19",
-          profBonus: "+2",
-          feature: "Ability Score Improvement",
+          profBonus: "+6",
+          feature: "	Epic Boon",
           rages: "6",
           rageDamage: "+4",
+          weaponMastery: "4",
         },
         {
           level: "20",
-          profBonus: "+2",
+          profBonus: "+6",
           feature: "Primal Champion",
           rages: "Unlimited",
           rageDamage: "+4",
+          weaponMastery: "4",
         },
       ],
     };
