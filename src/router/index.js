@@ -11,6 +11,7 @@ import SRaceView from "@/views/SRaceView.vue";
 import SpellsView from "@/views/SpellView/SpellView.vue";
 import CspellView from "@/views/SpellView/CSpellView.vue";
 import BackgroundsView from "@/views/BackgroundsView.vue";
+import BackgrView from "@/views/BackgrView.vue";
 
 const routes = [
   {
@@ -77,6 +78,11 @@ const routes = [
     path: "/wiki/classes/:class/:subclass",
     name: "Subclass",
     component: SubclassView,
+  },
+  {
+    path: "/wiki/backgrounds/:background",
+    name: "Background",
+    component: BackgrView,
   },
 ];
 
