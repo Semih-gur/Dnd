@@ -2,9 +2,10 @@
   <div class="center mt-15">
     <v-row justify="center" row-height="5">
       <v-col
-        class=""
+        class="ml-15"
         v-for="(race, index) in races"
         :key="race.id"
+        xl="2"
         lg="3"
         md="4"
       >

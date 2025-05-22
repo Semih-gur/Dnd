@@ -1,7 +1,3 @@
-
-!! Bard Spirits
-!!
-
-{ lvl: "", title: "", desc: "" },
-
-<ul><li><strong></strong></li></ul>
+Finish feats. Add other three feats to the table. And do detail page
+add spells
+css backgrounds and feats views

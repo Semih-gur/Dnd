@@ -3,35 +3,65 @@
     <div class="mb-5">
       <v-app-bar elevation="3">
         <v-spacer></v-spacer>
-        <v-btn size="x-large" @click="home()">
+        <v-menu offset-y>
+          <template v-slot:activator="{ props }">
+            <v-btn v-bind="props" text>
+              <v-icon>mdi-menu</v-icon>
+            </v-btn>
+          </template>
+
+          <v-list>
+            <v-list-item>
+              <v-btn @click="goTo('wiki/races')">
+                <v-icon>mdi-account</v-icon>
+                <v-tooltip activator="parent" location="right">Races</v-tooltip>
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn @click="goTo('wiki/classes')">
+                <v-icon>mdi-sword-cross</v-icon>
+                <v-tooltip activator="parent" location="right"
+                  >Classes</v-tooltip
+                >
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn @click="goTo('wiki/spells')">
+                <v-icon>mdi-auto-fix</v-icon>
+                <v-tooltip activator="parent" location="right"
+                  >Spells</v-tooltip
+                >
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn @click="goTo('wiki/backgrounds')">
+                <v-icon>mdi-map-marker-radius </v-icon>
+                <v-tooltip activator="parent" location="right"
+                  >Backgrounds</v-tooltip
+                >
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn @click="goTo('wiki/feats')">
+                <v-icon>mdi-star-circle-outline</v-icon>
+                <v-tooltip activator="parent" location="right">Feats</v-tooltip>
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn @click="goTo('wiki/items')">
+                <v-icon>mdi-bag-personal</v-icon>
+                <v-tooltip activator="parent" location="right">Items</v-tooltip>
+              </v-btn>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+        <v-btn size="x-large" @click="goTo('')">
           <v-icon>mdi-home</v-icon>
           <v-tooltip activator="parent" location="bottom">Home</v-tooltip>
         </v-btn>
-        <v-app-bar-title>
+        <v-app-bar-title class="xs">
           {{ navTitle.replace("_", " ") }}
         </v-app-bar-title>
-        <v-btn @click="races()">
-          <v-icon size="x-large">mdi-account</v-icon>
-          <v-tooltip activator="parent" location="bottom">Races</v-tooltip>
-        </v-btn>
-        <v-btn @click="classes()">
-          <v-icon size="x-large">mdi-axe</v-icon>
-          <v-tooltip activator="parent" location="bottom">Classes</v-tooltip>
-        </v-btn>
-        <v-btn @click="spells()">
-          <v-icon size="x-large">mdi-auto-fix</v-icon>
-          <v-tooltip activator="parent" location="bottom">Spells</v-tooltip>
-        </v-btn>
-        <v-btn @click="classes()">
-          <v-icon size="x-large">mdi-account-star</v-icon>
-          <v-tooltip activator="parent" location="bottom"
-            >Backgrounds</v-tooltip
-          >
-        </v-btn>
-        <v-btn @click="classes()">
-          <v-icon size="x-large">mdi-feather</v-icon>
-          <v-tooltip activator="parent" location="bottom">Feats</v-tooltip>
-        </v-btn>
         <v-spacer></v-spacer>
       </v-app-bar>
     </div>
@@ -50,7 +80,10 @@ export default {
         return "Home";
       } else {
         const lastPart = this.$route.href.split("/").pop();
-        return lastPart.charAt(0).toUpperCase() + lastPart.slice(1);
+        return lastPart
+          .split("_")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
       }
     },
   },
@@ -59,19 +92,8 @@ export default {
   },
 
   methods: {
-    home() {
-      router.push("/");
-    },
-
-    classes() {
-      router.push("/wiki/classes");
-    },
-
-    races() {
-      router.push("/wiki/races");
-    },
-    spells() {
-      router.push("/wiki/spells");
+    goTo(page) {
+      router.push("/" + page);
     },
   },
 };

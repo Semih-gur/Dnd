@@ -31,7 +31,7 @@ export default {
 
   data() {
     return {
-      url: this.$route.href.split("/").pop(), // we'll improve this later if you want
+      url: this.$route.href.split("/").pop(),
     };
   },
   computed: {

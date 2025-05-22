@@ -5,7 +5,7 @@
         <v-table>
           <tbody>
             <tr v-for="bg in backgrounds" :key="bg.name">
-              <td>
+              <td class="row">
                 <p @click="goTo(bg.name)">{{ capitalize(bg.name) }}</p>
               </td>
             </tr>
@@ -39,3 +39,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.center {
+  width: 50%;
+}
+.row {
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.row:hover {
+  background-color: #424242;
+}
+</style>

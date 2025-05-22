@@ -670,7 +670,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .center {
   width: 80%;
 }

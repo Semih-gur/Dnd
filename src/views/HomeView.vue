@@ -12,7 +12,7 @@
   </div>
   <div class="center">
     <v-row justify="center" row-height="5">
-      <v-col cols="3">
+      <v-col cols="12" sm="6" md="4" lg="3">
         <v-card class="text-center">
           <v-img class="align-center" src="../assets/cCreator.png"></v-img>
           <div class="text-overlay">
@@ -20,7 +20,7 @@
           </div>
         </v-card>
       </v-col>
-      <v-col cols="3">
+      <v-col cols="12" sm="6" md="4" lg="3">
         <v-card @click="goWiki()" class="text-center">
           <v-img class="align-center" src="../assets/wiki.png"></v-img>
           <div class="text-overlay">
@@ -51,16 +51,16 @@ export default {
 <style>
 .text-overlay {
   position: absolute;
-  top: 50%; /* Adjust vertical position */
-  left: 50%; /* Adjust horizontal position */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 
-  padding: 10px; /* Adjust padding */
+  padding: 10px;
 }
 
 .text {
-  color: white; /* Text color */
-  font-size: 32px; /* Font size */
+  color: white;
+  font-size: 32px;
   white-space: nowrap;
 }
 

@@ -94,3 +94,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.center {
+  width: 50%;
+}
+</style>

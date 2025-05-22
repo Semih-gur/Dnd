@@ -12,6 +12,8 @@ import SpellsView from "@/views/SpellView/SpellView.vue";
 import CspellView from "@/views/SpellView/CSpellView.vue";
 import BackgroundsView from "@/views/BackgroundsView.vue";
 import BackgrView from "@/views/BackgrView.vue";
+import FeatsView from "@/views/FeatsView.vue";
+import FeatDetailView from "@/views/FeatDetailView.vue";
 
 const routes = [
   {
@@ -83,6 +85,16 @@ const routes = [
     path: "/wiki/backgrounds/:background",
     name: "Background",
     component: BackgrView,
+  },
+  {
+    path: "/wiki/feats/",
+    name: "Feats",
+    component: FeatsView,
+  },
+  {
+    path: "/wiki/feats/:feat",
+    name: "Feat",
+    component: FeatDetailView,
   },
 ];
 
