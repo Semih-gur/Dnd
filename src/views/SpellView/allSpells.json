@@ -1061,5 +1061,285 @@
         "upgrade": "The damage increases by 1d6 for each spell slot level above 1."
       }
     ]
+  },
+  {
+    "level": "2",
+    "spell": [
+      {
+        "name": "aid",
+        "school": "Abjuration",
+        "class": ["Bard", "Cleric", "Druid", "Paladin", "Ranger"],
+        "casting_time": "Action",
+        "range": "30ft",
+        "components": "V, S, M (a strip of white cloth)",
+        "duration": "8 hours",
+        "effect": "Choose up to three creatures within range. Each target’s Hit Point maximum and current Hit Points increase by 5 for the duration.",
+        "upgrade": "Each target’s Hit Points increase by 5 for each spell slot level above 2."
+      },
+      {
+        "name": "Alter Self",
+        "school": "Transmutation",
+        "class": ["sorcerer", "wizard"],
+        "casting_time": "Action",
+        "range": "Self",
+        "components": "V, S",
+        "duration": "Concentration, up to 1 hour",
+        "effect": "You alter your physical form. Choose one of the following options. Its effects last for the duration, during which you can take a Magic action to replace the option you chose with a different one.\n\nAquatic Adaptation. You sprout gills and grow webs between your fingers. You can breathe underwater and gain a Swim Speed equal to your Speed.\n\nChange Appearance. You alter your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and other distinguishing characteristics. You can make yourself appear as a member of another species, though none of your statistics change. You can’t appear as a creature of a different size, and your basic shape stays the same; if you’re bipedal, you can’t use this spell to become quadrupedal, for instance. For the duration, you can take a Magic action to change your appearance in this way again.\n\nNatural Weapons. You grow claws (Slashing), fangs (Piercing), horns (Piercing), or hooves (Bludgeoning). When you use your Unarmed Strike to deal damage with that new growth, it deals 1d6 damage of the type in parentheses instead of dealing the normal damage for your Unarmed Strike, and you use your spellcasting ability modifier for the attack and damage rolls rather than using Strength.",
+        "upgrade": ""
+      },
+      {
+        "name": "Animal Messenger",
+        "school": "Enchantment",
+        "class": ["bard", "Druid", "Ranger"],
+        "casting_time": "Action or Ritual",
+        "range": "30ft",
+        "components": "V, S, M (a morsel of food)",
+        "duration": "24 Hours",
+        "effect": "A Tiny Beast of your choice that you can see within range must succeed on a Charisma saving throw, or it attempts to deliver a message for you (if the target’s Challenge Rating isn’t 0, it automatically succeeds). You specify a location you have visited and a recipient who matches a general description, such as “a person dressed in the uniform of the town guard” or “a red-haired dwarf wearing a pointed hat.” You also communicate a message of up to twenty-five words. The Beast travels for the duration toward the specified location, covering about 25 miles per 24 hours or 50 miles if the Beast can fly.\n\nWhen the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn’t reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell.",
+        "upgrade": "The spell’s duration increases by 48 hours for each spell slot level above 2."
+      },
+      {
+        "name": "Arcane Lock",
+        "school": "Abjuration",
+        "class": ["wizard"],
+        "casting_time": "Action",
+        "range": "Touch",
+        "components": "V, S, M (gold dust worth 25+ GP, which the spell consumes)",
+        "duration": "Until dispelled",
+        "effect": "You touch a closed door, window, gate, container, or hatch and magically lock it for the duration. This lock can’t be unlocked by any nonmagical means. You and any creatures you designate when you cast the spell can open and close the object despite the lock. You can also set a password that, when spoken within 5 feet of the object, unlocks it for 1 minute.",
+        "upgrade": ""
+      },
+      {
+        "name": "Arcane Vigor",
+        "school": "Abjuration",
+        "class": ["sorcerer", "wizard"],
+        "casting_time": "Bonus Action",
+        "range": "Self",
+        "components": "V, S",
+        "duration": "Instantaneous",
+        "effect": "You tap into your life force to heal yourself. Roll one or two of your unexpended Hit Point Dice, and regain a number of Hit Points equal to the roll’s total plus your spellcasting ability modifier. Those dice are then expended.",
+        "upgrade": "The number of unexpended Hit Dice you can roll increases by one for each spell slot level above 2."
+      },
+      {
+        "name": "Augury",
+        "school": "Divination",
+        "class": ["cleric", "Druid", "wizard"],
+        "casting_time": "1 minute or Ritual",
+        "range": "Self",
+        "components": "V, S, M (specially marked sticks, bones, cards, or other divinatory tokens worth 25+ GP)",
+        "duration": "Instantaneous",
+        "effect": "You receive an omen from an otherworldly entity about the results of a course of action that you plan to take within the next 30 minutes. The DM chooses the omen from the Omens table.\n\n Weal -- Good\nWoe -- Bad\nWeal and woe -- Good and bad\nIndifference -- Neither good nor bad\n\nThe spell doesn’t account for circumstances, such as other spells, that might change the results.\n\nIf you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer.",
+        "upgrade": ""
+      },
+      {
+        "name": "Barkskin",
+        "school": "Transmutation",
+        "class": ["druid", "Ranger"],
+        "casting_time": "Bonus Action",
+        "range": "Touch",
+        "components": "V, S, M (a handful of bark)",
+        "duration": "1 hour",
+        "effect": "You touch a willing creature. Until the spell ends, the target’s skin assumes a bark-like appearance, and the target has an Armor Class of 17 if its AC is lower than that.",
+        "upgrade": ""
+      },
+      {
+        "name": "Beast Sense",
+        "school": "Divination",
+        "class": ["Druid", "Ranger"],
+        "casting_time": "Action or Ritual",
+        "range": "Touch",
+        "components": "S",
+        "duration": "Concentration, up to 1 hour",
+        "effect": "You touch a willing Beast. For the duration, you can perceive through the Beast’s senses as well as your own. When perceiving through the Beast’s senses, you benefit from any special senses it has.",
+        "upgrade": ""
+      },
+      {
+        "name": "Blindness/Deafness",
+        "school": "Transmutation",
+        "class": ["bard", "Cleric", "sorcerer", "wizard"],
+        "casting_time": "Action",
+        "range": "120 feet",
+        "components": "V",
+        "duration": "1 minute",
+        "effect": "One creature that you can see within range must succeed on a Constitution saving throw, or it has the Blinded or Deafened condition (your choice) for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success.",
+        "upgrade": "You can target one additional creature for each spell slot level above 2."
+      },
+      {
+        "name": "Blur",
+        "school": "Illusion",
+        "class": ["sorcerer", "wizard"],
+        "casting_time": "Action",
+        "range": "Self",
+        "components": "V",
+        "duration": "Concentration, up to 1 minute",
+        "effect": "Your body becomes blurred. For the duration, any creature has Disadvantage on attack rolls against you. An attacker is immune to this effect if it perceives you with Blindsight or Truesight.",
+        "upgrade": ""
+      },
+      {
+        "name": "Calm Emotions",
+        "school": "Enchantment",
+        "class": ["Bard", "Cleric"],
+        "casting_time": "Action",
+        "range": "60 feet",
+        "components": "V, S",
+        "duration": "Concentration, up to 1 minute",
+        "effect": "Each Humanoid in a 20-foot-radius Sphere centered on a point you choose within range must succeed on a Charisma saving throw or be affected by one of the following effects (choose for each creature):\n\nThe creature has Immunity to the Charmed and Frightened conditions until the spell ends. If the creature was already Charmed or Frightened, those conditions are suppressed for the duration.\n\nThe creature becomes Indifferent about creatures of your choice that it’s Hostile toward. This indifference ends if the target takes damage or witnesses its allies taking damage. When the spell ends, the creature’s attitude returns to normal.",
+        "upgrade": ""
+      },
+      {
+        "name": "Cloud Of Daggers",
+        "school": "Conjuration",
+        "class": ["Bard", "sorcerer", "warlock", "wizard"],
+        "casting_time": "Action",
+        "range": "60 feet",
+        "components": "V, S, M (a sliver of glass)",
+        "duration": "Concentration, up to 1 minute",
+        "effect": "You conjure spinning daggers in a 5-foot Cube centered on a point within range. Each creature in that area takes 4d4 Slashing damage. A creature also takes this damage if it enters the Cube or ends its turn there or if the Cube moves into its space. A creature takes this damage only once per turn.\n\nOn your later turns, you can take a Magic action to teleport the Cube up to 30 feet.",
+        "upgrade": "The damage increases by 2d4 for each spell slot level above 2."
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      },
+      {
+        "name": "",
+        "school": "",
+        "class": [""],
+        "casting_time": "",
+        "range": "",
+        "components": "",
+        "duration": "",
+        "effect": "",
+        "upgrade": ""
+      }
+    ]
   }
 ]
