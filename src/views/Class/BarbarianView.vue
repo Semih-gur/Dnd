@@ -107,6 +107,13 @@
                   <h2 class="elevation-10 pa-5">Rage</h2>
                   <br />
                   <p>
+                    You can imbue yourself with a primal power called Rage, a
+                    force that grants you extraordinary might and resilience.
+                    You can enter it as a Bonus Action if you aren't wearing
+                    Heavy armor.
+                  </p>
+                  <br />
+                  <p>
                     You can enter your Rage the number of times shown for your
                     Barbarian level in the Rages column of the Barbarian
                     Features table. You regain one expended use when you finish
@@ -117,12 +124,13 @@
                   <p>While active, your Rage follows the rules below.</p>
                   <br />
                   <p>
-                    <strong>Damage Resistance. </strong>You have Resistance to
-                    Bludgeoning, Piercing, and Slashing damage.
+                    <b>Damage Resistance.</b>
+                    You have Resistance to Bludgeoning, Piercing, and Slashing
+                    damage.
                   </p>
                   <br />
                   <p>
-                    <strong>Rage Damage.</strong> When you make an attack using
+                    <b>Rage Damage</b>When you make an attack using
                     Strength—with either a weapon or an Unarmed Strike—and deal
                     damage to the target, you gain a bonus to the damage that
                     increases as you gain levels as a Barbarian, as shown in the
@@ -130,24 +138,24 @@
                   </p>
                   <br />
                   <p>
-                    <strong>Strength Advantage. </strong>You have Advantage on
-                    Strength checks and Strength saving throws.
+                    <b>Strength Advantage</b>You have Advantage on Strength
+                    checks and Strength saving throws.
                   </p>
                   <br />
                   <p>
-                    <strong>No Concentration or Spells. </strong>You can't
-                    maintain Concentration, and you can't cast spells.
+                    <b>No Concentration or Spells.</b>You can't maintain
+                    Concentration, and you can't cast spells.
                   </p>
                   <br />
                   <p>
-                    <strong>Duration. </strong>The Rage lasts until the end of
-                    your next turn, and it ends early if you don Heavy armor or
-                    have the Incapacitated condition. If your Rage is still
-                    active on your next turn, you can extend the Rage for
-                    another round by doing one of the following:
+                    <b>Duration</b>The Rage lasts until the end of your next
+                    turn, and it ends early if you don Heavy armor or have the
+                    Incapacitated condition. If your Rage is still active on
+                    your next turn, you can extend the Rage for another round by
+                    doing one of the following:
                   </p>
                   <br />
-                  <ul class="ml-5">
+                  <ul class="ml-10">
                     <li>Make an attack roll against an enemy.</li>
                     <li>Force an enemy to make a saving throw.</li>
                     <li>Take a Bonus Action to extend your Rage.</li>
@@ -319,6 +327,7 @@
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+
           <v-expansion-panel>
             <v-expansion-panel-title>
               <h2>Level 6</h2>
@@ -344,27 +353,38 @@
                   ><h2 class="elevation-10 pa-5">Feral Instinct</h2>
                   <br />
                   <p>You have advantage on initiative rolls.</p>
-                  <p>
-                    Additionally, if you are surprised at the beginning of
-                    combat and aren't incapacitated, you can act normally on
-                    your first turn, but only if you enter your rage before
-                    doing anything else on that turn.
-                  </p>
+
                   <br
                 /></v-col>
                 <v-col
-                  ><h2 class="elevation-10 pa-5">
-                    Instinctive Pounce (Optional)
-                  </h2>
+                  ><h2 class="elevation-10 pa-5">Instinctive Pounce</h2>
                   <br />
                   <p>
-                    At 7th level, as part of the bonus action you take to enter
-                    your rage, you can move up to half your speed.
+                    As part of the Bonus Action you take to enter your Rage, you
+                    can move up to half your Speed.
                   </p></v-col
                 >
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 8</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
+                  <br />
+                  <p>
+                    You gain the Ability Score Improvement feat or another feat
+                    of your choice for which you qualify.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
               <h2>Level 9</h2>
@@ -372,18 +392,34 @@
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6"
-                  ><h2 class="elevation-10 pa-5">Brutal Critical</h2>
+                  ><h2 class="elevation-10 pa-5">Brutal Strike</h2>
                   <br />
                   <p>
-                    You can roll one additional weapon damage die when
-                    determining the extra damage for a critical hit with a melee
-                    attack.
+                    If you use Reckless Attack, you can forgo any Advantage on
+                    one Strength-based attack roll of your choice on your turn.
+                    The chosen attack roll mustn't have Disadvantage. If the
+                    chosen attack roll hits, the target takes an extra 1d10
+                    damage of the same type dealt by the weapon or Unarmed
+                    Strike, and you can cause one Brutal Strike effect of your
+                    choice.
                   </p>
+                  <br />
+                  <p>You have the following effect options.</p>
+                  <br />
                   <p>
-                    This increases to two additional dice at 13th level and
-                    three additional dice at 17th level.
-                  </p></v-col
-                >
+                    <b>Forceful Blow.</b>
+                    The target is pushed 15 feet straight away from you. You can
+                    then move up to half your Speed straight toward the target
+                    without provoking Opportunity Attacks.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Hamstring Blow.</b>
+                    The target’s Speed is reduced by 15 feet until the start of
+                    your next turn. A target can be affected by only one
+                    Hamstring Blow at a time— the most recent one.
+                  </p>
+                </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -392,17 +428,9 @@
               <h2>Level 10</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Primal Knowledge (Optional)</h2>
-                  <br />
-                  <p>
-                    You gain proficiency in one skill of your choice from the
-                    list of skills available to barbarians at 1st level.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Subclass feature</h2>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
                   <br />
                   <p>You gain a new feature from the subclass you chose</p>
                 </v-col>
@@ -419,18 +447,68 @@
                   ><h2 class="elevation-10 pa-5">Relentless Rage</h2>
                   <br />
                   <p>
-                    Your rage can keep you fighting despite grievous wounds. If
-                    you drop to 0 hit points while you're raging and don't die
-                    outright, you can make a DC 10 Constitution saving throw. If
-                    you succeed, you drop to 1 hit point instead.
+                    Your Rage can keep you fighting despite grievous wounds. If
+                    you drop to 0 Hit Points while your Rage is active and don't
+                    die outright, you can make a DC 10 Constitution saving
+                    throw. If you succeed, your Hit Points instead change to a
+                    number equal to twice your Barbarian level.
                   </p>
                   <br />
                   <p>
                     Each time you use this feature after the first, the DC
-                    increases by 5. When you finish a short or long rest, the DC
+                    increases by 5. When you finish a Short or Long Rest, the DC
                     resets to 10.
                   </p></v-col
                 >
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 12</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
+                  <br />
+                  <p>
+                    You gain the Ability Score Improvement feat or another feat
+                    of your choice for which you qualify.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 13</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Improved Brutal Strike</h2>
+                  <br />
+                  <p>
+                    You have honed new ways to attack furiously. The following
+                    effects are now among your Brutal Strike options.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Staggering Blow.</b>
+                    The target has Disadvantage on the next saving throw it
+                    makes, and it can’t make Opportunity Attacks until the start
+                    of your next turn.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Sundering Blow.</b>
+                    Before the start of your next turn, the next attack roll
+                    made by another creature against the target gains a +5 bonus
+                    to the roll. An attack roll can gain only one Sundering Blow
+                    bonus.
+                  </p>
+                </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -458,8 +536,52 @@
                   <h2 class="elevation-10 pa-5">Persistent Rage</h2>
                   <br />
                   <p>
-                    Your rage is so fierce that it ends early only if you fall
-                    unconscious or if you choose to end it.
+                    When you roll Initiative, you can regain all expended uses
+                    of Rage. After you regain uses of Rage in this way, you
+                    can’t do so again until you finish a Long Rest.
+                  </p>
+                  <br />
+                  <p>
+                    In addition, your Rage is so fierce that it now lasts for 10
+                    minutes without you needing to do anything to extend it from
+                    round to round. Your Rage ends early if you have the
+                    Unconscious condition (not just the Incapacitated condition)
+                    or don Heavy armor.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 16</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
+                  <br />
+                  <p>
+                    You gain the Ability Score Improvement feat or another feat
+                    of your choice for which you qualify.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 17</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Improved Brutal Strike</h2>
+                  <br />
+                  <p>
+                    The extra damage of your Brutal Strike increases to 2d10. In
+                    addition, you can use two different Brutal Strike effects
+                    whenever you use your Brutal Strike feature.
                   </p>
                 </v-col>
               </v-row>
@@ -475,9 +597,27 @@
                   <h2 class="elevation-10 pa-5">Indomitable Might</h2>
                   <br />
                   <p>
-                    If your total for a Strength check is less than your
-                    Strength score, you can use that score in place of the
-                    total.
+                    If your total for a Strength check or Strength saving throw
+                    is less than your Strength score, you can use that score in
+                    place of the total.
+                  </p></v-col
+                >
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 19</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Epic Boon</h2>
+                  <br />
+                  <p>
+                    You gain an Epic Boon feat or another feat of your choice
+                    for which you qualify. Boon of Irresistible Offense is
+                    recommended.
                   </p></v-col
                 >
               </v-row>
@@ -493,9 +633,8 @@
                   <h2 class="elevation-10 pa-5">Primal Champion</h2>
                   <br />
                   <p>
-                    You embody the power of the wilds. Your Strength and
-                    Constitution scores increase by 4. Your maximum for those
-                    scores is now 24.
+                    You embody primal power. Your Strength and Constitution
+                    scores increase by 4, to a maximum of 25.
                   </p>
                 </v-col>
               </v-row>
