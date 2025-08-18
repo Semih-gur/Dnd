@@ -1,6 +1,73 @@
 <template>
   <div class="mt-15">
+    <div class="bg-grey-darken-4 center pa-5">
+      <h2 class="mb-5">Core Barbarian Traits</h2>
+
+      <div class="mb-10">
+        <v-row>
+          <v-col cols="2"><b>Primary Ability</b></v-col>
+          <v-col class="mr-10">Strength</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Hit Point Die</b></v-col>
+          <v-col class="mr-10">D12 per Barbarian level</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Saving Throw Proficiencies</b></v-col>
+          <v-col class="mr-10">Strength and Constitution</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Skill Proficiencies</b></v-col>
+          <v-col class="mr-10"
+            >Choose 2: Animal Handling, Athletics, Intimidation, Nature,
+            Perception, or Survival</v-col
+          >
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Weapon Proficiencies</b></v-col>
+          <v-col class="mr-10">Simple and Martial weapons</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Armor Training</b></v-col>
+          <v-col class="mr-10">Light and Medium armor and Shields</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Starting Equipment</b></v-col>
+          <v-col class="mr-10"
+            >Choose A or B: (A) Greataxe, 4 Handaxes, Explorer’s Pack, and 15
+            GP; or (B) 75 GP</v-col
+          >
+          <v-divider></v-divider>
+        </v-row>
+        <h2 class="mt-10">Becoming a Barbarian</h2>
+        <h3 class="mt-5">As a Level 1 Character</h3>
+        <li>Gain all the traits in the Core Barbarian Traits table.</li>
+        <li>
+          Gain the Barbarian's level 1 features, which are listed in the
+          Barbarian Features table.
+        </li>
+        <h3 class="mt-5">As a Multiclass Character</h3>
+        <li>
+          Gain the following traits from the Core Barbarian Traits table: Hit
+          Point Die, proficiency with Martial weapons, and training with
+          Shields.
+        </li>
+        <li>
+          Gain the Barbarian's level 1 features, which are listed in the
+          Barbarian Features table.
+        </li>
+      </div>
+    </div>
     <!-- Summary table of the class -->
+    <div class="bg-grey-darken-4 center pa-5">
+      <h2>Barbarian Class Features</h2>
+    </div>
     <div style="width: 1525px" class="center">
       <v-table>
         <thead>
@@ -27,39 +94,6 @@
     </div>
     <!-- Lvl 1 abilities and characteristic -->
     <div class="mt-5">
-      <div class="bg-grey-darken-4 center pa-5">
-        <h2>Hit Points</h2>
-
-        <p class="mt-2">
-          <strong>Hit Dice:</strong> D12 per Barbarian Level.
-          <br />
-        </p>
-        <br />
-        <h2>Proficiencies</h2>
-
-        <p>
-          <br />
-          <strong>Saving Throws:</strong> Strenght, Constitution
-          <br />
-          <v-divider class="ma-1" :thickness="3"></v-divider
-          ><strong>Skill Proficiencies:</strong> Choose 2: Animal Handling,
-          Athletics, Intimidation, Nature, Perception, or Survival
-          <v-divider class="ma-1" :thickness="3"></v-divider>
-
-          <strong>Weapons:</strong> Simple and Martial weapons
-          <v-divider class="ma-1" :thickness="3"></v-divider>
-          <strong>Armor:</strong> Light and Medium armor and Shields
-          <v-divider class="ma-1" :thickness="3"></v-divider>
-        </p>
-        <br />
-        <h2>Starting Equipment</h2>
-        <p>
-          <strong>(A)-</strong>Greataxe, 4 Handaxes, Explorer’s Pack, and 15 GP;
-          <br />
-          <strong>(B)-</strong>75 GP
-        </p>
-      </div>
-
       <!-- All levels that an ability is gained. -->
       <div class="center mt-5">
         <v-expansion-panels v-model="panel">
