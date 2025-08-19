@@ -1,17 +1,87 @@
 <template>
   <div class="mt-15">
+    <div class="bg-grey-darken-4 center pa-5">
+      <h2 class="mb-5">Core Bard Traits</h2>
+
+      <div class="mb-10">
+        <v-row>
+          <v-col cols="2"><b>Primary Ability</b></v-col>
+          <v-col class="mr-10">Charisma</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Hit Point Die</b></v-col>
+          <v-col class="mr-10">D8 per Bard level</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Saving Throw Proficiencies</b></v-col>
+          <v-col class="mr-10">Dexterity and Charisma</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Skill Proficiencies</b></v-col>
+          <v-col class="mr-10">Choose any 3 skills</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Tool Proficiencies</b></v-col>
+          <v-col class="mr-10"> Choose 3 Musical Instruments</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Weapon Proficiencies</b></v-col>
+          <v-col class="mr-10">Simple weapons</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Armor Training</b></v-col>
+          <v-col class="mr-10">Light armor</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Starting Equipment</b></v-col>
+          <v-col class="mr-10"
+            >Choose A or B: (A) Leather Armor, 2 Daggers, Musical Instrument of
+            your choice, Entertainer’s Pack, and 19 GP; or (B) 90 GP</v-col
+          >
+          <v-divider></v-divider>
+        </v-row>
+        <h2 class="mt-10">Becoming a Bard</h2>
+        <h3 class="mt-5">As a Level 1 Character</h3>
+        <li>Gain all the traits in the Core Bard Traits table.</li>
+        <li>
+          Gain the Bard's level 1 features, which are listed in the Bard
+          Features table.
+        </li>
+        <h3 class="mt-5">As a Multiclass Character</h3>
+        <li>
+          Gain the following traits from the Core Bard Traits table: Hit Point
+          Die, proficiency in one skill of your choice, proficiency with one
+          Musical Instrument of your choice, and training with Light armor.
+        </li>
+        <li>
+          Gain the Bard's level 1 features, which are listed in the Bard
+          Features table. See the multiclassing rules in multiclassing to
+          determine your available spell slots.
+        </li>
+      </div>
+    </div>
     <!-- Summary table of the class -->
-    <div class="center">
+    <div class="bg-grey-darken-4 center pa-5">
+      <h2>Bard Class Features</h2>
+    </div>
+    <div style="width: 1525px" class="center">
       <v-table>
         <thead>
-          <th class="text-center" colspan="5"></th>
-          <th class="text-center" colspan="7">Spell Slots Known</th>
+          <th></th>
           <tr>
             <th class="text-center">Level</th>
             <th class="text-center">Proficiency Bonus</th>
             <th class="text-center">Unlocked</th>
-            <th class="text-center">Cantrip Known</th>
-            <th class="text-center">Spells Known</th>
+            <th class="text-center">Bardic Die</th>
+            <th class="text-center">Cantrips</th>
+            <th class="text-center">Prepared Spells</th>
             <th class="text-center">1</th>
             <th class="text-center">2</th>
             <th class="text-center">3</th>
@@ -24,10 +94,12 @@
           </tr>
         </thead>
         <tbody>
+          <p></p>
           <tr v-for="item in levels" :key="item.level">
             <td>{{ item.level }}</td>
             <td class="text-center">{{ item.profBonus }}</td>
             <td class="text-center">{{ item.feature }}</td>
+            <td class="text-center">{{ item.bardic_die }}</td>
             <td class="text-center">{{ item.cantrip }}</td>
             <td class="text-center">{{ item.spell }}</td>
             <td class="text-center">{{ item.first }}</td>
@@ -45,43 +117,6 @@
     </div>
     <!-- Lvl 1 abilities and characteristic -->
     <div class="mt-5">
-      <div class="bg-grey-darken-4 center pa-5">
-        <h2>Hit Points</h2>
-
-        <p class="mt-2">
-          <strong>Hit Dice:</strong> 1d12.
-          <br />
-          <strong>Health:</strong> 12 + Constitution Modifier (+1d12 +
-          Constitution Modifier for every level after).
-        </p>
-        <br />
-        <h2>Proficiencies</h2>
-
-        <p>
-          <strong>Armor:</strong> Light Armor, Medium Armor, Shields.
-          <br />
-          <strong>Weapons:</strong> Simple Weapons, Martial Weapons.
-          <br />
-          <strong>Tools:</strong> None.
-          <br />
-          <strong>Saving Throws:</strong> Strenght, Constitution
-          <br />
-          <strong>Skills(Choose 2):</strong> Animal Handling, Athletics,
-          Intimidation, Nature, Perception, and Survival
-        </p>
-        <br />
-        <h2>Starting Equipment</h2>
-        <p>
-          <strong>(a)-</strong>A greataxe <strong>(b)-</strong>Any martial melee
-          weapon
-          <br />
-          <strong>(a)-</strong>two handaxes <strong>(b)-</strong> Any simple
-          weapon
-          <br />
-          An explorer's pack and four javelins
-        </p>
-      </div>
-
       <div class="bg-grey-darken-4 center pa-5">
         <h2>Spell Casting</h2>
         <p>
@@ -527,10 +562,7 @@ export default {
     return {
       subclasses: [
         {
-          title: "Creation",
-        },
-        {
-          title: "Eloquence",
+          title: "Dance",
         },
         {
           title: "Glamour",
@@ -538,35 +570,18 @@ export default {
         {
           title: "Lore",
         },
-        {
-          title: "Spirits",
-        },
-        {
-          title: "Swords",
-        },
+
         {
           title: "Valor",
         },
-        {
-          title: "Whispers",
-        },
       ],
-      icons: [
-        "plus",
-        "comment",
-        "hand-sparkles",
-        "book",
-        "ghost",
-        "cloud-bolt",
-        "khanda",
-        "user-secret",
-      ],
+      icons: ["shoe-prints", "hand-sparkles", "book", "khanda"],
       panel: [0],
       levels: [
         {
           level: "1st",
           profBonus: "+2",
-          feature: "Spellcasting, Bardic Inspiration (d6)",
+          feature: "Bardic Inspiration, Spellcasting",
           cantrip: "2",
           spell: "4",
           first: "2",
@@ -578,12 +593,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D6",
         },
         {
           level: "2nd",
           profBonus: "+2",
-          feature:
-            "Jack of All Trades, Song of Rest (d6), Magical Inspiration (Optional)",
+          feature: "Expertise, Jack of All Trades",
           cantrip: "2",
           spell: "5",
           first: "3",
@@ -595,11 +610,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D6",
         },
         {
           level: "3rd",
           profBonus: "+2",
-          feature: "Bard College, Expertise",
+          feature: "Bard Subclass",
           cantrip: "2",
           spell: "6",
           first: "4",
@@ -611,11 +627,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D6",
         },
         {
           level: "4th",
           profBonus: "+2",
-          feature: "Ability Score Improvement, Bardic Versatility (Optional)",
+          feature: "Ability Score Improvement",
           cantrip: "3",
           spell: "7",
           first: "4",
@@ -627,11 +644,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D6",
         },
         {
           level: "5th",
           profBonus: "+3",
-          feature: "Bardic Inspiration (d8), Font of Inspiration",
+          feature: "Font of Inspiration",
           cantrip: "3",
           spell: "8",
           first: "4",
@@ -643,11 +661,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D8",
         },
         {
           level: "6th",
           profBonus: "+3",
-          feature: "Countercharm, Bard College feature",
+          feature: "Subclass Feature",
           cantrip: "3",
           spell: "9",
           first: "4",
@@ -659,11 +678,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D8",
         },
         {
           level: "7th",
           profBonus: "+3",
-          feature: "",
+          feature: "Countercharm",
           cantrip: "3",
           spell: "10",
           first: "4",
@@ -675,11 +695,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D8",
         },
         {
           level: "8th",
           profBonus: "+3",
-          feature: "Ability Score Improvement, Bardic Versatility (Optional)",
+          feature: "Ability Score Improvement",
           cantrip: "3",
           spell: "11",
           first: "4",
@@ -691,11 +712,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D8",
         },
         {
           level: "9th",
           profBonus: "+4",
-          feature: "Song of Rest (d8)",
+          feature: "Expertise",
           cantrip: "3",
           spell: "12",
           first: "4",
@@ -707,11 +729,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D8",
         },
         {
           level: "10th",
           profBonus: "+4",
-          feature: "Bardic Inspiration (d10), Expertise, Magical Secrets",
+          feature: "Magical Secrets",
           cantrip: "4",
           spell: "14",
           first: "4",
@@ -723,6 +746,7 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D10",
         },
         {
           level: "11th",
@@ -739,11 +763,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D10",
         },
         {
           level: "12th",
           profBonus: "+4",
-          feature: "Ability Score Improvement, Bardic Versatility (Optional)",
+          feature: "Ability Score Improvement",
           cantrip: "4",
           spell: "15",
           first: "4",
@@ -755,6 +780,7 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
+          bardic_die: "D10",
         },
         {
           level: "13th",
@@ -771,11 +797,12 @@ export default {
           seventh: "1",
           eight: "-",
           ninth: "-",
+          bardic_die: "D10",
         },
         {
           level: "14th",
           profBonus: "+5",
-          feature: "Magical Secrets, Bard College feature",
+          feature: "Subclass Feature",
           cantrip: "4",
           spell: "18",
           first: "4",
@@ -787,11 +814,12 @@ export default {
           seventh: "1",
           eight: "-",
           ninth: "-",
+          bardic_die: "D10",
         },
         {
           level: "15th",
           profBonus: "+5",
-          feature: "Bardic Inspiration (d12)",
+          feature: "",
           cantrip: "4",
           spell: "19",
           first: "4",
@@ -803,11 +831,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "-",
+          bardic_die: "D12",
         },
         {
           level: "16th",
           profBonus: "+5",
-          feature: "Ability Score Improvement, Bardic Versatility (Optional)",
+          feature: "Ability Score Improvement",
           cantrip: "4",
           spell: "19",
           first: "4",
@@ -819,11 +848,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "-",
+          bardic_die: "D12",
         },
         {
           level: "17th",
           profBonus: "+6",
-          feature: "Song of Rest (d12)",
+          feature: "",
           cantrip: "4",
           spell: "20",
           first: "4",
@@ -835,11 +865,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "1",
+          bardic_die: "D12",
         },
         {
           level: "18th",
           profBonus: "+6",
-          feature: "Magical Secrets",
+          feature: "Superior Inspiration",
           cantrip: "4",
           spell: "22",
           first: "4",
@@ -851,11 +882,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "1",
+          bardic_die: "D12",
         },
         {
           level: "19th",
           profBonus: "+6",
-          feature: "Ability Score Improvement, Bardic Versatility (Optional)",
+          feature: "Epic Boon",
           cantrip: "4",
           spell: "22",
           first: "4",
@@ -867,11 +899,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "1",
+          bardic_die: "D12",
         },
         {
           level: "20th",
           profBonus: "+6",
-          feature: "Superior Inspiration",
+          feature: "Words of Creation",
           cantrip: "4",
           spell: "22",
           first: "4",
@@ -883,6 +916,7 @@ export default {
           seventh: "2",
           eight: "1",
           ninth: "1",
+          bardic_die: "D12",
         },
       ],
     };
