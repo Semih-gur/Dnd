@@ -117,92 +117,6 @@
     </div>
     <!-- Lvl 1 abilities and characteristic -->
     <div class="mt-5">
-      <div class="bg-grey-darken-4 center pa-5">
-        <h2>Spell Casting</h2>
-        <p>
-          You have learned to untangle and reshape the fabric of reality in
-          harmony with your wishes and music. Your spells are part of your vast
-          repertoire, magic that you can tune to different situations.
-        </p>
-        <br />
-        <h3>Cantrips</h3>
-        <p>
-          You know two cantrips of your choice from the bard spell list. You
-          learn additional bard cantrips of your choice at higher levels, as
-          shown in the Cantrips Known column of the Bard table.
-        </p>
-        <br />
-        <h3>Spell Slots</h3>
-        <br />
-        <p>
-          The Bard table shows how many spell slots you have to cast your bard
-          spells of 1st level and higher. To cast one of these spells, you must
-          expend a slot of the spell's level or higher. You regain all expended
-          spell slots when you finish a long rest. For example, if you know the
-          1st-level spell Cure Wounds and have a 1st-level and a 2nd-level spell
-          slot available, you can cast Cure Wounds using either slot.
-        </p>
-        <br />
-        <h3>Spells Known of 1st Level and Higher</h3>
-        <br />
-        <p>
-          You know four 1st-level spells of your choice from the bard spell
-          list.
-        </p>
-        <br />
-        <p>
-          The Spells Known column of the Bard table shows when you learn more
-          bard spells of your choice. Each of these spells must be of a level
-          for which you have spell slots, as shown on the table. For instance,
-          when you reach 3rd level in this class, you can learn one new spell of
-          1st or 2nd level.
-        </p>
-        <br />
-        <p>
-          Additionally, when you gain a level in this class, you can choose one
-          of the bard spells you know and replace it with another spell from the
-          bard spell list, which also must be of a level for which you have
-          spell slots.
-        </p>
-        <br />
-        <h2>Spellcasting Ability</h2>
-        <br />
-        <p>
-          Charisma is your spellcasting ability for your bard spells. Your magic
-          comes from the heart and soul you pour into the performance of your
-          music or oration. You use your Charisma whenever a spell refers to
-          your spellcasting ability. In addition, you use your Charisma modifier
-          when setting the saving throw DC for a bard spell you cast and when
-          making an attack roll with one.
-        </p>
-        <br />
-
-        <p>
-          <strong>Spell Save DC </strong> = 8 + your proficiency bonus + your
-          Charisma modifier
-        </p>
-
-        <br />
-        <p>
-          <strong>Spell Attack Modifier </strong> = your proficiency bonus +
-          your Charisma modifier
-        </p>
-        <br />
-        <h2>Ritual Casting</h2>
-        <br />
-        <p>
-          You can cast any bard spell you know as a ritual if that spell has the
-          ritual tag.
-        </p>
-        <br />
-        <h2>Spellcasting Focus</h2>
-        <br />
-        <p>
-          You can use a musical instrument (found in chapter 5) as a
-          spellcasting focus for your bard spells.
-        </p>
-      </div>
-
       <!-- All levels that an ability is gained. -->
       <div class="center mt-5">
         <v-expansion-panels v-model="panel">
@@ -216,33 +130,115 @@
                   <h2 class="elevation-10 pa-5">Bardic Inspiration</h2>
                   <br />
                   <p>
-                    You can inspire others through stirring words or music. To
-                    do so, you use a <b>bonus action</b> on your turn to choose
-                    one creature other than yourself within 60 feet of you who
-                    can hear you. That creature gains one Bardic Inspiration
-                    die, a d6.
+                    You can supernaturally inspire others through words, music,
+                    or dance. This inspiration is represented by your Bardic
+                    Inspiration die, which is a d6.
                   </p>
                   <br />
                   <p>
-                    Once within the next 10 minutes, the creature can roll the
-                    die and add the number rolled to one ability check, attack
-                    roll, or saving throw it makes. The creature can wait until
-                    after it rolls the d20 before deciding to use the Bardic
-                    Inspiration die, but must decide before the DM says whether
-                    the roll succeeds or fails. Once the Bardic Inspiration die
-                    is rolled, it is lost. A creature can have only one Bardic
+                    <b>Using Bardic Inspiration.</b>As a Bonus Action, you can
+                    inspire another creature within 60 feet of yourself who can
+                    see or hear you. That creature gains one of your Bardic
+                    Inspiration dice. A creature can have only one Bardic
                     Inspiration die at a time.
                   </p>
                   <br />
                   <p>
-                    You can use this feature a number of times equal to your
-                    Charisma modifier (a minimum of once). You regain any
-                    expended uses when you finish a long rest.
+                    Once within the next hour when the creature fails a D20
+                    Test, the creature can roll the Bardic Inspiration die and
+                    add the number rolled to the d20, potentially turning the
+                    failure into a success. A Bardic Inspiration die is expended
+                    when it's rolled.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Number of Uses.</b>You can confer a Bardic Inspiration
+                    die a number of times equal to your Charisma modifier
+                    (minimum of once), and you regain all expended uses when you
+                    finish a Long Rest.
+                  </p>
+                  <br />
+                  <p>
+                    <b>At Higher Levels.</b>Your Bardic Inspiration die changes
+                    when you reach certain Bard levels, as shown in the Bardic
+                    Die column of the Bard Features table. The die becomes a d8
+                    at level 5, a d10 at level 10, and a d12 at level 15.
+                  </p>
+                </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Spellcasting</h2>
+                  <br />
+                  <p>
+                    You have learned to cast spells through your bardic arts.
+                    See chapter 7 for the rules on spellcasting. The information
+                    below details how you use those rules with Bard spells,
+                    which appear in the Bard spell list later in the class's
+                    description.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Cantrips. </b>You know two cantrips of your choice from
+                    the Bard spell list. Dancing Lights and Vicious Mockery are
+                    recommended.
+                  </p>
+                  <br />
+                  <p>
+                    Whenever you gain a Bard level, you can replace one of your
+                    cantrips with another cantrip of your choice from the Bard
+                    spell list.
+                  </p>
+                  <br />
+                  <p>
+                    When you reach Bard levels 4 and 10, you learn another
+                    cantrip of your choice from the Bard spell list, as shown in
+                    the Cantrips column of the Bard Features table.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Spell Slots. </b>The Bard Features table shows how many
+                    spell slots you have to cast your level 1+ spells. You
+                    regain all expended slots when you finish a Long Rest.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Prepared Spells of Level 1+. </b>You prepare the list of
+                    level 1+ spells that are available for you to cast with this
+                    feature. To start, choose four level 1 spells from the Bard
+                    spell list. Charm Person, Color Spray, Dissonant Whispers,
+                    and Healing Word are recommended.
+                  </p>
+                  <br />
+                  <p>
+                    The number of spells on your list increases as you gain Bard
+                    levels, as shown in the Prepared Spells column of the Bard
+                    Features table. Whenever that number increases, choose
+                    additional spells from the Bard spell list until the number
+                    of spells on your list matches the number on the table. The
+                    chosen spells must be of a level for which you have spell
+                    slots. For example, if you're a level 3 Bard, your list of
+                    prepared spells can include six spells of levels 1 and 2 in
+                    any combination.
+                  </p>
+                  <br />
+                  <p>
+                    If another Bard feature gives you spells that you always
+                    have prepared, those spells don’t count against the number
+                    of spells you can prepare with this feature, but those
+                    spells otherwise count as Bard spells for you.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Changing Your Prepared Spells.</b>Whenever you gain a
+                    Bard level, you can replace one spell on your list with
+                    another Bard spell for which you have spell slots.
                   </p>
                   <p>
-                    Your Bardic Inspiration die changes when you reach certain
-                    levels in this class. The die becomes a d8 at 5th level, a
-                    d10 at 10th level, and a d12 at 15th level.
+                    <b>Spellcasting Ability. </b>Charisma is your spellcasting
+                    ability for your Bard spells.
+                  </p>
+                  <p>
+                    <b>Spellcasting Focus. </b>You can use a Musical Instrument
+                    as a Spellcasting Focus for your Bard spells.
                   </p>
                 </v-col>
               </v-row>
@@ -255,45 +251,32 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Jack of All Trades</h2>
+                  <h2 class="elevation-10 pa-5">Expertise</h2>
                   <br />
                   <p>
-                    Starting at 2nd level, you can add half your proficiency
-                    bonus, rounded down, to any ability check you make that
-                    doesn't already include your proficiency bonus.
-                  </p>
-                  <br />
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Song of Rest</h2>
-                  <br />
-                  <p>
-                    Beginning at 2nd level, you can use soothing music or
-                    oration to help revitalize your wounded allies during a
-                    short rest. If you or any friendly creatures who can hear
-                    your performance regain hit points at the end of the short
-                    rest by spending one or more Hit Dice, each of those
-                    creatures regains an extra 1d6 hit points.
+                    You gain Expertise (see the rules glossary) in two of your
+                    skill proficiencies of your choice. Performance and
+                    Persuasion are recommended if you have proficiency in them.
                   </p>
                   <br />
                   <p>
-                    The extra Hit Points increase when you reach certain levels
-                    in this class: to 1d8 at 9th level, to 1d10 at 13th level,
-                    and to 1d12 at 17th level.
+                    At Bard level 9, you gain Expertise in two more of your
+                    skill proficiencies of your choice.
                   </p>
                 </v-col>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">
-                    Magical Inspiration (Optional)
-                  </h2>
+                  <h2 class="elevation-10 pa-5">Jack of all Trades</h2>
                   <br />
                   <p>
-                    At 2nd level, if a creature has a Bardic Inspiration die
-                    from you and casts a spell that restores hit points or deals
-                    damage, the creature can roll that die and choose a target
-                    affected by the spell. Add the number rolled as a bonus to
-                    the hit points regained or the damage dealt. The Bardic
-                    Inspiration die is then lost.
+                    You can add half your Proficiency Bonus (round down) to any
+                    ability check you make that uses a skill proficiency you
+                    lack and that doesn't otherwise use your Proficiency Bonus.
+                  </p>
+                  <br />
+                  <p>
+                    For example, if you make a Strength (Athletics) check and
+                    lack Athletics proficiency, you can add half your
+                    Proficiency Bonus to the check.
                   </p>
                 </v-col>
               </v-row>
@@ -306,26 +289,16 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Bard College</h2>
+                  <h2 class="elevation-10 pa-5">Bard Subclass</h2>
                   <br />
                   <p>
-                    At 3rd level, you delve into the advanced techniques of a
-                    bard college of your choice. Your choice grants you features
-                    at 3rd level and again at 6th and 14th level.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Expertise</h2>
-                  <br />
-                  <p>
-                    At 3rd level, choose two of your skill proficiencies. Your
-                    proficiency bonus is doubled for any ability check you make
-                    that uses either of the chosen proficiencies.
-                  </p>
-                  <br />
-                  <p>
-                    At 10th level, you can choose another two skill
-                    proficiencies to gain this benefit.
+                    You gain a Bard subclass of your choice. The College of
+                    Dance, College of Glamour, College of Lore, and College of
+                    Valor subclasses are detailed after this class's
+                    description. A subclass is a specialization that grants you
+                    features at certain Bard levels. For the rest of your
+                    career, you gain each of your subclass’s features that are
+                    of your Bard level or lower.
                   </p>
                 </v-col>
               </v-row>
@@ -367,31 +340,6 @@
                     above 20 using this feature.
                   </p>
                 </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">
-                    Bardic Versatility (Optional)
-                  </h2>
-                  <br />
-                  <p>
-                    Whenever you reach a level in this class that grants the
-                    Ability Score Improvement feature, you can do one of the
-                    following, representing a change in focus as you use your
-                    skills and magic:
-                  </p>
-                  <br />
-                  <ul>
-                    <li>
-                      Replace one of the skills you chose for the Expertise
-                      feature with one of your other skill proficiencies that
-                      isn't benefiting from Expertise.
-                    </li>
-                    <li>
-                      Replace one cantrip you learned from this class's
-                      Spellcasting feature with another cantrip from the bard
-                      spell list.
-                    </li>
-                  </ul>
-                </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
@@ -405,11 +353,14 @@
                   <h2 class="elevation-10 pa-5">Font of Inspiration</h2>
                   <br />
                   <p>
-                    Beginning when you reach 5th level, you regain all of your
-                    expended uses of Bardic Inspiration when you finish a short
-                    or long rest.
+                    You now regain all your expended uses of Bardic Inspiration
+                    when you finish a Short or Long Rest.
                   </p>
                   <br />
+                  <p>
+                    In addition, you can expend a spell slot (no action
+                    required) to regain one expended use of Bardic Inspiration.
+                  </p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -420,29 +371,31 @@
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Countercharm</h2>
-                  <br />
-                  <p>
-                    At 6th level, you gain the ability to use musical notes or
-                    words of power to disrupt mind-influencing effects. As an
-                    action, you can start a performance that lasts until the end
-                    of your next turn.
-                  </p>
-                  <br />
-                  <p>
-                    During that time, you and any friendly creatures within 30
-                    feet of you have advantage on saving throws against being
-                    frightened or charmed. A creature must be able to hear you
-                    to gain this benefit. The performance ends early if you are
-                    incapacitated or silenced or if you voluntarily end it (no
-                    action required).
-                  </p>
-                </v-col>
-                <v-col>
+                <v-col cols="6">
                   <h2 class="elevation-10 pa-5">Subclass Feature</h2>
                   <br />
                   <p>You gain a new feature from the subclass you chose</p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 7</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Countercharm</h2>
+                  <br />
+                  <p>
+                    You can use musical notes or words of power to disrupt
+                    mind-influencing effects. If you or a creature within 30
+                    feet of you fails a saving throw against an effect that
+                    applies the Charmed or Frightened condition, you can take a
+                    Reaction to cause the save to be rerolled, and the new roll
+                    has Advantage.
+                  </p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -466,6 +419,23 @@
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+          <v-expansion-panel expand v-model="panel">
+            <v-expansion-panel-title>
+              <h2>Level 9</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Expertise</h2>
+                  <br />
+                  <p>
+                    You gain Expertise in two more of your skill proficiencies
+                    of your choice.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
 
           <v-expansion-panel>
             <v-expansion-panel-title>
@@ -477,11 +447,15 @@
                   <h2 class="elevation-10 pa-5">Magical Secrets</h2>
                   <br />
                   <p>
-                    By 10th level, you have plundered magical knowledge from a
-                    wide spectrum of disciplines. Choose two spells from any
-                    classes, including this one. A spell you choose must be of a
-                    level you can cast, as shown on the Bard table, or a
-                    cantrip.
+                    You've learned secrets from various magical traditions.
+                    Whenever you reach a Bard level (including this level) and
+                    the Prepared Spells number in the Bard Features table
+                    increases, you can choose any of your new prepared spells
+                    from the Bard, Cleric, Druid, and Wizard spell lists, and
+                    the chosen spells count as Bard spells for you (see a
+                    class’s section for its spell list). In addition, whenever
+                    you replace a spell prepared for this class, you can replace
+                    it with a spell from those lists.
                   </p>
                 </v-col>
               </v-row>
@@ -522,6 +496,60 @@
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+          <v-expansion-panel expand v-model="panel">
+            <v-expansion-panel-title>
+              <h2>Level 16</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
+                  <br />
+                  <p>
+                    When you reach 4th level, and again at 8th, 12th, 16th, and
+                    19th level, you can increase one ability score of your
+                    choice by 2, or you can increase two ability scores of your
+                    choice by 1. As normal, you can't increase an ability score
+                    above 20 using this feature.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel expand v-model="panel">
+            <v-expansion-panel-title>
+              <h2>Level 18</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Superior Inspiration</h2>
+                  <br />
+                  <p>
+                    When you roll Initiative, you regain expended uses of Bardic
+                    Inspiration until you have two if you have fewer than that.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel class="mb-10">
+            <v-expansion-panel-title>
+              <h2>Level 19</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Epic Boon</h2>
+                  <br />
+                  <p>
+                    You gain an Epic Boon feat or another feat of your choice
+                    for which you qualify. Boon of Spell Recall is recommended.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
 
           <v-expansion-panel class="mb-10">
             <v-expansion-panel-title>
@@ -530,11 +558,14 @@
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Superior Inspiration</h2>
+                  <h2 class="elevation-10 pa-5">Words of Creation</h2>
                   <br />
                   <p>
-                    At 20th level, when you roll initiative and have no uses of
-                    Bardic Inspiration left, you regain one use.
+                    You have mastered two of the Words of Creation: the words of
+                    life and death. You therefore always have the Power Word:
+                    Heal and Power Word: Kill spells prepared. When you cast
+                    either spell, you can target a second creature with it if
+                    that creature is within 10 feet of the first target.
                   </p>
                 </v-col>
               </v-row>
