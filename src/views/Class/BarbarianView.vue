@@ -82,7 +82,7 @@
         </thead>
         <tbody>
           <tr v-for="item in levels" :key="item.level">
-            <td>{{ item.level }}</td>
+            <td class="text-center">{{ item.level }}</td>
             <td class="text-center">{{ item.profBonus }}</td>
             <td class="text-center">{{ item.feature }}</td>
             <td class="text-center">{{ item.rages }}</td>

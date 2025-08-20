@@ -96,7 +96,7 @@
         <tbody>
           <p></p>
           <tr v-for="item in levels" :key="item.level">
-            <td>{{ item.level }}</td>
+            <td class="text-center">{{ item.level }}</td>
             <td class="text-center">{{ item.profBonus }}</td>
             <td class="text-center">{{ item.feature }}</td>
             <td class="text-center">{{ item.bardic_die }}</td>
@@ -610,7 +610,7 @@ export default {
       panel: [0],
       levels: [
         {
-          level: "1st",
+          level: "1",
           profBonus: "+2",
           feature: "Bardic Inspiration, Spellcasting",
           cantrip: "2",
@@ -627,7 +627,7 @@ export default {
           bardic_die: "D6",
         },
         {
-          level: "2nd",
+          level: "2",
           profBonus: "+2",
           feature: "Expertise, Jack of All Trades",
           cantrip: "2",
@@ -644,7 +644,7 @@ export default {
           bardic_die: "D6",
         },
         {
-          level: "3rd",
+          level: "3",
           profBonus: "+2",
           feature: "Bard Subclass",
           cantrip: "2",
@@ -661,7 +661,7 @@ export default {
           bardic_die: "D6",
         },
         {
-          level: "4th",
+          level: "4",
           profBonus: "+2",
           feature: "Ability Score Improvement",
           cantrip: "3",
@@ -678,7 +678,7 @@ export default {
           bardic_die: "D6",
         },
         {
-          level: "5th",
+          level: "5",
           profBonus: "+3",
           feature: "Font of Inspiration",
           cantrip: "3",
@@ -695,7 +695,7 @@ export default {
           bardic_die: "D8",
         },
         {
-          level: "6th",
+          level: "6",
           profBonus: "+3",
           feature: "Subclass Feature",
           cantrip: "3",
@@ -712,7 +712,7 @@ export default {
           bardic_die: "D8",
         },
         {
-          level: "7th",
+          level: "7",
           profBonus: "+3",
           feature: "Countercharm",
           cantrip: "3",
@@ -729,7 +729,7 @@ export default {
           bardic_die: "D8",
         },
         {
-          level: "8th",
+          level: "8",
           profBonus: "+3",
           feature: "Ability Score Improvement",
           cantrip: "3",
@@ -746,7 +746,7 @@ export default {
           bardic_die: "D8",
         },
         {
-          level: "9th",
+          level: "9",
           profBonus: "+4",
           feature: "Expertise",
           cantrip: "3",
@@ -763,7 +763,7 @@ export default {
           bardic_die: "D8",
         },
         {
-          level: "10th",
+          level: "10",
           profBonus: "+4",
           feature: "Magical Secrets",
           cantrip: "4",
@@ -780,7 +780,7 @@ export default {
           bardic_die: "D10",
         },
         {
-          level: "11th",
+          level: "11",
           profBonus: "+4",
           feature: "",
           cantrip: "4",
@@ -797,7 +797,7 @@ export default {
           bardic_die: "D10",
         },
         {
-          level: "12th",
+          level: "12",
           profBonus: "+4",
           feature: "Ability Score Improvement",
           cantrip: "4",
@@ -814,7 +814,7 @@ export default {
           bardic_die: "D10",
         },
         {
-          level: "13th",
+          level: "13",
           profBonus: "+5",
           feature: "Song of Rest (d10)",
           cantrip: "4",
@@ -831,7 +831,7 @@ export default {
           bardic_die: "D10",
         },
         {
-          level: "14th",
+          level: "14",
           profBonus: "+5",
           feature: "Subclass Feature",
           cantrip: "4",
@@ -848,7 +848,7 @@ export default {
           bardic_die: "D10",
         },
         {
-          level: "15th",
+          level: "15",
           profBonus: "+5",
           feature: "",
           cantrip: "4",
@@ -865,7 +865,7 @@ export default {
           bardic_die: "D12",
         },
         {
-          level: "16th",
+          level: "16",
           profBonus: "+5",
           feature: "Ability Score Improvement",
           cantrip: "4",
@@ -882,7 +882,7 @@ export default {
           bardic_die: "D12",
         },
         {
-          level: "17th",
+          level: "17",
           profBonus: "+6",
           feature: "",
           cantrip: "4",
@@ -899,7 +899,7 @@ export default {
           bardic_die: "D12",
         },
         {
-          level: "18th",
+          level: "18",
           profBonus: "+6",
           feature: "Superior Inspiration",
           cantrip: "4",
@@ -916,7 +916,7 @@ export default {
           bardic_die: "D12",
         },
         {
-          level: "19th",
+          level: "19",
           profBonus: "+6",
           feature: "Epic Boon",
           cantrip: "4",
@@ -933,7 +933,7 @@ export default {
           bardic_die: "D12",
         },
         {
-          level: "20th",
+          level: "20",
           profBonus: "+6",
           feature: "Words of Creation",
           cantrip: "4",

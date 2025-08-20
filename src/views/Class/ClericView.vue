@@ -1,7 +1,71 @@
 <template>
   <div class="mt-15">
+    <div class="bg-grey-darken-4 center pa-5">
+      <h2 class="mb-5">Core Cleric Traits</h2>
+
+      <div class="mb-10">
+        <v-row>
+          <v-col cols="2"><b>Primary Ability</b></v-col>
+          <v-col class="mr-10">Wisdom</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Hit Point Die</b></v-col>
+          <v-col class="mr-10">D8 per Cleric level</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Saving Throw Proficiencies</b></v-col>
+          <v-col class="mr-10">Wisdom and Charisma</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Skill Proficiencies</b></v-col>
+          <v-col class="mr-10"
+            >Choose 2: History, Insight, Medicine, Persuasion, or
+            Religion</v-col
+          >
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Weapon Proficiencies</b></v-col>
+          <v-col class="mr-10">Simple weapons</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Armor Training</b></v-col>
+          <v-col class="mr-10">Light and Medium armor and shields</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
+          <v-col cols="2"><b>Starting Equipment</b></v-col>
+          <v-col class="mr-10"
+            >Choose A or B: (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest's
+            Pack, and 7 GP; or (B) 110 GP
+          </v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <h2 class="mt-10">Becoming a Cleric</h2>
+        <h3 class="mt-5">As a Level 1 Character</h3>
+        <li>Gain all the traits in the Core Cleric Traits table.</li>
+        <li>
+          Gain the Cleric's level 1 features, which are listed in the Cleric
+          Features table.
+        </li>
+        <h3 class="mt-5">As a Multiclass Character</h3>
+        <li>
+          Gain the following traits from the Core Cleric Traits table: Hit Point
+          Die and training with Light and Medium armor and Shields.
+        </li>
+        <li>
+          Gain the Cleric's level 1 features, which are listed in the Cleric
+          Features table. See the multiclassing rules in multiclassing to
+          determine your available spell slots.
+        </li>
+      </div>
+    </div>
     <!-- Summary table of the class -->
-    <div class="center">
+    <div style="width: 1525px" class="center">
       <v-table>
         <thead>
           <th class="text-center" colspan="5"></th>
@@ -10,6 +74,7 @@
             <th class="text-center">Level</th>
             <th class="text-center">Proficiency Bonus</th>
             <th class="text-center">Unlocked</th>
+            <th class="text-center">Channel Divinity</th>
             <th class="text-center">Cantrip Known</th>
             <th class="text-center">1</th>
             <th class="text-center">2</th>
@@ -24,9 +89,10 @@
         </thead>
         <tbody>
           <tr v-for="item in levels" :key="item.level">
-            <td>{{ item.level }}</td>
+            <td class="text-center">{{ item.level }}</td>
             <td class="text-center">{{ item.profBonus }}</td>
             <td class="text-center">{{ item.feature }}</td>
+            <td class="text-center">{{ item.channelDivinity }}</td>
             <td class="text-center">{{ item.cantrip }}</td>
             <td class="text-center">{{ item.first }}</td>
             <td class="text-center">{{ item.second }}</td>
@@ -41,132 +107,7 @@
         </tbody>
       </v-table>
     </div>
-    <!-- Lvl 1 abilities and characteristic -->
     <div class="mt-5">
-      <div class="bg-grey-darken-4 center pa-5">
-        <h2>Hit Points</h2>
-
-        <p class="mt-2">
-          <strong>Hit Dice:</strong> 1d8.
-          <br />
-          <strong>Health:</strong> 8 + Constitution Modifier (+1d12 +
-          Constitution Modifier for every level after).
-        </p>
-        <br />
-        <h2>Proficiencies</h2>
-
-        <p>
-          <strong>Armor:</strong> Light Armor, Medium Armor, Shields.
-          <br />
-          <strong>Weapons:</strong> All simple weapons
-          <br />
-          <strong>Tools:</strong> None.
-          <br />
-          <strong>Saving Throws:</strong> Wisdom, Charisma
-          <br />
-          <strong>Skills(Choose 2):</strong> History, Insight, Medicine,
-          Persuasion, and Religion
-        </p>
-        <br />
-        <h2>Starting Equipment</h2>
-        <p>
-          <strong>(a)-</strong>A mace <strong>(b)-</strong>A warhammmer
-          <br />
-          <strong>(a)-</strong>Scale mail <strong>(b)-</strong> Leather armor
-          <strong>(c)-</strong> Chain mail(If proficient)
-          <br />
-          <strong>(a)-</strong>A light crossbow and 20 bolts
-          <strong>(b)-</strong>Any simple weapon
-          <br />
-          <strong>(a)-</strong>A priest's pack <strong>(b)-</strong>An
-          explorer's pack
-          <br />
-          A shield and a holy symbol
-        </p>
-      </div>
-
-      <div class="bg-grey-darken-4 center pa-5">
-        <h2>Spell Casting</h2>
-        <p>As a conduit for divine power, you can cast cleric spells.</p>
-        <br />
-        <h3>Cantrips</h3>
-        <p>
-          You know two cantrips of your choice from the bard spell list. You
-          learn additional bard cantrips of your choice at higher levels, as
-          shown in the Cantrips Known column of the Bard table.
-        </p>
-        <br />
-        <h3>Spell Slots</h3>
-        <br />
-        <p>
-          The Bard table shows how many spell slots you have to cast your bard
-          spells of 1st level and higher. To cast one of these spells, you must
-          expend a slot of the spell's level or higher. You regain all expended
-          spell slots when you finish a long rest. For example, if you know the
-          1st-level spell Cure Wounds and have a 1st-level and a 2nd-level spell
-          slot available, you can cast Cure Wounds using either slot.
-        </p>
-        <br />
-        <h3>Spells Known of 1st Level and Higher</h3>
-        <br />
-        <p>
-          You know four 1st-level spells of your choice from the bard spell
-          list.
-        </p>
-        <br />
-        <p>
-          The Spells Known column of the Bard table shows when you learn more
-          bard spells of your choice. Each of these spells must be of a level
-          for which you have spell slots, as shown on the table. For instance,
-          when you reach 3rd level in this class, you can learn one new spell of
-          1st or 2nd level.
-        </p>
-        <br />
-        <p>
-          Additionally, when you gain a level in this class, you can choose one
-          of the bard spells you know and replace it with another spell from the
-          bard spell list, which also must be of a level for which you have
-          spell slots.
-        </p>
-        <br />
-        <h2>Spellcasting Ability</h2>
-        <br />
-        <p>
-          Charisma is your spellcasting ability for your bard spells. Your magic
-          comes from the heart and soul you pour into the performance of your
-          music or oration. You use your Charisma whenever a spell refers to
-          your spellcasting ability. In addition, you use your Charisma modifier
-          when setting the saving throw DC for a bard spell you cast and when
-          making an attack roll with one.
-        </p>
-        <br />
-
-        <p>
-          <strong>Spell Save DC </strong> = 8 + your proficiency bonus + your
-          Charisma modifier
-        </p>
-
-        <br />
-        <p>
-          <strong>Spell Attack Modifier </strong> = your proficiency bonus +
-          your Charisma modifier
-        </p>
-        <br />
-        <h2>Ritual Casting</h2>
-        <br />
-        <p>
-          You can cast any bard spell you know as a ritual if that spell has the
-          ritual tag.
-        </p>
-        <br />
-        <h2>Spellcasting Focus</h2>
-        <br />
-        <p>
-          You can use a musical instrument (found in chapter 5) as a
-          spellcasting focus for your bard spells.
-        </p>
-      </div>
-
       <!-- All levels that an ability is gained. -->
       <div class="center mt-5">
         <v-expansion-panels v-model="panel">
@@ -177,36 +118,103 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Bardic Inspiration</h2>
+                  <h2 class="elevation-10 pa-5">Spellcasting</h2>
                   <br />
                   <p>
-                    You can inspire others through stirring words or music. To
-                    do so, you use a <b>bonus action</b> on your turn to choose
-                    one creature other than yourself within 60 feet of you who
-                    can hear you. That creature gains one Bardic Inspiration
-                    die, a d6.
+                    You have learned to cast spells through prayer and
+                    meditation. See chapter 7 for the rules on spellcasting. The
+                    information below details how you use those rules with
+                    Cleric spells, which appear on the Cleric spell list later
+                    in the class’s description.
                   </p>
                   <br />
                   <p>
-                    Once within the next 10 minutes, the creature can roll the
-                    die and add the number rolled to one ability check, attack
-                    roll, or saving throw it makes. The creature can wait until
-                    after it rolls the d20 before deciding to use the Bardic
-                    Inspiration die, but must decide before the DM says whether
-                    the roll succeeds or fails. Once the Bardic Inspiration die
-                    is rolled, it is lost. A creature can have only one Bardic
-                    Inspiration die at a time.
+                    <b>Cantrips.</b> You know three cantrips of your choice from
+                    the Cleric spell list. Guidance, Sacred Flame, and
+                    Thaumaturgy are recommended.
                   </p>
                   <br />
                   <p>
-                    You can use this feature a number of times equal to your
-                    Charisma modifier (a minimum of once). You regain any
-                    expended uses when you finish a long rest.
+                    Whenever you gain a Cleric level, you can replace one of
+                    your cantrips with another cantrip of your choice from the
+                    Cleric spell list.
                   </p>
+                  <br />
                   <p>
-                    Your Bardic Inspiration die changes when you reach certain
-                    levels in this class. The die becomes a d8 at 5th level, a
-                    d10 at 10th level, and a d12 at 15th level.
+                    When you reach Cleric levels 4 and 10, you learn another
+                    cantrip of your choice from the Cleric spell list, as shown
+                    in the Cantrips column of the Cleric Features table.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Spell Slots. </b>The Cleric Features table shows how many
+                    spell slots you have to cast your level 1+ spells. You
+                    regain all expended slots when you finish a Long Rest.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Prepared Spells of Level 1+. </b>You prepare the list of
+                    level 1+ spells that are available for you to cast with this
+                    feature. To start, choose four level 1 spells from the
+                    Cleric spell list. Bless, Cure Wounds, Guiding Bolt, and
+                    Shield of Faith are recommended.
+                  </p>
+                  <br />
+                  <p>
+                    The number of spells on your list increases as you gain
+                    Cleric levels, as shown in the Prepared Spells column of the
+                    Cleric Features table. Whenever that number increases,
+                    choose additional spells from the Cleric spell list until
+                    the number of spells on your list matches the number on the
+                    table. The chosen spells must be of a level for which you
+                    have spell slots. For example, if you’re a level 3 Cleric,
+                    your list of prepared spells can include six spells of
+                    levels 1 and 2 in any combination.
+                  </p>
+                  <br />
+                  <p>
+                    If another Cleric feature gives you spells that you always
+                    have prepared, those spells don’t count against the number
+                    of spells you can prepare with this feature, but those
+                    spells otherwise count as Cleric spells for you.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Changing Your Prepared Spells.</b> Whenever you finish a
+                    Long Rest, you can change your list of prepared spells,
+                    replacing any of the spells there with other Cleric spells
+                    for which you have spell slots.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Spellcasting Ability. </b>Wisdom is your spellcasting
+                    ability for your Cleric spells.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Spellcasting Focus. </b>You can use a Holy Symbol as a
+                    Spellcasting Focus for your Cleric spells.
+                  </p>
+                </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Divine Order</h2>
+                  <br />
+                  <p>
+                    You have dedicated yourself to one of the following sacred
+                    roles of your choice.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Protector.</b> Trained for battle, you gain proficiency
+                    with Martial weapons and training with Heavy armor.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Thaumaturge. </b>You know one extra cantrip from the
+                    Cleric spell list. In addition, your mystical connection to
+                    the divine gives you a bonus to your Intelligence (Arcana or
+                    Religion) checks. The bonus equals your Wisdom modifier
+                    (minimum of +1)
                   </p>
                 </v-col>
               </v-row>
@@ -219,45 +227,60 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Jack of All Trades</h2>
+                  <h2 class="elevation-10 pa-5">Channel Divinity</h2>
                   <br />
                   <p>
-                    Starting at 2nd level, you can add half your proficiency
-                    bonus, rounded down, to any ability check you make that
-                    doesn't already include your proficiency bonus.
-                  </p>
-                  <br />
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Song of Rest</h2>
-                  <br />
-                  <p>
-                    Beginning at 2nd level, you can use soothing music or
-                    oration to help revitalize your wounded allies during a
-                    short rest. If you or any friendly creatures who can hear
-                    your performance regain hit points at the end of the short
-                    rest by spending one or more Hit Dice, each of those
-                    creatures regains an extra 1d6 hit points.
+                    You can channel divine energy directly from the Outer Planes
+                    to fuel magical effects. You start with two such effects:
+                    Divine Spark and Turn Undead, each of which is described
+                    below. Each time you use this class’s Channel Divinity,
+                    choose which Channel Divinity effect from this class to
+                    create. You gain additional effect options at higher Cleric
+                    levels.
                   </p>
                   <br />
                   <p>
-                    The extra Hit Points increase when you reach certain levels
-                    in this class: to 1d8 at 9th level, to 1d10 at 13th level,
-                    and to 1d12 at 17th level.
+                    You can use this class’s Channel Divinity twice. You regain
+                    one of its expended uses when you finish a Short Rest, and
+                    you regain all expended uses when you finish a Long Rest.
+                    You gain additional uses when you reach certain Cleric
+                    levels, as shown in the Channel Divinity column of the
+                    Cleric Features table.
                   </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">
-                    Magical Inspiration (Optional)
-                  </h2>
                   <br />
                   <p>
-                    At 2nd level, if a creature has a Bardic Inspiration die
-                    from you and casts a spell that restores hit points or deals
-                    damage, the creature can roll that die and choose a target
-                    affected by the spell. Add the number rolled as a bonus to
-                    the hit points regained or the damage dealt. The Bardic
-                    Inspiration die is then lost.
+                    If a Channel Divinity effect requires a saving throw, the DC
+                    equals the spell save DC from this class’s Spellcasting
+                    feature.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Divine Spark.</b> As a Magic action, you point your Holy
+                    Symbol at another creature you can see within 30 feet of
+                    yourself and focus divine energy at it. Roll 1d8 and add
+                    your Wisdom modifier. You either restore Hit Points to the
+                    creature equal to that total or force the creature to make a
+                    Constitution saving throw. On a failed save, the creature
+                    takes Necrotic or Radiant damage (your choice) equal to that
+                    total. On a successful save, the creature takes half as much
+                    damage (round down).
+                  </p>
+                  <br />
+                  <p>
+                    You roll an additional d8 when you reach Cleric levels 7
+                    (2d8), 13 (3d8), and 18 (4d8).
+                  </p>
+                  <br />
+                  <p>
+                    <b>Turn Undead.</b> As a Magic action, you present your Holy
+                    Symbol and censure Undead creatures. Each Undead of your
+                    choice within 30 feet of you must make a Wisdom saving
+                    throw. If the creature fails its save, it has the Frightened
+                    and Incapacitated conditions for 1 minute. For that
+                    duration, it tries to move as far from you as it can on its
+                    turns. This effect ends early on the creature if it takes
+                    any damage, if you have the Incapacitated condition, or if
+                    you die.
                   </p>
                 </v-col>
               </v-row>
@@ -270,26 +293,15 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Bard College</h2>
+                  <h2 class="elevation-10 pa-5">Cleric Subclass</h2>
                   <br />
                   <p>
-                    At 3rd level, you delve into the advanced techniques of a
-                    bard college of your choice. Your choice grants you features
-                    at 3rd level and again at 6th and 14th level.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Expertise</h2>
-                  <br />
-                  <p>
-                    At 3rd level, choose two of your skill proficiencies. Your
-                    proficiency bonus is doubled for any ability check you make
-                    that uses either of the chosen proficiencies.
-                  </p>
-                  <br />
-                  <p>
-                    At 10th level, you can choose another two skill
-                    proficiencies to gain this benefit.
+                    You gain a Cleric subclass of your choice. The Life Domain,
+                    Light Domain, Trickery Domain, and War Domain subclasses are
+                    detailed after this class’s description. A subclass is a
+                    specialization that grants you features at certain Cleric
+                    levels. For the rest of your career, you gain each of your
+                    subclass’s features that are of your Cleric level or lower.
                   </p>
                 </v-col>
               </v-row>
@@ -324,37 +336,10 @@
                   <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
                   <br />
                   <p>
-                    When you reach 4th level, and again at 8th, 12th, 16th, and
-                    19th level, you can increase one ability score of your
-                    choice by 2, or you can increase two ability scores of your
-                    choice by 1. As normal, you can't increase an ability score
-                    above 20 using this feature.
+                    You gain the Ability Score Improvement feat or another feat
+                    of your choice for which you qualify. You gain this feature
+                    again at Cleric levels 8, 12, and 16.
                   </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">
-                    Bardic Versatility (Optional)
-                  </h2>
-                  <br />
-                  <p>
-                    Whenever you reach a level in this class that grants the
-                    Ability Score Improvement feature, you can do one of the
-                    following, representing a change in focus as you use your
-                    skills and magic:
-                  </p>
-                  <br />
-                  <ul>
-                    <li>
-                      Replace one of the skills you chose for the Expertise
-                      feature with one of your other skill proficiencies that
-                      isn't benefiting from Expertise.
-                    </li>
-                    <li>
-                      Replace one cantrip you learned from this class's
-                      Spellcasting feature with another cantrip from the bard
-                      spell list.
-                    </li>
-                  </ul>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -366,12 +351,15 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Font of Inspiration</h2>
+                  <h2 class="elevation-10 pa-5">Sear Undead</h2>
                   <br />
                   <p>
-                    Beginning when you reach 5th level, you regain all of your
-                    expended uses of Bardic Inspiration when you finish a short
-                    or long rest.
+                    Whenever you use Turn Undead, you can roll a number of d8s
+                    equal to your Wisdom modifier (minimum of 1d8) and add the
+                    rolls together. Each Undead that fails its saving throw
+                    against that use of Turn Undead takes Radiant damage equal
+                    to the roll’s total. This damage doesn’t end the turn
+                    effect.
                   </p>
                   <br />
                 </v-col>
@@ -384,29 +372,41 @@
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Countercharm</h2>
-                  <br />
-                  <p>
-                    At 6th level, you gain the ability to use musical notes or
-                    words of power to disrupt mind-influencing effects. As an
-                    action, you can start a performance that lasts until the end
-                    of your next turn.
-                  </p>
-                  <br />
-                  <p>
-                    During that time, you and any friendly creatures within 30
-                    feet of you have advantage on saving throws against being
-                    frightened or charmed. A creature must be able to hear you
-                    to gain this benefit. The performance ends early if you are
-                    incapacitated or silenced or if you voluntarily end it (no
-                    action required).
-                  </p>
-                </v-col>
-                <v-col>
+                <v-col cols="6">
                   <h2 class="elevation-10 pa-5">Subclass Feature</h2>
                   <br />
                   <p>You gain a new feature from the subclass you chose</p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 6</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Blessed Strikes</h2>
+                  <br />
+                  <p>
+                    Divine power infuses you in battle. You gain one of the
+                    following options of your choice (if you get either option
+                    from a Cleric subclass in an older book, use only the option
+                    you choose for this feature).
+                  </p>
+                  <br />
+                  <p>
+                    <b>Divine Strike. </b>Once on each of your turns when you
+                    hit a creature with an attack roll using a weapon, you can
+                    cause the target to take an extra 1d8 Necrotic or Radiant
+                    damage (your choice).
+                  </p>
+                  <br />
+                  <p>
+                    <b>Potent Spellcasting. </b>Add your Wisdom modifier to the
+                    damage you deal with any Cleric cantrip.
+                  </p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -421,10 +421,9 @@
                   <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
                   <br />
                   <p>
-                    You can increase one ability score of your choice by 2, or
-                    you can increase two ability scores of your choice by 1. As
-                    normal, you can't increase an ability score above 20 using
-                    this feature.
+                    You gain the Ability Score Improvement feat or another feat
+                    of your choice for which you qualify. You gain this feature
+                    again at Cleric levels 8, 12, and 16.
                   </p>
                 </v-col>
               </v-row>
@@ -438,14 +437,15 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Magical Secrets</h2>
+                  <h2 class="elevation-10 pa-5">Divine Intervention</h2>
                   <br />
                   <p>
-                    By 10th level, you have plundered magical knowledge from a
-                    wide spectrum of disciplines. Choose two spells from any
-                    classes, including this one. A spell you choose must be of a
-                    level you can cast, as shown on the Bard table, or a
-                    cantrip.
+                    You can call on your deity or pantheon to intervene on your
+                    behalf. As a Magic action, choose any Cleric spell of level
+                    5 or lower that doesn’t require a Reaction to cast. As part
+                    of the same action, you cast that spell without expending a
+                    spell slot or needing Material components. You can’t use
+                    this feature again until you finish a Long Rest.
                   </p>
                 </v-col>
               </v-row>
@@ -462,10 +462,9 @@
                   <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
                   <br />
                   <p>
-                    You can increase one ability score of your choice by 2, or
-                    you can increase two ability scores of your choice by 1. As
-                    normal, you can't increase an ability score above 20 using
-                    this feature.
+                    You gain the Ability Score Improvement feat or another feat
+                    of your choice for which you qualify. You gain this feature
+                    again at Cleric levels 8, 12, and 16.
                   </p>
                 </v-col>
               </v-row>
@@ -479,9 +478,74 @@
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Improved Blessed Strikes</h2>
+                  <br />
+                  <p>
+                    The option you chose for Blessed Strikes grows more
+                    powerful.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Divine Strike. </b>The extra damage of your Divine Strike
+                    increases to 2d8.
+                  </p>
+                  <br />
+                  <p>
+                    <b>otent Spellcasting. </b>When you cast a Cleric cantrip
+                    and deal damage to a creature with it, you can give vitality
+                    to yourself or another creature within 60 feet of yourself,
+                    granting a number of Temporary Hit Points equal to twice
+                    your Wisdom modifier.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel expand v-model="panel">
+            <v-expansion-panel-title>
+              <h2>Level 16</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
+                  <br />
+                  <p>
+                    You gain the Ability Score Improvement feat or another feat
+                    of your choice for which you qualify. You gain this feature
+                    again at Cleric levels 8, 12, and 16.
+                  </p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 17</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
                   <h2 class="elevation-10 pa-5">Subclass Feature</h2>
                   <br />
                   <p>You gain a new feature from the subclass you chose</p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 19</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row class="d-flex justify-center">
+                <v-col cols="6">
+                  <h2 class="elevation-10 pa-5">Epic Boon</h2>
+                  <br />
+                  <p>
+                    You gain an Epic Boon feat or another feat of your choice
+                    for which you qualify. Boon of Fate is recommended.
+                  </p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -494,11 +558,13 @@
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Superior Inspiration</h2>
+                  <h2 class="elevation-10 pa-5">Greater Divine Intervention</h2>
                   <br />
                   <p>
-                    At 20th level, when you roll initiative and have no uses of
-                    Bardic Inspiration left, you regain one use.
+                    You can call on even more powerful divine intervention. When
+                    you use your Divine Intervention feature, you can choose
+                    Wish when you select a spell. If you do so, you can’t use
+                    Divine Intervention again until you finish 2d4 Long Rests.
                   </p>
                 </v-col>
               </v-row>
@@ -526,46 +592,26 @@ export default {
     return {
       subclasses: [
         {
-          title: "Creation",
+          title: "Life",
         },
         {
-          title: "Eloquence",
+          title: "Light",
         },
         {
-          title: "Glamour",
+          title: "Trickery",
         },
         {
-          title: "Lore",
-        },
-        {
-          title: "Spirits",
-        },
-        {
-          title: "Swords",
-        },
-        {
-          title: "Valor",
-        },
-        {
-          title: "Whispers",
+          title: "War",
         },
       ],
-      icons: [
-        "plus",
-        "comment",
-        "hand-sparkles",
-        "book",
-        "ghost",
-        "cloud-bolt",
-        "khanda",
-        "user-secret",
-      ],
+      icons: ["hand-holding-heart", "sun", "masks-theater", "khanda"],
       panel: [0],
       levels: [
         {
-          level: "1st",
+          level: "1",
           profBonus: "+2",
-          feature: "Spellcasting, Divine Domain",
+          feature: "Spellcasting, Divine Order",
+          channelDivinity: "2",
           cantrip: "2",
           first: "2",
           second: "-",
@@ -578,10 +624,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "2nd",
+          level: "2",
           profBonus: "+2",
-          feature:
-            "Channel Divinity (x1), Divine Domain feature, Harness Divine Power (Optional)",
+          feature: "Channel Divinity",
+          channelDivinity: "2",
           cantrip: "2",
           first: "3",
           second: "-",
@@ -594,9 +640,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "3rd",
+          level: "3",
           profBonus: "+2",
-          feature: "",
+          feature: "Cleric Subclass",
+          channelDivinity: "2",
           cantrip: "2",
           first: "4",
           second: "2",
@@ -609,9 +656,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "4th",
+          level: "4",
           profBonus: "+2",
-          feature: "Ability Score Improvement,  Cantrip Versatility (Optional)",
+          feature: "Ability Score Improvement",
+          channelDivinity: "2",
           cantrip: "3",
           first: "4",
           second: "3",
@@ -624,9 +672,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "5th",
+          level: "5",
           profBonus: "+3",
-          feature: "Destroy Undead (CR 1/2)",
+          feature: "Scar Undead",
+          channelDivinity: "2",
           cantrip: "3",
           first: "4",
           second: "3",
@@ -639,9 +688,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "6th",
+          level: "6",
           profBonus: "+3",
-          feature: "Channel Divinity (x2), Divine Domain feature",
+          feature: "Subclass Feature",
+          channelDivinity: "3",
           cantrip: "3",
           first: "4",
           second: "3",
@@ -654,9 +704,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "7th",
+          level: "7",
           profBonus: "+3",
-          feature: "",
+          feature: "Blessed Strikes",
+          channelDivinity: "3",
           cantrip: "3",
           first: "4",
           second: "3",
@@ -669,10 +720,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "8th",
+          level: "8",
           profBonus: "+3",
-          feature:
-            "Ability Score Improvement, Destroy Undead (CR 1), Divine Domain feature, Cantrip Versatility (Optional)",
+          feature: "Ability Score Improvement",
+          channelDivinity: "3",
           cantrip: "3",
           first: "4",
           second: "3",
@@ -685,9 +736,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "9th",
+          level: "9",
           profBonus: "+4",
-          feature: "Song of Rest (d8)",
+          feature: "------",
+          channelDivinity: "3",
           cantrip: "3",
           first: "4",
           second: "3",
@@ -700,9 +752,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "10th",
+          level: "10",
           profBonus: "+4",
           feature: "Divine Intervention",
+          channelDivinity: "3",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -715,9 +768,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "11th",
+          level: "11",
           profBonus: "+4",
-          feature: "Destroy Undead (CR 2)",
+          feature: "",
+          channelDivinity: "3",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -730,9 +784,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "12th",
+          level: "12",
           profBonus: "+4",
-          feature: "	Ability Score Improvement, Cantrip Versatility (Optional)",
+          feature: "Ability Score Improvement",
+          channelDivinity: "3",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -745,9 +800,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "13th",
+          level: "13",
           profBonus: "+5",
           feature: "",
+          channelDivinity: "3",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -760,9 +816,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "14th",
+          level: "14",
           profBonus: "+5",
-          feature: "Destroy Undead (CR 3)	",
+          feature: "Improved Blessed Strikes",
+          channelDivinity: "3",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -775,9 +832,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "15th",
+          level: "15",
           profBonus: "+5",
           feature: "",
+          channelDivinity: "3",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -790,9 +848,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "16th",
+          level: "16",
           profBonus: "+5",
-          feature: "Ability Score Improvement, Cantrip Versatility (Optional)",
+          feature: "Ability Score Improvement",
+          channelDivinity: "3",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -805,9 +864,10 @@ export default {
           ninth: "-",
         },
         {
-          level: "17th",
+          level: "17",
           profBonus: "+6",
-          feature: "	Destroy Undead (CR 4), Divine Domain feature",
+          feature: "Subclass Feature",
+          channelDivinity: "3",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -820,9 +880,10 @@ export default {
           ninth: "1",
         },
         {
-          level: "18th",
+          level: "18",
           profBonus: "+6",
-          feature: "	Channel Divinity (x3)",
+          feature: "",
+          channelDivinity: "4",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -835,9 +896,10 @@ export default {
           ninth: "1",
         },
         {
-          level: "19th",
+          level: "19",
           profBonus: "+6",
-          feature: "Ability Score Improvement, Cantrip Versatility (Optional)",
+          feature: "Epic Boon",
+          channelDivinity: "4",
           cantrip: "4",
           first: "4",
           second: "3",
@@ -850,9 +912,10 @@ export default {
           ninth: "1",
         },
         {
-          level: "20th",
+          level: "20",
           profBonus: "+6",
-          feature: "	Divine Intervention improvement",
+          feature: "Greater Divine Intervention",
+          channelDivinity: "4",
           cantrip: "4",
           first: "4",
           second: "3",
