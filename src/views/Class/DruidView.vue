@@ -1,7 +1,7 @@
 <template>
   <div class="mt-15">
     <div class="bg-grey-darken-4 center pa-5">
-      <h2 class="mb-5">Core Cleric Traits</h2>
+      <h2 class="mb-5">Core Druid Traits</h2>
 
       <div class="mb-10">
         <v-row>
@@ -11,19 +11,19 @@
         </v-row>
         <v-row>
           <v-col cols="2"><b>Hit Point Die</b></v-col>
-          <v-col class="mr-10">D8 per Cleric level</v-col>
+          <v-col class="mr-10">D8 per Druid level</v-col>
           <v-divider></v-divider>
         </v-row>
         <v-row>
           <v-col cols="2"><b>Saving Throw Proficiencies</b></v-col>
-          <v-col class="mr-10">Wisdom and Charisma</v-col>
+          <v-col class="mr-10">Intelligence and Wisdom</v-col>
           <v-divider></v-divider>
         </v-row>
         <v-row>
           <v-col cols="2"><b>Skill Proficiencies</b></v-col>
           <v-col class="mr-10"
-            >Choose 2: History, Insight, Medicine, Persuasion, or
-            Religion</v-col
+            >Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature,
+            Perception, Religion, or Survival</v-col
           >
           <v-divider></v-divider>
         </v-row>
@@ -33,32 +33,38 @@
           <v-divider></v-divider>
         </v-row>
         <v-row>
+          <v-col cols="2"><b>Tool Proficiencies</b></v-col>
+          <v-col class="mr-10">Herbalism Kit</v-col>
+          <v-divider></v-divider>
+        </v-row>
+        <v-row>
           <v-col cols="2"><b>Armor Training</b></v-col>
-          <v-col class="mr-10">Light and Medium armor and shields</v-col>
+          <v-col class="mr-10">Light armor and Shields</v-col>
           <v-divider></v-divider>
         </v-row>
         <v-row>
           <v-col cols="2"><b>Starting Equipment</b></v-col>
           <v-col class="mr-10"
-            >Choose A or B: (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest's
-            Pack, and 7 GP; or (B) 110 GP
+            >Choose A or B: (A) Leather Armor, Shield, Sickle, Druidic Focus
+            (Quarterstaff), Explorer's Pack, Herbalism Kit, and 9 GP; or (B) 50
+            GP
           </v-col>
           <v-divider></v-divider>
         </v-row>
-        <h2 class="mt-10">Becoming a Cleric</h2>
+        <h2 class="mt-10">Becoming a Druid</h2>
         <h3 class="mt-5">As a Level 1 Character</h3>
-        <li>Gain all the traits in the Core Cleric Traits table.</li>
+        <li>Gain all the traits in the Core Druid Traits table.</li>
         <li>
-          Gain the Cleric's level 1 features, which are listed in the Cleric
+          Gain the Druid’s level 1 features, which are listed in the Druid
           Features table.
         </li>
         <h3 class="mt-5">As a Multiclass Character</h3>
         <li>
-          Gain the following traits from the Core Cleric Traits table: Hit Point
-          Die and training with Light and Medium armor and Shields.
+          Gain the following traits from the Core Druid Traits table: Hit Point
+          Die and training with Light armor and Shields.
         </li>
         <li>
-          Gain the Cleric's level 1 features, which are listed in the Cleric
+          Gain the Druid’s level 1 features, which are listed in the Druid
           Features table. See the multiclassing rules in multiclassing to
           determine your available spell slots.
         </li>
@@ -92,7 +98,7 @@
             <td class="text-center">{{ item.level }}</td>
             <td class="text-center">{{ item.profBonus }}</td>
             <td class="text-center">{{ item.feature }}</td>
-            <td class="text-center">{{ item.channelDivinity }}</td>
+            <td class="text-center">{{ item.wildShape }}</td>
             <td class="text-center">{{ item.cantrip }}</td>
             <td class="text-center">{{ item.first }}</td>
             <td class="text-center">{{ item.second }}</td>
@@ -121,83 +127,101 @@
                   <h2 class="elevation-10 pa-5">Spellcasting</h2>
                   <br />
                   <p>
-                    You have learned to cast spells through prayer and
-                    meditation. See chapter 7 for the rules on spellcasting. The
-                    information below details how you use those rules with
-                    Cleric spells, which appear on the Cleric spell list later
-                    in the class’s description.
+                    You have learned to cast spells through studying the
+                    mystical forces of nature. See chapter 7 for the rules on
+                    spellcasting. The information below details how you use
+                    those rules with Druid spells, which appear on the Druid
+                    spell list later in the class’s description.
                   </p>
                   <br />
                   <p>
-                    <b>Cantrips.</b> You know three cantrips of your choice from
-                    the Cleric spell list. Guidance, Sacred Flame, and
-                    Thaumaturgy are recommended.
+                    <b>Cantrips.</b> You know two cantrips of your choice from
+                    the Druid spell list. Druidcraft and Produce Flame are
+                    recommended.
                   </p>
                   <br />
                   <p>
-                    Whenever you gain a Cleric level, you can replace one of
-                    your cantrips with another cantrip of your choice from the
-                    Cleric spell list.
+                    Whenever you gain a Druid level, you can replace one of your
+                    cantrips with another cantrip of your choice from the Druid
+                    spell list.
                   </p>
                   <br />
                   <p>
-                    When you reach Cleric levels 4 and 10, you learn another
-                    cantrip of your choice from the Cleric spell list, as shown
-                    in the Cantrips column of the Cleric Features table.
+                    When you reach Druid levels 4 and 10, you learn another
+                    cantrip of your choice from the Druid spell list, as shown
+                    in the Cantrips column of the Druid Features table.
                   </p>
                   <br />
                   <p>
-                    <b>Spell Slots. </b>The Cleric Features table shows how many
+                    <b>Spell Slots. </b>The Druid Features table shows how many
                     spell slots you have to cast your level 1+ spells. You
                     regain all expended slots when you finish a Long Rest.
                   </p>
                   <br />
                   <p>
-                    <b>Prepared Spells of Level 1+. </b>You prepare the list of
+                    <b>Prepared Spells of Level 1+. </b>ou prepare the list of
                     level 1+ spells that are available for you to cast with this
-                    feature. To start, choose four level 1 spells from the
-                    Cleric spell list. Bless, Cure Wounds, Guiding Bolt, and
-                    Shield of Faith are recommended.
+                    feature. To start, choose four level 1 spells from the Druid
+                    spell list. Animal Friendship, Cure Wounds, Faerie Fire, and
+                    Thunderwave are recommended.
                   </p>
                   <br />
                   <p>
                     The number of spells on your list increases as you gain
-                    Cleric levels, as shown in the Prepared Spells column of the
-                    Cleric Features table. Whenever that number increases,
-                    choose additional spells from the Cleric spell list until
-                    the number of spells on your list matches the number on the
-                    table. The chosen spells must be of a level for which you
-                    have spell slots. For example, if you’re a level 3 Cleric,
-                    your list of prepared spells can include six spells of
-                    levels 1 and 2 in any combination.
+                    Druid levels, as shown in the Prepared Spells column of the
+                    Druid Features table. Whenever that number increases, choose
+                    additional spells from the Druid spell list until the number
+                    of spells on your list matches the number on the table. The
+                    chosen spells must be of a level for which you have spell
+                    slots. For example, if you’re a level 3 Druid, your list of
+                    prepared spells can include six spells of levels 1 and 2 in
+                    any combination.
                   </p>
                   <br />
                   <p>
-                    If another Cleric feature gives you spells that you always
+                    If another Druid feature gives you spells that you always
                     have prepared, those spells don’t count against the number
                     of spells you can prepare with this feature, but those
-                    spells otherwise count as Cleric spells for you.
+                    spells otherwise count as Druid spells for you.
                   </p>
                   <br />
                   <p>
-                    <b>Changing Your Prepared Spells.</b> Whenever you finish a
+                    <b>Changing Your Prepared Spells.</b> WWhenever you finish a
                     Long Rest, you can change your list of prepared spells,
-                    replacing any of the spells there with other Cleric spells
-                    for which you have spell slots.
+                    replacing any of the spells with other Druid spells for
+                    which you have spell slots.
                   </p>
                   <br />
                   <p>
                     <b>Spellcasting Ability. </b>Wisdom is your spellcasting
-                    ability for your Cleric spells.
+                    ability for your Druid spells.
                   </p>
                   <br />
                   <p>
-                    <b>Spellcasting Focus. </b>You can use a Holy Symbol as a
-                    Spellcasting Focus for your Cleric spells.
+                    <b>Spellcasting Focus. </b>You can use a Druidic Focus as a
+                    Spellcasting Focus for your Druid spells.
                   </p>
                 </v-col>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Divine Order</h2>
+                  <h2 class="elevation-10 pa-5">Druidic</h2>
+                  <br />
+                  <p>
+                    You know Druidic, the secret language of Druids. While
+                    learning this ancient tongue, you also unlocked the magic of
+                    communicating with animals; you always have the Speak with
+                    Animals spell prepared.
+                  </p>
+                  <br />
+                  <p>
+                    You can use Druidic to leave hidden messages. You and others
+                    who know Druidic automatically spot such a message. Others
+                    spot the message’s presence with a successful DC 15
+                    Intelligence (Investigation) check but can’t decipher it
+                    without magic.
+                  </p>
+                </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Primal Order</h2>
                   <br />
                   <p>
                     You have dedicated yourself to one of the following sacred
@@ -205,16 +229,16 @@
                   </p>
                   <br />
                   <p>
-                    <b>Protector.</b> Trained for battle, you gain proficiency
-                    with Martial weapons and training with Heavy armor.
+                    <b>Magician.</b> You know one extra cantrip from the Druid
+                    spell list. In addition, your mystical connection to nature
+                    gives you a bonus to your Intelligence (Arcana or Nature)
+                    checks. The bonus equals your Wisdom modifier (minimum bonus
+                    of +1).
                   </p>
                   <br />
                   <p>
-                    <b>Thaumaturge. </b>You know one extra cantrip from the
-                    Cleric spell list. In addition, your mystical connection to
-                    the divine gives you a bonus to your Intelligence (Arcana or
-                    Religion) checks. The bonus equals your Wisdom modifier
-                    (minimum of +1)
+                    <b>Warden. </b>Trained for battle, you gain proficiency with
+                    Martial weapons and training with Medium armor.
                   </p>
                 </v-col>
               </v-row>
@@ -227,60 +251,52 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Channel Divinity</h2>
+                  <h2 class="elevation-10 pa-5">Wild Shape</h2>
                   <br />
                   <p>
-                    You can channel divine energy directly from the Outer Planes
-                    to fuel magical effects. You start with two such effects:
-                    Divine Spark and Turn Undead, each of which is described
-                    below. Each time you use this class’s Channel Divinity,
-                    choose which Channel Divinity effect from this class to
-                    create. You gain additional effect options at higher Cleric
-                    levels.
+                    The power of nature allows you to assume the form of an
+                    animal. As a Bonus Action, you shape-shift into a Beast form
+                    that you have learned for this feature (see “Known Forms”
+                    below). You stay in that form for a number of hours equal to
+                    half your Druid level or until you use Wild Shape again,
+                    have the Incapacitated condition, or die. You can also leave
+                    the form early as a Bonus Action.
                   </p>
                   <br />
                   <p>
-                    You can use this class’s Channel Divinity twice. You regain
-                    one of its expended uses when you finish a Short Rest, and
+                    <b>Number of Uses. </b>You can use Wild Shape twice. You
+                    regain one expended use when you finish a Short Rest, and
                     you regain all expended uses when you finish a Long Rest.
-                    You gain additional uses when you reach certain Cleric
-                    levels, as shown in the Channel Divinity column of the
-                    Cleric Features table.
                   </p>
                   <br />
                   <p>
-                    If a Channel Divinity effect requires a saving throw, the DC
-                    equals the spell save DC from this class’s Spellcasting
-                    feature.
+                    You gain additional uses when you reach certain Druid
+                    levels, as shown in the Wild Shape column of the Druid
+                    Features table.
                   </p>
                   <br />
                   <p>
-                    <b>Divine Spark.</b> As a Magic action, you point your Holy
-                    Symbol at another creature you can see within 30 feet of
-                    yourself and focus divine energy at it. Roll 1d8 and add
-                    your Wisdom modifier. You either restore Hit Points to the
-                    creature equal to that total or force the creature to make a
-                    Constitution saving throw. On a failed save, the creature
-                    takes Necrotic or Radiant damage (your choice) equal to that
-                    total. On a successful save, the creature takes half as much
-                    damage (round down).
+                    <b>Known Forms. </b> You know four Beast forms for this
+                    feature, chosen from among Beast stat blocks that have a
+                    maximum Challenge Rating of 1/4 and that lack a Fly Speed
+                    (see appendix B for stat block options). The Rat, Riding
+                    Horse, Spider, and Wolf are recommended. Whenever you finish
+                    a Long Rest, you can replace one of your known forms with
+                    another eligible form.
                   </p>
                   <br />
                   <p>
-                    You roll an additional d8 when you reach Cleric levels 7
-                    (2d8), 13 (3d8), and 18 (4d8).
+                    When you reach certain Druid levels, your number of known
+                    forms and the maximum Challenge Rating for those forms
+                    increases, as shown in the Beast Shapes table. In addition,
+                    starting at level 8, you can adopt a form that has a Fly
+                    Speed.
                   </p>
                   <br />
                   <p>
-                    <b>Turn Undead.</b> As a Magic action, you present your Holy
-                    Symbol and censure Undead creatures. Each Undead of your
-                    choice within 30 feet of you must make a Wisdom saving
-                    throw. If the creature fails its save, it has the Frightened
-                    and Incapacitated conditions for 1 minute. For that
-                    duration, it tries to move as far from you as it can on its
-                    turns. This effect ends early on the creature if it takes
-                    any damage, if you have the Incapacitated condition, or if
-                    you die.
+                    When choosing known forms, you may look in the Monster
+                    Manual or elsewhere for eligible Beasts if the Dungeon
+                    Master permits you to do so.
                   </p>
                 </v-col>
               </v-row>
@@ -321,7 +337,7 @@
                       />
                     </v-btn>
                   </div>
-                  <p class="text-center">{{ sub.title }} Domain</p>
+                  <p class="text-center">{{ sub.title }}</p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -592,27 +608,27 @@ export default {
     return {
       subclasses: [
         {
-          title: "Life",
+          title: "Land",
         },
         {
-          title: "Light",
+          title: "Moon",
         },
         {
-          title: "Trickery",
+          title: "Sea",
         },
         {
-          title: "War",
+          title: "Stars",
         },
       ],
-      icons: ["hand-holding-heart", "sun", "masks-theater", "khanda"],
+      icons: ["mountain-sun", "moon", "water", "star"],
       panel: [0],
       levels: [
         {
           level: "1",
           profBonus: "+2",
-          feature: "Spellcasting, Divine Order",
-          channelDivinity: "2",
-          cantrip: "3",
+          feature: "Spellcasting, Druidic, Primal Order",
+          wildShape: "-",
+          cantrip: "2",
           first: "2",
           second: "-",
           third: "-",
@@ -626,9 +642,9 @@ export default {
         {
           level: "2",
           profBonus: "+2",
-          feature: "Channel Divinity",
-          channelDivinity: "2",
-          cantrip: "3",
+          feature: "Wild Shape, Wild Companion",
+          wildShape: "2",
+          cantrip: "2",
           first: "3",
           second: "-",
           third: "-",
@@ -642,9 +658,9 @@ export default {
         {
           level: "3",
           profBonus: "+2",
-          feature: "Cleric Subclass",
-          channelDivinity: "2",
-          cantrip: "3",
+          feature: "Druid Subclass",
+          wildShape: "2",
+          cantrip: "2",
           first: "4",
           second: "2",
           third: "-",
@@ -659,8 +675,8 @@ export default {
           level: "4",
           profBonus: "+2",
           feature: "Ability Score Improvement",
-          channelDivinity: "2",
-          cantrip: "4",
+          wildShape: "2",
+          cantrip: "3",
           first: "4",
           second: "3",
           third: "-",
@@ -674,9 +690,9 @@ export default {
         {
           level: "5",
           profBonus: "+3",
-          feature: "Scar Undead",
-          channelDivinity: "2",
-          cantrip: "4",
+          feature: "Wild Resurgence",
+          wildShape: "2",
+          cantrip: "3",
           first: "4",
           second: "3",
           third: "2",
@@ -691,8 +707,8 @@ export default {
           level: "6",
           profBonus: "+3",
           feature: "Subclass Feature",
-          channelDivinity: "3",
-          cantrip: "4",
+          wildShape: "3",
+          cantrip: "3",
           first: "4",
           second: "3",
           third: "3",
@@ -706,9 +722,9 @@ export default {
         {
           level: "7",
           profBonus: "+3",
-          feature: "Blessed Strikes",
-          channelDivinity: "3",
-          cantrip: "4",
+          feature: "Elemental Fury",
+          wildShape: "3",
+          cantrip: "3",
           first: "4",
           second: "3",
           third: "3",
@@ -723,8 +739,8 @@ export default {
           level: "8",
           profBonus: "+3",
           feature: "Ability Score Improvement",
-          channelDivinity: "3",
-          cantrip: "4",
+          wildShape: "3",
+          cantrip: "3",
           first: "4",
           second: "3",
           third: "3",
@@ -739,8 +755,8 @@ export default {
           level: "9",
           profBonus: "+4",
           feature: "------",
-          channelDivinity: "3",
-          cantrip: "4",
+          wildShape: "3",
+          cantrip: "3",
           first: "4",
           second: "3",
           third: "3",
@@ -754,9 +770,9 @@ export default {
         {
           level: "10",
           profBonus: "+4",
-          feature: "Divine Intervention",
-          channelDivinity: "3",
-          cantrip: "5",
+          feature: "Subclass Feature",
+          wildShape: "3",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -771,8 +787,8 @@ export default {
           level: "11",
           profBonus: "+4",
           feature: "------",
-          channelDivinity: "3",
-          cantrip: "5",
+          wildShape: "3",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -787,8 +803,8 @@ export default {
           level: "12",
           profBonus: "+4",
           feature: "Ability Score Improvement",
-          channelDivinity: "3",
-          cantrip: "5",
+          wildShape: "3",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -803,8 +819,8 @@ export default {
           level: "13",
           profBonus: "+5",
           feature: "------",
-          channelDivinity: "3",
-          cantrip: "5",
+          wildShape: "3",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -818,9 +834,9 @@ export default {
         {
           level: "14",
           profBonus: "+5",
-          feature: "Improved Blessed Strikes",
-          channelDivinity: "3",
-          cantrip: "5",
+          feature: "Subclass Feature",
+          wildShape: "3",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -834,9 +850,9 @@ export default {
         {
           level: "15",
           profBonus: "+5",
-          feature: "------",
-          channelDivinity: "3",
-          cantrip: "5",
+          feature: "Improved Elemental Fury",
+          wildShape: "3",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -851,8 +867,8 @@ export default {
           level: "16",
           profBonus: "+5",
           feature: "Ability Score Improvement",
-          channelDivinity: "3",
-          cantrip: "5",
+          wildShape: "3",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -866,9 +882,9 @@ export default {
         {
           level: "17",
           profBonus: "+6",
-          feature: "Subclass Feature",
-          channelDivinity: "3",
-          cantrip: "5",
+          feature: "------",
+          wildShape: "4",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -882,9 +898,9 @@ export default {
         {
           level: "18",
           profBonus: "+6",
-          feature: "------",
-          channelDivinity: "4",
-          cantrip: "5",
+          feature: "Beast Spells",
+          wildShape: "4",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -899,8 +915,8 @@ export default {
           level: "19",
           profBonus: "+6",
           feature: "Epic Boon",
-          channelDivinity: "4",
-          cantrip: "5",
+          wildShape: "4",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",
@@ -914,9 +930,9 @@ export default {
         {
           level: "20",
           profBonus: "+6",
-          feature: "Greater Divine Intervention",
-          channelDivinity: "4",
-          cantrip: "5",
+          feature: "Archdruid",
+          wildShape: "4",
+          cantrip: "4",
           first: "4",
           second: "3",
           third: "3",

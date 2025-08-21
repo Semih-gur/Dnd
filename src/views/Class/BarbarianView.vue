@@ -278,7 +278,7 @@
                       />
                     </v-btn>
                   </div>
-                  <p class="text-center">{{ sub.title }}</p>
+                  <p class="text-center">Path of The {{ sub.title }}</p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
