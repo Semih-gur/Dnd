@@ -782,7 +782,7 @@ export default {
         {
           level: "11",
           profBonus: "+4",
-          feature: "",
+          feature: "------",
           cantrip: "4",
           spell: "15",
           first: "4",
@@ -850,7 +850,7 @@ export default {
         {
           level: "15",
           profBonus: "+5",
-          feature: "",
+          feature: "------",
           cantrip: "4",
           spell: "19",
           first: "4",
@@ -884,7 +884,7 @@ export default {
         {
           level: "17",
           profBonus: "+6",
-          feature: "",
+          feature: "------",
           cantrip: "4",
           spell: "20",
           first: "4",
