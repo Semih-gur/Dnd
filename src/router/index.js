@@ -14,6 +14,7 @@ import BackgroundsView from "@/views/BackgroundsView.vue";
 import BackgrView from "@/views/BackgrView.vue";
 import FeatsView from "@/views/FeatsView.vue";
 import FeatDetailView from "@/views/FeatDetailView.vue";
+import DruidView from "@/views/Class/DruidView.vue";
 
 const routes = [
   {
@@ -75,6 +76,11 @@ const routes = [
     path: "/wiki/classes/cleric",
     name: "Cleric",
     component: ClericView,
+  },
+  {
+    path: "/wiki/classes/druid",
+    name: "Druid",
+    component: DruidView,
   },
   {
     path: "/wiki/classes/:class/:subclass",

@@ -298,6 +298,84 @@
                     Manual or elsewhere for eligible Beasts if the Dungeon
                     Master permits you to do so.
                   </p>
+                  <br />
+                  <v-table>
+                    <thead>
+                      <th></th>
+                      <tr>
+                        <th class="text-center">Druid Level</th>
+                        <th class="text-center">Known Forms</th>
+                        <th class="text-center">Max CR</th>
+                        <th class="text-center">Fly Speed</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <p></p>
+                      <tr v-for="item in wildshapeTable" :key="item.level">
+                        <td class="text-center">{{ item.level }}</td>
+                        <td class="text-center">{{ item.forms }}</td>
+                        <td class="text-center">{{ item.cr }}</td>
+                        <td class="text-center">{{ item.flySpeed }}</td>
+                      </tr>
+                    </tbody>
+                  </v-table>
+                  <br />
+                  <p>
+                    <b>Rules While Shape-Shifted.</b>While in a form, you retain
+                    your personality, memories, and ability to speak, and the
+                    following rules apply:
+                  </p>
+                  <br />
+                  <p><b>Temporary Hit Points. </b></p>
+                  When you assume a Wild Shape form, you gain a number of
+                  Temporary Hit Points equal to your Druid level.
+                  <br />
+                  <p>
+                    <b>Game Statistics. </b>Your game statistics are replaced by
+                    the Beast’s stat block, but you retain your creature type;
+                    Hit Points; Hit Point Dice; Intelligence, Wisdom, and
+                    Charisma scores; class features; languages; and feats. You
+                    also retain your skill and saving throw proficiencies and
+                    use your Proficiency Bonus for them, in addition to gaining
+                    the proficiencies of the creature. If a skill or saving
+                    throw modifier in the Beast’s stat block is higher than
+                    yours, use the one in the stat block.
+                  </p>
+                  <br />
+                  <p>
+                    <b>No Spellcasting. </b>You can’t cast spells, but
+                    shape-shifting doesn’t break your Concentration or otherwise
+                    interfere with a spell you’ve already cast.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Objects. </b>Your ability to handle objects is determined
+                    by the form’s limbs rather than your own. In addition, you
+                    choose whether your equipment falls in your space, merges
+                    into your new form, or is worn by it. Worn equipment
+                    functions as normal, but the DM decides whether it’s
+                    practical for the new form to wear a piece of equipment
+                    based on the creature’s size and shape. Your equipment
+                    doesn’t change size or shape to match the new form, and any
+                    equipment that the new form can’t wear must either fall to
+                    the ground or merge with the form. Equipment that merges
+                    with the form has no effect while you’re in that form.
+                  </p>
+                </v-col>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Wild Companion</h2>
+                  <br />
+                  <p>
+                    You can summon a nature spirit that assumes an animal form
+                    to aid you. As a Magic action, you can expend a spell slot
+                    or a use of Wild Shape to cast the Find Familiar spell
+                    without Material components.
+                  </p>
+                  <br />
+                  <p>
+                    When you cast the spell in this way, the familiar is Fey and
+                    disappears when you finish a Long Rest.
+                  </p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -309,15 +387,16 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Cleric Subclass</h2>
+                  <h2 class="elevation-10 pa-5">Druid Subclass</h2>
                   <br />
                   <p>
-                    You gain a Cleric subclass of your choice. The Life Domain,
-                    Light Domain, Trickery Domain, and War Domain subclasses are
-                    detailed after this class’s description. A subclass is a
-                    specialization that grants you features at certain Cleric
-                    levels. For the rest of your career, you gain each of your
-                    subclass’s features that are of your Cleric level or lower.
+                    You gain a Druid subclass of your choice. The Circle of the
+                    Land, Circle of the Moon, Circle of the Sea, and Circle of
+                    the Stars subclasses are detailed after this class’s
+                    description. A subclass is a specialization that grants you
+                    features at certain Druid levels. For the rest of your
+                    career, you gain each of your subclass’s features that are
+                    of your Druid level or lower.
                   </p>
                 </v-col>
               </v-row>
@@ -337,7 +416,7 @@
                       />
                     </v-btn>
                   </div>
-                  <p class="text-center">{{ sub.title }}</p>
+                  <p class="text-center">Circle of the {{ sub.title }}</p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -354,7 +433,7 @@
                   <p>
                     You gain the Ability Score Improvement feat or another feat
                     of your choice for which you qualify. You gain this feature
-                    again at Cleric levels 8, 12, and 16.
+                    again at Druid levels 8, 12, and 16.
                   </p>
                 </v-col>
               </v-row>
@@ -367,61 +446,48 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Sear Undead</h2>
+                  <h2 class="elevation-10 pa-5">Wild Resurgence</h2>
                   <br />
                   <p>
-                    Whenever you use Turn Undead, you can roll a number of d8s
-                    equal to your Wisdom modifier (minimum of 1d8) and add the
-                    rolls together. Each Undead that fails its saving throw
-                    against that use of Turn Undead takes Radiant damage equal
-                    to the roll’s total. This damage doesn’t end the turn
-                    effect.
+                    Once on each of your turns, if you have no uses of Wild
+                    Shape left, you can give yourself one use by expending a
+                    spell slot (no action required).
                   </p>
                   <br />
+                  <p>
+                    In addition, you can expend one use of Wild Shape (no action
+                    required) to give yourself a level 1 spell slot, but you
+                    can’t do so again until you finish a Long Rest.
+                  </p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
           <v-expansion-panel>
             <v-expansion-panel-title>
-              <h2>Level 6</h2>
+              <h2>Level 7</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 6</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Blessed Strikes</h2>
+                  <h2 class="elevation-10 pa-5">Elemental Fury</h2>
                   <br />
                   <p>
-                    Divine power infuses you in battle. You gain one of the
-                    following options of your choice (if you get either option
-                    from a Cleric subclass in an older book, use only the option
-                    you choose for this feature).
-                  </p>
-                  <br />
-                  <p>
-                    <b>Divine Strike. </b>Once on each of your turns when you
-                    hit a creature with an attack roll using a weapon, you can
-                    cause the target to take an extra 1d8 Necrotic or Radiant
-                    damage (your choice).
+                    The might of the elements flows through you. You gain one of
+                    the following options of your choice.
                   </p>
                   <br />
                   <p>
                     <b>Potent Spellcasting. </b>Add your Wisdom modifier to the
-                    damage you deal with any Cleric cantrip.
+                    damage you deal with any Druid cantrip.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Primal Strike. </b>Once on each of your turns when you
+                    hit a creature with an attack roll using a weapon or a Beast
+                    form’s attack in Wild Shape, you can cause the target to
+                    take an extra 1d8 Cold, Fire, Lightning, or Thunder damage
+                    (choose when you hit).
                   </p>
                 </v-col>
               </v-row>
@@ -439,7 +505,7 @@
                   <p>
                     You gain the Ability Score Improvement feat or another feat
                     of your choice for which you qualify. You gain this feature
-                    again at Cleric levels 8, 12, and 16.
+                    again at Druid levels 12, and 16.
                   </p>
                 </v-col>
               </v-row>
@@ -453,16 +519,9 @@
             <v-expansion-panel-text>
               <v-row>
                 <v-col>
-                  <h2 class="elevation-10 pa-5">Divine Intervention</h2>
+                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
                   <br />
-                  <p>
-                    You can call on your deity or pantheon to intervene on your
-                    behalf. As a Magic action, choose any Cleric spell of level
-                    5 or lower that doesn’t require a Reaction to cast. As part
-                    of the same action, you cast that spell without expending a
-                    spell slot or needing Material components. You can’t use
-                    this feature again until you finish a Long Rest.
-                  </p>
+                  <p>You gain a new feature from the subclass you chose</p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
@@ -480,7 +539,7 @@
                   <p>
                     You gain the Ability Score Improvement feat or another feat
                     of your choice for which you qualify. You gain this feature
-                    again at Cleric levels 8, 12, and 16.
+                    again at Druid 16.
                   </p>
                 </v-col>
               </v-row>
@@ -492,31 +551,45 @@
               <h2>Level 14</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Improved Blessed Strikes</h2>
+              <v-row>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
+                  <br />
+                  <p>You gain a new feature from the subclass you chose</p>
+                </v-col>
+              </v-row>
+            </v-expansion-panel-text>
+          </v-expansion-panel>
+
+          <v-expansion-panel>
+            <v-expansion-panel-title>
+              <h2>Level 15</h2>
+            </v-expansion-panel-title>
+            <v-expansion-panel-text>
+              <v-row>
+                <v-col>
+                  <h2 class="elevation-10 pa-5">Improved Elemental Fury</h2>
                   <br />
                   <p>
-                    The option you chose for Blessed Strikes grows more
-                    powerful.
+                    The option you chose for Elemental Fury grows more powerful,
+                    as detailed below.
                   </p>
                   <br />
                   <p>
-                    <b>Divine Strike. </b>The extra damage of your Divine Strike
+                    <b>Potent Spellcasting. </b>When you cast a Druid cantrip
+                    with a range of 10 feet or greater, the spell’s range
+                    increases by 300 feet.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Primal Strike. </b>The extra damage of your Primal Strike
                     increases to 2d8.
-                  </p>
-                  <br />
-                  <p>
-                    <b>otent Spellcasting. </b>When you cast a Cleric cantrip
-                    and deal damage to a creature with it, you can give vitality
-                    to yourself or another creature within 60 feet of yourself,
-                    granting a number of Temporary Hit Points equal to twice
-                    your Wisdom modifier.
                   </p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+
           <v-expansion-panel expand v-model="panel">
             <v-expansion-panel-title>
               <h2>Level 16</h2>
@@ -528,27 +601,33 @@
                   <br />
                   <p>
                     You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify. You gain this feature
-                    again at Cleric levels 8, 12, and 16.
+                    of your choice for which you qualify
                   </p>
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+
           <v-expansion-panel>
             <v-expansion-panel-title>
-              <h2>Level 17</h2>
+              <h2>Level 18</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
+                  <h2 class="elevation-10 pa-5">Beast Spells</h2>
                   <br />
-                  <p>You gain a new feature from the subclass you chose</p>
+                  <p>
+                    While using Wild Shape, you can cast spells in Beast form,
+                    except for any spell that has a Material component with a
+                    cost specified or that consumes its Material component.
+                  </p>
+                  <br />
                 </v-col>
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
+
           <v-expansion-panel>
             <v-expansion-panel-title>
               <h2>Level 19</h2>
@@ -560,7 +639,8 @@
                   <br />
                   <p>
                     You gain an Epic Boon feat or another feat of your choice
-                    for which you qualify. Boon of Fate is recommended.
+                    for which you qualify. Boon of Dimensional Travel is
+                    recommended.
                   </p>
                 </v-col>
               </v-row>
@@ -574,13 +654,33 @@
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
                 <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Greater Divine Intervention</h2>
+                  <h2 class="elevation-10 pa-5">Archdruid</h2>
                   <br />
                   <p>
-                    You can call on even more powerful divine intervention. When
-                    you use your Divine Intervention feature, you can choose
-                    Wish when you select a spell. If you do so, you can’t use
-                    Divine Intervention again until you finish 2d4 Long Rests.
+                    The vitality of nature constantly blooms within you,
+                    granting you the following benefits.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Evergreen Wild Shape. </b>Whenever you roll Initiative
+                    and have no uses of Wild Shape left, you regain one expended
+                    use of it.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Nature Magician. </b>You can convert uses of Wild Shape
+                    into a spell slot (no action required). Choose a number of
+                    your unexpended uses of Wild Shape and convert them into a
+                    single spell slot, with each use contributing 2 spell
+                    levels. For example, if you convert two uses of Wild Shape,
+                    you produce a level 4 spell slot. Once you use this benefit,
+                    you can’t do so again until you finish a Long Rest.
+                  </p>
+                  <br />
+                  <p>
+                    <b>Longevity. </b>The primal magic that you wield causes you
+                    to age more slowly. For every ten years that pass, your body
+                    ages only one year.
                   </p>
                 </v-col>
               </v-row>
@@ -599,13 +699,34 @@ export default {
   methods: {
     goTo(label) {
       router.push(
-        "/wiki/classes/bard/" + label.replace(" ", "_").toLowerCase()
+        "/wiki/classes/druid/" + label.replace(" ", "_").toLowerCase()
       );
     },
   },
 
   data() {
     return {
+      wildshapeTable: [
+        {
+          level: "2",
+          forms: "4",
+          cr: "1/4",
+          flySpeed: "No",
+        },
+        {
+          level: "4",
+          forms: "6",
+          cr: "1/2",
+          flySpeed: "No",
+        },
+        {
+          level: "8",
+          forms: "8",
+          cr: "1",
+          flySpeed: "Yes",
+        },
+      ],
+
       subclasses: [
         {
           title: "Land",

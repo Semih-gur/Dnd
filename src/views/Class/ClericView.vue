@@ -382,7 +382,7 @@
           </v-expansion-panel>
           <v-expansion-panel>
             <v-expansion-panel-title>
-              <h2>Level 6</h2>
+              <h2>Level 7</h2>
             </v-expansion-panel-title>
             <v-expansion-panel-text>
               <v-row class="d-flex justify-center">
