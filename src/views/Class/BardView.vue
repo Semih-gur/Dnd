@@ -533,7 +533,7 @@
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
-          <v-expansion-panel class="mb-10">
+          <v-expansion-panel>
             <v-expansion-panel-title>
               <h2>Level 19</h2>
             </v-expansion-panel-title>
@@ -550,7 +550,6 @@
               </v-row>
             </v-expansion-panel-text>
           </v-expansion-panel>
-
           <v-expansion-panel class="mb-10">
             <v-expansion-panel-title>
               <h2>Level 20</h2>
