@@ -7,22 +7,42 @@
         "title": "Dazzling Footwork",
         "desc": "While you aren’t wearing armor or wielding a Shield, you gain the following benefits.\n\nDance Virtuoso. You have Advantage on any Charisma (Performance) check you make that involves you dancing.\n\nUnarmored Defense. Your base Armor Class equals 10 plus your Dexterity and Charisma modifiers.\n\nAgile Strikes. When you expend a use of your Bardic Inspiration as part of an action, a Bonus Action, or a Reaction, you can make one Unarmed Strike as part of that action, Bonus Action, or Reaction.\n\nBardic Damage. You can use Dexterity instead of Strength for the attack rolls of your Unarmed Strikes. When you deal damage with an Unarmed Strike, you can deal Bludgeoning damage equal to a roll of your Bardic Inspiration die plus your Dexterity modifier, instead of the strike’s normal damage. This roll doesn't expend the die.",
         "spell": [
-          {
-            "level": 3,
-            "spells": "Aid, Bless, Cure Wounds, Lesser Restoration"
-          },
-          {
-            "level": 5,
-            "spells": "Mass Healing Word, Revivify"
-          },
-          {
-            "level": 7,
-            "spells": "Aura of Life, Death Ward"
-          },
-          {
-            "level": 9,
-            "spells": "Greater Restoration, Mass Cure Wounds"
-          }
+          [
+            {
+              "level": 3,
+              "spells": "Aid, Bless, Cure Wounds, Lesser Restoration"
+            },
+            {
+              "level": 5,
+              "spells": "Mass Healing Word, Revivify"
+            },
+            {
+              "level": 7,
+              "spells": "Aura of Life, Death Ward"
+            },
+            {
+              "level": 9,
+              "spells": "Greater Restoration, Mass Cure Wounds"
+            }
+          ],
+          [
+            {
+              "level": 3,
+              "spells": "asdasd"
+            },
+            {
+              "level": 5,
+              "spells": "asdasdy"
+            },
+            {
+              "level": 7,
+              "spells": "Aura of Life, Death Ward"
+            },
+            {
+              "level": 9,
+              "spells": "Greater Restoration, Mass Cure Wounds"
+            }
+          ]
         ]
       },
       {
@@ -342,22 +362,24 @@
         "title": "Life Domain Spells",
         "desc": "Your connection to this divine domain ensures you always have certain spells ready. When you reach a Cleric level specified in the Life Domain Spells table, you thereafter always have the listed spells prepared.",
         "spell": [
-          {
-            "level": 3,
-            "spells": "Aid, Bless, Cure Wounds, Lesser Restoration"
-          },
-          {
-            "level": 5,
-            "spells": "Mass Healing Word, Revivify"
-          },
-          {
-            "level": 7,
-            "spells": "Aura of Life, Death Ward"
-          },
-          {
-            "level": 9,
-            "spells": "Greater Restoration, Mass Cure Wounds"
-          }
+          [
+            {
+              "level": 3,
+              "spells": "Aid, Bless, Cure Wounds, Lesser Restoration"
+            },
+            {
+              "level": 5,
+              "spells": "Mass Healing Word, Revivify"
+            },
+            {
+              "level": 7,
+              "spells": "Aura of Life, Death Ward"
+            },
+            {
+              "level": 9,
+              "spells": "Greater Restoration, Mass Cure Wounds"
+            }
+          ]
         ]
       },
       {
@@ -385,22 +407,24 @@
         "title": "Light Domain Spells",
         "desc": "Your connection to this divine domain ensures you always have certain spells ready. When you reach a Cleric level specified in the Light Domain Spells table, you thereafter always have the listed spells prepared.",
         "spell": [
-          {
-            "level": 3,
-            "spells": "Burning Hands, Faerie Fire, Scorching Ray, See Invisibility"
-          },
-          {
-            "level": 5,
-            "spells": "Daylight, Fireball"
-          },
-          {
-            "level": 7,
-            "spells": "Arcane Eye, Wall of Fire"
-          },
-          {
-            "level": 9,
-            "spells": "Flame Strike, Scrying"
-          }
+          [
+            {
+              "level": 3,
+              "spells": "Burning Hands, Faerie Fire, Scorching Ray, See Invisibility"
+            },
+            {
+              "level": 5,
+              "spells": "Daylight, Fireball"
+            },
+            {
+              "level": 7,
+              "spells": "Arcane Eye, Wall of Fire"
+            },
+            {
+              "level": 9,
+              "spells": "Flame Strike, Scrying"
+            }
+          ]
         ]
       },
       {
@@ -439,22 +463,24 @@
         "title": "Trickery Domain Spells",
         "desc": "Your connection to this divine domain ensures you always have certain spells ready. When you reach a Cleric level specified in the Trickery Domain Spells table, you thereafter always have the listed spells prepared.",
         "spell": [
-          {
-            "level": 3,
-            "spells": "Charm Person, Disguise Self, Invisibility, Pass without Trace"
-          },
-          {
-            "level": 5,
-            "spells": "Hypnotic Pattern, Nondetection"
-          },
-          {
-            "level": 7,
-            "spells": "Confusion, Dimension Door"
-          },
-          {
-            "level": 9,
-            "spells": "Dominate Person, Modify Memory"
-          }
+          [
+            {
+              "level": 3,
+              "spells": "Charm Person, Disguise Self, Invisibility, Pass without Trace"
+            },
+            {
+              "level": 5,
+              "spells": "Hypnotic Pattern, Nondetection"
+            },
+            {
+              "level": 7,
+              "spells": "Confusion, Dimension Door"
+            },
+            {
+              "level": 9,
+              "spells": "Dominate Person, Modify Memory"
+            }
+          ]
         ]
       },
       {
@@ -487,22 +513,24 @@
         "title": "War Domain Spells",
         "desc": "Your connection to this divine domain ensures you always have certain spells ready. When you reach a Cleric level specified in the War Domain Spells table, you thereafter always have the listed spells prepared.",
         "spell": [
-          {
-            "level": 3,
-            "spells": "Guiding Bolt, Magic Weapon, Shield of Faith, Spiritual Weapon"
-          },
-          {
-            "level": 5,
-            "spells": "Crusader's Mantle, Spirit Guardians"
-          },
-          {
-            "level": 7,
-            "spells": "Fire Shield, Freedom of Movement"
-          },
-          {
-            "level": 9,
-            "spells": "Hold Monster, Steel Wind Strike"
-          }
+          [
+            {
+              "level": 3,
+              "spells": "Guiding Bolt, Magic Weapon, Shield of Faith, Spiritual Weapon"
+            },
+            {
+              "level": 5,
+              "spells": "Crusader's Mantle, Spirit Guardians"
+            },
+            {
+              "level": 7,
+              "spells": "Fire Shield, Freedom of Movement"
+            },
+            {
+              "level": 9,
+              "spells": "Hold Monster, Steel Wind Strike"
+            }
+          ]
         ]
       },
       {

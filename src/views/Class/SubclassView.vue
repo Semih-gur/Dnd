@@ -1,13 +1,17 @@
 <template>
   <div class="center mt-16">
-    <v-card v-for="sub in subClass.sub" :key="sub.lvl" class="">
-      <v-card-title>{{ sub.lvl }}</v-card-title>
+    <v-card v-for="subClass in subClass.sub" :key="subClass.lvl" class="">
+      <v-card-title>{{ subClass.lvl }}</v-card-title>
       <v-card-text>
-        <h3>{{ sub.title }}</h3>
-        <span style="white-space: pre-wrap" v-html="sub.desc"></span>
-        <div v-if="sub.spell != null">
+        <h3>{{ subClass.title }}</h3>
+        <span style="white-space: pre-wrap" v-html="subClass.desc"></span>
+        <div v-if="subClass.spell != null">
           <br />
-          <v-table>
+          <v-table
+            class="mb-10"
+            v-for="items in subClass.spell"
+            :key="items.level"
+          >
             <thead>
               <th></th>
               <tr>
@@ -17,7 +21,7 @@
             </thead>
             <tbody>
               <p></p>
-              <tr v-for="item in sub.spell" :key="item.level">
+              <tr v-for="item in items" :key="item.level">
                 <td class="text-center">{{ item.level }}</td>
                 <td class="text-center">{{ item.spells }}</td>
               </tr>
