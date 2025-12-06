@@ -13,7 +13,9 @@
             :key="items.level"
           >
             <thead>
-              <th></th>
+              <th v-for="item in items" :key="item.level">
+                {{ item.element }}
+              </th>
               <tr>
                 <th class="text-center">Level</th>
                 <th class="text-center">Prepared Spells</th>
@@ -22,8 +24,8 @@
             <tbody>
               <p></p>
               <tr v-for="item in items" :key="item.level">
-                <td class="text-center">{{ item.level }}</td>
-                <td class="text-center">{{ item.spells }}</td>
+                <td class="tableRow">{{ item.level }}</td>
+                <td class="tableRow">{{ item.spells }}</td>
               </tr>
             </tbody>
           </v-table>
@@ -59,5 +61,10 @@ export default {
 <style scoped>
 .center {
   width: 50%;
+}
+
+.tableRow {
+  width: 50%;
+  text-align: center;
 }
 </style>
