@@ -6,7 +6,6 @@
         "lvl": "Level 3",
         "title": "Circle of the Land Spells",
         "desc": "Whenever you finish a Long Rest, choose one type of land: arid, polar, temperate, or tropical. Consult the table below that corresponds to the chosen type; you have the spells listed for your Druid level and lower prepared.",
-
         "spell": [
           [
             {
@@ -100,12 +99,19 @@
         "lvl": "Level 10",
         "title": "Nature’s Ward",
         "desc": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature, as shown in the Nature’s Ward table.",
-        "spell": [[{}]]
+        "spell": [
+          [
+            { "level": "Arid", "spells": "Fire" },
+            { "level": "Polar", "spells": "Cold" },
+            { "level": "Temperate", "spells": "Lightning" },
+            { "level": "Tropical", "spells": "Posion" }
+          ]
+        ]
       },
       {
         "lvl": "Level 14",
-        "title": "As a Magic action, you can expend a use of your Wild Shape and cause spectral trees and vines to appear in a 15-foot Cube on the ground within 120 feet of yourself. They last there for 1 minute or until you have the Incapacitated condition or die. You and your allies have Half Cover while in that area, and your allies gain the current Resistance of your Nature’s Ward while there.\n\nAs a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet of yourself.",
-        "desc": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature, as shown in the Nature’s Ward table."
+        "title": "Nature’s Sanctuary",
+        "desc": "As a Magic action, you can expend a use of your Wild Shape and cause spectral trees and vines to appear in a 15-foot Cube on the ground within 120 feet of yourself. They last there for 1 minute or until you have the Incapacitated condition or die. You and your allies have Half Cover while in that area, and your allies gain the current Resistance of your Nature’s Ward while there.\n\nAs a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet of yourself."
       }
     ]
   },
@@ -114,23 +120,48 @@
     "sub": [
       {
         "lvl": "Level 3",
-        "title": "Dazzling Footwork",
-        "desc": "While you aren’t wearing armor or wielding a Shield, you gain the following benefits.\n\nDance Virtuoso. You have Advantage on any Charisma (Performance) check you make that involves you dancing.\n\nUnarmored Defense. Your base Armor Class equals 10 plus your Dexterity and Charisma modifiers.\n\nAgile Strikes. When you expend a use of your Bardic Inspiration as part of an action, a Bonus Action, or a Reaction, you can make one Unarmed Strike as part of that action, Bonus Action, or Reaction.\n\nBardic Damage. You can use Dexterity instead of Strength for the attack rolls of your Unarmed Strikes. When you deal damage with an Unarmed Strike, you can deal Bludgeoning damage equal to a roll of your Bardic Inspiration die plus your Dexterity modifier, instead of the strike’s normal damage. This roll doesn't expend the die."
+        "title": "Circle Forms",
+        "desc": "you can channel lunar magic when you assume a Wild Shape form, granting you the benefits below.\n\n<b>Challenge Rating.<b>The maximum Challenge Rating for the form equals your Druid level divided by 3 (round down).\n\n<b>Armor Class.<b> Until you leave the form, your AC equals 13 plus your Wisdom modifier if that total is higher than the Beast’s AC.\n\n<b>Temporary Hit Points.<b> You gain a number of Temporary Hit Points equal to three times your Druid level. "
+      },
+      {
+        "lvl": "Level 3",
+        "title": "Circle of the Moon Spells",
+        "desc": "When you reach a Druid level specified in the Circle of the Moon Spells table, you thereafter always have the listed spells prepared.\n\nIn addition, you can cast the spells from this feature while you’re in a Wild Shape form.",
+        "spell": [
+          [
+            {
+              "level": 3,
+              "spells": "Cure Wounds, Moonbeam, Starry Wisp"
+            },
+            {
+              "level": 5,
+              "spells": "Conjure Animals"
+            },
+            {
+              "level": 7,
+              "spells": "Fount of Moonlight"
+            },
+            {
+              "level": 9,
+              "spells": "Mass Cure Wounds"
+            }
+          ]
+        ]
       },
       {
         "lvl": "Level 6",
-        "title": "Inspiring Movement",
-        "desc": "When an enemy you can see ends its turn within 5 feet of you, you can take a Reaction and expend one use of your Bardic Inspiration to move up to half your Speed. Then one ally of your choice within 30 feet of you can also move up to half their Speed using their Reaction.\n\nNone of this feature’s movement provokes Opportunity Attacks."
+        "title": "Improved Circle Forms",
+        "desc": "While in a Wild Shape form, you gain the following benefits.\n\n<b>Lunar Radiance.<b> Each of your attacks in a Wild Shape form can deal its normal damage type or Radiant damage. You make this choice each time you hit with those attacks.\n\n<b>Increased Toughness.<b> You can add your Wisdom modifier to your Constitution saving throws."
       },
       {
-        "lvl": "Level 6",
-        "title": "Tandem Footwork",
-        "desc": "When you roll Initiative, you can expend one use of your Bardic Inspiration if you don't have the Incapacitated condition. When you do so, roll your Bardic Inspiration die; you and each ally within 30 feet of you who can see or hear you gains a bonus to Initiative equal to the number rolled."
+        "lvl": "Level 10",
+        "title": "Moonlight Step",
+        "desc": "You magically transport yourself, reappearing amid a burst of moonlight. As a Bonus Action, you teleport up to 30 feet to an unoccupied space you can see, and you have Advantage on the next attack roll you make before the end of this turn.\n\nYou can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest. You can also regain uses by expending a level 2+ spell slot for each use you want to restore (no action required)."
       },
       {
         "lvl": "Level 14",
-        "title": "Leading Evasion",
-        "desc": "When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. If any creatures within 5 feet of you are making the same Dexterity saving throw, you can share this benefit with them for that save.\n\nYou can’t use this feature if you have the Incapacitated condition."
+        "title": "Lunar Form",
+        "desc": "The power of the moon suffuses you, granting you the following benefits.\n\n<b>Improved Lunar Radiance.<b> Once per turn, you can deal an extra 2d10 Radiant damage to a target you hit with a Wild Shape form’s attack.\n\n<b>Shared Moonlight.<b> Whenever you use Moonlight Step, you can also teleport one willing creature. That creature must be within 10 feet of you, and you teleport it to an unoccupied space you can see within 10 feet of your destination space."
       }
     ]
   },
