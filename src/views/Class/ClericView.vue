@@ -582,9 +582,11 @@ import router from "@/router";
 export default {
   methods: {
     goTo(label) {
-      router.push(
-        "/wiki/classes/bard/" + label.replace(" ", "_").toLowerCase()
-      );
+      router
+        .push("/wiki/classes/bard/" + label.replace(" ", "_").toLowerCase())
+        .then(() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
     },
   },
 

@@ -5,80 +5,92 @@
       {
         "lvl": "Level 3",
         "title": "Circle of the Land Spells",
-        "desc": "Whenever you finish a Long Rest, choose one type of land: arid, polar, temperate, or tropical. Consult the table below that corresponds to the chosen type; you have the spells listed for your Druid level and lower prepared.",
+        "desc": "Whenever you finish a Long Rest, choose one type of land: arid, polar, temperate, or tropical. You have the spells listed for your Druid level and lower prepared.",
         "spell": [
           [
             {
-              "element": "Arid Land",
+              "land": "Arid",
               "level": 3,
               "spells": "Blur, Burning Hands, Fire Bolt"
             },
             {
+              "land": "Arid",
               "level": 5,
               "spells": "Fireball"
             },
             {
+              "land": "Arid",
               "level": 7,
               "spells": "Blight"
             },
             {
+              "land": "Arid",
               "level": 9,
               "spells": "Wall of Stone"
             }
           ],
           [
             {
-              "element": "Polar Land",
+              "land": "Polar",
               "level": 3,
               "spells": "Fog Cloud, Hold Person, Ray of Frost"
             },
             {
+              "land": "Polar",
               "level": 5,
               "spells": "Sleet Storm"
             },
             {
+              "land": "Polar",
               "level": 7,
               "spells": "Ice Storm"
             },
             {
+              "land": "Polar",
               "level": 9,
               "spells": "Cone of Cold"
             }
           ],
           [
             {
-              "element": "Temperate Land",
+              "land": "Temperate",
               "level": 3,
               "spells": "Misty Step, Shocking Grasp, Sleep"
             },
             {
+              "land": "Temperate",
               "level": 5,
               "spells": "Lightning Bolt"
             },
             {
+              "land": "Temperate",
               "level": 7,
               "spells": "Freedom of Movement"
             },
             {
+              "land": "Temperate",
               "level": 9,
               "spells": "Tree Stride"
             }
           ],
           [
             {
-              "element": "Tropic Land",
+              "land": "Tropical",
               "level": 3,
               "spells": "Acid Splash, Ray of Sickness, Web"
             },
             {
+              "land": "Tropical",
               "level": 5,
               "spells": "Stinking Cloud"
             },
             {
+              "land": "Tropical",
               "level": 7,
               "spells": "Polymorph"
             },
             {
+              "land": "Tropical",
               "level": 9,
               "spells": "Insect Plague"
             }
@@ -87,31 +99,23 @@
       },
       {
         "lvl": "Level 3",
-        "title": "Land’s Aid",
-        "desc": "As a Magic action, you can expend a use of your Wild Shape and choose a point within 60 feet of yourself. Vitality-giving flowers and life-draining thorns appear for a moment in a 10-foot-radius Sphere centered on that point. Each creature of your choice in the Sphere must make a Constitution saving throw against your spell save DC, taking 2d6 Necrotic damage on a failed save or half as much damage on a successful one. One creature of your choice in that area regains 2d6 Hit Points.\n\nThe damage and healing increase by 1d6 when you reach Druid levels 10 (3d6) and 14 (4d6)."
+        "title": "Land's Aid",
+        "desc": "As a Magic action, you can expend a use of your Wild Shape and choose a point within 60 feet of yourself. Vitality-giving flowers and life-draining thorns appear for a moment in a 10-foot-radius Sphere centered on that point.\n\nEach creature of your choice in the Sphere must make a Constitution saving throw against your spell save DC, taking 2d6 Necrotic damage on a failed save or half as much on a success. One creature of your choice in that area regains 2d6 Hit Points.\n\nThe damage and healing increase to 3d6 at Druid level 10 and 4d6 at Druid level 14."
       },
       {
         "lvl": "Level 6",
         "title": "Natural Recovery",
-        "desc": "You can cast one of the level 1+ spells that you have prepared from your Circle Spells feature without expending a spell slot, and you must finish a Long Rest before you do so again.\n\nIn addition, when you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your Druid level (round up), and none of them can be level 6+. For example, if you’re a level 6 Druid, you can recover up to three levels’ worth of spell slots. You can recover a level 3 spell slot, a level 2 and a level 1 spell slot, or three level 1 spell slots. Once you recover spell slots with this feature, you can’t do so again until you finish a Long Rest."
+        "desc": "You can cast one of the level 1+ spells that you have prepared from your Circle Spells feature without expending a spell slot, and you must finish a Long Rest before you do so again.\n\nIn addition, when you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level equal to or less than half your Druid level (round up), and none of them can be level 6+. Once you recover spell slots with this feature, you can't do so again until you finish a Long Rest."
       },
       {
         "lvl": "Level 10",
-        "title": "Nature’s Ward",
-        "desc": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature, as shown in the Nature’s Ward table.",
-        "spell": [
-          [
-            { "level": "Arid", "spells": "Fire" },
-            { "level": "Polar", "spells": "Cold" },
-            { "level": "Temperate", "spells": "Lightning" },
-            { "level": "Tropical", "spells": "Posion" }
-          ]
-        ]
+        "title": "Nature's Ward",
+        "desc": "You are immune to the Poisoned condition, and you have Resistance to a damage type associated with your current land choice in the Circle Spells feature.\n\n<b>Arid</b> → Fire Resistance\n<b>Polar</b> → Cold Resistance\n<b>Temperate</b> → Lightning Resistance\n<b>Tropical</b> → Poison Resistance"
       },
       {
         "lvl": "Level 14",
-        "title": "Nature’s Sanctuary",
-        "desc": "As a Magic action, you can expend a use of your Wild Shape and cause spectral trees and vines to appear in a 15-foot Cube on the ground within 120 feet of yourself. They last there for 1 minute or until you have the Incapacitated condition or die. You and your allies have Half Cover while in that area, and your allies gain the current Resistance of your Nature’s Ward while there.\n\nAs a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet of yourself."
+        "title": "Nature's Sanctuary",
+        "desc": "As a Magic action, you can expend a use of your Wild Shape and cause spectral trees and vines to appear in a 15-foot Cube on the ground within 120 feet of yourself. They last for 1 minute or until you have the Incapacitated condition or die.\n\nYou and your allies have Half Cover while in that area, and your allies gain the current Resistance of your Nature's Ward while there.\n\nAs a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet of yourself."
       }
     ]
   },
@@ -121,12 +125,12 @@
       {
         "lvl": "Level 3",
         "title": "Circle Forms",
-        "desc": "you can channel lunar magic when you assume a Wild Shape form, granting you the benefits below.\n\n<b>Challenge Rating.<b>The maximum Challenge Rating for the form equals your Druid level divided by 3 (round down).\n\n<b>Armor Class.<b> Until you leave the form, your AC equals 13 plus your Wisdom modifier if that total is higher than the Beast’s AC.\n\n<b>Temporary Hit Points.<b> You gain a number of Temporary Hit Points equal to three times your Druid level. "
+        "desc": "You can channel lunar magic when you assume a Wild Shape form, granting you the benefits below.\n\n<b>Challenge Rating.</b> The maximum Challenge Rating for the form equals your Druid level divided by 3 (round down).\n\n<b>Armor Class.</b> Until you leave the form, your AC equals 13 plus your Wisdom modifier if that total is higher than the Beast's AC.\n\n<b>Temporary Hit Points.</b> You gain a number of Temporary Hit Points equal to three times your Druid level."
       },
       {
         "lvl": "Level 3",
         "title": "Circle of the Moon Spells",
-        "desc": "When you reach a Druid level specified in the Circle of the Moon Spells table, you thereafter always have the listed spells prepared.\n\nIn addition, you can cast the spells from this feature while you’re in a Wild Shape form.",
+        "desc": "When you reach a Druid level specified in the Circle of the Moon Spells table, you thereafter always have the listed spells prepared.\n\nIn addition, you can cast the spells from this feature while you're in a Wild Shape form.",
         "spell": [
           [
             {
@@ -151,7 +155,7 @@
       {
         "lvl": "Level 6",
         "title": "Improved Circle Forms",
-        "desc": "While in a Wild Shape form, you gain the following benefits.\n\n<b>Lunar Radiance.<b> Each of your attacks in a Wild Shape form can deal its normal damage type or Radiant damage. You make this choice each time you hit with those attacks.\n\n<b>Increased Toughness.<b> You can add your Wisdom modifier to your Constitution saving throws."
+        "desc": "While in a Wild Shape form, you gain the following benefits.\n\n<b>Lunar Radiance.</b> Each of your attacks in a Wild Shape form can deal its normal damage type or Radiant damage. You make this choice each time you hit with those attacks.\n\n<b>Increased Toughness.</b> You can add your Wisdom modifier to your Constitution saving throws."
       },
       {
         "lvl": "Level 10",
@@ -161,7 +165,7 @@
       {
         "lvl": "Level 14",
         "title": "Lunar Form",
-        "desc": "The power of the moon suffuses you, granting you the following benefits.\n\n<b>Improved Lunar Radiance.<b> Once per turn, you can deal an extra 2d10 Radiant damage to a target you hit with a Wild Shape form’s attack.\n\n<b>Shared Moonlight.<b> Whenever you use Moonlight Step, you can also teleport one willing creature. That creature must be within 10 feet of you, and you teleport it to an unoccupied space you can see within 10 feet of your destination space."
+        "desc": "The power of the moon suffuses you, granting you the following benefits.\n\n<b>Improved Lunar Radiance.</b> Once per turn, you can deal an extra 2d10 Radiant damage to a target you hit with a Wild Shape form's attack.\n\n<b>Shared Moonlight.</b> Whenever you use Moonlight Step, you can also teleport one willing creature. That creature must be within 10 feet of you, and you teleport it to an unoccupied space you can see within 10 feet of your destination space."
       }
     ]
   },
@@ -170,23 +174,48 @@
     "sub": [
       {
         "lvl": "Level 3",
-        "title": "Dazzling Footwork",
-        "desc": "While you aren’t wearing armor or wielding a Shield, you gain the following benefits.\n\nDance Virtuoso. You have Advantage on any Charisma (Performance) check you make that involves you dancing.\n\nUnarmored Defense. Your base Armor Class equals 10 plus your Dexterity and Charisma modifiers.\n\nAgile Strikes. When you expend a use of your Bardic Inspiration as part of an action, a Bonus Action, or a Reaction, you can make one Unarmed Strike as part of that action, Bonus Action, or Reaction.\n\nBardic Damage. You can use Dexterity instead of Strength for the attack rolls of your Unarmed Strikes. When you deal damage with an Unarmed Strike, you can deal Bludgeoning damage equal to a roll of your Bardic Inspiration die plus your Dexterity modifier, instead of the strike’s normal damage. This roll doesn't expend the die."
+        "title": "Circle of the Sea Spells",
+        "desc": "When you reach a Druid level specified in the Circle of the Sea Spells table, you thereafter always have the listed spells prepared.",
+        "spell": [
+          [
+            {
+              "level": 3,
+              "spells": "Fog Cloud, Gust of Wind, Ray of Frost, Shatter, Thunderwave"
+            },
+            {
+              "level": 5,
+              "spells": "Lightning Bolt, Water Breathing"
+            },
+            {
+              "level": 7,
+              "spells": "Control Water, Ice Storm"
+            },
+            {
+              "level": 9,
+              "spells": "Conjure Elemental, Hold Monster"
+            }
+          ]
+        ]
+      },
+      {
+        "lvl": "Level 3",
+        "title": "Wrath of the Sea",
+        "desc": "As a Bonus Action, you can expend a use of your Wild Shape to manifest a 5-foot Emanation that takes the form of ocean spray surrounding you for 10 minutes. It ends early if you dismiss it (no action required), manifest it again, or have the Incapacitated condition.\n\nWhen you manifest the Emanation and as a Bonus Action on your subsequent turns, you can choose another creature you can see in the Emanation. The target must succeed on a Constitution saving throw against your spell save DC or take Cold damage and, if the creature is Large or smaller, be pushed up to 15 feet away from you. To determine the damage, roll a number of d6s equal to your Wisdom modifier (minimum of one die)."
       },
       {
         "lvl": "Level 6",
-        "title": "Inspiring Movement",
-        "desc": "When an enemy you can see ends its turn within 5 feet of you, you can take a Reaction and expend one use of your Bardic Inspiration to move up to half your Speed. Then one ally of your choice within 30 feet of you can also move up to half their Speed using their Reaction.\n\nNone of this feature’s movement provokes Opportunity Attacks."
+        "title": "Aquatic Affinity",
+        "desc": "The size of the Emanation created by your Wrath of the Sea increases to 10 feet.\n\nIn addition, you gain a Swim Speed equal to your Speed."
       },
       {
-        "lvl": "Level 6",
-        "title": "Tandem Footwork",
-        "desc": "When you roll Initiative, you can expend one use of your Bardic Inspiration if you don't have the Incapacitated condition. When you do so, roll your Bardic Inspiration die; you and each ally within 30 feet of you who can see or hear you gains a bonus to Initiative equal to the number rolled."
+        "lvl": "Level 10",
+        "title": "Stormborn",
+        "desc": "Your Wrath of the Sea confers two more benefits while active.\n\n<b>Flight.</b> You gain a Fly Speed equal to your Speed.\n\n<b>Resistance.</b> You have Resistance to Cold, Lightning, and Thunder damage."
       },
       {
         "lvl": "Level 14",
-        "title": "Leading Evasion",
-        "desc": "When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. If any creatures within 5 feet of you are making the same Dexterity saving throw, you can share this benefit with them for that save.\n\nYou can’t use this feature if you have the Incapacitated condition."
+        "title": "Oceanic Gift",
+        "desc": "Instead of manifesting the Emanation of Wrath of the Sea around yourself, you can manifest it around one willing creature within 60 feet of yourself. That creature gains all the benefits of the Emanation and uses your spell save DC and Wisdom modifier for it.\n\nIn addition, you can manifest the Emanation around both the other creature and yourself if you expend two uses of your Wild Shape instead of one when manifesting it."
       }
     ]
   },
@@ -195,23 +224,28 @@
     "sub": [
       {
         "lvl": "Level 3",
-        "title": "Dazzling Footwork",
-        "desc": "While you aren’t wearing armor or wielding a Shield, you gain the following benefits.\n\nDance Virtuoso. You have Advantage on any Charisma (Performance) check you make that involves you dancing.\n\nUnarmored Defense. Your base Armor Class equals 10 plus your Dexterity and Charisma modifiers.\n\nAgile Strikes. When you expend a use of your Bardic Inspiration as part of an action, a Bonus Action, or a Reaction, you can make one Unarmed Strike as part of that action, Bonus Action, or Reaction.\n\nBardic Damage. You can use Dexterity instead of Strength for the attack rolls of your Unarmed Strikes. When you deal damage with an Unarmed Strike, you can deal Bludgeoning damage equal to a roll of your Bardic Inspiration die plus your Dexterity modifier, instead of the strike’s normal damage. This roll doesn't expend the die."
+        "title": "Star Map",
+        "desc": "You have created a star map, which is a Tiny object that serves as a Spellcasting Focus for your Druid spells. You always have the Guidance and Guiding Bolt spells prepared.\n\nYou can cast Guiding Bolt without expending a spell slot a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.\n\nIf the map is lost or destroyed, you can perform a 1-hour ritual to recreate it during a Short or Long Rest."
+      },
+      {
+        "lvl": "Level 3",
+        "title": "Starry Form",
+        "desc": "As a Bonus Action, you can expend a use of Wild Shape to take on a starry form rather than shape-shifting. While in your Starry Form, you retain your game statistics, your body becomes luminous, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and you gain benefits based on a constellation you choose:\n\n<b>Archer.</b> When you activate the form and as a Bonus Action on later turns, you can make a ranged spell attack, hurling a beam of light at one creature within 60 feet. On a hit, it deals 1d8 + your Wisdom modifier Radiant damage.\n\n<b>Chalice.</b> When you cast a healing spell using a spell slot, you or a creature within 30 feet of you regains 1d8 + your Wisdom modifier Hit Points.\n\n<b>Dragon.</b> When you make an Intelligence or Wisdom check or a Constitution saving throw to maintain Concentration, you can treat a roll of 9 or lower on the d20 as a 10.\n\nThe form lasts 10 minutes, ending early if you dismiss it, become Incapacitated, or use the feature again."
       },
       {
         "lvl": "Level 6",
-        "title": "Inspiring Movement",
-        "desc": "When an enemy you can see ends its turn within 5 feet of you, you can take a Reaction and expend one use of your Bardic Inspiration to move up to half your Speed. Then one ally of your choice within 30 feet of you can also move up to half their Speed using their Reaction.\n\nNone of this feature’s movement provokes Opportunity Attacks."
+        "title": "Cosmic Omen",
+        "desc": "When you finish a Long Rest, you consult your Star Map to divine an omen for the day. Roll a die; on an even number you gain a Weal omen, on an odd number you gain a Woe omen — both last until your next Long Rest.\n\n<b>Weal.</b> Whenever a creature you can see within 30 feet of you makes a D20 Test, you can use your Reaction to roll 1d6 and add the number rolled to the total.\n\n<b>Woe.</b> Whenever a creature you can see within 30 feet of you makes a D20 Test, you can use your Reaction to roll 1d6 and subtract the number rolled from the total.\n\nYou can use this Reaction a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest."
       },
       {
-        "lvl": "Level 6",
-        "title": "Tandem Footwork",
-        "desc": "When you roll Initiative, you can expend one use of your Bardic Inspiration if you don't have the Incapacitated condition. When you do so, roll your Bardic Inspiration die; you and each ally within 30 feet of you who can see or hear you gains a bonus to Initiative equal to the number rolled."
+        "lvl": "Level 10",
+        "title": "Twinkling Constellations",
+        "desc": "The features of your Starry Form improve.\n\nThe Archer and Chalice constellations now deal or restore 2d8 instead of 1d8.\n\nWhile the Dragon constellation is active, you have a Fly Speed of 20 feet and can hover.\n\nAdditionally, at the start of each of your turns while in Starry Form, you can change which constellation glimmers on your body."
       },
       {
         "lvl": "Level 14",
-        "title": "Leading Evasion",
-        "desc": "When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. If any creatures within 5 feet of you are making the same Dexterity saving throw, you can share this benefit with them for that save.\n\nYou can’t use this feature if you have the Incapacitated condition."
+        "title": "Full of Stars",
+        "desc": "While in your Starry Form, you become partially incorporeal, giving you Resistance to Bludgeoning, Piercing, and Slashing damage."
       }
     ]
   },
@@ -625,6 +659,141 @@
         "lvl": "Level 17",
         "title": "Avatar of Battle",
         "desc": "You gain Resistance to Bludgeoning, Piercing, and Slashing damage."
+      }
+    ]
+  },
+  {
+    "name": "battle_master",
+    "sub": [
+      {
+        "lvl": "Level 3",
+        "title": "Combat Superiority",
+        "desc": "Your experience on the battlefield has refined your fighting techniques. You learn maneuvers fueled by special dice called Superiority Dice.\n\n<b>Maneuvers.</b> You learn three maneuvers of your choice from the list below. Many maneuvers enhance an attack in some way. You can use only one maneuver per attack. You learn two additional maneuvers of your choice when you reach Fighter levels 7, 10, and 15. Each time you learn new maneuvers, you can also replace one maneuver you know with a different one.\n\n<b>Superiority Dice.</b> You have four Superiority Dice, which are d8s. A Superiority Die is expended when you use it. You regain all expended Superiority Dice when you finish a Short or Long Rest. You gain another Superiority Die at Fighter levels 7 (five dice) and 15 (six dice).\n\n<b>Saving Throws.</b> If a maneuver requires a saving throw, the DC equals 8 plus your Strength or Dexterity modifier (your choice) and Proficiency Bonus.\n\n<b>Maneuver Options:</b>\n\n<b>Ambush.</b> When you make a Dexterity (Stealth) check or an Initiative roll, you can expend one Superiority Die and add the die to the roll.\n\n<b>Bait and Switch.</b> When you're within 5 feet of a creature on your turn, you can expend one Superiority Die and switch places with that creature (if it's willing and not Incapacitated). Roll the die; until the start of your next turn, you or that creature gains a bonus to AC equal to the number rolled.\n\n<b>Commander's Strike.</b> When you take the Attack action, you can replace one attack to direct a willing ally who can see or hear you to strike. Expend one Superiority Die; that ally can immediately use its Reaction to make one attack, adding the Superiority Die to the damage roll.\n\n<b>Commanding Presence.</b> When you make a Charisma (Intimidation, Performance, or Persuasion) check, you can expend one Superiority Die and add it to the roll.\n\n<b>Disarming Attack.</b> When you hit a creature with an attack roll, expend one Superiority Die to add it to the damage. The target must succeed on a Strength saving throw or drop one item of your choice that it's holding.\n\n<b>Distracting Strike.</b> When you hit a creature with an attack roll, expend one Superiority Die to add it to the damage. The next attack roll against the target by an attacker other than you has Advantage if the attack is made before the start of your next turn.\n\n<b>Evasive Footwork.</b> When you move, you can expend one Superiority Die, rolling it and adding the result to your AC until you stop moving. You can also Disengage as a Bonus Action.\n\n<b>Feinting Attack.</b> As a Bonus Action, expend one Superiority Die to feint, choosing one creature within 5 feet as your target. You have Advantage on your next attack roll against that creature this turn. If the attack hits, add the Superiority Die to the damage.\n\n<b>Goading Attack.</b> When you hit a creature with an attack roll, expend one Superiority Die to add it to the damage. The target must succeed on a Wisdom saving throw or have Disadvantage on attack rolls against targets other than you until the start of your next turn.\n\n<b>Lunging Attack.</b> When you make a melee attack on your turn, expend one Superiority Die to increase your reach for that attack by 5 feet. If the attack hits, add the Superiority Die to the damage.\n\n<b>Maneuvering Attack.</b> When you hit a creature with an attack roll, expend one Superiority Die to add it to the damage. Choose one willing ally; that creature can use its Reaction to move up to half its Speed without provoking Opportunity Attacks from the target of your attack.\n\n<b>Menacing Attack.</b> When you hit a creature with an attack roll, expend one Superiority Die to add it to the damage. The target must succeed on a Wisdom saving throw or have the Frightened condition until the start of your next turn.\n\n<b>Parry.</b> When a creature damages you with a melee attack roll, use your Reaction and expend one Superiority Die to reduce the damage by the number rolled plus your Strength or Dexterity modifier.\n\n<b>Precision Attack.</b> When your attack roll misses a creature, expend one Superiority Die and add it to the roll, potentially turning the miss into a hit.\n\n<b>Pushing Attack.</b> When you hit a creature with an attack roll, expend one Superiority Die to add it to the damage. If the target is Large or smaller, it must succeed on a Strength saving throw or be pushed up to 15 feet directly away from you.\n\n<b>Rally.</b> As a Bonus Action, expend one Superiority Die to bolster a willing ally within 30 feet that can see or hear you. That creature gains Temporary Hit Points equal to the Superiority Die roll plus half your Fighter level (round down).\n\n<b>Riposte.</b> When a creature misses you with a melee attack roll, use your Reaction and expend one Superiority Die to make one melee attack against the creature. If you hit, add the Superiority Die to the damage.\n\n<b>Sweeping Attack.</b> When you hit a creature with a melee attack roll, expend one Superiority Die to attempt to damage another creature. Choose another creature within 5 feet of the original target and within your reach. If the original attack roll would hit it, that second creature takes damage equal to the Superiority Die roll.\n\n<b>Tactical Assessment.</b> When you make an Intelligence (History or Investigation) check or a Wisdom (Insight) check, expend one Superiority Die and add it to the roll.\n\n<b>Trip Attack.</b> When you hit a creature with an attack roll, expend one Superiority Die to add it to the damage. If the target is Large or smaller, it must succeed on a Strength saving throw or have the Prone condition."
+      },
+      {
+        "lvl": "Level 3",
+        "title": "Student of War",
+        "desc": "You gain proficiency with one type of Artisan's Tools of your choice, and you gain proficiency in one skill of your choice from the skills available to Fighters at level 1."
+      },
+      {
+        "lvl": "Level 7",
+        "title": "Know Your Enemy",
+        "desc": "As a Bonus Action, you can discern certain strengths and weaknesses of a creature you can see within 30 feet of yourself; you know whether that creature has any Immunities, Resistances, or Vulnerabilities, and if the creature has any, you know what they are.\n\nOnce you use this feature, you can't do so again until you finish a Long Rest. You can also restore a use of the feature by expending one Superiority Die (no action required)."
+      },
+      {
+        "lvl": "Level 10",
+        "title": "Improved Combat Superiority",
+        "desc": "Your Superiority Dice become d10s."
+      },
+      {
+        "lvl": "Level 15",
+        "title": "Relentless",
+        "desc": "Once per turn, when you use a Battle Master maneuver, you can roll a d8 and use it instead of expending a Superiority Die."
+      },
+      {
+        "lvl": "Level 18",
+        "title": "Ultimate Combat Superiority",
+        "desc": "Your Superiority Dice become d12s."
+      }
+    ]
+  },
+  {
+    "name": "champion",
+    "sub": [
+      {
+        "lvl": "Level 3",
+        "title": "Improved Critical",
+        "desc": "Your attack rolls with weapons and Unarmed Strikes can score a Critical Hit on a roll of 19 or 20 on the d20."
+      },
+      {
+        "lvl": "Level 3",
+        "title": "Remarkable Athlete",
+        "desc": "Thanks to your athleticism, you have Advantage on Initiative rolls and Strength (Athletics) checks. In addition, immediately after you score a Critical Hit, you can move up to half your Speed without provoking Opportunity Attacks."
+      },
+      {
+        "lvl": "Level 7",
+        "title": "Additional Fighting Style",
+        "desc": "You gain another Fighting Style feat of your choice."
+      },
+      {
+        "lvl": "Level 10",
+        "title": "Heroic Warrior",
+        "desc": "The thrill of battle drives you toward victory. During combat, you can give yourself Heroic Inspiration whenever you start your turn without it."
+      },
+      {
+        "lvl": "Level 15",
+        "title": "Superior Critical",
+        "desc": "Your attack rolls with weapons and Unarmed Strikes can now score a Critical Hit on a roll of 18–20 on the d20."
+      },
+      {
+        "lvl": "Level 18",
+        "title": "Survivor",
+        "desc": "You attain the pinnacle of resilience in battle, giving you these benefits.\n\n<b>Defy Death.</b> You have Advantage on Death Saving Throws. Moreover, when you roll 18–20 on a Death Saving Throw, you gain the benefit of rolling a 20 on it.\n\n<b>Heroic Rally.</b> At the start of each of your turns, you regain Hit Points equal to 5 plus your Constitution modifier if you are Bloodied and have at least 1 Hit Point."
+      }
+    ]
+  },
+  {
+    "name": "eldritch_knight",
+    "sub": [
+      {
+        "lvl": "Level 3",
+        "title": "Spellcasting",
+        "desc": "You have learned to cast spells. You choose spells from the Wizard spell list and use Intelligence as your spellcasting ability. You can use an Arcane Focus as a Spellcasting Focus for your Wizard spells.\n\n<b>Cantrips.</b> You know two cantrips of your choice from the Wizard spell list. Whenever you gain a Fighter level, you can replace one of these cantrips with another from the Wizard spell list. At Fighter level 10, you learn a third Wizard cantrip.\n\n<b>Prepared Spells.</b> The number of level 1+ spells you can prepare increases as you gain Fighter levels (see table below). You can replace one prepared spell each time you gain a Fighter level.\n\n<b>Spell Slots.</b> You regain all expended spell slots when you finish a Long Rest.\n\n<b>Spellcasting Table (Prepared Spells / Spell Slots):</b>\n• Level 3: 3 spells, two 1st-level slots\n• Level 4: 4 spells, three 1st-level slots\n• Level 7: 5 spells, four 1st-level + two 2nd-level slots\n• Level 8: 6 spells, four 1st-level + two 2nd-level slots\n• Level 10: 7 spells, four 1st-level + three 2nd-level slots\n• Level 11: 8 spells, four 1st + three 2nd + two 3rd-level slots\n• Level 13: 9 spells, four 1st + three 2nd + three 3rd-level slots\n• Level 14: 10 spells, four 1st + three 2nd + three 3rd-level slots\n• Level 19: 13 spells, four 1st + three 2nd + three 3rd + one 4th-level slot\n• Level 20: 13 spells, four 1st + three 2nd + three 3rd + two 4th-level slots\n\nThere are no restrictions on which school of magic your spells can come from."
+      },
+      {
+        "lvl": "Level 3",
+        "title": "War Bond",
+        "desc": "You learn a ritual that creates a magical bond between yourself and one weapon. The ritual takes 1 hour, which can be performed during a Short Rest. The bond fails if another Fighter is already bonded to the weapon or if it is a magic item attuned to someone else.\n\nOnce bonded, you can't be disarmed of that weapon unless you have the Incapacitated condition. If the weapon is on the same plane of existence, you can summon it to your hand as a Bonus Action.\n\nYou can have up to two bonded weapons, but can summon only one at a time with a Bonus Action. Bonding to a third weapon breaks the bond with one of the other two."
+      },
+      {
+        "lvl": "Level 7",
+        "title": "War Magic",
+        "desc": "When you take the Attack action on your turn, you can replace one of the attacks with a casting of one of your Wizard cantrips that has a casting time of an Action."
+      },
+      {
+        "lvl": "Level 10",
+        "title": "Eldritch Strike",
+        "desc": "You learn how to make your weapon strikes undercut a creature's ability to withstand your spells. When you hit a creature with a weapon attack, that creature has Disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn."
+      },
+      {
+        "lvl": "Level 15",
+        "title": "Arcane Charge",
+        "desc": "When you use your Action Surge, you can teleport up to 30 feet to an unoccupied space you can see, either before or after the additional action."
+      },
+      {
+        "lvl": "Level 18",
+        "title": "Improved War Magic",
+        "desc": "When you take the Attack action on your turn, you can replace two of the attacks with a casting of one of your level 1 or level 2 Wizard spells that has a casting time of an Action."
+      }
+    ]
+  },
+  {
+    "name": "psi_warrior",
+    "sub": [
+      {
+        "lvl": "Level 3",
+        "title": "Psionic Power",
+        "desc": "You harbor a wellspring of psionic energy within yourself, represented by Psionic Energy Dice. You have a number of these dice equal to twice your Proficiency Bonus. They begin as d6s and grow in size as you gain Fighter levels (d8 at level 5, d10 at level 11, d12 at level 17). You regain one expended die when you finish a Short Rest, and all of them when you finish a Long Rest.\n\nYou have three ways to use your Psionic Energy Dice:\n\n<b>Protective Field.</b> When you or another creature you can see within 30 feet of you takes damage, you can use your Reaction to expend one Psionic Energy Die, roll it, and reduce the damage taken by the number rolled plus your Intelligence modifier (minimum reduction of 1).\n\n<b>Psionic Strike.</b> Once on each of your turns, immediately after you hit a target within 30 feet with a weapon attack, you can expend one Psionic Energy Die and deal extra Force damage equal to the die roll plus your Intelligence modifier.\n\n<b>Telekinetic Movement.</b> As a Magic action, choose one target you can see within 30 feet: a loose object Large or smaller, or one willing creature other than you. You transport it up to 30 feet to an unoccupied space you can see. If the target is a Tiny object, you can move it to or from your hand. Once used, you must finish a Short or Long Rest or expend a Psionic Energy Die (no action required) to use it again."
+      },
+      {
+        "lvl": "Level 7",
+        "title": "Telekinetic Adept",
+        "desc": "You have mastered new telekinetic abilities:\n\n<b>Psi-Powered Leap.</b> As a Bonus Action, you gain a Fly Speed equal to twice your Speed until the end of the current turn. Once used, you must finish a Short or Long Rest or expend a Psionic Energy Die (no action required) to use it again.\n\n<b>Telekinetic Thrust.</b> When you deal damage to a target with your Psionic Strike, you can force the target to make a Strength saving throw (DC 8 + your Intelligence modifier + Proficiency Bonus). On a failed save, you can give the target the Prone condition or transport it up to 10 feet horizontally."
+      },
+      {
+        "lvl": "Level 10",
+        "title": "Guarded Mind",
+        "desc": "You have Resistance to Psychic damage. Moreover, if you start your turn with the Charmed or Frightened condition, you can expend a Psionic Energy Die (no action required) and end every effect on yourself giving you those conditions."
+      },
+      {
+        "lvl": "Level 15",
+        "title": "Bulwark of Force",
+        "desc": "You can shield yourself and others with telekinetic force. As a Bonus Action, choose creatures you can see within 30 feet of yourself, up to a number of creatures equal to your Intelligence modifier (minimum of one). Each chosen creature is protected by Half Cover for 1 minute or until you have the Incapacitated condition.\n\nOnce you use this feature, you can't do so again until you finish a Long Rest, unless you expend a Psionic Energy Die (no action required) to restore your use of it."
+      },
+      {
+        "lvl": "Level 18",
+        "title": "Telekinetic Master",
+        "desc": "You always have the Telekinesis spell prepared. You can cast it without expending a spell slot or providing components, and your spellcasting ability for the spell is Intelligence.\n\nOnce you cast the spell with this feature, you can't do so in this way again until you finish a Long Rest, unless you expend a Psionic Energy Die (no action required) to restore your use of it."
       }
     ]
   }

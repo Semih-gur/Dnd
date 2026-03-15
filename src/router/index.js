@@ -15,6 +15,7 @@ import BackgrView from "@/views/BackgrView.vue";
 import FeatsView from "@/views/FeatsView.vue";
 import FeatDetailView from "@/views/FeatDetailView.vue";
 import DruidView from "@/views/Class/DruidView.vue";
+import FighterView from "@/views/Class/FighterView.vue";
 
 const routes = [
   {
@@ -81,6 +82,11 @@ const routes = [
     path: "/wiki/classes/druid",
     name: "Druid",
     component: DruidView,
+  },
+  {
+    path: "/wiki/classes/fighter",
+    name: "Fighter",
+    component: FighterView,
   },
   {
     path: "/wiki/classes/:class/:subclass",
