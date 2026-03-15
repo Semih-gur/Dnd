@@ -16,6 +16,13 @@ import FeatsView from "@/views/FeatsView.vue";
 import FeatDetailView from "@/views/FeatDetailView.vue";
 import DruidView from "@/views/Class/DruidView.vue";
 import FighterView from "@/views/Class/FighterView.vue";
+import MonkView from "@/views/Class/MonkView.vue";
+import PaladinView from "@/views/Class/PaladinView.vue";
+import RangerView from "@/views/Class/RangerView.vue";
+import RogueView from "@/views/Class/RogueView.vue";
+import SorcererView from "@/views/Class/SorcererView.vue";
+import WarlockView from "@/views/Class/WarlockView.vue";
+import WizardView from "@/views/Class/WizardView.vue";
 
 const routes = [
   {
@@ -29,12 +36,12 @@ const routes = [
     component: WikiHomeView,
   },
   {
-    path: "/wiki/races",
-    name: "Races",
+    path: "/wiki/species",
+    name: "Species",
     component: RacesView,
   },
   {
-    path: "/wiki/races/:label",
+    path: "/wiki/species/:label",
     name: "SRace",
     component: SRaceView,
   },
@@ -87,6 +94,41 @@ const routes = [
     path: "/wiki/classes/fighter",
     name: "Fighter",
     component: FighterView,
+  },
+  {
+    path: "/wiki/classes/monk",
+    name: "Monk",
+    component: MonkView,
+  },
+  {
+    path: "/wiki/classes/paladin",
+    name: "Paladin",
+    component: PaladinView,
+  },
+  {
+    path: "/wiki/classes/ranger",
+    name: "Ranger",
+    component: RangerView,
+  },
+  {
+    path: "/wiki/classes/rogue",
+    name: "Rogue",
+    component: RogueView,
+  },
+  {
+    path: "/wiki/classes/sorcerer",
+    name: "Sorcerer",
+    component: SorcererView,
+  },
+  {
+    path: "/wiki/classes/warlock",
+    name: "Warlock",
+    component: WarlockView,
+  },
+  {
+    path: "/wiki/classes/wizard",
+    name: "Wizard",
+    component: WizardView,
   },
   {
     path: "/wiki/classes/:class/:subclass",

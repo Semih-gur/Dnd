@@ -12,9 +12,11 @@
 
           <v-list>
             <v-list-item>
-              <v-btn @click="goTo('wiki/races')">
+              <v-btn @click="goTo('wiki/species')">
                 <v-icon>mdi-account</v-icon>
-                <v-tooltip activator="parent" location="right">Races</v-tooltip>
+                <v-tooltip activator="parent" location="right"
+                  >Species</v-tooltip
+                >
               </v-btn>
             </v-list-item>
             <v-list-item>
