@@ -32,13 +32,13 @@
               <v-card-text>{{ cclass.desc }}</v-card-text>
               <v-card-text>{{ cclass.pref }}</v-card-text>
               <v-card-text v-if="cclass.complexity == 1" class="complexity1"
-                >Low</v-card-text
+                >Low Complexity</v-card-text
               >
               <v-card-text v-if="cclass.complexity == 2" class="complexity2"
-                >Medium</v-card-text
+                >Medium Complexity</v-card-text
               >
               <v-card-text v-if="cclass.complexity == 3" class="complexity3"
-                >High</v-card-text
+                >High Complexity</v-card-text
               >
             </v-card>
           </v-expand-transition>

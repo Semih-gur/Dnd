@@ -9,7 +9,7 @@
       </v-col>
       <v-col cols="3">
         <v-card class="text-center"
-          ><v-card @click="goTo('races')" class="text-center">
+          ><v-card @click="goTo('species')" class="text-center">
             <v-card-title>Species</v-card-title>
             <v-img src="../assets/wikiPage/spells.png"></v-img> </v-card
         ></v-card>
