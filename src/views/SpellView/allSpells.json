@@ -5,7 +5,7 @@
       {
         "name": "acid_splash",
         "school": "Evocation",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "60ft",
         "components": "V,S",
@@ -16,7 +16,7 @@
       {
         "name": "blade_ward",
         "school": "Abjuration ",
-        "class": ["bard", "sorcerer", "warlock", "wizard"],
+        "class": ["Bard", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "Self",
         "components": "V, S",
@@ -27,7 +27,7 @@
       {
         "name": "chill_touch",
         "school": "Necromancy ",
-        "class": ["sorcerer", "warlock", "wizard"],
+        "class": ["Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S",
@@ -38,7 +38,7 @@
       {
         "name": "cancing_lights",
         "school": "Illusion",
-        "class": ["bard", "sorcerer", "wizard"],
+        "class": ["Bard", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "120 feet",
         "components": "V, S, M (a bit of phosphorus)",
@@ -49,7 +49,7 @@
       {
         "name": "druidcraft",
         "school": "Transmutation",
-        "class": ["druid"],
+        "class": ["Druid"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S",
@@ -60,7 +60,7 @@
       {
         "name": "eldritch_blast",
         "school": "Evocation",
-        "class": ["warlock"],
+        "class": ["Warlock"],
         "casting_time": "Action",
         "range": "120 feet",
         "components": "V, S",
@@ -71,7 +71,7 @@
       {
         "name": "elementalism",
         "school": "Transmutation",
-        "class": ["druid", "sorcerer", "wizard"],
+        "class": ["Druid", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S",
@@ -82,7 +82,7 @@
       {
         "name": "fire_bolt",
         "school": "Evocation",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "120 feet",
         "components": "V, S",
@@ -93,7 +93,7 @@
       {
         "name": "friends",
         "school": "Enchantment",
-        "class": ["bard", "sorcerer", "warlock", "wizard"],
+        "class": ["Bard", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "10 feet",
         "components": "S, M (some makeup)",
@@ -104,7 +104,7 @@
       {
         "name": "guidance",
         "school": "Divination",
-        "class": ["cleric", "druid"],
+        "class": ["Cleric", "Druid"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S",
@@ -115,7 +115,7 @@
       {
         "name": "light",
         "school": "Evocation",
-        "class": ["bard", "cleric", "sorcerer", "wizard"],
+        "class": ["Bard", "Cleric", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, M (a firefly or phosphorescent moss)",
@@ -126,7 +126,7 @@
       {
         "name": "mage_hand",
         "school": "Conjuration",
-        "class": ["bard", "sorcerer", "warlock", "wizard"],
+        "class": ["Bard", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S",
@@ -137,7 +137,7 @@
       {
         "name": "mending",
         "school": "Transmutation",
-        "class": ["bard", "cleric", "druid", "sorcerer", "wizard"],
+        "class": ["Bard", "Cleric", "Druid", "Sorcerer", "Wizard"],
         "casting_time": "1 minute",
         "range": "Touch",
         "components": "V, S, M (two lodestones)",
@@ -148,7 +148,7 @@
       {
         "name": "message",
         "school": "Transmutation",
-        "class": ["bard", "druid", "sorcerer", "wizard"],
+        "class": ["Bard", "Druid", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "120 feet",
         "components": "S, M (a copper wire)",
@@ -159,7 +159,7 @@
       {
         "name": "mind_sliver",
         "school": "Enchantment ",
-        "class": ["sorcerer", "warlock", "wizard"],
+        "class": ["Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V",
@@ -170,7 +170,7 @@
       {
         "name": "minor_illusion",
         "school": "Illusion",
-        "class": ["bard", "sorcerer", "warlock", "wizard"],
+        "class": ["Bard", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "S, M (a bit of fleece)",
@@ -181,7 +181,7 @@
       {
         "name": "poison_spray",
         "school": "Necromancy ",
-        "class": ["druid", "sorcerer", "warlock", "wizard"],
+        "class": ["Druid", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S",
@@ -192,7 +192,7 @@
       {
         "name": "prestidigitation",
         "school": "Transmutation",
-        "class": ["bard", "sorcerer", "warlock", "wizard"],
+        "class": ["Bard", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "10 feet",
         "components": "V, S",
@@ -203,7 +203,7 @@
       {
         "name": "produce_flame",
         "school": "Conjuration",
-        "class": ["druid"],
+        "class": ["Druid"],
         "casting_time": "Bonus Action",
         "range": "Self",
         "components": "V, S",
@@ -214,7 +214,7 @@
       {
         "name": "ray_of_frost",
         "school": "Evocation",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V, S",
@@ -225,7 +225,7 @@
       {
         "name": "resistance",
         "school": "Abjuration",
-        "class": ["cleric", "druid"],
+        "class": ["Cleric", "Druid"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S",
@@ -236,7 +236,7 @@
       {
         "name": "sacred_flame",
         "school": "Evocation",
-        "class": ["cleric"],
+        "class": ["Cleric"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V, S",
@@ -247,7 +247,7 @@
       {
         "name": "shillelagh",
         "school": "Transmutation",
-        "class": ["druid"],
+        "class": ["Druid"],
         "casting_time": "Bonus Action",
         "range": "Self",
         "components": "V, S, M (mistletoe)",
@@ -258,7 +258,7 @@
       {
         "name": "shocking_grasp",
         "school": "Evocation",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S",
@@ -269,7 +269,7 @@
       {
         "name": "sorcerous_burst",
         "school": "Evocation",
-        "class": ["sorcerer"],
+        "class": ["Sorcerer"],
         "casting_time": "Action",
         "range": "120 feet",
         "components": "V, S",
@@ -280,7 +280,7 @@
       {
         "name": "spare_the_dying",
         "school": "Necromancy ",
-        "class": ["cleric", "druid"],
+        "class": ["Cleric", "Druid"],
         "casting_time": "Action",
         "range": "15 feet",
         "components": "V, S",
@@ -291,7 +291,7 @@
       {
         "name": "starry_wisp",
         "school": "Evocation",
-        "class": ["bard", "druid"],
+        "class": ["Bard", "Druid"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V, S",
@@ -302,7 +302,7 @@
       {
         "name": "thaumaturgy",
         "school": "Transmutation",
-        "class": ["cleric", ""],
+        "class": ["Cleric", ""],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V",
@@ -313,7 +313,7 @@
       {
         "name": "thorn_whip",
         "school": "Transmutation",
-        "class": ["druid"],
+        "class": ["Druid"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S, M (the stem of a thorny plant)",
@@ -324,7 +324,7 @@
       {
         "name": "thunderclap",
         "school": "Evocation",
-        "class": ["bard", "druid", "sorcerer", "warlock", "wizard"],
+        "class": ["Bard", "Druid", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "Self",
         "components": "S",
@@ -335,7 +335,7 @@
       {
         "name": "toll_the_dead",
         "school": "Necromancy",
-        "class": ["cleric", "warlock", "wizard"],
+        "class": ["Cleric", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V, S",
@@ -346,7 +346,7 @@
       {
         "name": "true_strike",
         "school": "Divination",
-        "class": ["bard", "sorcerer", "warlock", "wizard"],
+        "class": ["Bard", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "Self",
         "components": "S, M (a weapon with which you have proficiency and that is worth 1+ CP)",
@@ -362,7 +362,7 @@
       {
         "name": "alarm",
         "school": "Abjuration",
-        "class": ["ranger", "wizard"],
+        "class": ["Ranger", "Wizard"],
         "casting_time": "1 minute or Ritual",
         "range": "30 feet",
         "components": "V, S, M (a bell and silver wire)",
@@ -373,7 +373,7 @@
       {
         "name": "animal_friendship",
         "school": "Enchantment",
-        "class": ["bard", "druid", "ranger"],
+        "class": ["Bard", "Druid", "Ranger"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S, M (a morsel of food)",
@@ -384,7 +384,7 @@
       {
         "name": "armor_of_agathys",
         "school": "Abjuration ",
-        "class": ["warlock"],
+        "class": ["Warlock"],
         "casting_time": "Bonus Action",
         "range": "Self",
         "components": "V, S, M (a shard of blue glass)",
@@ -395,7 +395,7 @@
       {
         "name": "arms_of_hadar",
         "school": "Conjuration",
-        "class": ["warlock"],
+        "class": ["Warlock"],
         "casting_time": "Action",
         "range": "Self",
         "components": "V, S",
@@ -406,7 +406,7 @@
       {
         "name": "bane",
         "school": "Enchantment",
-        "class": ["bard", "cleric", "warlock"],
+        "class": ["Bard", "Cleric", "Warlock"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S, M (a drop of blood)",
@@ -417,7 +417,7 @@
       {
         "name": "bless",
         "school": "Enchantment",
-        "class": ["cleric", "paladin"],
+        "class": ["Cleric", "Paladin"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S, M (a Holy Symbol worth 5+ GP)",
@@ -428,7 +428,7 @@
       {
         "name": "burning_hands",
         "school": "Evocation",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "Self",
         "components": "V, S",
@@ -439,7 +439,7 @@
       {
         "name": "charm_person",
         "school": "Enchantment",
-        "class": ["bard", "druid", "sorcerer", "warlock", "wizard"],
+        "class": ["Bard", "Druid", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S",
@@ -450,7 +450,7 @@
       {
         "name": "chromatic_orb",
         "school": "Evocation",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "90 feet",
         "components": "V, S, M (a diamond worth 50+ GP)",
@@ -461,7 +461,7 @@
       {
         "name": "color_spray",
         "school": "Illusion",
-        "class": ["bard", "sorcerer", "wizard"],
+        "class": ["Bard", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "Self",
         "components": "V, S, M (a pinch of colorful sand)",
@@ -472,7 +472,7 @@
       {
         "name": "command",
         "school": "Enchantment",
-        "class": ["bard", "cleric", "paladin"],
+        "class": ["Bard", "Cleric", "Paladin"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V",
@@ -483,7 +483,7 @@
       {
         "name": "compelled_duel",
         "school": "Enchantment",
-        "class": ["paladin"],
+        "class": ["Paladin"],
         "casting_time": "Bonus Action",
         "range": "30 feet",
         "components": "V",
@@ -494,7 +494,7 @@
       {
         "name": "comprehend_languages",
         "school": "Divination",
-        "class": ["bard", "sorcerer", "warlock", "wizard"],
+        "class": ["Bard", "Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action or Ritual",
         "range": "Self",
         "components": "V, S, M (a pinch of soot and salt)",
@@ -505,7 +505,7 @@
       {
         "name": "create_or_destroy-water",
         "school": "Transmutation",
-        "class": ["cleric", "druid"],
+        "class": ["Cleric", "Druid"],
         "casting_time": "Action or Ritual",
         "range": "30 feet",
         "components": "V, S, M (a mix of water and sand)",
@@ -516,7 +516,7 @@
       {
         "name": "cure_wounds",
         "school": "Abjuration",
-        "class": ["bard", "cleric", "druid", "paladin", "ranger"],
+        "class": ["Bard", "Cleric", "Druid", "Paladin", "Ranger"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S",
@@ -527,7 +527,7 @@
       {
         "name": "detect_evil_and_good",
         "school": "Divination",
-        "class": ["cleric", "paladin"],
+        "class": ["Cleric", "Paladin"],
         "casting_time": "Action or Ritual",
         "range": "Self",
         "components": "V, S",
@@ -539,13 +539,13 @@
         "name": "detect_magic",
         "school": "Divination",
         "class": [
-          "bard",
-          "cleric",
-          "druid",
-          "ranger",
-          "sorcerer",
-          "warlock",
-          "wizard"
+          "Bard",
+          "Cleric",
+          "Druid",
+          "Ranger",
+          "Sorcerer",
+          "Warlock",
+          "Wizard"
         ],
         "casting_time": "Action or Ritual",
         "range": "Self",
@@ -557,7 +557,7 @@
       {
         "name": "detect_poison_and_disease",
         "school": "Divination",
-        "class": ["cleric", "druid", "paladin", "ranger"],
+        "class": ["Cleric", "Druid", "Paladin", "Ranger"],
         "casting_time": "Action or Ritual",
         "range": "Self",
         "components": "V, S, M (a yew leaf)",
@@ -568,7 +568,7 @@
       {
         "name": "disguise_self",
         "school": "Illusion",
-        "class": ["bard", "sorcerer", "wizard"],
+        "class": ["Bard", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "Self",
         "components": "V, S",
@@ -579,7 +579,7 @@
       {
         "name": "dissonant_whispers",
         "school": "Enchantment",
-        "class": ["bard"],
+        "class": ["Bard"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V",
@@ -590,7 +590,7 @@
       {
         "name": "divine_favor",
         "school": "Transmutation",
-        "class": ["paladin"],
+        "class": ["Paladin"],
         "casting_time": "Bonus Action",
         "range": "Self",
         "components": "V, S",
@@ -601,7 +601,7 @@
       {
         "name": "divine_smite",
         "school": "Evocation",
-        "class": ["paladin"],
+        "class": ["Paladin"],
         "casting_time": "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
         "range": "Self",
         "components": "V",
@@ -612,7 +612,7 @@
       {
         "name": "ensnaring_strike",
         "school": "Conjuration",
-        "class": ["ranger"],
+        "class": ["Ranger"],
         "casting_time": "Bonus Action, which you take immediately after hitting a creature with a weapon",
         "range": "Self",
         "components": "V",
@@ -623,7 +623,7 @@
       {
         "name": "entangle",
         "school": "Conjuration",
-        "class": ["druid", "ranger"],
+        "class": ["Druid", "Ranger"],
         "casting_time": "Action",
         "range": "90 feet",
         "components": "V, S",
@@ -634,7 +634,7 @@
       {
         "name": "expeditious_retreat",
         "school": "Transmutation",
-        "class": ["sorcerer", "warlock", "wizard"],
+        "class": ["Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Bonus Action",
         "range": "Self",
         "components": "V, S",
@@ -645,7 +645,7 @@
       {
         "name": "faerie_fire",
         "school": "Evocation",
-        "class": ["bard", "druid"],
+        "class": ["Bard", "Druid"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V",
@@ -656,7 +656,7 @@
       {
         "name": "false_life",
         "school": "Necromancy",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "Self",
         "components": "V, S, M (a drop of alcohol)",
@@ -667,7 +667,7 @@
       {
         "name": "feather_fall",
         "school": "Transmutation",
-        "class": ["bard", "sorcerer", "wizard"],
+        "class": ["Bard", "Sorcerer", "Wizard"],
         "casting_time": "Reaction, which you take when you or a creature you can see within 60 feet of you falls",
         "range": "60 feet",
         "components": "V, M (a small feather or piece of down)",
@@ -678,7 +678,7 @@
       {
         "name": "find_familiar",
         "school": "Conjuration",
-        "class": ["wizard"],
+        "class": ["Wizard"],
         "casting_time": "1 hour or Ritual",
         "range": "10 feet",
         "components": "V, S, M (burning incense worth 10+ GP, which the spell consumes)",
@@ -689,7 +689,7 @@
       {
         "name": "fog_cloud",
         "school": "Conjuration",
-        "class": ["druid", "ranger", "sorcerer", "wizard"],
+        "class": ["Druid", "Ranger", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "120 feet",
         "components": "V, S",
@@ -700,7 +700,7 @@
       {
         "name": "goodberry",
         "school": "Conjuration",
-        "class": ["druid", "ranger"],
+        "class": ["Druid", "Ranger"],
         "casting_time": "Action",
         "range": "Self",
         "components": "V, S, M (a sprig of mistletoe)",
@@ -711,7 +711,7 @@
       {
         "name": "grease",
         "school": "Conjuration",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V, S, M (a bit of pork rind or butter)",
@@ -722,7 +722,7 @@
       {
         "name": "buiding_bolt",
         "school": "Evocation",
-        "class": ["cleric"],
+        "class": ["Cleric"],
         "casting_time": "Action",
         "range": "120 feet",
         "components": "V, S",
@@ -733,7 +733,7 @@
       {
         "name": "hail_of_thorns",
         "school": "Conjuration",
-        "class": ["ranger"],
+        "class": ["Ranger"],
         "casting_time": "Bonus Action, which you take immediately after hitting a creature with a Ranged weapon",
         "range": "Self",
         "components": "V",
@@ -744,7 +744,7 @@
       {
         "name": "healing_word",
         "school": "Abjuration",
-        "class": ["bard", "cleric", "druid"],
+        "class": ["Bard", "Cleric", "Druid"],
         "casting_time": "Bonus Action",
         "range": "60 feet",
         "components": "V",
@@ -755,7 +755,7 @@
       {
         "name": "hellish_rebuke",
         "school": "Evocation",
-        "class": ["warlock"],
+        "class": ["Warlock"],
         "casting_time": "Reaction, which you take in response to taking damage from a creature that you can see within 60 feet of yourself",
         "range": "60 feet",
         "components": "V, S",
@@ -766,7 +766,7 @@
       {
         "name": "heroism",
         "school": "Enchantment",
-        "class": ["bard", "paladin"],
+        "class": ["Bard", "Paladin"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S",
@@ -777,7 +777,7 @@
       {
         "name": "hex",
         "school": "Enchantment",
-        "class": ["warlock"],
+        "class": ["Warlock"],
         "casting_time": "Bonus Action",
         "range": "90 feet",
         "components": "V, S, M (the petrified eye of a newt)",
@@ -788,7 +788,7 @@
       {
         "name": "hunter's_mark",
         "school": "Divination",
-        "class": ["ranger"],
+        "class": ["Ranger"],
         "casting_time": "Bonus Action",
         "range": "90 feet",
         "components": "V",
@@ -799,7 +799,7 @@
       {
         "name": "ice_knife",
         "school": "Conjuration",
-        "class": ["druid", "sorcerer", "wizard"],
+        "class": ["Druid", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "S, M (a drop of water or a piece of ice)",
@@ -810,7 +810,7 @@
       {
         "name": "identify",
         "school": "Divination",
-        "class": ["bard", "wizard"],
+        "class": ["Bard", "Wizard"],
         "casting_time": "1 minute or Ritual",
         "range": "Touch",
         "components": "V, S, M (a pearl worth 100+ GP)",
@@ -821,7 +821,7 @@
       {
         "name": "Illusory_script",
         "school": "Illusion",
-        "class": ["bard", "warlock", "wizard"],
+        "class": ["Bard", "Warlock", "Wizard"],
         "casting_time": "1 minute or Ritual",
         "range": "Touch",
         "components": "S, M (ink worth 10+ GP, which the spell consumes)",
@@ -832,7 +832,7 @@
       {
         "name": "inflict_wounds",
         "school": "Necromancy",
-        "class": ["cleric"],
+        "class": ["Cleric"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S",
@@ -843,7 +843,7 @@
       {
         "name": "jump",
         "school": "Transmutation",
-        "class": ["druid", "ranger", "sorcerer", "wizard"],
+        "class": ["Druid", "Ranger", "Sorcerer", "Wizard"],
         "casting_time": "Bonus Action",
         "range": "Touch",
         "components": "V, S, M (a grasshopper’s hind leg)",
@@ -854,7 +854,7 @@
       {
         "name": "longstrider",
         "school": "Transmutation",
-        "class": ["bard", "druid", "ranger", "wizard"],
+        "class": ["Bard", "Druid", "Ranger", "Wizard"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S, M (a pinch of dirt)",
@@ -865,7 +865,7 @@
       {
         "name": "mage_armor",
         "school": "Abjuration",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S, M (a piece of cured leather)",
@@ -876,7 +876,7 @@
       {
         "name": "magic_missile",
         "school": "Evocation",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "120 feet",
         "components": "V, S",
@@ -887,7 +887,7 @@
       {
         "name": "protection_from_evil_and_good",
         "school": "Abjuration",
-        "class": ["cleric", "druid", "paladin", "warlock", "wizard"],
+        "class": ["Cleric", "Druid", "Paladin", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "Touch",
         "components": "V, S, M (a flask of Holy Water worth 25+ GP, which the spell consumes)",
@@ -898,7 +898,7 @@
       {
         "name": "purify_food_and_drink",
         "school": "Transmutation",
-        "class": ["cleric", "druid", "paladin"],
+        "class": ["Cleric", "Druid", "Paladin"],
         "casting_time": "Action or Ritual",
         "range": "10 feet",
         "components": "V, S",
@@ -909,7 +909,7 @@
       {
         "name": "ray_of_sickness",
         "school": "Necromancy",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V, S",
@@ -920,7 +920,7 @@
       {
         "name": "sanctuary",
         "school": "Abjuration",
-        "class": ["cleric"],
+        "class": ["Cleric"],
         "casting_time": "Bonus Action",
         "range": "30 feet",
         "components": "V, S, M (a shard of glass from a mirror)",
@@ -931,7 +931,7 @@
       {
         "name": "searing_smite",
         "school": "Evocation",
-        "class": ["paladin"],
+        "class": ["Paladin"],
         "casting_time": "1 minute",
         "range": "Self",
         "components": "V",
@@ -942,7 +942,7 @@
       {
         "name": "shield",
         "school": "Abjuration",
-        "class": ["sorcerer", "wizard"],
+        "class": ["Sorcerer", "Wizard"],
         "casting_time": "Reaction, which you take when you are hit by an attack roll or targeted by the Magic Missile spell",
         "range": "Self",
         "components": "V, S",
@@ -953,7 +953,7 @@
       {
         "name": "shield_of_faith",
         "school": "Abjuration",
-        "class": ["cleric", "paladin"],
+        "class": ["Cleric", "Paladin"],
         "casting_time": "Bonus Action",
         "range": "60 feet",
         "components": "V, S, M (a prayer scroll)",
@@ -964,7 +964,7 @@
       {
         "name": "silent_image",
         "school": "Illusion",
-        "class": ["bard", "sorcerer", "wizard"],
+        "class": ["Bard", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V, S, M (a bit of fleece)",
@@ -975,7 +975,7 @@
       {
         "name": "speak_with_animals",
         "school": "Divination",
-        "class": ["bard", "druid", "ranger", "warlock"],
+        "class": ["Bard", "Druid", "Ranger", "Warlock"],
         "casting_time": "Action or Ritual",
         "range": "Self",
         "components": "V, S",
@@ -986,7 +986,7 @@
       {
         "name": "tasha's_hideous_laughter",
         "school": "Enchantment",
-        "class": ["bard", "warlock", "wizard"],
+        "class": ["Bard", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "30 feet",
         "components": "V, S, M (a tart and a feather)",
@@ -997,7 +997,7 @@
       {
         "name": "tenser's_floating_disk",
         "school": "Conjuration",
-        "class": ["wizard"],
+        "class": ["Wizard"],
         "casting_time": "Action or Ritual",
         "range": "30 feet",
         "components": "V, S, M (a drop of mercury)",
@@ -1008,7 +1008,7 @@
       {
         "name": "thunderous_smite",
         "school": "Evocation",
-        "class": ["paladin"],
+        "class": ["Paladin"],
         "casting_time": "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
         "range": "Self",
         "components": "V",
@@ -1019,7 +1019,7 @@
       {
         "name": "thunderwave",
         "school": "Evocation",
-        "class": ["bard", "druid", "sorcerer", "wizard"],
+        "class": ["Bard", "Druid", "Sorcerer", "Wizard"],
         "casting_time": "Action",
         "range": "Self",
         "components": "V, S",
@@ -1030,7 +1030,7 @@
       {
         "name": "unseen_servant",
         "school": "Conjuration",
-        "class": ["bard", "warlock", "wizard"],
+        "class": ["Bard", "Warlock", "Wizard"],
         "casting_time": "Action or Ritual",
         "range": "60 feet",
         "components": "V, S, M (a bit of string and of wood)",
@@ -1041,7 +1041,7 @@
       {
         "name": "witch_bolt",
         "school": "Evocation",
-        "class": ["sorcerer", "warlock", "wizard"],
+        "class": ["Sorcerer", "Warlock", "Wizard"],
         "casting_time": "Action",
         "range": "60 feet",
         "components": "V, S, M (a twig struck by lightning)",
@@ -1052,7 +1052,7 @@
       {
         "name": "wrathful_smite",
         "school": "Necromancy",
-        "class": ["paladin"],
+        "class": ["Paladin"],
         "casting_time": "Bonus Action, which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike",
         "range": "Self",
         "components": "V",

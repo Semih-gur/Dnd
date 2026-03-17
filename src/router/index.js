@@ -58,7 +58,7 @@ const routes = [
   },
 
   {
-    path: "/wiki/spells/:label",
+    path: "/wiki/spells/::className",
     name: "cSpells",
     component: CspellView,
   },
