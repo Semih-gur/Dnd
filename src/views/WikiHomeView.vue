@@ -39,7 +39,7 @@
       </v-col>
       <v-col cols="3">
         <v-card class="text-center"
-          ><v-card class="text-center">
+          ><v-card @click="goTo('items')" class="text-center">
             <v-card-title>Items</v-card-title>
             <v-img src="../assets/wikiPage/items.png"></v-img> </v-card
         ></v-card>

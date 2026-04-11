@@ -23,6 +23,10 @@ import RogueView from "@/views/Class/RogueView.vue";
 import SorcererView from "@/views/Class/SorcererView.vue";
 import WarlockView from "@/views/Class/WarlockView.vue";
 import WizardView from "@/views/Class/WizardView.vue";
+import ItemsView from "@/views/Items/ItemsView.vue";
+import WeaponsView from "@/views/Items/WeaponsView.vue";
+import ArmorsView from "@/views/Items/ArmorsView.vue";
+import PotionsView from "@/views/Items/PotionsView.vue";
 
 const routes = [
   {
@@ -149,6 +153,26 @@ const routes = [
     path: "/wiki/feats/:feat",
     name: "Feat",
     component: FeatDetailView,
+  },
+  {
+    path: "/wiki/items",
+    name: "Feat",
+    component: ItemsView,
+  },
+  {
+    path: "/wiki/items/weapons",
+    name: "Weapons",
+    component: WeaponsView,
+  },
+  {
+    path: "/wiki/items/armors",
+    name: "Armors",
+    component: ArmorsView,
+  },
+  {
+    path: "/wiki/items/potions",
+    name: "Potions",
+    component: PotionsView,
   },
 ];
 

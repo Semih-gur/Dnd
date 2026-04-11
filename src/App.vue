@@ -2,10 +2,9 @@
   <v-app class="d-flex align-items-center">
     <div class="mb-5">
       <v-app-bar elevation="3">
-        <v-spacer></v-spacer>
         <v-menu offset-y>
           <template v-slot:activator="{ props }">
-            <v-btn v-bind="props" text>
+            <v-btn v-bind="props" text style="margin-left: 20%">
               <v-icon>mdi-menu</v-icon>
             </v-btn>
           </template>
@@ -64,7 +63,6 @@
         <v-app-bar-title class="xs">
           {{ navTitle.replace("_", " ") }}
         </v-app-bar-title>
-        <v-spacer></v-spacer>
       </v-app-bar>
     </div>
     <router-view></router-view>

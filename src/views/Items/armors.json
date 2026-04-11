@@ -1,0 +1,126 @@
+[
+  {
+    "type": "light_armor",
+    "items": [
+      {
+        "name": "Padded",
+        "ac": "11 + Dex modifier",
+        "strength": "—",
+        "stealth": "Disadvantage",
+        "weight": "8 lb.",
+        "cost": "5 GP"
+      },
+      {
+        "name": "Leather",
+        "ac": "11 + Dex modifier",
+        "strength": "—",
+        "stealth": "—",
+        "weight": "10 lb.",
+        "cost": "10 GP"
+      },
+      {
+        "name": "Studded Leather",
+        "ac": "12 + Dex modifier",
+        "strength": "—",
+        "stealth": "—",
+        "weight": "13 lb.",
+        "cost": "45 GP"
+      }
+    ]
+  },
+  {
+    "type": "medium_armor",
+    "items": [
+      {
+        "name": "Hide",
+        "ac": "12 + Dex modifier (max 2)",
+        "strength": "—",
+        "stealth": "—",
+        "weight": "12 lb.",
+        "cost": "10 GP"
+      },
+      {
+        "name": "Chain Shirt",
+        "ac": "13 + Dex modifier (max 2)",
+        "strength": "—",
+        "stealth": "—",
+        "weight": "20 lb.",
+        "cost": "50 GP"
+      },
+      {
+        "name": "Scale Mail",
+        "ac": "14 + Dex modifier (max 2)",
+        "strength": "—",
+        "stealth": "Disadvantage",
+        "weight": "45 lb.",
+        "cost": "50 GP"
+      },
+      {
+        "name": "Breastplate",
+        "ac": "14 + Dex modifier (max 2)",
+        "strength": "—",
+        "stealth": "—",
+        "weight": "20 lb.",
+        "cost": "400 GP"
+      },
+      {
+        "name": "Half Plate",
+        "ac": "15 + Dex modifier (max 2)",
+        "strength": "—",
+        "stealth": "Disadvantage",
+        "weight": "40 lb.",
+        "cost": "750 GP"
+      }
+    ]
+  },
+  {
+    "type": "heavy_armor",
+    "items": [
+      {
+        "name": "Ring Mail",
+        "ac": "14",
+        "strength": "—",
+        "stealth": "Disadvantage",
+        "weight": "40 lb.",
+        "cost": "30 GP"
+      },
+      {
+        "name": "Chain Mail",
+        "ac": "16",
+        "strength": "Str 13",
+        "stealth": "Disadvantage",
+        "weight": "55 lb.",
+        "cost": "75 GP"
+      },
+      {
+        "name": "Splint",
+        "ac": "17",
+        "strength": "Str 15",
+        "stealth": "Disadvantage",
+        "weight": "60 lb.",
+        "cost": "200 GP"
+      },
+      {
+        "name": "Plate",
+        "ac": "18",
+        "strength": "Str 15",
+        "stealth": "Disadvantage",
+        "weight": "65 lb.",
+        "cost": "1,500 GP"
+      }
+    ]
+  },
+  {
+    "type": "shields",
+    "items": [
+      {
+        "name": "Shield",
+        "ac": "+2",
+        "strength": "—",
+        "stealth": "—",
+        "weight": "6 lb.",
+        "cost": "10 GP"
+      }
+    ]
+  }
+]
