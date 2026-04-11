@@ -1,0 +1,11 @@
+Class card hover fix.
+
+bread crumbs. clickable.
+
+tips for action and reaction.
+
+Background cards. Make it pop up.
+
+List tasarım.(Sentences shoudl be shorter span)
+
+Tablo effect button instead.
