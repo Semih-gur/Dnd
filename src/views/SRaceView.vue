@@ -1,37 +1,80 @@
 <template>
-  <div class="center mt-16">
-    <v-card v-for="race in compRace.race" :key="race.name">
-      <v-card-text>
-        <span style="white-space: pre-wrap" v-html="race.desc"></span>
-        <br /><br />
-        <h2>{{ race.name }} Traits</h2>
-      </v-card-text>
-      <v-card-text>
-        <b>Type:</b> {{ race.type }} <br />
-        <b>Size:</b> {{ race.size }} <br />
-        <b>Speed:</b> {{ race.speed }}
-      </v-card-text>
-      <v-card-text v-for="trait in race.feats" :key="trait.name">
-        <b>{{ trait.name }}.</b> {{ trait.desc }}
-
-        <div v-if="trait.table" class="mt-3">
-          <v-table density="compact">
-            <thead>
-              <tr>
-                <th v-for="(val, key) in trait.table[0][0]" :key="key">
-                  {{ key.charAt(0).toUpperCase() + key.slice(1) }}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(row, index) in trait.table[0]" :key="index">
-                <td v-for="(val, key) in row" :key="key">{{ val }}</td>
-              </tr>
-            </tbody>
-          </v-table>
+  <div class="race-page" v-if="compRace !== 'nothing'">
+    <div v-for="race in compRace.race" :key="race.name">
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <span class="hero-eyebrow">Species</span>
+            <h1 class="hero-title">{{ race.name }}</h1>
+            <div class="hero-badges">
+              <span class="badge">{{ race.type }}</span>
+              <span class="badge">{{ race.size }}</span>
+              <span class="badge badge-purple">Speed {{ race.speed }}</span>
+            </div>
+          </div>
         </div>
-      </v-card-text>
-    </v-card>
+      </div>
+
+      <div class="page-content">
+        <!-- Flavor text -->
+        <div class="section">
+          <h2 class="section-title">Overview</h2>
+          <p
+            class="section-text"
+            style="white-space: pre-wrap"
+            v-html="race.desc"
+          ></p>
+        </div>
+
+        <!-- Traits -->
+        <div class="section">
+          <h2 class="section-title">{{ race.name }} Traits</h2>
+          <div class="traits-list">
+            <div
+              v-for="trait in race.feats"
+              :key="trait.name"
+              class="trait-block"
+            >
+              <div class="trait-header">
+                <span class="trait-name">{{ trait.name }}</span>
+              </div>
+              <p class="trait-desc">{{ trait.desc }}</p>
+
+              <!-- Table if present -->
+              <div v-if="trait.table" class="table-wrap">
+                <table class="trait-table">
+                  <thead>
+                    <tr>
+                      <th v-for="(val, key) in trait.table[0][0]" :key="key">
+                        {{ key.charAt(0).toUpperCase() + key.slice(1) }}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(row, index) in trait.table[0]" :key="index">
+                      <td v-for="(val, key) in row" :key="key">{{ val }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Not found -->
+  <div class="race-page" v-else>
+    <div class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Species</span>
+          <h1 class="hero-title">Species Not Found</h1>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -59,7 +102,7 @@ export default {
               name: "Aasimar",
               desc: "Aasimar are mortals who carry a spark of the Upper Planes within their souls. Whether descended from an angelic being or infused with celestial power, they can fan that spark to bring light, healing, and heavenly fury. Aasimar can arise among any population of mortals. They resemble their parents but live for up to 160 years and have features that hint at their celestial heritage, such as metallic freckles, luminous eyes, a halo, or skin tones of silver, opalescent green, or coppery red.",
               type: "Humanoid",
-              size: "Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), chosen when you select this species",
+              size: "Medium or Small",
               speed: "30 feet",
               feats: [
                 {
@@ -105,7 +148,7 @@ export default {
               name: "Dragonborn",
               desc: "The ancestors of Dragonborn hatched from the eggs of chromatic and metallic dragons. One story holds that these eggs were blessed by the dragon gods Bahamut and Tiamat, who wanted to populate the multiverse with people who embodied the virtues of dragonkind. Dragonborn walk proudly through a world that greets them with fearful incomprehension.",
               type: "Humanoid",
-              size: "Medium (about 5–7 feet tall)",
+              size: "Medium",
               speed: "30 feet",
               feats: [
                 {
@@ -153,7 +196,7 @@ export default {
               name: "Dwarf",
               desc: "Dwarves are defined by their ancestral connections to mountains and the deep earth. When Moradin the Soulforger created Dwarves, he worked with stone and precious metals, and that origin still shows in their durability and resilience. Dwarves tend to be stocky, standing between 4 and 5 feet tall, with broad builds that make them exceptionally tough.",
               type: "Humanoid",
-              size: "Medium (about 4–5 feet tall)",
+              size: "Medium",
               speed: "30 feet",
               feats: [
                 {
@@ -183,7 +226,7 @@ export default {
               name: "Elf",
               desc: "Created by the god Corellon, the first Elves could change their forms at will. They lost this ability after the betrayal of Lolth, and were cursed to have fixed forms. Elves have pointed ears and lack facial and body hair. They live for around 750 years and don't sleep, instead entering a trancelike meditative state. Three lineages exist: Drow, who typically dwell in the Underdark; High Elves, infused with Feywild magic; and Wood Elves, who carry the magic of primeval forests.",
               type: "Humanoid",
-              size: "Medium (about 5–6 feet tall)",
+              size: "Medium",
               speed: "30 feet",
               feats: [
                 {
@@ -242,7 +285,7 @@ export default {
               name: "Gnome",
               desc: "Gnomes are magical folk created by gods of invention, illusions, and life underground. The earliest Gnomes were fashioned from the magic of gemstones buried in the earth, and their connection to that magic endures. Gnomes tend to be short and wiry, standing between 3 and 4 feet tall, and are inquisitive beings with a love of tinkering and discovery.",
               type: "Humanoid",
-              size: "Small (about 3–4 feet tall)",
+              size: "Small",
               speed: "30 feet",
               feats: [
                 {
@@ -255,11 +298,11 @@ export default {
                 },
                 {
                   name: "Gnomish Lineage: Forest Gnome",
-                  desc: "You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell.",
+                  desc: "You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
                 },
                 {
                   name: "Gnomish Lineage: Rock Gnome",
-                  desc: "You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. The device produces one chosen effect from Prestidigitation whenever a creature uses a Bonus Action to activate it. You can have three such devices in existence at a time; each falls apart 8 hours after creation or when you dismantle it as a Utilize action.",
+                  desc: "You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box.",
                 },
               ],
             },
@@ -272,36 +315,36 @@ export default {
               name: "Goliath",
               desc: "Goliaths are distantly descended from giants and have inherited a fraction of their size and strength. Stones, sky, and wind are as much a part of Goliaths as flesh and blood. Their resilience and competitive nature make them natural adventurers. They stand between 7 and 8 feet tall and are generally regarded as imposing.",
               type: "Humanoid",
-              size: "Medium (about 7–8 feet tall)",
+              size: "Medium",
               speed: "35 feet",
               feats: [
                 {
-                  name: "Giant Ancestry: Cloud's Jaunt (Cloud Giant)",
+                  name: "Giant Ancestry: Cloud's Jaunt",
                   desc: "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
                 },
                 {
-                  name: "Giant Ancestry: Fire's Burn (Fire Giant)",
+                  name: "Giant Ancestry: Fire's Burn",
                   desc: "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
                 },
                 {
-                  name: "Giant Ancestry: Frost's Chill (Frost Giant)",
-                  desc: "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+                  name: "Giant Ancestry: Frost's Chill",
+                  desc: "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.",
                 },
                 {
-                  name: "Giant Ancestry: Hill's Tumble (Hill Giant)",
-                  desc: "When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+                  name: "Giant Ancestry: Hill's Tumble",
+                  desc: "When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition.",
                 },
                 {
-                  name: "Giant Ancestry: Stone's Endurance (Stone Giant)",
-                  desc: "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+                  name: "Giant Ancestry: Stone's Endurance",
+                  desc: "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.",
                 },
                 {
-                  name: "Giant Ancestry: Storm's Thunder (Storm Giant)",
-                  desc: "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+                  name: "Giant Ancestry: Storm's Thunder",
+                  desc: "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.",
                 },
                 {
                   name: "Large Form",
-                  desc: "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can't use it again until you finish a Long Rest.",
+                  desc: "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required).",
                 },
                 {
                   name: "Powerful Build",
@@ -316,9 +359,9 @@ export default {
           race: [
             {
               name: "Halfling",
-              desc: "Halflings are small, nimble folk who cherish the comforts of home but are pulled by wanderlust and a love of adventure. Practical and resourceful, they have a knack for slipping out of danger and finding their way into good fortune. They stand about 2 to 3 feet tall and are often mistaken for human children, though their hairy feet and cheerful demeanor quickly set them apart.",
+              desc: "Halflings are small, nimble folk who cherish the comforts of home but are pulled by wanderlust and a love of adventure. Practical and resourceful, they have a knack for slipping out of danger and finding their way into good fortune.",
               type: "Humanoid",
-              size: "Small (about 2–3 feet tall)",
+              size: "Small",
               speed: "30 feet",
               feats: [
                 {
@@ -346,9 +389,9 @@ export default {
           race: [
             {
               name: "Human",
-              desc: "Humans are the most adaptable and widespread of all species in the multiverse. Their ambition, curiosity, and restless drive have allowed them to build great empires and spread to every corner of the known world. Unlike other species, Humans have no single homeland and no singular defining trait — they are united by their sheer diversity and their hunger to grow, explore, and achieve.",
+              desc: "Humans are the most adaptable and widespread of all species in the multiverse. Their ambition, curiosity, and restless drive have allowed them to build great empires and spread to every corner of the known world.",
               type: "Humanoid",
-              size: "Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), chosen when you select this species",
+              size: "Medium or Small",
               speed: "30 feet",
               feats: [
                 {
@@ -372,14 +415,14 @@ export default {
           race: [
             {
               name: "Orc",
-              desc: "Orcs trace their creation to Gruumsh, the mighty god of slaughter and storms, who poured fury and hunger into their hearts. Even those Orcs who turn away from Gruumsh's cruelty carry his gifts: a relentless will to push forward and a body that refuses to surrender. Orcs are powerfully built humanoids standing over 6 feet tall, with prominent tusks and deep-set eyes.",
+              desc: "Orcs trace their creation to Gruumsh, the mighty god of slaughter and storms, who poured fury and hunger into their hearts. Even those Orcs who turn away from Gruumsh's cruelty carry his gifts: a relentless will to push forward and a body that refuses to surrender.",
               type: "Humanoid",
-              size: "Medium (about 6–7 feet tall)",
+              size: "Medium",
               speed: "30 feet",
               feats: [
                 {
                   name: "Adrenaline Rush",
-                  desc: "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus. You can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest.",
+                  desc: "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.",
                 },
                 {
                   name: "Darkvision",
@@ -400,7 +443,7 @@ export default {
               name: "Tiefling",
               desc: "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling's fiendish traits can be a source of pride or shame — and sometimes both. Three fiendish legacies exist: the Abyssal legacy tied to demons and chaos; the Chthonic legacy linked to yugoloths and night hags; and the Infernal legacy descending from devils.",
               type: "Humanoid",
-              size: "Medium (about 4–7 feet tall) or Small (about 3–4 feet tall), chosen when you select this species",
+              size: "Medium or Small",
               speed: "30 feet",
               feats: [
                 {
@@ -409,7 +452,7 @@ export default {
                 },
                 {
                   name: "Fiendish Legacy",
-                  desc: "You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy. When you reach character levels 3 and 5, you learn a higher-level spell as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability when you finish a Long Rest. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select the legacy).",
+                  desc: "You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy. When you reach character levels 3 and 5, you learn a higher-level spell as shown on the table.",
                   table: [
                     [
                       {
@@ -451,7 +494,193 @@ export default {
 </script>
 
 <style scoped>
-.center {
-  width: 50%;
+/* ── Page ───────────────────────────────────────── */
+.race-page {
+  min-height: 100vh;
+  background: #0e0e1a;
+  color: #e2e8f0;
+}
+
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(
+    135deg,
+    rgba(192, 132, 252, 0.15) 0%,
+    rgba(14, 14, 26, 0.95) 100%
+  );
+  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 20% 50%,
+      rgba(192, 132, 252, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(192, 132, 252, 0.05) 0%,
+      transparent 40%
+    );
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 2.5rem;
+}
+.hero-content {
+  max-width: 700px;
+}
+.hero-eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #c084fc;
+  margin-bottom: 0.4rem;
+}
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.75rem;
+  line-height: 1.1;
+}
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.badge-purple {
+  background: rgba(192, 132, 252, 0.12);
+  color: #c084fc;
+  border-color: rgba(192, 132, 252, 0.3);
+}
+
+/* ── Page content ───────────────────────────────── */
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+/* ── Section ────────────────────────────────────── */
+.section {
+  margin-bottom: 2.5rem;
+}
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c084fc;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+}
+.section-text {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── Traits ─────────────────────────────────────── */
+.traits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.trait-block {
+  background: #12121f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.trait-header {
+  margin-bottom: 0.5rem;
+}
+.trait-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+.trait-desc {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Tables ─────────────────────────────────────── */
+.table-wrap {
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  overflow-x: auto;
+}
+.trait-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.trait-table thead tr {
+  background: rgba(192, 132, 252, 0.1);
+}
+.trait-table th {
+  padding: 0.6rem 1rem;
+  text-align: left;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c084fc;
+  white-space: nowrap;
+}
+.trait-table td {
+  padding: 0.55rem 1rem;
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  vertical-align: top;
+}
+.trait-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.trait-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ── Mobile ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero {
+    height: 180px;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .hero-overlay {
+    padding: 1.25rem 1.5rem;
+  }
 }
 </style>

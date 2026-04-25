@@ -1,40 +1,32 @@
 <template>
-  <div class="center mt-15">
-    <v-row justify="center" row-height="5">
-      <v-col
-        class="ml-15"
-        v-for="(species, index) in species"
-        :key="species.id"
-        xl="2"
-        lg="3"
-        md="4"
+  <div class="species-page">
+    <h1 class="page-title">Choose Your Species</h1>
+    <div class="species-grid">
+      <div
+        v-for="s in species"
+        :key="s.id"
+        class="species-card"
+        @click="goTo(s.label)"
       >
-        <v-card
-          @click="goTo(species.label)"
-          height="300"
-          width="300"
-          class="text-center"
-        >
-          <v-card-title
-            @mouseover="mouseOver(index)"
-            @mouseout="mouseOver(index)"
-          >
-            {{ species.label }}</v-card-title
-          >
+        <div class="card-image-wrap">
           <v-img
-            @mouseover="mouseOver(index)"
-            @mouseout="mouseOver(index)"
             src="../assets/image.png"
+            :alt="s.label"
+            class="card-img"
+            cover
           ></v-img>
-          <v-expand-transition>
-            <v-card class="v-card--reveal" v-if="species.active">
-              <v-card-text>{{ species.desc }}</v-card-text>
-              <v-card-text>{{ species.bonus }}</v-card-text>
-            </v-card>
-          </v-expand-transition>
-        </v-card>
-      </v-col>
-    </v-row>
+          <div class="card-gradient-overlay"></div>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">{{ s.label }}</h2>
+          <p class="card-desc">{{ s.desc }}</p>
+          <div class="card-bonus">
+            <span class="bonus-label">Racial Bonus</span>
+            <span class="bonus-value">{{ s.bonus }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -43,17 +35,11 @@ import router from "@/router";
 
 export default {
   methods: {
-    mouseOver(index) {
-      this.species[index].active = !this.species[index].active;
-    },
-
     goTo(label) {
       router.push("/wiki/species/" + label.replace(" ", "_").toLowerCase());
     },
   },
-
   data: () => ({
-    reveal: false,
     species: [
       {
         id: 0,
@@ -120,13 +106,134 @@ export default {
 };
 </script>
 
-<style>
-.v-card--reveal {
-  pointer-events: none;
-  bottom: 0;
-  opacity: 1 !important;
-  position: absolute;
+<style scoped>
+.species-page {
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.species-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 1280px) {
+  .species-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .species-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .species-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Card */
+.species-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #12121f;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.species-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Image */
+.card-image-wrap :deep(.v-img) {
   width: 100%;
-  height: 50%;
+  height: 100%;
+  transition: transform 0.35s ease;
+}
+.species-card:hover .card-image-wrap :deep(.v-img) {
+  transform: scale(1.05);
+}
+
+/* Gradient bleed */
+.card-gradient-overlay {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 55%;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(18, 18, 31, 0.5) 40%,
+    rgba(18, 18, 31, 0.92) 75%,
+    #12121f 100%
+  );
+}
+
+/* Card body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0 1rem 1rem;
+  margin-top: -3.5rem;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: #f1f5f9;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+.card-desc {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+  margin: 0;
+  flex: 1;
+}
+
+/* Bonus row — mirrors the "Primary Stat" row on class cards */
+.card-bonus {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 0.6rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.bonus-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+}
+.bonus-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #c084fc;
 }
 </style>

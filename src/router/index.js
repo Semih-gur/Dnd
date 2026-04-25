@@ -13,7 +13,6 @@ import CspellView from "@/views/SpellView/CSpellView.vue";
 import BackgroundsView from "@/views/BackgroundsView.vue";
 import BackgrView from "@/views/BackgrView.vue";
 import FeatsView from "@/views/FeatsView.vue";
-import FeatDetailView from "@/views/FeatDetailView.vue";
 import DruidView from "@/views/Class/DruidView.vue";
 import FighterView from "@/views/Class/FighterView.vue";
 import MonkView from "@/views/Class/MonkView.vue";
@@ -27,6 +26,7 @@ import ItemsView from "@/views/Items/ItemsView.vue";
 import WeaponsView from "@/views/Items/WeaponsView.vue";
 import ArmorsView from "@/views/Items/ArmorsView.vue";
 import PotionsView from "@/views/Items/PotionsView.vue";
+import SpellDesc from "@/views/SpellView/SpellDesc.vue";
 
 const routes = [
   {
@@ -49,41 +49,21 @@ const routes = [
     name: "SRace",
     component: SRaceView,
   },
-
   {
     path: "/wiki/classes",
     name: "Classes",
     component: ClassesView,
   },
   {
-    path: "/wiki/spells",
-    name: "Spells",
-    component: SpellsView,
-  },
-
-  {
-    path: "/wiki/spells/::className",
-    name: "cSpells",
-    component: CspellView,
-  },
-  {
-    path: "/wiki/backgrounds/",
-    name: "backgrounds",
-    component: BackgroundsView,
-  },
-
-  {
     path: "/wiki/classes/barbarian",
     name: "Barbarian",
     component: BarbarianView,
   },
-
   {
     path: "/wiki/classes/bard",
     name: "Bard",
     component: BardView,
   },
-
   {
     path: "/wiki/classes/cleric",
     name: "Cleric",
@@ -140,23 +120,38 @@ const routes = [
     component: SubclassView,
   },
   {
+    path: "/wiki/spells",
+    name: "Spells",
+    component: SpellsView,
+  },
+  {
+    path: "/wiki/spells/:className",
+    name: "cSpells",
+    component: CspellView,
+  },
+  {
+    path: "/wiki/spells/:className/:spellName",
+    name: "Spell",
+    component: SpellDesc,
+  },
+  {
+    path: "/wiki/backgrounds",
+    name: "backgrounds",
+    component: BackgroundsView,
+  },
+  {
     path: "/wiki/backgrounds/:background",
     name: "Background",
     component: BackgrView,
   },
   {
-    path: "/wiki/feats/",
+    path: "/wiki/feats",
     name: "Feats",
     component: FeatsView,
   },
   {
-    path: "/wiki/feats/:feat",
-    name: "Feat",
-    component: FeatDetailView,
-  },
-  {
     path: "/wiki/items",
-    name: "Feat",
+    name: "Items",
     component: ItemsView,
   },
   {

@@ -1,26 +1,33 @@
 <template>
-  <div class="center mt-16">
-    <v-row justify="center" row-height="5">
-      <v-col
-        class="ml-15"
-        v-for="cspell in classes"
-        :key="cspell.id"
-        cols="2"
-        xl="2"
-        lg="3"
-        md="4"
-      >
-        <v-card
+  <div class="spells-page">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="hero-title">Spells</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="spells-grid">
+        <div
+          v-for="cspell in classes"
+          :key="cspell.id"
+          class="spell-card"
           @click="goTo(cspell.label)"
-          height="300"
-          width="300"
-          class="text-center"
         >
-          <v-card-title> {{ cspell.label }}</v-card-title>
-          <v-img :src="cspell.art" alt="Class Art"></v-img>
-        </v-card>
-      </v-col>
-    </v-row>
+          <div class="card-image-wrap">
+            <img :src="cspell.art" :alt="cspell.label" class="card-img" />
+            <div class="card-gradient-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">{{ cspell.label }}</h2>
+            <p class="card-desc">{{ cspell.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,73 +37,58 @@ import router from "@/router";
 export default {
   methods: {
     goTo(label) {
-      router.push("/wiki/spells/" + label.replace(" ", "_").toLowerCase());
+      router.push("/wiki/spells/" + label.replace(/\s+/g, "_").toLowerCase());
     },
   },
-
   data: () => ({
     classes: [
       {
         id: 1,
         label: "Bard",
-        desc: "Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",
+        desc: "Magical secrets and bardic inspiration drawn from the music of creation",
         art: require("@/assets/classes/bard.png"),
       },
       {
         id: 2,
         label: "Cleric",
-        desc: "Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",
-        bonus: "+2 Str",
+        desc: "Divine magic channelled from the power of the gods and sacred domains",
         art: require("@/assets/classes/cleric.png"),
       },
       {
         id: 3,
         label: "Druid",
-        desc: "Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",
-        bonus: "+2 Str",
+        desc: "Nature magic wielding moonlight, plant growth, fire and lightning",
         art: require("@/assets/classes/druid.png"),
       },
-      {
-        id: 5,
-        label: "Monk",
-        desc: "Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",
-        bonus: "+2 Str",
-        art: require("@/assets/classes/monk.png"),
-      },
+
       {
         id: 6,
         label: "Paladin",
-        desc: "Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",
-        bonus: "+2 Str",
+        desc: "Sacred oaths and divine smites empowered by holy conviction",
         art: require("@/assets/classes/paladin.png"),
       },
       {
         id: 7,
         label: "Ranger",
-        desc: "Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",
-        bonus: "+2 Str",
+        desc: "Nature spells and primal magic to combat threats at civilisation's edge",
         art: require("@/assets/classes/ranger.png"),
       },
-
       {
         id: 9,
         label: "Sorcerer",
-        desc: "Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",
-        bonus: "+2 Str",
+        desc: "Raw arcane power drawn from an innate magical gift or bloodline",
         art: require("@/assets/classes/sorcerer.png"),
       },
       {
         id: 10,
         label: "Warlock",
-        desc: "Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",
-        bonus: "+2 Str",
+        desc: "Eldritch magic derived from a pact with an extra-planar entity",
         art: require("@/assets/classes/warlock.png"),
       },
       {
         id: 11,
         label: "Wizard",
-        desc: "Cupidatat proident ut Lorem mollit incididunt consectetur cupidatat",
-        bonus: "+2 Str",
+        desc: "Scholarly arcane magic capable of manipulating the structures of reality",
         art: require("@/assets/classes/wizard.png"),
       },
     ],
@@ -104,4 +96,190 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+/* ── Page ───────────────────────────────────────── */
+.spells-page {
+  min-height: 100vh;
+  background: #0e0e1a;
+  color: #e2e8f0;
+}
+
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(
+    135deg,
+    rgba(192, 132, 252, 0.15) 0%,
+    rgba(14, 14, 26, 0.95) 100%
+  );
+  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 20% 50%,
+      rgba(192, 132, 252, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(192, 132, 252, 0.05) 0%,
+      transparent 40%
+    );
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 2.5rem;
+}
+.hero-content {
+  max-width: 700px;
+}
+.hero-eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #c084fc;
+  margin-bottom: 0.4rem;
+}
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.4rem;
+  line-height: 1.1;
+}
+.hero-subtitle {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* ── Page content ───────────────────────────────── */
+.page-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Grid ───────────────────────────────────────── */
+.spells-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 1280px) {
+  .spells-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .spells-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .spells-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Card ───────────────────────────────────────── */
+.spell-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #12121f;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.spell-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Image */
+.card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: visible;
+  flex-shrink: 0;
+}
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.spell-card:hover .card-img {
+  transform: scale(1.05);
+}
+
+/* Gradient bleed */
+.card-gradient-overlay {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 55%;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(18, 18, 31, 0.5) 40%,
+    rgba(18, 18, 31, 0.92) 75%,
+    #12121f 100%
+  );
+}
+
+/* Card body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0 1rem 1rem;
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: #f1f5f9;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+.card-desc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Mobile ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero {
+    height: 180px;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .hero-overlay {
+    padding: 1.25rem 1.5rem;
+  }
+}
+</style>

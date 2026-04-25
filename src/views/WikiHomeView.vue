@@ -1,50 +1,23 @@
 <template>
-  <div class="center mt-16">
-    <v-row justify="center" row-height="5">
-      <v-col cols="3">
-        <v-card @click="goTo('classes')" class="text-center">
-          <v-card-title>Classes</v-card-title>
-          <v-img src="../assets/wikiPage/class.png"></v-img>
-        </v-card>
-      </v-col>
-      <v-col cols="3">
-        <v-card class="text-center"
-          ><v-card @click="goTo('species')" class="text-center">
-            <v-card-title>Species</v-card-title>
-            <v-img src="../assets/wikiPage/spells.png"></v-img> </v-card
-        ></v-card>
-      </v-col>
-      <v-col cols="3">
-        <v-card class="text-center"
-          ><v-card @click="goTo('spells')" class="text-center">
-            <v-card-title>Spells</v-card-title>
-            <v-img src="../assets/wikiPage/spells.png"></v-img> </v-card
-        ></v-card>
-      </v-col>
-    </v-row>
-    <v-row justify="center">
-      <v-col cols="3">
-        <v-card class="text-center"
-          ><v-card @click="goTo('backgrounds')" class="text-center">
-            <v-card-title>Backgrounds</v-card-title>
-            <v-img src="../assets/wikiPage/backgrounds.png"></v-img> </v-card
-        ></v-card>
-      </v-col>
-      <v-col cols="3">
-        <v-card class="text-center"
-          ><v-card @click="goTo('feats')" class="text-center">
-            <v-card-title>Feats</v-card-title>
-            <v-img src="../assets/wikiPage/quill.png"></v-img> </v-card
-        ></v-card>
-      </v-col>
-      <v-col cols="3">
-        <v-card class="text-center"
-          ><v-card @click="goTo('items')" class="text-center">
-            <v-card-title>Items</v-card-title>
-            <v-img src="../assets/wikiPage/items.png"></v-img> </v-card
-        ></v-card>
-      </v-col>
-    </v-row>
+  <div class="wiki-home">
+    <h1 class="page-title">D&D 2024 Wiki</h1>
+    <div class="wiki-grid">
+      <div
+        v-for="section in sections"
+        :key="section.path"
+        class="wiki-card"
+        @click="goTo(section.path)"
+      >
+        <div class="card-image-wrap">
+          <img :src="section.art" :alt="section.label" class="card-img" />
+          <div class="card-gradient-overlay"></div>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">{{ section.label }}</h2>
+          <p class="card-desc">{{ section.desc }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -57,12 +30,160 @@ export default {
       router.push("wiki/" + page);
     },
   },
+  data: () => ({
+    sections: [
+      {
+        path: "classes",
+        label: "Classes",
+        desc: "Choose your path — from raging Barbarians to arcane Wizards",
+        art: require("../assets/wikiPage/class.png"),
+      },
+      {
+        path: "species",
+        label: "Species",
+        desc: "Explore the races and peoples that inhabit the world",
+        art: require("../assets/wikiPage/spells.png"),
+      },
+      {
+        path: "spells",
+        label: "Spells",
+        desc: "Browse the full catalogue of magic spells and cantrips",
+        art: require("../assets/wikiPage/spells.png"),
+      },
+      {
+        path: "backgrounds",
+        label: "Backgrounds",
+        desc: "Define your character's history and where they came from",
+        art: require("../assets/wikiPage/backgrounds.png"),
+      },
+      {
+        path: "feats",
+        label: "Feats",
+        desc: "Customize and strengthen your character with powerful abilities",
+        art: require("../assets/wikiPage/quill.png"),
+      },
+      {
+        path: "items",
+        label: "Items",
+        desc: "Weapons, armor, potions and all manner of adventuring gear",
+        art: require("../assets/wikiPage/items.png"),
+      },
+    ],
+  }),
 };
 </script>
 
-<style>
-.center {
-  width: 50%;
-  margin: auto;
+<style scoped>
+.wiki-home {
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+/* 3 cols on desktop, 2 on tablet, 1 on mobile */
+.wiki-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .wiki-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .wiki-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Card */
+.wiki-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #12121f;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wiki-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Image */
+.card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: visible;
+  flex-shrink: 0;
+}
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.wiki-card:hover .card-img {
+  transform: scale(1.05);
+}
+
+/* Gradient bleed */
+.card-gradient-overlay {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 55%;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(18, 18, 31, 0.5) 40%,
+    rgba(18, 18, 31, 0.92) 75%,
+    #12121f 100%
+  );
+}
+
+/* Card body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0 1rem 1rem;
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #f1f5f9;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+.card-desc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin: 0;
 }
 </style>
