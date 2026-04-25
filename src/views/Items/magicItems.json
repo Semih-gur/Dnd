@@ -1,0 +1,1502 @@
+[
+  {
+    "type": "common",
+    "items": [
+      {
+        "name": "Armor of Gleaming",
+        "type": "Armor",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "This armor never gets dirty. No matter what muck or grime it encounters, the armor remains perfectly clean at all times."
+      },
+      {
+        "name": "Bead of Nourishment",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "This bead dissolves in your mouth and provides as much nourishment as one day of rations."
+      },
+      {
+        "name": "Bead of Refreshment",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "This bead dissolves in liquid, turning up to 1 pint into fresh, cold drinking water."
+      },
+      {
+        "name": "Boots of False Tracks",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "These boots allow you to leave tracks of a different creature of similar size."
+      },
+      {
+        "name": "Candle of the Deep",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "This candle burns without being consumed and functions underwater."
+      },
+      {
+        "name": "Cast-Off Armor",
+        "type": "Armor",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "You can remove this armor as an action."
+      },
+      {
+        "name": "Cloak of Billowing",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "As a bonus action, you can cause this cloak to billow dramatically."
+      },
+      {
+        "name": "Cloak of Many Fashions",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "You can change the cloak’s color, style, and apparent quality."
+      },
+      {
+        "name": "Clockwork Amulet",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "Once per day, you can forgo rolling a d20 and instead treat it as a 10."
+      },
+      {
+        "name": "Clothes of Mending",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "This outfit repairs itself of tears and damage over time."
+      },
+      {
+        "name": "Dark Shard Amulet",
+        "type": "Wondrous Item",
+        "attuned": "Yes (Warlock)",
+        "price": "100 GP",
+        "description": "You can attempt to cast a cantrip from any class spell list."
+      },
+      {
+        "name": "Dread Helm",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "This helm makes your eyes glow red."
+      },
+      {
+        "name": "Ear Horn of Hearing",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "This horn negates disadvantage on hearing-based Perception checks."
+      },
+      {
+        "name": "Enduring Spellbook",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "This spellbook is resistant to fire, water, and damage."
+      },
+      {
+        "name": "Ersatz Eye",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "100 GP",
+        "description": "This artificial eye replaces a missing one and grants normal vision."
+      },
+      {
+        "name": "Hat of Vermin",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "You can pull harmless vermin from this hat."
+      },
+      {
+        "name": "Hat of Wizardry",
+        "type": "Wondrous Item",
+        "attuned": "Yes (Wizard)",
+        "price": "100 GP",
+        "description": "You can attempt to cast wizard cantrips you don’t know."
+      },
+      {
+        "name": "Heward’s Handy Spice Pouch",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "This pouch produces seasoning for food."
+      },
+      {
+        "name": "Horn of Silent Alarm",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "This horn alerts designated creatures silently."
+      },
+      {
+        "name": "Instrument of Illusions",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "While playing, you can create minor illusion effects."
+      },
+      {
+        "name": "Instrument of Scribing",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "You can write magical musical notation."
+      },
+      {
+        "name": "Lock of Trickery",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "This lock is harder to pick and can confuse thieves."
+      },
+      {
+        "name": "Moon-Touched Sword",
+        "type": "Weapon",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "This sword sheds moonlight in darkness."
+      },
+      {
+        "name": "Mystery Key",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "This key has a small chance to unlock any lock."
+      },
+      {
+        "name": "Orb of Direction",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "This orb always points north."
+      },
+      {
+        "name": "Orb of Time",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "This orb tells the time of day."
+      },
+      {
+        "name": "Perfume of Bewitching",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "This perfume grants advantage on Charisma checks briefly."
+      },
+      {
+        "name": "Pipe of Smoke Monsters",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "You can create smoke shapes resembling creatures."
+      },
+      {
+        "name": "Pole of Angling",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "This pole transforms into a fishing rod."
+      },
+      {
+        "name": "Pole of Collapsing",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "This pole collapses into a small size."
+      },
+      {
+        "name": "Potion of Climbing",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "You gain a climbing speed for 1 hour."
+      },
+      {
+        "name": "Potion of Healing",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "You regain 2d4 + 2 hit points when you drink this potion."
+      },
+      {
+        "name": "Spell Scroll (Cantrip)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "25 GP",
+        "description": "Contains a single cantrip spell."
+      },
+      {
+        "name": "Spell Scroll (1st Level)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "Contains a single 1st-level spell."
+      },
+      {
+        "name": "Ruby of the War Mage",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "100 GP",
+        "description": "You can use a weapon as a spellcasting focus."
+      },
+      {
+        "name": "Shield of Expression",
+        "type": "Armor (Shield)",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "You can change the face displayed on the shield."
+      },
+      {
+        "name": "Staff of Adornment",
+        "type": "Staff",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "You can attach small objects to this staff."
+      },
+      {
+        "name": "Staff of Birdcalls",
+        "type": "Staff",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "This staff produces bird sounds."
+      },
+      {
+        "name": "Staff of Flowers",
+        "type": "Staff",
+        "attuned": "-",
+        "price": "75 GP",
+        "description": "You can cause flowers to sprout nearby."
+      },
+      {
+        "name": "Talking Doll",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "100 GP",
+        "description": "This doll can speak recorded phrases."
+      },
+      {
+        "name": "Tankard of Sobriety",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "50 GP",
+        "description": "You cannot become intoxicated while using this tankard."
+      }
+    ]
+  },
+  {
+    "type": "uncommon",
+    "items": [
+      {
+        "name": "Alchemy Jug",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "500 GP",
+        "description": "This ceramic jug can produce various liquids such as water, beer, honey, or acid each day."
+      },
+      {
+        "name": "Amulet of Proof Against Detection and Location",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "750 GP",
+        "description": "You are hidden from divination magic and cannot be targeted by such effects."
+      },
+      {
+        "name": "Bag of Holding",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "400 GP",
+        "description": "This bag has an interior space larger than its outside dimensions."
+      },
+      {
+        "name": "Boots of Elvenkind",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "400 GP",
+        "description": "Your steps make no sound, granting advantage on Dexterity (Stealth) checks relying on movement."
+      },
+      {
+        "name": "Boots of Striding and Springing",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "600 GP",
+        "description": "Your walking speed becomes 30 feet and your jump distance is tripled."
+      },
+      {
+        "name": "Bracers of Archery",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "500 GP",
+        "description": "You gain proficiency with longbows and shortbows and a bonus to damage rolls."
+      },
+      {
+        "name": "Broom of Flying",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "800 GP",
+        "description": "This broom grants a flying speed when ridden."
+      },
+      {
+        "name": "Cap of Water Breathing",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "400 GP",
+        "description": "You can breathe underwater while wearing this cap."
+      },
+      {
+        "name": "Cloak of Elvenkind",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "600 GP",
+        "description": "You gain advantage on Stealth checks and disadvantage on attempts to see you."
+      },
+      {
+        "name": "Cloak of Protection",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "700 GP",
+        "description": "You gain +1 bonus to AC and saving throws."
+      },
+      {
+        "name": "Decanter of Endless Water",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "500 GP",
+        "description": "This decanter produces fresh or salt water on command."
+      },
+      {
+        "name": "Driftglobe",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "300 GP",
+        "description": "This orb sheds light or can cast the daylight spell."
+      },
+      {
+        "name": "Eyes of Minute Seeing",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "400 GP",
+        "description": "You can see extremely fine details and have advantage on Investigation checks."
+      },
+      {
+        "name": "Gauntlets of Ogre Power",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "800 GP",
+        "description": "Your Strength score becomes 19 while wearing these gauntlets."
+      },
+      {
+        "name": "Gloves of Missile Snaring",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "600 GP",
+        "description": "You can reduce damage from ranged weapon attacks and potentially catch the projectile."
+      },
+      {
+        "name": "Goggles of Night",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "400 GP",
+        "description": "You gain darkvision out to 60 feet."
+      },
+      {
+        "name": "Hat of Disguise",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "600 GP",
+        "description": "You can cast disguise self at will."
+      },
+      {
+        "name": "Helm of Comprehending Languages",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "500 GP",
+        "description": "You can understand spoken and written languages."
+      },
+      {
+        "name": "Immovable Rod",
+        "type": "Rod",
+        "attuned": "-",
+        "price": "600 GP",
+        "description": "This rod can be fixed in place in midair and hold significant weight."
+      },
+      {
+        "name": "Javelin of Lightning",
+        "type": "Weapon",
+        "attuned": "-",
+        "price": "700 GP",
+        "description": "This javelin transforms into a bolt of lightning when thrown."
+      },
+      {
+        "name": "Lantern of Revealing",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "500 GP",
+        "description": "Invisible creatures and objects are visible in the lantern’s light."
+      },
+      {
+        "name": "Mithral Armor",
+        "type": "Armor",
+        "attuned": "-",
+        "price": "800 GP",
+        "description": "This armor is lighter and does not impose disadvantage on Stealth checks."
+      },
+      {
+        "name": "Pearl of Power",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "800 GP",
+        "description": "You can regain an expended spell slot of up to 3rd level."
+      },
+      {
+        "name": "Periapt of Wound Closure",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "700 GP",
+        "description": "You stabilize automatically when dying and regain more hit points when spending Hit Dice."
+      },
+      {
+        "name": "Quiver of Ehlonna",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "600 GP",
+        "description": "This quiver can store multiple types of ammunition and weapons."
+      },
+      {
+        "name": "Ring of Jumping",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "500 GP",
+        "description": "You can cast jump at will."
+      },
+      {
+        "name": "Ring of Mind Shielding",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "800 GP",
+        "description": "Your thoughts cannot be read, and you are protected from lie detection."
+      },
+      {
+        "name": "Slippers of Spider Climbing",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "700 GP",
+        "description": "You can move along walls and ceilings as if under the spider climb spell."
+      },
+      {
+        "name": "Wand of Magic Missiles",
+        "type": "Wand",
+        "attuned": "Yes",
+        "price": "700 GP",
+        "description": "This wand can cast magic missile with charges."
+      },
+      {
+        "name": "Weapon +1",
+        "type": "Weapon",
+        "attuned": "-",
+        "price": "800 GP",
+        "description": "You gain a +1 bonus to attack and damage rolls made with this magic weapon."
+      },
+      {
+        "name": "Potion of Greater Healing",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "150 GP",
+        "description": "You regain 4d4 + 4 hit points when you drink this potion."
+      },
+      {
+        "name": "Potion of Fire Breath",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "200 GP",
+        "description": "You can exhale fire as an action for a short duration."
+      },
+      {
+        "name": "Potion of Hill Giant Strength",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "200 GP",
+        "description": "Your Strength becomes 21 for 1 hour."
+      },
+      {
+        "name": "Spell Scroll (2nd Level)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "150 GP",
+        "description": "Contains a single 2nd-level spell."
+      },
+      {
+        "name": "Spell Scroll (3rd Level)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "300 GP",
+        "description": "Contains a single 3rd-level spell."
+      }
+    ]
+  },
+  {
+    "type": "rare",
+    "items": [
+      {
+        "name": "Amulet of Health",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "3000 GP",
+        "description": "Your Constitution score becomes 19 while wearing this amulet."
+      },
+      {
+        "name": "Armor +2",
+        "type": "Armor",
+        "attuned": "-",
+        "price": "4000 GP",
+        "description": "You gain a +2 bonus to AC while wearing this armor."
+      },
+      {
+        "name": "Belt of Hill Giant Strength",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "Your Strength score becomes 21 while wearing this belt."
+      },
+      {
+        "name": "Boots of Levitation",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "3000 GP",
+        "description": "You can cast levitate on yourself at will."
+      },
+      {
+        "name": "Bracers of Defense",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "3500 GP",
+        "description": "You gain +2 bonus to AC if you are not wearing armor or using a shield."
+      },
+      {
+        "name": "Cape of the Mountebank",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "3000 GP",
+        "description": "You can cast dimension door once per day."
+      },
+      {
+        "name": "Chime of Opening",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "3000 GP",
+        "description": "This chime can open locked or magically sealed objects."
+      },
+      {
+        "name": "Cloak of Displacement",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "Attacks against you have disadvantage until you are hit."
+      },
+      {
+        "name": "Cube of Force",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "5000 GP",
+        "description": "Creates a barrier that can block different types of matter or energy."
+      },
+      {
+        "name": "Daern’s Instant Fortress",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "5000 GP",
+        "description": "This small cube transforms into a large stone fortress."
+      },
+      {
+        "name": "Dagger of Venom",
+        "type": "Weapon",
+        "attuned": "-",
+        "price": "3000 GP",
+        "description": "You can coat the blade with poison, dealing extra poison damage."
+      },
+      {
+        "name": "Dimensional Shackles",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "3000 GP",
+        "description": "Restrains creatures and prevents teleportation or planar travel."
+      },
+      {
+        "name": "Dragon Slayer",
+        "type": "Weapon",
+        "attuned": "-",
+        "price": "4000 GP",
+        "description": "Deals extra damage to dragons."
+      },
+      {
+        "name": "Elven Chain",
+        "type": "Armor",
+        "attuned": "-",
+        "price": "3500 GP",
+        "description": "This armor can be worn without proficiency and grants good AC."
+      },
+      {
+        "name": "Flame Tongue",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "This weapon deals extra fire damage when ignited."
+      },
+      {
+        "name": "Gem of Seeing",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "Allows you to see invisible objects and illusions."
+      },
+      {
+        "name": "Giant Slayer",
+        "type": "Weapon",
+        "attuned": "-",
+        "price": "4000 GP",
+        "description": "Deals extra damage to giants."
+      },
+      {
+        "name": "Helm of Teleportation",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "5000 GP",
+        "description": "Allows casting teleport using charges."
+      },
+      {
+        "name": "Horn of Blasting",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "3000 GP",
+        "description": "Emits a destructive blast of thunder damage."
+      },
+      {
+        "name": "Mantle of Spell Resistance",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "5000 GP",
+        "description": "You have advantage on saving throws against spells."
+      },
+      {
+        "name": "Necklace of Fireballs",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "3500 GP",
+        "description": "Beads can be thrown to cast fireball."
+      },
+      {
+        "name": "Periapt of Proof Against Poison",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "3000 GP",
+        "description": "You are immune to poison damage and the poisoned condition."
+      },
+      {
+        "name": "Ring of Evasion",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "Lets you succeed on Dexterity saves instead of failing."
+      },
+      {
+        "name": "Ring of Feather Falling",
+        "type": "Ring",
+        "attuned": "-",
+        "price": "2500 GP",
+        "description": "You fall slowly and take no falling damage."
+      },
+      {
+        "name": "Ring of Protection",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "You gain +1 to AC and saving throws."
+      },
+      {
+        "name": "Ring of Spell Storing",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "5000 GP",
+        "description": "Stores spells that can be cast later."
+      },
+      {
+        "name": "Robe of Eyes",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "Grants vision in all directions and ability to see invisible creatures."
+      },
+      {
+        "name": "Rod of Rulership",
+        "type": "Rod",
+        "attuned": "-",
+        "price": "4000 GP",
+        "description": "You can charm creatures in a large radius."
+      },
+      {
+        "name": "Shield +2",
+        "type": "Armor (Shield)",
+        "attuned": "-",
+        "price": "4000 GP",
+        "description": "You gain a +2 bonus to AC with this shield."
+      },
+      {
+        "name": "Staff of Healing",
+        "type": "Staff",
+        "attuned": "Yes",
+        "price": "5000 GP",
+        "description": "Allows casting healing spells using charges."
+      },
+      {
+        "name": "Staff of Swarming Insects",
+        "type": "Staff",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "Creates a swarm of insects that obscures vision and harms enemies."
+      },
+      {
+        "name": "Sword of Life Stealing",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "Deals extra necrotic damage on critical hits."
+      },
+      {
+        "name": "Wand of Binding",
+        "type": "Wand",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "Restrains creatures with magical energy."
+      },
+      {
+        "name": "Wand of Enemy Detection",
+        "type": "Wand",
+        "attuned": "Yes",
+        "price": "3500 GP",
+        "description": "Detects hostile creatures nearby."
+      },
+      {
+        "name": "Wand of Fear",
+        "type": "Wand",
+        "attuned": "Yes",
+        "price": "4000 GP",
+        "description": "Emits a cone of fear."
+      },
+      {
+        "name": "Wand of Fireballs",
+        "type": "Wand",
+        "attuned": "Yes",
+        "price": "5000 GP",
+        "description": "Casts fireball using charges."
+      },
+      {
+        "name": "Wand of Lightning Bolts",
+        "type": "Wand",
+        "attuned": "Yes",
+        "price": "5000 GP",
+        "description": "Casts lightning bolt using charges."
+      },
+      {
+        "name": "Weapon +2",
+        "type": "Weapon",
+        "attuned": "-",
+        "price": "4000 GP",
+        "description": "You gain a +2 bonus to attack and damage rolls."
+      },
+      {
+        "name": "Potion of Superior Healing",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "500 GP",
+        "description": "You regain 8d4 + 8 hit points when you drink this potion."
+      },
+      {
+        "name": "Potion of Clairvoyance",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "400 GP",
+        "description": "You gain the effect of the clairvoyance spell."
+      },
+      {
+        "name": "Potion of Diminution",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "400 GP",
+        "description": "You shrink as if affected by reduce."
+      },
+      {
+        "name": "Potion of Gaseous Form",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "400 GP",
+        "description": "You transform into mist."
+      },
+      {
+        "name": "Potion of Frost Giant Strength",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "600 GP",
+        "description": "Your Strength becomes 23 for 1 hour."
+      },
+      {
+        "name": "Potion of Heroism",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "400 GP",
+        "description": "Grants temporary hit points and bless effect."
+      },
+      {
+        "name": "Potion of Invulnerability",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "800 GP",
+        "description": "You gain resistance to all damage for 1 minute."
+      },
+      {
+        "name": "Spell Scroll (4th Level)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "500 GP",
+        "description": "Contains a single 4th-level spell."
+      },
+      {
+        "name": "Spell Scroll (5th Level)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "1000 GP",
+        "description": "Contains a single 5th-level spell."
+      }
+    ]
+  },
+  {
+    "type": "very rare",
+    "items": [
+      {
+        "name": "Animated Shield",
+        "type": "Armor (Shield)",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "This shield floats beside you and grants its bonus without needing to be held."
+      },
+      {
+        "name": "Armor +3",
+        "type": "Armor",
+        "attuned": "-",
+        "price": "25000 GP",
+        "description": "You gain a +3 bonus to AC while wearing this armor."
+      },
+      {
+        "name": "Belt of Fire Giant Strength",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Your Strength score becomes 25 while wearing this belt."
+      },
+      {
+        "name": "Belt of Frost Giant Strength",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Your Strength score becomes 23 while wearing this belt."
+      },
+      {
+        "name": "Belt of Stone Giant Strength",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Your Strength score becomes 23 while wearing this belt."
+      },
+      {
+        "name": "Carpet of Flying",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "20000 GP",
+        "description": "This carpet can fly and carry creatures through the air."
+      },
+      {
+        "name": "Cloak of Arachnida",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "18000 GP",
+        "description": "Grants resistance to poison, climbing ability, and web-related powers."
+      },
+      {
+        "name": "Crystal Ball",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Allows casting scrying to observe distant locations."
+      },
+      {
+        "name": "Dancing Sword",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "This sword can fight on its own when released."
+      },
+      {
+        "name": "Defender",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "25000 GP",
+        "description": "You can transfer bonus from attack to AC."
+      },
+      {
+        "name": "Dragon Scale Mail",
+        "type": "Armor",
+        "attuned": "-",
+        "price": "20000 GP",
+        "description": "Grants resistance to a dragon’s damage type and bonuses."
+      },
+      {
+        "name": "Dwarven Plate",
+        "type": "Armor",
+        "attuned": "-",
+        "price": "22000 GP",
+        "description": "Grants bonus AC and reduces forced movement."
+      },
+      {
+        "name": "Frost Brand",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Deals extra cold damage and grants fire resistance."
+      },
+      {
+        "name": "Helm of Brilliance",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Contains gems that can cast powerful spells."
+      },
+      {
+        "name": "Manual of Bodily Health",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "25000 GP",
+        "description": "Increases your Constitution score permanently."
+      },
+      {
+        "name": "Manual of Gainful Exercise",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "25000 GP",
+        "description": "Increases your Strength score permanently."
+      },
+      {
+        "name": "Manual of Quickness of Action",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "25000 GP",
+        "description": "Increases your Dexterity score permanently."
+      },
+      {
+        "name": "Mirror of Life Trapping",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "20000 GP",
+        "description": "Can trap creatures inside extradimensional cells."
+      },
+      {
+        "name": "Nine Lives Stealer",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "22000 GP",
+        "description": "Can instantly slay creatures under certain conditions."
+      },
+      {
+        "name": "Oathbow",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "22000 GP",
+        "description": "Deals extra damage to a sworn enemy."
+      },
+      {
+        "name": "Rod of Absorption",
+        "type": "Rod",
+        "attuned": "Yes",
+        "price": "25000 GP",
+        "description": "Absorbs spells and converts them into spell slots."
+      },
+      {
+        "name": "Rod of Alertness",
+        "type": "Rod",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Grants bonuses to perception and initiative."
+      },
+      {
+        "name": "Rod of Security",
+        "type": "Rod",
+        "attuned": "-",
+        "price": "22000 GP",
+        "description": "Creates a safe extradimensional space."
+      },
+      {
+        "name": "Scimitar of Speed",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Allows an extra attack as a bonus action."
+      },
+      {
+        "name": "Spellguard Shield",
+        "type": "Armor (Shield)",
+        "attuned": "Yes",
+        "price": "22000 GP",
+        "description": "Grants advantage on saving throws against spells."
+      },
+      {
+        "name": "Staff of Fire",
+        "type": "Staff",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Allows casting powerful fire spells."
+      },
+      {
+        "name": "Staff of Frost",
+        "type": "Staff",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Allows casting powerful cold spells."
+      },
+      {
+        "name": "Staff of Power",
+        "type": "Staff",
+        "attuned": "Yes",
+        "price": "25000 GP",
+        "description": "Grants bonuses to AC, saves, and powerful spellcasting."
+      },
+      {
+        "name": "Staff of Striking",
+        "type": "Staff",
+        "attuned": "Yes",
+        "price": "20000 GP",
+        "description": "Deals extra force damage on hits."
+      },
+      {
+        "name": "Staff of Thunder and Lightning",
+        "type": "Staff",
+        "attuned": "Yes",
+        "price": "22000 GP",
+        "description": "Controls thunder and lightning effects."
+      },
+      {
+        "name": "Sword of Sharpness",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "22000 GP",
+        "description": "Deals extra damage and can sever limbs."
+      },
+      {
+        "name": "Tome of Clear Thought",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "25000 GP",
+        "description": "Increases your Intelligence score permanently."
+      },
+      {
+        "name": "Tome of Leadership and Influence",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "25000 GP",
+        "description": "Increases your Charisma score permanently."
+      },
+      {
+        "name": "Tome of Understanding",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "25000 GP",
+        "description": "Increases your Wisdom score permanently."
+      },
+      {
+        "name": "Weapon +3",
+        "type": "Weapon",
+        "attuned": "-",
+        "price": "25000 GP",
+        "description": "You gain a +3 bonus to attack and damage rolls."
+      },
+      {
+        "name": "Potion of Supreme Healing",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "1500 GP",
+        "description": "You regain 10d4 + 20 hit points when you drink this potion."
+      },
+      {
+        "name": "Potion of Invisibility",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "1200 GP",
+        "description": "You become invisible for 1 hour or until you attack or cast a spell."
+      },
+      {
+        "name": "Potion of Speed",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "1200 GP",
+        "description": "You gain the effects of the haste spell for 1 minute."
+      },
+      {
+        "name": "Potion of Flying",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "1200 GP",
+        "description": "You gain a flying speed for 1 hour."
+      },
+      {
+        "name": "Potion of Cloud Giant Strength",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "1500 GP",
+        "description": "Your Strength becomes 27 for 1 hour."
+      },
+      {
+        "name": "Spell Scroll (6th Level)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "2000 GP",
+        "description": "Contains a single 6th-level spell."
+      },
+      {
+        "name": "Spell Scroll (7th Level)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "3000 GP",
+        "description": "Contains a single 7th-level spell."
+      },
+      {
+        "name": "Spell Scroll (8th Level)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "4000 GP",
+        "description": "Contains a single 8th-level spell."
+      }
+    ]
+  },
+  {
+    "type": "legendary",
+    "items": [
+      {
+        "name": "Apparatus of Kwalish",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "100000 GP",
+        "description": "A mechanical lobster-like vehicle that can walk, swim, and perform various actions underwater."
+      },
+      {
+        "name": "Armor +3 (Plate)",
+        "type": "Armor",
+        "attuned": "-",
+        "price": "100000 GP",
+        "description": "You gain a +3 bonus to AC while wearing this armor."
+      },
+      {
+        "name": "Belt of Cloud Giant Strength",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "90000 GP",
+        "description": "Your Strength score becomes 27 while wearing this belt."
+      },
+      {
+        "name": "Belt of Storm Giant Strength",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Your Strength score becomes 29 while wearing this belt."
+      },
+      {
+        "name": "Blackrazor",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A sentient greatsword that devours souls and grants power to its wielder."
+      },
+      {
+        "name": "Cloak of Invisibility",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "95000 GP",
+        "description": "You can turn invisible for extended periods."
+      },
+      {
+        "name": "Crystal Ball (True Seeing)",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Allows scrying and grants true seeing."
+      },
+      {
+        "name": "Defender (Legendary)",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "You can transfer its bonus to AC, up to +3."
+      },
+      {
+        "name": "Efreeti Bottle",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "90000 GP",
+        "description": "Contains an efreeti that may grant wishes or attack."
+      },
+      {
+        "name": "Hammer of Thunderbolts",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "A powerful hammer that can slay giants and increase Strength."
+      },
+      {
+        "name": "Holy Avenger",
+        "type": "Weapon",
+        "attuned": "Yes (Paladin)",
+        "price": "100000 GP",
+        "description": "A sacred weapon that deals extra radiant damage and grants aura protection."
+      },
+      {
+        "name": "Iron Flask",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "90000 GP",
+        "description": "Can trap creatures inside and release them later."
+      },
+      {
+        "name": "Luck Blade",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Grants luck bonuses and may contain wishes."
+      },
+      {
+        "name": "Plate Armor of Etherealness",
+        "type": "Armor",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Allows the wearer to enter the Ethereal Plane."
+      },
+      {
+        "name": "Ring of Djinni Summoning",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "95000 GP",
+        "description": "Summons a djinni ally."
+      },
+      {
+        "name": "Ring of Elemental Command (Air)",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Grants powers over air elementals and wind."
+      },
+      {
+        "name": "Ring of Elemental Command (Earth)",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Grants powers over earth elementals."
+      },
+      {
+        "name": "Ring of Elemental Command (Fire)",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Grants powers over fire elementals."
+      },
+      {
+        "name": "Ring of Elemental Command (Water)",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Grants powers over water elementals."
+      },
+      {
+        "name": "Ring of Invisibility",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "95000 GP",
+        "description": "Allows you to become invisible at will."
+      },
+      {
+        "name": "Ring of Spell Turning",
+        "type": "Ring",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Reflects spells back at their caster."
+      },
+      {
+        "name": "Robe of the Archmagi",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Grants powerful defensive and spellcasting bonuses."
+      },
+      {
+        "name": "Rod of Lordly Might",
+        "type": "Rod",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "A versatile rod with multiple powerful functions."
+      },
+      {
+        "name": "Sphere of Annihilation",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "Artifact",
+        "description": "A sphere that disintegrates anything it touches."
+      },
+      {
+        "name": "Staff of the Magi",
+        "type": "Staff",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "One of the most powerful staffs, granting numerous spells and defenses."
+      },
+      {
+        "name": "Vorpal Sword",
+        "type": "Weapon",
+        "attuned": "Yes",
+        "price": "100000 GP",
+        "description": "Can decapitate enemies on a critical hit."
+      },
+      {
+        "name": "Well of Many Worlds",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "90000 GP",
+        "description": "Creates portals to other planes of existence."
+      },
+      {
+        "name": "Potion of Storm Giant Strength",
+        "type": "Potion",
+        "attuned": "-",
+        "price": "5000 GP",
+        "description": "Your Strength becomes 29 for 1 hour."
+      },
+      {
+        "name": "Spell Scroll (9th Level)",
+        "type": "Scroll",
+        "attuned": "-",
+        "price": "10000 GP",
+        "description": "Contains a single 9th-level spell."
+      }
+    ]
+  },
+  {
+    "type": "artifact",
+    "items": [
+      {
+        "name": "Axe of the Dwarvish Lords",
+        "type": "Weapon (Greataxe)",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A legendary dwarven relic granting immense power, divine protection, and mastery over craftsmanship and battle."
+      },
+      {
+        "name": "Book of Exalted Deeds",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A holy tome that grants powerful divine magic and inspires righteousness, but rejects evil users."
+      },
+      {
+        "name": "Book of Vile Darkness",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A corrupting tome of forbidden knowledge that grants dark powers and tempts its reader toward evil."
+      },
+      {
+        "name": "Crystal Sphere (Spelljammer Artifact)",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "Artifact",
+        "description": "A massive crystal sphere enclosing entire worlds and enabling planar or cosmic travel via Spelljamming ships."
+      },
+      {
+        "name": "Eye of Vecna",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A sinister artifact granting forbidden necromantic and arcane powers, but corrupting its wielder."
+      },
+      {
+        "name": "Hand of Vecna",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A severed hand that fuses with the user, granting immense dark magical power at a great cost."
+      },
+      {
+        "name": "Horseshoes of a Zephyr Steed",
+        "type": "Wondrous Item",
+        "attuned": "-",
+        "price": "Artifact",
+        "description": "Transforms a horse into a near-mythical steed capable of incredible speed and flight-like movement."
+      },
+      {
+        "name": "Orb of Dragonkind",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "Allows control and communication with dragons, but risks domination by draconic will."
+      },
+      {
+        "name": "Regalia of Might (Complete Set)",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A set of crown, scepter, and orb granting rulership-level power, protection, and command authority."
+      },
+      {
+        "name": "Rod of Seven Parts",
+        "type": "Rod",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A fragmented rod that becomes more powerful as its parts are reunited, culminating in reality-shaping abilities."
+      },
+      {
+        "name": "Scepter of the Sorcerer-Kings",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A desert-born artifact granting control over elemental magic and rulership influence."
+      },
+      {
+        "name": "Shadowfell Shard",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A fragment of the Shadowfell that grants necrotic power and manipulation of fear and darkness."
+      },
+      {
+        "name": "Talisman of Pure Good",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A divine talisman that unleashes radiant destruction against evil creatures."
+      },
+      {
+        "name": "Talisman of Ultimate Evil",
+        "type": "Wondrous Item",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "A dark talisman that can open portals to destructive forces and corrupt reality."
+      },
+      {
+        "name": "The Axe of the Dwarvish Lords (Awakened State)",
+        "type": "Weapon (Greataxe)",
+        "attuned": "Yes",
+        "price": "Artifact",
+        "description": "In its awakened state, the axe grants near-divine strength and reshapes stone and metal at will."
+      }
+    ]
+  }
+]

@@ -649,7 +649,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: #ef4444;
 }
 .hero-title {
   font-size: 3rem;
@@ -683,8 +683,8 @@ export default {
 }
 .badge-purple {
   background: rgba(192, 132, 252, 0.12);
-  color: #c084fc;
-  border: 1px solid #c084fc;
+  color: #ef4444;
+  border: 1px solid #ef4444;
 }
 
 /* ── Page content ───────────────────────────────── */
@@ -730,7 +730,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #c084fc;
+  color: #ef4444;
 }
 .trait-value {
   font-size: 0.9rem;
@@ -760,7 +760,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #c084fc;
+  color: #ef4444;
   margin-bottom: 0.75rem;
 }
 .becoming-list {
@@ -796,7 +796,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: #ef4444;
   white-space: nowrap;
 }
 .features-table td {
@@ -811,7 +811,7 @@ export default {
   border-bottom: none;
 }
 .row-highlight td {
-  color: #c084fc;
+  color: #ef4444;
 }
 .level-cell {
   font-weight: 700;
@@ -857,7 +857,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: #ef4444;
   background: rgba(192, 132, 252, 0.12);
   border: 1px solid rgba(192, 132, 252, 0.3);
   padding: 3px 10px;
@@ -935,7 +935,7 @@ export default {
 }
 .subclass-icon {
   font-size: 1.5rem !important;
-  color: #c084fc;
+  color: #ef4444;
 }
 
 /* ── Mobile ─────────────────────────────────────── */

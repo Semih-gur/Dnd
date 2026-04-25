@@ -1,650 +1,151 @@
 <template>
-  <div class="mt-15">
-    <div class="bg-grey-darken-4 center pa-5">
-      <h2 class="mb-5">Core Rogue Traits</h2>
-
-      <div class="mb-10">
-        <v-row>
-          <v-col cols="2"><b>Primary Ability</b></v-col>
-          <v-col class="mr-10">Dexterity</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Hit Point Die</b></v-col>
-          <v-col class="mr-10">D8 per Rogue level</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Saving Throw Proficiencies</b></v-col>
-          <v-col class="mr-10">Dexterity and Intelligence</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Skill Proficiencies</b></v-col>
-          <v-col class="mr-10"
-            >Choose 4: Acrobatics, Athletics, Deception, Insight, Intimidation,
-            Investigation, Perception, Persuasion, Sleight of Hand, or
-            Stealth</v-col
-          >
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Weapon Proficiencies</b></v-col>
-          <v-col class="mr-10"
-            >Simple weapons and Martial weapons that have the Finesse or Light
-            property</v-col
-          >
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Tool Proficiencies</b></v-col>
-          <v-col class="mr-10">Thieves' Tools</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Armor Training</b></v-col>
-          <v-col class="mr-10">Light armor</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Starting Equipment</b></v-col>
-          <v-col class="mr-10"
-            >Choose A or B: (A) Leather Armor, 2 Daggers, Shortsword, Shortbow,
-            20 Arrows, Quiver, Thieves' Tools, Burglar's Pack, and 8 GP; or (B)
-            100 GP</v-col
-          >
-          <v-divider></v-divider>
-        </v-row>
-        <h2 class="mt-10">Becoming a Rogue</h2>
-        <h3 class="mt-5">As a Level 1 Character</h3>
-        <li>Gain all the traits in the Core Rogue Traits table.</li>
-        <li>
-          Gain the Rogue's level 1 features, which are listed in the Rogue
-          Features table.
-        </li>
-        <h3 class="mt-5">As a Multiclass Character</h3>
-        <li>
-          Gain the following traits from the Core Rogue Traits table: Hit Point
-          Die, proficiency in one skill of your choice from the Rogue's skill
-          list, proficiency with Thieves' Tools, and training with Light armor.
-        </li>
-        <li>
-          Gain the Rogue's level 1 features, which are listed in the Rogue
-          Features table.
-        </li>
+  <div class="rogue-page">
+    <!-- Hero Banner -->
+    <div class="hero">
+      <img src="../assets/classes/rogue.png" alt="Rogue" class="hero-img" />
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Class</span>
+          <h1 class="hero-title">Rogue</h1>
+          <p class="hero-subtitle">
+            A scoundrel who uses stealth and trickery to overcome obstacles and
+            enemies
+          </p>
+          <div class="hero-badges">
+            <span class="badge badge-slate">Low Complexity</span>
+            <span class="badge badge-yellow">Dexterity</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Summary table -->
-    <div class="bg-grey-darken-4 center pa-5">
-      <h2>Rogue Class Features</h2>
-    </div>
-    <div style="width: 1525px" class="center">
-      <v-table>
-        <thead>
-          <tr>
-            <th class="text-center">Level</th>
-            <th class="text-center">Proficiency Bonus</th>
-            <th class="text-center">Unlocked</th>
-            <th class="text-center">Sneak Attack</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="item in levels" :key="item.level">
-            <td class="text-center">{{ item.level }}</td>
-            <td class="text-center">{{ item.profBonus }}</td>
-            <td class="text-center">{{ item.feature }}</td>
-            <td class="text-center">{{ item.sneakAttack }}</td>
-          </tr>
-        </tbody>
-      </v-table>
-    </div>
+    <div class="page-content">
+      <!-- Core Traits -->
+      <section class="section">
+        <h2 class="section-title">Core Traits</h2>
+        <div class="traits-grid">
+          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+            <span class="trait-label">{{ trait.label }}</span>
+            <span class="trait-value">{{ trait.value }}</span>
+          </div>
+        </div>
+      </section>
 
-    <!-- Level-by-level features -->
-    <div class="mt-5">
-      <div class="center mt-5">
-        <v-expansion-panels v-model="panel">
-          <!-- Level 1 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 1</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Expertise</h2>
-                  <br />
-                  <p>
-                    You gain Expertise in two of your skill proficiencies of
-                    your choice. Sleight of Hand and Stealth are recommended if
-                    you have proficiency in them.
-                  </p>
-                  <br />
-                  <p>
-                    At Rogue level 6, you gain Expertise in two more of your
-                    skill proficiencies of your choice.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Sneak Attack</h2>
-                  <br />
-                  <p>
-                    You know how to strike subtly and exploit a foe's
-                    distraction. Once per turn, you can deal an extra 1d6 damage
-                    to one creature you hit with an attack roll if you have
-                    Advantage on the roll and the attack uses a Finesse or a
-                    Ranged weapon. The extra damage's type is the same as the
-                    weapon's type.
-                  </p>
-                  <br />
-                  <p>
-                    You don't need Advantage on the attack roll if at least one
-                    of your allies is within 5 feet of the target, the ally
-                    doesn't have the Incapacitated condition, and you don't have
-                    Disadvantage on the attack roll.
-                  </p>
-                  <br />
-                  <p>
-                    The extra damage increases as you gain Rogue levels, as
-                    shown in the Sneak Attack column of the Rogue Features
-                    table.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Thieves' Cant</h2>
-                  <br />
-                  <p>
-                    You picked up various languages in the communities where you
-                    plied your roguish talents. You know Thieves' Cant and one
-                    other language of your choice.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Weapon Mastery</h2>
-                  <br />
-                  <p>
-                    Your training with weapons allows you to use the mastery
-                    properties of two kinds of weapons of your choice with which
-                    you have proficiency, such as Daggers and Shortbows.
-                  </p>
-                  <br />
-                  <p>
-                    Whenever you finish a Long Rest, you can change the kinds of
-                    weapons you chose.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
+      <!-- Becoming a Rogue -->
+      <section class="section">
+        <h2 class="section-title">Becoming a Rogue</h2>
+        <div class="becoming-grid">
+          <div class="becoming-card">
+            <h3 class="becoming-heading">As a Level 1 Character</h3>
+            <ul class="becoming-list">
+              <li>Gain all the traits in the Core Rogue Traits table.</li>
+              <li>
+                Gain the Rogue's level 1 features listed in the Features table.
+              </li>
+            </ul>
+          </div>
+          <div class="becoming-card">
+            <h3 class="becoming-heading">As a Multiclass Character</h3>
+            <ul class="becoming-list">
+              <li>
+                Gain the Hit Point Die, proficiency in one skill from the
+                Rogue's list, proficiency with Thieves' Tools, and training with
+                Light armor.
+              </li>
+              <li>
+                Gain the Rogue's level 1 features listed in the Features table.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-          <!-- Level 2 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 2</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Cunning Action</h2>
-                  <br />
-                  <p>
-                    Your quick thinking and agility allow you to move and act
-                    quickly. On your turn, you can take one of the following
-                    actions as a Bonus Action: Dash, Disengage, or Hide.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
+      <!-- Class Features Table -->
+      <section class="section">
+        <h2 class="section-title">Class Features</h2>
+        <div class="table-wrap">
+          <table class="features-table">
+            <thead>
+              <tr>
+                <th>Level</th>
+                <th>Prof. Bonus</th>
+                <th>Features Unlocked</th>
+                <th>Sneak Attack</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="item in levels"
+                :key="item.level"
+                :class="{ 'row-highlight': item.feature.includes('Subclass') }"
+              >
+                <td class="level-cell">{{ item.level }}</td>
+                <td class="text-center">{{ item.profBonus }}</td>
+                <td>{{ item.feature }}</td>
+                <td class="text-center">
+                  <span class="sa-badge">{{ item.sneakAttack }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-          <!-- Level 3 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 3</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Rogue Subclass</h2>
-                  <br />
-                  <p>
-                    You gain a Rogue subclass of your choice. A subclass is a
-                    specialization that grants you features at certain Rogue
-                    levels. For the rest of your career, you gain each of your
-                    subclass's features that are of your Rogue level or lower.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Steady Aim</h2>
-                  <br />
-                  <p>
-                    As a Bonus Action, you give yourself Advantage on your next
-                    attack roll on the current turn. You can use this feature
-                    only if you haven't moved during this turn, and after you
-                    use it, your Speed is 0 until the end of the current turn.
-                  </p>
-                </v-col>
-              </v-row>
-              <br />
-              <v-row>
-                <v-col v-for="(sub, index) in subclasses" :key="index">
-                  <div class="d-flex justify-center">
-                    <v-btn
-                      @click="goTo(sub.title)"
-                      class="mb-2"
-                      color="rgb(54, 61, 68)"
-                    >
-                      <font-awesome-icon
-                        class="fab fa"
-                        :icon="['fa', icons[index]]"
-                        :key="index"
-                      />
-                    </v-btn>
-                  </div>
-                  <p class="text-center">{{ sub.title }}</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
+      <!-- Level Breakdown -->
+      <section class="section">
+        <h2 class="section-title">Level Breakdown</h2>
+        <div class="panels">
+          <div
+            v-for="(lvl, index) in levelPanels"
+            :key="lvl.level"
+            class="panel"
+          >
+            <div
+              class="panel-header"
+              @click="togglePanel(index)"
+              :class="{ open: openPanels.includes(index) }"
+            >
+              <div class="panel-header-left">
+                <span class="panel-level-badge">{{ lvl.level }}</span>
+                <span class="panel-features-preview">{{
+                  lvl.features.map((f) => f.title).join(" · ")
+                }}</span>
+              </div>
+              <v-icon class="panel-chevron">
+                {{
+                  openPanels.includes(index)
+                    ? "mdi-chevron-up"
+                    : "mdi-chevron-down"
+                }}
+              </v-icon>
+            </div>
 
-          <!-- Level 4 -->
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 4</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify. You gain this feature
-                    again at Rogue levels 8, 10, 12, and 16.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 5 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 5</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Cunning Strike</h2>
-                  <br />
-                  <p>
-                    You have developed cunning ways to use your Sneak Attack.
-                    When you deal Sneak Attack damage, you can add one of the
-                    following Cunning Strike effects. Each effect has a die cost
-                    — the number of Sneak Attack damage dice you must forgo to
-                    add the effect.
-                  </p>
-                  <br />
-                  <p>
-                    If a Cunning Strike effect requires a saving throw, the DC
-                    equals 8 plus your Dexterity modifier and Proficiency Bonus.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Poison (Cost: 1d6).</b> You add a toxin to your strike,
-                    forcing the target to make a Constitution saving throw. On a
-                    failed save, the target has the Poisoned condition for 1
-                    minute. Requires a Poisoner's Kit on your person.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Trip (Cost: 1d6).</b> If the target is Large or smaller,
-                    it must succeed on a Dexterity saving throw or have the
-                    Prone condition.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Withdraw (Cost: 1d6).</b> Immediately after the attack,
-                    you move up to half your Speed without provoking Opportunity
-                    Attacks.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Uncanny Dodge</h2>
-                  <br />
-                  <p>
-                    When an attacker that you can see hits you with an attack
-                    roll, you can use your Reaction to halve the attack's damage
-                    against you (round down).
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 6 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 6</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Expertise</h2>
-                  <br />
-                  <p>
-                    You gain Expertise in two more of your skill proficiencies
-                    of your choice.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 7 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 7</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Evasion</h2>
-                  <br />
-                  <p>
-                    You can nimbly dodge out of the way of certain dangers. When
-                    you are subjected to an effect that allows you to make a
-                    Dexterity saving throw to take only half damage, you instead
-                    take no damage if you succeed on the saving throw and only
-                    half damage if you fail.
-                  </p>
-                  <br />
-                  <p>
-                    You can't use this feature if you have the Incapacitated
-                    condition.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Reliable Talent</h2>
-                  <br />
-                  <p>
-                    Whenever you make an ability check that uses one of your
-                    skill or tool proficiencies, you can treat a d20 roll of 9
-                    or lower as a 10.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 8 -->
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 8</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 9 -->
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 9</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose.</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 10 -->
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 10</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 11 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 11</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Improved Cunning Strike</h2>
-                  <br />
-                  <p>
-                    You can use up to two Cunning Strike effects when you deal
-                    Sneak Attack damage, paying the die cost for each effect.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 12 -->
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 12</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 13 -->
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 13</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose.</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 14 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 14</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Devious Strikes</h2>
-                  <br />
-                  <p>
-                    You've practiced new ways to use your Sneak Attack
-                    deviously. The following effects are now among your Cunning
-                    Strike options.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Daze (Cost: 2d6).</b> The target must succeed on a
-                    Constitution saving throw, or on its next turn, it can do
-                    only one of the following: move or take an action or a Bonus
-                    Action.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Knock Out (Cost: 6d6).</b> The target must succeed on a
-                    Constitution saving throw, or it has the Unconscious
-                    condition for 1 minute or until it takes any damage. The
-                    Unconscious target can repeat the save at the end of each of
-                    its turns, ending the effect on itself on a success.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Obscure (Cost: 3d6).</b> The target must succeed on a
-                    Dexterity saving throw, or it has the Blinded condition
-                    until the end of its next turn.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 15 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 15</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Slippery Mind</h2>
-                  <br />
-                  <p>
-                    Your cunning mind is exceptionally difficult to control. You
-                    gain proficiency in Wisdom and Charisma saving throws.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 16 -->
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 16</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 17 -->
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 17</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose.</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 18 -->
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 18</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Elusive</h2>
-                  <br />
-                  <p>
-                    You are so evasive that attackers rarely gain the upper hand
-                    against you. No attack roll can have Advantage against you
-                    unless you have the Incapacitated condition.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 19 -->
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 19</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Epic Boon</h2>
-                  <br />
-                  <p>
-                    You gain an Epic Boon feat or another feat of your choice
-                    for which you qualify. Boon of the Night Spirit is
-                    recommended.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <!-- Level 20 -->
-          <v-expansion-panel class="mb-10">
-            <v-expansion-panel-title>
-              <h2>Level 20</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Stroke of Luck</h2>
-                  <br />
-                  <p>
-                    You have an uncanny knack for succeeding when you need to.
-                    If you fail a d20 Test, you can turn the roll into a 20.
-                  </p>
-                  <br />
-                  <p>
-                    Once you use this feature, you can't use it again until you
-                    finish a Short Rest or a Long Rest.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-        </v-expansion-panels>
-      </div>
+            <div class="panel-body" v-if="openPanels.includes(index)">
+              <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
+                <div
+                  v-for="(sub, si) in subclasses"
+                  :key="si"
+                  class="subclass-btn"
+                  @click="goTo(sub.title)"
+                >
+                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
+                  <span>{{ sub.title }}</span>
+                </div>
+              </div>
+              <div class="feature-cards">
+                <div
+                  v-for="feature in lvl.features"
+                  :key="feature.title"
+                  class="feature-card"
+                >
+                  <h3 class="feature-title">{{ feature.title }}</h3>
+                  <div class="feature-body" v-html="feature.body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -653,26 +154,49 @@
 import router from "@/router";
 
 export default {
-  methods: {
-    goTo(label) {
-      router
-        .push("/wiki/classes/rogue/" + label.replace(" ", "_").toLowerCase())
-        .then(() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    },
-  },
-
   data() {
     return {
+      openPanels: [0],
+
       subclasses: [
         { title: "Arcane Trickster" },
         { title: "Assassin" },
         { title: "Soulknife" },
         { title: "Thief" },
       ],
-      icons: ["hat-wizard", "skull", "brain", "mask"],
-      panel: [0],
+      subclassIcons: [
+        "mdi-hat-fedora",
+        "mdi-skull",
+        "mdi-brain",
+        "mdi-drama-masks",
+      ],
+
+      coreTraits: [
+        { label: "Primary Ability", value: "Dexterity" },
+        { label: "Hit Point Die", value: "D8 per Rogue level" },
+        {
+          label: "Saving Throw Proficiencies",
+          value: "Dexterity and Intelligence",
+        },
+        {
+          label: "Skill Proficiencies",
+          value:
+            "Choose 4: Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight of Hand, or Stealth",
+        },
+        {
+          label: "Weapon Proficiencies",
+          value:
+            "Simple weapons and Martial weapons with the Finesse or Light property",
+        },
+        { label: "Tool Proficiencies", value: "Thieves' Tools" },
+        { label: "Armor Training", value: "Light armor" },
+        {
+          label: "Starting Equipment",
+          value:
+            "Choose A or B: (A) Leather Armor, 2 Daggers, Shortsword, Shortbow, 20 Arrows, Quiver, Thieves' Tools, Burglar's Pack, and 8 GP; or (B) 100 GP",
+        },
+      ],
+
       levels: [
         {
           level: "1",
@@ -795,13 +319,620 @@ export default {
           sneakAttack: "10d6",
         },
       ],
+
+      levelPanels: [
+        {
+          level: "Level 1",
+          features: [
+            {
+              title: "Expertise",
+              body: `<p>You gain Expertise in two of your skill proficiencies of your choice. Sleight of Hand and Stealth are recommended.</p>
+                     <br/>
+                     <p>At Rogue level 6, you gain Expertise in two more of your skill proficiencies of your choice.</p>`,
+            },
+            {
+              title: "Sneak Attack",
+              body: `<p>Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or Ranged weapon. The extra damage type matches the weapon's type.</p>
+                     <br/>
+                     <p>You don't need Advantage if at least one ally is within 5 feet of the target (not Incapacitated) and you don't have Disadvantage on the roll.</p>
+                     <br/>
+                     <p>The extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column.</p>`,
+            },
+            {
+              title: "Thieves' Cant",
+              body: `<p>You know Thieves' Cant and one other language of your choice, picked up from the communities where you plied your roguish talents.</p>`,
+            },
+            {
+              title: "Weapon Mastery",
+              body: `<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Daggers and Shortbows. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 2",
+          features: [
+            {
+              title: "Cunning Action",
+              body: `<p>Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 3",
+          features: [
+            {
+              title: "Rogue Subclass",
+              body: `<p>You gain a Rogue subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Rogue level or lower. Choose your specialization below:</p>`,
+            },
+            {
+              title: "Steady Aim",
+              body: `<p>As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 4",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Rogue levels 8, 10, 12, and 16.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 5",
+          features: [
+            {
+              title: "Cunning Strike",
+              body: `<p>When you deal Sneak Attack damage, you can add one of the following effects by forgoing the listed number of Sneak Attack dice. Save DC = 8 + your Dexterity modifier + Proficiency Bonus.</p>
+                     <br/>
+                     <p><b>Poison (Cost: 1d6).</b> The target makes a Constitution save or has the Poisoned condition for 1 minute. Requires a Poisoner's Kit on your person.</p>
+                     <br/>
+                     <p><b>Trip (Cost: 1d6).</b> If the target is Large or smaller, it must succeed on a Dexterity save or have the Prone condition.</p>
+                     <br/>
+                     <p><b>Withdraw (Cost: 1d6).</b> Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.</p>`,
+            },
+            {
+              title: "Uncanny Dodge",
+              body: `<p>When an attacker you can see hits you with an attack roll, you can use your Reaction to halve the attack's damage against you (round down).</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 6",
+          features: [
+            {
+              title: "Expertise",
+              body: `<p>You gain Expertise in two more of your skill proficiencies of your choice.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 7",
+          features: [
+            {
+              title: "Evasion",
+              body: `<p>When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage on a success and only half damage on a failure.</p>
+                     <br/>
+                     <p>You can't use this feature if you have the Incapacitated condition.</p>`,
+            },
+            {
+              title: "Reliable Talent",
+              body: `<p>Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 8",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 9",
+          features: [
+            {
+              title: "Subclass Feature",
+              body: `<p>You gain a new feature from your chosen subclass.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 10",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 11",
+          features: [
+            {
+              title: "Improved Cunning Strike",
+              body: `<p>You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 12",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 13",
+          features: [
+            {
+              title: "Subclass Feature",
+              body: `<p>You gain a new feature from your chosen subclass.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 14",
+          features: [
+            {
+              title: "Devious Strikes",
+              body: `<p>You've practiced new ways to use your Sneak Attack deviously. The following effects are added to your Cunning Strike options.</p>
+                     <br/>
+                     <p><b>Daze (Cost: 2d6).</b> The target must succeed on a Constitution save, or on its next turn it can do only one of the following: move, take an action, or take a Bonus Action.</p>
+                     <br/>
+                     <p><b>Knock Out (Cost: 6d6).</b> The target must succeed on a Constitution save, or it has the Unconscious condition for 1 minute or until it takes any damage. The target can repeat the save at the end of each of its turns.</p>
+                     <br/>
+                     <p><b>Obscure (Cost: 3d6).</b> The target must succeed on a Dexterity save, or it has the Blinded condition until the end of its next turn.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 15",
+          features: [
+            {
+              title: "Slippery Mind",
+              body: `<p>Your cunning mind is exceptionally difficult to control. You gain proficiency in Wisdom and Charisma saving throws.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 16",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 17",
+          features: [
+            {
+              title: "Subclass Feature",
+              body: `<p>You gain a new feature from your chosen subclass.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 18",
+          features: [
+            {
+              title: "Elusive",
+              body: `<p>You are so evasive that attackers rarely gain the upper hand. No attack roll can have Advantage against you unless you have the Incapacitated condition.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 19",
+          features: [
+            {
+              title: "Epic Boon",
+              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 20",
+          features: [
+            {
+              title: "Stroke of Luck",
+              body: `<p>If you fail a d20 Test, you can turn the roll into a 20. Once you use this feature, you can't use it again until you finish a Short Rest or a Long Rest.</p>`,
+            },
+          ],
+        },
+      ],
     };
+  },
+
+  methods: {
+    togglePanel(index) {
+      const i = this.openPanels.indexOf(index);
+      if (i === -1) this.openPanels.push(index);
+      else this.openPanels.splice(i, 1);
+    },
+    goTo(label) {
+      router
+        .push("/wiki/classes/rogue/" + label.replace(/\s+/g, "_").toLowerCase())
+        .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+    },
   },
 };
 </script>
 
 <style scoped>
-.center {
-  width: 80%;
+/* ── Page ───────────────────────────────────────── */
+.rogue-page {
+  min-height: 100vh;
+  background: #0e0e1a;
+  color: #e2e8f0;
+}
+
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 14, 26, 0.2) 0%,
+    rgba(14, 14, 26, 0.7) 60%,
+    #0e0e1a 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 2.5rem;
+}
+.hero-content {
+  max-width: 700px;
+}
+.hero-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #facc15;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+.hero-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+.badge-slate {
+  background: rgba(100, 116, 139, 0.15);
+  color: #a3e635;
+  border: 1px solid #a3e635;
+}
+.badge-yellow {
+  background: rgba(250, 204, 21, 0.12);
+  color: #facc15;
+  border: 1px solid #facc15;
+}
+
+/* ── Page content ───────────────────────────────── */
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Section ────────────────────────────────────── */
+.section {
+  margin-bottom: 3rem;
+}
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(250, 204, 21, 0.3);
+}
+
+/* ── Core Traits ────────────────────────────────── */
+.traits-grid {
+  background: #12121f;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.trait-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  align-items: start;
+}
+.trait-row:last-child {
+  border-bottom: none;
+}
+.trait-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #facc15;
+}
+.trait-value {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* ── Becoming ───────────────────────────────────── */
+.becoming-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 640px) {
+  .becoming-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.becoming-card {
+  background: #12121f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.becoming-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #facc15;
+  margin-bottom: 0.75rem;
+}
+.becoming-list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.becoming-list li {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ── Table ──────────────────────────────────────── */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.features-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.features-table thead tr {
+  background: rgba(250, 204, 21, 0.06);
+}
+.features-table th {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #facc15;
+  white-space: nowrap;
+}
+.features-table th:nth-child(3) {
+  text-align: left;
+}
+.features-table td {
+  padding: 0.65rem 1rem;
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  text-align: center;
+  white-space: nowrap;
+}
+.features-table td:nth-child(3) {
+  text-align: left;
+  min-width: 280px;
+}
+.features-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+.features-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.row-highlight td {
+  color: #facc15;
+}
+.level-cell {
+  font-weight: 700;
+  color: #f1f5f9 !important;
+  text-align: center;
+}
+
+/* Sneak Attack badge */
+.sa-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(250, 204, 21, 0.1);
+  color: #facc15;
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  font-family: monospace;
+}
+
+/* ── Panels ─────────────────────────────────────── */
+.panels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.panel {
+  background: #12121f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+.panel-header:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.panel-header.open {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.panel-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.panel-level-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #facc15;
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.panel-features-preview {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.panel-chevron {
+  color: #64748b;
+  flex-shrink: 0;
+}
+.panel-body {
+  padding: 1.25rem;
+}
+
+/* ── Feature cards ──────────────────────────────── */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.feature-card {
+  background: #0e0e1a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.feature-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(250, 204, 21, 0.2);
+}
+.feature-body {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.65;
+}
+.feature-body :deep(b) {
+  color: #e2e8f0;
+}
+
+/* ── Subclass grid ──────────────────────────────── */
+.subclass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.subclass-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #0e0e1a;
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+.subclass-btn:hover {
+  background: rgba(250, 204, 21, 0.06);
+  border-color: #facc15;
+  color: #f1f5f9;
+}
+.subclass-icon {
+  font-size: 1.5rem !important;
+  color: #facc15;
+}
+
+/* ── Mobile ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero {
+    height: 300px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-overlay {
+    padding: 1.5rem;
+  }
+  .trait-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

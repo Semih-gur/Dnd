@@ -30,31 +30,50 @@
         <table class="spell-table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>School</th>
-              <th>Cast Time</th>
-              <th>Range</th>
-              <th>Duration</th>
-              <th>Components</th>
+              <th
+                v-for="col in columns"
+                :key="col.key"
+                :class="[
+                  'col-' + col.key,
+                  { sortable: true, sorted: sortKey === col.key },
+                ]"
+                @click="setSort(col.key)"
+              >
+                <div class="th-inner">
+                  {{ col.label }}
+                  <span class="sort-icon">
+                    <span v-if="sortKey === col.key">
+                      {{ sortDir === "asc" ? "↑" : "↓" }}
+                    </span>
+                    <span v-else class="sort-idle">↕</span>
+                  </span>
+                </div>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr
-              v-for="spell in getSpellsForLevel(tab)"
+              v-for="spell in sortedSpells"
               :key="spell.name"
               class="spell-row"
               @click="goToSpell(spell)"
             >
-              <td>
+              <td class="col-name">
                 <span class="spell-name">{{ formatName(spell.name) }}</span>
               </td>
-              <td>
-                <span class="school-badge">{{ spell.school }}</span>
+              <td class="col-school">
+                <span class="school-badge">{{ spell.school.trim() }}</span>
               </td>
-              <td>{{ spell.casting_time }}</td>
-              <td>{{ spell.range }}</td>
-              <td>{{ spell.duration }}</td>
-              <td>{{ spell.components }}</td>
+              <td class="col-casting_time">
+                <span class="truncate">{{ spell.casting_time }}</span>
+              </td>
+              <td class="col-range">{{ spell.range }}</td>
+              <td class="col-duration">
+                <span class="truncate">{{ spell.duration }}</span>
+              </td>
+              <td class="col-components">
+                <span class="truncate">{{ spell.components }}</span>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -72,11 +91,20 @@ export default {
     return {
       tab: "0",
       allSpells,
+      sortKey: "name",
+      sortDir: "asc",
+      columns: [
+        { key: "name", label: "Name" },
+        { key: "school", label: "School" },
+        { key: "casting_time", label: "Cast Time" },
+        { key: "range", label: "Range" },
+        { key: "duration", label: "Duration" },
+        { key: "components", label: "Components" },
+      ],
     };
   },
 
   mounted() {
-    // Set tab to first available level for this class on load
     if (this.spellLevels.length) {
       this.tab = this.spellLevels[0];
     }
@@ -101,11 +129,26 @@ export default {
         return acc + this.getSpellsForLevel(level).length;
       }, 0);
     },
+    sortedSpells() {
+      const spells = [...this.getSpellsForLevel(this.tab)];
+      return spells.sort((a, b) => {
+        const aVal = (a[this.sortKey] ?? "").toString().trim().toLowerCase();
+        const bVal = (b[this.sortKey] ?? "").toString().trim().toLowerCase();
+        if (aVal < bVal) return this.sortDir === "asc" ? -1 : 1;
+        if (aVal > bVal) return this.sortDir === "asc" ? 1 : -1;
+        return 0;
+      });
+    },
   },
 
   watch: {
     className() {
       this.tab = this.spellLevels[0] ?? "0";
+    },
+    tab() {
+      // Reset sort when switching tabs
+      this.sortKey = "name";
+      this.sortDir = "asc";
     },
   },
 
@@ -124,6 +167,14 @@ export default {
       router.push(
         "/wiki/spells/" + this.$route.params.className + "/" + spell.name,
       );
+    },
+    setSort(key) {
+      if (this.sortKey === key) {
+        this.sortDir = this.sortDir === "asc" ? "desc" : "asc";
+      } else {
+        this.sortKey = key;
+        this.sortDir = "asc";
+      }
     },
   },
 };
@@ -253,7 +304,29 @@ export default {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.85rem;
+  table-layout: fixed;
 }
+
+/* Column widths */
+.col-name {
+  width: 18%;
+}
+.col-school {
+  width: 13%;
+}
+.col-casting_time {
+  width: 18%;
+}
+.col-range {
+  width: 10%;
+}
+.col-duration {
+  width: 18%;
+}
+.col-components {
+  width: 23%;
+}
+
 .spell-table thead tr {
   background: rgba(192, 132, 252, 0.1);
 }
@@ -266,7 +339,30 @@ export default {
   letter-spacing: 0.08em;
   color: #c084fc;
   white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease;
 }
+.spell-table th:hover {
+  background: rgba(192, 132, 252, 0.18);
+}
+.spell-table th.sorted {
+  background: rgba(192, 132, 252, 0.2);
+}
+
+.th-inner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sort-icon {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+.sort-idle {
+  opacity: 0.3;
+}
+
 .spell-row {
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   transition: background 0.15s ease;
@@ -278,15 +374,30 @@ export default {
 .spell-row:hover {
   background: rgba(192, 132, 252, 0.05);
 }
+
 .spell-table td {
   padding: 0.65rem 1rem;
   color: #94a3b8;
   vertical-align: middle;
-  white-space: nowrap;
+  overflow: hidden;
 }
+
+/* Truncate long text in cells */
+.truncate {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
 .spell-name {
   color: #f1f5f9;
   font-weight: 500;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .spell-row:hover .spell-name {
   color: #c084fc;
@@ -303,6 +414,10 @@ export default {
   color: #a78bfa;
   border: 1px solid rgba(192, 132, 252, 0.2);
   white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 /* ── Mobile ─────────────────────────────────────── */

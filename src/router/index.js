@@ -27,6 +27,7 @@ import WeaponsView from "@/views/Items/WeaponsView.vue";
 import ArmorsView from "@/views/Items/ArmorsView.vue";
 import PotionsView from "@/views/Items/PotionsView.vue";
 import SpellDesc from "@/views/SpellView/SpellDesc.vue";
+import MagicItems from "@/views/Items/MagicItems.vue";
 
 const routes = [
   {
@@ -168,6 +169,11 @@ const routes = [
     path: "/wiki/items/potions",
     name: "Potions",
     component: PotionsView,
+  },
+  {
+    path: "/wiki/items/magic_items",
+    name: "Magic Items",
+    component: MagicItems,
   },
 ];
 

@@ -1,577 +1,174 @@
 <template>
-  <div class="mt-15">
-    <div class="bg-grey-darken-4 center pa-5">
-      <h2 class="mb-5">Core Bard Traits</h2>
+  <div class="bard-page">
+    <!-- Hero Banner -->
+    <div class="hero">
+      <img src="../assets/classes/bard.png" alt="Bard" class="hero-img" />
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Class</span>
+          <h1 class="hero-title">Bard</h1>
+          <p class="hero-subtitle">
+            An inspiring magician whose power echoes the music of creation
+          </p>
+          <div class="hero-badges">
+            <span class="badge badge-orange">Medium Complexity</span>
+            <span class="badge badge-purple">Charisma</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <div class="mb-10">
-        <v-row>
-          <v-col cols="2"><b>Primary Ability</b></v-col>
-          <v-col class="mr-10">Charisma</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Hit Point Die</b></v-col>
-          <v-col class="mr-10">D8 per Bard level</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Saving Throw Proficiencies</b></v-col>
-          <v-col class="mr-10">Dexterity and Charisma</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Skill Proficiencies</b></v-col>
-          <v-col class="mr-10">Choose any 3 skills</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Tool Proficiencies</b></v-col>
-          <v-col class="mr-10"> Choose 3 Musical Instruments</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Weapon Proficiencies</b></v-col>
-          <v-col class="mr-10">Simple weapons</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Armor Training</b></v-col>
-          <v-col class="mr-10">Light armor</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Starting Equipment</b></v-col>
-          <v-col class="mr-10"
-            >Choose A or B: (A) Leather Armor, 2 Daggers, Musical Instrument of
-            your choice, Entertainer’s Pack, and 19 GP; or (B) 90 GP</v-col
+    <div class="page-content">
+      <!-- Core Traits -->
+      <section class="section">
+        <h2 class="section-title">Core Traits</h2>
+        <div class="traits-grid">
+          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+            <span class="trait-label">{{ trait.label }}</span>
+            <span class="trait-value">{{ trait.value }}</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Becoming a Bard -->
+      <section class="section">
+        <h2 class="section-title">Becoming a Bard</h2>
+        <div class="becoming-grid">
+          <div class="becoming-card">
+            <h3 class="becoming-heading">As a Level 1 Character</h3>
+            <ul class="becoming-list">
+              <li>Gain all the traits in the Core Bard Traits table.</li>
+              <li>
+                Gain the Bard's level 1 features listed in the Features table.
+              </li>
+            </ul>
+          </div>
+          <div class="becoming-card">
+            <h3 class="becoming-heading">As a Multiclass Character</h3>
+            <ul class="becoming-list">
+              <li>
+                Gain the Hit Point Die, proficiency in one skill of your choice,
+                proficiency with one Musical Instrument, and training with Light
+                armor.
+              </li>
+              <li>
+                Gain the Bard's level 1 features. See the multiclassing rules to
+                determine available spell slots.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Class Features Table -->
+      <section class="section">
+        <h2 class="section-title">Class Features</h2>
+        <div class="table-wrap">
+          <table class="features-table">
+            <thead>
+              <tr>
+                <th>Level</th>
+                <th>Prof. Bonus</th>
+                <th>Features Unlocked</th>
+                <th>Bardic Die</th>
+                <th>Cantrips</th>
+                <th>Spells</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="item in levels"
+                :key="item.level"
+                :class="{ 'row-highlight': item.feature.includes('Subclass') }"
+              >
+                <td class="level-cell">{{ item.level }}</td>
+                <td class="text-center">{{ item.profBonus }}</td>
+                <td>{{ item.feature }}</td>
+                <td class="text-center">
+                  <span class="die-badge">{{ item.bardic_die }}</span>
+                </td>
+                <td class="text-center">{{ item.cantrip }}</td>
+                <td class="text-center">{{ item.spell }}</td>
+                <td class="text-center">{{ item.first }}</td>
+                <td class="text-center">{{ item.second }}</td>
+                <td class="text-center">{{ item.third }}</td>
+                <td class="text-center">{{ item.fourth }}</td>
+                <td class="text-center">{{ item.fifth }}</td>
+                <td class="text-center">{{ item.sixth }}</td>
+                <td class="text-center">{{ item.seventh }}</td>
+                <td class="text-center">{{ item.eight }}</td>
+                <td class="text-center">{{ item.ninth }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Level Breakdown -->
+      <section class="section">
+        <h2 class="section-title">Level Breakdown</h2>
+        <div class="panels">
+          <div
+            v-for="(lvl, index) in levelPanels"
+            :key="lvl.level"
+            class="panel"
           >
-          <v-divider></v-divider>
-        </v-row>
-        <h2 class="mt-10">Becoming a Bard</h2>
-        <h3 class="mt-5">As a Level 1 Character</h3>
-        <li>Gain all the traits in the Core Bard Traits table.</li>
-        <li>
-          Gain the Bard's level 1 features, which are listed in the Bard
-          Features table.
-        </li>
-        <h3 class="mt-5">As a Multiclass Character</h3>
-        <li>
-          Gain the following traits from the Core Bard Traits table: Hit Point
-          Die, proficiency in one skill of your choice, proficiency with one
-          Musical Instrument of your choice, and training with Light armor.
-        </li>
-        <li>
-          Gain the Bard's level 1 features, which are listed in the Bard
-          Features table. See the multiclassing rules in multiclassing to
-          determine your available spell slots.
-        </li>
-      </div>
-    </div>
-    <!-- Summary table of the class -->
-    <div class="bg-grey-darken-4 center pa-5">
-      <h2>Bard Class Features</h2>
-    </div>
-    <div style="width: 1525px" class="center">
-      <v-table>
-        <thead>
-          <th></th>
-          <tr>
-            <th class="text-center">Level</th>
-            <th class="text-center">Proficiency Bonus</th>
-            <th class="text-center">Unlocked</th>
-            <th class="text-center">Bardic Die</th>
-            <th class="text-center">Cantrips</th>
-            <th class="text-center">Prepared Spells</th>
-            <th class="text-center">1</th>
-            <th class="text-center">2</th>
-            <th class="text-center">3</th>
-            <th class="text-center">4</th>
-            <th class="text-center">5</th>
-            <th class="text-center">6</th>
-            <th class="text-center">7</th>
-            <th class="text-center">8</th>
-            <th class="text-center">9</th>
-          </tr>
-        </thead>
-        <tbody>
-          <p></p>
-          <tr v-for="item in levels" :key="item.level">
-            <td class="text-center">{{ item.level }}</td>
-            <td class="text-center">{{ item.profBonus }}</td>
-            <td class="text-center">{{ item.feature }}</td>
-            <td class="text-center">{{ item.bardic_die }}</td>
-            <td class="text-center">{{ item.cantrip }}</td>
-            <td class="text-center">{{ item.spell }}</td>
-            <td class="text-center">{{ item.first }}</td>
-            <td class="text-center">{{ item.second }}</td>
-            <td class="text-center">{{ item.third }}</td>
-            <td class="text-center">{{ item.fourth }}</td>
-            <td class="text-center">{{ item.fifth }}</td>
-            <td class="text-center">{{ item.sixth }}</td>
-            <td class="text-center">{{ item.seventh }}</td>
-            <td class="text-center">{{ item.eight }}</td>
-            <td class="text-center">{{ item.ninth }}</td>
-          </tr>
-        </tbody>
-      </v-table>
-    </div>
-    <!-- Lvl 1 abilities and characteristic -->
-    <div class="mt-5">
-      <!-- All levels that an ability is gained. -->
-      <div class="center mt-5">
-        <v-expansion-panels v-model="panel">
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 1</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Bardic Inspiration</h2>
-                  <br />
-                  <p>
-                    You can supernaturally inspire others through words, music,
-                    or dance. This inspiration is represented by your Bardic
-                    Inspiration die, which is a d6.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Using Bardic Inspiration.</b>As a Bonus Action, you can
-                    inspire another creature within 60 feet of yourself who can
-                    see or hear you. That creature gains one of your Bardic
-                    Inspiration dice. A creature can have only one Bardic
-                    Inspiration die at a time.
-                  </p>
-                  <br />
-                  <p>
-                    Once within the next hour when the creature fails a D20
-                    Test, the creature can roll the Bardic Inspiration die and
-                    add the number rolled to the d20, potentially turning the
-                    failure into a success. A Bardic Inspiration die is expended
-                    when it's rolled.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Number of Uses.</b>You can confer a Bardic Inspiration
-                    die a number of times equal to your Charisma modifier
-                    (minimum of once), and you regain all expended uses when you
-                    finish a Long Rest.
-                  </p>
-                  <br />
-                  <p>
-                    <b>At Higher Levels.</b>Your Bardic Inspiration die changes
-                    when you reach certain Bard levels, as shown in the Bardic
-                    Die column of the Bard Features table. The die becomes a d8
-                    at level 5, a d10 at level 10, and a d12 at level 15.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Spellcasting</h2>
-                  <br />
-                  <p>
-                    You have learned to cast spells through your bardic arts.
-                    See chapter 7 for the rules on spellcasting. The information
-                    below details how you use those rules with Bard spells,
-                    which appear in the Bard spell list later in the class's
-                    description.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Cantrips. </b>You know two cantrips of your choice from
-                    the Bard spell list. Dancing Lights and Vicious Mockery are
-                    recommended.
-                  </p>
-                  <br />
-                  <p>
-                    Whenever you gain a Bard level, you can replace one of your
-                    cantrips with another cantrip of your choice from the Bard
-                    spell list.
-                  </p>
-                  <br />
-                  <p>
-                    When you reach Bard levels 4 and 10, you learn another
-                    cantrip of your choice from the Bard spell list, as shown in
-                    the Cantrips column of the Bard Features table.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Spell Slots. </b>The Bard Features table shows how many
-                    spell slots you have to cast your level 1+ spells. You
-                    regain all expended slots when you finish a Long Rest.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Prepared Spells of Level 1+. </b>You prepare the list of
-                    level 1+ spells that are available for you to cast with this
-                    feature. To start, choose four level 1 spells from the Bard
-                    spell list. Charm Person, Color Spray, Dissonant Whispers,
-                    and Healing Word are recommended.
-                  </p>
-                  <br />
-                  <p>
-                    The number of spells on your list increases as you gain Bard
-                    levels, as shown in the Prepared Spells column of the Bard
-                    Features table. Whenever that number increases, choose
-                    additional spells from the Bard spell list until the number
-                    of spells on your list matches the number on the table. The
-                    chosen spells must be of a level for which you have spell
-                    slots. For example, if you're a level 3 Bard, your list of
-                    prepared spells can include six spells of levels 1 and 2 in
-                    any combination.
-                  </p>
-                  <br />
-                  <p>
-                    If another Bard feature gives you spells that you always
-                    have prepared, those spells don’t count against the number
-                    of spells you can prepare with this feature, but those
-                    spells otherwise count as Bard spells for you.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Changing Your Prepared Spells.</b>Whenever you gain a
-                    Bard level, you can replace one spell on your list with
-                    another Bard spell for which you have spell slots.
-                  </p>
-                  <p>
-                    <b>Spellcasting Ability. </b>Charisma is your spellcasting
-                    ability for your Bard spells.
-                  </p>
-                  <p>
-                    <b>Spellcasting Focus. </b>You can use a Musical Instrument
-                    as a Spellcasting Focus for your Bard spells.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 2</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Expertise</h2>
-                  <br />
-                  <p>
-                    You gain Expertise (see the rules glossary) in two of your
-                    skill proficiencies of your choice. Performance and
-                    Persuasion are recommended if you have proficiency in them.
-                  </p>
-                  <br />
-                  <p>
-                    At Bard level 9, you gain Expertise in two more of your
-                    skill proficiencies of your choice.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Jack of all Trades</h2>
-                  <br />
-                  <p>
-                    You can add half your Proficiency Bonus (round down) to any
-                    ability check you make that uses a skill proficiency you
-                    lack and that doesn't otherwise use your Proficiency Bonus.
-                  </p>
-                  <br />
-                  <p>
-                    For example, if you make a Strength (Athletics) check and
-                    lack Athletics proficiency, you can add half your
-                    Proficiency Bonus to the check.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 3</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Bard Subclass</h2>
-                  <br />
-                  <p>
-                    You gain a Bard subclass of your choice. The College of
-                    Dance, College of Glamour, College of Lore, and College of
-                    Valor subclasses are detailed after this class's
-                    description. A subclass is a specialization that grants you
-                    features at certain Bard levels. For the rest of your
-                    career, you gain each of your subclass’s features that are
-                    of your Bard level or lower.
-                  </p>
-                </v-col>
-              </v-row>
-              <br />
-              <v-row>
-                <v-col v-for="(sub, index) in subclasses" :key="index">
-                  <div class="d-flex justify-center">
-                    <v-btn
-                      @click="goTo(sub.title)"
-                      class="mb-2"
-                      color="rgb(54, 61, 68)"
-                    >
-                      <font-awesome-icon
-                        class="fab fa"
-                        :icon="['fa', icons[index]]"
-                        :key="index"
-                      />
-                    </v-btn>
-                  </div>
-                  <p class="text-center">College of {{ sub.title }}</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 4</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    When you reach 4th level, and again at 8th, 12th, 16th, and
-                    19th level, you can increase one ability score of your
-                    choice by 2, or you can increase two ability scores of your
-                    choice by 1. As normal, you can't increase an ability score
-                    above 20 using this feature.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 5</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Font of Inspiration</h2>
-                  <br />
-                  <p>
-                    You now regain all your expended uses of Bardic Inspiration
-                    when you finish a Short or Long Rest.
-                  </p>
-                  <br />
-                  <p>
-                    In addition, you can expend a spell slot (no action
-                    required) to regain one expended use of Bardic Inspiration.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 6</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 7</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Countercharm</h2>
-                  <br />
-                  <p>
-                    You can use musical notes or words of power to disrupt
-                    mind-influencing effects. If you or a creature within 30
-                    feet of you fails a saving throw against an effect that
-                    applies the Charmed or Frightened condition, you can take a
-                    Reaction to cause the save to be rerolled, and the new roll
-                    has Advantage.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 8</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You can increase one ability score of your choice by 2, or
-                    you can increase two ability scores of your choice by 1. As
-                    normal, you can't increase an ability score above 20 using
-                    this feature.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 9</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Expertise</h2>
-                  <br />
-                  <p>
-                    You gain Expertise in two more of your skill proficiencies
-                    of your choice.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
+            <div
+              class="panel-header"
+              @click="togglePanel(index)"
+              :class="{ open: openPanels.includes(index) }"
+            >
+              <div class="panel-header-left">
+                <span class="panel-level-badge">{{ lvl.level }}</span>
+                <span class="panel-features-preview">{{
+                  lvl.features.map((f) => f.title).join(" · ")
+                }}</span>
+              </div>
+              <v-icon class="panel-chevron">
+                {{
+                  openPanels.includes(index)
+                    ? "mdi-chevron-up"
+                    : "mdi-chevron-down"
+                }}
+              </v-icon>
+            </div>
 
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 10</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Magical Secrets</h2>
-                  <br />
-                  <p>
-                    You've learned secrets from various magical traditions.
-                    Whenever you reach a Bard level (including this level) and
-                    the Prepared Spells number in the Bard Features table
-                    increases, you can choose any of your new prepared spells
-                    from the Bard, Cleric, Druid, and Wizard spell lists, and
-                    the chosen spells count as Bard spells for you (see a
-                    class’s section for its spell list). In addition, whenever
-                    you replace a spell prepared for this class, you can replace
-                    it with a spell from those lists.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 12</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You can increase one ability score of your choice by 2, or
-                    you can increase two ability scores of your choice by 1. As
-                    normal, you can't increase an ability score above 20 using
-                    this feature.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 14</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 16</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    When you reach 4th level, and again at 8th, 12th, 16th, and
-                    19th level, you can increase one ability score of your
-                    choice by 2, or you can increase two ability scores of your
-                    choice by 1. As normal, you can't increase an ability score
-                    above 20 using this feature.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 18</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Superior Inspiration</h2>
-                  <br />
-                  <p>
-                    When you roll Initiative, you regain expended uses of Bardic
-                    Inspiration until you have two if you have fewer than that.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 19</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Epic Boon</h2>
-                  <br />
-                  <p>
-                    You gain an Epic Boon feat or another feat of your choice
-                    for which you qualify. Boon of Spell Recall is recommended.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel class="mb-10">
-            <v-expansion-panel-title>
-              <h2>Level 20</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Words of Creation</h2>
-                  <br />
-                  <p>
-                    You have mastered two of the Words of Creation: the words of
-                    life and death. You therefore always have the Power Word:
-                    Heal and Power Word: Kill spells prepared. When you cast
-                    either spell, you can target a second creature with it if
-                    that creature is within 10 feet of the first target.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-        </v-expansion-panels>
-      </div>
+            <div class="panel-body" v-if="openPanels.includes(index)">
+              <!-- Subclass buttons for level 3 -->
+              <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
+                <div
+                  v-for="(sub, si) in subclasses"
+                  :key="si"
+                  class="subclass-btn"
+                  @click="goTo(sub.title)"
+                >
+                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
+                  <span>College of {{ sub.title }}</span>
+                </div>
+              </div>
+              <div class="feature-cards">
+                <div
+                  v-for="feature in lvl.features"
+                  :key="feature.title"
+                  class="feature-card"
+                >
+                  <h3 class="feature-title">{{ feature.title }}</h3>
+                  <div class="feature-body" v-html="feature.body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -580,40 +177,47 @@
 import router from "@/router";
 
 export default {
-  methods: {
-    goTo(label) {
-      router
-        .push("/wiki/classes/bard/" + label.replace(" ", "_").toLowerCase())
-        .then(() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    },
-  },
-
   data() {
     return {
-      subclasses: [
-        {
-          title: "Dance",
-        },
-        {
-          title: "Glamour",
-        },
-        {
-          title: "Lore",
-        },
+      openPanels: [0],
 
+      subclasses: [
+        { title: "Dance" },
+        { title: "Glamour" },
+        { title: "Lore" },
+        { title: "Valor" },
+      ],
+      subclassIcons: [
+        "mdi-shoe-ballet",
+        "mdi-shimmer",
+        "mdi-book-open-page-variant",
+        "mdi-sword",
+      ],
+
+      coreTraits: [
+        { label: "Primary Ability", value: "Charisma" },
+        { label: "Hit Point Die", value: "D8 per Bard level" },
         {
-          title: "Valor",
+          label: "Saving Throw Proficiencies",
+          value: "Dexterity and Charisma",
+        },
+        { label: "Skill Proficiencies", value: "Choose any 3 skills" },
+        { label: "Tool Proficiencies", value: "Choose 3 Musical Instruments" },
+        { label: "Weapon Proficiencies", value: "Simple weapons" },
+        { label: "Armor Training", value: "Light armor" },
+        {
+          label: "Starting Equipment",
+          value:
+            "Choose A or B: (A) Leather Armor, 2 Daggers, Musical Instrument of your choice, Entertainer's Pack, and 19 GP; or (B) 90 GP",
         },
       ],
-      icons: ["shoe-prints", "hand-sparkles", "book", "khanda"],
-      panel: [0],
+
       levels: [
         {
           level: "1",
           profBonus: "+2",
           feature: "Bardic Inspiration, Spellcasting",
+          bardic_die: "D6",
           cantrip: "2",
           spell: "4",
           first: "2",
@@ -625,12 +229,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D6",
         },
         {
           level: "2",
           profBonus: "+2",
           feature: "Expertise, Jack of All Trades",
+          bardic_die: "D6",
           cantrip: "2",
           spell: "5",
           first: "3",
@@ -642,12 +246,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D6",
         },
         {
           level: "3",
           profBonus: "+2",
           feature: "Bard Subclass",
+          bardic_die: "D6",
           cantrip: "2",
           spell: "6",
           first: "4",
@@ -659,12 +263,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D6",
         },
         {
           level: "4",
           profBonus: "+2",
           feature: "Ability Score Improvement",
+          bardic_die: "D6",
           cantrip: "3",
           spell: "7",
           first: "4",
@@ -676,12 +280,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D6",
         },
         {
           level: "5",
           profBonus: "+3",
           feature: "Font of Inspiration",
+          bardic_die: "D8",
           cantrip: "3",
           spell: "8",
           first: "4",
@@ -693,12 +297,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D8",
         },
         {
           level: "6",
           profBonus: "+3",
           feature: "Subclass Feature",
+          bardic_die: "D8",
           cantrip: "3",
           spell: "9",
           first: "4",
@@ -710,12 +314,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D8",
         },
         {
           level: "7",
           profBonus: "+3",
           feature: "Countercharm",
+          bardic_die: "D8",
           cantrip: "3",
           spell: "10",
           first: "4",
@@ -727,12 +331,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D8",
         },
         {
           level: "8",
           profBonus: "+3",
           feature: "Ability Score Improvement",
+          bardic_die: "D8",
           cantrip: "3",
           spell: "11",
           first: "4",
@@ -744,12 +348,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D8",
         },
         {
           level: "9",
           profBonus: "+4",
           feature: "Expertise",
+          bardic_die: "D8",
           cantrip: "3",
           spell: "12",
           first: "4",
@@ -761,12 +365,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D8",
         },
         {
           level: "10",
           profBonus: "+4",
           feature: "Magical Secrets",
+          bardic_die: "D10",
           cantrip: "4",
           spell: "14",
           first: "4",
@@ -778,12 +382,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D10",
         },
         {
           level: "11",
           profBonus: "+4",
-          feature: "------",
+          feature: "—",
+          bardic_die: "D10",
           cantrip: "4",
           spell: "15",
           first: "4",
@@ -795,12 +399,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D10",
         },
         {
           level: "12",
           profBonus: "+4",
           feature: "Ability Score Improvement",
+          bardic_die: "D10",
           cantrip: "4",
           spell: "15",
           first: "4",
@@ -812,12 +416,12 @@ export default {
           seventh: "-",
           eight: "-",
           ninth: "-",
-          bardic_die: "D10",
         },
         {
           level: "13",
           profBonus: "+5",
-          feature: "Song of Rest (d10)",
+          feature: "—",
+          bardic_die: "D10",
           cantrip: "4",
           spell: "16",
           first: "4",
@@ -829,12 +433,12 @@ export default {
           seventh: "1",
           eight: "-",
           ninth: "-",
-          bardic_die: "D10",
         },
         {
           level: "14",
           profBonus: "+5",
           feature: "Subclass Feature",
+          bardic_die: "D10",
           cantrip: "4",
           spell: "18",
           first: "4",
@@ -846,12 +450,12 @@ export default {
           seventh: "1",
           eight: "-",
           ninth: "-",
-          bardic_die: "D10",
         },
         {
           level: "15",
           profBonus: "+5",
-          feature: "------",
+          feature: "—",
+          bardic_die: "D12",
           cantrip: "4",
           spell: "19",
           first: "4",
@@ -863,12 +467,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "-",
-          bardic_die: "D12",
         },
         {
           level: "16",
           profBonus: "+5",
           feature: "Ability Score Improvement",
+          bardic_die: "D12",
           cantrip: "4",
           spell: "19",
           first: "4",
@@ -880,12 +484,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "-",
-          bardic_die: "D12",
         },
         {
           level: "17",
           profBonus: "+6",
-          feature: "------",
+          feature: "—",
+          bardic_die: "D12",
           cantrip: "4",
           spell: "20",
           first: "4",
@@ -897,12 +501,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "1",
-          bardic_die: "D12",
         },
         {
           level: "18",
           profBonus: "+6",
           feature: "Superior Inspiration",
+          bardic_die: "D12",
           cantrip: "4",
           spell: "22",
           first: "4",
@@ -914,12 +518,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "1",
-          bardic_die: "D12",
         },
         {
           level: "19",
           profBonus: "+6",
           feature: "Epic Boon",
+          bardic_die: "D12",
           cantrip: "4",
           spell: "22",
           first: "4",
@@ -931,12 +535,12 @@ export default {
           seventh: "1",
           eight: "1",
           ninth: "1",
-          bardic_die: "D12",
         },
         {
           level: "20",
           profBonus: "+6",
           feature: "Words of Creation",
+          bardic_die: "D12",
           cantrip: "4",
           spell: "22",
           first: "4",
@@ -948,16 +552,560 @@ export default {
           seventh: "2",
           eight: "1",
           ninth: "1",
-          bardic_die: "D12",
+        },
+      ],
+
+      levelPanels: [
+        {
+          level: "Level 1",
+          features: [
+            {
+              title: "Bardic Inspiration",
+              body: `<p>You can supernaturally inspire others through words, music, or dance, represented by your Bardic Inspiration die (a d6).</p>
+                     <br/>
+                     <p><b>Using Bardic Inspiration.</b> As a Bonus Action, inspire a creature within 60 feet that can see or hear you. That creature gains one Bardic Inspiration die. Once within the next hour, when the creature fails a D20 Test, it can roll the die and add it to the d20, potentially turning a failure into a success. The die is expended when rolled.</p>
+                     <br/>
+                     <p><b>Number of Uses.</b> You can confer a Bardic Inspiration die a number of times equal to your Charisma modifier (minimum once), regaining all uses on a Long Rest.</p>
+                     <br/>
+                     <p><b>At Higher Levels.</b> The die becomes a d8 at level 5, a d10 at level 10, and a d12 at level 15.</p>`,
+            },
+            {
+              title: "Spellcasting",
+              body: `<p>You have learned to cast spells through your bardic arts. Charisma is your spellcasting ability and you can use a Musical Instrument as a Spellcasting Focus.</p>
+                     <br/>
+                     <p><b>Cantrips.</b> You know two cantrips of your choice from the Bard spell list. Dancing Lights and Vicious Mockery are recommended. You gain more cantrips at levels 4 and 10.</p>
+                     <br/>
+                     <p><b>Prepared Spells.</b> Choose four level 1 spells from the Bard spell list to start. The number increases as you gain levels. Charm Person, Color Spray, Dissonant Whispers, and Healing Word are recommended.</p>
+                     <br/>
+                     <p><b>Changing Your Prepared Spells.</b> Whenever you gain a Bard level, you can replace one spell on your list with another Bard spell for which you have spell slots.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 2",
+          features: [
+            {
+              title: "Expertise",
+              body: `<p>You gain Expertise in two of your skill proficiencies of your choice. Performance and Persuasion are recommended. At Bard level 9, you gain Expertise in two more skills.</p>`,
+            },
+            {
+              title: "Jack of All Trades",
+              body: `<p>You can add half your Proficiency Bonus (round down) to any ability check you make that uses a skill proficiency you lack and that doesn't otherwise use your Proficiency Bonus.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 3",
+          features: [
+            {
+              title: "Bard Subclass",
+              body: `<p>You gain a Bard subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Bard level or lower. Choose your college below:</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 4",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Bard levels 8, 12, 16, and 19.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 5",
+          features: [
+            {
+              title: "Font of Inspiration",
+              body: `<p>You now regain all your expended uses of Bardic Inspiration when you finish a Short or Long Rest. In addition, you can expend a spell slot (no action required) to regain one expended use of Bardic Inspiration.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 6",
+          features: [
+            {
+              title: "Subclass Feature",
+              body: `<p>You gain a new feature from your chosen college.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 7",
+          features: [
+            {
+              title: "Countercharm",
+              body: `<p>If you or a creature within 30 feet of you fails a saving throw against an effect that applies the Charmed or Frightened condition, you can take a Reaction to cause the save to be rerolled, and the new roll has Advantage.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 8",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 9",
+          features: [
+            {
+              title: "Expertise",
+              body: `<p>You gain Expertise in two more of your skill proficiencies of your choice.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 10",
+          features: [
+            {
+              title: "Magical Secrets",
+              body: `<p>Whenever you reach a Bard level and the Prepared Spells number increases, you can choose any of your new prepared spells from the Bard, Cleric, Druid, and Wizard spell lists. The chosen spells count as Bard spells for you. Whenever you replace a prepared spell, you can replace it with a spell from those lists.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 12",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 14",
+          features: [
+            {
+              title: "Subclass Feature",
+              body: `<p>You gain a new feature from your chosen college.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 16",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 18",
+          features: [
+            {
+              title: "Superior Inspiration",
+              body: `<p>When you roll Initiative, you regain expended uses of Bardic Inspiration until you have two if you have fewer than that.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 19",
+          features: [
+            {
+              title: "Epic Boon",
+              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Spell Recall is recommended.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 20",
+          features: [
+            {
+              title: "Words of Creation",
+              body: `<p>You always have the Power Word: Heal and Power Word: Kill spells prepared. When you cast either spell, you can target a second creature with it if that creature is within 10 feet of the first target.</p>`,
+            },
+          ],
         },
       ],
     };
   },
+
+  methods: {
+    togglePanel(index) {
+      const i = this.openPanels.indexOf(index);
+      if (i === -1) this.openPanels.push(index);
+      else this.openPanels.splice(i, 1);
+    },
+    goTo(label) {
+      router
+        .push("/wiki/classes/bard/" + label.replace(/\s+/g, "_").toLowerCase())
+        .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+    },
+  },
 };
 </script>
 
-<style>
-.center {
-  width: 80%;
+<style scoped>
+/* ── Page ───────────────────────────────────────── */
+.bard-page {
+  min-height: 100vh;
+  background: #0e0e1a;
+  color: #e2e8f0;
+}
+
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 14, 26, 0.2) 0%,
+    rgba(14, 14, 26, 0.7) 60%,
+    #0e0e1a 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 2.5rem;
+}
+.hero-content {
+  max-width: 700px;
+}
+.hero-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #fb923c;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+.hero-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+.badge-orange {
+  background: rgba(251, 146, 60, 0.12);
+  color: #fb923c;
+  border: 1px solid #fb923c;
+}
+.badge-purple {
+  background: rgba(192, 132, 252, 0.12);
+  color: #fb923c;
+  border: 1px solid #fb923c;
+}
+
+/* ── Page content ───────────────────────────────── */
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Section ────────────────────────────────────── */
+.section {
+  margin-bottom: 3rem;
+}
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+/* ── Core Traits ────────────────────────────────── */
+.traits-grid {
+  background: #12121f;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.trait-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  align-items: start;
+}
+.trait-row:last-child {
+  border-bottom: none;
+}
+.trait-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fb923c;
+}
+.trait-value {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* ── Becoming ───────────────────────────────────── */
+.becoming-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 640px) {
+  .becoming-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.becoming-card {
+  background: #12121f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.becoming-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fb923c;
+  margin-bottom: 0.75rem;
+}
+.becoming-list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.becoming-list li {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ── Table ──────────────────────────────────────── */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.features-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.features-table thead tr {
+  background: rgba(192, 132, 252, 0.1);
+}
+.features-table th {
+  padding: 0.75rem 0.6rem;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fb923c;
+  white-space: nowrap;
+}
+.features-table th:nth-child(3) {
+  text-align: left;
+}
+.features-table td {
+  padding: 0.6rem 0.6rem;
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  text-align: center;
+  white-space: nowrap;
+}
+.features-table td:nth-child(3) {
+  text-align: left;
+  min-width: 200px;
+}
+.features-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+.features-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.row-highlight td {
+  color: #fb923c;
+}
+.level-cell {
+  font-weight: 700;
+  color: #f1f5f9 !important;
+  text-align: center;
+}
+
+.die-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(251, 146, 60, 0.1);
+  color: #fb923c;
+  border: 1px solid rgba(251, 146, 60, 0.3);
+}
+
+/* ── Panels ─────────────────────────────────────── */
+.panels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.panel {
+  background: #12121f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+.panel-header:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.panel-header.open {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.panel-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.panel-level-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fb923c;
+  background: rgba(192, 132, 252, 0.12);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.panel-features-preview {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.panel-chevron {
+  color: #64748b;
+  flex-shrink: 0;
+}
+.panel-body {
+  padding: 1.25rem;
+}
+
+/* ── Feature cards ──────────────────────────────── */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.feature-card {
+  background: #0e0e1a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.feature-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+}
+.feature-body {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.65;
+}
+.feature-body :deep(b) {
+  color: #e2e8f0;
+}
+
+/* ── Subclass grid ──────────────────────────────── */
+.subclass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.subclass-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #0e0e1a;
+  border: 1px solid rgba(192, 132, 252, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+.subclass-btn:hover {
+  background: rgba(192, 132, 252, 0.08);
+  border-color: #fb923c;
+  color: #f1f5f9;
+}
+.subclass-icon {
+  font-size: 1.5rem !important;
+  color: #fb923c;
+}
+
+/* ── Mobile ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero {
+    height: 300px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-overlay {
+    padding: 1.5rem;
+  }
+  .trait-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

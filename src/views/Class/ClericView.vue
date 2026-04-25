@@ -1,577 +1,172 @@
 <template>
-  <div class="mt-15">
-    <div class="bg-grey-darken-4 center pa-5">
-      <h2 class="mb-5">Core Cleric Traits</h2>
+  <div class="cleric-page">
+    <!-- Hero Banner -->
+    <div class="hero">
+      <img src="../assets/classes/cleric.png" alt="Cleric" class="hero-img" />
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Class</span>
+          <h1 class="hero-title">Cleric</h1>
+          <p class="hero-subtitle">
+            A priestly champion who wields divine magic in service of a higher
+            power
+          </p>
+          <div class="hero-badges">
+            <span class="badge badge-orange">Medium Complexity</span>
+            <span class="badge badge-purple">Wisdom</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <div class="mb-10">
-        <v-row>
-          <v-col cols="2"><b>Primary Ability</b></v-col>
-          <v-col class="mr-10">Wisdom</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Hit Point Die</b></v-col>
-          <v-col class="mr-10">D8 per Cleric level</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Saving Throw Proficiencies</b></v-col>
-          <v-col class="mr-10">Wisdom and Charisma</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Skill Proficiencies</b></v-col>
-          <v-col class="mr-10"
-            >Choose 2: History, Insight, Medicine, Persuasion, or
-            Religion</v-col
+    <div class="page-content">
+      <!-- Core Traits -->
+      <section class="section">
+        <h2 class="section-title">Core Traits</h2>
+        <div class="traits-grid">
+          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+            <span class="trait-label">{{ trait.label }}</span>
+            <span class="trait-value">{{ trait.value }}</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Becoming a Cleric -->
+      <section class="section">
+        <h2 class="section-title">Becoming a Cleric</h2>
+        <div class="becoming-grid">
+          <div class="becoming-card">
+            <h3 class="becoming-heading">As a Level 1 Character</h3>
+            <ul class="becoming-list">
+              <li>Gain all the traits in the Core Cleric Traits table.</li>
+              <li>
+                Gain the Cleric's level 1 features listed in the Features table.
+              </li>
+            </ul>
+          </div>
+          <div class="becoming-card">
+            <h3 class="becoming-heading">As a Multiclass Character</h3>
+            <ul class="becoming-list">
+              <li>
+                Gain the Hit Point Die and training with Light and Medium armor
+                and Shields.
+              </li>
+              <li>
+                Gain the Cleric's level 1 features. See the multiclassing rules
+                to determine available spell slots.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Class Features Table -->
+      <section class="section">
+        <h2 class="section-title">Class Features</h2>
+        <div class="table-wrap">
+          <table class="features-table">
+            <thead>
+              <tr>
+                <th>Level</th>
+                <th>Prof. Bonus</th>
+                <th>Features Unlocked</th>
+                <th>Channel Divinity</th>
+                <th>Cantrips</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="item in levels"
+                :key="item.level"
+                :class="{ 'row-highlight': item.feature.includes('Subclass') }"
+              >
+                <td class="level-cell">{{ item.level }}</td>
+                <td class="text-center">{{ item.profBonus }}</td>
+                <td>{{ item.feature }}</td>
+                <td class="text-center">
+                  <span class="cd-badge">{{ item.channelDivinity }}</span>
+                </td>
+                <td class="text-center">{{ item.cantrip }}</td>
+                <td class="text-center">{{ item.first }}</td>
+                <td class="text-center">{{ item.second }}</td>
+                <td class="text-center">{{ item.third }}</td>
+                <td class="text-center">{{ item.fourth }}</td>
+                <td class="text-center">{{ item.fifth }}</td>
+                <td class="text-center">{{ item.sixth }}</td>
+                <td class="text-center">{{ item.seventh }}</td>
+                <td class="text-center">{{ item.eight }}</td>
+                <td class="text-center">{{ item.ninth }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Level Breakdown -->
+      <section class="section">
+        <h2 class="section-title">Level Breakdown</h2>
+        <div class="panels">
+          <div
+            v-for="(lvl, index) in levelPanels"
+            :key="lvl.level"
+            class="panel"
           >
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Weapon Proficiencies</b></v-col>
-          <v-col class="mr-10">Simple weapons</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Armor Training</b></v-col>
-          <v-col class="mr-10">Light and Medium armor and shields</v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <v-row>
-          <v-col cols="2"><b>Starting Equipment</b></v-col>
-          <v-col class="mr-10"
-            >Choose A or B: (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest's
-            Pack, and 7 GP; or (B) 110 GP
-          </v-col>
-          <v-divider></v-divider>
-        </v-row>
-        <h2 class="mt-10">Becoming a Cleric</h2>
-        <h3 class="mt-5">As a Level 1 Character</h3>
-        <li>Gain all the traits in the Core Cleric Traits table.</li>
-        <li>
-          Gain the Cleric's level 1 features, which are listed in the Cleric
-          Features table.
-        </li>
-        <h3 class="mt-5">As a Multiclass Character</h3>
-        <li>
-          Gain the following traits from the Core Cleric Traits table: Hit Point
-          Die and training with Light and Medium armor and Shields.
-        </li>
-        <li>
-          Gain the Cleric's level 1 features, which are listed in the Cleric
-          Features table. See the multiclassing rules in multiclassing to
-          determine your available spell slots.
-        </li>
-      </div>
-    </div>
-    <!-- Summary table of the class -->
-    <div style="width: 1525px" class="center">
-      <v-table>
-        <thead>
-          <th class="text-center" colspan="5"></th>
-          <th class="text-center" colspan="7">Spell Slots Known</th>
-          <tr>
-            <th class="text-center">Level</th>
-            <th class="text-center">Proficiency Bonus</th>
-            <th class="text-center">Unlocked</th>
-            <th class="text-center">Channel Divinity</th>
-            <th class="text-center">Cantrip Known</th>
-            <th class="text-center">1</th>
-            <th class="text-center">2</th>
-            <th class="text-center">3</th>
-            <th class="text-center">4</th>
-            <th class="text-center">5</th>
-            <th class="text-center">6</th>
-            <th class="text-center">7</th>
-            <th class="text-center">8</th>
-            <th class="text-center">9</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="item in levels" :key="item.level">
-            <td class="text-center">{{ item.level }}</td>
-            <td class="text-center">{{ item.profBonus }}</td>
-            <td class="text-center">{{ item.feature }}</td>
-            <td class="text-center">{{ item.channelDivinity }}</td>
-            <td class="text-center">{{ item.cantrip }}</td>
-            <td class="text-center">{{ item.first }}</td>
-            <td class="text-center">{{ item.second }}</td>
-            <td class="text-center">{{ item.third }}</td>
-            <td class="text-center">{{ item.fourth }}</td>
-            <td class="text-center">{{ item.fifth }}</td>
-            <td class="text-center">{{ item.sixth }}</td>
-            <td class="text-center">{{ item.seventh }}</td>
-            <td class="text-center">{{ item.eight }}</td>
-            <td class="text-center">{{ item.ninth }}</td>
-          </tr>
-        </tbody>
-      </v-table>
-    </div>
-    <div class="mt-5">
-      <!-- All levels that an ability is gained. -->
-      <div class="center mt-5">
-        <v-expansion-panels v-model="panel">
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 1</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Spellcasting</h2>
-                  <br />
-                  <p>
-                    You have learned to cast spells through prayer and
-                    meditation. See chapter 7 for the rules on spellcasting. The
-                    information below details how you use those rules with
-                    Cleric spells, which appear on the Cleric spell list later
-                    in the class’s description.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Cantrips.</b> You know three cantrips of your choice from
-                    the Cleric spell list. Guidance, Sacred Flame, and
-                    Thaumaturgy are recommended.
-                  </p>
-                  <br />
-                  <p>
-                    Whenever you gain a Cleric level, you can replace one of
-                    your cantrips with another cantrip of your choice from the
-                    Cleric spell list.
-                  </p>
-                  <br />
-                  <p>
-                    When you reach Cleric levels 4 and 10, you learn another
-                    cantrip of your choice from the Cleric spell list, as shown
-                    in the Cantrips column of the Cleric Features table.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Spell Slots. </b>The Cleric Features table shows how many
-                    spell slots you have to cast your level 1+ spells. You
-                    regain all expended slots when you finish a Long Rest.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Prepared Spells of Level 1+. </b>You prepare the list of
-                    level 1+ spells that are available for you to cast with this
-                    feature. To start, choose four level 1 spells from the
-                    Cleric spell list. Bless, Cure Wounds, Guiding Bolt, and
-                    Shield of Faith are recommended.
-                  </p>
-                  <br />
-                  <p>
-                    The number of spells on your list increases as you gain
-                    Cleric levels, as shown in the Prepared Spells column of the
-                    Cleric Features table. Whenever that number increases,
-                    choose additional spells from the Cleric spell list until
-                    the number of spells on your list matches the number on the
-                    table. The chosen spells must be of a level for which you
-                    have spell slots. For example, if you’re a level 3 Cleric,
-                    your list of prepared spells can include six spells of
-                    levels 1 and 2 in any combination.
-                  </p>
-                  <br />
-                  <p>
-                    If another Cleric feature gives you spells that you always
-                    have prepared, those spells don’t count against the number
-                    of spells you can prepare with this feature, but those
-                    spells otherwise count as Cleric spells for you.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Changing Your Prepared Spells.</b> Whenever you finish a
-                    Long Rest, you can change your list of prepared spells,
-                    replacing any of the spells there with other Cleric spells
-                    for which you have spell slots.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Spellcasting Ability. </b>Wisdom is your spellcasting
-                    ability for your Cleric spells.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Spellcasting Focus. </b>You can use a Holy Symbol as a
-                    Spellcasting Focus for your Cleric spells.
-                  </p>
-                </v-col>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Divine Order</h2>
-                  <br />
-                  <p>
-                    You have dedicated yourself to one of the following sacred
-                    roles of your choice.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Protector.</b> Trained for battle, you gain proficiency
-                    with Martial weapons and training with Heavy armor.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Thaumaturge. </b>You know one extra cantrip from the
-                    Cleric spell list. In addition, your mystical connection to
-                    the divine gives you a bonus to your Intelligence (Arcana or
-                    Religion) checks. The bonus equals your Wisdom modifier
-                    (minimum of +1)
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 2</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Channel Divinity</h2>
-                  <br />
-                  <p>
-                    You can channel divine energy directly from the Outer Planes
-                    to fuel magical effects. You start with two such effects:
-                    Divine Spark and Turn Undead, each of which is described
-                    below. Each time you use this class’s Channel Divinity,
-                    choose which Channel Divinity effect from this class to
-                    create. You gain additional effect options at higher Cleric
-                    levels.
-                  </p>
-                  <br />
-                  <p>
-                    You can use this class’s Channel Divinity twice. You regain
-                    one of its expended uses when you finish a Short Rest, and
-                    you regain all expended uses when you finish a Long Rest.
-                    You gain additional uses when you reach certain Cleric
-                    levels, as shown in the Channel Divinity column of the
-                    Cleric Features table.
-                  </p>
-                  <br />
-                  <p>
-                    If a Channel Divinity effect requires a saving throw, the DC
-                    equals the spell save DC from this class’s Spellcasting
-                    feature.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Divine Spark.</b> As a Magic action, you point your Holy
-                    Symbol at another creature you can see within 30 feet of
-                    yourself and focus divine energy at it. Roll 1d8 and add
-                    your Wisdom modifier. You either restore Hit Points to the
-                    creature equal to that total or force the creature to make a
-                    Constitution saving throw. On a failed save, the creature
-                    takes Necrotic or Radiant damage (your choice) equal to that
-                    total. On a successful save, the creature takes half as much
-                    damage (round down).
-                  </p>
-                  <br />
-                  <p>
-                    You roll an additional d8 when you reach Cleric levels 7
-                    (2d8), 13 (3d8), and 18 (4d8).
-                  </p>
-                  <br />
-                  <p>
-                    <b>Turn Undead.</b> As a Magic action, you present your Holy
-                    Symbol and censure Undead creatures. Each Undead of your
-                    choice within 30 feet of you must make a Wisdom saving
-                    throw. If the creature fails its save, it has the Frightened
-                    and Incapacitated conditions for 1 minute. For that
-                    duration, it tries to move as far from you as it can on its
-                    turns. This effect ends early on the creature if it takes
-                    any damage, if you have the Incapacitated condition, or if
-                    you die.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 3</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Cleric Subclass</h2>
-                  <br />
-                  <p>
-                    You gain a Cleric subclass of your choice. The Life Domain,
-                    Light Domain, Trickery Domain, and War Domain subclasses are
-                    detailed after this class’s description. A subclass is a
-                    specialization that grants you features at certain Cleric
-                    levels. For the rest of your career, you gain each of your
-                    subclass’s features that are of your Cleric level or lower.
-                  </p>
-                </v-col>
-              </v-row>
-              <br />
-              <v-row>
-                <v-col v-for="(sub, index) in subclasses" :key="index">
-                  <div class="d-flex justify-center">
-                    <v-btn
-                      @click="goTo(sub.title)"
-                      class="mb-2"
-                      color="rgb(54, 61, 68)"
-                    >
-                      <font-awesome-icon
-                        class="fab fa"
-                        :icon="['fa', icons[index]]"
-                        :key="index"
-                      />
-                    </v-btn>
-                  </div>
-                  <p class="text-center">{{ sub.title }} Domain</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 4</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify. You gain this feature
-                    again at Cleric levels 8, 12, and 16.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 5</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Sear Undead</h2>
-                  <br />
-                  <p>
-                    Whenever you use Turn Undead, you can roll a number of d8s
-                    equal to your Wisdom modifier (minimum of 1d8) and add the
-                    rolls together. Each Undead that fails its saving throw
-                    against that use of Turn Undead takes Radiant damage equal
-                    to the roll’s total. This damage doesn’t end the turn
-                    effect.
-                  </p>
-                  <br />
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 6</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 7</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Blessed Strikes</h2>
-                  <br />
-                  <p>
-                    Divine power infuses you in battle. You gain one of the
-                    following options of your choice (if you get either option
-                    from a Cleric subclass in an older book, use only the option
-                    you choose for this feature).
-                  </p>
-                  <br />
-                  <p>
-                    <b>Divine Strike. </b>Once on each of your turns when you
-                    hit a creature with an attack roll using a weapon, you can
-                    cause the target to take an extra 1d8 Necrotic or Radiant
-                    damage (your choice).
-                  </p>
-                  <br />
-                  <p>
-                    <b>Potent Spellcasting. </b>Add your Wisdom modifier to the
-                    damage you deal with any Cleric cantrip.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 8</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify. You gain this feature
-                    again at Cleric levels 8, 12, and 16.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
+            <div
+              class="panel-header"
+              @click="togglePanel(index)"
+              :class="{ open: openPanels.includes(index) }"
+            >
+              <div class="panel-header-left">
+                <span class="panel-level-badge">{{ lvl.level }}</span>
+                <span class="panel-features-preview">{{
+                  lvl.features.map((f) => f.title).join(" · ")
+                }}</span>
+              </div>
+              <v-icon class="panel-chevron">
+                {{
+                  openPanels.includes(index)
+                    ? "mdi-chevron-up"
+                    : "mdi-chevron-down"
+                }}
+              </v-icon>
+            </div>
 
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 10</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row>
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Divine Intervention</h2>
-                  <br />
-                  <p>
-                    You can call on your deity or pantheon to intervene on your
-                    behalf. As a Magic action, choose any Cleric spell of level
-                    5 or lower that doesn’t require a Reaction to cast. As part
-                    of the same action, you cast that spell without expending a
-                    spell slot or needing Material components. You can’t use
-                    this feature again until you finish a Long Rest.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 12</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify. You gain this feature
-                    again at Cleric levels 8, 12, and 16.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 14</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Improved Blessed Strikes</h2>
-                  <br />
-                  <p>
-                    The option you chose for Blessed Strikes grows more
-                    powerful.
-                  </p>
-                  <br />
-                  <p>
-                    <b>Divine Strike. </b>The extra damage of your Divine Strike
-                    increases to 2d8.
-                  </p>
-                  <br />
-                  <p>
-                    <b>otent Spellcasting. </b>When you cast a Cleric cantrip
-                    and deal damage to a creature with it, you can give vitality
-                    to yourself or another creature within 60 feet of yourself,
-                    granting a number of Temporary Hit Points equal to twice
-                    your Wisdom modifier.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel expand v-model="panel">
-            <v-expansion-panel-title>
-              <h2>Level 16</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col>
-                  <h2 class="elevation-10 pa-5">Ability Score Improvement</h2>
-                  <br />
-                  <p>
-                    You gain the Ability Score Improvement feat or another feat
-                    of your choice for which you qualify. You gain this feature
-                    again at Cleric levels 8, 12, and 16.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 17</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Subclass Feature</h2>
-                  <br />
-                  <p>You gain a new feature from the subclass you chose</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-title>
-              <h2>Level 19</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Epic Boon</h2>
-                  <br />
-                  <p>
-                    You gain an Epic Boon feat or another feat of your choice
-                    for which you qualify. Boon of Fate is recommended.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-
-          <v-expansion-panel class="mb-10">
-            <v-expansion-panel-title>
-              <h2>Level 20</h2>
-            </v-expansion-panel-title>
-            <v-expansion-panel-text>
-              <v-row class="d-flex justify-center">
-                <v-col cols="6">
-                  <h2 class="elevation-10 pa-5">Greater Divine Intervention</h2>
-                  <br />
-                  <p>
-                    You can call on even more powerful divine intervention. When
-                    you use your Divine Intervention feature, you can choose
-                    Wish when you select a spell. If you do so, you can’t use
-                    Divine Intervention again until you finish 2d4 Long Rests.
-                  </p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-text>
-          </v-expansion-panel>
-        </v-expansion-panels>
-      </div>
+            <div class="panel-body" v-if="openPanels.includes(index)">
+              <!-- Subclass buttons for level 3 -->
+              <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
+                <div
+                  v-for="(sub, si) in subclasses"
+                  :key="si"
+                  class="subclass-btn"
+                  @click="goTo(sub.title)"
+                >
+                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
+                  <span>{{ sub.title }} Domain</span>
+                </div>
+              </div>
+              <div class="feature-cards">
+                <div
+                  v-for="feature in lvl.features"
+                  :key="feature.title"
+                  class="feature-card"
+                >
+                  <h3 class="feature-title">{{ feature.title }}</h3>
+                  <div class="feature-body" v-html="feature.body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -580,34 +175,44 @@
 import router from "@/router";
 
 export default {
-  methods: {
-    goTo(label) {
-      router
-        .push("/wiki/classes/bard/" + label.replace(" ", "_").toLowerCase())
-        .then(() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    },
-  },
-
   data() {
     return {
+      openPanels: [0],
+
       subclasses: [
+        { title: "Life" },
+        { title: "Light" },
+        { title: "Trickery" },
+        { title: "War" },
+      ],
+      subclassIcons: [
+        "mdi-heart-pulse",
+        "mdi-white-balance-sunny",
+        "mdi-drama-masks",
+        "mdi-sword-cross",
+      ],
+
+      coreTraits: [
+        { label: "Primary Ability", value: "Wisdom" },
+        { label: "Hit Point Die", value: "D8 per Cleric level" },
+        { label: "Saving Throw Proficiencies", value: "Wisdom and Charisma" },
         {
-          title: "Life",
+          label: "Skill Proficiencies",
+          value:
+            "Choose 2: History, Insight, Medicine, Persuasion, or Religion",
+        },
+        { label: "Weapon Proficiencies", value: "Simple weapons" },
+        {
+          label: "Armor Training",
+          value: "Light and Medium armor and Shields",
         },
         {
-          title: "Light",
-        },
-        {
-          title: "Trickery",
-        },
-        {
-          title: "War",
+          label: "Starting Equipment",
+          value:
+            "Choose A or B: (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest's Pack, and 7 GP; or (B) 110 GP",
         },
       ],
-      icons: ["hand-holding-heart", "sun", "masks-theater", "khanda"],
-      panel: [0],
+
       levels: [
         {
           level: "1",
@@ -676,7 +281,7 @@ export default {
         {
           level: "5",
           profBonus: "+3",
-          feature: "Scar Undead",
+          feature: "Sear Undead",
           channelDivinity: "2",
           cantrip: "4",
           first: "4",
@@ -740,7 +345,7 @@ export default {
         {
           level: "9",
           profBonus: "+4",
-          feature: "------",
+          feature: "—",
           channelDivinity: "3",
           cantrip: "4",
           first: "4",
@@ -772,7 +377,7 @@ export default {
         {
           level: "11",
           profBonus: "+4",
-          feature: "------",
+          feature: "—",
           channelDivinity: "3",
           cantrip: "5",
           first: "4",
@@ -804,7 +409,7 @@ export default {
         {
           level: "13",
           profBonus: "+5",
-          feature: "------",
+          feature: "—",
           channelDivinity: "3",
           cantrip: "5",
           first: "4",
@@ -836,7 +441,7 @@ export default {
         {
           level: "15",
           profBonus: "+5",
-          feature: "------",
+          feature: "—",
           channelDivinity: "3",
           cantrip: "5",
           first: "4",
@@ -884,7 +489,7 @@ export default {
         {
           level: "18",
           profBonus: "+6",
-          feature: "------",
+          feature: "—",
           channelDivinity: "4",
           cantrip: "5",
           first: "4",
@@ -930,13 +535,557 @@ export default {
           ninth: "1",
         },
       ],
+
+      levelPanels: [
+        {
+          level: "Level 1",
+          features: [
+            {
+              title: "Spellcasting",
+              body: `<p>You have learned to cast spells through prayer and meditation. Wisdom is your spellcasting ability and you can use a Holy Symbol as a Spellcasting Focus.</p>
+                     <br/>
+                     <p><b>Cantrips.</b> You know three cantrips of your choice from the Cleric spell list. Guidance, Sacred Flame, and Thaumaturgy are recommended. You gain more cantrips at levels 4 and 10.</p>
+                     <br/>
+                     <p><b>Prepared Spells.</b> Choose four level 1 spells from the Cleric spell list to start. Bless, Cure Wounds, Guiding Bolt, and Shield of Faith are recommended.</p>
+                     <br/>
+                     <p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can change your list of prepared spells, replacing any of the spells there with other Cleric spells for which you have spell slots.</p>`,
+            },
+            {
+              title: "Divine Order",
+              body: `<p>You have dedicated yourself to one of the following sacred roles of your choice.</p>
+                     <br/>
+                     <p><b>Protector.</b> Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.</p>
+                     <br/>
+                     <p><b>Thaumaturge.</b> You know one extra cantrip from the Cleric spell list. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks equal to your Wisdom modifier (minimum of +1).</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 2",
+          features: [
+            {
+              title: "Channel Divinity",
+              body: `<p>You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with two effects: Divine Spark and Turn Undead. You gain additional effects from your subclass. You can use Channel Divinity twice, regaining one use on a Short Rest and all uses on a Long Rest.</p>
+                     <br/>
+                     <p><b>Divine Spark.</b> As a Magic action, point your Holy Symbol at a creature within 30 feet. Roll 1d8 + your Wisdom modifier. Either restore that many Hit Points to the creature, or force a Constitution save — on a fail, it takes Necrotic or Radiant damage equal to that total (half on a success). The die increases at levels 7 (2d8), 13 (3d8), and 18 (4d8).</p>
+                     <br/>
+                     <p><b>Turn Undead.</b> As a Magic action, present your Holy Symbol. Each Undead of your choice within 30 feet must make a Wisdom saving throw or have the Frightened and Incapacitated conditions for 1 minute, moving as far from you as possible each turn.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 3",
+          features: [
+            {
+              title: "Cleric Subclass",
+              body: `<p>You gain a Cleric subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Cleric level or lower. Choose your domain below:</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 4",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Cleric levels 8, 12, and 16.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 5",
+          features: [
+            {
+              title: "Sear Undead",
+              body: `<p>Whenever you use Turn Undead, you can roll a number of d8s equal to your Wisdom modifier (minimum of 1d8) and add the rolls together. Each Undead that fails its saving throw against that use of Turn Undead takes Radiant damage equal to the roll's total. This damage doesn't end the turn effect.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 6",
+          features: [
+            {
+              title: "Subclass Feature",
+              body: `<p>You gain a new feature from your chosen domain.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 7",
+          features: [
+            {
+              title: "Blessed Strikes",
+              body: `<p>Divine power infuses you in battle. Choose one of the following options:</p>
+                     <br/>
+                     <p><b>Divine Strike.</b> Once on each of your turns when you hit a creature with a weapon attack, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).</p>
+                     <br/>
+                     <p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Cleric cantrip.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 8",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 10",
+          features: [
+            {
+              title: "Divine Intervention",
+              body: `<p>As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction to cast. You cast that spell without expending a spell slot or needing Material components. You can't use this feature again until you finish a Long Rest.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 12",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 14",
+          features: [
+            {
+              title: "Improved Blessed Strikes",
+              body: `<p>The option you chose for Blessed Strikes grows more powerful.</p>
+                     <br/>
+                     <p><b>Divine Strike.</b> The extra damage of your Divine Strike increases to 2d8.</p>
+                     <br/>
+                     <p><b>Potent Spellcasting.</b> When you cast a Cleric cantrip and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet, granting Temporary Hit Points equal to twice your Wisdom modifier.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 16",
+          features: [
+            {
+              title: "Ability Score Improvement",
+              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 17",
+          features: [
+            {
+              title: "Subclass Feature",
+              body: `<p>You gain a new feature from your chosen domain.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 19",
+          features: [
+            {
+              title: "Epic Boon",
+              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.</p>`,
+            },
+          ],
+        },
+        {
+          level: "Level 20",
+          features: [
+            {
+              title: "Greater Divine Intervention",
+              body: `<p>When you use your Divine Intervention feature, you can choose Wish when you select a spell. If you do so, you can't use Divine Intervention again until you finish 2d4 Long Rests.</p>`,
+            },
+          ],
+        },
+      ],
     };
+  },
+
+  methods: {
+    togglePanel(index) {
+      const i = this.openPanels.indexOf(index);
+      if (i === -1) this.openPanels.push(index);
+      else this.openPanels.splice(i, 1);
+    },
+    goTo(label) {
+      router
+        .push(
+          "/wiki/classes/cleric/" + label.replace(/\s+/g, "_").toLowerCase(),
+        )
+        .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+    },
   },
 };
 </script>
 
-<style>
-.center {
-  width: 80%;
+<style scoped>
+/* ── Page ───────────────────────────────────────── */
+.cleric-page {
+  min-height: 100vh;
+  background: #0e0e1a;
+  color: #e2e8f0;
+}
+
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 14, 26, 0.2) 0%,
+    rgba(14, 14, 26, 0.7) 60%,
+    #0e0e1a 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 2.5rem;
+}
+.hero-content {
+  max-width: 700px;
+}
+.hero-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #fbbf24;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+.hero-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+.badge-orange {
+  background: rgba(251, 146, 60, 0.12);
+  color: #fb923c;
+  border: 1px solid #fb923c;
+}
+.badge-purple {
+  background: rgba(192, 132, 252, 0.12);
+  color: #fbbf24;
+  border: 1px solid #fbbf24;
+}
+
+/* ── Page content ───────────────────────────────── */
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Section ────────────────────────────────────── */
+.section {
+  margin-bottom: 3rem;
+}
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+/* ── Core Traits ────────────────────────────────── */
+.traits-grid {
+  background: #12121f;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.trait-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  align-items: start;
+}
+.trait-row:last-child {
+  border-bottom: none;
+}
+.trait-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fbbf24;
+}
+.trait-value {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* ── Becoming ───────────────────────────────────── */
+.becoming-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 640px) {
+  .becoming-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.becoming-card {
+  background: #12121f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.becoming-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fbbf24;
+  margin-bottom: 0.75rem;
+}
+.becoming-list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.becoming-list li {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ── Table ──────────────────────────────────────── */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.features-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.features-table thead tr {
+  background: rgba(192, 132, 252, 0.1);
+}
+.features-table th {
+  padding: 0.75rem 0.6rem;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fbbf24;
+  white-space: nowrap;
+}
+.features-table th:nth-child(3) {
+  text-align: left;
+}
+.features-table td {
+  padding: 0.6rem 0.6rem;
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  text-align: center;
+  white-space: nowrap;
+}
+.features-table td:nth-child(3) {
+  text-align: left;
+  min-width: 200px;
+}
+.features-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+.features-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.row-highlight td {
+  color: #fbbf24;
+}
+.level-cell {
+  font-weight: 700;
+  color: #f1f5f9 !important;
+  text-align: center;
+}
+
+.cd-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+/* ── Panels ─────────────────────────────────────── */
+.panels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.panel {
+  background: #12121f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+.panel-header:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.panel-header.open {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.panel-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.panel-level-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fbbf24;
+  background: rgba(192, 132, 252, 0.12);
+  border: 1px solid rgba(192, 132, 252, 0.3);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.panel-features-preview {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.panel-chevron {
+  color: #64748b;
+  flex-shrink: 0;
+}
+.panel-body {
+  padding: 1.25rem;
+}
+
+/* ── Feature cards ──────────────────────────────── */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.feature-card {
+  background: #0e0e1a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.feature-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+}
+.feature-body {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.65;
+}
+.feature-body :deep(b) {
+  color: #e2e8f0;
+}
+
+/* ── Subclass grid ──────────────────────────────── */
+.subclass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.subclass-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #0e0e1a;
+  border: 1px solid rgba(192, 132, 252, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+.subclass-btn:hover {
+  background: rgba(192, 132, 252, 0.08);
+  border-color: #fbbf24;
+  color: #f1f5f9;
+}
+.subclass-icon {
+  font-size: 1.5rem !important;
+  color: #fbbf24;
+}
+
+/* ── Mobile ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero {
+    height: 300px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-overlay {
+    padding: 1.5rem;
+  }
+  .trait-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
