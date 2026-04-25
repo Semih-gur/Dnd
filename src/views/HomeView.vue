@@ -78,6 +78,107 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <span class="footer-logo">Beholder's Tavern</span>
+          <p class="footer-tagline">
+            Your complete D&D 2024 companion. Not affiliated with Wizards of the
+            Coast.
+          </p>
+          <div class="footer-socials">
+            <a
+              href="https://www.patreon.com/YOUR_PAGE"
+              target="_blank"
+              class="social-link"
+            >
+              <v-icon size="20">mdi-patreon</v-icon>
+            </a>
+            <a
+              href="https://discord.gg/YOUR_SERVER"
+              target="_blank"
+              class="social-link"
+            >
+              <v-icon size="20">mdi-discord</v-icon>
+            </a>
+          </div>
+        </div>
+
+        <!-- Wiki links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Wiki</h3>
+          <ul class="footer-links">
+            <li><router-link to="/wiki/classes">Classes</router-link></li>
+            <li><router-link to="/wiki/species">Species</router-link></li>
+            <li><router-link to="/wiki/spells">Spells</router-link></li>
+            <li>
+              <router-link to="/wiki/backgrounds">Backgrounds</router-link>
+            </li>
+            <li><router-link to="/wiki/feats">Feats</router-link></li>
+            <li><router-link to="/wiki/items">Items</router-link></li>
+          </ul>
+        </div>
+
+        <!-- Support links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Support</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.patreon.com/YOUR_PAGE" target="_blank"
+                >Patreon</a
+              >
+            </li>
+            <li>
+              <a href="https://discord.gg/YOUR_SERVER" target="_blank"
+                >Join Discord</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact form -->
+        <div class="footer-col footer-contact">
+          <h3 class="footer-heading">Get in Touch</h3>
+          <div class="contact-form">
+            <input
+              v-model="contact.name"
+              class="contact-input"
+              placeholder="Your name"
+              type="text"
+            />
+            <input
+              v-model="contact.email"
+              class="contact-input"
+              placeholder="Your email"
+              type="email"
+            />
+            <textarea
+              v-model="contact.message"
+              class="contact-input contact-textarea"
+              placeholder="Your message — bug reports, suggestions, feedback..."
+              rows="3"
+            ></textarea>
+            <button
+              class="contact-btn"
+              @click="sendMessage"
+              :disabled="contact.sent"
+            >
+              {{ contact.sent ? "✓ Message Sent!" : "Send Message" }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © {{ new Date().getFullYear() }} Beholder's Tavern. Fan-made project.
+          D&D content belongs to Wizards of the Coast.
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -95,6 +196,12 @@ export default {
   },
   data() {
     return {
+      contact: {
+        name: "",
+        email: "",
+        message: "",
+        sent: false,
+      },
       quickLinks: [
         { label: "Classes", icon: "mdi-sword-cross", path: "/wiki/classes" },
         { label: "Species", icon: "mdi-account", path: "/wiki/species" },
@@ -347,5 +454,222 @@ export default {
 }
 .quick-card:hover .quick-label {
   color: #c084fc;
+}
+/* ── Patreon Banner ─────────────────────────────── */
+.patreon-banner {
+  background: linear-gradient(
+    135deg,
+    rgba(249, 115, 22, 0.15) 0%,
+    rgba(14, 14, 26, 0.95) 100%
+  );
+  border-top: 1px solid rgba(249, 115, 22, 0.3);
+  border-bottom: 1px solid rgba(249, 115, 22, 0.3);
+  padding: 2rem 1.5rem;
+}
+.patreon-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.patreon-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.patreon-icon {
+  font-size: 2.5rem !important;
+  color: #f97316;
+  flex-shrink: 0;
+}
+.patreon-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.25rem;
+}
+.patreon-desc {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin: 0;
+  max-width: 500px;
+}
+.patreon-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: #f97316;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+.patreon-btn:hover {
+  background: #ea6c00;
+  transform: translateY(-2px);
+}
+
+/* ── Footer ─────────────────────────────────────── */
+.site-footer {
+  background: #0a0a14;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 3rem;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Brand */
+.footer-logo {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #f8fafc;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.footer-tagline {
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #64748b;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.social-link:hover {
+  background: rgba(192, 132, 252, 0.1);
+  border-color: rgba(192, 132, 252, 0.3);
+  color: #c084fc;
+}
+
+/* Columns */
+.footer-heading {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #c084fc;
+  margin-bottom: 1rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-links a,
+.footer-links .router-link-active {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.footer-links a:hover {
+  color: #c084fc;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.contact-input {
+  width: 100%;
+  padding: 0.6rem 0.875rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+  box-sizing: border-box;
+  resize: none;
+  font-family: inherit;
+}
+.contact-input::placeholder {
+  color: #334155;
+}
+.contact-input:focus {
+  border-color: rgba(192, 132, 252, 0.4);
+}
+.contact-textarea {
+  min-height: 80px;
+}
+.contact-btn {
+  padding: 0.6rem 1.25rem;
+  background: rgba(192, 132, 252, 0.15);
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  border-radius: 8px;
+  color: #c084fc;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.contact-btn:hover:not(:disabled) {
+  background: rgba(192, 132, 252, 0.25);
+}
+.contact-btn:disabled {
+  color: #a3e635;
+  border-color: rgba(163, 230, 53, 0.4);
+  background: rgba(163, 230, 53, 0.1);
+  cursor: default;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 0.75rem;
+  color: #334155;
+  margin: 0;
 }
 </style>

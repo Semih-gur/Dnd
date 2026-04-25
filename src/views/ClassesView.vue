@@ -9,14 +9,15 @@
         @click="goTo(cclass.label)"
       >
         <div class="card-image-wrap">
-          <img :src="cclass.art" :alt="cclass.label" class="card-img" />
+          <div class="card-img-clip">
+            <img :src="cclass.art" :alt="cclass.label" class="card-img" />
+          </div>
           <div
             class="complexity-badge"
             :class="'complexity-' + cclass.complexity"
           >
             {{ complexityLabel(cclass.complexity) }}
           </div>
-          <!-- Gradient bleeds image into the text below -->
           <div class="card-gradient-overlay"></div>
         </div>
 
@@ -208,7 +209,7 @@ export default {
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
-  overflow: visible; /* allow gradient to bleed downward */
+  overflow: visible;
   flex-shrink: 0;
 }
 
@@ -219,10 +220,16 @@ export default {
   display: block;
   transition: transform 0.35s ease;
 }
+
+.card-img-clip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
 .class-card:hover .card-img {
   transform: scale(1.05);
 }
-
 /* The gradient that fades the image into the card body below */
 .card-gradient-overlay {
   position: absolute;

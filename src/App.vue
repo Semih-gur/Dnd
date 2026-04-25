@@ -66,6 +66,14 @@
               mdi-chevron-right
             </v-icon>
           </template>
+          <a
+            href="https://www.patreon.com/YOUR_PAGE"
+            target="_blank"
+            class="patreon-float"
+            title="Support us on Patreon"
+            ><v-icon size="20">mdi-patreon</v-icon>
+            <span class="patreon-float-label">Support Us</span></a
+          >
         </div>
       </template>
     </v-app-bar>
@@ -297,5 +305,69 @@ export default {
 .crumb-sep {
   font-size: 0.9rem !important;
   color: rgba(255, 255, 255, 0.2);
+}
+/* ── Patreon Float ──────────────────────────────── */
+.patreon-float {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem 0.65rem 0.9rem;
+  background: #f97316;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.2s ease;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* On hover expand slightly and lift */
+.patreon-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.55);
+}
+
+/* Pulse ring animation */
+.patreon-float::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px solid rgba(249, 115, 22, 0.6);
+  animation: patreon-pulse 2s ease-out infinite;
+}
+
+@keyframes patreon-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Mobile — shrink to icon only */
+@media (max-width: 640px) {
+  .patreon-float-label {
+    display: none;
+  }
+  .patreon-float {
+    padding: 0.75rem;
+  }
 }
 </style>
