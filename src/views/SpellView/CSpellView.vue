@@ -184,8 +184,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .spells-class-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -195,10 +195,10 @@ export default {
   height: 220px;
   background: linear-gradient(
     135deg,
-    rgba(192, 132, 252, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 .hero::before {
@@ -207,12 +207,12 @@ export default {
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 50%,
-      rgba(192, 132, 252, 0.08) 0%,
+      rgba(var(--accent-rgb), 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(192, 132, 252, 0.05) 0%,
+      rgba(var(--accent-rgb), 0.05) 0%,
       transparent 40%
     );
 }
@@ -232,19 +232,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.4rem;
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.4rem;
   line-height: 1.1;
 }
 .hero-subtitle {
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--text-subtle);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -275,28 +275,28 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-light);
   background: transparent;
-  color: #64748b;
+  color: var(--text-subtle);
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
 }
 .tab:hover {
-  border-color: rgba(192, 132, 252, 0.3);
-  color: #c084fc;
-  background: rgba(192, 132, 252, 0.06);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.06);
 }
 .tab.active {
-  background: rgba(192, 132, 252, 0.15);
-  border-color: rgba(192, 132, 252, 0.4);
-  color: #c084fc;
+  background: rgba(var(--accent-rgb), 0.15);
+  border-color: rgba(var(--accent-rgb), 0.4);
+  color: var(--accent);
 }
 
 /* ── Table ──────────────────────────────────────── */
 .table-wrap {
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
   overflow: hidden;
   overflow-x: auto;
 }
@@ -328,7 +328,7 @@ export default {
 }
 
 .spell-table thead tr {
-  background: rgba(192, 132, 252, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
 }
 .spell-table th {
   padding: 0.75rem 1rem;
@@ -337,17 +337,17 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: var(--accent);
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
   transition: background 0.15s ease;
 }
 .spell-table th:hover {
-  background: rgba(192, 132, 252, 0.18);
+  background: rgba(var(--accent-rgb), 0.18);
 }
 .spell-table th.sorted {
-  background: rgba(192, 132, 252, 0.2);
+  background: rgba(var(--accent-rgb), 0.2);
 }
 
 .th-inner {
@@ -364,7 +364,7 @@ export default {
 }
 
 .spell-row {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-faint);
   transition: background 0.15s ease;
   cursor: pointer;
 }
@@ -372,12 +372,12 @@ export default {
   border-bottom: none;
 }
 .spell-row:hover {
-  background: rgba(192, 132, 252, 0.05);
+  background: rgba(var(--accent-rgb), 0.05);
 }
 
 .spell-table td {
   padding: 0.65rem 1rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   vertical-align: middle;
   overflow: hidden;
 }
@@ -392,7 +392,7 @@ export default {
 }
 
 .spell-name {
-  color: #f1f5f9;
+  color: var(--text-heading);
   font-weight: 500;
   display: block;
   overflow: hidden;
@@ -400,7 +400,7 @@ export default {
   white-space: nowrap;
 }
 .spell-row:hover .spell-name {
-  color: #c084fc;
+  color: var(--accent);
 }
 
 .school-badge {
@@ -410,9 +410,9 @@ export default {
   letter-spacing: 0.06em;
   padding: 2px 8px;
   border-radius: 999px;
-  background: rgba(192, 132, 252, 0.1);
-  color: #a78bfa;
-  border: 1px solid rgba(192, 132, 252, 0.2);
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   white-space: nowrap;
   display: inline-block;
   overflow: hidden;

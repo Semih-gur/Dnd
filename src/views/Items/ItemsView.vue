@@ -76,8 +76,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .items-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -87,10 +87,10 @@ export default {
   height: 220px;
   background: linear-gradient(
     135deg,
-    rgba(192, 132, 252, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 .hero::before {
@@ -99,12 +99,12 @@ export default {
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 50%,
-      rgba(192, 132, 252, 0.08) 0%,
+      rgba(var(--accent-rgb), 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(192, 132, 252, 0.05) 0%,
+      rgba(var(--accent-rgb), 0.05) 0%,
       transparent 40%
     );
 }
@@ -124,19 +124,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.4rem;
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.4rem;
   line-height: 1.1;
 }
 .hero-subtitle {
   font-size: 0.95rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -166,13 +166,13 @@ export default {
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  background: #12121f;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  background: var(--bg-card);
+  box-shadow: 0 2px 12px var(--shadow-card);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .item-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 28px var(--shadow-card-hover);
 }
 
 /* Image */
@@ -203,9 +203,9 @@ export default {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(18, 18, 31, 0.5) 40%,
-    rgba(18, 18, 31, 0.92) 75%,
-    #12121f 100%
+    rgba(var(--bg-card-rgb), 0.5) 40%,
+    rgba(var(--bg-card-rgb), 0.92) 75%,
+    var(--bg-card) 100%
   );
 }
 
@@ -224,12 +224,12 @@ export default {
   font-size: 1.15rem;
   font-weight: 700;
   margin: 0;
-  color: #f1f5f9;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  color: var(--text-heading);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 .card-desc {
   font-size: 0.82rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.55;
   margin: 0;
 }

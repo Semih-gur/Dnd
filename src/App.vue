@@ -1,6 +1,43 @@
 <template>
   <v-app>
     <v-app-bar elevation="3" class="nav-bar">
+      <!-- Mobile burger + theme toggle — FAR LEFT (mobile only) -->
+      <div class="mobile-nav">
+        <v-menu offset-y>
+          <template v-slot:activator="{ props }">
+            <v-btn v-bind="props" icon>
+              <v-icon>mdi-menu</v-icon>
+            </v-btn>
+          </template>
+          <v-list class="mobile-dropdown">
+            <v-list-item
+              v-for="item in navItems"
+              :key="item.path"
+              @click="goTo(item.path)"
+              :class="{
+                'mobile-active': $route.path.startsWith('/' + item.path),
+              }"
+            >
+              <template v-slot:prepend>
+                <v-icon>{{ item.icon }}</v-icon>
+              </template>
+              <v-list-item-title>{{ item.label }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
+        <!-- Theme toggle — next to burger on mobile only -->
+        <div
+          class="theme-toggle"
+          @click="toggleTheme"
+          :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+        >
+          <v-icon class="nav-icon">{{
+            isDark ? "mdi-weather-sunny" : "mdi-weather-night"
+          }}</v-icon>
+        </div>
+      </div>
+
       <!-- Logo / Home -->
       <div class="nav-brand" @click="goTo('')">
         <v-icon class="brand-icon">mdi-dragon</v-icon>
@@ -21,29 +58,30 @@
         </div>
       </nav>
 
-      <!-- Mobile burger -->
-      <v-menu offset-y class="mobile-menu">
-        <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" icon class="mobile-burger">
-            <v-icon>mdi-menu</v-icon>
-          </v-btn>
-        </template>
-        <v-list class="mobile-dropdown">
-          <v-list-item
-            v-for="item in navItems"
-            :key="item.path"
-            @click="goTo(item.path)"
-            :class="{
-              'mobile-active': $route.path.startsWith('/' + item.path),
-            }"
-          >
-            <template v-slot:prepend>
-              <v-icon>{{ item.icon }}</v-icon>
-            </template>
-            <v-list-item-title>{{ item.label }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
+      <!-- Right side — theme toggle (desktop) + patreon -->
+      <div class="nav-right">
+        <!-- Theme toggle — desktop only -->
+        <div
+          class="theme-toggle desktop-theme"
+          @click="toggleTheme"
+          :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+        >
+          <v-icon class="nav-icon">{{
+            isDark ? "mdi-weather-sunny" : "mdi-weather-night"
+          }}</v-icon>
+          <span class="nav-label">Theme</span>
+        </div>
+
+        <a
+          href="https://www.patreon.com/YOUR_PAGE"
+          target="_blank"
+          class="patreon-nav-btn"
+          title="Support us on Patreon"
+        >
+          <v-icon size="18">mdi-patreon</v-icon>
+          <span class="patreon-nav-label">Support Us</span>
+        </a>
+      </div>
 
       <!-- Breadcrumb extension slot -->
       <template v-slot:extension>
@@ -66,14 +104,6 @@
               mdi-chevron-right
             </v-icon>
           </template>
-          <a
-            href="https://www.patreon.com/YOUR_PAGE"
-            target="_blank"
-            class="patreon-float"
-            title="Support us on Patreon"
-            ><v-icon size="20">mdi-patreon</v-icon>
-            <span class="patreon-float-label">Support Us</span></a
-          >
         </div>
       </template>
     </v-app-bar>
@@ -89,6 +119,7 @@ export default {
   name: "App",
   data() {
     return {
+      isDark: true,
       navItems: [
         { path: "wiki/species", icon: "mdi-account", label: "Species" },
         { path: "wiki/classes", icon: "mdi-sword-cross", label: "Classes" },
@@ -104,6 +135,14 @@ export default {
     };
   },
 
+  mounted() {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+      this.isDark = false;
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  },
+
   watch: {
     $route() {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -114,7 +153,6 @@ export default {
     breadcrumbs() {
       const segments = this.$route.path.split("/").filter(Boolean);
       const crumbs = [{ label: "Home", path: "" }];
-
       segments.reduce((acc, segment) => {
         const path = acc ? `${acc}/${segment}` : segment;
         const label = segment
@@ -124,13 +162,23 @@ export default {
         crumbs.push({ label, path });
         return path;
       }, "");
-
       return crumbs;
     },
   },
+
   methods: {
     goTo(page) {
       router.push("/" + page);
+    },
+    toggleTheme() {
+      this.isDark = !this.isDark;
+      if (this.isDark) {
+        document.documentElement.removeAttribute("data-theme");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      }
     },
   },
 };
@@ -141,7 +189,8 @@ export default {
 .nav-bar :deep(.v-toolbar__content) {
   display: flex;
   align-items: center;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+  gap: 0.25rem;
 }
 
 /* ── Brand ──────────────────────────────────────── */
@@ -151,7 +200,7 @@ export default {
   gap: 8px;
   cursor: pointer;
   flex-shrink: 0;
-  padding-right: 2rem;
+  padding-right: 1.5rem;
   border-right: 1px solid rgba(255, 255, 255, 0.12);
   user-select: none;
 }
@@ -172,16 +221,15 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   flex: 1;
 }
-
 .nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2px;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
@@ -190,7 +238,7 @@ export default {
   user-select: none;
 }
 .nav-item:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
   color: #f1f5f9;
 }
 .nav-item.active {
@@ -218,25 +266,102 @@ export default {
   white-space: nowrap;
 }
 
-/* ── Mobile burger ──────────────────────────────── */
-.mobile-burger {
-  display: none !important;
+/* ── Right side group ───────────────────────────── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
   margin-left: auto;
 }
 
+/* ── Theme toggle ───────────────────────────────── */
+.theme-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  transition: background 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #f1f5f9;
+}
+
+/* Desktop theme shows, mobile theme hides */
+.desktop-theme {
+  display: flex;
+}
+
+/* ── Patreon nav button ─────────────────────────── */
+.patreon-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  background: #f97316;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.patreon-nav-btn:hover {
+  background: #ea6c00;
+  transform: translateY(-1px);
+}
+
+/* ── Mobile nav ─────────────────────────────────── */
+.mobile-nav {
+  display: none;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.25rem;
+}
+
 @media (max-width: 700px) {
+  /* Show mobile nav */
+  .mobile-nav {
+    display: flex;
+  }
+  /* Hide desktop nav links */
   .nav-links {
     display: none;
   }
-  .mobile-burger {
-    display: flex !important;
+  /* Hide desktop theme toggle */
+  .desktop-theme {
+    display: none;
   }
+  /* Center brand */
   .brand-title {
     display: none;
   }
   .nav-brand {
     border-right: none;
     padding-right: 0;
+    flex: 1;
+    justify-content: center;
+  }
+  /* Mobile theme — icon only */
+  .mobile-nav .theme-toggle {
+    padding: 6px 8px;
+  }
+  /* Patreon — icon only */
+  .patreon-nav-label {
+    display: none;
+  }
+  .patreon-nav-btn {
+    padding: 0.4rem 0.6rem;
   }
 }
 
@@ -248,14 +373,13 @@ export default {
   color: #c084fc !important;
 }
 
-/* ── Breadcrumb extension slot ──────────────────── */
+/* ── Breadcrumb ─────────────────────────────────── */
 .nav-bar :deep(.v-toolbar__extension) {
   padding: 0 1.5rem;
   height: 36px !important;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   background: rgba(255, 255, 255, 0.02);
 }
-
 .breadcrumb-inner {
   display: flex;
   align-items: center;
@@ -263,13 +387,12 @@ export default {
   flex-wrap: wrap;
   width: 100%;
 }
-
 .crumb {
   display: flex;
   align-items: center;
   font-size: 0.78rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.45);
+  color: #64748b;
   cursor: pointer;
   padding: 2px 6px;
   border-radius: 4px;
@@ -305,69 +428,5 @@ export default {
 .crumb-sep {
   font-size: 0.9rem !important;
   color: rgba(255, 255, 255, 0.2);
-}
-/* ── Patreon Float ──────────────────────────────── */
-.patreon-float {
-  position: fixed;
-  bottom: 1.75rem;
-  right: 1.75rem;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.25rem 0.65rem 0.9rem;
-  background: #f97316;
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.2s ease;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/* On hover expand slightly and lift */
-.patreon-float:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.55);
-}
-
-/* Pulse ring animation */
-.patreon-float::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  border: 2px solid rgba(249, 115, 22, 0.6);
-  animation: patreon-pulse 2s ease-out infinite;
-}
-
-@keyframes patreon-pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  70% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-}
-
-/* Mobile — shrink to icon only */
-@media (max-width: 640px) {
-  .patreon-float-label {
-    display: none;
-  }
-  .patreon-float {
-    padding: 0.75rem;
-  }
 }
 </style>

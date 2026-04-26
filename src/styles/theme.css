@@ -1,0 +1,81 @@
+/* ── Dark theme (default) ───────────────────────── */
+:root {
+  --bg-page: #0e0e1a;
+  --bg-page-rgb: 14, 14, 26;
+  --bg-card: #12121f;
+  --bg-card-rgb: 18, 18, 31;
+  --bg-footer: #0a0a14;
+
+  --text-primary: #f8fafc;
+  --text-heading: #f1f5f9;
+  --text-body: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-muted2: #cbd5e1;
+  --text-subtle: #64748b;
+  --text-faint: #334155;
+  --text-faint2: #475569;
+
+  --accent: #c084fc;
+  --accent-rgb: 192, 132, 252;
+
+  --border-faint: rgba(255, 255, 255, 0.04);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.12);
+
+  --shadow-card: rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: rgba(0, 0, 0, 0.6);
+  --hover-bg: rgba(255, 255, 255, 0.04);
+
+  --nav-border: rgba(255, 255, 255, 0.12);
+  --nav-text: rgba(255, 255, 255, 0.6);
+  --nav-text-active: #f1f5f9;
+  --breadcrumb-sep: rgba(255, 255, 255, 0.2);
+  --breadcrumb-ext-bg: rgba(255, 255, 255, 0.02);
+  --breadcrumb-ext-border: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Light theme ────────────────────────────────── */
+[data-theme="light"] {
+  --bg-page: #f0f0f8;
+  --bg-page-rgb: 240, 240, 248;
+  --bg-card: #ffffff;
+  --bg-card-rgb: 255, 255, 255;
+  --bg-footer: #e0e0ee;
+
+  --text-primary: #0f172a;
+  --text-heading: #1e293b;
+  --text-body: #1e293b;
+  --text-muted: #475569;
+  --text-muted2: #334155;
+  --text-subtle: #64748b;
+  --text-faint: #94a3b8;
+  --text-faint2: #64748b;
+
+  --accent: #9333ea;
+  --accent-rgb: 147, 51, 234;
+
+  --border-faint: rgba(0, 0, 0, 0.04);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-light: rgba(0, 0, 0, 0.10);
+  --border-strong: rgba(0, 0, 0, 0.15);
+
+  --shadow-card: rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: rgba(0, 0, 0, 0.16);
+  --hover-bg: rgba(0, 0, 0, 0.03);
+
+  --nav-border: rgba(0, 0, 0, 0.12);
+  --nav-text: rgba(0, 0, 0, 0.55);
+  --nav-text-active: #1e293b;
+  --breadcrumb-sep: rgba(0, 0, 0, 0.2);
+  --breadcrumb-ext-bg: rgba(0, 0, 0, 0.02);
+  --breadcrumb-ext-border: rgba(0, 0, 0, 0.06);
+}
+
+/* ── Global base ────────────────────────────────── */
+html,
+body {
+  background: var(--bg-page);
+  color: var(--text-body);
+  transition: background 0.2s ease, color 0.2s ease;
+}

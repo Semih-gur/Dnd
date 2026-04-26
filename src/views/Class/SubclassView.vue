@@ -111,8 +111,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .subclass-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -122,10 +122,10 @@ export default {
   height: 220px;
   background: linear-gradient(
     135deg,
-    rgba(192, 132, 252, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 .hero::before {
@@ -134,12 +134,12 @@ export default {
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 50%,
-      rgba(192, 132, 252, 0.08) 0%,
+      rgba(var(--accent-rgb), 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(192, 132, 252, 0.05) 0%,
+      rgba(var(--accent-rgb), 0.05) 0%,
       transparent 40%
     );
 }
@@ -157,13 +157,13 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.4rem;
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0;
   line-height: 1.1;
 }
@@ -198,9 +198,9 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #c084fc;
-  background: rgba(192, 132, 252, 0.12);
-  border: 1px solid rgba(192, 132, 252, 0.3);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
   padding: 4px 14px;
   border-radius: 999px;
   white-space: nowrap;
@@ -208,13 +208,13 @@ export default {
 .level-line {
   flex: 1;
   height: 1px;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--border-subtle);
 }
 
 /* Feature card */
 .feature-card {
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -222,14 +222,14 @@ export default {
 .feature-title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: var(--text-heading);
   margin: 0 0 1rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
 }
 .feature-body {
   font-size: 0.88rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.75;
 }
 
@@ -243,7 +243,7 @@ export default {
 .table-wrap {
   overflow-x: auto;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
 }
 .table-wrap :deep(table) {
   width: 100%;
@@ -251,7 +251,7 @@ export default {
   font-size: 0.85rem;
 }
 .table-wrap :deep(thead tr) {
-  background: rgba(192, 132, 252, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
 }
 .table-wrap :deep(th) {
   padding: 0.65rem 1.25rem;
@@ -260,19 +260,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: var(--accent);
 }
 .table-wrap :deep(td) {
   padding: 0.55rem 1.25rem;
   text-align: center;
-  color: #cbd5e1;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-muted2);
+  border-bottom: 1px solid var(--border-faint);
 }
 .table-wrap :deep(tbody tr:last-child td) {
   border-bottom: none;
 }
 .table-wrap :deep(tbody tr:hover) {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--hover-bg);
 }
 
 /* ── Mobile ─────────────────────────────────────── */

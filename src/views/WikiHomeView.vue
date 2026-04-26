@@ -116,13 +116,13 @@ export default {
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  background: #12121f;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  background: var(--bg-card);
+  box-shadow: 0 2px 12px var(--shadow-card);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .wiki-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 28px var(--shadow-card-hover);
 }
 
 /* Image */
@@ -155,9 +155,9 @@ export default {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(18, 18, 31, 0.5) 40%,
-    rgba(18, 18, 31, 0.92) 75%,
-    #12121f 100%
+    rgba(var(--bg-card-rgb), 0.5) 40%,
+    rgba(var(--bg-card-rgb), 0.92) 75%,
+    var(--bg-card) 100%
   );
 }
 
@@ -177,12 +177,12 @@ export default {
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
-  color: #f1f5f9;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  color: var(--text-heading);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 .card-desc {
   font-size: 0.82rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.55;
   margin: 0;
 }

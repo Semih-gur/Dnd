@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="magic-items-page">
     <!-- Hero -->
     <div class="hero">
@@ -223,8 +223,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .magic-items-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -234,10 +234,10 @@ export default {
   height: 220px;
   background: linear-gradient(
     135deg,
-    rgba(192, 132, 252, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 .hero::before {
@@ -246,12 +246,12 @@ export default {
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 50%,
-      rgba(192, 132, 252, 0.08) 0%,
+      rgba(var(--accent-rgb), 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(192, 132, 252, 0.05) 0%,
+      rgba(var(--accent-rgb), 0.05) 0%,
       transparent 40%
     );
 }
@@ -271,19 +271,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.4rem;
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.4rem;
   line-height: 1.1;
 }
 .hero-subtitle {
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--text-subtle);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -317,27 +317,27 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-light);
   background: transparent;
-  color: #64748b;
+  color: var(--text-subtle);
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
 }
 .tab:hover {
-  border-color: rgba(192, 132, 252, 0.3);
-  color: #c084fc;
-  background: rgba(192, 132, 252, 0.06);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.06);
 }
 .tab.active {
-  background: rgba(192, 132, 252, 0.15);
-  border-color: rgba(192, 132, 252, 0.4);
-  color: #c084fc;
+  background: rgba(var(--accent-rgb), 0.15);
+  border-color: rgba(var(--accent-rgb), 0.4);
+  color: var(--accent);
 }
 .tab-count {
   font-size: 0.65rem;
-  background: rgba(192, 132, 252, 0.15);
-  color: #c084fc;
+  background: rgba(var(--accent-rgb), 0.15);
+  color: var(--accent);
   border-radius: 999px;
   padding: 1px 6px;
 }
@@ -376,27 +376,27 @@ export default {
 .search-input {
   width: 100%;
   padding: 0.6rem 1rem 0.6rem 2.5rem;
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
   border-radius: 10px;
-  color: #e2e8f0;
+  color: var(--text-body);
   font-size: 0.875rem;
   outline: none;
   transition: border-color 0.15s ease;
   box-sizing: border-box;
 }
 .search-input::placeholder {
-  color: #475569;
+  color: var(--text-faint2);
 }
 .search-input:focus {
-  border-color: rgba(192, 132, 252, 0.4);
+  border-color: rgba(var(--accent-rgb), 0.4);
 }
 .search-icon {
   position: absolute;
   left: 0.85rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #475569;
+  color: var(--text-faint2);
   font-size: 1rem;
   pointer-events: none;
 }
@@ -404,7 +404,7 @@ export default {
 /* ── Table ──────────────────────────────────────── */
 .table-wrap {
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
   overflow: hidden;
   overflow-x: auto;
 }
@@ -415,7 +415,7 @@ export default {
   table-layout: fixed;
 }
 .items-table thead tr {
-  background: rgba(192, 132, 252, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
 }
 .items-table th {
   padding: 0.75rem 1rem;
@@ -424,17 +424,17 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: var(--accent);
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
   transition: background 0.15s ease;
 }
 .items-table th:hover {
-  background: rgba(192, 132, 252, 0.18);
+  background: rgba(var(--accent-rgb), 0.18);
 }
 .items-table th.sorted {
-  background: rgba(192, 132, 252, 0.2);
+  background: rgba(var(--accent-rgb), 0.2);
 }
 
 /* Column widths */
@@ -465,7 +465,7 @@ export default {
 }
 
 .item-row {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-faint);
   transition: background 0.15s ease;
   cursor: pointer;
 }
@@ -477,18 +477,18 @@ export default {
 }
 .items-table td {
   padding: 0.65rem 1rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   vertical-align: middle;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .item-name {
-  color: #f1f5f9 !important;
+  color: var(--text-heading) !important;
   font-weight: 500;
 }
 .item-row:hover .item-name {
-  color: #c084fc !important;
+  color: var(--accent) !important;
 }
 
 .price-cell {
@@ -529,7 +529,7 @@ export default {
 }
 .attune-badge.no {
   background: rgba(100, 116, 139, 0.1);
-  color: #64748b;
+  color: var(--text-subtle);
   border: 1px solid rgba(100, 116, 139, 0.2);
 }
 
@@ -542,8 +542,8 @@ export default {
 
 /* ── Popup ──────────────────────────────────────── */
 .popup {
-  background: #12121f;
-  border: 1px solid rgba(192, 132, 252, 0.2);
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   border-radius: 16px;
   overflow: hidden;
 }
@@ -552,7 +552,7 @@ export default {
   align-items: flex-start;
   justify-content: space-between;
   padding: 1.5rem 1.5rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--border-subtle);
 }
 .popup-eyebrow {
   display: block;
@@ -560,13 +560,13 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.3rem;
 }
 .popup-title {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.6rem;
 }
 .popup-meta {
@@ -577,7 +577,7 @@ export default {
 .popup-close {
   background: transparent;
   border: none;
-  color: #64748b;
+  color: var(--text-subtle);
   cursor: pointer;
   padding: 4px;
   border-radius: 6px;
@@ -585,7 +585,7 @@ export default {
   flex-shrink: 0;
 }
 .popup-close:hover {
-  color: #f1f5f9;
+  color: var(--text-heading);
   background: rgba(255, 255, 255, 0.08);
 }
 .popup-price {
@@ -593,15 +593,15 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--hover-bg);
 }
 .price-label {
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #64748b;
+  color: var(--text-subtle);
 }
 .price-value {
   font-size: 0.95rem;
@@ -617,12 +617,12 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #c084fc;
+  color: var(--accent);
   margin: 0 0 0.6rem;
 }
 .popup-desc-text {
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.75;
   margin: 0;
 }

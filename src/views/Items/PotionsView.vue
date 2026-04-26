@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="potions-page">
     <!-- Hero -->
     <div class="hero">
@@ -94,8 +94,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .potions-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -105,10 +105,10 @@ export default {
   height: 220px;
   background: linear-gradient(
     135deg,
-    rgba(192, 132, 252, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 .hero::before {
@@ -117,12 +117,12 @@ export default {
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 50%,
-      rgba(192, 132, 252, 0.08) 0%,
+      rgba(var(--accent-rgb), 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(192, 132, 252, 0.05) 0%,
+      rgba(var(--accent-rgb), 0.05) 0%,
       transparent 40%
     );
 }
@@ -142,19 +142,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.4rem;
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.4rem;
   line-height: 1.1;
 }
 .hero-subtitle {
   font-size: 0.95rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -183,28 +183,28 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-light);
   background: transparent;
-  color: #64748b;
+  color: var(--text-subtle);
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
 }
 .tab:hover {
-  border-color: rgba(192, 132, 252, 0.3);
-  color: #c084fc;
-  background: rgba(192, 132, 252, 0.06);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.06);
 }
 .tab.active {
-  background: rgba(192, 132, 252, 0.15);
-  border-color: rgba(192, 132, 252, 0.4);
-  color: #c084fc;
+  background: rgba(var(--accent-rgb), 0.15);
+  border-color: rgba(var(--accent-rgb), 0.4);
+  color: var(--accent);
 }
 
 /* ── Table ──────────────────────────────────────── */
 .table-wrap {
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
   overflow: hidden;
   overflow-x: auto;
 }
@@ -214,7 +214,7 @@ export default {
   font-size: 0.85rem;
 }
 .potion-table thead tr {
-  background: rgba(192, 132, 252, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
 }
 .potion-table th {
   padding: 0.75rem 1rem;
@@ -223,11 +223,11 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: var(--accent);
   white-space: nowrap;
 }
 .potion-row {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-faint);
   transition: background 0.15s ease;
 }
 .potion-row:last-child {
@@ -238,11 +238,11 @@ export default {
 }
 .potion-table td {
   padding: 0.65rem 1rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   vertical-align: middle;
 }
 .potion-name {
-  color: #f1f5f9 !important;
+  color: var(--text-heading) !important;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -263,7 +263,7 @@ export default {
 }
 .common {
   background: rgba(148, 163, 184, 0.1);
-  color: #94a3b8;
+  color: var(--text-muted);
   border: 1px solid rgba(148, 163, 184, 0.3);
 }
 .uncommon {
@@ -277,9 +277,9 @@ export default {
   border: 1px solid rgba(96, 165, 250, 0.3);
 }
 .very-rare {
-  background: rgba(192, 132, 252, 0.1);
-  color: #c084fc;
-  border: 1px solid rgba(192, 132, 252, 0.3);
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
 }
 .legendary {
   background: rgba(251, 146, 60, 0.1);

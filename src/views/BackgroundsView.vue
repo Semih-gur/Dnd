@@ -96,8 +96,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .backgrounds-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -107,10 +107,10 @@ export default {
   height: 220px;
   background: linear-gradient(
     135deg,
-    rgba(192, 132, 252, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 .hero::before {
@@ -119,12 +119,12 @@ export default {
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 50%,
-      rgba(192, 132, 252, 0.08) 0%,
+      rgba(var(--accent-rgb), 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(192, 132, 252, 0.05) 0%,
+      rgba(var(--accent-rgb), 0.05) 0%,
       transparent 40%
     );
 }
@@ -144,19 +144,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.4rem;
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.4rem;
   line-height: 1.1;
 }
 .hero-subtitle {
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--text-subtle);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -187,8 +187,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 1rem 1.25rem;
   cursor: pointer;
@@ -197,15 +197,15 @@ export default {
   gap: 1rem;
 }
 .bg-card:hover {
-  background: rgba(192, 132, 252, 0.08);
-  border-color: rgba(192, 132, 252, 0.3);
+  background: rgba(var(--accent-rgb), 0.08);
+  border-color: rgba(var(--accent-rgb), 0.3);
   transform: translateX(4px);
 }
 .bg-card:hover .bg-name {
-  color: #c084fc;
+  color: var(--accent);
 }
 .bg-card:hover .bg-arrow {
-  color: #c084fc;
+  color: var(--accent);
 }
 
 .bg-card-inner {
@@ -218,7 +218,7 @@ export default {
 .bg-name {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #f1f5f9;
+  color: var(--text-heading);
   transition: color 0.15s ease;
   white-space: nowrap;
   overflow: hidden;
@@ -236,9 +236,9 @@ export default {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #64748b;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-subtle);
+  background: var(--border-faint);
+  border: 1px solid var(--border-subtle);
   padding: 2px 8px;
   border-radius: 999px;
   white-space: nowrap;
@@ -249,15 +249,15 @@ export default {
 
 .bg-arrow {
   font-size: 1.1rem !important;
-  color: #334155;
+  color: var(--text-faint);
   flex-shrink: 0;
   transition: color 0.15s ease;
 }
 
 /* ── Popup ──────────────────────────────────────── */
 .popup {
-  background: #12121f;
-  border: 1px solid rgba(192, 132, 252, 0.2);
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   border-radius: 16px;
   overflow: hidden;
 }
@@ -266,7 +266,7 @@ export default {
   align-items: flex-start;
   justify-content: space-between;
   padding: 1.5rem 1.5rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--border-subtle);
 }
 .popup-eyebrow {
   display: block;
@@ -274,19 +274,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.3rem;
 }
 .popup-title {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0;
 }
 .popup-close {
   background: transparent;
   border: none;
-  color: #64748b;
+  color: var(--text-subtle);
   cursor: pointer;
   padding: 4px;
   border-radius: 6px;
@@ -294,16 +294,16 @@ export default {
   flex-shrink: 0;
 }
 .popup-close:hover {
-  color: #f1f5f9;
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-heading);
+  background: var(--border-light);
 }
 .popup-flavor {
   font-size: 0.88rem;
-  color: #64748b;
+  color: var(--text-subtle);
   font-style: italic;
   line-height: 1.65;
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--border-subtle);
   margin: 0;
 }
 .popup-traits {
@@ -316,7 +316,7 @@ export default {
   grid-template-columns: 160px 1fr;
   gap: 1rem;
   padding: 0.65rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-faint);
   align-items: start;
 }
 .popup-trait:last-child {
@@ -327,11 +327,11 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: #c084fc;
+  color: var(--accent);
 }
 .trait-value {
   font-size: 0.88rem;
-  color: #cbd5e1;
+  color: var(--text-muted2);
   line-height: 1.5;
 }
 

@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import vuetify from "./plugins/vuetify";
 import { loadFonts } from "./plugins/webfontloader";
+import "./styles/theme.css";
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
 

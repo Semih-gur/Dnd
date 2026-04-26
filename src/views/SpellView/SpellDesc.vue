@@ -125,8 +125,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .spell-detail-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -136,10 +136,10 @@ export default {
   height: 260px;
   background: linear-gradient(
     135deg,
-    rgba(192, 132, 252, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 .hero::before {
@@ -148,12 +148,12 @@ export default {
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 50%,
-      rgba(192, 132, 252, 0.1) 0%,
+      rgba(var(--accent-rgb), 0.1) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(192, 132, 252, 0.06) 0%,
+      rgba(var(--accent-rgb), 0.06) 0%,
       transparent 40%
     );
 }
@@ -173,19 +173,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.4rem;
 }
 .hero-title {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.75rem;
   line-height: 1.1;
 }
 .hero-subtitle {
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--text-subtle);
   margin: 0;
 }
 .hero-badges {
@@ -200,14 +200,14 @@ export default {
   letter-spacing: 0.07em;
   padding: 3px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #94a3b8;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--border-light);
+  color: var(--text-muted);
+  border: 1px solid var(--border-strong);
 }
 .badge-class {
-  background: rgba(192, 132, 252, 0.12);
-  color: #c084fc;
-  border-color: rgba(192, 132, 252, 0.3);
+  background: rgba(var(--accent-rgb), 0.12);
+  color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.3);
 }
 
 /* ── Page content ───────────────────────────────── */
@@ -233,8 +233,8 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 0.85rem 1rem;
 }
@@ -243,19 +243,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #c084fc;
+  color: var(--accent);
 }
 .stat-value {
   font-size: 0.88rem;
   font-weight: 600;
-  color: #e2e8f0;
+  color: var(--text-body);
   line-height: 1.4;
 }
 
 /* ── Sections ───────────────────────────────────── */
 .section {
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -265,19 +265,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #c084fc;
+  color: var(--accent);
   margin: 0 0 0.75rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(192, 132, 252, 0.15);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
 }
 .section-text {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.8;
   margin: 0;
 }
 .section-text.upgrade {
-  color: #a78bfa;
+  color: var(--accent);
   font-style: italic;
 }
 
@@ -293,18 +293,18 @@ export default {
 }
 .not-found-icon {
   font-size: 3rem !important;
-  color: #334155;
+  color: var(--text-faint);
   margin-bottom: 0.5rem;
 }
 .not-found-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: var(--text-heading);
   margin: 0;
 }
 .not-found-sub {
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--text-subtle);
   margin: 0;
 }
 .not-found-btn {
@@ -315,15 +315,15 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   border-radius: 999px;
-  border: 1px solid rgba(192, 132, 252, 0.3);
-  background: rgba(192, 132, 252, 0.1);
-  color: #c084fc;
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease;
 }
 .not-found-btn:hover {
-  background: rgba(192, 132, 252, 0.2);
-  border-color: #c084fc;
+  background: rgba(var(--accent-rgb), 0.2);
+  border-color: var(--accent);
 }
 
 /* ── Mobile ─────────────────────────────────────── */

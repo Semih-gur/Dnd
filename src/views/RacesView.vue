@@ -1,6 +1,15 @@
 <template>
   <div class="species-page">
-    <h1 class="page-title">Choose Your Species</h1>
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="hero-title">Species</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
     <div class="species-grid">
       <div
         v-for="s in species"
@@ -23,6 +32,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -122,18 +132,64 @@ export default {
 </script>
 
 <style scoped>
+/* ── Page ───────────────────────────────────────── */
 .species-page {
-  padding: 2rem 1rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
-.page-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  letter-spacing: 0.05em;
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
+  );
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 20% 50%,
+      rgba(var(--accent-rgb), 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(var(--accent-rgb), 0.05) 0%,
+      transparent 40%
+    );
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 2.5rem;
+}
+.hero-content {
+  max-width: 700px;
+}
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* ── Page content ───────────────────────────────── */
+.page-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
 }
 
 .species-grid {
@@ -156,8 +212,17 @@ export default {
   .species-grid {
     grid-template-columns: 1fr;
   }
-  .page-title {
-    font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    height: 180px;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .hero-overlay {
+    padding: 1.25rem 1.5rem;
   }
 }
 
@@ -168,13 +233,13 @@ export default {
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  background: #12121f;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  background: var(--bg-card);
+  box-shadow: 0 2px 12px var(--shadow-card);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .species-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 28px var(--shadow-card-hover);
 }
 
 /* ── Image ──────────────────────────────────────── */
@@ -216,9 +281,9 @@ export default {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(18, 18, 31, 0.5) 40%,
-    rgba(18, 18, 31, 0.92) 75%,
-    #12121f 100%
+    rgba(var(--bg-card-rgb), 0.5) 40%,
+    rgba(var(--bg-card-rgb), 0.92) 75%,
+    var(--bg-card) 100%
   );
 }
 
@@ -238,12 +303,12 @@ export default {
   font-size: 1.15rem;
   font-weight: 700;
   margin: 0;
-  color: #f1f5f9;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  color: var(--text-heading);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 .card-desc {
   font-size: 0.82rem;
-  color: #cbd5e1;
+  color: var(--text-muted2);
   line-height: 1.55;
   margin: 0;
   flex: 1;
@@ -256,17 +321,17 @@ export default {
   gap: 2px;
   margin-top: 0.6rem;
   padding-top: 0.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--border-light);
 }
 .bonus-label {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #64748b;
+  color: var(--text-subtle);
 }
 .bonus-value {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #c084fc;
+  color: var(--accent);
 }
 </style>

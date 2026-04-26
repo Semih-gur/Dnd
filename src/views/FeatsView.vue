@@ -195,8 +195,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .feats-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -206,10 +206,10 @@ export default {
   height: 220px;
   background: linear-gradient(
     135deg,
-    rgba(192, 132, 252, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 .hero::before {
@@ -218,12 +218,12 @@ export default {
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 50%,
-      rgba(192, 132, 252, 0.08) 0%,
+      rgba(var(--accent-rgb), 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(192, 132, 252, 0.05) 0%,
+      rgba(var(--accent-rgb), 0.05) 0%,
       transparent 40%
     );
 }
@@ -243,19 +243,19 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.4rem;
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.4rem;
   line-height: 1.1;
 }
 .hero-subtitle {
   font-size: 0.95rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -287,33 +287,33 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-light);
   background: transparent;
-  color: #64748b;
+  color: var(--text-subtle);
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
 }
 .tab:hover {
-  border-color: rgba(192, 132, 252, 0.3);
-  color: #c084fc;
-  background: rgba(192, 132, 252, 0.06);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.06);
 }
 .tab.active {
-  background: rgba(192, 132, 252, 0.15);
-  border-color: rgba(192, 132, 252, 0.4);
-  color: #c084fc;
+  background: rgba(var(--accent-rgb), 0.15);
+  border-color: rgba(var(--accent-rgb), 0.4);
+  color: var(--accent);
 }
 .tab-count {
   font-size: 0.65rem;
   font-weight: 700;
-  background: rgba(192, 132, 252, 0.15);
-  color: #c084fc;
+  background: rgba(var(--accent-rgb), 0.15);
+  color: var(--accent);
   border-radius: 999px;
   padding: 1px 7px;
 }
 .tab.active .tab-count {
-  background: rgba(192, 132, 252, 0.3);
+  background: rgba(var(--accent-rgb), 0.3);
 }
 
 /* ── Feat grid ──────────────────────────────────── */
@@ -331,8 +331,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 0.9rem 1.1rem;
   cursor: pointer;
@@ -341,8 +341,8 @@ export default {
   gap: 0.75rem;
 }
 .feat-card:hover {
-  background: rgba(192, 132, 252, 0.08);
-  border-color: rgba(192, 132, 252, 0.3);
+  background: rgba(var(--accent-rgb), 0.08);
+  border-color: rgba(var(--accent-rgb), 0.3);
   transform: translateX(4px);
 }
 .feat-card-inner {
@@ -354,32 +354,32 @@ export default {
 .feat-name {
   font-size: 0.88rem;
   font-weight: 600;
-  color: #f1f5f9;
+  color: var(--text-heading);
   transition: color 0.15s ease;
 }
 .feat-card:hover .feat-name {
-  color: #c084fc;
+  color: var(--accent);
 }
 .feat-preq {
   font-size: 0.65rem;
-  color: #64748b;
+  color: var(--text-subtle);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 .feat-arrow {
   font-size: 1rem !important;
-  color: #334155;
+  color: var(--text-faint);
   flex-shrink: 0;
   transition: color 0.15s ease;
 }
 .feat-card:hover .feat-arrow {
-  color: #c084fc;
+  color: var(--accent);
 }
 
 /* ── Popup ──────────────────────────────────────── */
 .popup {
-  background: #12121f;
-  border: 1px solid rgba(192, 132, 252, 0.2);
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   border-radius: 16px;
   overflow: hidden;
 }
@@ -388,7 +388,7 @@ export default {
   align-items: flex-start;
   justify-content: space-between;
   padding: 1.5rem 1.5rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--border-subtle);
 }
 .popup-eyebrow {
   display: block;
@@ -396,13 +396,13 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.3rem;
 }
 .popup-title {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.4rem;
 }
 .popup-preq {
@@ -410,14 +410,14 @@ export default {
   align-items: center;
   gap: 4px;
   font-size: 0.7rem;
-  color: #64748b;
+  color: var(--text-subtle);
   text-transform: uppercase;
   letter-spacing: 0.07em;
 }
 .popup-close {
   background: transparent;
   border: none;
-  color: #64748b;
+  color: var(--text-subtle);
   cursor: pointer;
   padding: 4px;
   border-radius: 6px;
@@ -425,8 +425,8 @@ export default {
   flex-shrink: 0;
 }
 .popup-close:hover {
-  color: #f1f5f9;
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-heading);
+  background: var(--border-light);
 }
 
 /* Abilities */
@@ -438,20 +438,20 @@ export default {
 }
 .ability-block {
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-faint);
 }
 .ability-block:last-child {
   border-bottom: none;
 }
 .ability-text {
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.75;
   margin: 0;
   white-space: pre-wrap;
 }
 .ability-name {
-  color: #e2e8f0;
+  color: var(--text-body);
   font-weight: 700;
 }
 
@@ -461,7 +461,7 @@ export default {
 }
 .table-wrap {
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
   overflow: hidden;
   overflow-x: auto;
 }
@@ -471,7 +471,7 @@ export default {
   font-size: 0.82rem;
 }
 .feat-table thead tr {
-  background: rgba(192, 132, 252, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
 }
 .feat-table th {
   padding: 0.6rem 1rem;
@@ -480,18 +480,18 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: var(--accent);
 }
 .feat-table td {
   padding: 0.55rem 1rem;
-  color: #cbd5e1;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-muted2);
+  border-bottom: 1px solid var(--border-faint);
 }
 .feat-table tbody tr:last-child td {
   border-bottom: none;
 }
 .feat-table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--hover-bg);
 }
 
 /* ── Mobile ─────────────────────────────────────── */

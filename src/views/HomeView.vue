@@ -227,8 +227,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .home-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -247,17 +247,17 @@ export default {
   inset: 0;
   background: radial-gradient(
       ellipse at 50% 0%,
-      rgba(192, 132, 252, 0.18) 0%,
+      rgba(var(--accent-rgb), 0.18) 0%,
       transparent 60%
     ),
     radial-gradient(
       ellipse at 20% 80%,
-      rgba(192, 132, 252, 0.08) 0%,
+      rgba(var(--accent-rgb), 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       ellipse at 80% 60%,
-      rgba(139, 92, 246, 0.06) 0%,
+      rgba(var(--accent-rgb), 0.06) 0%,
       transparent 40%
     );
 }
@@ -267,7 +267,7 @@ export default {
   inset: 0;
   background-image: radial-gradient(
     circle,
-    rgba(192, 132, 252, 0.06) 1px,
+    rgba(var(--accent-rgb), 0.06) 1px,
     transparent 1px
   );
   background-size: 40px 40px;
@@ -282,20 +282,20 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.75rem;
 }
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 1.25rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 .hero-subtitle {
   font-size: 1rem;
-  color: #64748b;
+  color: var(--text-subtle);
   line-height: 1.75;
   margin: 0 0 2rem;
 }
@@ -303,10 +303,10 @@ export default {
 /* ── Feature cards ──────────────────────────────── */
 .features-section {
   max-width: 900px;
-  margin: -80px auto 0; /* pulls cards up into the hero */
+  margin: -80px auto 0;
   padding: 0 1.5rem 4rem;
   position: relative;
-  z-index: 1; /* keeps cards above the hero background */
+  z-index: 1;
 }
 .features-grid {
   display: grid;
@@ -323,8 +323,8 @@ export default {
 }
 
 .feature-card {
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
@@ -332,14 +332,14 @@ export default {
 }
 .feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-  border-color: rgba(192, 132, 252, 0.2);
+  box-shadow: 0 12px 32px var(--shadow-card);
+  border-color: rgba(var(--accent-rgb), 0.2);
 }
 
 .feature-card-inner {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9; /* was 16/7, give images more room */
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 .feature-img {
@@ -358,7 +358,7 @@ export default {
   left: 0;
   right: 0;
   height: 60%;
-  background: linear-gradient(to bottom, transparent, #12121f);
+  background: linear-gradient(to bottom, transparent, var(--bg-card));
 }
 
 .feature-body {
@@ -366,18 +366,18 @@ export default {
 }
 .feature-icon {
   font-size: 1.4rem !important;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.5rem;
 }
 .feature-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: var(--text-heading);
   margin: 0 0 0.5rem;
 }
 .feature-desc {
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--text-subtle);
   line-height: 1.65;
   margin: 0 0 1rem;
 }
@@ -386,7 +386,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: var(--accent);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -403,7 +403,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #334155;
+  color: var(--text-faint);
   margin: 0 0 1rem;
 }
 .quick-grid {
@@ -427,8 +427,8 @@ export default {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 0.5rem;
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 12px;
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease,
@@ -436,31 +436,31 @@ export default {
   text-align: center;
 }
 .quick-card:hover {
-  background: rgba(192, 132, 252, 0.08);
-  border-color: rgba(192, 132, 252, 0.25);
+  background: rgba(var(--accent-rgb), 0.08);
+  border-color: rgba(var(--accent-rgb), 0.25);
   transform: translateY(-2px);
 }
 .quick-icon {
   font-size: 1.4rem !important;
-  color: #c084fc;
+  color: var(--accent);
 }
 .quick-label {
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: #64748b;
+  color: var(--text-subtle);
   transition: color 0.15s ease;
 }
 .quick-card:hover .quick-label {
-  color: #c084fc;
+  color: var(--accent);
 }
 /* ── Patreon Banner ─────────────────────────────── */
 .patreon-banner {
   background: linear-gradient(
     135deg,
     rgba(249, 115, 22, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
   border-top: 1px solid rgba(249, 115, 22, 0.3);
   border-bottom: 1px solid rgba(249, 115, 22, 0.3);
@@ -488,12 +488,12 @@ export default {
 .patreon-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin-bottom: 0.25rem;
 }
 .patreon-desc {
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin: 0;
   max-width: 500px;
 }
@@ -521,8 +521,8 @@ export default {
 
 /* ── Footer ─────────────────────────────────────── */
 .site-footer {
-  background: #0a0a14;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-footer);
+  border-top: 1px solid var(--border-subtle);
   padding-top: 3rem;
 }
 .footer-inner {
@@ -548,13 +548,13 @@ export default {
 .footer-logo {
   font-size: 1.1rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   display: block;
   margin-bottom: 0.5rem;
 }
 .footer-tagline {
   font-size: 0.8rem;
-  color: #475569;
+  color: var(--text-faint2);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -569,16 +569,16 @@ export default {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #64748b;
+  background: var(--border-faint);
+  border: 1px solid var(--border-light);
+  color: var(--text-subtle);
   text-decoration: none;
   transition: all 0.15s ease;
 }
 .social-link:hover {
-  background: rgba(192, 132, 252, 0.1);
-  border-color: rgba(192, 132, 252, 0.3);
-  color: #c084fc;
+  background: rgba(var(--accent-rgb), 0.1);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  color: var(--accent);
 }
 
 /* Columns */
@@ -587,7 +587,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 1rem;
 }
 .footer-links {
@@ -601,12 +601,12 @@ export default {
 .footer-links a,
 .footer-links .router-link-active {
   font-size: 0.875rem;
-  color: #64748b;
+  color: var(--text-subtle);
   text-decoration: none;
   transition: color 0.15s ease;
 }
 .footer-links a:hover {
-  color: #c084fc;
+  color: var(--accent);
 }
 
 /* Contact form */
@@ -618,10 +618,10 @@ export default {
 .contact-input {
   width: 100%;
   padding: 0.6rem 0.875rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--border-faint);
+  border: 1px solid var(--border-light);
   border-radius: 8px;
-  color: #e2e8f0;
+  color: var(--text-body);
   font-size: 0.82rem;
   outline: none;
   transition: border-color 0.15s ease;
@@ -630,20 +630,20 @@ export default {
   font-family: inherit;
 }
 .contact-input::placeholder {
-  color: #334155;
+  color: var(--text-faint);
 }
 .contact-input:focus {
-  border-color: rgba(192, 132, 252, 0.4);
+  border-color: rgba(var(--accent-rgb), 0.4);
 }
 .contact-textarea {
   min-height: 80px;
 }
 .contact-btn {
   padding: 0.6rem 1.25rem;
-  background: rgba(192, 132, 252, 0.15);
-  border: 1px solid rgba(192, 132, 252, 0.4);
+  background: rgba(var(--accent-rgb), 0.15);
+  border: 1px solid rgba(var(--accent-rgb), 0.4);
   border-radius: 8px;
-  color: #c084fc;
+  color: var(--accent);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -652,7 +652,7 @@ export default {
   transition: all 0.15s ease;
 }
 .contact-btn:hover:not(:disabled) {
-  background: rgba(192, 132, 252, 0.25);
+  background: rgba(var(--accent-rgb), 0.25);
 }
 .contact-btn:disabled {
   color: #a3e635;
@@ -663,13 +663,13 @@ export default {
 
 /* Bottom bar */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--border-faint);
   padding: 1.25rem 1.5rem;
   text-align: center;
 }
 .footer-bottom p {
   font-size: 0.75rem;
-  color: #334155;
+  color: var(--text-faint);
   margin: 0;
 }
 </style>

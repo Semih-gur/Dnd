@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="ranger-page">
     <!-- Hero Banner -->
     <div class="hero">
@@ -687,8 +687,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .ranger-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -710,9 +710,9 @@ export default {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(14, 14, 26, 0.2) 0%,
-    rgba(14, 14, 26, 0.7) 60%,
-    #0e0e1a 100%
+    rgba(var(--bg-page-rgb), 0.2) 0%,
+    rgba(var(--bg-page-rgb), 0.7) 60%,
+    var(--bg-page) 100%
   );
   display: flex;
   align-items: flex-end;
@@ -731,13 +731,13 @@ export default {
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0.25rem 0 0.5rem;
   line-height: 1;
 }
 .hero-subtitle {
   font-size: 1rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin-bottom: 1rem;
 }
 .hero-badges {
@@ -778,7 +778,7 @@ export default {
 .section-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: var(--text-heading);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba(74, 222, 128, 0.3);
@@ -786,17 +786,17 @@ export default {
 
 /* ── Core Traits ────────────────────────────────── */
 .traits-grid {
-  background: #12121f;
+  background: var(--bg-card);
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
 }
 .trait-row {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 1rem;
   padding: 0.75rem 1.25rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-faint);
   align-items: start;
 }
 .trait-row:last-child {
@@ -811,7 +811,7 @@ export default {
 }
 .trait-value {
   font-size: 0.9rem;
-  color: #cbd5e1;
+  color: var(--text-muted2);
   line-height: 1.5;
 }
 
@@ -827,8 +827,8 @@ export default {
   }
 }
 .becoming-card {
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 12px;
   padding: 1.25rem;
 }
@@ -848,7 +848,7 @@ export default {
 }
 .becoming-list li {
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
@@ -856,7 +856,7 @@ export default {
 .table-wrap {
   overflow-x: auto;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
 }
 .features-table {
   width: 100%;
@@ -881,8 +881,8 @@ export default {
 }
 .features-table td {
   padding: 0.6rem 0.6rem;
-  color: #cbd5e1;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-muted2);
+  border-bottom: 1px solid var(--border-faint);
   text-align: center;
   white-space: nowrap;
 }
@@ -891,7 +891,7 @@ export default {
   min-width: 220px;
 }
 .features-table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--hover-bg);
 }
 .features-table tbody tr:last-child td {
   border-bottom: none;
@@ -901,11 +901,11 @@ export default {
 }
 .level-cell {
   font-weight: 700;
-  color: #f1f5f9 !important;
+  color: var(--text-heading) !important;
   text-align: center;
 }
 .muted {
-  color: #334155;
+  color: var(--text-faint);
 }
 
 /* Stat badges */
@@ -935,8 +935,8 @@ export default {
   gap: 0.5rem;
 }
 .panel {
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -950,10 +950,10 @@ export default {
   user-select: none;
 }
 .panel-header:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--hover-bg);
 }
 .panel-header.open {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--border-subtle);
 }
 .panel-header-left {
   display: flex;
@@ -975,10 +975,10 @@ export default {
 }
 .panel-features-preview {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 .panel-chevron {
-  color: #64748b;
+  color: var(--text-subtle);
   flex-shrink: 0;
 }
 .panel-body {
@@ -992,26 +992,26 @@ export default {
   gap: 1rem;
 }
 .feature-card {
-  background: #0e0e1a;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-page);
+  border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 1.25rem;
 }
 .feature-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: var(--text-heading);
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba(74, 222, 128, 0.2);
 }
 .feature-body {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.65;
 }
 .feature-body :deep(b) {
-  color: #e2e8f0;
+  color: var(--text-body);
 }
 
 /* ── Subclass grid ──────────────────────────────── */
@@ -1027,19 +1027,19 @@ export default {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
-  background: #0e0e1a;
+  background: var(--bg-page);
   border: 1px solid rgba(74, 222, 128, 0.25);
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease;
   text-align: center;
   font-size: 0.82rem;
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 .subclass-btn:hover {
   background: rgba(74, 222, 128, 0.06);
   border-color: #4ade80;
-  color: #f1f5f9;
+  color: var(--text-heading);
 }
 .subclass-icon {
   font-size: 1.5rem !important;
@@ -1066,3 +1066,4 @@ export default {
   }
 }
 </style>
+

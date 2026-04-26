@@ -497,8 +497,8 @@ export default {
 /* ── Page ───────────────────────────────────────── */
 .race-page {
   min-height: 100vh;
-  background: #0e0e1a;
-  color: #e2e8f0;
+  background: var(--bg-page);
+  color: var(--text-body);
 }
 
 /* ── Hero ───────────────────────────────────────── */
@@ -508,10 +508,10 @@ export default {
   height: 220px;
   background: linear-gradient(
     135deg,
-    rgba(192, 132, 252, 0.15) 0%,
-    rgba(14, 14, 26, 0.95) 100%
+    rgba(var(--accent-rgb), 0.15) 0%,
+    rgba(var(--bg-page-rgb), 0.95) 100%
   );
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 .hero::before {
@@ -520,12 +520,12 @@ export default {
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 50%,
-      rgba(192, 132, 252, 0.08) 0%,
+      rgba(var(--accent-rgb), 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(192, 132, 252, 0.05) 0%,
+      rgba(var(--accent-rgb), 0.05) 0%,
       transparent 40%
     );
 }
@@ -545,13 +545,13 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #c084fc;
+  color: var(--accent);
   margin-bottom: 0.4rem;
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin: 0 0 0.75rem;
   line-height: 1.1;
 }
@@ -567,14 +567,14 @@ export default {
   letter-spacing: 0.07em;
   padding: 3px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #94a3b8;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--border-light);
+  color: var(--text-muted);
+  border: 1px solid var(--border-strong);
 }
 .badge-purple {
-  background: rgba(192, 132, 252, 0.12);
-  color: #c084fc;
-  border-color: rgba(192, 132, 252, 0.3);
+  background: rgba(var(--accent-rgb), 0.12);
+  color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.3);
 }
 
 /* ── Page content ───────────────────────────────── */
@@ -593,14 +593,14 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: var(--accent);
   margin: 0 0 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
 }
 .section-text {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.8;
   margin: 0;
 }
@@ -612,8 +612,8 @@ export default {
   gap: 0.75rem;
 }
 .trait-block {
-  background: #12121f;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 1.25rem;
 }
@@ -623,11 +623,11 @@ export default {
 .trait-name {
   font-size: 0.9rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: var(--text-heading);
 }
 .trait-desc {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.7;
   margin: 0;
 }
@@ -636,7 +636,7 @@ export default {
 .table-wrap {
   margin-top: 1rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
   overflow: hidden;
   overflow-x: auto;
 }
@@ -646,7 +646,7 @@ export default {
   font-size: 0.82rem;
 }
 .trait-table thead tr {
-  background: rgba(192, 132, 252, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
 }
 .trait-table th {
   padding: 0.6rem 1rem;
@@ -655,20 +655,20 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #c084fc;
+  color: var(--accent);
   white-space: nowrap;
 }
 .trait-table td {
   padding: 0.55rem 1rem;
-  color: #cbd5e1;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-muted2);
+  border-bottom: 1px solid var(--border-faint);
   vertical-align: top;
 }
 .trait-table tbody tr:last-child td {
   border-bottom: none;
 }
 .trait-table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--hover-bg);
 }
 
 /* ── Mobile ─────────────────────────────────────── */
