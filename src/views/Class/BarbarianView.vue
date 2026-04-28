@@ -2,21 +2,15 @@
   <div class="barbarian-page">
     <!-- Hero Banner -->
     <div class="hero">
-      <img
-        src="../assets/classes/barbarian.png"
-        alt="Barbarian"
-        class="hero-img"
-      />
+      <img :src="heroImage" :alt="data.name" class="hero-img" />
       <div class="hero-overlay">
         <div class="hero-content">
           <span class="hero-eyebrow">Class</span>
-          <h1 class="hero-title">Barbarian</h1>
-          <p class="hero-subtitle">
-            A fierce warrior of primitive background who can enter a battle rage
-          </p>
+          <h1 class="hero-title">{{ data.name }}</h1>
+          <p class="hero-subtitle">{{ data.subtitle }}</p>
           <div class="hero-badges">
-            <span class="badge badge-green">Low Complexity</span>
-            <span class="badge badge-purple">Strength · Constitution</span>
+            <span class="badge badge-green">{{ data.complexity }}</span>
+            <span class="badge badge-purple">{{ data.primaryStat }}</span>
           </div>
         </div>
       </div>
@@ -27,7 +21,11 @@
       <section class="section">
         <h2 class="section-title">Core Traits</h2>
         <div class="traits-grid">
-          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+          <div
+            class="trait-row"
+            v-for="trait in data.coreTraits"
+            :key="trait.label"
+          >
             <span class="trait-label">{{ trait.label }}</span>
             <span class="trait-value">{{ trait.value }}</span>
           </div>
@@ -36,15 +34,17 @@
 
       <!-- Becoming a Barbarian -->
       <section class="section">
-        <h2 class="section-title">Becoming a Barbarian</h2>
+        <h2 class="section-title">Becoming a {{ data.name }}</h2>
         <div class="becoming-grid">
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Level 1 Character</h3>
             <ul class="becoming-list">
-              <li>Gain all the traits in the Core Barbarian Traits table.</li>
               <li>
-                Gain the Barbarian's level 1 features listed in the Features
-                table.
+                Gain all the traits in the Core {{ data.name }} Traits table.
+              </li>
+              <li>
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
@@ -56,8 +56,8 @@
                 training with Shields.
               </li>
               <li>
-                Gain the Barbarian's level 1 features listed in the Features
-                table.
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
@@ -74,23 +74,27 @@
                 <th>Level</th>
                 <th>Prof. Bonus</th>
                 <th>Features Unlocked</th>
-                <th>Rages</th>
-                <th>Rage Damage</th>
-                <th>Weapon Mastery</th>
+                <th v-for="col in data.tableColumns" :key="col.key">
+                  {{ col.label }}
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr
-                v-for="item in levels"
+                v-for="item in data.levels"
                 :key="item.level"
                 :class="{ 'row-highlight': item.feature.includes('Subclass') }"
               >
                 <td class="text-center level-cell">{{ item.level }}</td>
                 <td class="text-center">{{ item.profBonus }}</td>
                 <td>{{ item.feature }}</td>
-                <td class="text-center">{{ item.rages }}</td>
-                <td class="text-center">{{ item.rageDamage }}</td>
-                <td class="text-center">{{ item.weaponMastery }}</td>
+                <td
+                  v-for="col in data.tableColumns"
+                  :key="col.key"
+                  class="text-center"
+                >
+                  {{ item[col.key] }}
+                </td>
               </tr>
             </tbody>
           </table>
@@ -102,7 +106,7 @@
         <h2 class="section-title">Level Breakdown</h2>
         <div class="panels">
           <div
-            v-for="(lvl, index) in levelPanels"
+            v-for="(lvl, index) in data.levelPanels"
             :key="lvl.level"
             class="panel"
           >
@@ -113,9 +117,9 @@
             >
               <div class="panel-header-left">
                 <span class="panel-level-badge">{{ lvl.level }}</span>
-                <span class="panel-features-preview">{{
-                  lvl.features.map((f) => f.title).join(" · ")
-                }}</span>
+                <span class="panel-features-preview">
+                  {{ lvl.features.map((f) => f.title).join(" · ") }}
+                </span>
               </div>
               <v-icon class="panel-chevron">
                 {{
@@ -125,17 +129,18 @@
                 }}
               </v-icon>
             </div>
+
             <div class="panel-body" v-if="openPanels.includes(index)">
               <!-- Subclass buttons for level 3 -->
               <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
                 <div
-                  v-for="(sub, si) in subclasses"
-                  :key="si"
+                  v-for="sub in data.subclasses"
+                  :key="sub.title"
                   class="subclass-btn"
                   @click="goTo(sub.title)"
                 >
-                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
-                  <span>Path of the {{ sub.title }}</span>
+                  <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
+                  <span>{{ data.subclassPrefix }} {{ sub.title }}</span>
                 </div>
               </div>
               <div class="feature-cards">
@@ -158,435 +163,20 @@
 
 <script>
 import router from "@/router";
+import data from "./barbarian.json";
 
 export default {
   data() {
     return {
+      data,
       openPanels: [0],
-
-      subclasses: [
-        { title: "Berserker" },
-        { title: "Wild Heart" },
-        { title: "World Tree" },
-        { title: "Zealot" },
-      ],
-      subclassIcons: [
-        "mdi-emoticon-angry-outline",
-        "mdi-paw",
-        "mdi-tree",
-        "mdi-cross",
-      ],
-
-      coreTraits: [
-        { label: "Primary Ability", value: "Strength" },
-        { label: "Hit Point Die", value: "D12 per Barbarian level" },
-        {
-          label: "Saving Throw Proficiencies",
-          value: "Strength and Constitution",
-        },
-        {
-          label: "Skill Proficiencies",
-          value:
-            "Choose 2: Animal Handling, Athletics, Intimidation, Nature, Perception, or Survival",
-        },
-        { label: "Weapon Proficiencies", value: "Simple and Martial weapons" },
-        {
-          label: "Armor Training",
-          value: "Light and Medium armor and Shields",
-        },
-        {
-          label: "Starting Equipment",
-          value:
-            "Choose A or B: (A) Greataxe, 4 Handaxes, Explorer's Pack, and 15 GP; or (B) 75 GP",
-        },
-      ],
-
-      levels: [
-        {
-          level: "1",
-          profBonus: "+2",
-          feature: "Rage, Unarmored Defense, Weapon Mastery",
-          rages: "2",
-          rageDamage: "+2",
-          weaponMastery: "2",
-        },
-        {
-          level: "2",
-          profBonus: "+2",
-          feature: "Danger Sense, Reckless Attack",
-          rages: "2",
-          rageDamage: "+2",
-          weaponMastery: "2",
-        },
-        {
-          level: "3",
-          profBonus: "+2",
-          feature: "Barbarian Subclass, Primal Knowledge",
-          rages: "3",
-          rageDamage: "+2",
-          weaponMastery: "2",
-        },
-        {
-          level: "4",
-          profBonus: "+2",
-          feature: "Ability Score Improvement",
-          rages: "3",
-          rageDamage: "+2",
-          weaponMastery: "3",
-        },
-        {
-          level: "5",
-          profBonus: "+3",
-          feature: "Extra Attack, Fast Movement",
-          rages: "3",
-          rageDamage: "+2",
-          weaponMastery: "3",
-        },
-        {
-          level: "6",
-          profBonus: "+3",
-          feature: "Subclass Feature",
-          rages: "4",
-          rageDamage: "+3",
-          weaponMastery: "3",
-        },
-        {
-          level: "7",
-          profBonus: "+3",
-          feature: "Feral Instinct, Instinctive Pounce",
-          rages: "4",
-          rageDamage: "+2",
-          weaponMastery: "3",
-        },
-        {
-          level: "8",
-          profBonus: "+3",
-          feature: "Ability Score Improvement",
-          rages: "4",
-          rageDamage: "+2",
-          weaponMastery: "3",
-        },
-        {
-          level: "9",
-          profBonus: "+4",
-          feature: "Brutal Strike",
-          rages: "4",
-          rageDamage: "+3",
-          weaponMastery: "3",
-        },
-        {
-          level: "10",
-          profBonus: "+4",
-          feature: "Subclass Feature",
-          rages: "4",
-          rageDamage: "+3",
-          weaponMastery: "4",
-        },
-        {
-          level: "11",
-          profBonus: "+4",
-          feature: "Relentless Rage",
-          rages: "4",
-          rageDamage: "+3",
-          weaponMastery: "4",
-        },
-        {
-          level: "12",
-          profBonus: "+4",
-          feature: "Ability Score Improvement",
-          rages: "5",
-          rageDamage: "+3",
-          weaponMastery: "4",
-        },
-        {
-          level: "13",
-          profBonus: "+5",
-          feature: "Improved Brutal Strike",
-          rages: "5",
-          rageDamage: "+3",
-          weaponMastery: "4",
-        },
-        {
-          level: "14",
-          profBonus: "+5",
-          feature: "Subclass Feature",
-          rages: "5",
-          rageDamage: "+3",
-          weaponMastery: "4",
-        },
-        {
-          level: "15",
-          profBonus: "+5",
-          feature: "Persistent Rage",
-          rages: "5",
-          rageDamage: "+3",
-          weaponMastery: "4",
-        },
-        {
-          level: "16",
-          profBonus: "+5",
-          feature: "Ability Score Improvement",
-          rages: "5",
-          rageDamage: "+4",
-          weaponMastery: "4",
-        },
-        {
-          level: "17",
-          profBonus: "+6",
-          feature: "Improved Brutal Strike",
-          rages: "6",
-          rageDamage: "+4",
-          weaponMastery: "4",
-        },
-        {
-          level: "18",
-          profBonus: "+6",
-          feature: "Indomitable Might",
-          rages: "6",
-          rageDamage: "+4",
-          weaponMastery: "4",
-        },
-        {
-          level: "19",
-          profBonus: "+6",
-          feature: "Epic Boon",
-          rages: "6",
-          rageDamage: "+4",
-          weaponMastery: "4",
-        },
-        {
-          level: "20",
-          profBonus: "+6",
-          feature: "Primal Champion",
-          rages: "Unlimited",
-          rageDamage: "+4",
-          weaponMastery: "4",
-        },
-      ],
-
-      levelPanels: [
-        {
-          level: "Level 1",
-          features: [
-            {
-              title: "Rage",
-              body: `<p>You can imbue yourself with a primal power called Rage as a Bonus Action if you aren't wearing Heavy armor.</p>
-                     <br/>
-                     <p><b>Damage Resistance.</b> You have Resistance to Bludgeoning, Piercing, and Slashing damage.</p>
-                     <br/>
-                     <p><b>Rage Damage.</b> When you make an attack using Strength and deal damage, you gain a bonus shown in the Rage Damage column.</p>
-                     <br/>
-                     <p><b>Strength Advantage.</b> You have Advantage on Strength checks and saving throws.</p>
-                     <br/>
-                     <p><b>No Concentration or Spells.</b> You can't maintain Concentration or cast spells.</p>
-                     <br/>
-                     <p><b>Duration.</b> The Rage lasts until the end of your next turn. Extend it each round by attacking an enemy, forcing a saving throw, or taking a Bonus Action to extend. Max 10 minutes.</p>`,
-            },
-            {
-              title: "Unarmored Defense",
-              body: `<p>While you aren't wearing any armor, your base Armor Class equals 10 plus your Dexterity and Constitution modifiers. You can use a Shield and still gain this benefit.</p>`,
-            },
-            {
-              title: "Weapon Mastery",
-              body: `<p>Your training with weapons allows you to use the mastery properties of two kinds of Simple or Martial Melee weapons of your choice. Whenever you finish a Long Rest, you can change one of those weapon choices.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 2",
-          features: [
-            {
-              title: "Danger Sense",
-              body: `<p>You have Advantage on Dexterity saving throws unless you have the Incapacitated condition.</p>`,
-            },
-            {
-              title: "Reckless Attack",
-              body: `<p>When you make your first attack roll on your turn, you can decide to attack recklessly. Doing so gives you Advantage on Strength attack rolls until the start of your next turn, but attack rolls against you also have Advantage.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 3",
-          features: [
-            {
-              title: "Primal Knowledge",
-              body: `<p>You gain proficiency in another skill from the Barbarian list. While Raging, you can make Strength checks for Acrobatics, Intimidation, Perception, Stealth, or Survival.</p>`,
-            },
-            {
-              title: "Barbarian Subclass",
-              body: `<p>You gain a Barbarian subclass of your choice. Choose your path below:</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 4",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at levels 8, 12, and 16.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 5",
-          features: [
-            {
-              title: "Extra Attack",
-              body: `<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>`,
-            },
-            {
-              title: "Fast Movement",
-              body: `<p>Your speed increases by 10 feet while you aren't wearing Heavy armor.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 6",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 7",
-          features: [
-            {
-              title: "Feral Instinct",
-              body: `<p>You have Advantage on Initiative rolls.</p>`,
-            },
-            {
-              title: "Instinctive Pounce",
-              body: `<p>As part of the Bonus Action you take to enter your Rage, you can move up to half your Speed.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 8",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 9",
-          features: [
-            {
-              title: "Brutal Strike",
-              body: `<p>If you use Reckless Attack, you can forgo Advantage on one Strength-based attack roll. If it hits, the target takes an extra 1d10 damage and you can apply one Brutal Strike effect:</p>
-                     <br/>
-                     <p><b>Forceful Blow.</b> Push the target 15 feet away. You can then move up to half your Speed toward them without provoking Opportunity Attacks.</p>
-                     <br/>
-                     <p><b>Hamstring Blow.</b> The target's Speed is reduced by 15 feet until the start of your next turn.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 10",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 11",
-          features: [
-            {
-              title: "Relentless Rage",
-              body: `<p>If you drop to 0 HP while Raging and don't die outright, make a DC 10 Constitution save. On success, your HP becomes twice your Barbarian level. Each subsequent use increases the DC by 5, resetting on a Short or Long Rest.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 12",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 13",
-          features: [
-            {
-              title: "Improved Brutal Strike",
-              body: `<p><b>Staggering Blow.</b> The target has Disadvantage on its next saving throw and can't make Opportunity Attacks until your next turn.</p>
-                     <br/>
-                     <p><b>Sundering Blow.</b> The next attack roll against the target before your next turn gains a +5 bonus.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 14",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 15",
-          features: [
-            {
-              title: "Persistent Rage",
-              body: `<p>When you roll Initiative, you can regain all expended uses of Rage (once per Long Rest). Your Rage now lasts 10 minutes without extension actions, ending only if you are Unconscious or don Heavy armor.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 16",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 17",
-          features: [
-            {
-              title: "Improved Brutal Strike",
-              body: `<p>The extra damage of your Brutal Strike increases to 2d10. You can also apply two different Brutal Strike effects whenever you use this feature.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 18",
-          features: [
-            {
-              title: "Indomitable Might",
-              body: `<p>If your total for a Strength check or Strength saving throw is less than your Strength score, you can use that score in place of the total.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 19",
-          features: [
-            {
-              title: "Epic Boon",
-              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Irresistible Offense is recommended.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 20",
-          features: [
-            {
-              title: "Primal Champion",
-              body: `<p>You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25.</p>`,
-            },
-          ],
-        },
-      ],
     };
+  },
+
+  computed: {
+    heroImage() {
+      return require(`@/assets/classes/${this.data.image}`);
+    },
   },
 
   methods: {
@@ -598,7 +188,7 @@ export default {
     goTo(label) {
       router
         .push(
-          "/wiki/classes/barbarian/" + label.replace(" ", "_").toLowerCase(),
+          this.data.subclassRoute + label.replace(/\s+/g, "_").toLowerCase(),
         )
         .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     },
@@ -845,7 +435,6 @@ export default {
 .panel-header.open {
   border-bottom: 1px solid var(--border-subtle);
 }
-
 .panel-header-left {
   display: flex;
   align-items: center;
@@ -872,7 +461,6 @@ export default {
   color: var(--text-subtle);
   flex-shrink: 0;
 }
-
 .panel-body {
   padding: 1.25rem;
 }

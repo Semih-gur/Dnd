@@ -142,7 +142,7 @@ export default {
 
 /* ── Page content ───────────────────────────────── */
 .page-content {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
@@ -150,7 +150,7 @@ export default {
 /* ── Grid ───────────────────────────────────────── */
 .items-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
 @media (max-width: 600px) {

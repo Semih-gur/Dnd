@@ -76,7 +76,7 @@ export default {
 <style scoped>
 .wiki-home {
   padding: 2rem 1rem;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 

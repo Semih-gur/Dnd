@@ -1,20 +1,14 @@
 ﻿<template>
   <div class="druid-page">
-    <!-- Hero Banner -->
+    <!-- Hero Banner — no image -->
     <div class="hero">
-      <img src="../assets/classes/druid.png" alt="Druid" class="hero-img" />
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <span class="hero-eyebrow">Class</span>
-          <h1 class="hero-title">Druid</h1>
-          <p class="hero-subtitle">
-            A priest of the Old Faith, wielding the powers of nature and
-            adopting animal forms
-          </p>
-          <div class="hero-badges">
-            <span class="badge badge-orange">High Complexity</span>
-            <span class="badge badge-green">Wisdom</span>
-          </div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Class</span>
+        <h1 class="hero-title">{{ data.name }}</h1>
+        <p class="hero-subtitle">{{ data.subtitle }}</p>
+        <div class="hero-badges">
+          <span class="badge badge-orange">{{ data.complexity }}</span>
+          <span class="badge badge-green">{{ data.primaryStat }}</span>
         </div>
       </div>
     </div>
@@ -24,36 +18,40 @@
       <section class="section">
         <h2 class="section-title">Core Traits</h2>
         <div class="traits-grid">
-          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+          <div
+            class="trait-row"
+            v-for="trait in data.coreTraits"
+            :key="trait.label"
+          >
             <span class="trait-label">{{ trait.label }}</span>
             <span class="trait-value">{{ trait.value }}</span>
           </div>
         </div>
       </section>
 
-      <!-- Becoming a Druid -->
+      <!-- Becoming -->
       <section class="section">
-        <h2 class="section-title">Becoming a Druid</h2>
+        <h2 class="section-title">Becoming a {{ data.name }}</h2>
         <div class="becoming-grid">
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Level 1 Character</h3>
             <ul class="becoming-list">
-              <li>Gain all the traits in the Core Druid Traits table.</li>
               <li>
-                Gain the Druid's level 1 features listed in the Features table.
+                Gain all the traits in the Core {{ data.name }} Traits table.
+              </li>
+              <li>
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Multiclass Character</h3>
             <ul class="becoming-list">
+              <li>{{ data.multiclassTraits }}</li>
               <li>
-                Gain the Hit Point Die and training with Light armor and
-                Shields.
-              </li>
-              <li>
-                Gain the Druid's level 1 features. See the multiclassing rules
-                to determine available spell slots.
+                Gain the {{ data.name }}'s level 1 features. See the
+                multiclassing rules to determine available spell slots.
               </li>
             </ul>
           </div>
@@ -70,44 +68,37 @@
                 <th>Level</th>
                 <th>Prof. Bonus</th>
                 <th>Features Unlocked</th>
-                <th>Wild Shape</th>
-                <th>Cantrips</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
+                <th v-for="col in data.tableColumns" :key="col.key">
+                  {{ col.label }}
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr
-                v-for="item in levels"
+                v-for="item in data.levels"
                 :key="item.level"
                 :class="{ 'row-highlight': item.feature.includes('Subclass') }"
               >
                 <td class="level-cell">{{ item.level }}</td>
                 <td class="text-center">{{ item.profBonus }}</td>
                 <td>{{ item.feature }}</td>
-                <td class="text-center">
-                  <span class="ws-badge" v-if="item.wildShape !== '-'">{{
-                    item.wildShape
-                  }}</span>
-                  <span v-else class="muted">—</span>
+                <td
+                  v-for="col in data.tableColumns"
+                  :key="col.key"
+                  class="text-center"
+                >
+                  <span
+                    v-if="col.badge && item[col.key] !== '-'"
+                    :class="col.badgeClass"
+                    >{{ item[col.key] }}</span
+                  >
+                  <span
+                    v-else-if="col.badge && item[col.key] === '-'"
+                    class="muted"
+                    >—</span
+                  >
+                  <span v-else>{{ item[col.key] }}</span>
                 </td>
-                <td class="text-center">{{ item.cantrip }}</td>
-                <td class="text-center">{{ item.first }}</td>
-                <td class="text-center">{{ item.second }}</td>
-                <td class="text-center">{{ item.third }}</td>
-                <td class="text-center">{{ item.fourth }}</td>
-                <td class="text-center">{{ item.fifth }}</td>
-                <td class="text-center">{{ item.sixth }}</td>
-                <td class="text-center">{{ item.seventh }}</td>
-                <td class="text-center">{{ item.eight }}</td>
-                <td class="text-center">{{ item.ninth }}</td>
               </tr>
             </tbody>
           </table>
@@ -119,7 +110,7 @@
         <h2 class="section-title">Level Breakdown</h2>
         <div class="panels">
           <div
-            v-for="(lvl, index) in levelPanels"
+            v-for="(lvl, index) in data.levelPanels"
             :key="lvl.level"
             class="panel"
           >
@@ -130,9 +121,9 @@
             >
               <div class="panel-header-left">
                 <span class="panel-level-badge">{{ lvl.level }}</span>
-                <span class="panel-features-preview">{{
-                  lvl.features.map((f) => f.title).join(" · ")
-                }}</span>
+                <span class="panel-features-preview">
+                  {{ lvl.features.map((f) => f.title).join(" · ") }}
+                </span>
               </div>
               <v-icon class="panel-chevron">
                 {{
@@ -147,13 +138,13 @@
               <!-- Subclass buttons for level 3 -->
               <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
                 <div
-                  v-for="(sub, si) in subclasses"
-                  :key="si"
+                  v-for="sub in data.subclasses"
+                  :key="sub.title"
                   class="subclass-btn"
                   @click="goTo(sub.title)"
                 >
-                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
-                  <span>Circle of the {{ sub.title }}</span>
+                  <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
+                  <span>{{ data.subclassPrefix }} {{ sub.title }}</span>
                 </div>
               </div>
 
@@ -169,7 +160,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="row in wildshapeTable" :key="row.level">
+                    <tr v-for="row in data.wildshapeTable" :key="row.level">
                       <td class="text-center">{{ row.level }}</td>
                       <td class="text-center">{{ row.forms }}</td>
                       <td class="text-center">{{ row.cr }}</td>
@@ -205,568 +196,13 @@
 
 <script>
 import router from "@/router";
+import data from "./druid.json";
 
 export default {
   data() {
     return {
+      data,
       openPanels: [0],
-
-      subclasses: [
-        { title: "Land" },
-        { title: "Moon" },
-        { title: "Sea" },
-        { title: "Stars" },
-      ],
-      subclassIcons: [
-        "mdi-mountain",
-        "mdi-moon-waning-crescent",
-        "mdi-waves",
-        "mdi-star-four-points",
-      ],
-
-      wildshapeTable: [
-        { level: "2", forms: "4", cr: "1/4", flySpeed: "No" },
-        { level: "4", forms: "6", cr: "1/2", flySpeed: "No" },
-        { level: "8", forms: "8", cr: "1", flySpeed: "Yes" },
-      ],
-
-      coreTraits: [
-        { label: "Primary Ability", value: "Wisdom" },
-        { label: "Hit Point Die", value: "D8 per Druid level" },
-        {
-          label: "Saving Throw Proficiencies",
-          value: "Intelligence and Wisdom",
-        },
-        {
-          label: "Skill Proficiencies",
-          value:
-            "Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, or Survival",
-        },
-        { label: "Weapon Proficiencies", value: "Simple weapons" },
-        { label: "Tool Proficiencies", value: "Herbalism Kit" },
-        { label: "Armor Training", value: "Light armor and Shields" },
-        {
-          label: "Starting Equipment",
-          value:
-            "Choose A or B: (A) Leather Armor, Shield, Sickle, Druidic Focus (Quarterstaff), Explorer's Pack, Herbalism Kit, and 9 GP; or (B) 50 GP",
-        },
-      ],
-
-      levels: [
-        {
-          level: "1",
-          profBonus: "+2",
-          feature: "Spellcasting, Druidic, Primal Order",
-          wildShape: "-",
-          cantrip: "2",
-          first: "2",
-          second: "-",
-          third: "-",
-          fourth: "-",
-          fifth: "-",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "2",
-          profBonus: "+2",
-          feature: "Wild Shape, Wild Companion",
-          wildShape: "2",
-          cantrip: "2",
-          first: "3",
-          second: "-",
-          third: "-",
-          fourth: "-",
-          fifth: "-",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "3",
-          profBonus: "+2",
-          feature: "Druid Subclass",
-          wildShape: "2",
-          cantrip: "2",
-          first: "4",
-          second: "2",
-          third: "-",
-          fourth: "-",
-          fifth: "-",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "4",
-          profBonus: "+2",
-          feature: "Ability Score Improvement",
-          wildShape: "2",
-          cantrip: "3",
-          first: "4",
-          second: "3",
-          third: "-",
-          fourth: "-",
-          fifth: "-",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "5",
-          profBonus: "+3",
-          feature: "Wild Resurgence",
-          wildShape: "2",
-          cantrip: "3",
-          first: "4",
-          second: "3",
-          third: "2",
-          fourth: "-",
-          fifth: "-",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "6",
-          profBonus: "+3",
-          feature: "Subclass Feature",
-          wildShape: "3",
-          cantrip: "3",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "-",
-          fifth: "-",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "7",
-          profBonus: "+3",
-          feature: "Elemental Fury",
-          wildShape: "3",
-          cantrip: "3",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "1",
-          fifth: "-",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "8",
-          profBonus: "+3",
-          feature: "Ability Score Improvement",
-          wildShape: "3",
-          cantrip: "3",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "2",
-          fifth: "-",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "9",
-          profBonus: "+4",
-          feature: "—",
-          wildShape: "3",
-          cantrip: "3",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "1",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "10",
-          profBonus: "+4",
-          feature: "Subclass Feature",
-          wildShape: "3",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "2",
-          sixth: "-",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "11",
-          profBonus: "+4",
-          feature: "—",
-          wildShape: "3",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "2",
-          sixth: "1",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "12",
-          profBonus: "+4",
-          feature: "Ability Score Improvement",
-          wildShape: "3",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "2",
-          sixth: "1",
-          seventh: "-",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "13",
-          profBonus: "+5",
-          feature: "—",
-          wildShape: "3",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "2",
-          sixth: "1",
-          seventh: "1",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "14",
-          profBonus: "+5",
-          feature: "Subclass Feature",
-          wildShape: "3",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "2",
-          sixth: "1",
-          seventh: "1",
-          eight: "-",
-          ninth: "-",
-        },
-        {
-          level: "15",
-          profBonus: "+5",
-          feature: "Improved Elemental Fury",
-          wildShape: "3",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "2",
-          sixth: "1",
-          seventh: "1",
-          eight: "1",
-          ninth: "-",
-        },
-        {
-          level: "16",
-          profBonus: "+5",
-          feature: "Ability Score Improvement",
-          wildShape: "3",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "2",
-          sixth: "1",
-          seventh: "1",
-          eight: "1",
-          ninth: "-",
-        },
-        {
-          level: "17",
-          profBonus: "+6",
-          feature: "—",
-          wildShape: "4",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "2",
-          sixth: "1",
-          seventh: "1",
-          eight: "1",
-          ninth: "1",
-        },
-        {
-          level: "18",
-          profBonus: "+6",
-          feature: "Beast Spells",
-          wildShape: "4",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "3",
-          sixth: "1",
-          seventh: "1",
-          eight: "1",
-          ninth: "1",
-        },
-        {
-          level: "19",
-          profBonus: "+6",
-          feature: "Epic Boon",
-          wildShape: "4",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "3",
-          sixth: "2",
-          seventh: "1",
-          eight: "1",
-          ninth: "1",
-        },
-        {
-          level: "20",
-          profBonus: "+6",
-          feature: "Archdruid",
-          wildShape: "4",
-          cantrip: "4",
-          first: "4",
-          second: "3",
-          third: "3",
-          fourth: "3",
-          fifth: "3",
-          sixth: "2",
-          seventh: "2",
-          eight: "1",
-          ninth: "1",
-        },
-      ],
-
-      levelPanels: [
-        {
-          level: "Level 1",
-          features: [
-            {
-              title: "Spellcasting",
-              body: `<p>You cast spells through studying the mystical forces of nature. Wisdom is your spellcasting ability and you can use a Druidic Focus as a Spellcasting Focus.</p>
-                     <br/>
-                     <p><b>Cantrips.</b> You know two cantrips of your choice from the Druid spell list. Druidcraft and Produce Flame are recommended. You gain more cantrips at levels 4 and 10.</p>
-                     <br/>
-                     <p><b>Prepared Spells.</b> Choose four level 1 spells to start. Animal Friendship, Cure Wounds, Faerie Fire, and Thunderwave are recommended.</p>
-                     <br/>
-                     <p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can replace any prepared spells with other Druid spells for which you have spell slots.</p>`,
-            },
-            {
-              title: "Druidic",
-              body: `<p>You know Druidic, the secret language of Druids. You always have the Speak with Animals spell prepared.</p>
-                     <br/>
-                     <p>You can use Druidic to leave hidden messages. You and others who know Druidic automatically spot such messages. Others spot them with a DC 15 Intelligence (Investigation) check but can't decipher them without magic.</p>`,
-            },
-            {
-              title: "Primal Order",
-              body: `<p>You have dedicated yourself to one of the following sacred roles of your choice.</p>
-                     <br/>
-                     <p><b>Magician.</b> You know one extra cantrip from the Druid spell list. Your mystical connection to nature gives you a bonus to Intelligence (Arcana or Nature) checks equal to your Wisdom modifier (minimum +1).</p>
-                     <br/>
-                     <p><b>Warden.</b> Trained for battle, you gain proficiency with Martial weapons and training with Medium armor.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 2",
-          features: [
-            {
-              title: "Wild Shape",
-              body: `<p>As a Bonus Action, you shape-shift into a Beast form you have learned. You stay in that form for hours equal to half your Druid level, or until you use Wild Shape again, become Incapacitated, or die. You can also leave early as a Bonus Action.</p>
-                     <br/>
-                     <p><b>Number of Uses.</b> You can use Wild Shape twice, regaining one use on a Short Rest and all uses on a Long Rest. Additional uses are gained at higher levels.</p>
-                     <br/>
-                     <p><b>Known Forms.</b> You know four Beast forms (max CR 1/4, no Fly Speed). The Rat, Riding Horse, Spider, and Wolf are recommended. You can replace one known form each Long Rest. The table above shows how your available forms expand as you level up.</p>
-                     <br/>
-                     <p><b>While Shape-Shifted.</b> You gain Temporary Hit Points equal to your Druid level. Your statistics are replaced by the Beast's stat block, but you retain your creature type, Hit Points, Hit Dice, mental ability scores, class features, languages, feats, and proficiencies. You cannot cast spells, though Concentration on already-cast spells is maintained.</p>`,
-            },
-            {
-              title: "Wild Companion",
-              body: `<p>As a Magic action, you can expend a spell slot or a use of Wild Shape to cast Find Familiar without Material components. The familiar is Fey and disappears when you finish a Long Rest.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 3",
-          features: [
-            {
-              title: "Druid Subclass",
-              body: `<p>You gain a Druid subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Druid level or lower. Choose your circle below:</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 4",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Druid levels 8, 12, and 16.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 5",
-          features: [
-            {
-              title: "Wild Resurgence",
-              body: `<p>Once on each of your turns, if you have no uses of Wild Shape left, you can give yourself one use by expending a spell slot (no action required).</p>
-                     <br/>
-                     <p>In addition, you can expend one use of Wild Shape (no action required) to give yourself a level 1 spell slot, but you can't do so again until you finish a Long Rest.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 6",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen circle.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 7",
-          features: [
-            {
-              title: "Elemental Fury",
-              body: `<p>The might of the elements flows through you. Choose one of the following options:</p>
-                     <br/>
-                     <p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Druid cantrip.</p>
-                     <br/>
-                     <p><b>Primal Strike.</b> Once on each of your turns when you hit a creature with a weapon or a Beast form's attack in Wild Shape, you can cause the target to take an extra 1d8 Cold, Fire, Lightning, or Thunder damage (choose when you hit).</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 8",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 10",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen circle.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 12",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 14",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen circle.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 15",
-          features: [
-            {
-              title: "Improved Elemental Fury",
-              body: `<p>The option you chose for Elemental Fury grows more powerful.</p>
-                     <br/>
-                     <p><b>Potent Spellcasting.</b> When you cast a Druid cantrip with a range of 10 feet or greater, the spell's range increases by 300 feet.</p>
-                     <br/>
-                     <p><b>Primal Strike.</b> The extra damage of your Primal Strike increases to 2d8.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 16",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 18",
-          features: [
-            {
-              title: "Beast Spells",
-              body: `<p>While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 19",
-          features: [
-            {
-              title: "Epic Boon",
-              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 20",
-          features: [
-            {
-              title: "Archdruid",
-              body: `<p>The vitality of nature constantly blooms within you, granting the following benefits:</p>
-                     <br/>
-                     <p><b>Evergreen Wild Shape.</b> Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.</p>
-                     <br/>
-                     <p><b>Nature Magician.</b> You can convert uses of Wild Shape into a spell slot (no action required). Each use contributes 2 spell levels. For example, two uses produce a level 4 spell slot. Once used, you can't do so again until you finish a Long Rest.</p>
-                     <br/>
-                     <p><b>Longevity.</b> For every ten years that pass, your body ages only one year.</p>`,
-            },
-          ],
-        },
-      ],
     };
   },
 
@@ -778,7 +214,9 @@ export default {
     },
     goTo(label) {
       router
-        .push("/wiki/classes/druid/" + label.replace(/\s+/g, "_").toLowerCase())
+        .push(
+          this.data.subclassRoute + label.replace(/\s+/g, "_").toLowerCase(),
+        )
         .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     },
   },
@@ -793,32 +231,16 @@ export default {
   color: var(--text-body);
 }
 
-/* ── Hero ───────────────────────────────────────── */
+/* ── Hero — no image ────────────────────────────── */
 .hero {
-  position: relative;
   width: 100%;
-  height: 420px;
-  overflow: hidden;
-}
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
+  padding: 3rem 2.5rem 2rem;
   background: linear-gradient(
     to bottom,
-    rgba(var(--bg-page-rgb), 0.2) 0%,
-    rgba(var(--bg-page-rgb), 0.7) 60%,
+    rgba(var(--bg-page-rgb), 0.95) 0%,
     var(--bg-page) 100%
   );
-  display: flex;
-  align-items: flex-end;
-  padding: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 .hero-content {
   max-width: 700px;
@@ -828,13 +250,15 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--accent);
+  color: #a3e635;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin: 0.25rem 0 0.5rem;
+  margin: 0 0 0.5rem;
   line-height: 1;
 }
 .hero-subtitle {
@@ -1007,7 +431,7 @@ export default {
   text-align: center;
 }
 .muted {
-  color: var(--text-faint);
+  color: var(--text-subtle);
 }
 
 .ws-badge {
@@ -1176,19 +600,16 @@ export default {
   font-weight: 700;
 }
 .fly-no {
-  color: var(--text-faint2);
+  color: var(--text-subtle);
 }
 
 /* ── Mobile ─────────────────────────────────────── */
 @media (max-width: 640px) {
   .hero {
-    height: 300px;
+    padding: 2rem 1.5rem 1.5rem;
   }
   .hero-title {
     font-size: 2rem;
-  }
-  .hero-overlay {
-    padding: 1.5rem;
   }
   .trait-row {
     grid-template-columns: 1fr;
@@ -1199,4 +620,3 @@ export default {
   }
 }
 </style>
-

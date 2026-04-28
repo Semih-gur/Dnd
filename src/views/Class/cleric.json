@@ -1,0 +1,523 @@
+{
+  "name": "Cleric",
+  "subtitle": "A priestly champion who wields divine magic in service of a higher power",
+  "complexity": "Medium Complexity",
+  "primaryStat": "Wisdom",
+  "image": "cleric.png",
+  "accentColor": "#fbbf24",
+  "accentRgb": "251, 191, 36",
+  "subclassPrefix": "",
+  "subclassSuffix": "Domain",
+  "subclassRoute": "/wiki/classes/cleric/",
+  "multiclassTraits": "Gain the Hit Point Die and training with Light and Medium armor and Shields.",
+
+  "subclasses": [
+    { "title": "Life", "icon": "mdi-heart-pulse" },
+    { "title": "Light", "icon": "mdi-white-balance-sunny" },
+    { "title": "Trickery", "icon": "mdi-drama-masks" },
+    { "title": "War", "icon": "mdi-sword-cross" }
+  ],
+
+  "coreTraits": [
+    { "label": "Primary Ability", "value": "Wisdom" },
+    { "label": "Hit Point Die", "value": "D8 per Cleric level" },
+    { "label": "Saving Throw Proficiencies", "value": "Wisdom and Charisma" },
+    {
+      "label": "Skill Proficiencies",
+      "value": "Choose 2: History, Insight, Medicine, Persuasion, or Religion"
+    },
+    { "label": "Weapon Proficiencies", "value": "Simple weapons" },
+    {
+      "label": "Armor Training",
+      "value": "Light and Medium armor and Shields"
+    },
+    {
+      "label": "Starting Equipment",
+      "value": "Choose A or B: (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest's Pack, and 7 GP; or (B) 110 GP"
+    }
+  ],
+
+  "tableColumns": [
+    {
+      "key": "channelDivinity",
+      "label": "Channel Divinity",
+      "badge": true,
+      "badgeClass": "cd-badge"
+    },
+    { "key": "cantrip", "label": "Cantrips", "badge": false },
+    { "key": "first", "label": "1", "badge": false },
+    { "key": "second", "label": "2", "badge": false },
+    { "key": "third", "label": "3", "badge": false },
+    { "key": "fourth", "label": "4", "badge": false },
+    { "key": "fifth", "label": "5", "badge": false },
+    { "key": "sixth", "label": "6", "badge": false },
+    { "key": "seventh", "label": "7", "badge": false },
+    { "key": "eight", "label": "8", "badge": false },
+    { "key": "ninth", "label": "9", "badge": false }
+  ],
+
+  "levels": [
+    {
+      "level": "1",
+      "profBonus": "+2",
+      "feature": "Spellcasting, Divine Order",
+      "channelDivinity": "2",
+      "cantrip": "3",
+      "first": "2",
+      "second": "-",
+      "third": "-",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "2",
+      "profBonus": "+2",
+      "feature": "Channel Divinity",
+      "channelDivinity": "2",
+      "cantrip": "3",
+      "first": "3",
+      "second": "-",
+      "third": "-",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "3",
+      "profBonus": "+2",
+      "feature": "Cleric Subclass",
+      "channelDivinity": "2",
+      "cantrip": "3",
+      "first": "4",
+      "second": "2",
+      "third": "-",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "4",
+      "profBonus": "+2",
+      "feature": "Ability Score Improvement",
+      "channelDivinity": "2",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "-",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "5",
+      "profBonus": "+3",
+      "feature": "Sear Undead",
+      "channelDivinity": "2",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "2",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "6",
+      "profBonus": "+3",
+      "feature": "Subclass Feature",
+      "channelDivinity": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "7",
+      "profBonus": "+3",
+      "feature": "Blessed Strikes",
+      "channelDivinity": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "1",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "8",
+      "profBonus": "+3",
+      "feature": "Ability Score Improvement",
+      "channelDivinity": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "2",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "9",
+      "profBonus": "+4",
+      "feature": "—",
+      "channelDivinity": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "1",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "10",
+      "profBonus": "+4",
+      "feature": "Divine Intervention",
+      "channelDivinity": "3",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "11",
+      "profBonus": "+4",
+      "feature": "—",
+      "channelDivinity": "3",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "12",
+      "profBonus": "+4",
+      "feature": "Ability Score Improvement",
+      "channelDivinity": "3",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "13",
+      "profBonus": "+5",
+      "feature": "—",
+      "channelDivinity": "3",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "14",
+      "profBonus": "+5",
+      "feature": "Improved Blessed Strikes",
+      "channelDivinity": "3",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "15",
+      "profBonus": "+5",
+      "feature": "—",
+      "channelDivinity": "3",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "-"
+    },
+    {
+      "level": "16",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "channelDivinity": "3",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "-"
+    },
+    {
+      "level": "17",
+      "profBonus": "+6",
+      "feature": "Subclass Feature",
+      "channelDivinity": "3",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "1"
+    },
+    {
+      "level": "18",
+      "profBonus": "+6",
+      "feature": "—",
+      "channelDivinity": "4",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "3",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "1"
+    },
+    {
+      "level": "19",
+      "profBonus": "+6",
+      "feature": "Epic Boon",
+      "channelDivinity": "4",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "3",
+      "sixth": "2",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "1"
+    },
+    {
+      "level": "20",
+      "profBonus": "+6",
+      "feature": "Greater Divine Intervention",
+      "channelDivinity": "4",
+      "cantrip": "5",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "3",
+      "sixth": "2",
+      "seventh": "2",
+      "eight": "1",
+      "ninth": "1"
+    }
+  ],
+
+  "levelPanels": [
+    {
+      "level": "Level 1",
+      "features": [
+        {
+          "title": "Spellcasting",
+          "body": "<p>You have learned to cast spells through prayer and meditation. Wisdom is your spellcasting ability and you can use a Holy Symbol as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know three cantrips of your choice from the Cleric spell list. Guidance, Sacred Flame, and Thaumaturgy are recommended. You gain more cantrips at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells from the Cleric spell list to start. Bless, Cure Wounds, Guiding Bolt, and Shield of Faith are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can change your list of prepared spells, replacing any of the spells there with other Cleric spells for which you have spell slots.</p>"
+        },
+        {
+          "title": "Divine Order",
+          "body": "<p>You have dedicated yourself to one of the following sacred roles of your choice.</p><br/><p><b>Protector.</b> Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.</p><br/><p><b>Thaumaturge.</b> You know one extra cantrip from the Cleric spell list. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks equal to your Wisdom modifier (minimum of +1).</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 2",
+      "features": [
+        {
+          "title": "Channel Divinity",
+          "body": "<p>You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with two effects: Divine Spark and Turn Undead. You gain additional effects from your subclass. You can use Channel Divinity twice, regaining one use on a Short Rest and all uses on a Long Rest.</p><br/><p><b>Divine Spark.</b> As a Magic action, point your Holy Symbol at a creature within 30 feet. Roll 1d8 + your Wisdom modifier. Either restore that many Hit Points to the creature, or force a Constitution save — on a fail, it takes Necrotic or Radiant damage equal to that total (half on a success). The die increases at levels 7 (2d8), 13 (3d8), and 18 (4d8).</p><br/><p><b>Turn Undead.</b> As a Magic action, present your Holy Symbol. Each Undead of your choice within 30 feet must make a Wisdom saving throw or have the Frightened and Incapacitated conditions for 1 minute, moving as far from you as possible each turn.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 3",
+      "features": [
+        {
+          "title": "Cleric Subclass",
+          "body": "<p>You gain a Cleric subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Cleric level or lower. Choose your domain below:</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 4",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Cleric levels 8, 12, and 16.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 5",
+      "features": [
+        {
+          "title": "Sear Undead",
+          "body": "<p>Whenever you use Turn Undead, you can roll a number of d8s equal to your Wisdom modifier (minimum of 1d8) and add the rolls together. Each Undead that fails its saving throw against that use of Turn Undead takes Radiant damage equal to the roll's total. This damage doesn't end the turn effect.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 6",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen domain.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 7",
+      "features": [
+        {
+          "title": "Blessed Strikes",
+          "body": "<p>Divine power infuses you in battle. Choose one of the following options:</p><br/><p><b>Divine Strike.</b> Once on each of your turns when you hit a creature with a weapon attack, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).</p><br/><p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Cleric cantrip.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 8",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 10",
+      "features": [
+        {
+          "title": "Divine Intervention",
+          "body": "<p>As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction to cast. You cast that spell without expending a spell slot or needing Material components. You can't use this feature again until you finish a Long Rest.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 12",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 14",
+      "features": [
+        {
+          "title": "Improved Blessed Strikes",
+          "body": "<p>The option you chose for Blessed Strikes grows more powerful.</p><br/><p><b>Divine Strike.</b> The extra damage of your Divine Strike increases to 2d8.</p><br/><p><b>Potent Spellcasting.</b> When you cast a Cleric cantrip and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet, granting Temporary Hit Points equal to twice your Wisdom modifier.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 16",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 17",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen domain.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 19",
+      "features": [
+        {
+          "title": "Epic Boon",
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 20",
+      "features": [
+        {
+          "title": "Greater Divine Intervention",
+          "body": "<p>When you use your Divine Intervention feature, you can choose Wish when you select a spell. If you do so, you can't use Divine Intervention again until you finish 2d4 Long Rests.</p>"
+        }
+      ]
+    }
+  ]
+}

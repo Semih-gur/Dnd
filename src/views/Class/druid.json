@@ -1,0 +1,545 @@
+{
+  "name": "Druid",
+  "subtitle": "A priest of the Old Faith, wielding the powers of nature and adopting animal forms",
+  "complexity": "High Complexity",
+  "primaryStat": "Wisdom",
+  "accentColor": "#a3e635",
+  "accentRgb": "163, 230, 53",
+  "subclassPrefix": "Circle of the",
+  "subclassRoute": "/wiki/classes/druid/",
+  "multiclassTraits": "Gain the Hit Point Die and training with Light armor and Shields.",
+
+  "subclasses": [
+    { "title": "Land", "icon": "mdi-leaf" },
+    { "title": "Moon", "icon": "mdi-moon-waning-crescent" },
+    { "title": "Sea", "icon": "mdi-waves" },
+    { "title": "Stars", "icon": "mdi-star-four-points" }
+  ],
+
+  "coreTraits": [
+    { "label": "Primary Ability", "value": "Wisdom" },
+    { "label": "Hit Point Die", "value": "D8 per Druid level" },
+    {
+      "label": "Saving Throw Proficiencies",
+      "value": "Intelligence and Wisdom"
+    },
+    {
+      "label": "Skill Proficiencies",
+      "value": "Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, or Survival"
+    },
+    { "label": "Weapon Proficiencies", "value": "Simple weapons" },
+    { "label": "Tool Proficiencies", "value": "Herbalism Kit" },
+    { "label": "Armor Training", "value": "Light armor and Shields" },
+    {
+      "label": "Starting Equipment",
+      "value": "Choose A or B: (A) Leather Armor, Shield, Sickle, Druidic Focus (Quarterstaff), Explorer's Pack, Herbalism Kit, and 9 GP; or (B) 50 GP"
+    }
+  ],
+
+  "tableColumns": [
+    {
+      "key": "wildShape",
+      "label": "Wild Shape",
+      "badge": true,
+      "badgeClass": "ws-badge"
+    },
+    { "key": "cantrip", "label": "Cantrips", "badge": false },
+    { "key": "first", "label": "1", "badge": false },
+    { "key": "second", "label": "2", "badge": false },
+    { "key": "third", "label": "3", "badge": false },
+    { "key": "fourth", "label": "4", "badge": false },
+    { "key": "fifth", "label": "5", "badge": false },
+    { "key": "sixth", "label": "6", "badge": false },
+    { "key": "seventh", "label": "7", "badge": false },
+    { "key": "eight", "label": "8", "badge": false },
+    { "key": "ninth", "label": "9", "badge": false }
+  ],
+
+  "wildshapeTable": [
+    { "level": "2", "forms": "4", "cr": "1/4", "flySpeed": "No" },
+    { "level": "4", "forms": "6", "cr": "1/2", "flySpeed": "No" },
+    { "level": "8", "forms": "8", "cr": "1", "flySpeed": "Yes" }
+  ],
+
+  "levels": [
+    {
+      "level": "1",
+      "profBonus": "+2",
+      "feature": "Spellcasting, Druidic, Primal Order",
+      "wildShape": "-",
+      "cantrip": "2",
+      "first": "2",
+      "second": "-",
+      "third": "-",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "2",
+      "profBonus": "+2",
+      "feature": "Wild Shape, Wild Companion",
+      "wildShape": "2",
+      "cantrip": "2",
+      "first": "3",
+      "second": "-",
+      "third": "-",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "3",
+      "profBonus": "+2",
+      "feature": "Druid Subclass",
+      "wildShape": "2",
+      "cantrip": "2",
+      "first": "4",
+      "second": "2",
+      "third": "-",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "4",
+      "profBonus": "+2",
+      "feature": "Ability Score Improvement",
+      "wildShape": "2",
+      "cantrip": "3",
+      "first": "4",
+      "second": "3",
+      "third": "-",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "5",
+      "profBonus": "+3",
+      "feature": "Wild Resurgence",
+      "wildShape": "2",
+      "cantrip": "3",
+      "first": "4",
+      "second": "3",
+      "third": "2",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "6",
+      "profBonus": "+3",
+      "feature": "Subclass Feature",
+      "wildShape": "3",
+      "cantrip": "3",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "-",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "7",
+      "profBonus": "+3",
+      "feature": "Elemental Fury",
+      "wildShape": "3",
+      "cantrip": "3",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "1",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "8",
+      "profBonus": "+3",
+      "feature": "Ability Score Improvement",
+      "wildShape": "3",
+      "cantrip": "3",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "2",
+      "fifth": "-",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "9",
+      "profBonus": "+4",
+      "feature": "—",
+      "wildShape": "3",
+      "cantrip": "3",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "1",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "10",
+      "profBonus": "+4",
+      "feature": "Subclass Feature",
+      "wildShape": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "-",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "11",
+      "profBonus": "+4",
+      "feature": "—",
+      "wildShape": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "12",
+      "profBonus": "+4",
+      "feature": "Ability Score Improvement",
+      "wildShape": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "-",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "13",
+      "profBonus": "+5",
+      "feature": "—",
+      "wildShape": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "14",
+      "profBonus": "+5",
+      "feature": "Subclass Feature",
+      "wildShape": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "-",
+      "ninth": "-"
+    },
+    {
+      "level": "15",
+      "profBonus": "+5",
+      "feature": "Improved Elemental Fury",
+      "wildShape": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "-"
+    },
+    {
+      "level": "16",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "wildShape": "3",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "-"
+    },
+    {
+      "level": "17",
+      "profBonus": "+6",
+      "feature": "—",
+      "wildShape": "4",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "2",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "1"
+    },
+    {
+      "level": "18",
+      "profBonus": "+6",
+      "feature": "Beast Spells",
+      "wildShape": "4",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "3",
+      "sixth": "1",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "1"
+    },
+    {
+      "level": "19",
+      "profBonus": "+6",
+      "feature": "Epic Boon",
+      "wildShape": "4",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "3",
+      "sixth": "2",
+      "seventh": "1",
+      "eight": "1",
+      "ninth": "1"
+    },
+    {
+      "level": "20",
+      "profBonus": "+6",
+      "feature": "Archdruid",
+      "wildShape": "4",
+      "cantrip": "4",
+      "first": "4",
+      "second": "3",
+      "third": "3",
+      "fourth": "3",
+      "fifth": "3",
+      "sixth": "2",
+      "seventh": "2",
+      "eight": "1",
+      "ninth": "1"
+    }
+  ],
+
+  "levelPanels": [
+    {
+      "level": "Level 1",
+      "features": [
+        {
+          "title": "Spellcasting",
+          "body": "<p>You cast spells through studying the mystical forces of nature. Wisdom is your spellcasting ability and you can use a Druidic Focus as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know two cantrips of your choice from the Druid spell list. Druidcraft and Produce Flame are recommended. You gain more cantrips at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells to start. Animal Friendship, Cure Wounds, Faerie Fire, and Thunderwave are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can replace any prepared spells with other Druid spells for which you have spell slots.</p>"
+        },
+        {
+          "title": "Druidic",
+          "body": "<p>You know Druidic, the secret language of Druids. You always have the Speak with Animals spell prepared.</p><br/><p>You can use Druidic to leave hidden messages. You and others who know Druidic automatically spot such messages. Others spot them with a DC 15 Intelligence (Investigation) check but can't decipher them without magic.</p>"
+        },
+        {
+          "title": "Primal Order",
+          "body": "<p>You have dedicated yourself to one of the following sacred roles of your choice.</p><br/><p><b>Magician.</b> You know one extra cantrip from the Druid spell list. Your mystical connection to nature gives you a bonus to Intelligence (Arcana or Nature) checks equal to your Wisdom modifier (minimum +1).</p><br/><p><b>Warden.</b> Trained for battle, you gain proficiency with Martial weapons and training with Medium armor.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 2",
+      "features": [
+        {
+          "title": "Wild Shape",
+          "body": "<p>As a Bonus Action, you shape-shift into a Beast form you have learned. You stay in that form for hours equal to half your Druid level, or until you use Wild Shape again, become Incapacitated, or die. You can also leave early as a Bonus Action.</p><br/><p><b>Number of Uses.</b> You can use Wild Shape twice, regaining one use on a Short Rest and all uses on a Long Rest. Additional uses are gained at higher levels.</p><br/><p><b>Known Forms.</b> You know four Beast forms (max CR 1/4, no Fly Speed). The Rat, Riding Horse, Spider, and Wolf are recommended. You can replace one known form each Long Rest. The table above shows how your available forms expand as you level up.</p><br/><p><b>While Shape-Shifted.</b> You gain Temporary Hit Points equal to your Druid level. Your statistics are replaced by the Beast's stat block, but you retain your creature type, Hit Points, Hit Dice, mental ability scores, class features, languages, feats, and proficiencies. You cannot cast spells, though Concentration on already-cast spells is maintained.</p>"
+        },
+        {
+          "title": "Wild Companion",
+          "body": "<p>As a Magic action, you can expend a spell slot or a use of Wild Shape to cast Find Familiar without Material components. The familiar is Fey and disappears when you finish a Long Rest.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 3",
+      "features": [
+        {
+          "title": "Druid Subclass",
+          "body": "<p>You gain a Druid subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Druid level or lower. Choose your circle below:</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 4",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Druid levels 8, 12, and 16.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 5",
+      "features": [
+        {
+          "title": "Wild Resurgence",
+          "body": "<p>Once on each of your turns, if you have no uses of Wild Shape left, you can give yourself one use by expending a spell slot (no action required).</p><br/><p>In addition, you can expend one use of Wild Shape (no action required) to give yourself a level 1 spell slot, but you can't do so again until you finish a Long Rest.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 6",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen circle.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 7",
+      "features": [
+        {
+          "title": "Elemental Fury",
+          "body": "<p>The might of the elements flows through you. Choose one of the following options:</p><br/><p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Druid cantrip.</p><br/><p><b>Primal Strike.</b> Once on each of your turns when you hit a creature with a weapon or a Beast form's attack in Wild Shape, you can cause the target to take an extra 1d8 Cold, Fire, Lightning, or Thunder damage (choose when you hit).</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 8",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 10",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen circle.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 12",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 14",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen circle.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 15",
+      "features": [
+        {
+          "title": "Improved Elemental Fury",
+          "body": "<p>The option you chose for Elemental Fury grows more powerful.</p><br/><p><b>Potent Spellcasting.</b> When you cast a Druid cantrip with a range of 10 feet or greater, the spell's range increases by 300 feet.</p><br/><p><b>Primal Strike.</b> The extra damage of your Primal Strike increases to 2d8.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 16",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 18",
+      "features": [
+        {
+          "title": "Beast Spells",
+          "body": "<p>While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 19",
+      "features": [
+        {
+          "title": "Epic Boon",
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 20",
+      "features": [
+        {
+          "title": "Archdruid",
+          "body": "<p>The vitality of nature constantly blooms within you, granting the following benefits:</p><br/><p><b>Evergreen Wild Shape.</b> Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.</p><br/><p><b>Nature Magician.</b> You can convert uses of Wild Shape into a spell slot (no action required). Each use contributes 2 spell levels. For example, two uses produce a level 4 spell slot. Once used, you can't do so again until you finish a Long Rest.</p><br/><p><b>Longevity.</b> For every ten years that pass, your body ages only one year.</p>"
+        }
+      ]
+    }
+  ]
+}
