@@ -28,6 +28,7 @@ import ArmorsView from "@/views/Items/ArmorsView.vue";
 import PotionsView from "@/views/Items/PotionsView.vue";
 import SpellDesc from "@/views/SpellView/SpellDesc.vue";
 import MagicItems from "@/views/Items/MagicItems.vue";
+import CharacterCreatorView from "@/views/CharacterCreator/CharacterCreatorView.vue";
 
 const routes = [
   {
@@ -174,6 +175,11 @@ const routes = [
     path: "/wiki/items/magic_items",
     name: "Magic Items",
     component: MagicItems,
+  },
+  {
+    path: "/character_creator",
+    name: "CharacterCreator",
+    component: CharacterCreatorView,
   },
 ];
 

@@ -1,20 +1,14 @@
 ﻿<template>
   <div class="wizard-page">
-    <!-- Hero Banner -->
+    <!-- Hero Banner — no image -->
     <div class="hero">
-      <img src="../assets/classes/wizard.png" alt="Wizard" class="hero-img" />
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <span class="hero-eyebrow">Class</span>
-          <h1 class="hero-title">Wizard</h1>
-          <p class="hero-subtitle">
-            A scholarly magic-user capable of manipulating the structures of
-            spellcasting
-          </p>
-          <div class="hero-badges">
-            <span class="badge badge-blue">High Complexity</span>
-            <span class="badge badge-cyan">Intelligence</span>
-          </div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Class</span>
+        <h1 class="hero-title">{{ data.name }}</h1>
+        <p class="hero-subtitle">{{ data.subtitle }}</p>
+        <div class="hero-badges">
+          <span class="badge badge-blue">{{ data.complexity }}</span>
+          <span class="badge badge-cyan">{{ data.primaryStat }}</span>
         </div>
       </div>
     </div>
@@ -24,33 +18,40 @@
       <section class="section">
         <h2 class="section-title">Core Traits</h2>
         <div class="traits-grid">
-          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+          <div
+            class="trait-row"
+            v-for="trait in data.coreTraits"
+            :key="trait.label"
+          >
             <span class="trait-label">{{ trait.label }}</span>
             <span class="trait-value">{{ trait.value }}</span>
           </div>
         </div>
       </section>
 
-      <!-- Becoming a Wizard -->
+      <!-- Becoming -->
       <section class="section">
-        <h2 class="section-title">Becoming a Wizard</h2>
+        <h2 class="section-title">Becoming a {{ data.name }}</h2>
         <div class="becoming-grid">
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Level 1 Character</h3>
             <ul class="becoming-list">
-              <li>Gain all the traits in the Core Wizard Traits table.</li>
               <li>
-                Gain the Wizard's level 1 features listed in the Features table.
+                Gain all the traits in the Core {{ data.name }} Traits table.
+              </li>
+              <li>
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Multiclass Character</h3>
             <ul class="becoming-list">
-              <li>Gain the Hit Point Die from the Core Wizard Traits table.</li>
+              <li>{{ data.multiclassTraits }}</li>
               <li>
-                Gain the Wizard's level 1 features. See the multiclassing rules
-                to determine available spell slots.
+                Gain the {{ data.name }}'s level 1 features. See the
+                multiclassing rules to determine available spell slots.
               </li>
             </ul>
           </div>
@@ -67,41 +68,30 @@
                 <th>Level</th>
                 <th>Prof. Bonus</th>
                 <th>Features Unlocked</th>
-                <th>Cantrips</th>
-                <th>Spells</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
+                <th v-for="col in data.tableColumns" :key="col.key">
+                  {{ col.label }}
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr
-                v-for="item in levels"
+                v-for="item in data.levels"
                 :key="item.level"
                 :class="{ 'row-highlight': item.feature.includes('Subclass') }"
               >
                 <td class="level-cell">{{ item.level }}</td>
                 <td class="text-center">{{ item.profBonus }}</td>
                 <td>{{ item.feature }}</td>
-                <td class="text-center">{{ item.cantrips }}</td>
-                <td class="text-center">
-                  <span class="ps-badge">{{ item.preparedSpells }}</span>
+                <td
+                  v-for="col in data.tableColumns"
+                  :key="col.key"
+                  class="text-center"
+                >
+                  <span v-if="col.badge" :class="col.badgeClass">{{
+                    item[col.key]
+                  }}</span>
+                  <span v-else>{{ item[col.key] }}</span>
                 </td>
-                <td class="text-center">{{ item.slot1 }}</td>
-                <td class="text-center">{{ item.slot2 }}</td>
-                <td class="text-center">{{ item.slot3 }}</td>
-                <td class="text-center">{{ item.slot4 }}</td>
-                <td class="text-center">{{ item.slot5 }}</td>
-                <td class="text-center">{{ item.slot6 }}</td>
-                <td class="text-center">{{ item.slot7 }}</td>
-                <td class="text-center">{{ item.slot8 }}</td>
-                <td class="text-center">{{ item.slot9 }}</td>
               </tr>
             </tbody>
           </table>
@@ -113,7 +103,7 @@
         <h2 class="section-title">Level Breakdown</h2>
         <div class="panels">
           <div
-            v-for="(lvl, index) in levelPanels"
+            v-for="(lvl, index) in data.levelPanels"
             :key="lvl.level"
             class="panel"
           >
@@ -124,9 +114,9 @@
             >
               <div class="panel-header-left">
                 <span class="panel-level-badge">{{ lvl.level }}</span>
-                <span class="panel-features-preview">{{
-                  lvl.features.map((f) => f.title).join(" · ")
-                }}</span>
+                <span class="panel-features-preview">
+                  {{ lvl.features.map((f) => f.title).join(" · ") }}
+                </span>
               </div>
               <v-icon class="panel-chevron">
                 {{
@@ -138,14 +128,15 @@
             </div>
 
             <div class="panel-body" v-if="openPanels.includes(index)">
+              <!-- Subclass buttons for level 3 -->
               <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
                 <div
-                  v-for="(sub, si) in subclasses"
-                  :key="si"
+                  v-for="sub in data.subclasses"
+                  :key="sub.title"
                   class="subclass-btn"
                   @click="goTo(sub.title)"
                 >
-                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
+                  <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
                   <span>{{ sub.title }}</span>
                 </div>
               </div>
@@ -169,517 +160,13 @@
 
 <script>
 import router from "@/router";
+import data from "./wizard.json";
 
 export default {
   data() {
     return {
+      data,
       openPanels: [0],
-
-      subclasses: [
-        { title: "Abjurer" },
-        { title: "Diviner" },
-        { title: "Evoker" },
-        { title: "Illusionist" },
-      ],
-      subclassIcons: [
-        "mdi-shield-half-full",
-        "mdi-eye",
-        "mdi-lightning-bolt",
-        "mdi-creation",
-      ],
-
-      coreTraits: [
-        { label: "Primary Ability", value: "Intelligence" },
-        { label: "Hit Point Die", value: "D6 per Wizard level" },
-        {
-          label: "Saving Throw Proficiencies",
-          value: "Intelligence and Wisdom",
-        },
-        {
-          label: "Skill Proficiencies",
-          value:
-            "Choose 2: Arcana, History, Insight, Investigation, Medicine, Nature, or Religion",
-        },
-        { label: "Weapon Proficiencies", value: "Simple weapons" },
-        { label: "Armor Training", value: "None" },
-        {
-          label: "Starting Equipment",
-          value:
-            "Choose A or B: (A) 2 Daggers, Arcane Focus (Quarterstaff), Robe, Spellbook, Scholar's Pack, and 5 GP; or (B) 55 GP",
-        },
-      ],
-
-      levels: [
-        {
-          level: "1",
-          profBonus: "+2",
-          feature: "Spellcasting, Ritual Adept, Arcane Recovery",
-          cantrips: "3",
-          preparedSpells: "4",
-          slot1: "2",
-          slot2: "—",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "2",
-          profBonus: "+2",
-          feature: "Scholar",
-          cantrips: "3",
-          preparedSpells: "5",
-          slot1: "3",
-          slot2: "—",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "3",
-          profBonus: "+2",
-          feature: "Wizard Subclass",
-          cantrips: "3",
-          preparedSpells: "6",
-          slot1: "4",
-          slot2: "2",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "4",
-          profBonus: "+2",
-          feature: "Ability Score Improvement",
-          cantrips: "4",
-          preparedSpells: "7",
-          slot1: "4",
-          slot2: "3",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "5",
-          profBonus: "+3",
-          feature: "Memorize Spell",
-          cantrips: "4",
-          preparedSpells: "9",
-          slot1: "4",
-          slot2: "3",
-          slot3: "2",
-          slot4: "—",
-          slot5: "—",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "6",
-          profBonus: "+3",
-          feature: "Subclass Feature",
-          cantrips: "4",
-          preparedSpells: "10",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "—",
-          slot5: "—",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "7",
-          profBonus: "+3",
-          feature: "—",
-          cantrips: "4",
-          preparedSpells: "11",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "1",
-          slot5: "—",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "8",
-          profBonus: "+3",
-          feature: "Ability Score Improvement",
-          cantrips: "4",
-          preparedSpells: "12",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "2",
-          slot5: "—",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "9",
-          profBonus: "+4",
-          feature: "—",
-          cantrips: "4",
-          preparedSpells: "14",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "1",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "10",
-          profBonus: "+4",
-          feature: "Subclass Feature",
-          cantrips: "5",
-          preparedSpells: "15",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-          slot6: "—",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "11",
-          profBonus: "+4",
-          feature: "—",
-          cantrips: "5",
-          preparedSpells: "16",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-          slot6: "1",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "12",
-          profBonus: "+4",
-          feature: "Ability Score Improvement",
-          cantrips: "5",
-          preparedSpells: "16",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-          slot6: "1",
-          slot7: "—",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "13",
-          profBonus: "+5",
-          feature: "—",
-          cantrips: "5",
-          preparedSpells: "17",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-          slot6: "1",
-          slot7: "1",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "14",
-          profBonus: "+5",
-          feature: "Subclass Feature",
-          cantrips: "5",
-          preparedSpells: "18",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-          slot6: "1",
-          slot7: "1",
-          slot8: "—",
-          slot9: "—",
-        },
-        {
-          level: "15",
-          profBonus: "+5",
-          feature: "—",
-          cantrips: "5",
-          preparedSpells: "19",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-          slot6: "1",
-          slot7: "1",
-          slot8: "1",
-          slot9: "—",
-        },
-        {
-          level: "16",
-          profBonus: "+5",
-          feature: "Ability Score Improvement",
-          cantrips: "5",
-          preparedSpells: "21",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-          slot6: "1",
-          slot7: "1",
-          slot8: "1",
-          slot9: "—",
-        },
-        {
-          level: "17",
-          profBonus: "+6",
-          feature: "—",
-          cantrips: "5",
-          preparedSpells: "22",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-          slot6: "1",
-          slot7: "1",
-          slot8: "1",
-          slot9: "1",
-        },
-        {
-          level: "18",
-          profBonus: "+6",
-          feature: "Spell Mastery",
-          cantrips: "5",
-          preparedSpells: "23",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "3",
-          slot6: "1",
-          slot7: "1",
-          slot8: "1",
-          slot9: "1",
-        },
-        {
-          level: "19",
-          profBonus: "+6",
-          feature: "Epic Boon",
-          cantrips: "5",
-          preparedSpells: "24",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "3",
-          slot6: "2",
-          slot7: "1",
-          slot8: "1",
-          slot9: "1",
-        },
-        {
-          level: "20",
-          profBonus: "+6",
-          feature: "Signature Spells",
-          cantrips: "5",
-          preparedSpells: "25",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "3",
-          slot6: "2",
-          slot7: "2",
-          slot8: "1",
-          slot9: "1",
-        },
-      ],
-
-      levelPanels: [
-        {
-          level: "Level 1",
-          features: [
-            {
-              title: "Spellcasting",
-              body: `<p>Intelligence is your spellcasting ability for Wizard spells, and you can use an Arcane Focus or your spellbook as a Spellcasting Focus.</p>
-                     <br/>
-                     <p><b>Cantrips.</b> You know three Wizard cantrips of your choice. Light, Mage Hand, and Ray of Frost are recommended. You gain additional cantrips at levels 4 and 10.</p>
-                     <br/>
-                     <p><b>Spellbook.</b> Your spellbook starts with six level 1 Wizard spells of your choice. Detect Magic, Feather Fall, Mage Armor, Magic Missile, Sleep, and Thunderwave are recommended. You add two Wizard spells each time you gain a Wizard level after 1.</p>
-                     <br/>
-                     <p><b>Copying Spells.</b> You can copy a Wizard spell you find into your spellbook. Each spell level costs 2 hours and 50 GP to transcribe. Copying from your own book costs 1 hour and 10 GP per level.</p>`,
-            },
-            {
-              title: "Ritual Adept",
-              body: `<p>You can cast any spell as a Ritual if that spell has the Ritual tag and the spell is in your spellbook. You needn't have the spell prepared, but you must read from the book to cast it this way.</p>`,
-            },
-            {
-              title: "Arcane Recovery",
-              body: `<p>When you finish a Short Rest, you can choose expended spell slots to recover. The combined level of recovered slots can't exceed half your Wizard level (round up), and none can be level 6 or higher.</p>
-                     <br/>
-                     <p>Once you use this feature, you can't do so again until you finish a Long Rest.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 2",
-          features: [
-            {
-              title: "Scholar",
-              body: `<p>While studying magic, you also specialized in an academic field. Choose one skill in which you have proficiency from: Arcana, History, Investigation, Medicine, Nature, or Religion. You gain Expertise in the chosen skill.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 3",
-          features: [
-            {
-              title: "Wizard Subclass",
-              body: `<p>You gain a Wizard subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Wizard level or lower. Choose your arcane tradition below:</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 4",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Wizard levels 8, 12, and 16.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 5",
-          features: [
-            {
-              title: "Memorize Spell",
-              body: `<p>Whenever you finish a Short Rest, you can study your spellbook and replace one of the level 1+ Wizard spells you have prepared with another level 1+ spell from the book.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 6",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen arcane tradition.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 8",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 10",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen arcane tradition.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 12",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 14",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen arcane tradition.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 16",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 18",
-          features: [
-            {
-              title: "Spell Mastery",
-              body: `<p>Choose one level 1 and one level 2 spell from your spellbook with a casting time of an Action. You always have those spells prepared and can cast them at their lowest level without expending a spell slot.</p>
-                     <br/>
-                     <p>To cast either spell at a higher level, you must expend a spell slot. Whenever you finish a Long Rest, you can study your spellbook and replace one of those spells with an eligible spell of the same level.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 19",
-          features: [
-            {
-              title: "Epic Boon",
-              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Spell Recall is recommended.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 20",
-          features: [
-            {
-              title: "Signature Spells",
-              body: `<p>Choose two level 3 spells in your spellbook as your signature spells. You always have these prepared and can cast each once at level 3 without expending a spell slot per Short or Long Rest.</p>
-                     <br/>
-                     <p>To cast either spell at a higher level, you must expend a spell slot.</p>`,
-            },
-          ],
-        },
-      ],
     };
   },
 
@@ -692,7 +179,7 @@ export default {
     goTo(label) {
       router
         .push(
-          "/wiki/classes/wizard/" + label.replace(/\s+/g, "_").toLowerCase(),
+          this.data.subclassRoute + label.replace(/\s+/g, "_").toLowerCase(),
         )
         .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     },
@@ -708,32 +195,16 @@ export default {
   color: var(--text-body);
 }
 
-/* ── Hero ───────────────────────────────────────── */
+/* ── Hero — no image ────────────────────────────── */
 .hero {
-  position: relative;
   width: 100%;
-  height: 420px;
-  overflow: hidden;
-}
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
+  padding: 3rem 2.5rem 2rem;
   background: linear-gradient(
     to bottom,
-    rgba(var(--bg-page-rgb), 0.2) 0%,
-    rgba(var(--bg-page-rgb), 0.7) 60%,
+    rgba(var(--bg-page-rgb), 0.95) 0%,
     var(--bg-page) 100%
   );
-  display: flex;
-  align-items: flex-end;
-  padding: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 .hero-content {
   max-width: 700px;
@@ -744,12 +215,14 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #38bdf8;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin: 0.25rem 0 0.5rem;
+  margin: 0 0 0.5rem;
   line-height: 1;
 }
 .hero-subtitle {
@@ -922,6 +395,7 @@ export default {
   text-align: center;
 }
 
+/* ── Prepared Spells badge ──────────────────────── */
 .ps-badge {
   font-size: 0.68rem;
   font-weight: 700;
@@ -1053,13 +527,10 @@ export default {
 /* ── Mobile ─────────────────────────────────────── */
 @media (max-width: 640px) {
   .hero {
-    height: 300px;
+    padding: 2rem 1.5rem 1.5rem;
   }
   .hero-title {
     font-size: 2rem;
-  }
-  .hero-overlay {
-    padding: 1.5rem;
   }
   .trait-row {
     grid-template-columns: 1fr;
@@ -1070,4 +541,3 @@ export default {
   }
 }
 </style>
-

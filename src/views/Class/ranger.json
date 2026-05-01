@@ -1,0 +1,497 @@
+{
+  "name": "Ranger",
+  "subtitle": "A warrior who uses martial prowess and nature magic to combat threats at the edges of civilization",
+  "complexity": "Low Complexity",
+  "primaryStat": "Dexterity & Wisdom",
+  "accentColor": "#4ade80",
+  "accentRgb": "74, 222, 128",
+  "subclassRoute": "/wiki/classes/ranger/",
+  "multiclassTraits": "Gain the Hit Point Die, proficiency with Martial weapons, proficiency in one skill from the Ranger's list, and training with Light and Medium armor and Shields.",
+
+  "subclasses": [
+    { "title": "Beast Master", "icon": "mdi-paw" },
+    { "title": "Fey Wanderer", "icon": "mdi-shimmer" },
+    { "title": "Gloom Stalker", "icon": "mdi-eye-off" },
+    { "title": "Hunter", "icon": "mdi-crosshairs" }
+  ],
+
+  "coreTraits": [
+    { "label": "Primary Ability", "value": "Dexterity and Wisdom" },
+    { "label": "Hit Point Die", "value": "D10 per Ranger level" },
+    {
+      "label": "Saving Throw Proficiencies",
+      "value": "Strength and Dexterity"
+    },
+    {
+      "label": "Skill Proficiencies",
+      "value": "Choose 3: Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, or Survival"
+    },
+    { "label": "Weapon Proficiencies", "value": "Simple and Martial weapons" },
+    {
+      "label": "Armor Training",
+      "value": "Light and Medium armor and Shields"
+    },
+    {
+      "label": "Starting Equipment",
+      "value": "Choose A or B: (A) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Druidic Focus, Explorer's Pack, and 7 GP; or (B) 150 GP"
+    }
+  ],
+
+  "tableColumns": [
+    {
+      "key": "favoredEnemy",
+      "label": "Favored Enemy",
+      "badge": true,
+      "badgeClass": "fe-badge"
+    },
+    {
+      "key": "preparedSpells",
+      "label": "Prepared Spells",
+      "badge": true,
+      "badgeClass": "ps-badge"
+    },
+    { "key": "slot1", "label": "1st", "badge": false },
+    { "key": "slot2", "label": "2nd", "badge": false },
+    { "key": "slot3", "label": "3rd", "badge": false },
+    { "key": "slot4", "label": "4th", "badge": false },
+    { "key": "slot5", "label": "5th", "badge": false }
+  ],
+
+  "levels": [
+    {
+      "level": "1",
+      "profBonus": "+2",
+      "feature": "Spellcasting, Favored Enemy, Weapon Mastery",
+      "favoredEnemy": "2",
+      "preparedSpells": "2",
+      "slot1": "2",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "2",
+      "profBonus": "+2",
+      "feature": "Deft Explorer, Fighting Style",
+      "favoredEnemy": "2",
+      "preparedSpells": "3",
+      "slot1": "2",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "3",
+      "profBonus": "+2",
+      "feature": "Ranger Subclass",
+      "favoredEnemy": "2",
+      "preparedSpells": "4",
+      "slot1": "3",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "4",
+      "profBonus": "+2",
+      "feature": "Ability Score Improvement",
+      "favoredEnemy": "2",
+      "preparedSpells": "5",
+      "slot1": "3",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "5",
+      "profBonus": "+3",
+      "feature": "Extra Attack",
+      "favoredEnemy": "3",
+      "preparedSpells": "6",
+      "slot1": "4",
+      "slot2": "2",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "6",
+      "profBonus": "+3",
+      "feature": "Roving",
+      "favoredEnemy": "3",
+      "preparedSpells": "6",
+      "slot1": "4",
+      "slot2": "2",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "7",
+      "profBonus": "+3",
+      "feature": "Subclass Feature",
+      "favoredEnemy": "3",
+      "preparedSpells": "7",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "8",
+      "profBonus": "+3",
+      "feature": "Ability Score Improvement",
+      "favoredEnemy": "3",
+      "preparedSpells": "7",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "9",
+      "profBonus": "+4",
+      "feature": "Expertise",
+      "favoredEnemy": "4",
+      "preparedSpells": "8",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "2",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "10",
+      "profBonus": "+4",
+      "feature": "Tireless",
+      "favoredEnemy": "4",
+      "preparedSpells": "8",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "2",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "11",
+      "profBonus": "+4",
+      "feature": "Subclass Feature",
+      "favoredEnemy": "4",
+      "preparedSpells": "10",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "12",
+      "profBonus": "+4",
+      "feature": "Ability Score Improvement",
+      "favoredEnemy": "4",
+      "preparedSpells": "10",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "13",
+      "profBonus": "+5",
+      "feature": "Relentless Hunter",
+      "favoredEnemy": "5",
+      "preparedSpells": "11",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "1",
+      "slot5": "—"
+    },
+    {
+      "level": "14",
+      "profBonus": "+5",
+      "feature": "Nature's Veil",
+      "favoredEnemy": "5",
+      "preparedSpells": "11",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "1",
+      "slot5": "—"
+    },
+    {
+      "level": "15",
+      "profBonus": "+5",
+      "feature": "Subclass Feature",
+      "favoredEnemy": "5",
+      "preparedSpells": "12",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "2",
+      "slot5": "—"
+    },
+    {
+      "level": "16",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "favoredEnemy": "5",
+      "preparedSpells": "12",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "2",
+      "slot5": "—"
+    },
+    {
+      "level": "17",
+      "profBonus": "+6",
+      "feature": "Precise Hunter",
+      "favoredEnemy": "6",
+      "preparedSpells": "14",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "1"
+    },
+    {
+      "level": "18",
+      "profBonus": "+6",
+      "feature": "Feral Senses",
+      "favoredEnemy": "6",
+      "preparedSpells": "14",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "1"
+    },
+    {
+      "level": "19",
+      "profBonus": "+6",
+      "feature": "Epic Boon",
+      "favoredEnemy": "6",
+      "preparedSpells": "15",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2"
+    },
+    {
+      "level": "20",
+      "profBonus": "+6",
+      "feature": "Foe Slayer",
+      "favoredEnemy": "6",
+      "preparedSpells": "15",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2"
+    }
+  ],
+
+  "levelPanels": [
+    {
+      "level": "Level 1",
+      "features": [
+        {
+          "title": "Spellcasting",
+          "body": "<p>Wisdom is your spellcasting ability for Ranger spells, and you can use a Druidic Focus as a Spellcasting Focus.</p><br/><p>To start, choose two level 1 Ranger spells. Cure Wounds and Ensnaring Strike are recommended. Whenever you finish a Long Rest, you can replace one spell on your list with another Ranger spell for which you have spell slots.</p>"
+        },
+        {
+          "title": "Favored Enemy",
+          "body": "<p>You always have the Hunter's Mark spell prepared. You can cast it twice without expending a spell slot, regaining all uses when you finish a Long Rest.</p><br/><p>The number of free casts increases when you reach certain Ranger levels, as shown in the Favored Enemy column.</p>"
+        },
+        {
+          "title": "Weapon Mastery",
+          "body": "<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longbows and Shortswords. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 2",
+      "features": [
+        {
+          "title": "Deft Explorer",
+          "body": "<p>Thanks to your travels, you gain the following benefits.</p><br/><p><b>Expertise.</b> Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill.</p><br/><p><b>Languages.</b> You know two languages of your choice from the language tables.</p>"
+        },
+        {
+          "title": "Fighting Style",
+          "body": "<p>You gain a Fighting Style feat of your choice. Alternatively, you can choose the Druidic Warrior option below.</p><br/><p><b>Druidic Warrior.</b> You learn two Druid cantrips of your choice (Guidance and Starry Wisp recommended). They count as Ranger spells using Wisdom as your spellcasting ability. You can replace one cantrip per Ranger level gained.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 3",
+      "features": [
+        {
+          "title": "Ranger Subclass",
+          "body": "<p>You gain a Ranger subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Ranger level or lower. Choose your specialization below:</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 4",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Ranger levels 8, 12, and 16.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 5",
+      "features": [
+        {
+          "title": "Extra Attack",
+          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 6",
+      "features": [
+        {
+          "title": "Roving",
+          "body": "<p>Your Speed increases by 10 feet while you aren't wearing Heavy Armor. You also have a Climb Speed and a Swim Speed equal to your Speed.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 7",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 8",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 9",
+      "features": [
+        {
+          "title": "Expertise",
+          "body": "<p>Choose two of your skill proficiencies with which you lack Expertise. You gain Expertise in those skills.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 10",
+      "features": [
+        {
+          "title": "Tireless",
+          "body": "<p>Primal forces fuel you on your journeys, granting the following benefits.</p><br/><p><b>Temporary Hit Points.</b> As an action, you can give yourself Temporary Hit Points equal to 1d8 plus your Wisdom modifier (minimum 1). You can use this action a number of times equal to your Wisdom modifier (minimum once), regaining all uses on a Long Rest.</p><br/><p><b>Decrease Exhaustion.</b> Whenever you finish a Short Rest, your Exhaustion level, if any, decreases by 1.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 11",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 12",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 13",
+      "features": [
+        {
+          "title": "Relentless Hunter",
+          "body": "<p>Taking damage can't break your Concentration on Hunter's Mark.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 14",
+      "features": [
+        {
+          "title": "Nature's Veil",
+          "body": "<p>As a Bonus Action, you can invoke spirits of nature to give yourself the Invisible condition until the end of your next turn.</p><br/><p>You can use this feature a number of times equal to your Wisdom modifier (minimum once), regaining all uses on a Long Rest.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 15",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 16",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 17",
+      "features": [
+        {
+          "title": "Precise Hunter",
+          "body": "<p>You have Advantage on attack rolls against the creature currently marked by your Hunter's Mark.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 18",
+      "features": [
+        {
+          "title": "Feral Senses",
+          "body": "<p>Your connection to the forces of nature grants you Blindsight with a range of 30 feet.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 19",
+      "features": [
+        {
+          "title": "Epic Boon",
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 20",
+      "features": [
+        {
+          "title": "Foe Slayer",
+          "body": "<p>The damage die of your Hunter's Mark is a d10 rather than a d6.</p>"
+        }
+      ]
+    }
+  ]
+}

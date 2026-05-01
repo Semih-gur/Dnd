@@ -1,0 +1,427 @@
+{
+  "name": "Fighter",
+  "subtitle": "A master of martial combat, skilled with a variety of weapons and armor",
+  "complexity": "Low Complexity",
+  "primaryStat": "Strength or Dexterity",
+  "accentColor": "#6366f1",
+  "accentRgb": "99, 102, 241",
+  "subclassRoute": "/wiki/classes/fighter/",
+  "multiclassTraits": "Gain the Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.",
+
+  "subclasses": [
+    { "title": "Battle Master", "icon": "mdi-chess-knight" },
+    { "title": "Champion", "icon": "mdi-shield-half-full" },
+    { "title": "Eldritch Knight", "icon": "mdi-hat-fedora" },
+    { "title": "Psi Warrior", "icon": "mdi-brain" }
+  ],
+
+  "coreTraits": [
+    { "label": "Primary Ability", "value": "Strength or Dexterity" },
+    { "label": "Hit Point Die", "value": "D10 per Fighter level" },
+    {
+      "label": "Saving Throw Proficiencies",
+      "value": "Strength and Constitution"
+    },
+    {
+      "label": "Skill Proficiencies",
+      "value": "Choose 2: Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Persuasion, or Survival"
+    },
+    { "label": "Weapon Proficiencies", "value": "Simple and Martial weapons" },
+    {
+      "label": "Armor Training",
+      "value": "Light, Medium, and Heavy armor and Shields"
+    },
+    {
+      "label": "Starting Equipment",
+      "value": "Choose A or B: (A) Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer's Pack, and 4 GP; or (B) 155 GP"
+    }
+  ],
+
+  "tableColumns": [
+    {
+      "key": "secondWind",
+      "label": "Second Wind",
+      "badge": true,
+      "badgeClass": "sw-badge"
+    },
+    {
+      "key": "actionSurge",
+      "label": "Action Surge",
+      "badge": true,
+      "badgeClass": "as-badge",
+      "dashable": true
+    },
+    {
+      "key": "weaponMastery",
+      "label": "Weapon Mastery",
+      "badge": true,
+      "badgeClass": "wm-badge"
+    }
+  ],
+
+  "levels": [
+    {
+      "level": "1",
+      "profBonus": "+2",
+      "feature": "Fighting Style, Second Wind, Weapon Mastery",
+      "secondWind": "2",
+      "actionSurge": "—",
+      "weaponMastery": "3"
+    },
+    {
+      "level": "2",
+      "profBonus": "+2",
+      "feature": "Action Surge, Tactical Mind",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "3"
+    },
+    {
+      "level": "3",
+      "profBonus": "+2",
+      "feature": "Fighter Subclass",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "3"
+    },
+    {
+      "level": "4",
+      "profBonus": "+2",
+      "feature": "Ability Score Improvement",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "4"
+    },
+    {
+      "level": "5",
+      "profBonus": "+3",
+      "feature": "Extra Attack, Tactical Shift",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "4"
+    },
+    {
+      "level": "6",
+      "profBonus": "+3",
+      "feature": "Ability Score Improvement",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "4"
+    },
+    {
+      "level": "7",
+      "profBonus": "+3",
+      "feature": "Subclass Feature",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "4"
+    },
+    {
+      "level": "8",
+      "profBonus": "+3",
+      "feature": "Ability Score Improvement",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "4"
+    },
+    {
+      "level": "9",
+      "profBonus": "+4",
+      "feature": "Indomitable, Tactical Master",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "4"
+    },
+    {
+      "level": "10",
+      "profBonus": "+4",
+      "feature": "Subclass Feature",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "5"
+    },
+    {
+      "level": "11",
+      "profBonus": "+4",
+      "feature": "Two Extra Attacks",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "5"
+    },
+    {
+      "level": "12",
+      "profBonus": "+4",
+      "feature": "Ability Score Improvement",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "5"
+    },
+    {
+      "level": "13",
+      "profBonus": "+5",
+      "feature": "Studied Attacks",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "5"
+    },
+    {
+      "level": "14",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "secondWind": "2",
+      "actionSurge": "1",
+      "weaponMastery": "5"
+    },
+    {
+      "level": "15",
+      "profBonus": "+5",
+      "feature": "Subclass Feature",
+      "secondWind": "3",
+      "actionSurge": "1",
+      "weaponMastery": "5"
+    },
+    {
+      "level": "16",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "secondWind": "3",
+      "actionSurge": "1",
+      "weaponMastery": "6"
+    },
+    {
+      "level": "17",
+      "profBonus": "+6",
+      "feature": "Action Surge (2 uses)",
+      "secondWind": "3",
+      "actionSurge": "2",
+      "weaponMastery": "6"
+    },
+    {
+      "level": "18",
+      "profBonus": "+6",
+      "feature": "Subclass Feature",
+      "secondWind": "3",
+      "actionSurge": "2",
+      "weaponMastery": "6"
+    },
+    {
+      "level": "19",
+      "profBonus": "+6",
+      "feature": "Epic Boon",
+      "secondWind": "3",
+      "actionSurge": "2",
+      "weaponMastery": "6"
+    },
+    {
+      "level": "20",
+      "profBonus": "+6",
+      "feature": "Three Extra Attacks",
+      "secondWind": "3",
+      "actionSurge": "2",
+      "weaponMastery": "6"
+    }
+  ],
+
+  "levelPanels": [
+    {
+      "level": "Level 1",
+      "features": [
+        {
+          "title": "Fighting Style",
+          "body": "<p>You have honed your martial prowess and gain a Fighting Style feat of your choice. Defense is recommended. Whenever you gain a Fighter level, you can replace the feat you chose with a different Fighting Style feat.</p>"
+        },
+        {
+          "title": "Second Wind",
+          "body": "<p>As a Bonus Action, you can regain Hit Points equal to 1d10 plus your Fighter level.</p><br/><p>You can use this feature twice, regaining one use on a Short Rest and all uses on a Long Rest. You gain additional uses at higher Fighter levels as shown in the Second Wind column.</p>"
+        },
+        {
+          "title": "Weapon Mastery",
+          "body": "<p>Your training with weapons allows you to use the mastery properties of three kinds of Simple or Martial weapons of your choice. Whenever you finish a Long Rest, you can practice weapon drills and change one of those weapon choices.</p><br/><p>When you reach certain Fighter levels, you gain the ability to use the mastery properties of more kinds of weapons, as shown in the Weapon Mastery column.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 2",
+      "features": [
+        {
+          "title": "Action Surge",
+          "body": "<p>On your turn, you can take one additional action, except the Magic action. Once you use this feature, you can't do so again until you finish a Short or Long Rest.</p><br/><p>Starting at level 17, you can use it twice before a rest, but only once on the same turn.</p>"
+        },
+        {
+          "title": "Tactical Mind",
+          "body": "<p>When you fail an ability check, you can expend a use of your Second Wind to push yourself toward success. Rather than regaining Hit Points, you roll 1d10 and add the number rolled to the ability check, potentially turning it into a success. If the check still fails, this use of Second Wind isn't expended.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 3",
+      "features": [
+        {
+          "title": "Fighter Subclass",
+          "body": "<p>You gain a Fighter subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Fighter level or lower. Choose your specialization below:</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 4",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Fighter levels 6, 8, 12, 14, and 16.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 5",
+      "features": [
+        {
+          "title": "Extra Attack",
+          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>"
+        },
+        {
+          "title": "Tactical Shift",
+          "body": "<p>Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 6",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 7",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 8",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 9",
+      "features": [
+        {
+          "title": "Indomitable",
+          "body": "<p>If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can't use this feature again until you finish a Long Rest.</p><br/><p>You can use this feature twice before a Long Rest starting at level 13, and three times before a Long Rest starting at level 17.</p>"
+        },
+        {
+          "title": "Tactical Master",
+          "body": "<p>When you attack with a weapon whose mastery property you can use, you can replace that property with the Push, Sap, or Slow property for that attack.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 10",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 11",
+      "features": [
+        {
+          "title": "Two Extra Attacks",
+          "body": "<p>You can attack three times instead of once whenever you take the Attack action on your turn.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 12",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 13",
+      "features": [
+        {
+          "title": "Studied Attacks",
+          "body": "<p>You study your opponents and learn from each attack you make. If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 14",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 15",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 16",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 17",
+      "features": [
+        {
+          "title": "Action Surge (2 uses)",
+          "body": "<p>You can now use Action Surge twice before a rest, though still only once on the same turn.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 18",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 19",
+      "features": [
+        {
+          "title": "Epic Boon",
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Combat Prowess is recommended.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 20",
+      "features": [
+        {
+          "title": "Three Extra Attacks",
+          "body": "<p>You can attack four times instead of once whenever you take the Attack action on your turn.</p>"
+        }
+      ]
+    }
+  ]
+}

@@ -1,20 +1,14 @@
 ﻿<template>
   <div class="paladin-page">
-    <!-- Hero Banner -->
+    <!-- Hero Banner — no image -->
     <div class="hero">
-      <img src="../assets/classes/paladin.png" alt="Paladin" class="hero-img" />
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <span class="hero-eyebrow">Class</span>
-          <h1 class="hero-title">Paladin</h1>
-          <p class="hero-subtitle">
-            A holy warrior bound to a sacred oath, wielding divine magic and
-            martial might
-          </p>
-          <div class="hero-badges">
-            <span class="badge badge-gold">Low Complexity</span>
-            <span class="badge badge-white">Strength & Charisma</span>
-          </div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Class</span>
+        <h1 class="hero-title">{{ data.name }}</h1>
+        <p class="hero-subtitle">{{ data.subtitle }}</p>
+        <div class="hero-badges">
+          <span class="badge badge-gold">{{ data.complexity }}</span>
+          <span class="badge badge-white">{{ data.primaryStat }}</span>
         </div>
       </div>
     </div>
@@ -24,37 +18,40 @@
       <section class="section">
         <h2 class="section-title">Core Traits</h2>
         <div class="traits-grid">
-          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+          <div
+            class="trait-row"
+            v-for="trait in data.coreTraits"
+            :key="trait.label"
+          >
             <span class="trait-label">{{ trait.label }}</span>
             <span class="trait-value">{{ trait.value }}</span>
           </div>
         </div>
       </section>
 
-      <!-- Becoming a Paladin -->
+      <!-- Becoming -->
       <section class="section">
-        <h2 class="section-title">Becoming a Paladin</h2>
+        <h2 class="section-title">Becoming a {{ data.name }}</h2>
         <div class="becoming-grid">
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Level 1 Character</h3>
             <ul class="becoming-list">
-              <li>Gain all the traits in the Core Paladin Traits table.</li>
               <li>
-                Gain the Paladin's level 1 features listed in the Features
-                table.
+                Gain all the traits in the Core {{ data.name }} Traits table.
+              </li>
+              <li>
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Multiclass Character</h3>
             <ul class="becoming-list">
+              <li>{{ data.multiclassTraits }}</li>
               <li>
-                Gain the Hit Point Die, proficiency with Martial weapons, and
-                training with Light and Medium armor and Shields.
-              </li>
-              <li>
-                Gain the Paladin's level 1 features. See the multiclassing rules
-                to determine available spell slots.
+                Gain the {{ data.name }}'s level 1 features. See the
+                multiclassing rules to determine available spell slots.
               </li>
             </ul>
           </div>
@@ -71,38 +68,37 @@
                 <th>Level</th>
                 <th>Prof. Bonus</th>
                 <th>Features Unlocked</th>
-                <th>Channel Divinity</th>
-                <th>Prepared Spells</th>
-                <th>1st</th>
-                <th>2nd</th>
-                <th>3rd</th>
-                <th>4th</th>
-                <th>5th</th>
+                <th v-for="col in data.tableColumns" :key="col.key">
+                  {{ col.label }}
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr
-                v-for="item in levels"
+                v-for="item in data.levels"
                 :key="item.level"
                 :class="{ 'row-highlight': item.feature.includes('Subclass') }"
               >
                 <td class="level-cell">{{ item.level }}</td>
                 <td class="text-center">{{ item.profBonus }}</td>
                 <td>{{ item.feature }}</td>
-                <td class="text-center">
-                  <span v-if="item.channelDivinity !== '—'" class="cd-badge">{{
-                    item.channelDivinity
-                  }}</span>
-                  <span v-else class="muted">—</span>
+                <td
+                  v-for="col in data.tableColumns"
+                  :key="col.key"
+                  class="text-center"
+                >
+                  <span
+                    v-if="col.badge && item[col.key] !== '—'"
+                    :class="col.badgeClass"
+                    >{{ item[col.key] }}</span
+                  >
+                  <span
+                    v-else-if="col.badge && item[col.key] === '—'"
+                    class="muted"
+                    >—</span
+                  >
+                  <span v-else>{{ item[col.key] }}</span>
                 </td>
-                <td class="text-center">
-                  <span class="ps-badge">{{ item.preparedSpells }}</span>
-                </td>
-                <td class="text-center">{{ item.slot1 }}</td>
-                <td class="text-center">{{ item.slot2 }}</td>
-                <td class="text-center">{{ item.slot3 }}</td>
-                <td class="text-center">{{ item.slot4 }}</td>
-                <td class="text-center">{{ item.slot5 }}</td>
               </tr>
             </tbody>
           </table>
@@ -114,7 +110,7 @@
         <h2 class="section-title">Level Breakdown</h2>
         <div class="panels">
           <div
-            v-for="(lvl, index) in levelPanels"
+            v-for="(lvl, index) in data.levelPanels"
             :key="lvl.level"
             class="panel"
           >
@@ -125,9 +121,9 @@
             >
               <div class="panel-header-left">
                 <span class="panel-level-badge">{{ lvl.level }}</span>
-                <span class="panel-features-preview">{{
-                  lvl.features.map((f) => f.title).join(" · ")
-                }}</span>
+                <span class="panel-features-preview">
+                  {{ lvl.features.map((f) => f.title).join(" · ") }}
+                </span>
               </div>
               <v-icon class="panel-chevron">
                 {{
@@ -139,15 +135,16 @@
             </div>
 
             <div class="panel-body" v-if="openPanels.includes(index)">
+              <!-- Subclass buttons for level 3 -->
               <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
                 <div
-                  v-for="(sub, si) in subclasses"
-                  :key="si"
+                  v-for="sub in data.subclasses"
+                  :key="sub.title"
                   class="subclass-btn"
                   @click="goTo(sub.title)"
                 >
-                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
-                  <span>Oath of {{ sub.title }}</span>
+                  <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
+                  <span>{{ data.subclassPrefix }} {{ sub.title }}</span>
                 </div>
               </div>
               <div class="feature-cards">
@@ -170,505 +167,13 @@
 
 <script>
 import router from "@/router";
+import data from "./paladin.json";
 
 export default {
   data() {
     return {
+      data,
       openPanels: [0],
-
-      subclasses: [
-        { title: "Devotion" },
-        { title: "Glory" },
-        { title: "the Ancients" },
-        { title: "Vengeance" },
-      ],
-      subclassIcons: [
-        "mdi-star-four-points",
-        "mdi-trophy",
-        "mdi-leaf",
-        "mdi-sword",
-      ],
-
-      coreTraits: [
-        { label: "Primary Ability", value: "Strength and Charisma" },
-        { label: "Hit Point Die", value: "D10 per Paladin level" },
-        { label: "Saving Throw Proficiencies", value: "Wisdom and Charisma" },
-        {
-          label: "Skill Proficiencies",
-          value:
-            "Choose 2: Athletics, Insight, Intimidation, Medicine, Persuasion, or Religion",
-        },
-        { label: "Weapon Proficiencies", value: "Simple and Martial weapons" },
-        {
-          label: "Armor Training",
-          value: "Light, Medium, and Heavy armor and Shields",
-        },
-        {
-          label: "Starting Equipment",
-          value:
-            "Choose A or B: (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest's Pack, and 9 GP; or (B) 150 GP",
-        },
-      ],
-
-      levels: [
-        {
-          level: "1",
-          profBonus: "+2",
-          feature: "Lay on Hands, Spellcasting, Weapon Mastery",
-          channelDivinity: "—",
-          preparedSpells: "2",
-          slot1: "2",
-          slot2: "—",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "2",
-          profBonus: "+2",
-          feature: "Fighting Style, Paladin's Smite",
-          channelDivinity: "—",
-          preparedSpells: "3",
-          slot1: "2",
-          slot2: "—",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "3",
-          profBonus: "+2",
-          feature: "Channel Divinity, Paladin Subclass",
-          channelDivinity: "2",
-          preparedSpells: "4",
-          slot1: "3",
-          slot2: "—",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "4",
-          profBonus: "+2",
-          feature: "Ability Score Improvement",
-          channelDivinity: "2",
-          preparedSpells: "5",
-          slot1: "3",
-          slot2: "—",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "5",
-          profBonus: "+3",
-          feature: "Extra Attack, Faithful Steed",
-          channelDivinity: "2",
-          preparedSpells: "6",
-          slot1: "4",
-          slot2: "2",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "6",
-          profBonus: "+3",
-          feature: "Aura of Protection",
-          channelDivinity: "2",
-          preparedSpells: "6",
-          slot1: "4",
-          slot2: "2",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "7",
-          profBonus: "+3",
-          feature: "Subclass Feature",
-          channelDivinity: "2",
-          preparedSpells: "7",
-          slot1: "4",
-          slot2: "3",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "8",
-          profBonus: "+3",
-          feature: "Ability Score Improvement",
-          channelDivinity: "2",
-          preparedSpells: "7",
-          slot1: "4",
-          slot2: "3",
-          slot3: "—",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "9",
-          profBonus: "+4",
-          feature: "Abjure Foes",
-          channelDivinity: "2",
-          preparedSpells: "8",
-          slot1: "4",
-          slot2: "3",
-          slot3: "2",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "10",
-          profBonus: "+4",
-          feature: "Aura of Courage",
-          channelDivinity: "2",
-          preparedSpells: "8",
-          slot1: "4",
-          slot2: "3",
-          slot3: "2",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "11",
-          profBonus: "+4",
-          feature: "Radiant Strikes",
-          channelDivinity: "3",
-          preparedSpells: "10",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "12",
-          profBonus: "+4",
-          feature: "Ability Score Improvement",
-          channelDivinity: "3",
-          preparedSpells: "10",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "—",
-          slot5: "—",
-        },
-        {
-          level: "13",
-          profBonus: "+5",
-          feature: "Spell Slot Increase",
-          channelDivinity: "3",
-          preparedSpells: "11",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "1",
-          slot5: "—",
-        },
-        {
-          level: "14",
-          profBonus: "+5",
-          feature: "Restoring Touch",
-          channelDivinity: "3",
-          preparedSpells: "11",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "1",
-          slot5: "—",
-        },
-        {
-          level: "15",
-          profBonus: "+5",
-          feature: "Subclass Feature",
-          channelDivinity: "3",
-          preparedSpells: "12",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "2",
-          slot5: "—",
-        },
-        {
-          level: "16",
-          profBonus: "+5",
-          feature: "Ability Score Improvement",
-          channelDivinity: "3",
-          preparedSpells: "12",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "2",
-          slot5: "—",
-        },
-        {
-          level: "17",
-          profBonus: "+6",
-          feature: "Spell Slot Increase",
-          channelDivinity: "3",
-          preparedSpells: "14",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "1",
-        },
-        {
-          level: "18",
-          profBonus: "+6",
-          feature: "Aura Expansion",
-          channelDivinity: "3",
-          preparedSpells: "14",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "1",
-        },
-        {
-          level: "19",
-          profBonus: "+6",
-          feature: "Epic Boon",
-          channelDivinity: "3",
-          preparedSpells: "15",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-        },
-        {
-          level: "20",
-          profBonus: "+6",
-          feature: "Subclass Feature",
-          channelDivinity: "3",
-          preparedSpells: "15",
-          slot1: "4",
-          slot2: "3",
-          slot3: "3",
-          slot4: "3",
-          slot5: "2",
-        },
-      ],
-
-      levelPanels: [
-        {
-          level: "Level 1",
-          features: [
-            {
-              title: "Lay on Hands",
-              body: `<p>Your blessed touch can heal wounds. You have a healing pool equal to five times your Paladin level, replenished on a Long Rest.</p>
-                     <br/>
-                     <p>As a Bonus Action, touch a creature and restore Hit Points up to the remaining pool amount. You can also expend 5 Hit Points from the pool to remove the Poisoned condition (those points don't also restore Hit Points).</p>`,
-            },
-            {
-              title: "Spellcasting",
-              body: `<p>Charisma is your spellcasting ability for Paladin spells, and you can use a Holy Symbol as a Spellcasting Focus.</p>
-                     <br/>
-                     <p>To start, choose two level 1 Paladin spells. Heroism and Searing Smite are recommended. Whenever you finish a Long Rest, you can replace one spell on your list with another Paladin spell for which you have spell slots.</p>`,
-            },
-            {
-              title: "Weapon Mastery",
-              body: `<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longswords and Javelins. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 2",
-          features: [
-            {
-              title: "Fighting Style",
-              body: `<p>You gain a Fighting Style feat of your choice. Alternatively, you can choose the Blessed Warrior option below.</p>
-                     <br/>
-                     <p><b>Blessed Warrior.</b> You learn two Cleric cantrips of your choice (Guidance and Sacred Flame are recommended). They count as Paladin spells, using Charisma as your spellcasting ability. You can replace one cantrip per Paladin level gained.</p>`,
-            },
-            {
-              title: "Paladin's Smite",
-              body: `<p>You always have the Divine Smite spell prepared. In addition, you can cast it once without expending a spell slot, regaining this ability when you finish a Long Rest.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 3",
-          features: [
-            {
-              title: "Channel Divinity",
-              body: `<p>You can channel divine energy from the Outer Planes. You start with Divine Sense. Additional Channel Divinity options come from your subclass.</p>
-                     <br/>
-                     <p>You can use Channel Divinity twice, regaining one use on a Short Rest and all uses on a Long Rest. You gain an additional use at level 11.</p>
-                     <br/>
-                     <p><b>Divine Sense.</b> As a Bonus Action, open your awareness for 10 minutes. You know the location of any Celestial, Fiend, or Undead within 60 feet, and detect consecrated or desecrated places or objects in the same radius.</p>`,
-            },
-            {
-              title: "Paladin Subclass",
-              body: `<p>You gain a Paladin subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Paladin level or lower. Choose your sacred oath below:</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 4",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Paladin levels 8, 12, and 16.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 5",
-          features: [
-            {
-              title: "Extra Attack",
-              body: `<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>`,
-            },
-            {
-              title: "Faithful Steed",
-              body: `<p>You always have the Find Steed spell prepared. You can also cast it once without expending a spell slot, regaining this ability when you finish a Long Rest.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 6",
-          features: [
-            {
-              title: "Aura of Protection",
-              body: `<p>You radiate a protective aura in a 10-foot Emanation (inactive while Incapacitated). You and allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum +1).</p>
-                     <br/>
-                     <p>If multiple Paladins are present, a creature benefits from only one Aura of Protection at a time.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 7",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen oath.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 8",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 9",
-          features: [
-            {
-              title: "Abjure Foes",
-              body: `<p>As a Magic action, expend one use of Channel Divinity to overwhelm foes with awe. Target a number of creatures equal to your Charisma modifier (minimum one) within 60 feet.</p>
-                     <br/>
-                     <p>Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute or until it takes damage. While Frightened this way, a target can do only one of the following on its turn: move, take an action, or take a Bonus Action.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 10",
-          features: [
-            {
-              title: "Aura of Courage",
-              body: `<p>You and your allies have Immunity to the Frightened condition while in your Aura of Protection. If a Frightened ally enters the aura, that condition has no effect while there.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 11",
-          features: [
-            {
-              title: "Radiant Strikes",
-              body: `<p>Your strikes carry supernatural power. When you hit a target with a Melee weapon or Unarmed Strike, the target takes an extra 1d8 Radiant damage.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 12",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 13",
-          features: [
-            {
-              title: "Spell Slot Increase",
-              body: `<p>You gain access to 4th-level spell slots, increasing your magical power and the number of spells you can prepare.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 14",
-          features: [
-            {
-              title: "Restoring Touch",
-              body: `<p>When you use Lay On Hands on a creature, you can also remove one or more of the following conditions: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. You must expend 5 Hit Points from the healing pool per condition removed (those points don't also restore Hit Points).</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 15",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen oath.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 16",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 17",
-          features: [
-            {
-              title: "Spell Slot Increase",
-              body: `<p>You gain access to 5th-level spell slots, unlocking the most powerful Paladin spells.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 18",
-          features: [
-            {
-              title: "Aura Expansion",
-              body: `<p>Your Aura of Protection is now a 30-foot Emanation.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 19",
-          features: [
-            {
-              title: "Epic Boon",
-              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Truesight is recommended.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 20",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen oath.</p>`,
-            },
-          ],
-        },
-      ],
     };
   },
 
@@ -681,7 +186,7 @@ export default {
     goTo(label) {
       router
         .push(
-          "/wiki/classes/paladin/" + label.replace(/\s+/g, "_").toLowerCase(),
+          this.data.subclassRoute + label.replace(/\s+/g, "_").toLowerCase(),
         )
         .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     },
@@ -697,32 +202,16 @@ export default {
   color: var(--text-body);
 }
 
-/* ── Hero ───────────────────────────────────────── */
+/* ── Hero — no image ────────────────────────────── */
 .hero {
-  position: relative;
   width: 100%;
-  height: 420px;
-  overflow: hidden;
-}
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
+  padding: 3rem 2.5rem 2rem;
   background: linear-gradient(
     to bottom,
-    rgba(var(--bg-page-rgb), 0.2) 0%,
-    rgba(var(--bg-page-rgb), 0.7) 60%,
+    rgba(var(--bg-page-rgb), 0.95) 0%,
     var(--bg-page) 100%
   );
-  display: flex;
-  align-items: flex-end;
-  padding: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 .hero-content {
   max-width: 700px;
@@ -733,12 +222,14 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #fbbf24;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin: 0.25rem 0 0.5rem;
+  margin: 0 0 0.5rem;
   line-height: 1;
 }
 .hero-subtitle {
@@ -911,10 +402,10 @@ export default {
   text-align: center;
 }
 .muted {
-  color: var(--text-faint);
+  color: var(--text-subtle);
 }
 
-/* Stat badges */
+/* ── Stat badges ────────────────────────────────── */
 .cd-badge {
   font-size: 0.68rem;
   font-weight: 700;
@@ -1055,13 +546,10 @@ export default {
 /* ── Mobile ─────────────────────────────────────── */
 @media (max-width: 640px) {
   .hero {
-    height: 300px;
+    padding: 2rem 1.5rem 1.5rem;
   }
   .hero-title {
     font-size: 2rem;
-  }
-  .hero-overlay {
-    padding: 1.5rem;
   }
   .trait-row {
     grid-template-columns: 1fr;
@@ -1072,4 +560,3 @@ export default {
   }
 }
 </style>
-

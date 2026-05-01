@@ -191,7 +191,7 @@ export default {
       router.push("/wiki");
     },
     goChar() {
-      router.push("/ccreator");
+      router.push("/character_creator");
     },
   },
   data() {

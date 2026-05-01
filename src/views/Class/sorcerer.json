@@ -1,0 +1,555 @@
+{
+  "name": "Sorcerer",
+  "subtitle": "A spellcaster who draws on inherent magic from a gift or bloodline",
+  "complexity": "High Complexity",
+  "primaryStat": "Charisma",
+  "accentColor": "#f472b6",
+  "accentRgb": "244, 114, 182",
+  "subclassRoute": "/wiki/classes/sorcerer/",
+  "multiclassTraits": "Gain the Hit Point Die from the Core Sorcerer Traits table.",
+
+  "subclasses": [
+    { "title": "Aberrant Sorcery", "icon": "mdi-alien" },
+    { "title": "Clockwork Sorcery", "icon": "mdi-cog" },
+    { "title": "Draconic Sorcery", "icon": "mdi-dragon" },
+    { "title": "Wild Magic Sorcery", "icon": "mdi-creation" }
+  ],
+
+  "coreTraits": [
+    { "label": "Primary Ability", "value": "Charisma" },
+    { "label": "Hit Point Die", "value": "D6 per Sorcerer level" },
+    {
+      "label": "Saving Throw Proficiencies",
+      "value": "Constitution and Charisma"
+    },
+    {
+      "label": "Skill Proficiencies",
+      "value": "Choose 2: Arcana, Deception, Insight, Intimidation, Persuasion, or Religion"
+    },
+    { "label": "Weapon Proficiencies", "value": "Simple weapons" },
+    { "label": "Armor Training", "value": "None" },
+    {
+      "label": "Starting Equipment",
+      "value": "Choose A or B: (A) Spear, 2 Daggers, Arcane Focus (crystal), Dungeoneer's Pack, and 28 GP; or (B) 50 GP"
+    }
+  ],
+
+  "tableColumns": [
+    {
+      "key": "sorceryPoints",
+      "label": "Sorcery Pts",
+      "badge": true,
+      "badgeClass": "sp-badge",
+      "dashable": true
+    },
+    { "key": "cantrips", "label": "Cantrips", "badge": false },
+    { "key": "preparedSpells", "label": "Spells", "badge": false },
+    { "key": "slot1", "label": "1", "badge": false },
+    { "key": "slot2", "label": "2", "badge": false },
+    { "key": "slot3", "label": "3", "badge": false },
+    { "key": "slot4", "label": "4", "badge": false },
+    { "key": "slot5", "label": "5", "badge": false },
+    { "key": "slot6", "label": "6", "badge": false },
+    { "key": "slot7", "label": "7", "badge": false },
+    { "key": "slot8", "label": "8", "badge": false },
+    { "key": "slot9", "label": "9", "badge": false }
+  ],
+
+  "levels": [
+    {
+      "level": "1",
+      "profBonus": "+2",
+      "feature": "Spellcasting, Innate Sorcery",
+      "sorceryPoints": "—",
+      "cantrips": "4",
+      "preparedSpells": "2",
+      "slot1": "2",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "2",
+      "profBonus": "+2",
+      "feature": "Font of Magic, Metamagic",
+      "sorceryPoints": "2",
+      "cantrips": "4",
+      "preparedSpells": "4",
+      "slot1": "3",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "3",
+      "profBonus": "+2",
+      "feature": "Sorcerer Subclass",
+      "sorceryPoints": "3",
+      "cantrips": "4",
+      "preparedSpells": "6",
+      "slot1": "4",
+      "slot2": "2",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "4",
+      "profBonus": "+2",
+      "feature": "Ability Score Improvement",
+      "sorceryPoints": "4",
+      "cantrips": "5",
+      "preparedSpells": "7",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "5",
+      "profBonus": "+3",
+      "feature": "Sorcerous Restoration",
+      "sorceryPoints": "5",
+      "cantrips": "5",
+      "preparedSpells": "9",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "2",
+      "slot4": "—",
+      "slot5": "—",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "6",
+      "profBonus": "+3",
+      "feature": "Subclass Feature",
+      "sorceryPoints": "6",
+      "cantrips": "5",
+      "preparedSpells": "10",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "—",
+      "slot5": "—",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "7",
+      "profBonus": "+3",
+      "feature": "Sorcery Incarnate",
+      "sorceryPoints": "7",
+      "cantrips": "5",
+      "preparedSpells": "11",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "1",
+      "slot5": "—",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "8",
+      "profBonus": "+3",
+      "feature": "Ability Score Improvement",
+      "sorceryPoints": "8",
+      "cantrips": "5",
+      "preparedSpells": "12",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "2",
+      "slot5": "—",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "9",
+      "profBonus": "+4",
+      "feature": "—",
+      "sorceryPoints": "9",
+      "cantrips": "5",
+      "preparedSpells": "14",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "1",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "10",
+      "profBonus": "+4",
+      "feature": "Metamagic",
+      "sorceryPoints": "10",
+      "cantrips": "6",
+      "preparedSpells": "15",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2",
+      "slot6": "—",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "11",
+      "profBonus": "+4",
+      "feature": "—",
+      "sorceryPoints": "11",
+      "cantrips": "6",
+      "preparedSpells": "16",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2",
+      "slot6": "1",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "12",
+      "profBonus": "+4",
+      "feature": "Ability Score Improvement",
+      "sorceryPoints": "12",
+      "cantrips": "6",
+      "preparedSpells": "16",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2",
+      "slot6": "1",
+      "slot7": "—",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "13",
+      "profBonus": "+5",
+      "feature": "—",
+      "sorceryPoints": "13",
+      "cantrips": "6",
+      "preparedSpells": "17",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2",
+      "slot6": "1",
+      "slot7": "1",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "14",
+      "profBonus": "+5",
+      "feature": "Subclass Feature",
+      "sorceryPoints": "14",
+      "cantrips": "6",
+      "preparedSpells": "17",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2",
+      "slot6": "1",
+      "slot7": "1",
+      "slot8": "—",
+      "slot9": "—"
+    },
+    {
+      "level": "15",
+      "profBonus": "+5",
+      "feature": "—",
+      "sorceryPoints": "15",
+      "cantrips": "6",
+      "preparedSpells": "18",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2",
+      "slot6": "1",
+      "slot7": "1",
+      "slot8": "1",
+      "slot9": "—"
+    },
+    {
+      "level": "16",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "sorceryPoints": "16",
+      "cantrips": "6",
+      "preparedSpells": "18",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2",
+      "slot6": "1",
+      "slot7": "1",
+      "slot8": "1",
+      "slot9": "—"
+    },
+    {
+      "level": "17",
+      "profBonus": "+6",
+      "feature": "Metamagic",
+      "sorceryPoints": "17",
+      "cantrips": "6",
+      "preparedSpells": "19",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2",
+      "slot6": "1",
+      "slot7": "1",
+      "slot8": "1",
+      "slot9": "1"
+    },
+    {
+      "level": "18",
+      "profBonus": "+6",
+      "feature": "Subclass Feature",
+      "sorceryPoints": "18",
+      "cantrips": "6",
+      "preparedSpells": "20",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "3",
+      "slot6": "1",
+      "slot7": "1",
+      "slot8": "1",
+      "slot9": "1"
+    },
+    {
+      "level": "19",
+      "profBonus": "+6",
+      "feature": "Epic Boon",
+      "sorceryPoints": "19",
+      "cantrips": "6",
+      "preparedSpells": "21",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "3",
+      "slot6": "2",
+      "slot7": "1",
+      "slot8": "1",
+      "slot9": "1"
+    },
+    {
+      "level": "20",
+      "profBonus": "+6",
+      "feature": "Arcane Apotheosis",
+      "sorceryPoints": "20",
+      "cantrips": "6",
+      "preparedSpells": "22",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "3",
+      "slot6": "2",
+      "slot7": "2",
+      "slot8": "1",
+      "slot9": "1"
+    }
+  ],
+
+  "levelPanels": [
+    {
+      "level": "Level 1",
+      "features": [
+        {
+          "title": "Spellcasting",
+          "body": "<p>Drawing from your innate magic, you cast spells. Charisma is your spellcasting ability and you can use an Arcane Focus as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know four cantrips of your choice. Light, Prestidigitation, Shocking Grasp, and Sorcerous Burst are recommended. You gain additional cantrips at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose two level 1 Sorcerer spells to start. Burning Hands and Detect Magic are recommended. The number increases as you gain Sorcerer levels. You can replace one prepared spell per level gained.</p>"
+        },
+        {
+          "title": "Innate Sorcery",
+          "body": "<p>As a Bonus Action, you can unleash your simmering innate magic for 1 minute, gaining the following benefits:</p><br/><p>The spell save DC of your Sorcerer spells increases by 1.</p><br/><p>You have Advantage on the attack rolls of Sorcerer spells you cast.</p><br/><p>You can use this feature twice, regaining all uses when you finish a Long Rest.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 2",
+      "features": [
+        {
+          "title": "Font of Magic",
+          "body": "<p>You have 2 Sorcery Points, gaining more as shown in the Sorcery Points column. All points are regained on a Long Rest.</p><br/><p><b>Converting Spell Slots.</b> Expend a spell slot to gain Sorcery Points equal to the slot's level (no action required).</p><br/><p><b>Creating Spell Slots.</b> As a Bonus Action, convert Sorcery Points into a spell slot (max level 5). Costs: 1st=2pts, 2nd=3pts, 3rd=5pts, 4th=6pts, 5th=7pts. Created slots vanish on a Long Rest.</p>"
+        },
+        {
+          "title": "Metamagic",
+          "body": "<p>Because your magic flows from within, you can alter your spells. Choose two Metamagic options now, two more at level 10, and two more at level 17. You can use only one option per spell unless noted otherwise.</p><br/><p><b>Careful Spell (1 pt).</b> Up to your Charisma modifier creatures auto-succeed their saves.</p><p><b>Distant Spell (1 pt).</b> Double a spell's range, or change Touch to 30 feet.</p><p><b>Empowered Spell (1 pt).</b> Reroll up to your Charisma modifier damage dice. Combinable.</p><p><b>Extended Spell (1 pt).</b> Double a spell's duration (up to 24 hours). Gain Advantage on Concentration saves.</p><p><b>Heightened Spell (2 pts).</b> One target has Disadvantage on its save against the spell.</p><p><b>Quickened Spell (2 pts).</b> Change a spell's casting time from Action to Bonus Action.</p><p><b>Seeking Spell (1 pt).</b> If a spell attack misses, reroll the d20. Combinable.</p><p><b>Subtle Spell (1 pt).</b> Cast without Verbal, Somatic, or Material components.</p><p><b>Transmuted Spell (1 pt).</b> Change damage type among: Acid, Cold, Fire, Lightning, Poison, Thunder.</p><p><b>Twinned Spell (1 pt).</b> Increase the spell's effective level by 1 to target an additional creature.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 3",
+      "features": [
+        {
+          "title": "Sorcerer Subclass",
+          "body": "<p>You gain a Sorcerer subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Sorcerer level or lower. Choose your origin below:</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 4",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Sorcerer levels 8, 12, and 16.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 5",
+      "features": [
+        {
+          "title": "Sorcerous Restoration",
+          "body": "<p>When you finish a Short Rest, you can regain expended Sorcery Points up to half your Sorcerer level (round down). Once you use this feature, you can't do so again until you finish a Long Rest.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 6",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen origin.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 7",
+      "features": [
+        {
+          "title": "Sorcery Incarnate",
+          "body": "<p>If you have no uses of Innate Sorcery left, you can activate it by spending 2 Sorcery Points when you take the Bonus Action.</p><br/><p>In addition, while your Innate Sorcery feature is active, you can use up to two of your Metamagic options on each spell you cast.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 8",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 10",
+      "features": [
+        {
+          "title": "Metamagic",
+          "body": "<p>You gain two additional Metamagic options of your choice.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 12",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 14",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen origin.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 16",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 17",
+      "features": [
+        {
+          "title": "Metamagic",
+          "body": "<p>You gain two additional Metamagic options of your choice.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 18",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen origin.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 19",
+      "features": [
+        {
+          "title": "Epic Boon",
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 20",
+      "features": [
+        {
+          "title": "Arcane Apotheosis",
+          "body": "<p>While your Innate Sorcery feature is active, you can use one Metamagic option on each of your turns without spending Sorcery Points on it.</p>"
+        }
+      ]
+    }
+  ]
+}

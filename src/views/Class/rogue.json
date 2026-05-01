@@ -1,0 +1,379 @@
+{
+  "name": "Rogue",
+  "subtitle": "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
+  "complexity": "Low Complexity",
+  "primaryStat": "Dexterity",
+  "accentColor": "#facc15",
+  "accentRgb": "250, 204, 21",
+  "subclassRoute": "/wiki/classes/rogue/",
+  "multiclassTraits": "Gain the Hit Point Die, proficiency in one skill from the Rogue's list, proficiency with Thieves' Tools, and training with Light armor.",
+
+  "subclasses": [
+    { "title": "Arcane Trickster", "icon": "mdi-hat-fedora" },
+    { "title": "Assassin", "icon": "mdi-skull" },
+    { "title": "Soulknife", "icon": "mdi-brain" },
+    { "title": "Thief", "icon": "mdi-drama-masks" }
+  ],
+
+  "coreTraits": [
+    { "label": "Primary Ability", "value": "Dexterity" },
+    { "label": "Hit Point Die", "value": "D8 per Rogue level" },
+    {
+      "label": "Saving Throw Proficiencies",
+      "value": "Dexterity and Intelligence"
+    },
+    {
+      "label": "Skill Proficiencies",
+      "value": "Choose 4: Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight of Hand, or Stealth"
+    },
+    {
+      "label": "Weapon Proficiencies",
+      "value": "Simple weapons and Martial weapons with the Finesse or Light property"
+    },
+    { "label": "Tool Proficiencies", "value": "Thieves' Tools" },
+    { "label": "Armor Training", "value": "Light armor" },
+    {
+      "label": "Starting Equipment",
+      "value": "Choose A or B: (A) Leather Armor, 2 Daggers, Shortsword, Shortbow, 20 Arrows, Quiver, Thieves' Tools, Burglar's Pack, and 8 GP; or (B) 100 GP"
+    }
+  ],
+
+  "tableColumns": [
+    {
+      "key": "sneakAttack",
+      "label": "Sneak Attack",
+      "badge": true,
+      "badgeClass": "sa-badge"
+    }
+  ],
+
+  "levels": [
+    {
+      "level": "1",
+      "profBonus": "+2",
+      "feature": "Expertise, Sneak Attack, Thieves' Cant, Weapon Mastery",
+      "sneakAttack": "1d6"
+    },
+    {
+      "level": "2",
+      "profBonus": "+2",
+      "feature": "Cunning Action",
+      "sneakAttack": "1d6"
+    },
+    {
+      "level": "3",
+      "profBonus": "+2",
+      "feature": "Rogue Subclass, Steady Aim",
+      "sneakAttack": "2d6"
+    },
+    {
+      "level": "4",
+      "profBonus": "+2",
+      "feature": "Ability Score Improvement",
+      "sneakAttack": "2d6"
+    },
+    {
+      "level": "5",
+      "profBonus": "+3",
+      "feature": "Cunning Strike, Uncanny Dodge",
+      "sneakAttack": "3d6"
+    },
+    {
+      "level": "6",
+      "profBonus": "+3",
+      "feature": "Expertise",
+      "sneakAttack": "3d6"
+    },
+    {
+      "level": "7",
+      "profBonus": "+3",
+      "feature": "Evasion, Reliable Talent",
+      "sneakAttack": "4d6"
+    },
+    {
+      "level": "8",
+      "profBonus": "+3",
+      "feature": "Ability Score Improvement",
+      "sneakAttack": "4d6"
+    },
+    {
+      "level": "9",
+      "profBonus": "+4",
+      "feature": "Subclass Feature",
+      "sneakAttack": "5d6"
+    },
+    {
+      "level": "10",
+      "profBonus": "+4",
+      "feature": "Ability Score Improvement",
+      "sneakAttack": "5d6"
+    },
+    {
+      "level": "11",
+      "profBonus": "+4",
+      "feature": "Improved Cunning Strike",
+      "sneakAttack": "6d6"
+    },
+    {
+      "level": "12",
+      "profBonus": "+4",
+      "feature": "Ability Score Improvement",
+      "sneakAttack": "6d6"
+    },
+    {
+      "level": "13",
+      "profBonus": "+5",
+      "feature": "Subclass Feature",
+      "sneakAttack": "7d6"
+    },
+    {
+      "level": "14",
+      "profBonus": "+5",
+      "feature": "Devious Strikes",
+      "sneakAttack": "7d6"
+    },
+    {
+      "level": "15",
+      "profBonus": "+5",
+      "feature": "Slippery Mind",
+      "sneakAttack": "8d6"
+    },
+    {
+      "level": "16",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "sneakAttack": "8d6"
+    },
+    {
+      "level": "17",
+      "profBonus": "+6",
+      "feature": "Subclass Feature",
+      "sneakAttack": "9d6"
+    },
+    {
+      "level": "18",
+      "profBonus": "+6",
+      "feature": "Elusive",
+      "sneakAttack": "9d6"
+    },
+    {
+      "level": "19",
+      "profBonus": "+6",
+      "feature": "Epic Boon",
+      "sneakAttack": "10d6"
+    },
+    {
+      "level": "20",
+      "profBonus": "+6",
+      "feature": "Stroke of Luck",
+      "sneakAttack": "10d6"
+    }
+  ],
+
+  "levelPanels": [
+    {
+      "level": "Level 1",
+      "features": [
+        {
+          "title": "Expertise",
+          "body": "<p>You gain Expertise in two of your skill proficiencies of your choice. Sleight of Hand and Stealth are recommended.</p><br/><p>At Rogue level 6, you gain Expertise in two more of your skill proficiencies of your choice.</p>"
+        },
+        {
+          "title": "Sneak Attack",
+          "body": "<p>Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or Ranged weapon. The extra damage type matches the weapon's type.</p><br/><p>You don't need Advantage if at least one ally is within 5 feet of the target (not Incapacitated) and you don't have Disadvantage on the roll.</p><br/><p>The extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column.</p>"
+        },
+        {
+          "title": "Thieves' Cant",
+          "body": "<p>You know Thieves' Cant and one other language of your choice, picked up from the communities where you plied your roguish talents.</p>"
+        },
+        {
+          "title": "Weapon Mastery",
+          "body": "<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Daggers and Shortbows. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 2",
+      "features": [
+        {
+          "title": "Cunning Action",
+          "body": "<p>Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 3",
+      "features": [
+        {
+          "title": "Rogue Subclass",
+          "body": "<p>You gain a Rogue subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Rogue level or lower. Choose your specialization below:</p>"
+        },
+        {
+          "title": "Steady Aim",
+          "body": "<p>As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 4",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Rogue levels 8, 10, 12, and 16.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 5",
+      "features": [
+        {
+          "title": "Cunning Strike",
+          "body": "<p>When you deal Sneak Attack damage, you can add one of the following effects by forgoing the listed number of Sneak Attack dice. Save DC = 8 + your Dexterity modifier + Proficiency Bonus.</p><br/><p><b>Poison (Cost: 1d6).</b> The target makes a Constitution save or has the Poisoned condition for 1 minute. Requires a Poisoner's Kit on your person.</p><br/><p><b>Trip (Cost: 1d6).</b> If the target is Large or smaller, it must succeed on a Dexterity save or have the Prone condition.</p><br/><p><b>Withdraw (Cost: 1d6).</b> Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.</p>"
+        },
+        {
+          "title": "Uncanny Dodge",
+          "body": "<p>When an attacker you can see hits you with an attack roll, you can use your Reaction to halve the attack's damage against you (round down).</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 6",
+      "features": [
+        {
+          "title": "Expertise",
+          "body": "<p>You gain Expertise in two more of your skill proficiencies of your choice.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 7",
+      "features": [
+        {
+          "title": "Evasion",
+          "body": "<p>When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage on a success and only half damage on a failure.</p><br/><p>You can't use this feature if you have the Incapacitated condition.</p>"
+        },
+        {
+          "title": "Reliable Talent",
+          "body": "<p>Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 8",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 9",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 10",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 11",
+      "features": [
+        {
+          "title": "Improved Cunning Strike",
+          "body": "<p>You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 12",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 13",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 14",
+      "features": [
+        {
+          "title": "Devious Strikes",
+          "body": "<p>You've practiced new ways to use your Sneak Attack deviously. The following effects are added to your Cunning Strike options.</p><br/><p><b>Daze (Cost: 2d6).</b> The target must succeed on a Constitution save, or on its next turn it can do only one of the following: move, take an action, or take a Bonus Action.</p><br/><p><b>Knock Out (Cost: 6d6).</b> The target must succeed on a Constitution save, or it has the Unconscious condition for 1 minute or until it takes any damage. The target can repeat the save at the end of each of its turns.</p><br/><p><b>Obscure (Cost: 3d6).</b> The target must succeed on a Dexterity save, or it has the Blinded condition until the end of its next turn.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 15",
+      "features": [
+        {
+          "title": "Slippery Mind",
+          "body": "<p>Your cunning mind is exceptionally difficult to control. You gain proficiency in Wisdom and Charisma saving throws.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 16",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 17",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 18",
+      "features": [
+        {
+          "title": "Elusive",
+          "body": "<p>You are so evasive that attackers rarely gain the upper hand. No attack roll can have Advantage against you unless you have the Incapacitated condition.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 19",
+      "features": [
+        {
+          "title": "Epic Boon",
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 20",
+      "features": [
+        {
+          "title": "Stroke of Luck",
+          "body": "<p>If you fail a d20 Test, you can turn the roll into a 20. Once you use this feature, you can't use it again until you finish a Short Rest or a Long Rest.</p>"
+        }
+      ]
+    }
+  ]
+}

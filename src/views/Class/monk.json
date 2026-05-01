@@ -1,0 +1,448 @@
+{
+  "name": "Monk",
+  "subtitle": "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",
+  "complexity": "Medium Complexity",
+  "primaryStat": "Dexterity & Wisdom",
+  "accentColor": "#60a5fa",
+  "accentRgb": "96, 165, 250",
+  "subclassPrefix": "Warrior of",
+  "subclassRoute": "/wiki/classes/monk/",
+  "multiclassTraits": "Gain the Hit Point Die.",
+
+  "subclasses": [
+    { "title": "Mercy", "icon": "mdi-hand-heart" },
+    { "title": "Shadow", "icon": "mdi-weather-night" },
+    { "title": "the Elements", "icon": "mdi-weather-tornado" },
+    { "title": "the Open Hand", "icon": "mdi-hand-back-right" }
+  ],
+
+  "coreTraits": [
+    { "label": "Primary Ability", "value": "Dexterity and Wisdom" },
+    { "label": "Hit Point Die", "value": "D8 per Monk level" },
+    {
+      "label": "Saving Throw Proficiencies",
+      "value": "Strength and Dexterity"
+    },
+    {
+      "label": "Skill Proficiencies",
+      "value": "Choose 2: Acrobatics, Athletics, History, Insight, Religion, or Stealth"
+    },
+    {
+      "label": "Weapon Proficiencies",
+      "value": "Simple weapons and Martial weapons with the Light property"
+    },
+    {
+      "label": "Tool Proficiencies",
+      "value": "Choose one type of Artisan's Tools or Musical Instrument"
+    },
+    { "label": "Armor Training", "value": "None" },
+    {
+      "label": "Starting Equipment",
+      "value": "Choose A or B: (A) Spear, 5 Daggers, Artisan's Tools or Musical Instrument, Explorer's Pack, and 11 GP; or (B) 50 GP"
+    }
+  ],
+
+  "tableColumns": [
+    {
+      "key": "focusPoints",
+      "label": "Focus Points",
+      "badge": true,
+      "badgeClass": "fp-badge",
+      "dashable": true
+    },
+    {
+      "key": "martialArtsDie",
+      "label": "Martial Arts Die",
+      "badge": true,
+      "badgeClass": "ma-badge"
+    },
+    {
+      "key": "unarmoredMovement",
+      "label": "Unarmored Movement",
+      "badge": true,
+      "badgeClass": "mv-badge"
+    }
+  ],
+
+  "levels": [
+    {
+      "level": "1",
+      "profBonus": "+2",
+      "feature": "Martial Arts, Unarmored Defense",
+      "focusPoints": "—",
+      "martialArtsDie": "1d6",
+      "unarmoredMovement": "+0 ft."
+    },
+    {
+      "level": "2",
+      "profBonus": "+2",
+      "feature": "Monk's Focus, Unarmored Movement, Uncanny Metabolism",
+      "focusPoints": "2",
+      "martialArtsDie": "1d6",
+      "unarmoredMovement": "+10 ft."
+    },
+    {
+      "level": "3",
+      "profBonus": "+2",
+      "feature": "Deflect Attacks, Monk Subclass",
+      "focusPoints": "3",
+      "martialArtsDie": "1d6",
+      "unarmoredMovement": "+10 ft."
+    },
+    {
+      "level": "4",
+      "profBonus": "+2",
+      "feature": "Ability Score Improvement, Slow Fall",
+      "focusPoints": "4",
+      "martialArtsDie": "1d6",
+      "unarmoredMovement": "+10 ft."
+    },
+    {
+      "level": "5",
+      "profBonus": "+3",
+      "feature": "Extra Attack, Stunning Strike",
+      "focusPoints": "5",
+      "martialArtsDie": "1d8",
+      "unarmoredMovement": "+10 ft."
+    },
+    {
+      "level": "6",
+      "profBonus": "+3",
+      "feature": "Empowered Strikes, Subclass Feature",
+      "focusPoints": "6",
+      "martialArtsDie": "1d8",
+      "unarmoredMovement": "+15 ft."
+    },
+    {
+      "level": "7",
+      "profBonus": "+3",
+      "feature": "Evasion",
+      "focusPoints": "7",
+      "martialArtsDie": "1d8",
+      "unarmoredMovement": "+15 ft."
+    },
+    {
+      "level": "8",
+      "profBonus": "+3",
+      "feature": "Ability Score Improvement",
+      "focusPoints": "8",
+      "martialArtsDie": "1d8",
+      "unarmoredMovement": "+15 ft."
+    },
+    {
+      "level": "9",
+      "profBonus": "+4",
+      "feature": "Acrobatic Movement",
+      "focusPoints": "9",
+      "martialArtsDie": "1d8",
+      "unarmoredMovement": "+15 ft."
+    },
+    {
+      "level": "10",
+      "profBonus": "+4",
+      "feature": "Heightened Focus, Self-Restoration, Subclass Feature",
+      "focusPoints": "10",
+      "martialArtsDie": "1d8",
+      "unarmoredMovement": "+20 ft."
+    },
+    {
+      "level": "11",
+      "profBonus": "+4",
+      "feature": "Subclass Feature",
+      "focusPoints": "11",
+      "martialArtsDie": "1d10",
+      "unarmoredMovement": "+20 ft."
+    },
+    {
+      "level": "12",
+      "profBonus": "+4",
+      "feature": "Ability Score Improvement",
+      "focusPoints": "12",
+      "martialArtsDie": "1d10",
+      "unarmoredMovement": "+20 ft."
+    },
+    {
+      "level": "13",
+      "profBonus": "+5",
+      "feature": "Deflect Energy",
+      "focusPoints": "13",
+      "martialArtsDie": "1d10",
+      "unarmoredMovement": "+20 ft."
+    },
+    {
+      "level": "14",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "focusPoints": "14",
+      "martialArtsDie": "1d10",
+      "unarmoredMovement": "+25 ft."
+    },
+    {
+      "level": "15",
+      "profBonus": "+5",
+      "feature": "Perfect Focus",
+      "focusPoints": "15",
+      "martialArtsDie": "1d10",
+      "unarmoredMovement": "+25 ft."
+    },
+    {
+      "level": "16",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "focusPoints": "16",
+      "martialArtsDie": "1d10",
+      "unarmoredMovement": "+25 ft."
+    },
+    {
+      "level": "17",
+      "profBonus": "+6",
+      "feature": "Subclass Feature",
+      "focusPoints": "17",
+      "martialArtsDie": "1d12",
+      "unarmoredMovement": "+25 ft."
+    },
+    {
+      "level": "18",
+      "profBonus": "+6",
+      "feature": "Superior Defense",
+      "focusPoints": "18",
+      "martialArtsDie": "1d12",
+      "unarmoredMovement": "+30 ft."
+    },
+    {
+      "level": "19",
+      "profBonus": "+6",
+      "feature": "Epic Boon",
+      "focusPoints": "19",
+      "martialArtsDie": "1d12",
+      "unarmoredMovement": "+30 ft."
+    },
+    {
+      "level": "20",
+      "profBonus": "+6",
+      "feature": "Body and Mind",
+      "focusPoints": "20",
+      "martialArtsDie": "1d12",
+      "unarmoredMovement": "+30 ft."
+    }
+  ],
+
+  "levelPanels": [
+    {
+      "level": "Level 1",
+      "features": [
+        {
+          "title": "Martial Arts",
+          "body": "<p>Your practice of martial arts gives you mastery of combat styles using Unarmed Strikes and Monk Weapons (Simple Melee weapons and Martial Melee weapons with the Light property). You gain the following benefits while unarmed or wielding only Monk Weapons and not wearing armor or a Shield.</p><br/><p><b>Bonus Unarmed Strike.</b> You can make one Unarmed Strike as a Bonus Action.</p><br/><p><b>Dexterous Attacks.</b> You can use your Dexterity modifier instead of Strength for the attack and damage rolls of your Unarmed Strikes and Monk Weapons. You can also use Dexterity for Grapple or Shove save DCs.</p><br/><p><b>Martial Arts Die.</b> You can roll 1d6 in place of the normal damage of your Unarmed Strike or Monk Weapons. This die improves as you gain Monk levels, shown in the Martial Arts Die column.</p>"
+        },
+        {
+          "title": "Unarmored Defense",
+          "body": "<p>While you aren't wearing armor or wielding a Shield, your base Armor Class equals 10 plus your Dexterity and Wisdom modifiers.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 2",
+      "features": [
+        {
+          "title": "Monk's Focus",
+          "body": "<p>You harness a well of extraordinary energy represented by Focus Points. Your Monk level determines how many you have, as shown in the Focus Points column.</p><br/><p><b>Flurry of Blows.</b> Expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.</p><br/><p><b>Patient Defense.</b> Take the Disengage action as a Bonus Action. Or expend 1 Focus Point to take both Disengage and Dodge as a Bonus Action.</p><br/><p><b>Step of the Wind.</b> Take the Dash action as a Bonus Action. Or expend 1 Focus Point to take both Disengage and Dash as a Bonus Action, with doubled jump distance for the turn.</p>"
+        },
+        {
+          "title": "Unarmored Movement",
+          "body": "<p>Your speed increases by 10 feet while you aren't wearing armor or wielding a Shield. This bonus increases at higher Monk levels as shown in the Unarmored Movement column.</p>"
+        },
+        {
+          "title": "Uncanny Metabolism",
+          "body": "<p>When you roll Initiative, you can regain all expended Focus Points. When you do so, roll your Martial Arts die and regain Hit Points equal to your Monk level plus the number rolled.</p><br/><p>Once you use this feature, you can't use it again until you finish a Long Rest.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 3",
+      "features": [
+        {
+          "title": "Deflect Attacks",
+          "body": "<p>You can use your Reaction to deflect a melee or ranged attack that deals Bludgeoning, Piercing, or Slashing damage. The total damage you take is reduced by 1d10 + your Dexterity modifier + your Monk level.</p><br/><p>If you reduce the damage to 0, you can expend 1 Focus Point to redirect it. A creature within 5 feet (melee) or 60 feet (ranged) must succeed on a Dexterity saving throw or take damage equal to two rolls of your Martial Arts die + your Dexterity modifier.</p>"
+        },
+        {
+          "title": "Monk Subclass",
+          "body": "<p>You gain a Monk subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Monk level or lower. Choose your warrior tradition below:</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 4",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Monk levels 8, 12, and 16.</p>"
+        },
+        {
+          "title": "Slow Fall",
+          "body": "<p>You can use your Reaction when you fall to reduce any damage you take from the fall by an amount equal to five times your Monk level.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 5",
+      "features": [
+        {
+          "title": "Extra Attack",
+          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>"
+        },
+        {
+          "title": "Stunning Strike",
+          "body": "<p>Once per turn when you hit a creature with a Monk Weapon or Unarmed Strike, you can expend 1 Focus Point to attempt a stunning strike. The target must make a Constitution saving throw. On a failed save, the target has the Stunned condition until the start of your next turn. On a successful save, it takes Force damage equal to a roll of your Martial Arts die + your Wisdom modifier.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 6",
+      "features": [
+        {
+          "title": "Empowered Strikes",
+          "body": "<p>Whenever you deal damage with your Unarmed Strike, it can deal your choice of Force damage or its normal damage type.</p>"
+        },
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen warrior tradition.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 7",
+      "features": [
+        {
+          "title": "Evasion",
+          "body": "<p>When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage on a success and only half damage on a failure.</p><br/><p>You don't benefit from this feature if you have the Incapacitated condition.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 8",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 9",
+      "features": [
+        {
+          "title": "Acrobatic Movement",
+          "body": "<p>While you aren't wearing armor or wielding a Shield, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 10",
+      "features": [
+        {
+          "title": "Heightened Focus",
+          "body": "<p>Your core Focus abilities improve:</p><br/><p><b>Flurry of Blows.</b> You can expend 1 Focus Point to make three Unarmed Strikes instead of two.</p><br/><p><b>Patient Defense.</b> When you expend a Focus Point for Patient Defense, you gain Temporary Hit Points equal to two rolls of your Martial Arts die.</p><br/><p><b>Step of the Wind.</b> When you expend a Focus Point for Step of the Wind, you can bring a willing Large-or-smaller creature within 5 feet with you until the end of your turn without provoking Opportunity Attacks.</p>"
+        },
+        {
+          "title": "Self-Restoration",
+          "body": "<p>Through sheer force of will, you can remove one of the following conditions from yourself at the end of each of your turns: Charmed, Frightened, or Poisoned.</p><br/><p>In addition, forgoing food and drink doesn't give you levels of Exhaustion.</p>"
+        },
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen warrior tradition.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 11",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen warrior tradition.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 12",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 13",
+      "features": [
+        {
+          "title": "Deflect Energy",
+          "body": "<p>You can now use your Deflect Attacks feature against attacks that deal any damage type, not just Bludgeoning, Piercing, or Slashing.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 14",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 15",
+      "features": [
+        {
+          "title": "Perfect Focus",
+          "body": "<p>When you roll Initiative and have fewer than 4 Focus Points, you regain Focus Points equal to 4 minus the number you have.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 16",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 17",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen warrior tradition.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 18",
+      "features": [
+        {
+          "title": "Superior Defense",
+          "body": "<p>At the start of your turn, you can expend 3 Focus Points to bolster yourself against harm for 1 minute or until you have the Incapacitated condition. During that time, you have Resistance to all damage except Force damage.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 19",
+      "features": [
+        {
+          "title": "Epic Boon",
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Irresistible Offense is recommended.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 20",
+      "features": [
+        {
+          "title": "Body and Mind",
+          "body": "<p>You have honed your body and mind to new heights. Your Dexterity and Wisdom scores each increase by 4, to a maximum of 25.</p>"
+        }
+      ]
+    }
+  ]
+}

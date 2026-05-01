@@ -1,20 +1,14 @@
 ﻿<template>
   <div class="fighter-page">
-    <!-- Hero Banner -->
+    <!-- Hero Banner — no image -->
     <div class="hero">
-      <img src="../assets/classes/fighter.png" alt="Fighter" class="hero-img" />
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <span class="hero-eyebrow">Class</span>
-          <h1 class="hero-title">Fighter</h1>
-          <p class="hero-subtitle">
-            A master of martial combat, skilled with a variety of weapons and
-            armor
-          </p>
-          <div class="hero-badges">
-            <span class="badge badge-red">Low Complexity</span>
-            <span class="badge badge-orange">Strength or Dexterity</span>
-          </div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Class</span>
+        <h1 class="hero-title">{{ data.name }}</h1>
+        <p class="hero-subtitle">{{ data.subtitle }}</p>
+        <div class="hero-badges">
+          <span class="badge badge-red">{{ data.complexity }}</span>
+          <span class="badge badge-orange">{{ data.primaryStat }}</span>
         </div>
       </div>
     </div>
@@ -24,37 +18,40 @@
       <section class="section">
         <h2 class="section-title">Core Traits</h2>
         <div class="traits-grid">
-          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+          <div
+            class="trait-row"
+            v-for="trait in data.coreTraits"
+            :key="trait.label"
+          >
             <span class="trait-label">{{ trait.label }}</span>
             <span class="trait-value">{{ trait.value }}</span>
           </div>
         </div>
       </section>
 
-      <!-- Becoming a Fighter -->
+      <!-- Becoming -->
       <section class="section">
-        <h2 class="section-title">Becoming a Fighter</h2>
+        <h2 class="section-title">Becoming a {{ data.name }}</h2>
         <div class="becoming-grid">
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Level 1 Character</h3>
             <ul class="becoming-list">
-              <li>Gain all the traits in the Core Fighter Traits table.</li>
               <li>
-                Gain the Fighter's level 1 features listed in the Features
-                table.
+                Gain all the traits in the Core {{ data.name }} Traits table.
+              </li>
+              <li>
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Multiclass Character</h3>
             <ul class="becoming-list">
+              <li>{{ data.multiclassTraits }}</li>
               <li>
-                Gain the Hit Point Die, proficiency with Martial weapons, and
-                training with Light and Medium armor and Shields.
-              </li>
-              <li>
-                Gain the Fighter's level 1 features listed in the Features
-                table.
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
@@ -71,31 +68,32 @@
                 <th>Level</th>
                 <th>Prof. Bonus</th>
                 <th>Features Unlocked</th>
-                <th>Second Wind</th>
-                <th>Action Surge</th>
-                <th>Weapon Mastery</th>
+                <th v-for="col in data.tableColumns" :key="col.key">
+                  {{ col.label }}
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr
-                v-for="item in levels"
+                v-for="item in data.levels"
                 :key="item.level"
                 :class="{ 'row-highlight': item.feature.includes('Subclass') }"
               >
                 <td class="level-cell">{{ item.level }}</td>
                 <td class="text-center">{{ item.profBonus }}</td>
                 <td>{{ item.feature }}</td>
-                <td class="text-center">
-                  <span class="sw-badge">{{ item.secondWind }}</span>
-                </td>
-                <td class="text-center">
-                  <span v-if="item.actionSurge !== '—'" class="as-badge">{{
-                    item.actionSurge
-                  }}</span>
-                  <span v-else class="muted">—</span>
-                </td>
-                <td class="text-center">
-                  <span class="wm-badge">{{ item.weaponMastery }}</span>
+                <td
+                  v-for="col in data.tableColumns"
+                  :key="col.key"
+                  class="text-center"
+                >
+                  <span
+                    v-if="col.badge && item[col.key] !== '—'"
+                    :class="col.badgeClass"
+                    >{{ item[col.key] }}</span
+                  >
+                  <span v-else-if="item[col.key] === '—'" class="muted">—</span>
+                  <span v-else>{{ item[col.key] }}</span>
                 </td>
               </tr>
             </tbody>
@@ -108,7 +106,7 @@
         <h2 class="section-title">Level Breakdown</h2>
         <div class="panels">
           <div
-            v-for="(lvl, index) in levelPanels"
+            v-for="(lvl, index) in data.levelPanels"
             :key="lvl.level"
             class="panel"
           >
@@ -119,9 +117,9 @@
             >
               <div class="panel-header-left">
                 <span class="panel-level-badge">{{ lvl.level }}</span>
-                <span class="panel-features-preview">{{
-                  lvl.features.map((f) => f.title).join(" · ")
-                }}</span>
+                <span class="panel-features-preview">
+                  {{ lvl.features.map((f) => f.title).join(" · ") }}
+                </span>
               </div>
               <v-icon class="panel-chevron">
                 {{
@@ -136,12 +134,12 @@
               <!-- Subclass buttons for level 3 -->
               <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
                 <div
-                  v-for="(sub, si) in subclasses"
-                  :key="si"
+                  v-for="sub in data.subclasses"
+                  :key="sub.title"
                   class="subclass-btn"
                   @click="goTo(sub.title)"
                 >
-                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
+                  <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
                   <span>{{ sub.title }}</span>
                 </div>
               </div>
@@ -165,422 +163,13 @@
 
 <script>
 import router from "@/router";
+import data from "./fighter.json";
 
 export default {
   data() {
     return {
+      data,
       openPanels: [0],
-
-      subclasses: [
-        { title: "Battle Master" },
-        { title: "Champion" },
-        { title: "Eldritch Knight" },
-        { title: "Psi Warrior" },
-      ],
-      subclassIcons: [
-        "mdi-chess-knight",
-        "mdi-shield-half-full",
-        "mdi-hat-fedora",
-        "mdi-brain",
-      ],
-
-      coreTraits: [
-        { label: "Primary Ability", value: "Strength or Dexterity" },
-        { label: "Hit Point Die", value: "D10 per Fighter level" },
-        {
-          label: "Saving Throw Proficiencies",
-          value: "Strength and Constitution",
-        },
-        {
-          label: "Skill Proficiencies",
-          value:
-            "Choose 2: Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Persuasion, or Survival",
-        },
-        { label: "Weapon Proficiencies", value: "Simple and Martial weapons" },
-        {
-          label: "Armor Training",
-          value: "Light, Medium, and Heavy armor and Shields",
-        },
-        {
-          label: "Starting Equipment",
-          value:
-            "Choose A or B: (A) Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer's Pack, and 4 GP; or (B) 155 GP",
-        },
-      ],
-
-      levels: [
-        {
-          level: "1",
-          profBonus: "+2",
-          feature: "Fighting Style, Second Wind, Weapon Mastery",
-          secondWind: "2",
-          actionSurge: "—",
-          weaponMastery: "3",
-        },
-        {
-          level: "2",
-          profBonus: "+2",
-          feature: "Action Surge, Tactical Mind",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "3",
-        },
-        {
-          level: "3",
-          profBonus: "+2",
-          feature: "Fighter Subclass",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "3",
-        },
-        {
-          level: "4",
-          profBonus: "+2",
-          feature: "Ability Score Improvement",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "4",
-        },
-        {
-          level: "5",
-          profBonus: "+3",
-          feature: "Extra Attack, Tactical Shift",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "4",
-        },
-        {
-          level: "6",
-          profBonus: "+3",
-          feature: "Ability Score Improvement",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "4",
-        },
-        {
-          level: "7",
-          profBonus: "+3",
-          feature: "Subclass Feature",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "4",
-        },
-        {
-          level: "8",
-          profBonus: "+3",
-          feature: "Ability Score Improvement",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "4",
-        },
-        {
-          level: "9",
-          profBonus: "+4",
-          feature: "Indomitable, Tactical Master",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "4",
-        },
-        {
-          level: "10",
-          profBonus: "+4",
-          feature: "Subclass Feature",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "5",
-        },
-        {
-          level: "11",
-          profBonus: "+4",
-          feature: "Two Extra Attacks",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "5",
-        },
-        {
-          level: "12",
-          profBonus: "+4",
-          feature: "Ability Score Improvement",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "5",
-        },
-        {
-          level: "13",
-          profBonus: "+5",
-          feature: "Studied Attacks",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "5",
-        },
-        {
-          level: "14",
-          profBonus: "+5",
-          feature: "Ability Score Improvement",
-          secondWind: "2",
-          actionSurge: "1",
-          weaponMastery: "5",
-        },
-        {
-          level: "15",
-          profBonus: "+5",
-          feature: "Subclass Feature",
-          secondWind: "3",
-          actionSurge: "1",
-          weaponMastery: "5",
-        },
-        {
-          level: "16",
-          profBonus: "+5",
-          feature: "Ability Score Improvement",
-          secondWind: "3",
-          actionSurge: "1",
-          weaponMastery: "6",
-        },
-        {
-          level: "17",
-          profBonus: "+6",
-          feature: "Action Surge (2 uses)",
-          secondWind: "3",
-          actionSurge: "2",
-          weaponMastery: "6",
-        },
-        {
-          level: "18",
-          profBonus: "+6",
-          feature: "Subclass Feature",
-          secondWind: "3",
-          actionSurge: "2",
-          weaponMastery: "6",
-        },
-        {
-          level: "19",
-          profBonus: "+6",
-          feature: "Epic Boon",
-          secondWind: "3",
-          actionSurge: "2",
-          weaponMastery: "6",
-        },
-        {
-          level: "20",
-          profBonus: "+6",
-          feature: "Three Extra Attacks",
-          secondWind: "3",
-          actionSurge: "2",
-          weaponMastery: "6",
-        },
-      ],
-
-      levelPanels: [
-        {
-          level: "Level 1",
-          features: [
-            {
-              title: "Fighting Style",
-              body: `<p>You have honed your martial prowess and gain a Fighting Style feat of your choice. Defense is recommended. Whenever you gain a Fighter level, you can replace the feat you chose with a different Fighting Style feat.</p>`,
-            },
-            {
-              title: "Second Wind",
-              body: `<p>As a Bonus Action, you can regain Hit Points equal to 1d10 plus your Fighter level.</p>
-                     <br/>
-                     <p>You can use this feature twice, regaining one use on a Short Rest and all uses on a Long Rest. You gain additional uses at higher Fighter levels as shown in the Second Wind column.</p>`,
-            },
-            {
-              title: "Weapon Mastery",
-              body: `<p>Your training with weapons allows you to use the mastery properties of three kinds of Simple or Martial weapons of your choice. Whenever you finish a Long Rest, you can practice weapon drills and change one of those weapon choices.</p>
-                     <br/>
-                     <p>When you reach certain Fighter levels, you gain the ability to use the mastery properties of more kinds of weapons, as shown in the Weapon Mastery column.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 2",
-          features: [
-            {
-              title: "Action Surge",
-              body: `<p>On your turn, you can take one additional action, except the Magic action. Once you use this feature, you can't do so again until you finish a Short or Long Rest.</p>
-                     <br/>
-                     <p>Starting at level 17, you can use it twice before a rest, but only once on the same turn.</p>`,
-            },
-            {
-              title: "Tactical Mind",
-              body: `<p>When you fail an ability check, you can expend a use of your Second Wind to push yourself toward success. Rather than regaining Hit Points, you roll 1d10 and add the number rolled to the ability check, potentially turning it into a success. If the check still fails, this use of Second Wind isn't expended.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 3",
-          features: [
-            {
-              title: "Fighter Subclass",
-              body: `<p>You gain a Fighter subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Fighter level or lower. Choose your specialization below:</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 4",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Fighter levels 6, 8, 12, 14, and 16.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 5",
-          features: [
-            {
-              title: "Extra Attack",
-              body: `<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>`,
-            },
-            {
-              title: "Tactical Shift",
-              body: `<p>Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 6",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 7",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 8",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 9",
-          features: [
-            {
-              title: "Indomitable",
-              body: `<p>If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can't use this feature again until you finish a Long Rest.</p>
-                     <br/>
-                     <p>You can use this feature twice before a Long Rest starting at level 13, and three times before a Long Rest starting at level 17.</p>`,
-            },
-            {
-              title: "Tactical Master",
-              body: `<p>When you attack with a weapon whose mastery property you can use, you can replace that property with the Push, Sap, or Slow property for that attack.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 10",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 11",
-          features: [
-            {
-              title: "Two Extra Attacks",
-              body: `<p>You can attack three times instead of once whenever you take the Attack action on your turn.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 12",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 13",
-          features: [
-            {
-              title: "Studied Attacks",
-              body: `<p>You study your opponents and learn from each attack you make. If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 14",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 15",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 16",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 17",
-          features: [
-            {
-              title: "Action Surge (2 uses)",
-              body: `<p>You can now use Action Surge twice before a rest, though still only once on the same turn.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 18",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 19",
-          features: [
-            {
-              title: "Epic Boon",
-              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Combat Prowess is recommended.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 20",
-          features: [
-            {
-              title: "Three Extra Attacks",
-              body: `<p>You can attack four times instead of once whenever you take the Attack action on your turn.</p>`,
-            },
-          ],
-        },
-      ],
     };
   },
 
@@ -593,7 +182,7 @@ export default {
     goTo(label) {
       router
         .push(
-          "/wiki/classes/fighter/" + label.replace(/\s+/g, "_").toLowerCase(),
+          this.data.subclassRoute + label.replace(/\s+/g, "_").toLowerCase(),
         )
         .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     },
@@ -609,32 +198,16 @@ export default {
   color: var(--text-body);
 }
 
-/* ── Hero ───────────────────────────────────────── */
+/* ── Hero — no image ────────────────────────────── */
 .hero {
-  position: relative;
   width: 100%;
-  height: 420px;
-  overflow: hidden;
-}
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
+  padding: 3rem 2.5rem 2rem;
   background: linear-gradient(
     to bottom,
-    rgba(var(--bg-page-rgb), 0.2) 0%,
-    rgba(var(--bg-page-rgb), 0.7) 60%,
+    rgba(var(--bg-page-rgb), 0.95) 0%,
     var(--bg-page) 100%
   );
-  display: flex;
-  align-items: flex-end;
-  padding: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 .hero-content {
   max-width: 700px;
@@ -644,13 +217,15 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #b45309;
+  color: #6366f1;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin: 0.25rem 0 0.5rem;
+  margin: 0 0 0.5rem;
   line-height: 1;
 }
 .hero-subtitle {
@@ -672,9 +247,9 @@ export default {
   border-radius: 999px;
 }
 .badge-red {
-  background: rgba(248, 113, 113, 0.12);
-  color: #a3e635;
-  border: 1px solid #a3e635;
+  background: rgba(99, 102, 241, 0.12);
+  color: #6366f1;
+  border: 1px solid #6366f1;
 }
 .badge-orange {
   background: rgba(251, 146, 60, 0.12);
@@ -699,7 +274,7 @@ export default {
   color: var(--text-heading);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(248, 113, 113, 0.3);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 /* ── Core Traits ────────────────────────────────── */
@@ -725,7 +300,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #b45309;
+  color: #6366f1;
 }
 .trait-value {
   font-size: 0.9rem;
@@ -755,7 +330,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #b45309;
+  color: #6366f1;
   margin-bottom: 0.75rem;
 }
 .becoming-list {
@@ -782,7 +357,7 @@ export default {
   font-size: 0.82rem;
 }
 .features-table thead tr {
-  background: rgba(248, 113, 113, 0.08);
+  background: rgba(99, 102, 241, 0.08);
 }
 .features-table th {
   padding: 0.75rem 0.6rem;
@@ -791,7 +366,7 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #b45309;
+  color: #6366f1;
   white-space: nowrap;
 }
 .features-table th:nth-child(3) {
@@ -815,7 +390,7 @@ export default {
   border-bottom: none;
 }
 .row-highlight td {
-  color: #b45309;
+  color: #6366f1;
 }
 .level-cell {
   font-weight: 700;
@@ -823,10 +398,10 @@ export default {
   text-align: center;
 }
 .muted {
-  color: var(--text-faint);
+  color: var(--text-subtle);
 }
 
-/* Stat badges */
+/* ── Stat badges ────────────────────────────────── */
 .sw-badge {
   font-size: 0.68rem;
   font-weight: 700;
@@ -850,9 +425,9 @@ export default {
   font-weight: 700;
   padding: 2px 8px;
   border-radius: 999px;
-  background: rgba(248, 113, 113, 0.1);
-  color: #b45309;
-  border: 1px solid rgba(248, 113, 113, 0.3);
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 /* ── Panels ─────────────────────────────────────── */
@@ -893,9 +468,9 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #b45309;
-  background: rgba(248, 113, 113, 0.1);
-  border: 1px solid rgba(248, 113, 113, 0.3);
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
   padding: 3px 10px;
   border-radius: 999px;
   white-space: nowrap;
@@ -930,7 +505,7 @@ export default {
   color: var(--text-heading);
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(248, 113, 113, 0.2);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
 }
 .feature-body {
   font-size: 0.85rem;
@@ -955,7 +530,7 @@ export default {
   gap: 0.5rem;
   padding: 1rem;
   background: var(--bg-page);
-  border: 1px solid rgba(248, 113, 113, 0.25);
+  border: 1px solid rgba(99, 102, 241, 0.25);
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease;
@@ -964,25 +539,22 @@ export default {
   color: var(--text-muted);
 }
 .subclass-btn:hover {
-  background: rgba(248, 113, 113, 0.06);
-  border-color: #b45309;
+  background: rgba(99, 102, 241, 0.06);
+  border-color: #6366f1;
   color: var(--text-heading);
 }
 .subclass-icon {
   font-size: 1.5rem !important;
-  color: #b45309;
+  color: #6366f1;
 }
 
 /* ── Mobile ─────────────────────────────────────── */
 @media (max-width: 640px) {
   .hero {
-    height: 300px;
+    padding: 2rem 1.5rem 1.5rem;
   }
   .hero-title {
     font-size: 2rem;
-  }
-  .hero-overlay {
-    padding: 1.5rem;
   }
   .trait-row {
     grid-template-columns: 1fr;
@@ -993,4 +565,3 @@ export default {
   }
 }
 </style>
-

@@ -1,20 +1,14 @@
 ﻿<template>
   <div class="monk-page">
-    <!-- Hero Banner -->
+    <!-- Hero Banner — no image -->
     <div class="hero">
-      <img src="../assets/classes/monk.png" alt="Monk" class="hero-img" />
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <span class="hero-eyebrow">Class</span>
-          <h1 class="hero-title">Monk</h1>
-          <p class="hero-subtitle">
-            A master of martial arts, harnessing the power of the body in
-            pursuit of physical and spiritual perfection
-          </p>
-          <div class="hero-badges">
-            <span class="badge badge-blue">Medium Complexity</span>
-            <span class="badge badge-teal">Dexterity & Wisdom</span>
-          </div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Class</span>
+        <h1 class="hero-title">{{ data.name }}</h1>
+        <p class="hero-subtitle">{{ data.subtitle }}</p>
+        <div class="hero-badges">
+          <span class="badge badge-blue">{{ data.complexity }}</span>
+          <span class="badge badge-teal">{{ data.primaryStat }}</span>
         </div>
       </div>
     </div>
@@ -24,32 +18,40 @@
       <section class="section">
         <h2 class="section-title">Core Traits</h2>
         <div class="traits-grid">
-          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+          <div
+            class="trait-row"
+            v-for="trait in data.coreTraits"
+            :key="trait.label"
+          >
             <span class="trait-label">{{ trait.label }}</span>
             <span class="trait-value">{{ trait.value }}</span>
           </div>
         </div>
       </section>
 
-      <!-- Becoming a Monk -->
+      <!-- Becoming -->
       <section class="section">
-        <h2 class="section-title">Becoming a Monk</h2>
+        <h2 class="section-title">Becoming a {{ data.name }}</h2>
         <div class="becoming-grid">
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Level 1 Character</h3>
             <ul class="becoming-list">
-              <li>Gain all the traits in the Core Monk Traits table.</li>
               <li>
-                Gain the Monk's level 1 features listed in the Features table.
+                Gain all the traits in the Core {{ data.name }} Traits table.
+              </li>
+              <li>
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Multiclass Character</h3>
             <ul class="becoming-list">
-              <li>Gain the Hit Point Die.</li>
+              <li>{{ data.multiclassTraits }}</li>
               <li>
-                Gain the Monk's level 1 features listed in the Features table.
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
@@ -66,31 +68,36 @@
                 <th>Level</th>
                 <th>Prof. Bonus</th>
                 <th>Features Unlocked</th>
-                <th>Focus Points</th>
-                <th>Martial Arts Die</th>
-                <th>Unarmored Movement</th>
+                <th v-for="col in data.tableColumns" :key="col.key">
+                  {{ col.label }}
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr
-                v-for="item in levels"
+                v-for="item in data.levels"
                 :key="item.level"
                 :class="{ 'row-highlight': item.feature.includes('Subclass') }"
               >
                 <td class="level-cell">{{ item.level }}</td>
                 <td class="text-center">{{ item.profBonus }}</td>
                 <td>{{ item.feature }}</td>
-                <td class="text-center">
-                  <span v-if="item.focusPoints !== '—'" class="fp-badge">{{
-                    item.focusPoints
-                  }}</span>
-                  <span v-else class="muted">—</span>
-                </td>
-                <td class="text-center">
-                  <span class="ma-badge">{{ item.martialArtsDie }}</span>
-                </td>
-                <td class="text-center">
-                  <span class="mv-badge">{{ item.unarmoredMovement }}</span>
+                <td
+                  v-for="col in data.tableColumns"
+                  :key="col.key"
+                  class="text-center"
+                >
+                  <span
+                    v-if="col.badge && item[col.key] !== '—'"
+                    :class="col.badgeClass"
+                    >{{ item[col.key] }}</span
+                  >
+                  <span
+                    v-else-if="col.badge && item[col.key] === '—'"
+                    class="muted"
+                    >—</span
+                  >
+                  <span v-else>{{ item[col.key] }}</span>
                 </td>
               </tr>
             </tbody>
@@ -103,7 +110,7 @@
         <h2 class="section-title">Level Breakdown</h2>
         <div class="panels">
           <div
-            v-for="(lvl, index) in levelPanels"
+            v-for="(lvl, index) in data.levelPanels"
             :key="lvl.level"
             class="panel"
           >
@@ -114,9 +121,9 @@
             >
               <div class="panel-header-left">
                 <span class="panel-level-badge">{{ lvl.level }}</span>
-                <span class="panel-features-preview">{{
-                  lvl.features.map((f) => f.title).join(" · ")
-                }}</span>
+                <span class="panel-features-preview">
+                  {{ lvl.features.map((f) => f.title).join(" · ") }}
+                </span>
               </div>
               <v-icon class="panel-chevron">
                 {{
@@ -131,13 +138,13 @@
               <!-- Subclass buttons for level 3 -->
               <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
                 <div
-                  v-for="(sub, si) in subclasses"
-                  :key="si"
+                  v-for="sub in data.subclasses"
+                  :key="sub.title"
                   class="subclass-btn"
                   @click="goTo(sub.title)"
                 >
-                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
-                  <span>Warrior of {{ sub.title }}</span>
+                  <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
+                  <span>{{ data.subclassPrefix }} {{ sub.title }}</span>
                 </div>
               </div>
               <div class="feature-cards">
@@ -160,460 +167,13 @@
 
 <script>
 import router from "@/router";
+import data from "./monk.json";
 
 export default {
   data() {
     return {
+      data,
       openPanels: [0],
-
-      subclasses: [
-        { title: "Mercy" },
-        { title: "Shadow" },
-        { title: "the Elements" },
-        { title: "the Open Hand" },
-      ],
-      subclassIcons: [
-        "mdi-hand-heart",
-        "mdi-weather-night",
-        "mdi-weather-tornado",
-        "mdi-hand-back-right",
-      ],
-
-      coreTraits: [
-        { label: "Primary Ability", value: "Dexterity and Wisdom" },
-        { label: "Hit Point Die", value: "D8 per Monk level" },
-        {
-          label: "Saving Throw Proficiencies",
-          value: "Strength and Dexterity",
-        },
-        {
-          label: "Skill Proficiencies",
-          value:
-            "Choose 2: Acrobatics, Athletics, History, Insight, Religion, or Stealth",
-        },
-        {
-          label: "Weapon Proficiencies",
-          value: "Simple weapons and Martial weapons with the Light property",
-        },
-        {
-          label: "Tool Proficiencies",
-          value: "Choose one type of Artisan's Tools or Musical Instrument",
-        },
-        { label: "Armor Training", value: "None" },
-        {
-          label: "Starting Equipment",
-          value:
-            "Choose A or B: (A) Spear, 5 Daggers, Artisan's Tools or Musical Instrument, Explorer's Pack, and 11 GP; or (B) 50 GP",
-        },
-      ],
-
-      levels: [
-        {
-          level: "1",
-          profBonus: "+2",
-          feature: "Martial Arts, Unarmored Defense",
-          focusPoints: "—",
-          martialArtsDie: "1d6",
-          unarmoredMovement: "+0 ft.",
-        },
-        {
-          level: "2",
-          profBonus: "+2",
-          feature: "Monk's Focus, Unarmored Movement, Uncanny Metabolism",
-          focusPoints: "2",
-          martialArtsDie: "1d6",
-          unarmoredMovement: "+10 ft.",
-        },
-        {
-          level: "3",
-          profBonus: "+2",
-          feature: "Deflect Attacks, Monk Subclass",
-          focusPoints: "3",
-          martialArtsDie: "1d6",
-          unarmoredMovement: "+10 ft.",
-        },
-        {
-          level: "4",
-          profBonus: "+2",
-          feature: "Ability Score Improvement, Slow Fall",
-          focusPoints: "4",
-          martialArtsDie: "1d6",
-          unarmoredMovement: "+10 ft.",
-        },
-        {
-          level: "5",
-          profBonus: "+3",
-          feature: "Extra Attack, Stunning Strike",
-          focusPoints: "5",
-          martialArtsDie: "1d8",
-          unarmoredMovement: "+10 ft.",
-        },
-        {
-          level: "6",
-          profBonus: "+3",
-          feature: "Empowered Strikes, Subclass Feature",
-          focusPoints: "6",
-          martialArtsDie: "1d8",
-          unarmoredMovement: "+15 ft.",
-        },
-        {
-          level: "7",
-          profBonus: "+3",
-          feature: "Evasion",
-          focusPoints: "7",
-          martialArtsDie: "1d8",
-          unarmoredMovement: "+15 ft.",
-        },
-        {
-          level: "8",
-          profBonus: "+3",
-          feature: "Ability Score Improvement",
-          focusPoints: "8",
-          martialArtsDie: "1d8",
-          unarmoredMovement: "+15 ft.",
-        },
-        {
-          level: "9",
-          profBonus: "+4",
-          feature: "Acrobatic Movement",
-          focusPoints: "9",
-          martialArtsDie: "1d8",
-          unarmoredMovement: "+15 ft.",
-        },
-        {
-          level: "10",
-          profBonus: "+4",
-          feature: "Heightened Focus, Self-Restoration, Subclass Feature",
-          focusPoints: "10",
-          martialArtsDie: "1d8",
-          unarmoredMovement: "+20 ft.",
-        },
-        {
-          level: "11",
-          profBonus: "+4",
-          feature: "Subclass Feature",
-          focusPoints: "11",
-          martialArtsDie: "1d10",
-          unarmoredMovement: "+20 ft.",
-        },
-        {
-          level: "12",
-          profBonus: "+4",
-          feature: "Ability Score Improvement",
-          focusPoints: "12",
-          martialArtsDie: "1d10",
-          unarmoredMovement: "+20 ft.",
-        },
-        {
-          level: "13",
-          profBonus: "+5",
-          feature: "Deflect Energy",
-          focusPoints: "13",
-          martialArtsDie: "1d10",
-          unarmoredMovement: "+20 ft.",
-        },
-        {
-          level: "14",
-          profBonus: "+5",
-          feature: "Ability Score Improvement",
-          focusPoints: "14",
-          martialArtsDie: "1d10",
-          unarmoredMovement: "+25 ft.",
-        },
-        {
-          level: "15",
-          profBonus: "+5",
-          feature: "Perfect Focus",
-          focusPoints: "15",
-          martialArtsDie: "1d10",
-          unarmoredMovement: "+25 ft.",
-        },
-        {
-          level: "16",
-          profBonus: "+5",
-          feature: "Ability Score Improvement",
-          focusPoints: "16",
-          martialArtsDie: "1d10",
-          unarmoredMovement: "+25 ft.",
-        },
-        {
-          level: "17",
-          profBonus: "+6",
-          feature: "Subclass Feature",
-          focusPoints: "17",
-          martialArtsDie: "1d12",
-          unarmoredMovement: "+25 ft.",
-        },
-        {
-          level: "18",
-          profBonus: "+6",
-          feature: "Superior Defense",
-          focusPoints: "18",
-          martialArtsDie: "1d12",
-          unarmoredMovement: "+30 ft.",
-        },
-        {
-          level: "19",
-          profBonus: "+6",
-          feature: "Epic Boon",
-          focusPoints: "19",
-          martialArtsDie: "1d12",
-          unarmoredMovement: "+30 ft.",
-        },
-        {
-          level: "20",
-          profBonus: "+6",
-          feature: "Body and Mind",
-          focusPoints: "20",
-          martialArtsDie: "1d12",
-          unarmoredMovement: "+30 ft.",
-        },
-      ],
-
-      levelPanels: [
-        {
-          level: "Level 1",
-          features: [
-            {
-              title: "Martial Arts",
-              body: `<p>Your practice of martial arts gives you mastery of combat styles using Unarmed Strikes and Monk Weapons (Simple Melee weapons and Martial Melee weapons with the Light property). You gain the following benefits while unarmed or wielding only Monk Weapons and not wearing armor or a Shield.</p>
-                     <br/>
-                     <p><b>Bonus Unarmed Strike.</b> You can make one Unarmed Strike as a Bonus Action.</p>
-                     <br/>
-                     <p><b>Dexterous Attacks.</b> You can use your Dexterity modifier instead of Strength for the attack and damage rolls of your Unarmed Strikes and Monk Weapons. You can also use Dexterity for Grapple or Shove save DCs.</p>
-                     <br/>
-                     <p><b>Martial Arts Die.</b> You can roll 1d6 in place of the normal damage of your Unarmed Strike or Monk Weapons. This die improves as you gain Monk levels, shown in the Martial Arts Die column.</p>`,
-            },
-            {
-              title: "Unarmored Defense",
-              body: `<p>While you aren't wearing armor or wielding a Shield, your base Armor Class equals 10 plus your Dexterity and Wisdom modifiers.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 2",
-          features: [
-            {
-              title: "Monk's Focus",
-              body: `<p>You harness a well of extraordinary energy represented by Focus Points. Your Monk level determines how many you have, as shown in the Focus Points column.</p>
-                     <br/>
-                     <p><b>Flurry of Blows.</b> Expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.</p>
-                     <br/>
-                     <p><b>Patient Defense.</b> Take the Disengage action as a Bonus Action. Or expend 1 Focus Point to take both Disengage and Dodge as a Bonus Action.</p>
-                     <br/>
-                     <p><b>Step of the Wind.</b> Take the Dash action as a Bonus Action. Or expend 1 Focus Point to take both Disengage and Dash as a Bonus Action, with doubled jump distance for the turn.</p>`,
-            },
-            {
-              title: "Unarmored Movement",
-              body: `<p>Your speed increases by 10 feet while you aren't wearing armor or wielding a Shield. This bonus increases at higher Monk levels as shown in the Unarmored Movement column.</p>`,
-            },
-            {
-              title: "Uncanny Metabolism",
-              body: `<p>When you roll Initiative, you can regain all expended Focus Points. When you do so, roll your Martial Arts die and regain Hit Points equal to your Monk level plus the number rolled.</p>
-                     <br/>
-                     <p>Once you use this feature, you can't use it again until you finish a Long Rest.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 3",
-          features: [
-            {
-              title: "Deflect Attacks",
-              body: `<p>You can use your Reaction to deflect a melee or ranged attack that deals Bludgeoning, Piercing, or Slashing damage. The total damage you take is reduced by 1d10 + your Dexterity modifier + your Monk level.</p>
-                     <br/>
-                     <p>If you reduce the damage to 0, you can expend 1 Focus Point to redirect it. A creature within 5 feet (melee) or 60 feet (ranged) must succeed on a Dexterity saving throw or take damage equal to two rolls of your Martial Arts die + your Dexterity modifier.</p>`,
-            },
-            {
-              title: "Monk Subclass",
-              body: `<p>You gain a Monk subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Monk level or lower. Choose your warrior tradition below:</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 4",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Monk levels 8, 12, and 16.</p>`,
-            },
-            {
-              title: "Slow Fall",
-              body: `<p>You can use your Reaction when you fall to reduce any damage you take from the fall by an amount equal to five times your Monk level.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 5",
-          features: [
-            {
-              title: "Extra Attack",
-              body: `<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>`,
-            },
-            {
-              title: "Stunning Strike",
-              body: `<p>Once per turn when you hit a creature with a Monk Weapon or Unarmed Strike, you can expend 1 Focus Point to attempt a stunning strike. The target must make a Constitution saving throw. On a failed save, the target has the Stunned condition until the start of your next turn. On a successful save, it takes Force damage equal to a roll of your Martial Arts die + your Wisdom modifier.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 6",
-          features: [
-            {
-              title: "Empowered Strikes",
-              body: `<p>Whenever you deal damage with your Unarmed Strike, it can deal your choice of Force damage or its normal damage type.</p>`,
-            },
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen warrior tradition.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 7",
-          features: [
-            {
-              title: "Evasion",
-              body: `<p>When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage on a success and only half damage on a failure.</p>
-                     <br/>
-                     <p>You don't benefit from this feature if you have the Incapacitated condition.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 8",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 9",
-          features: [
-            {
-              title: "Acrobatic Movement",
-              body: `<p>While you aren't wearing armor or wielding a Shield, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 10",
-          features: [
-            {
-              title: "Heightened Focus",
-              body: `<p>Your core Focus abilities improve:</p>
-                     <br/>
-                     <p><b>Flurry of Blows.</b> You can expend 1 Focus Point to make three Unarmed Strikes instead of two.</p>
-                     <br/>
-                     <p><b>Patient Defense.</b> When you expend a Focus Point for Patient Defense, you gain Temporary Hit Points equal to two rolls of your Martial Arts die.</p>
-                     <br/>
-                     <p><b>Step of the Wind.</b> When you expend a Focus Point for Step of the Wind, you can bring a willing Large-or-smaller creature within 5 feet with you until the end of your turn without provoking Opportunity Attacks.</p>`,
-            },
-            {
-              title: "Self-Restoration",
-              body: `<p>Through sheer force of will, you can remove one of the following conditions from yourself at the end of each of your turns: Charmed, Frightened, or Poisoned.</p>
-                     <br/>
-                     <p>In addition, forgoing food and drink doesn't give you levels of Exhaustion.</p>`,
-            },
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen warrior tradition.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 11",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen warrior tradition.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 12",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 13",
-          features: [
-            {
-              title: "Deflect Energy",
-              body: `<p>You can now use your Deflect Attacks feature against attacks that deal any damage type, not just Bludgeoning, Piercing, or Slashing.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 14",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 15",
-          features: [
-            {
-              title: "Perfect Focus",
-              body: `<p>When you roll Initiative and have fewer than 4 Focus Points, you regain Focus Points equal to 4 minus the number you have.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 16",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 17",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen warrior tradition.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 18",
-          features: [
-            {
-              title: "Superior Defense",
-              body: `<p>At the start of your turn, you can expend 3 Focus Points to bolster yourself against harm for 1 minute or until you have the Incapacitated condition. During that time, you have Resistance to all damage except Force damage.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 19",
-          features: [
-            {
-              title: "Epic Boon",
-              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Irresistible Offense is recommended.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 20",
-          features: [
-            {
-              title: "Body and Mind",
-              body: `<p>You have honed your body and mind to new heights. Your Dexterity and Wisdom scores each increase by 4, to a maximum of 25.</p>`,
-            },
-          ],
-        },
-      ],
     };
   },
 
@@ -625,7 +185,9 @@ export default {
     },
     goTo(label) {
       router
-        .push("/wiki/classes/monk/" + label.replace(/\s+/g, "_").toLowerCase())
+        .push(
+          this.data.subclassRoute + label.replace(/\s+/g, "_").toLowerCase(),
+        )
         .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     },
   },
@@ -640,32 +202,16 @@ export default {
   color: var(--text-body);
 }
 
-/* ── Hero ───────────────────────────────────────── */
+/* ── Hero — no image ────────────────────────────── */
 .hero {
-  position: relative;
   width: 100%;
-  height: 420px;
-  overflow: hidden;
-}
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
+  padding: 3rem 2.5rem 2rem;
   background: linear-gradient(
     to bottom,
-    rgba(var(--bg-page-rgb), 0.2) 0%,
-    rgba(var(--bg-page-rgb), 0.7) 60%,
+    rgba(var(--bg-page-rgb), 0.95) 0%,
     var(--bg-page) 100%
   );
-  display: flex;
-  align-items: flex-end;
-  padding: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 .hero-content {
   max-width: 700px;
@@ -676,12 +222,14 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #60a5fa;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin: 0.25rem 0 0.5rem;
+  margin: 0 0 0.5rem;
   line-height: 1;
 }
 .hero-subtitle {
@@ -854,10 +402,10 @@ export default {
   text-align: center;
 }
 .muted {
-  color: var(--text-faint);
+  color: var(--text-subtle);
 }
 
-/* Stat badges */
+/* ── Stat badges ────────────────────────────────── */
 .fp-badge {
   font-size: 0.68rem;
   font-weight: 700;
@@ -1007,13 +555,10 @@ export default {
 /* ── Mobile ─────────────────────────────────────── */
 @media (max-width: 640px) {
   .hero {
-    height: 300px;
+    padding: 2rem 1.5rem 1.5rem;
   }
   .hero-title {
     font-size: 2rem;
-  }
-  .hero-overlay {
-    padding: 1.5rem;
   }
   .trait-row {
     grid-template-columns: 1fr;
@@ -1024,4 +569,3 @@ export default {
   }
 }
 </style>
-

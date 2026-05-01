@@ -1,0 +1,504 @@
+{
+  "name": "Paladin",
+  "subtitle": "A holy warrior bound to a sacred oath, wielding divine magic and martial might",
+  "complexity": "Low Complexity",
+  "primaryStat": "Strength & Charisma",
+  "accentColor": "#fbbf24",
+  "accentRgb": "251, 191, 36",
+  "subclassPrefix": "Oath of",
+  "subclassRoute": "/wiki/classes/paladin/",
+  "multiclassTraits": "Gain the Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.",
+
+  "subclasses": [
+    { "title": "Devotion", "icon": "mdi-star-four-points" },
+    { "title": "Glory", "icon": "mdi-trophy" },
+    { "title": "the Ancients", "icon": "mdi-leaf" },
+    { "title": "Vengeance", "icon": "mdi-sword" }
+  ],
+
+  "coreTraits": [
+    { "label": "Primary Ability", "value": "Strength and Charisma" },
+    { "label": "Hit Point Die", "value": "D10 per Paladin level" },
+    { "label": "Saving Throw Proficiencies", "value": "Wisdom and Charisma" },
+    {
+      "label": "Skill Proficiencies",
+      "value": "Choose 2: Athletics, Insight, Intimidation, Medicine, Persuasion, or Religion"
+    },
+    { "label": "Weapon Proficiencies", "value": "Simple and Martial weapons" },
+    {
+      "label": "Armor Training",
+      "value": "Light, Medium, and Heavy armor and Shields"
+    },
+    {
+      "label": "Starting Equipment",
+      "value": "Choose A or B: (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest's Pack, and 9 GP; or (B) 150 GP"
+    }
+  ],
+
+  "tableColumns": [
+    {
+      "key": "channelDivinity",
+      "label": "Channel Divinity",
+      "badge": true,
+      "badgeClass": "cd-badge",
+      "dashable": true
+    },
+    {
+      "key": "preparedSpells",
+      "label": "Prepared Spells",
+      "badge": true,
+      "badgeClass": "ps-badge"
+    },
+    { "key": "slot1", "label": "1st", "badge": false },
+    { "key": "slot2", "label": "2nd", "badge": false },
+    { "key": "slot3", "label": "3rd", "badge": false },
+    { "key": "slot4", "label": "4th", "badge": false },
+    { "key": "slot5", "label": "5th", "badge": false }
+  ],
+
+  "levels": [
+    {
+      "level": "1",
+      "profBonus": "+2",
+      "feature": "Lay on Hands, Spellcasting, Weapon Mastery",
+      "channelDivinity": "—",
+      "preparedSpells": "2",
+      "slot1": "2",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "2",
+      "profBonus": "+2",
+      "feature": "Fighting Style, Paladin's Smite",
+      "channelDivinity": "—",
+      "preparedSpells": "3",
+      "slot1": "2",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "3",
+      "profBonus": "+2",
+      "feature": "Channel Divinity, Paladin Subclass",
+      "channelDivinity": "2",
+      "preparedSpells": "4",
+      "slot1": "3",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "4",
+      "profBonus": "+2",
+      "feature": "Ability Score Improvement",
+      "channelDivinity": "2",
+      "preparedSpells": "5",
+      "slot1": "3",
+      "slot2": "—",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "5",
+      "profBonus": "+3",
+      "feature": "Extra Attack, Faithful Steed",
+      "channelDivinity": "2",
+      "preparedSpells": "6",
+      "slot1": "4",
+      "slot2": "2",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "6",
+      "profBonus": "+3",
+      "feature": "Aura of Protection",
+      "channelDivinity": "2",
+      "preparedSpells": "6",
+      "slot1": "4",
+      "slot2": "2",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "7",
+      "profBonus": "+3",
+      "feature": "Subclass Feature",
+      "channelDivinity": "2",
+      "preparedSpells": "7",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "8",
+      "profBonus": "+3",
+      "feature": "Ability Score Improvement",
+      "channelDivinity": "2",
+      "preparedSpells": "7",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "—",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "9",
+      "profBonus": "+4",
+      "feature": "Abjure Foes",
+      "channelDivinity": "2",
+      "preparedSpells": "8",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "2",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "10",
+      "profBonus": "+4",
+      "feature": "Aura of Courage",
+      "channelDivinity": "2",
+      "preparedSpells": "8",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "2",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "11",
+      "profBonus": "+4",
+      "feature": "Radiant Strikes",
+      "channelDivinity": "3",
+      "preparedSpells": "10",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "12",
+      "profBonus": "+4",
+      "feature": "Ability Score Improvement",
+      "channelDivinity": "3",
+      "preparedSpells": "10",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "—",
+      "slot5": "—"
+    },
+    {
+      "level": "13",
+      "profBonus": "+5",
+      "feature": "Spell Slot Increase",
+      "channelDivinity": "3",
+      "preparedSpells": "11",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "1",
+      "slot5": "—"
+    },
+    {
+      "level": "14",
+      "profBonus": "+5",
+      "feature": "Restoring Touch",
+      "channelDivinity": "3",
+      "preparedSpells": "11",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "1",
+      "slot5": "—"
+    },
+    {
+      "level": "15",
+      "profBonus": "+5",
+      "feature": "Subclass Feature",
+      "channelDivinity": "3",
+      "preparedSpells": "12",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "2",
+      "slot5": "—"
+    },
+    {
+      "level": "16",
+      "profBonus": "+5",
+      "feature": "Ability Score Improvement",
+      "channelDivinity": "3",
+      "preparedSpells": "12",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "2",
+      "slot5": "—"
+    },
+    {
+      "level": "17",
+      "profBonus": "+6",
+      "feature": "Spell Slot Increase",
+      "channelDivinity": "3",
+      "preparedSpells": "14",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "1"
+    },
+    {
+      "level": "18",
+      "profBonus": "+6",
+      "feature": "Aura Expansion",
+      "channelDivinity": "3",
+      "preparedSpells": "14",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "1"
+    },
+    {
+      "level": "19",
+      "profBonus": "+6",
+      "feature": "Epic Boon",
+      "channelDivinity": "3",
+      "preparedSpells": "15",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2"
+    },
+    {
+      "level": "20",
+      "profBonus": "+6",
+      "feature": "Subclass Feature",
+      "channelDivinity": "3",
+      "preparedSpells": "15",
+      "slot1": "4",
+      "slot2": "3",
+      "slot3": "3",
+      "slot4": "3",
+      "slot5": "2"
+    }
+  ],
+
+  "levelPanels": [
+    {
+      "level": "Level 1",
+      "features": [
+        {
+          "title": "Lay on Hands",
+          "body": "<p>Your blessed touch can heal wounds. You have a healing pool equal to five times your Paladin level, replenished on a Long Rest.</p><br/><p>As a Bonus Action, touch a creature and restore Hit Points up to the remaining pool amount. You can also expend 5 Hit Points from the pool to remove the Poisoned condition (those points don't also restore Hit Points).</p>"
+        },
+        {
+          "title": "Spellcasting",
+          "body": "<p>Charisma is your spellcasting ability for Paladin spells, and you can use a Holy Symbol as a Spellcasting Focus.</p><br/><p>To start, choose two level 1 Paladin spells. Heroism and Searing Smite are recommended. Whenever you finish a Long Rest, you can replace one spell on your list with another Paladin spell for which you have spell slots.</p>"
+        },
+        {
+          "title": "Weapon Mastery",
+          "body": "<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longswords and Javelins. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 2",
+      "features": [
+        {
+          "title": "Fighting Style",
+          "body": "<p>You gain a Fighting Style feat of your choice. Alternatively, you can choose the Blessed Warrior option below.</p><br/><p><b>Blessed Warrior.</b> You learn two Cleric cantrips of your choice (Guidance and Sacred Flame are recommended). They count as Paladin spells, using Charisma as your spellcasting ability. You can replace one cantrip per Paladin level gained.</p>"
+        },
+        {
+          "title": "Paladin's Smite",
+          "body": "<p>You always have the Divine Smite spell prepared. In addition, you can cast it once without expending a spell slot, regaining this ability when you finish a Long Rest.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 3",
+      "features": [
+        {
+          "title": "Channel Divinity",
+          "body": "<p>You can channel divine energy from the Outer Planes. You start with Divine Sense. Additional Channel Divinity options come from your subclass.</p><br/><p>You can use Channel Divinity twice, regaining one use on a Short Rest and all uses on a Long Rest. You gain an additional use at level 11.</p><br/><p><b>Divine Sense.</b> As a Bonus Action, open your awareness for 10 minutes. You know the location of any Celestial, Fiend, or Undead within 60 feet, and detect consecrated or desecrated places or objects in the same radius.</p>"
+        },
+        {
+          "title": "Paladin Subclass",
+          "body": "<p>You gain a Paladin subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Paladin level or lower. Choose your sacred oath below:</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 4",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Paladin levels 8, 12, and 16.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 5",
+      "features": [
+        {
+          "title": "Extra Attack",
+          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>"
+        },
+        {
+          "title": "Faithful Steed",
+          "body": "<p>You always have the Find Steed spell prepared. You can also cast it once without expending a spell slot, regaining this ability when you finish a Long Rest.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 6",
+      "features": [
+        {
+          "title": "Aura of Protection",
+          "body": "<p>You radiate a protective aura in a 10-foot Emanation (inactive while Incapacitated). You and allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum +1).</p><br/><p>If multiple Paladins are present, a creature benefits from only one Aura of Protection at a time.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 7",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen oath.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 8",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 9",
+      "features": [
+        {
+          "title": "Abjure Foes",
+          "body": "<p>As a Magic action, expend one use of Channel Divinity to overwhelm foes with awe. Target a number of creatures equal to your Charisma modifier (minimum one) within 60 feet.</p><br/><p>Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute or until it takes damage. While Frightened this way, a target can do only one of the following on its turn: move, take an action, or take a Bonus Action.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 10",
+      "features": [
+        {
+          "title": "Aura of Courage",
+          "body": "<p>You and your allies have Immunity to the Frightened condition while in your Aura of Protection. If a Frightened ally enters the aura, that condition has no effect while there.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 11",
+      "features": [
+        {
+          "title": "Radiant Strikes",
+          "body": "<p>Your strikes carry supernatural power. When you hit a target with a Melee weapon or Unarmed Strike, the target takes an extra 1d8 Radiant damage.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 12",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 13",
+      "features": [
+        {
+          "title": "Spell Slot Increase",
+          "body": "<p>You gain access to 4th-level spell slots, increasing your magical power and the number of spells you can prepare.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 14",
+      "features": [
+        {
+          "title": "Restoring Touch",
+          "body": "<p>When you use Lay On Hands on a creature, you can also remove one or more of the following conditions: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. You must expend 5 Hit Points from the healing pool per condition removed (those points don't also restore Hit Points).</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 15",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen oath.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 16",
+      "features": [
+        {
+          "title": "Ability Score Improvement",
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 17",
+      "features": [
+        {
+          "title": "Spell Slot Increase",
+          "body": "<p>You gain access to 5th-level spell slots, unlocking the most powerful Paladin spells.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 18",
+      "features": [
+        {
+          "title": "Aura Expansion",
+          "body": "<p>Your Aura of Protection is now a 30-foot Emanation.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 19",
+      "features": [
+        {
+          "title": "Epic Boon",
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Truesight is recommended.</p>"
+        }
+      ]
+    },
+    {
+      "level": "Level 20",
+      "features": [
+        {
+          "title": "Subclass Feature",
+          "body": "<p>You gain a new feature from your chosen oath.</p>"
+        }
+      ]
+    }
+  ]
+}

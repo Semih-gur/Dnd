@@ -1,20 +1,14 @@
 ﻿<template>
   <div class="rogue-page">
-    <!-- Hero Banner -->
+    <!-- Hero Banner — no image -->
     <div class="hero">
-      <img src="../assets/classes/rogue.png" alt="Rogue" class="hero-img" />
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <span class="hero-eyebrow">Class</span>
-          <h1 class="hero-title">Rogue</h1>
-          <p class="hero-subtitle">
-            A scoundrel who uses stealth and trickery to overcome obstacles and
-            enemies
-          </p>
-          <div class="hero-badges">
-            <span class="badge badge-slate">Low Complexity</span>
-            <span class="badge badge-yellow">Dexterity</span>
-          </div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Class</span>
+        <h1 class="hero-title">{{ data.name }}</h1>
+        <p class="hero-subtitle">{{ data.subtitle }}</p>
+        <div class="hero-badges">
+          <span class="badge badge-slate">{{ data.complexity }}</span>
+          <span class="badge badge-yellow">{{ data.primaryStat }}</span>
         </div>
       </div>
     </div>
@@ -24,36 +18,40 @@
       <section class="section">
         <h2 class="section-title">Core Traits</h2>
         <div class="traits-grid">
-          <div class="trait-row" v-for="trait in coreTraits" :key="trait.label">
+          <div
+            class="trait-row"
+            v-for="trait in data.coreTraits"
+            :key="trait.label"
+          >
             <span class="trait-label">{{ trait.label }}</span>
             <span class="trait-value">{{ trait.value }}</span>
           </div>
         </div>
       </section>
 
-      <!-- Becoming a Rogue -->
+      <!-- Becoming -->
       <section class="section">
-        <h2 class="section-title">Becoming a Rogue</h2>
+        <h2 class="section-title">Becoming a {{ data.name }}</h2>
         <div class="becoming-grid">
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Level 1 Character</h3>
             <ul class="becoming-list">
-              <li>Gain all the traits in the Core Rogue Traits table.</li>
               <li>
-                Gain the Rogue's level 1 features listed in the Features table.
+                Gain all the traits in the Core {{ data.name }} Traits table.
+              </li>
+              <li>
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
           <div class="becoming-card">
             <h3 class="becoming-heading">As a Multiclass Character</h3>
             <ul class="becoming-list">
+              <li>{{ data.multiclassTraits }}</li>
               <li>
-                Gain the Hit Point Die, proficiency in one skill from the
-                Rogue's list, proficiency with Thieves' Tools, and training with
-                Light armor.
-              </li>
-              <li>
-                Gain the Rogue's level 1 features listed in the Features table.
+                Gain the {{ data.name }}'s level 1 features listed in the
+                Features table.
               </li>
             </ul>
           </div>
@@ -70,20 +68,29 @@
                 <th>Level</th>
                 <th>Prof. Bonus</th>
                 <th>Features Unlocked</th>
-                <th>Sneak Attack</th>
+                <th v-for="col in data.tableColumns" :key="col.key">
+                  {{ col.label }}
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr
-                v-for="item in levels"
+                v-for="item in data.levels"
                 :key="item.level"
                 :class="{ 'row-highlight': item.feature.includes('Subclass') }"
               >
                 <td class="level-cell">{{ item.level }}</td>
                 <td class="text-center">{{ item.profBonus }}</td>
                 <td>{{ item.feature }}</td>
-                <td class="text-center">
-                  <span class="sa-badge">{{ item.sneakAttack }}</span>
+                <td
+                  v-for="col in data.tableColumns"
+                  :key="col.key"
+                  class="text-center"
+                >
+                  <span v-if="col.badge" :class="col.badgeClass">{{
+                    item[col.key]
+                  }}</span>
+                  <span v-else>{{ item[col.key] }}</span>
                 </td>
               </tr>
             </tbody>
@@ -96,7 +103,7 @@
         <h2 class="section-title">Level Breakdown</h2>
         <div class="panels">
           <div
-            v-for="(lvl, index) in levelPanels"
+            v-for="(lvl, index) in data.levelPanels"
             :key="lvl.level"
             class="panel"
           >
@@ -107,9 +114,9 @@
             >
               <div class="panel-header-left">
                 <span class="panel-level-badge">{{ lvl.level }}</span>
-                <span class="panel-features-preview">{{
-                  lvl.features.map((f) => f.title).join(" · ")
-                }}</span>
+                <span class="panel-features-preview">
+                  {{ lvl.features.map((f) => f.title).join(" · ") }}
+                </span>
               </div>
               <v-icon class="panel-chevron">
                 {{
@@ -121,14 +128,15 @@
             </div>
 
             <div class="panel-body" v-if="openPanels.includes(index)">
+              <!-- Subclass buttons for level 3 -->
               <div v-if="lvl.level === 'Level 3'" class="subclass-grid">
                 <div
-                  v-for="(sub, si) in subclasses"
-                  :key="si"
+                  v-for="sub in data.subclasses"
+                  :key="sub.title"
                   class="subclass-btn"
                   @click="goTo(sub.title)"
                 >
-                  <v-icon class="subclass-icon">{{ subclassIcons[si] }}</v-icon>
+                  <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
                   <span>{{ sub.title }}</span>
                 </div>
               </div>
@@ -152,400 +160,13 @@
 
 <script>
 import router from "@/router";
+import data from "./rogue.json";
 
 export default {
   data() {
     return {
+      data,
       openPanels: [0],
-
-      subclasses: [
-        { title: "Arcane Trickster" },
-        { title: "Assassin" },
-        { title: "Soulknife" },
-        { title: "Thief" },
-      ],
-      subclassIcons: [
-        "mdi-hat-fedora",
-        "mdi-skull",
-        "mdi-brain",
-        "mdi-drama-masks",
-      ],
-
-      coreTraits: [
-        { label: "Primary Ability", value: "Dexterity" },
-        { label: "Hit Point Die", value: "D8 per Rogue level" },
-        {
-          label: "Saving Throw Proficiencies",
-          value: "Dexterity and Intelligence",
-        },
-        {
-          label: "Skill Proficiencies",
-          value:
-            "Choose 4: Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight of Hand, or Stealth",
-        },
-        {
-          label: "Weapon Proficiencies",
-          value:
-            "Simple weapons and Martial weapons with the Finesse or Light property",
-        },
-        { label: "Tool Proficiencies", value: "Thieves' Tools" },
-        { label: "Armor Training", value: "Light armor" },
-        {
-          label: "Starting Equipment",
-          value:
-            "Choose A or B: (A) Leather Armor, 2 Daggers, Shortsword, Shortbow, 20 Arrows, Quiver, Thieves' Tools, Burglar's Pack, and 8 GP; or (B) 100 GP",
-        },
-      ],
-
-      levels: [
-        {
-          level: "1",
-          profBonus: "+2",
-          feature: "Expertise, Sneak Attack, Thieves' Cant, Weapon Mastery",
-          sneakAttack: "1d6",
-        },
-        {
-          level: "2",
-          profBonus: "+2",
-          feature: "Cunning Action",
-          sneakAttack: "1d6",
-        },
-        {
-          level: "3",
-          profBonus: "+2",
-          feature: "Rogue Subclass, Steady Aim",
-          sneakAttack: "2d6",
-        },
-        {
-          level: "4",
-          profBonus: "+2",
-          feature: "Ability Score Improvement",
-          sneakAttack: "2d6",
-        },
-        {
-          level: "5",
-          profBonus: "+3",
-          feature: "Cunning Strike, Uncanny Dodge",
-          sneakAttack: "3d6",
-        },
-        {
-          level: "6",
-          profBonus: "+3",
-          feature: "Expertise",
-          sneakAttack: "3d6",
-        },
-        {
-          level: "7",
-          profBonus: "+3",
-          feature: "Evasion, Reliable Talent",
-          sneakAttack: "4d6",
-        },
-        {
-          level: "8",
-          profBonus: "+3",
-          feature: "Ability Score Improvement",
-          sneakAttack: "4d6",
-        },
-        {
-          level: "9",
-          profBonus: "+4",
-          feature: "Subclass Feature",
-          sneakAttack: "5d6",
-        },
-        {
-          level: "10",
-          profBonus: "+4",
-          feature: "Ability Score Improvement",
-          sneakAttack: "5d6",
-        },
-        {
-          level: "11",
-          profBonus: "+4",
-          feature: "Improved Cunning Strike",
-          sneakAttack: "6d6",
-        },
-        {
-          level: "12",
-          profBonus: "+4",
-          feature: "Ability Score Improvement",
-          sneakAttack: "6d6",
-        },
-        {
-          level: "13",
-          profBonus: "+5",
-          feature: "Subclass Feature",
-          sneakAttack: "7d6",
-        },
-        {
-          level: "14",
-          profBonus: "+5",
-          feature: "Devious Strikes",
-          sneakAttack: "7d6",
-        },
-        {
-          level: "15",
-          profBonus: "+5",
-          feature: "Slippery Mind",
-          sneakAttack: "8d6",
-        },
-        {
-          level: "16",
-          profBonus: "+5",
-          feature: "Ability Score Improvement",
-          sneakAttack: "8d6",
-        },
-        {
-          level: "17",
-          profBonus: "+6",
-          feature: "Subclass Feature",
-          sneakAttack: "9d6",
-        },
-        {
-          level: "18",
-          profBonus: "+6",
-          feature: "Elusive",
-          sneakAttack: "9d6",
-        },
-        {
-          level: "19",
-          profBonus: "+6",
-          feature: "Epic Boon",
-          sneakAttack: "10d6",
-        },
-        {
-          level: "20",
-          profBonus: "+6",
-          feature: "Stroke of Luck",
-          sneakAttack: "10d6",
-        },
-      ],
-
-      levelPanels: [
-        {
-          level: "Level 1",
-          features: [
-            {
-              title: "Expertise",
-              body: `<p>You gain Expertise in two of your skill proficiencies of your choice. Sleight of Hand and Stealth are recommended.</p>
-                     <br/>
-                     <p>At Rogue level 6, you gain Expertise in two more of your skill proficiencies of your choice.</p>`,
-            },
-            {
-              title: "Sneak Attack",
-              body: `<p>Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or Ranged weapon. The extra damage type matches the weapon's type.</p>
-                     <br/>
-                     <p>You don't need Advantage if at least one ally is within 5 feet of the target (not Incapacitated) and you don't have Disadvantage on the roll.</p>
-                     <br/>
-                     <p>The extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column.</p>`,
-            },
-            {
-              title: "Thieves' Cant",
-              body: `<p>You know Thieves' Cant and one other language of your choice, picked up from the communities where you plied your roguish talents.</p>`,
-            },
-            {
-              title: "Weapon Mastery",
-              body: `<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Daggers and Shortbows. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 2",
-          features: [
-            {
-              title: "Cunning Action",
-              body: `<p>Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 3",
-          features: [
-            {
-              title: "Rogue Subclass",
-              body: `<p>You gain a Rogue subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Rogue level or lower. Choose your specialization below:</p>`,
-            },
-            {
-              title: "Steady Aim",
-              body: `<p>As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 4",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Rogue levels 8, 10, 12, and 16.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 5",
-          features: [
-            {
-              title: "Cunning Strike",
-              body: `<p>When you deal Sneak Attack damage, you can add one of the following effects by forgoing the listed number of Sneak Attack dice. Save DC = 8 + your Dexterity modifier + Proficiency Bonus.</p>
-                     <br/>
-                     <p><b>Poison (Cost: 1d6).</b> The target makes a Constitution save or has the Poisoned condition for 1 minute. Requires a Poisoner's Kit on your person.</p>
-                     <br/>
-                     <p><b>Trip (Cost: 1d6).</b> If the target is Large or smaller, it must succeed on a Dexterity save or have the Prone condition.</p>
-                     <br/>
-                     <p><b>Withdraw (Cost: 1d6).</b> Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.</p>`,
-            },
-            {
-              title: "Uncanny Dodge",
-              body: `<p>When an attacker you can see hits you with an attack roll, you can use your Reaction to halve the attack's damage against you (round down).</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 6",
-          features: [
-            {
-              title: "Expertise",
-              body: `<p>You gain Expertise in two more of your skill proficiencies of your choice.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 7",
-          features: [
-            {
-              title: "Evasion",
-              body: `<p>When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage on a success and only half damage on a failure.</p>
-                     <br/>
-                     <p>You can't use this feature if you have the Incapacitated condition.</p>`,
-            },
-            {
-              title: "Reliable Talent",
-              body: `<p>Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 8",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 9",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 10",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 11",
-          features: [
-            {
-              title: "Improved Cunning Strike",
-              body: `<p>You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 12",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 13",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 14",
-          features: [
-            {
-              title: "Devious Strikes",
-              body: `<p>You've practiced new ways to use your Sneak Attack deviously. The following effects are added to your Cunning Strike options.</p>
-                     <br/>
-                     <p><b>Daze (Cost: 2d6).</b> The target must succeed on a Constitution save, or on its next turn it can do only one of the following: move, take an action, or take a Bonus Action.</p>
-                     <br/>
-                     <p><b>Knock Out (Cost: 6d6).</b> The target must succeed on a Constitution save, or it has the Unconscious condition for 1 minute or until it takes any damage. The target can repeat the save at the end of each of its turns.</p>
-                     <br/>
-                     <p><b>Obscure (Cost: 3d6).</b> The target must succeed on a Dexterity save, or it has the Blinded condition until the end of its next turn.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 15",
-          features: [
-            {
-              title: "Slippery Mind",
-              body: `<p>Your cunning mind is exceptionally difficult to control. You gain proficiency in Wisdom and Charisma saving throws.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 16",
-          features: [
-            {
-              title: "Ability Score Improvement",
-              body: `<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 17",
-          features: [
-            {
-              title: "Subclass Feature",
-              body: `<p>You gain a new feature from your chosen subclass.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 18",
-          features: [
-            {
-              title: "Elusive",
-              body: `<p>You are so evasive that attackers rarely gain the upper hand. No attack roll can have Advantage against you unless you have the Incapacitated condition.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 19",
-          features: [
-            {
-              title: "Epic Boon",
-              body: `<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended.</p>`,
-            },
-          ],
-        },
-        {
-          level: "Level 20",
-          features: [
-            {
-              title: "Stroke of Luck",
-              body: `<p>If you fail a d20 Test, you can turn the roll into a 20. Once you use this feature, you can't use it again until you finish a Short Rest or a Long Rest.</p>`,
-            },
-          ],
-        },
-      ],
     };
   },
 
@@ -557,7 +178,9 @@ export default {
     },
     goTo(label) {
       router
-        .push("/wiki/classes/rogue/" + label.replace(/\s+/g, "_").toLowerCase())
+        .push(
+          this.data.subclassRoute + label.replace(/\s+/g, "_").toLowerCase(),
+        )
         .then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
     },
   },
@@ -572,32 +195,16 @@ export default {
   color: var(--text-body);
 }
 
-/* ── Hero ───────────────────────────────────────── */
+/* ── Hero — no image ────────────────────────────── */
 .hero {
-  position: relative;
   width: 100%;
-  height: 420px;
-  overflow: hidden;
-}
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
+  padding: 3rem 2.5rem 2rem;
   background: linear-gradient(
     to bottom,
-    rgba(var(--bg-page-rgb), 0.2) 0%,
-    rgba(var(--bg-page-rgb), 0.7) 60%,
+    rgba(var(--bg-page-rgb), 0.95) 0%,
     var(--bg-page) 100%
   );
-  display: flex;
-  align-items: flex-end;
-  padding: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 .hero-content {
   max-width: 700px;
@@ -608,12 +215,14 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #facc15;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
   color: var(--text-primary);
-  margin: 0.25rem 0 0.5rem;
+  margin: 0 0 0.5rem;
   line-height: 1;
 }
 .hero-subtitle {
@@ -786,7 +395,7 @@ export default {
   text-align: center;
 }
 
-/* Sneak Attack badge */
+/* ── Sneak Attack badge ─────────────────────────── */
 .sa-badge {
   font-size: 0.72rem;
   font-weight: 700;
@@ -919,13 +528,10 @@ export default {
 /* ── Mobile ─────────────────────────────────────── */
 @media (max-width: 640px) {
   .hero {
-    height: 300px;
+    padding: 2rem 1.5rem 1.5rem;
   }
   .hero-title {
     font-size: 2rem;
-  }
-  .hero-overlay {
-    padding: 1.5rem;
   }
   .trait-row {
     grid-template-columns: 1fr;
@@ -936,4 +542,3 @@ export default {
   }
 }
 </style>
-
