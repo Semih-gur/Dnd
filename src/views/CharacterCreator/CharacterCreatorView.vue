@@ -1912,7 +1912,6 @@ export default {
       const { PDFDocument, rgb, StandardFonts } = await import("pdf-lib");
       const c = this.character;
 
-      // ── Helpers ──────────────────────────────────────
       const fs = (ab) =>
         Math.min(
           20,
@@ -1953,14 +1952,13 @@ export default {
           ?.toLowerCase() || "d8";
       const speedVal = this.selectedSpeciesData?.race?.[0]?.speed || "30 ft.";
       const sizeVal = this.selectedSpeciesData?.race?.[0]?.size || "Medium";
-      // Spell ability display — just the first stat if multiple (e.g. "Dexterity & Wisdom" → "Wisdom")
       const spellAbilityName = (() => {
         const raw = this.selectedClassData?.primaryStat || "";
         if (raw.includes("&")) return raw.split("&").pop().trim();
+        if (raw.includes("·")) return raw.split("·").pop().trim();
         return raw;
       })();
 
-      // ── Load PDF ─────────────────────────────────────
       const response = await fetch("/sheet.pdf");
       if (!response.ok) {
         alert(`Could not load PDF: ${response.status}`);
@@ -1975,7 +1973,6 @@ export default {
       const fontB = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
       const H = p1.getHeight();
 
-      // ── Form fields ───────────────────────────────────
       const setField = (id, val) => {
         try {
           form.getTextField(id).setText(String(val));
@@ -2004,14 +2001,12 @@ export default {
       setField("Alignment", c.alignment || "");
       setField("BACKSTORY / PERSONALITY", "");
       setField("APPEARANCE", "");
-      // Clear TOOL PROF — we draw it manually to avoid the huge default font
       try {
         form.getTextField("TOOL PROF").setText("");
       } catch (e) {
         /* not found */
       }
 
-      // Saving throw proficiency dots
       const stRadioMap = {
         "Check Box7": "Strength",
         "Check Box11": "Dexterity",
@@ -2023,7 +2018,6 @@ export default {
       for (const [id, ab] of Object.entries(stRadioMap))
         setRadio(id, this.savingThrows.includes(ab));
 
-      // Skill proficiency dots
       const skillRadioMap = {
         "Check Box10": "Acrobatics",
         "Check Box13": "Animal Handling",
@@ -2052,39 +2046,28 @@ export default {
       for (const [id, sk] of Object.entries(skillCheckMap))
         setCheck(id, c.skills.includes(sk));
 
-      // Spells — row 0: SPELL NOTES (name) + SPELL LEVEL0 (level)
-      //          rows 1+: SPELL NAME1, SPELL NAME2... + SPELL LEVEL3, SPELL LEVEL4...
+      // Spell fields — matched pairs from position analysis
       const allSpells = [
         ...c.spells.cantrips.map((s) => ["0", this.formatName(s)]),
         ...c.spells.prepared.map((s) => ["1", this.formatName(s)]),
       ];
-      const nameFields = [
-        "SPELL NOTES",
-        "SPELL NAME1",
-        "SPELL NAME2",
-        "SPELL NAME5",
-        "SPELL NAME8",
-        "SPELL NAME12",
-        "SPELL NAME13",
-        "SPELL NAME14",
+      // NAME fields and their matching LEVEL fields, in visual row order (top to bottom)
+      const spellPairs = [
+        ["SPELL NAME1", "SPELL LEVEL4"],
+        ["SPELL NAME2", "SPELL LEVEL7"],
+        ["SPELL NAME5", "SPELL LEVEL5"],
+        ["SPELL NAME8", "SPELL LEVEL8"],
+        ["SPELL NAME13", "SPELL LEVEL9"],
+        ["SPELL NAME12", "SPELL LEVEL11"],
+        ["SPELL NAME14", "SPELL LEVEL14"],
+        ["SPELL NAME28", "SPELL LEVEL24"],
+        ["SPELL NAME27", "SPELL LEVEL25"],
       ];
-      const levelFields = [
-        "SPELL LEVEL0",
-        "SPELL LEVEL3",
-        "SPELL LEVEL4",
-        "SPELL LEVEL5",
-        "SPELL LEVEL6",
-        "SPELL LEVEL7",
-        "SPELL LEVEL8",
-        "SPELL LEVEL9",
-      ];
-      allSpells.slice(0, nameFields.length).forEach(([lvl, name], i) => {
-        setField(nameFields[i], name);
-        setField(levelFields[i], lvl === "0" ? "" : lvl);
+      allSpells.slice(0, spellPairs.length).forEach(([lvl, name], i) => {
+        setField(spellPairs[i][0], name);
+        setField(spellPairs[i][1], lvl === "0" ? "" : lvl);
       });
 
-      // ── Draw text ─────────────────────────────────────
-      // y coord: 0 = top of page; pdf-lib y = H - yFromTop - size*0.8
       const draw = (page, text, x, yFromTop, size = 8, bold = false) => {
         if (text === null || text === undefined || text === "") return;
         page.drawText(String(text), {
@@ -2107,11 +2090,11 @@ export default {
       draw(p1, String(c.level || 1), 270, 44, 13, true);
       draw(p1, String(c.xp || 0), 268, 70, 7);
 
-      // Combat stats
-      draw(p1, String(this.baseAC), 331, 30, 13, true);
-      draw(p1, String(this.maxHP), 472, 72, 9, true); // CURRENT
-      draw(p1, String(this.maxHP), 506, 72, 9); // MAX
-      draw(p1, `1${hitDie}`, 497, 63, 8); // HIT DICE
+      // Combat
+      draw(p1, String(this.baseAC), 331, 28, 13, true);
+      draw(p1, String(this.maxHP), 427, 74, 9, true);
+      draw(p1, String(this.maxHP), 453, 74, 9);
+      draw(p1, `1${hitDie}`, 493, 66, 8);
 
       // Secondary row
       draw(p1, mod(fs("DEX")), 248, 136, 14, true);
@@ -2119,53 +2102,53 @@ export default {
       draw(p1, sizeVal, 440, 136, 10);
       draw(p1, String(passive), 512, 136, 14, true);
 
-      // STRENGTH (score circle center ~y=286)
-      draw(p1, String(fs("STR")), 60, 284, 11, true);
-      draw(p1, mod(fs("STR")), 32, 297, 9);
-      draw(p1, stv("STR"), 90, 311, 8);
-      draw(p1, skb("Athletics", "STR"), 90, 330, 8);
+      // ── STRENGTH — score sits inside the circle, mod below it
+      draw(p1, String(fs("STR")), 60, 267, 11, true);
+      draw(p1, mod(fs("STR")), 30, 283, 9);
+      draw(p1, stv("STR"), 90, 298, 8);
+      draw(p1, skb("Athletics", "STR"), 90, 315, 8);
 
-      // DEXTERITY
-      draw(p1, String(fs("DEX")), 60, 358, 11, true);
-      draw(p1, mod(fs("DEX")), 32, 371, 9);
-      draw(p1, stv("DEX"), 90, 384, 8);
-      draw(p1, skb("Acrobatics", "DEX"), 90, 403, 8);
-      draw(p1, skb("Sleight of Hand", "DEX"), 90, 417, 8);
-      draw(p1, skb("Stealth", "DEX"), 90, 431, 8);
+      // ── DEXTERITY
+      draw(p1, String(fs("DEX")), 60, 345, 11, true);
+      draw(p1, mod(fs("DEX")), 30, 360, 9);
+      draw(p1, stv("DEX"), 90, 375, 8);
+      draw(p1, skb("Acrobatics", "DEX"), 90, 393, 8);
+      draw(p1, skb("Sleight of Hand", "DEX"), 90, 407, 8);
+      draw(p1, skb("Stealth", "DEX"), 90, 421, 8);
 
-      // CONSTITUTION
-      draw(p1, String(fs("CON")), 60, 501, 11, true);
-      draw(p1, mod(fs("CON")), 32, 514, 9);
-      draw(p1, stv("CON"), 90, 527, 8);
+      // ── CONSTITUTION
+      draw(p1, String(fs("CON")), 60, 487, 11, true);
+      draw(p1, mod(fs("CON")), 30, 502, 9);
+      draw(p1, stv("CON"), 90, 516, 8);
 
-      // INTELLIGENCE
-      draw(p1, String(fs("INT")), 166, 155, 11, true);
-      draw(p1, mod(fs("INT")), 136, 168, 9);
-      draw(p1, stv("INT"), 198, 181, 8);
-      draw(p1, skb("Arcana", "INT"), 198, 200, 8);
-      draw(p1, skb("History", "INT"), 198, 214, 8);
-      draw(p1, skb("Investigation", "INT"), 198, 228, 8);
-      draw(p1, skb("Nature", "INT"), 198, 242, 8);
-      draw(p1, skb("Religion", "INT"), 198, 256, 8);
+      // ── INTELLIGENCE — score in circle, mod below, skills further right
+      draw(p1, String(fs("INT")), 166, 148, 11, true);
+      draw(p1, mod(fs("INT")), 136, 163, 9);
+      draw(p1, stv("INT"), 230, 176, 8);
+      draw(p1, skb("Arcana", "INT"), 230, 195, 8);
+      draw(p1, skb("History", "INT"), 230, 209, 8);
+      draw(p1, skb("Investigation", "INT"), 230, 223, 8);
+      draw(p1, skb("Nature", "INT"), 230, 237, 8);
+      draw(p1, skb("Religion", "INT"), 230, 251, 8);
 
-      // WISDOM
-      draw(p1, String(fs("WIS")), 166, 333, 11, true);
-      draw(p1, mod(fs("WIS")), 136, 346, 9);
-      draw(p1, stv("WIS"), 198, 359, 8);
-      draw(p1, skb("Animal Handling", "WIS"), 198, 378, 8);
-      draw(p1, skb("Insight", "WIS"), 198, 392, 8);
-      draw(p1, skb("Medicine", "WIS"), 198, 406, 8);
-      draw(p1, skb("Perception", "WIS"), 198, 420, 8);
-      draw(p1, skb("Survival", "WIS"), 198, 434, 8);
+      // ── WISDOM
+      draw(p1, String(fs("WIS")), 166, 323, 11, true);
+      draw(p1, mod(fs("WIS")), 136, 338, 9);
+      draw(p1, stv("WIS"), 230, 352, 8);
+      draw(p1, skb("Animal Handling", "WIS"), 230, 370, 8);
+      draw(p1, skb("Insight", "WIS"), 230, 384, 8);
+      draw(p1, skb("Medicine", "WIS"), 230, 398, 8);
+      draw(p1, skb("Perception", "WIS"), 230, 412, 8);
+      draw(p1, skb("Survival", "WIS"), 230, 426, 8);
 
-      // CHARISMA
-      draw(p1, String(fs("CHA")), 166, 509, 11, true);
-      draw(p1, mod(fs("CHA")), 136, 522, 9);
-      draw(p1, stv("CHA"), 198, 535, 8);
-      draw(p1, skb("Deception", "CHA"), 198, 554, 8);
-      draw(p1, skb("Intimidation", "CHA"), 198, 568, 8);
-      draw(p1, skb("Performance", "CHA"), 198, 582, 8);
-      draw(p1, skb("Persuasion", "CHA"), 198, 596, 8);
+      // ── CHARISMA
+      draw(p1, String(fs("CHA")), 166, 497, 11, true);
+      draw(p1, mod(fs("CHA")), 136, 512, 9);
+      draw(p1, stv("CHA"), 230, 526, 8);
+      draw(p1, skb("Deception", "CHA"), 230, 545, 8);
+      draw(p1, skb("Intimidation", "CHA"), 230, 559, 8);
+      draw(p1, skb("Performance", "CHA"), 230, 573, 8);
+      draw(p1, skb("Persuasion", "CHA"), 230, 587, 8);
 
       // Right column
       const cfText =
@@ -2180,33 +2163,30 @@ export default {
           .join(", ") || "";
       draw(p1, stText.slice(0, 120), 225, 598, 7);
 
-      const featText = c.backgroundData?.feat || "";
-      draw(p1, featText, 458, 598, 7);
+      draw(p1, c.backgroundData?.feat || "", 458, 598, 7);
 
-      // Equipment & Proficiencies
       const weaponProf =
         this.selectedClassData?.coreTraits
           ?.find((t) => t.label === "Weapon Proficiencies")
           ?.value?.slice(0, 55) || "";
       const eqText =
         c.equipment === "A" ? this.equipmentOptionA : this.equipmentOptionB;
-      draw(p1, "None", 57, 649, 7); // Armor training
-      draw(p1, weaponProf, 16, 662, 7); // Weapon proficiencies
-      draw(p1, eqText?.slice(0, 95) || "", 16, 673, 7); // Equipment pack
-      draw(p1, c.backgroundData?.tool || "None", 16, 724, 8); // Tools
+      draw(p1, "None", 57, 643, 7);
+      draw(p1, weaponProf, 16, 670, 7);
+      draw(p1, eqText?.slice(0, 95) || "", 16, 680, 7);
+      draw(p1, c.backgroundData?.tool || "None", 16, 730, 8);
 
       // ── PAGE 2 ────────────────────────────────────────
       draw(p2, spellAbilityName, 26, 37, 7);
-      draw(p2, mod(fs(spellAbility)), 58, 63, 11, true);
-      draw(p2, String(spellSaveDC), 58, 87, 11, true);
-      draw(p2, `+${spellAtk}`, 58, 111, 11, true);
+      draw(p2, mod(fs(spellAbility)), 58, 75, 10, true);
+      draw(p2, String(spellSaveDC), 58, 98, 10, true);
+      draw(p2, `+${spellAtk}`, 58, 120, 10, true);
 
       const fullEq = [eqText, c.backgroundData?.equipment]
         .filter(Boolean)
         .join(", ");
       draw(p2, fullEq.slice(0, 100), 415, 412, 7);
 
-      // ── Flatten & download ────────────────────────────
       form.flatten();
       const filled = await pdfDoc.save();
       const blob = new Blob([filled], { type: "application/pdf" });
