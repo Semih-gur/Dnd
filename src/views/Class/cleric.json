@@ -44,7 +44,7 @@
       "badge": true,
       "badgeClass": "cd-badge"
     },
-    { "key": "cantrip", "label": "Cantrips", "badge": false },
+    { "key": "cantrips", "label": "Cantrips", "badge": false },
     { "key": "first", "label": "1", "badge": false },
     { "key": "second", "label": "2", "badge": false },
     { "key": "third", "label": "3", "badge": false },
@@ -62,7 +62,7 @@
       "profBonus": "+2",
       "feature": "Spellcasting, Divine Order",
       "channelDivinity": "2",
-      "cantrip": "3",
+      "cantrips": "3",
       "first": "2",
       "second": "-",
       "third": "-",
@@ -78,7 +78,7 @@
       "profBonus": "+2",
       "feature": "Channel Divinity",
       "channelDivinity": "2",
-      "cantrip": "3",
+      "cantrips": "3",
       "first": "3",
       "second": "-",
       "third": "-",
@@ -94,7 +94,7 @@
       "profBonus": "+2",
       "feature": "Cleric Subclass",
       "channelDivinity": "2",
-      "cantrip": "3",
+      "cantrips": "3",
       "first": "4",
       "second": "2",
       "third": "-",
@@ -110,7 +110,7 @@
       "profBonus": "+2",
       "feature": "Ability Score Improvement",
       "channelDivinity": "2",
-      "cantrip": "4",
+      "cantrips": "4",
       "first": "4",
       "second": "3",
       "third": "-",
@@ -126,7 +126,7 @@
       "profBonus": "+3",
       "feature": "Sear Undead",
       "channelDivinity": "2",
-      "cantrip": "4",
+      "cantrips": "4",
       "first": "4",
       "second": "3",
       "third": "2",
@@ -142,7 +142,7 @@
       "profBonus": "+3",
       "feature": "Subclass Feature",
       "channelDivinity": "3",
-      "cantrip": "4",
+      "cantrips": "4",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -158,7 +158,7 @@
       "profBonus": "+3",
       "feature": "Blessed Strikes",
       "channelDivinity": "3",
-      "cantrip": "4",
+      "cantrips": "4",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -174,7 +174,7 @@
       "profBonus": "+3",
       "feature": "Ability Score Improvement",
       "channelDivinity": "3",
-      "cantrip": "4",
+      "cantrips": "4",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -190,7 +190,7 @@
       "profBonus": "+4",
       "feature": "—",
       "channelDivinity": "3",
-      "cantrip": "4",
+      "cantrips": "4",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -206,7 +206,7 @@
       "profBonus": "+4",
       "feature": "Divine Intervention",
       "channelDivinity": "3",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -222,7 +222,7 @@
       "profBonus": "+4",
       "feature": "—",
       "channelDivinity": "3",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -238,7 +238,7 @@
       "profBonus": "+4",
       "feature": "Ability Score Improvement",
       "channelDivinity": "3",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -254,7 +254,7 @@
       "profBonus": "+5",
       "feature": "—",
       "channelDivinity": "3",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -270,7 +270,7 @@
       "profBonus": "+5",
       "feature": "Improved Blessed Strikes",
       "channelDivinity": "3",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -286,7 +286,7 @@
       "profBonus": "+5",
       "feature": "—",
       "channelDivinity": "3",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -302,7 +302,7 @@
       "profBonus": "+5",
       "feature": "Ability Score Improvement",
       "channelDivinity": "3",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -318,7 +318,7 @@
       "profBonus": "+6",
       "feature": "Subclass Feature",
       "channelDivinity": "3",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -334,7 +334,7 @@
       "profBonus": "+6",
       "feature": "—",
       "channelDivinity": "4",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -350,7 +350,7 @@
       "profBonus": "+6",
       "feature": "Epic Boon",
       "channelDivinity": "4",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -366,7 +366,7 @@
       "profBonus": "+6",
       "feature": "Greater Divine Intervention",
       "channelDivinity": "4",
-      "cantrip": "5",
+      "cantrips": "5",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -385,11 +385,11 @@
       "features": [
         {
           "title": "Spellcasting",
-          "body": "<p>You have learned to cast spells through prayer and meditation. Wisdom is your spellcasting ability and you can use a Holy Symbol as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know three cantrips of your choice from the Cleric spell list. Guidance, Sacred Flame, and Thaumaturgy are recommended. You gain more cantrips at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells from the Cleric spell list to start. Bless, Cure Wounds, Guiding Bolt, and Shield of Faith are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can change your list of prepared spells, replacing any of the spells there with other Cleric spells for which you have spell slots.</p>"
+          "body": "<p>You have learned to cast spells through prayer and meditation. Wisdom is your spellcasting ability and you can use a Holy Symbol as a Spellcasting Focus.</p><br/><p><b>Cantripss.</b> You know three cantripss of your choice from the Cleric spell list. Guidance, Sacred Flame, and Thaumaturgy are recommended. You gain more cantripss at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells from the Cleric spell list to start. Bless, Cure Wounds, Guiding Bolt, and Shield of Faith are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can change your list of prepared spells, replacing any of the spells there with other Cleric spells for which you have spell slots.</p>"
         },
         {
           "title": "Divine Order",
-          "body": "<p>You have dedicated yourself to one of the following sacred roles of your choice.</p><br/><p><b>Protector.</b> Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.</p><br/><p><b>Thaumaturge.</b> You know one extra cantrip from the Cleric spell list. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks equal to your Wisdom modifier (minimum of +1).</p>"
+          "body": "<p>You have dedicated yourself to one of the following sacred roles of your choice.</p><br/><p><b>Protector.</b> Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.</p><br/><p><b>Thaumaturge.</b> You know one extra cantrips from the Cleric spell list. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks equal to your Wisdom modifier (minimum of +1).</p>"
         }
       ]
     },
@@ -443,7 +443,7 @@
       "features": [
         {
           "title": "Blessed Strikes",
-          "body": "<p>Divine power infuses you in battle. Choose one of the following options:</p><br/><p><b>Divine Strike.</b> Once on each of your turns when you hit a creature with a weapon attack, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).</p><br/><p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Cleric cantrip.</p>"
+          "body": "<p>Divine power infuses you in battle. Choose one of the following options:</p><br/><p><b>Divine Strike.</b> Once on each of your turns when you hit a creature with a weapon attack, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).</p><br/><p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Cleric cantrips.</p>"
         }
       ]
     },
@@ -479,7 +479,7 @@
       "features": [
         {
           "title": "Improved Blessed Strikes",
-          "body": "<p>The option you chose for Blessed Strikes grows more powerful.</p><br/><p><b>Divine Strike.</b> The extra damage of your Divine Strike increases to 2d8.</p><br/><p><b>Potent Spellcasting.</b> When you cast a Cleric cantrip and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet, granting Temporary Hit Points equal to twice your Wisdom modifier.</p>"
+          "body": "<p>The option you chose for Blessed Strikes grows more powerful.</p><br/><p><b>Divine Strike.</b> The extra damage of your Divine Strike increases to 2d8.</p><br/><p><b>Potent Spellcasting.</b> When you cast a Cleric cantrips and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet, granting Temporary Hit Points equal to twice your Wisdom modifier.</p>"
         }
       ]
     },

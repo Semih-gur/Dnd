@@ -637,8 +637,14 @@
       <div v-if="currentStep === 5" class="step-panel">
         <h2 class="step-title">Skills & Proficiencies</h2>
         <p class="step-desc">
-          Choose {{ skillChoiceCount }} skills from your class list. Background
-          skills are already added.
+          Choose {{ skillChoiceCount }} from your class's available skills.
+          Background skills are already added.
+          <span
+            v-if="classAvailableSkills.length"
+            class="skills-available-note"
+          >
+            Available: {{ classAvailableSkills.join(", ") }}
+          </span>
         </p>
         <div class="proficiency-summary">
           <div class="prof-block">
@@ -691,7 +697,8 @@
               disabled:
                 !backgroundSkills.includes(skill.name) &&
                 !character.skills.includes(skill.name) &&
-                classSkillsChosen >= skillChoiceCount,
+                (classSkillsChosen >= skillChoiceCount ||
+                  !classAvailableSkills.includes(skill.name)),
             }"
             @click="toggleSkill(skill.name)"
           >
@@ -1318,6 +1325,20 @@ export default {
       );
     },
 
+    spellStepVisible() {
+      if (!this.isSpellcaster) return false;
+      const row = this.selectedClassData?.levels?.[0];
+      if (!row) return false;
+      const cantrips = parseInt(row.cantrips || 0);
+      const prepared = parseInt(row.preparedSpells || 0);
+      const slot1 = row.slot1 && row.slot1 !== "—" && row.slot1 !== "";
+      const slotLevel =
+        row.slotLevel && row.slotLevel !== "—" && row.slotLevel !== "";
+      const spellSlots =
+        row.spellSlots && row.spellSlots !== "—" && row.spellSlots !== "";
+      return cantrips > 0 || prepared > 0 || slot1 || slotLevel || spellSlots;
+    },
+
     steps() {
       const base = [
         { label: "Info" },
@@ -1329,15 +1350,15 @@ export default {
         { label: "Equipment" },
         { label: "Sheet" },
       ];
-      if (this.isSpellcaster) base.splice(7, 0, { label: "Spells" });
+      if (this.spellStepVisible) base.splice(7, 0, { label: "Spells" });
       return base;
     },
 
     spellsStepIndex() {
-      return this.isSpellcaster ? 7 : -1;
+      return this.spellStepVisible ? 7 : -1;
     },
     sheetStepIndex() {
-      return this.isSpellcaster ? 8 : 7;
+      return this.spellStepVisible ? 8 : 7;
     },
 
     selectedSpeciesData() {
@@ -1419,6 +1440,31 @@ export default {
         .filter(Boolean);
     },
 
+    classAvailableSkills() {
+      if (!this.selectedClassData) return [];
+      const trait = this.selectedClassData.coreTraits.find(
+        (t) => t.label === "Skill Proficiencies",
+      );
+      if (!trait) return [];
+
+      const value = trait.value;
+      const colonIndex = value.indexOf(":");
+
+      // No colon means "Choose N skills" with no restriction — allow all skills
+      if (colonIndex === -1) {
+        return this.allSkills.map((s) => s.name);
+      }
+
+      const afterColon = value.slice(colonIndex + 1);
+      const parsed = afterColon
+        .split(",")
+        .map((s) => s.replace(/\bor\b/i, "").trim())
+        .filter(Boolean);
+
+      // If parsing yielded nothing, also fall back to all skills
+      return parsed.length > 0 ? parsed : this.allSkills.map((s) => s.name);
+    },
+
     classSkillsChosen() {
       return this.character.skills.filter(
         (s) => !this.backgroundSkills.includes(s),
@@ -1431,7 +1477,7 @@ export default {
         (t) => t.label === "Skill Proficiencies",
       );
       if (!trait) return 2;
-      const match = trait.value.match(/Choose (\d+)/);
+      const match = trait.value.match(/(\d+)/);
       return match ? parseInt(match[1]) : 2;
     },
 
@@ -1611,6 +1657,12 @@ export default {
       this.character.class = cls.name;
       this.character.classData = cls;
       this.character.spells = { cantrips: [], prepared: [] };
+
+      // Remove any class-chosen skills that aren't background skills
+      // (background skills stay, class picks are reset)
+      this.character.skills = this.character.skills.filter((s) =>
+        this.backgroundSkills.includes(s),
+      );
     },
 
     selectBackground(bg) {
@@ -1776,10 +1828,19 @@ export default {
 
     toggleSkill(name) {
       if (this.backgroundSkills.includes(name)) return;
+      // Only restrict if the class actually has a specific list
+      if (
+        this.classAvailableSkills.length > 0 &&
+        !this.classAvailableSkills.includes(name)
+      )
+        return;
       const i = this.character.skills.indexOf(name);
-      if (i !== -1) this.character.skills.splice(i, 1);
-      else if (this.classSkillsChosen < this.skillChoiceCount)
+      if (i !== -1) {
+        this.character.skills.splice(i, 1);
+      } else {
+        if (this.classSkillsChosen >= this.skillChoiceCount) return;
         this.character.skills.push(name);
+      }
     },
 
     savingThrowBonus(ab) {
@@ -3161,6 +3222,12 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-align: right;
+}
+.skills-available-note {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-subtle);
 }
 .bg-source {
   color: #4ade80;
