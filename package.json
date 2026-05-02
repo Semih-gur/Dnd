@@ -19,6 +19,7 @@
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "lucide-vue-next": "^0.379.0",
+    "pdf-lib": "^1.17.1",
     "roboto-fontface": "*",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",

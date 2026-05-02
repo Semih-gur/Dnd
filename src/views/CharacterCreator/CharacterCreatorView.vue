@@ -1123,7 +1123,7 @@
 
         <div class="sheet-actions">
           <button class="sheet-btn sheet-btn-primary" @click="downloadSheet">
-            <v-icon size="18">mdi-download</v-icon> Download Sheet
+            <v-icon size="18">mdi-download</v-icon> Download PDF
           </button>
           <button class="sheet-btn sheet-btn-secondary" @click="resetCharacter">
             <v-icon size="18">mdi-refresh</v-icon> Start Over
@@ -1847,88 +1847,312 @@ export default {
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
 
-    downloadSheet() {
+    async downloadSheet() {
+      const { PDFDocument, rgb, StandardFonts } = await import("pdf-lib");
       const c = this.character;
-      const lines = [
-        `CHARACTER SHEET — D&D 2024`,
-        `${"=".repeat(34)}`,
-        `Name:       ${c.name}`,
-        `Player:     ${c.playerName || "—"}`,
-        `Species:    ${this.formatName(c.species || "—")}`,
-        `Class:      ${c.class || "—"}  (Level 1)`,
-        `Background: ${this.formatName(c.background || "—")}`,
-        `Alignment:  ${c.alignment || "—"}`,
-        ``,
-        `ABILITY SCORES`,
-        `${"─".repeat(30)}`,
-        ...this.abilityList.map((ab) => {
-          const base = c.abilityScores[ab] || 0;
-          const bonus = c.backgroundBonuses[ab] || 0;
-          return `${ab.padEnd(5)} ${String(this.finalScore(ab)).padEnd(
-            4,
-          )} ${this.modifierDisplay(this.finalScore(ab)).padEnd(4)} ${
-            bonus ? `(${base}+${bonus}bg)` : `(${base})`
-          }`;
-        }),
-        ``,
-        `COMBAT`,
-        `${"─".repeat(30)}`,
-        `Max HP:      ${this.maxHP}`,
-        `AC:          ${this.baseAC}`,
-        `Initiative:  ${this.modifierDisplay(this.finalScore("DEX"))}`,
-        `Prof Bonus:  +2`,
-        ``,
-        `SAVING THROWS`,
-        `${"─".repeat(30)}`,
-        ...this.abilityList.map(
-          (ab) =>
-            `${this.abilityFullName(ab).padEnd(14)} ${this.savingThrowBonus(
-              ab,
-            )}${
-              this.savingThrows.includes(this.abilityFullName(ab)) ? " ●" : ""
-            }`,
-        ),
-        ``,
-        `SKILLS`,
-        `${"─".repeat(30)}`,
-        ...this.allSkills.map(
-          (s) =>
-            `${s.name.padEnd(18)} ${this.skillBonus(s)}${
-              c.skills.includes(s.name) ? " ●" : ""
-            }`,
-        ),
-        ``,
-        `EQUIPMENT`,
-        `${"─".repeat(30)}`,
-        c.equipment === "A"
-          ? this.equipmentOptionA
-          : c.equipment === "B"
-          ? this.equipmentOptionB
-          : "—",
-        this.selectedBackgroundData
-          ? `Background: ${this.selectedBackgroundData.equipment}`
-          : "",
-        ...(this.isSpellcaster
-          ? [
-              ``,
-              `SPELLS`,
-              `${"─".repeat(30)}`,
-              `Cantrips: ${
-                c.spells.cantrips.map((s) => this.formatName(s)).join(", ") ||
-                "—"
-              }`,
-              `Prepared: ${
-                c.spells.prepared.map((s) => this.formatName(s)).join(", ") ||
-                "—"
-              }`,
-            ]
-          : []),
+
+      // ── Helpers ──────────────────────────────────────
+      const fs = (ab) =>
+        Math.min(
+          20,
+          (c.abilityScores[ab] || 0) + (c.backgroundBonuses[ab] || 0),
+        );
+      const mod = (score) => {
+        const m = Math.floor((score - 10) / 2);
+        return m >= 0 ? `+${m}` : `${m}`;
+      };
+      const abmod = (ab) => Math.floor((fs(ab) - 10) / 2);
+      const AB = {
+        STR: "Strength",
+        DEX: "Dexterity",
+        CON: "Constitution",
+        INT: "Intelligence",
+        WIS: "Wisdom",
+        CHA: "Charisma",
+      };
+      const stv = (ab) => {
+        const m = abmod(ab) + (this.savingThrows.includes(AB[ab]) ? 2 : 0);
+        return m >= 0 ? `+${m}` : `${m}`;
+      };
+      const skb = (name, ab) => {
+        const m = abmod(ab) + (c.skills.includes(name) ? 2 : 0);
+        return m >= 0 ? `+${m}` : `${m}`;
+      };
+
+      const passive =
+        10 + abmod("WIS") + (c.skills.includes("Perception") ? 2 : 0);
+      const spellAbility =
+        this.selectedClassData?.primaryStat?.slice(0, 3).toUpperCase() || "WIS";
+      const spellSaveDC = 8 + 2 + abmod(spellAbility);
+      const spellAtk = 2 + abmod(spellAbility);
+      const hitDie =
+        this.selectedClassData?.coreTraits
+          ?.find((t) => t.label === "Hit Point Die")
+          ?.value?.match(/D\d+/i)?.[0]
+          ?.toLowerCase() || "d8";
+      const speedVal = this.selectedSpeciesData?.race?.[0]?.speed || "30 ft.";
+      const sizeVal = this.selectedSpeciesData?.race?.[0]?.size || "Medium";
+      // Spell ability display — just the first stat if multiple (e.g. "Dexterity & Wisdom" → "Wisdom")
+      const spellAbilityName = (() => {
+        const raw = this.selectedClassData?.primaryStat || "";
+        if (raw.includes("&")) return raw.split("&").pop().trim();
+        return raw;
+      })();
+
+      // ── Load PDF ─────────────────────────────────────
+      const response = await fetch("/sheet.pdf");
+      if (!response.ok) {
+        alert(`Could not load PDF: ${response.status}`);
+        return;
+      }
+      const pdfDoc = await PDFDocument.load(await response.arrayBuffer());
+      const form = pdfDoc.getForm();
+      const pages = pdfDoc.getPages();
+      const p1 = pages[0];
+      const p2 = pages[1];
+      const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+      const fontB = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+      const H = p1.getHeight();
+
+      // ── Form fields ───────────────────────────────────
+      const setField = (id, val) => {
+        try {
+          form.getTextField(id).setText(String(val));
+        } catch (e) {
+          /* not found */
+        }
+      };
+      const setRadio = (id, on) => {
+        try {
+          if (on) form.getRadioGroup(id).select("/Yes");
+        } catch (e) {
+          /* not found */
+        }
+      };
+      const setCheck = (id, on) => {
+        try {
+          const f = form.getField(id);
+          if (on) f.check?.();
+          else f.uncheck?.();
+        } catch (e) {
+          /* not found */
+        }
+      };
+
+      setField("PROF BONUS", "+2");
+      setField("Alignment", c.alignment || "");
+      setField("BACKSTORY / PERSONALITY", "");
+      setField("APPEARANCE", "");
+      // Clear TOOL PROF — we draw it manually to avoid the huge default font
+      try {
+        form.getTextField("TOOL PROF").setText("");
+      } catch (e) {
+        /* not found */
+      }
+
+      // Saving throw proficiency dots
+      const stRadioMap = {
+        "Check Box7": "Strength",
+        "Check Box11": "Dexterity",
+        "Check Box18": "Constitution",
+        "Check Box3": "Intelligence",
+        "Check Box4": "Wisdom",
+        "Check Box1": "Charisma",
+      };
+      for (const [id, ab] of Object.entries(stRadioMap))
+        setRadio(id, this.savingThrows.includes(ab));
+
+      // Skill proficiency dots
+      const skillRadioMap = {
+        "Check Box10": "Acrobatics",
+        "Check Box13": "Animal Handling",
+        "Check Box5": "Arcana",
+        "Check Box2": "Athletics",
+        "Check Box21": "Deception",
+        "Check Box6": "History",
+        "Check Box15": "Insight",
+        "Check Box16": "Investigation",
+        "Check Box17": "Medicine",
+        "Check Box14": "Nature",
+        "Check Box23": "Perception",
+        "Check Box24": "Performance",
+        "Check Box25": "Persuasion",
+        "Check Box12": "Religion",
+        "Check Box9": "Sleight of Hand",
+        "Check Box8": "Stealth",
+        "Check Box22": "Survival",
+      };
+      const skillCheckMap = {
+        "Check Box19": "Athletics",
+        "Check Box20": "Intimidation",
+      };
+      for (const [id, sk] of Object.entries(skillRadioMap))
+        setRadio(id, c.skills.includes(sk));
+      for (const [id, sk] of Object.entries(skillCheckMap))
+        setCheck(id, c.skills.includes(sk));
+
+      // Spells — row 0: SPELL NOTES (name) + SPELL LEVEL0 (level)
+      //          rows 1+: SPELL NAME1, SPELL NAME2... + SPELL LEVEL3, SPELL LEVEL4...
+      const allSpells = [
+        ...c.spells.cantrips.map((s) => ["0", this.formatName(s)]),
+        ...c.spells.prepared.map((s) => ["1", this.formatName(s)]),
       ];
-      const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+      const nameFields = [
+        "SPELL NOTES",
+        "SPELL NAME1",
+        "SPELL NAME2",
+        "SPELL NAME5",
+        "SPELL NAME8",
+        "SPELL NAME12",
+        "SPELL NAME13",
+        "SPELL NAME14",
+      ];
+      const levelFields = [
+        "SPELL LEVEL0",
+        "SPELL LEVEL3",
+        "SPELL LEVEL4",
+        "SPELL LEVEL5",
+        "SPELL LEVEL6",
+        "SPELL LEVEL7",
+        "SPELL LEVEL8",
+        "SPELL LEVEL9",
+      ];
+      allSpells.slice(0, nameFields.length).forEach(([lvl, name], i) => {
+        setField(nameFields[i], name);
+        setField(levelFields[i], lvl === "0" ? "" : lvl);
+      });
+
+      // ── Draw text ─────────────────────────────────────
+      // y coord: 0 = top of page; pdf-lib y = H - yFromTop - size*0.8
+      const draw = (page, text, x, yFromTop, size = 8, bold = false) => {
+        if (text === null || text === undefined || text === "") return;
+        page.drawText(String(text), {
+          x,
+          y: H - yFromTop - size * 0.8,
+          size,
+          font: bold ? fontB : font,
+          color: rgb(0, 0, 0),
+        });
+      };
+
+      // ── PAGE 1 ────────────────────────────────────────
+
+      // Header
+      draw(p1, c.name, 116, 36, 10, true);
+      draw(p1, (c.background || "").toUpperCase(), 93, 53, 7);
+      draw(p1, (c.class || "").toUpperCase(), 185, 53, 7);
+      draw(p1, (c.species || "").toUpperCase(), 93, 74, 7);
+      draw(p1, c.subclass || "", 185, 74, 7);
+      draw(p1, String(c.level || 1), 270, 44, 13, true);
+      draw(p1, String(c.xp || 0), 268, 70, 7);
+
+      // Combat stats
+      draw(p1, String(this.baseAC), 331, 30, 13, true);
+      draw(p1, String(this.maxHP), 472, 72, 9, true); // CURRENT
+      draw(p1, String(this.maxHP), 506, 72, 9); // MAX
+      draw(p1, `1${hitDie}`, 497, 63, 8); // HIT DICE
+
+      // Secondary row
+      draw(p1, mod(fs("DEX")), 248, 136, 14, true);
+      draw(p1, speedVal, 343, 136, 10);
+      draw(p1, sizeVal, 440, 136, 10);
+      draw(p1, String(passive), 512, 136, 14, true);
+
+      // STRENGTH (score circle center ~y=286)
+      draw(p1, String(fs("STR")), 60, 284, 11, true);
+      draw(p1, mod(fs("STR")), 32, 297, 9);
+      draw(p1, stv("STR"), 90, 311, 8);
+      draw(p1, skb("Athletics", "STR"), 90, 330, 8);
+
+      // DEXTERITY
+      draw(p1, String(fs("DEX")), 60, 358, 11, true);
+      draw(p1, mod(fs("DEX")), 32, 371, 9);
+      draw(p1, stv("DEX"), 90, 384, 8);
+      draw(p1, skb("Acrobatics", "DEX"), 90, 403, 8);
+      draw(p1, skb("Sleight of Hand", "DEX"), 90, 417, 8);
+      draw(p1, skb("Stealth", "DEX"), 90, 431, 8);
+
+      // CONSTITUTION
+      draw(p1, String(fs("CON")), 60, 501, 11, true);
+      draw(p1, mod(fs("CON")), 32, 514, 9);
+      draw(p1, stv("CON"), 90, 527, 8);
+
+      // INTELLIGENCE
+      draw(p1, String(fs("INT")), 166, 155, 11, true);
+      draw(p1, mod(fs("INT")), 136, 168, 9);
+      draw(p1, stv("INT"), 198, 181, 8);
+      draw(p1, skb("Arcana", "INT"), 198, 200, 8);
+      draw(p1, skb("History", "INT"), 198, 214, 8);
+      draw(p1, skb("Investigation", "INT"), 198, 228, 8);
+      draw(p1, skb("Nature", "INT"), 198, 242, 8);
+      draw(p1, skb("Religion", "INT"), 198, 256, 8);
+
+      // WISDOM
+      draw(p1, String(fs("WIS")), 166, 333, 11, true);
+      draw(p1, mod(fs("WIS")), 136, 346, 9);
+      draw(p1, stv("WIS"), 198, 359, 8);
+      draw(p1, skb("Animal Handling", "WIS"), 198, 378, 8);
+      draw(p1, skb("Insight", "WIS"), 198, 392, 8);
+      draw(p1, skb("Medicine", "WIS"), 198, 406, 8);
+      draw(p1, skb("Perception", "WIS"), 198, 420, 8);
+      draw(p1, skb("Survival", "WIS"), 198, 434, 8);
+
+      // CHARISMA
+      draw(p1, String(fs("CHA")), 166, 509, 11, true);
+      draw(p1, mod(fs("CHA")), 136, 522, 9);
+      draw(p1, stv("CHA"), 198, 535, 8);
+      draw(p1, skb("Deception", "CHA"), 198, 554, 8);
+      draw(p1, skb("Intimidation", "CHA"), 198, 568, 8);
+      draw(p1, skb("Performance", "CHA"), 198, 582, 8);
+      draw(p1, skb("Persuasion", "CHA"), 198, 596, 8);
+
+      // Right column
+      const cfText =
+        this.selectedClassData?.levelPanels?.[0]?.features
+          ?.map((f) => f.title)
+          .join(", ") || "";
+      draw(p1, cfText, 363, 356, 8);
+
+      const stText =
+        this.selectedSpeciesData?.race?.[0]?.feats
+          ?.map((f) => f.name)
+          .join(", ") || "";
+      draw(p1, stText.slice(0, 120), 225, 598, 7);
+
+      const featText = c.backgroundData?.feat || "";
+      draw(p1, featText, 458, 598, 7);
+
+      // Equipment & Proficiencies
+      const weaponProf =
+        this.selectedClassData?.coreTraits
+          ?.find((t) => t.label === "Weapon Proficiencies")
+          ?.value?.slice(0, 55) || "";
+      const eqText =
+        c.equipment === "A" ? this.equipmentOptionA : this.equipmentOptionB;
+      draw(p1, "None", 57, 649, 7); // Armor training
+      draw(p1, weaponProf, 16, 662, 7); // Weapon proficiencies
+      draw(p1, eqText?.slice(0, 95) || "", 16, 673, 7); // Equipment pack
+      draw(p1, c.backgroundData?.tool || "None", 16, 724, 8); // Tools
+
+      // ── PAGE 2 ────────────────────────────────────────
+      draw(p2, spellAbilityName, 26, 37, 7);
+      draw(p2, mod(fs(spellAbility)), 58, 63, 11, true);
+      draw(p2, String(spellSaveDC), 58, 87, 11, true);
+      draw(p2, `+${spellAtk}`, 58, 111, 11, true);
+
+      const fullEq = [eqText, c.backgroundData?.equipment]
+        .filter(Boolean)
+        .join(", ");
+      draw(p2, fullEq.slice(0, 100), 415, 412, 7);
+
+      // ── Flatten & download ────────────────────────────
+      form.flatten();
+      const filled = await pdfDoc.save();
+      const blob = new Blob([filled], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `${c.name || "character"}_sheet.txt`;
+      a.download = `${c.name || "character"}_sheet.pdf`;
       a.click();
       URL.revokeObjectURL(url);
     },
