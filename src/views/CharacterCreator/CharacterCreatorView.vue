@@ -1132,6 +1132,13 @@
           <button class="sheet-btn sheet-btn-primary" @click="downloadSheet">
             <v-icon size="18">mdi-download</v-icon> Download PDF
           </button>
+          <button
+            class="sheet-btn"
+            style="background: #334155; color: #fff"
+            @click="debugMode = !debugMode"
+          >
+            Debug PDF
+          </button>
           <button class="sheet-btn sheet-btn-secondary" @click="resetCharacter">
             <v-icon size="18">mdi-refresh</v-icon> Start Over
           </button>
@@ -1164,6 +1171,93 @@
           Continue <v-icon size="18">mdi-arrow-right</v-icon>
         </button>
       </div>
+    </div>
+    <div
+      v-if="debugMode"
+      style="
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        background: #0e0e1a;
+        border-left: 1px solid #c084fc;
+        padding: 1rem;
+        width: 280px;
+        height: 100vh;
+        overflow-y: auto;
+        font-family: monospace;
+        font-size: 11px;
+        color: #e0e0e0;
+      "
+    >
+      <div style="font-weight: bold; color: #c084fc; margin-bottom: 0.5rem">
+        PDF Position Tuner
+      </div>
+      <div style="font-size: 10px; color: #64748b; margin-bottom: 0.75rem">
+        id · x · yFromTop
+      </div>
+      <div
+        v-for="field in pdfFields"
+        :key="field.id"
+        style="
+          display: grid;
+          grid-template-columns: 90px 45px 55px;
+          gap: 3px;
+          margin-bottom: 4px;
+          align-items: center;
+        "
+      >
+        <span
+          style="
+            color: #94a3b8;
+            font-size: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          "
+          :title="field.id"
+          >{{ field.id }}</span
+        >
+        <input
+          type="number"
+          v-model.number="field.x"
+          style="
+            background: #1e1e2e;
+            color: #fff;
+            border: 1px solid #334155;
+            padding: 2px 4px;
+            width: 100%;
+            font-size: 10px;
+          "
+        />
+        <input
+          type="number"
+          v-model.number="field.yFromTop"
+          style="
+            background: #1e1e2e;
+            color: #fff;
+            border: 1px solid #334155;
+            padding: 2px 4px;
+            width: 100%;
+            font-size: 10px;
+          "
+        />
+      </div>
+      <button
+        @click="copyPositions"
+        style="
+          margin-top: 0.75rem;
+          width: 100%;
+          background: #c084fc;
+          color: #fff;
+          border: none;
+          padding: 6px;
+          cursor: pointer;
+          font-size: 11px;
+        "
+      >
+        Copy All Positions
+      </button>
     </div>
   </div>
 </template>
@@ -1204,7 +1298,92 @@ export default {
   data() {
     return {
       currentStep: 0,
-
+      debugMode: false,
+      pdfFields: [
+        { id: "name", x: 30, yFromTop: 20 },
+        { id: "background", x: 30, yFromTop: 45 },
+        { id: "class", x: 185, yFromTop: 53 },
+        { id: "species", x: 93, yFromTop: 74 },
+        { id: "level", x: 270, yFromTop: 33 },
+        { id: "xp", x: 268, yFromTop: 70 },
+        { id: "ac", x: 331, yFromTop: 40 },
+        { id: "hp_cur", x: 400, yFromTop: 64 },
+        { id: "hp_max", x: 450, yFromTop: 64 },
+        { id: "hit_die", x: 493, yFromTop: 64 },
+        { id: "initiative", x: 255, yFromTop: 135 },
+        { id: "speed", x: 343, yFromTop: 135 },
+        { id: "size", x: 420, yFromTop: 135 },
+        { id: "passive", x: 545, yFromTop: 135 },
+        { id: "str_score", x: 50, yFromTop: 222 },
+        { id: "str_mod", x: 27, yFromTop: 248 },
+        { id: "str_save", x: 27, yFromTop: 266 },
+        { id: "athletics", x: 27, yFromTop: 282 },
+        { id: "dex_score", x: 50, yFromTop: 337 },
+        { id: "dex_mod", x: 27, yFromTop: 362 },
+        { id: "dex_save", x: 27, yFromTop: 385 },
+        { id: "acrobatics", x: 27, yFromTop: 400 },
+        { id: "sleight", x: 27, yFromTop: 411 },
+        { id: "stealth", x: 27, yFromTop: 423 },
+        { id: "con_score", x: 50, yFromTop: 489 },
+        { id: "con_mod", x: 27, yFromTop: 512 },
+        { id: "con_save", x: 27, yFromTop: 536 },
+        { id: "int_score", x: 159, yFromTop: 149 },
+        { id: "int_mod", x: 132, yFromTop: 169 },
+        { id: "int_save", x: 135, yFromTop: 186 },
+        { id: "arcana", x: 135, yFromTop: 200 },
+        { id: "history", x: 135, yFromTop: 211 },
+        { id: "invest", x: 135, yFromTop: 223 },
+        { id: "nature", x: 135, yFromTop: 235 },
+        { id: "religion", x: 135, yFromTop: 246 },
+        { id: "wis_score", x: 159, yFromTop: 324 },
+        { id: "wis_mod", x: 132, yFromTop: 343 },
+        { id: "wis_save", x: 135, yFromTop: 364 },
+        { id: "animal", x: 135, yFromTop: 379 },
+        { id: "insight", x: 135, yFromTop: 390 },
+        { id: "medicine", x: 135, yFromTop: 402 },
+        { id: "perception", x: 135, yFromTop: 413 },
+        { id: "survival", x: 135, yFromTop: 424 },
+        { id: "cha_score", x: 159, yFromTop: 493 },
+        { id: "cha_mod", x: 132, yFromTop: 512 },
+        { id: "cha_save", x: 135, yFromTop: 532 },
+        { id: "deception", x: 135, yFromTop: 547 },
+        { id: "intim", x: 135, yFromTop: 559 },
+        { id: "perform", x: 135, yFromTop: 570 },
+        { id: "persuasion", x: 135, yFromTop: 582 },
+        { id: "cf_text", x: 363, yFromTop: 356 },
+        { id: "sp_traits", x: 225, yFromTop: 598 },
+        { id: "feats", x: 458, yFromTop: 598 },
+        { id: "armor", x: 57, yFromTop: 643 },
+        { id: "weapons", x: 16, yFromTop: 656 },
+        { id: "equipment", x: 16, yFromTop: 668 },
+        { id: "tools", x: 16, yFromTop: 724 },
+        // Saving throw dots
+        { id: "d_str_save", x: 14, yFromTop: 266 },
+        { id: "d_dex_save", x: 14, yFromTop: 385 },
+        { id: "d_con_save", x: 14, yFromTop: 536 },
+        { id: "d_int_save", x: 124, yFromTop: 186 },
+        { id: "d_wis_save", x: 124, yFromTop: 364 },
+        { id: "d_cha_save", x: 124, yFromTop: 532 },
+        // Skill dots
+        { id: "d_athletics", x: 14, yFromTop: 282 },
+        { id: "d_acrobatics", x: 14, yFromTop: 400 },
+        { id: "d_sleight", x: 14, yFromTop: 411 },
+        { id: "d_stealth", x: 14, yFromTop: 423 },
+        { id: "d_arcana", x: 124, yFromTop: 200 },
+        { id: "d_history", x: 124, yFromTop: 211 },
+        { id: "d_invest", x: 124, yFromTop: 223 },
+        { id: "d_nature", x: 124, yFromTop: 235 },
+        { id: "d_religion", x: 124, yFromTop: 246 },
+        { id: "d_animal", x: 124, yFromTop: 379 },
+        { id: "d_insight", x: 124, yFromTop: 390 },
+        { id: "d_medicine", x: 124, yFromTop: 402 },
+        { id: "d_perception", x: 124, yFromTop: 413 },
+        { id: "d_survival", x: 124, yFromTop: 424 },
+        { id: "d_deception", x: 124, yFromTop: 547 },
+        { id: "d_intim", x: 124, yFromTop: 559 },
+        { id: "d_perform", x: 124, yFromTop: 570 },
+        { id: "d_persuasion", x: 124, yFromTop: 582 },
+      ],
       races,
       backgrounds,
       feats,
@@ -1628,6 +1807,15 @@ export default {
   },
 
   methods: {
+    copyPositions() {
+      const out = this.pdfFields.reduce((acc, f) => {
+        acc[f.id] = { x: f.x, y: f.yFromTop };
+        return acc;
+      }, {});
+      navigator.clipboard.writeText(JSON.stringify(out, null, 2));
+      alert("Copied!");
+    },
+
     goToStep(i) {
       if (i < this.currentStep) {
         this.currentStep = i;
@@ -1959,11 +2147,17 @@ export default {
         return raw;
       })();
 
+      const pos = this.pdfFields.reduce((acc, f) => {
+        acc[f.id] = f;
+        return acc;
+      }, {});
+
       const response = await fetch("/sheet.pdf");
       if (!response.ok) {
         alert(`Could not load PDF: ${response.status}`);
         return;
       }
+
       const pdfDoc = await PDFDocument.load(await response.arrayBuffer());
       const form = pdfDoc.getForm();
       const pages = pdfDoc.getPages();
@@ -1973,6 +2167,7 @@ export default {
       const fontB = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
       const H = p1.getHeight();
 
+      // ── Helpers ───────────────────────────────────────
       const setField = (id, val) => {
         try {
           form.getTextField(id).setText(String(val));
@@ -1980,23 +2175,37 @@ export default {
           /* not found */
         }
       };
-      const setRadio = (id, on) => {
-        try {
-          if (on) form.getRadioGroup(id).select("/Yes");
-        } catch (e) {
-          /* not found */
+
+      const draw = (page, text, x, yFromTop, size = 8, bold = false) => {
+        if (text === null || text === undefined || text === "") return;
+        if (typeof size !== "number") {
+          console.error(`draw() bad size: ${size}, text="${text}"`);
+          return;
         }
-      };
-      const setCheck = (id, on) => {
-        try {
-          const f = form.getField(id);
-          if (on) f.check?.();
-          else f.uncheck?.();
-        } catch (e) {
-          /* not found */
-        }
+        page.drawText(String(text), {
+          x,
+          y: H - yFromTop - size * 0.8,
+          size,
+          font: bold ? fontB : font,
+          color: rgb(0, 0, 0),
+        });
       };
 
+      const drawDot = (page, x, yFromTop, filled) => {
+        const cy = H - yFromTop - 3;
+        page.drawCircle({
+          x,
+          y: cy,
+          size: 3.5,
+          borderColor: rgb(0, 0, 0),
+          borderWidth: 0.75,
+          color: rgb(1, 1, 1),
+        });
+        if (filled)
+          page.drawCircle({ x, y: cy, size: 2.5, color: rgb(0, 0, 0) });
+      };
+
+      // ── Text fields ───────────────────────────────────
       setField("PROF BONUS", "+2");
       setField("Alignment", c.alignment || "");
       setField("BACKSTORY / PERSONALITY", "");
@@ -2007,51 +2216,11 @@ export default {
         /* not found */
       }
 
-      const stRadioMap = {
-        "Check Box7": "Strength",
-        "Check Box11": "Dexterity",
-        "Check Box18": "Constitution",
-        "Check Box3": "Intelligence",
-        "Check Box4": "Wisdom",
-        "Check Box1": "Charisma",
-      };
-      for (const [id, ab] of Object.entries(stRadioMap))
-        setRadio(id, this.savingThrows.includes(ab));
-
-      const skillRadioMap = {
-        "Check Box10": "Acrobatics",
-        "Check Box13": "Animal Handling",
-        "Check Box5": "Arcana",
-        "Check Box2": "Athletics",
-        "Check Box21": "Deception",
-        "Check Box6": "History",
-        "Check Box15": "Insight",
-        "Check Box16": "Investigation",
-        "Check Box17": "Medicine",
-        "Check Box14": "Nature",
-        "Check Box23": "Perception",
-        "Check Box24": "Performance",
-        "Check Box25": "Persuasion",
-        "Check Box12": "Religion",
-        "Check Box9": "Sleight of Hand",
-        "Check Box8": "Stealth",
-        "Check Box22": "Survival",
-      };
-      const skillCheckMap = {
-        "Check Box19": "Athletics",
-        "Check Box20": "Intimidation",
-      };
-      for (const [id, sk] of Object.entries(skillRadioMap))
-        setRadio(id, c.skills.includes(sk));
-      for (const [id, sk] of Object.entries(skillCheckMap))
-        setCheck(id, c.skills.includes(sk));
-
-      // Spell fields — matched pairs from position analysis
+      // ── Spells ────────────────────────────────────────
       const allSpells = [
         ...c.spells.cantrips.map((s) => ["0", this.formatName(s)]),
         ...c.spells.prepared.map((s) => ["1", this.formatName(s)]),
       ];
-      // NAME fields and their matching LEVEL fields, in visual row order (top to bottom)
       const spellPairs = [
         ["SPELL NAME1", "SPELL LEVEL4"],
         ["SPELL NAME2", "SPELL LEVEL7"],
@@ -2068,102 +2237,385 @@ export default {
         setField(spellPairs[i][1], lvl === "0" ? "" : lvl);
       });
 
-      const draw = (page, text, x, yFromTop, size = 8, bold = false) => {
-        if (text === null || text === undefined || text === "") return;
-        page.drawText(String(text), {
-          x,
-          y: H - yFromTop - size * 0.8,
-          size,
-          font: bold ? fontB : font,
-          color: rgb(0, 0, 0),
-        });
-      };
-
       // ── PAGE 1 ────────────────────────────────────────
 
       // Header
-      draw(p1, c.name, 116, 36, 10, true);
-      draw(p1, (c.background || "").toUpperCase(), 93, 53, 7);
-      draw(p1, (c.class || "").toUpperCase(), 185, 53, 7);
-      draw(p1, (c.species || "").toUpperCase(), 93, 74, 7);
+      draw(p1, c.name, pos.name.x, pos.name.yFromTop, 10, true);
+      draw(
+        p1,
+        (c.background || "").toUpperCase(),
+        pos.background.x,
+        pos.background.yFromTop,
+        7,
+      );
+      draw(
+        p1,
+        (c.class || "").toUpperCase(),
+        pos.class.x,
+        pos.class.yFromTop,
+        7,
+      );
+      draw(
+        p1,
+        (c.species || "").toUpperCase(),
+        pos.species.x,
+        pos.species.yFromTop,
+        7,
+      );
       draw(p1, c.subclass || "", 185, 74, 7);
-      draw(p1, String(c.level || 1), 270, 44, 13, true);
-      draw(p1, String(c.xp || 0), 268, 70, 7);
+      draw(p1, String(c.level || 1), pos.level.x, pos.level.yFromTop, 13, true);
+      draw(p1, String(c.xp || 0), pos.xp.x, pos.xp.yFromTop, 7);
 
       // Combat
-      draw(p1, String(this.baseAC), 331, 28, 13, true);
-      draw(p1, String(this.maxHP), 427, 74, 9, true);
-      draw(p1, String(this.maxHP), 453, 74, 9);
-      draw(p1, `1${hitDie}`, 493, 66, 8);
+      draw(p1, String(this.baseAC), pos.ac.x, pos.ac.yFromTop, 13, true);
+      draw(p1, String(this.maxHP), pos.hp_cur.x, pos.hp_cur.yFromTop, 9, true);
+      draw(p1, String(this.maxHP), pos.hp_max.x, pos.hp_max.yFromTop, 9);
+      draw(p1, `1${hitDie}`, pos.hit_die.x, pos.hit_die.yFromTop, 8);
 
       // Secondary row
-      draw(p1, mod(fs("DEX")), 248, 136, 14, true);
-      draw(p1, speedVal, 343, 136, 10);
-      draw(p1, sizeVal, 440, 136, 10);
-      draw(p1, String(passive), 512, 136, 14, true);
+      draw(
+        p1,
+        mod(fs("DEX")),
+        pos.initiative.x,
+        pos.initiative.yFromTop,
+        14,
+        true,
+      );
+      draw(p1, speedVal, pos.speed.x, pos.speed.yFromTop, 10);
+      draw(p1, sizeVal.split(" ")[0], pos.size.x, pos.size.yFromTop, 10);
+      draw(p1, String(passive), pos.passive.x, pos.passive.yFromTop, 14, true);
 
-      // ── STRENGTH — score sits inside the circle, mod below it
-      draw(p1, String(fs("STR")), 60, 267, 11, true);
-      draw(p1, mod(fs("STR")), 30, 283, 9);
-      draw(p1, stv("STR"), 90, 298, 8);
-      draw(p1, skb("Athletics", "STR"), 90, 315, 8);
+      // STRENGTH
+      draw(
+        p1,
+        String(fs("STR")),
+        pos.str_score.x,
+        pos.str_score.yFromTop,
+        11,
+        true,
+      );
+      draw(p1, mod(fs("STR")), pos.str_mod.x, pos.str_mod.yFromTop, 9);
+      drawDot(
+        p1,
+        pos.d_str_save.x,
+        pos.d_str_save.yFromTop,
+        this.savingThrows.includes("Strength"),
+      );
+      draw(p1, stv("STR"), pos.str_save.x, pos.str_save.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_athletics.x,
+        pos.d_athletics.yFromTop,
+        c.skills.includes("Athletics"),
+      );
+      draw(
+        p1,
+        skb("Athletics", "STR"),
+        pos.athletics.x,
+        pos.athletics.yFromTop,
+        8,
+      );
 
-      // ── DEXTERITY
-      draw(p1, String(fs("DEX")), 60, 345, 11, true);
-      draw(p1, mod(fs("DEX")), 30, 360, 9);
-      draw(p1, stv("DEX"), 90, 375, 8);
-      draw(p1, skb("Acrobatics", "DEX"), 90, 393, 8);
-      draw(p1, skb("Sleight of Hand", "DEX"), 90, 407, 8);
-      draw(p1, skb("Stealth", "DEX"), 90, 421, 8);
+      // DEXTERITY
+      draw(
+        p1,
+        String(fs("DEX")),
+        pos.dex_score.x,
+        pos.dex_score.yFromTop,
+        11,
+        true,
+      );
+      draw(p1, mod(fs("DEX")), pos.dex_mod.x, pos.dex_mod.yFromTop, 9);
+      drawDot(
+        p1,
+        pos.d_dex_save.x,
+        pos.d_dex_save.yFromTop,
+        this.savingThrows.includes("Dexterity"),
+      );
+      draw(p1, stv("DEX"), pos.dex_save.x, pos.dex_save.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_acrobatics.x,
+        pos.d_acrobatics.yFromTop,
+        c.skills.includes("Acrobatics"),
+      );
+      draw(
+        p1,
+        skb("Acrobatics", "DEX"),
+        pos.acrobatics.x,
+        pos.acrobatics.yFromTop,
+        8,
+      );
+      drawDot(
+        p1,
+        pos.d_sleight.x,
+        pos.d_sleight.yFromTop,
+        c.skills.includes("Sleight of Hand"),
+      );
+      draw(
+        p1,
+        skb("Sleight of Hand", "DEX"),
+        pos.sleight.x,
+        pos.sleight.yFromTop,
+        8,
+      );
+      drawDot(
+        p1,
+        pos.d_stealth.x,
+        pos.d_stealth.yFromTop,
+        c.skills.includes("Stealth"),
+      );
+      draw(p1, skb("Stealth", "DEX"), pos.stealth.x, pos.stealth.yFromTop, 8);
 
-      // ── CONSTITUTION
-      draw(p1, String(fs("CON")), 60, 487, 11, true);
-      draw(p1, mod(fs("CON")), 30, 502, 9);
-      draw(p1, stv("CON"), 90, 516, 8);
+      // CONSTITUTION
+      draw(
+        p1,
+        String(fs("CON")),
+        pos.con_score.x,
+        pos.con_score.yFromTop,
+        11,
+        true,
+      );
+      draw(p1, mod(fs("CON")), pos.con_mod.x, pos.con_mod.yFromTop, 9);
+      drawDot(
+        p1,
+        pos.d_con_save.x,
+        pos.d_con_save.yFromTop,
+        this.savingThrows.includes("Constitution"),
+      );
+      draw(p1, stv("CON"), pos.con_save.x, pos.con_save.yFromTop, 8);
 
-      // ── INTELLIGENCE — score in circle, mod below, skills further right
-      draw(p1, String(fs("INT")), 166, 148, 11, true);
-      draw(p1, mod(fs("INT")), 136, 163, 9);
-      draw(p1, stv("INT"), 230, 176, 8);
-      draw(p1, skb("Arcana", "INT"), 230, 195, 8);
-      draw(p1, skb("History", "INT"), 230, 209, 8);
-      draw(p1, skb("Investigation", "INT"), 230, 223, 8);
-      draw(p1, skb("Nature", "INT"), 230, 237, 8);
-      draw(p1, skb("Religion", "INT"), 230, 251, 8);
+      // INTELLIGENCE
+      draw(
+        p1,
+        String(fs("INT")),
+        pos.int_score.x,
+        pos.int_score.yFromTop,
+        11,
+        true,
+      );
+      draw(p1, mod(fs("INT")), pos.int_mod.x, pos.int_mod.yFromTop, 9);
+      drawDot(
+        p1,
+        pos.d_int_save.x,
+        pos.d_int_save.yFromTop,
+        this.savingThrows.includes("Intelligence"),
+      );
+      draw(p1, stv("INT"), pos.int_save.x, pos.int_save.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_arcana.x,
+        pos.d_arcana.yFromTop,
+        c.skills.includes("Arcana"),
+      );
+      draw(p1, skb("Arcana", "INT"), pos.arcana.x, pos.arcana.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_history.x,
+        pos.d_history.yFromTop,
+        c.skills.includes("History"),
+      );
+      draw(p1, skb("History", "INT"), pos.history.x, pos.history.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_invest.x,
+        pos.d_invest.yFromTop,
+        c.skills.includes("Investigation"),
+      );
+      draw(
+        p1,
+        skb("Investigation", "INT"),
+        pos.invest.x,
+        pos.invest.yFromTop,
+        8,
+      );
+      drawDot(
+        p1,
+        pos.d_nature.x,
+        pos.d_nature.yFromTop,
+        c.skills.includes("Nature"),
+      );
+      draw(p1, skb("Nature", "INT"), pos.nature.x, pos.nature.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_religion.x,
+        pos.d_religion.yFromTop,
+        c.skills.includes("Religion"),
+      );
+      draw(
+        p1,
+        skb("Religion", "INT"),
+        pos.religion.x,
+        pos.religion.yFromTop,
+        8,
+      );
 
-      // ── WISDOM
-      draw(p1, String(fs("WIS")), 166, 323, 11, true);
-      draw(p1, mod(fs("WIS")), 136, 338, 9);
-      draw(p1, stv("WIS"), 230, 352, 8);
-      draw(p1, skb("Animal Handling", "WIS"), 230, 370, 8);
-      draw(p1, skb("Insight", "WIS"), 230, 384, 8);
-      draw(p1, skb("Medicine", "WIS"), 230, 398, 8);
-      draw(p1, skb("Perception", "WIS"), 230, 412, 8);
-      draw(p1, skb("Survival", "WIS"), 230, 426, 8);
+      // WISDOM
+      draw(
+        p1,
+        String(fs("WIS")),
+        pos.wis_score.x,
+        pos.wis_score.yFromTop,
+        11,
+        true,
+      );
+      draw(p1, mod(fs("WIS")), pos.wis_mod.x, pos.wis_mod.yFromTop, 9);
+      drawDot(
+        p1,
+        pos.d_wis_save.x,
+        pos.d_wis_save.yFromTop,
+        this.savingThrows.includes("Wisdom"),
+      );
+      draw(p1, stv("WIS"), pos.wis_save.x, pos.wis_save.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_animal.x,
+        pos.d_animal.yFromTop,
+        c.skills.includes("Animal Handling"),
+      );
+      draw(
+        p1,
+        skb("Animal Handling", "WIS"),
+        pos.animal.x,
+        pos.animal.yFromTop,
+        8,
+      );
+      drawDot(
+        p1,
+        pos.d_insight.x,
+        pos.d_insight.yFromTop,
+        c.skills.includes("Insight"),
+      );
+      draw(p1, skb("Insight", "WIS"), pos.insight.x, pos.insight.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_medicine.x,
+        pos.d_medicine.yFromTop,
+        c.skills.includes("Medicine"),
+      );
+      draw(
+        p1,
+        skb("Medicine", "WIS"),
+        pos.medicine.x,
+        pos.medicine.yFromTop,
+        8,
+      );
+      drawDot(
+        p1,
+        pos.d_perception.x,
+        pos.d_perception.yFromTop,
+        c.skills.includes("Perception"),
+      );
+      draw(
+        p1,
+        skb("Perception", "WIS"),
+        pos.perception.x,
+        pos.perception.yFromTop,
+        8,
+      );
+      drawDot(
+        p1,
+        pos.d_survival.x,
+        pos.d_survival.yFromTop,
+        c.skills.includes("Survival"),
+      );
+      draw(
+        p1,
+        skb("Survival", "WIS"),
+        pos.survival.x,
+        pos.survival.yFromTop,
+        8,
+      );
 
-      // ── CHARISMA
-      draw(p1, String(fs("CHA")), 166, 497, 11, true);
-      draw(p1, mod(fs("CHA")), 136, 512, 9);
-      draw(p1, stv("CHA"), 230, 526, 8);
-      draw(p1, skb("Deception", "CHA"), 230, 545, 8);
-      draw(p1, skb("Intimidation", "CHA"), 230, 559, 8);
-      draw(p1, skb("Performance", "CHA"), 230, 573, 8);
-      draw(p1, skb("Persuasion", "CHA"), 230, 587, 8);
+      // CHARISMA
+      draw(
+        p1,
+        String(fs("CHA")),
+        pos.cha_score.x,
+        pos.cha_score.yFromTop,
+        11,
+        true,
+      );
+      draw(p1, mod(fs("CHA")), pos.cha_mod.x, pos.cha_mod.yFromTop, 9);
+      drawDot(
+        p1,
+        pos.d_cha_save.x,
+        pos.d_cha_save.yFromTop,
+        this.savingThrows.includes("Charisma"),
+      );
+      draw(p1, stv("CHA"), pos.cha_save.x, pos.cha_save.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_deception.x,
+        pos.d_deception.yFromTop,
+        c.skills.includes("Deception"),
+      );
+      draw(
+        p1,
+        skb("Deception", "CHA"),
+        pos.deception.x,
+        pos.deception.yFromTop,
+        8,
+      );
+      drawDot(
+        p1,
+        pos.d_intim.x,
+        pos.d_intim.yFromTop,
+        c.skills.includes("Intimidation"),
+      );
+      draw(p1, skb("Intimidation", "CHA"), pos.intim.x, pos.intim.yFromTop, 8);
+      drawDot(
+        p1,
+        pos.d_perform.x,
+        pos.d_perform.yFromTop,
+        c.skills.includes("Performance"),
+      );
+      draw(
+        p1,
+        skb("Performance", "CHA"),
+        pos.perform.x,
+        pos.perform.yFromTop,
+        8,
+      );
+      drawDot(
+        p1,
+        pos.d_persuasion.x,
+        pos.d_persuasion.yFromTop,
+        c.skills.includes("Persuasion"),
+      );
+      draw(
+        p1,
+        skb("Persuasion", "CHA"),
+        pos.persuasion.x,
+        pos.persuasion.yFromTop,
+        8,
+      );
 
       // Right column
       const cfText =
         this.selectedClassData?.levelPanels?.[0]?.features
           ?.map((f) => f.title)
           .join(", ") || "";
-      draw(p1, cfText, 363, 356, 8);
+      draw(p1, cfText, pos.cf_text.x, pos.cf_text.yFromTop, 8);
 
       const stText =
         this.selectedSpeciesData?.race?.[0]?.feats
           ?.map((f) => f.name)
           .join(", ") || "";
-      draw(p1, stText.slice(0, 120), 225, 598, 7);
-
-      draw(p1, c.backgroundData?.feat || "", 458, 598, 7);
+      draw(
+        p1,
+        stText.slice(0, 120),
+        pos.sp_traits.x,
+        pos.sp_traits.yFromTop,
+        7,
+      );
+      draw(
+        p1,
+        c.backgroundData?.feat || "",
+        pos.feats.x,
+        pos.feats.yFromTop,
+        7,
+      );
 
       const weaponProf =
         this.selectedClassData?.coreTraits
@@ -2171,10 +2623,22 @@ export default {
           ?.value?.slice(0, 55) || "";
       const eqText =
         c.equipment === "A" ? this.equipmentOptionA : this.equipmentOptionB;
-      draw(p1, "None", 57, 643, 7);
-      draw(p1, weaponProf, 16, 670, 7);
-      draw(p1, eqText?.slice(0, 95) || "", 16, 680, 7);
-      draw(p1, c.backgroundData?.tool || "None", 16, 730, 8);
+      draw(p1, "None", pos.armor.x, pos.armor.yFromTop, 7);
+      draw(p1, weaponProf, pos.weapons.x, pos.weapons.yFromTop, 7);
+      draw(
+        p1,
+        eqText?.slice(0, 95) || "",
+        pos.equipment.x,
+        pos.equipment.yFromTop,
+        7,
+      );
+      draw(
+        p1,
+        c.backgroundData?.tool || "None",
+        pos.tools.x,
+        pos.tools.yFromTop,
+        8,
+      );
 
       // ── PAGE 2 ────────────────────────────────────────
       draw(p2, spellAbilityName, 26, 37, 7);
@@ -2187,6 +2651,7 @@ export default {
         .join(", ");
       draw(p2, fullEq.slice(0, 100), 415, 412, 7);
 
+      // ── Save & download ───────────────────────────────
       form.flatten();
       const filled = await pdfDoc.save();
       const blob = new Blob([filled], { type: "application/pdf" });
