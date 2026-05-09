@@ -2097,7 +2097,7 @@ export default {
     },
 
     async downloadSheet() {
-      const { PDFDocument, rgb, StandardFonts } = await import("pdf-lib");
+      const { PDFDocument } = await import("pdf-lib");
       const c = this.character;
 
       const fs = (ab) =>
@@ -2138,19 +2138,17 @@ export default {
           ?.find((t) => t.label === "Hit Point Die")
           ?.value?.match(/D\d+/i)?.[0]
           ?.toLowerCase() || "d8";
-      const speedVal = this.selectedSpeciesData?.race?.[0]?.speed || "30 ft.";
-      const sizeVal = this.selectedSpeciesData?.race?.[0]?.size || "Medium";
       const spellAbilityName = (() => {
         const raw = this.selectedClassData?.primaryStat || "";
         if (raw.includes("&")) return raw.split("&").pop().trim();
         if (raw.includes("·")) return raw.split("·").pop().trim();
-        return raw;
+        return raw.split(" ")[0];
       })();
-
-      const pos = this.pdfFields.reduce((acc, f) => {
-        acc[f.id] = f;
-        return acc;
-      }, {});
+      const eqText =
+        c.equipment === "A" ? this.equipmentOptionA : this.equipmentOptionB;
+      const fullEq = [eqText, c.backgroundData?.equipment]
+        .filter(Boolean)
+        .join(", ");
 
       const response = await fetch("/sheet.pdf");
       if (!response.ok) {
@@ -2160,496 +2158,132 @@ export default {
 
       const pdfDoc = await PDFDocument.load(await response.arrayBuffer());
       const form = pdfDoc.getForm();
-      const pages = pdfDoc.getPages();
-      const p1 = pages[0];
-      const p2 = pages[1];
-      const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-      const fontB = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
-      const H = p1.getHeight();
 
-      // ── Helpers ───────────────────────────────────────
-      const setField = (id, val) => {
+      const sf = (id, val, fontSize = null) => {
         try {
-          form.getTextField(id).setText(String(val));
+          const field = form.getTextField(id);
+          field.setText(String(val ?? ""));
+          if (fontSize !== null) {
+            field.setFontSize(fontSize);
+            // Remove existing default appearance so our font size takes effect
+            const widgets = field.acroField.getWidgets();
+            widgets.forEach((widget) => {
+              widget.setDefaultAppearance(`/Helvetica ${fontSize} Tf 0 g`);
+            });
+          }
         } catch (e) {
           /* not found */
         }
       };
 
-      const draw = (page, text, x, yFromTop, size = 8, bold = false) => {
-        if (text === null || text === undefined || text === "") return;
-        if (typeof size !== "number") {
-          console.error(`draw() bad size: ${size}, text="${text}"`);
-          return;
+      const checkField = (id, on) => {
+        try {
+          const field = form.getField(id);
+          const type = field.constructor.name;
+          if (on) {
+            if (type === "PDFCheckBox") field.check();
+            else field.select("/Yes");
+          } else {
+            if (type === "PDFCheckBox") field.uncheck();
+          }
+        } catch (e) {
+          /* not found */
         }
-        page.drawText(String(text), {
-          x,
-          y: H - yFromTop - size * 0.8,
-          size,
-          font: bold ? fontB : font,
-          color: rgb(0, 0, 0),
-        });
       };
 
-      const drawDot = (page, x, yFromTop, filled) => {
-        const cy = H - yFromTop - 3;
-        page.drawCircle({
-          x,
-          y: cy,
-          size: 3.5,
-          borderColor: rgb(0, 0, 0),
-          borderWidth: 0.75,
-          color: rgb(1, 1, 1),
-        });
-        if (filled)
-          page.drawCircle({ x, y: cy, size: 2.5, color: rgb(0, 0, 0) });
-      };
+      // ── Header ───────────────────────────────────────
+      sf("Name", c.name || "", 10);
+      sf("Background", (c.background || "").toUpperCase(), 7);
+      sf("Class", (c.class || "").toUpperCase(), 7);
+      sf("Species", (c.species || "").toUpperCase(), 7);
+      sf("Subclass", (c.subclass || "").toUpperCase(), 7);
+      sf("Level", String(c.level || 1), 11);
+      sf("XP Points", String(c.xp || 0), 7);
 
-      // ── Text fields ───────────────────────────────────
-      setField("PROF BONUS", "+2");
-      setField("Alignment", c.alignment || "");
-      setField("BACKSTORY / PERSONALITY", "");
-      setField("APPEARANCE", "");
-      try {
-        form.getTextField("TOOL PROF").setText("");
-      } catch (e) {
-        /* not found */
-      }
+      // ── Combat ───────────────────────────────────────
+      sf("Armor Class", String(this.baseAC), 11);
+      sf("Current HP", String(this.maxHP), 11);
+      sf("Max HP", String(this.maxHP), 11);
+      sf("Max HD", `1${hitDie}`, 9);
+      sf("PROF BONUS", "+2", 14);
+      sf("init", mod(fs("DEX")), 11);
+      sf("SPEED", this.selectedSpeciesData?.race?.[0]?.speed || "30 ft.", 9);
+      sf(
+        "SIZE",
+        (this.selectedSpeciesData?.race?.[0]?.size || "Medium").split(" ")[0],
+        9,
+      );
+      sf("PASSIVE PERCEPTION", String(passive), 11);
 
-      // ── Spells ────────────────────────────────────────
+      // ── Ability scores ────────────────────────────────
+      sf("STR SCORE", String(fs("STR")), 11);
+      sf("STR MOD", mod(fs("STR")), 10);
+      sf("STR SAVE", stv("STR"), 9);
+      sf("DEX SCORE", String(fs("DEX")), 11);
+      sf("DEX MOD", mod(fs("DEX")), 10);
+      sf("DEX SAVE", stv("DEX"), 9);
+      sf("CON SCORE", String(fs("CON")), 11);
+      sf("CON MOD", mod(fs("CON")), 10);
+      sf("CON SAVE", stv("CON"), 9);
+      sf("INT SCORE", String(fs("INT")), 11);
+      sf("INT MOD", mod(fs("INT")), 10);
+      sf("INT SAVE", stv("INT"), 9);
+      sf("WIS SCORE", String(fs("WIS")), 11);
+      sf("WIS MOD", mod(fs("WIS")), 10);
+      sf("CHA SCORE", String(fs("CHA")), 11);
+      sf("CHA MOD", mod(fs("CHA")), 10);
+      sf("CHA SAVE", stv("CHA"), 9);
+
+      // ── Skills ────────────────────────────────────────
+      sf("ATHLETICS", skb("Athletics", "STR"), 9);
+      sf("ACROBATICS", skb("Acrobatics", "DEX"), 9);
+      sf("SLEIGHT OF HAND", skb("Sleight of Hand", "DEX"), 9);
+      sf("STEALTH", skb("Stealth", "DEX"), 9);
+      sf("ARCANA", skb("Arcana", "INT"), 9);
+      sf("HISTORY", skb("History", "INT"), 9);
+      sf("INVESTIGATION", skb("Investigation", "INT"), 9);
+      sf("NATURE", skb("Nature", "INT"), 9);
+      sf("RELIGION", skb("Religion", "INT"), 9);
+      sf("ANIMAL HANDLING", skb("Animal Handling", "WIS"), 9);
+      sf("INSIGHT", skb("Insight", "WIS"), 9);
+      sf("MEDICINE", skb("Medicine", "WIS"), 9);
+      sf("PERCEPTION", skb("Perception", "WIS"), 9);
+      sf("SURVIVAL", skb("Survival", "WIS"), 9);
+      sf("DECEPTION", skb("Deception", "CHA"), 9);
+      sf("INTIMIDATE", skb("Intimidation", "CHA"), 9);
+      sf("PERFORMANCE", skb("Performance", "CHA"), 9);
+      sf("PERSUASION", skb("Persuasion", "CHA"), 9);
+
+      // ── Right column (auto-fit for long text) ─────────
+      sf("CLASS FEATURES 1", cfText, 0);
+      sf("SPECIES TRAITS", stText, 0);
+      sf("FEATS", c.backgroundData?.feat || "", 0);
+
+      // ── Equipment ─────────────────────────────────────
+      sf(
+        "WEAPON PROF",
+        this.selectedClassData?.coreTraits?.find(
+          (t) => t.label === "Weapon Proficiencies",
+        )?.value || "",
+        0,
+      );
+      sf("EQUIPMENT", fullEq, 0);
+      sf("TOOL PROF", c.backgroundData?.tool || "", 10);
+      sf("Alignment", c.alignment || "", 9);
+
+      // ── Page 2 spellcasting ───────────────────────────
+      sf("SPELLCASTING ABILITY", spellAbilityName, 9);
+      sf("SPELLCASTING MOD", mod(fs(spellAbility)), 11);
+      sf("SPELL SAVE DC", String(spellSaveDC), 11);
+      sf("SPELL ATTACK BONUS", `+${spellAtk}`, 11);
       const allSpells = [
         ...c.spells.cantrips.map((s) => ["0", this.formatName(s)]),
         ...c.spells.prepared.map((s) => ["1", this.formatName(s)]),
       ];
-      const spellPairs = [
-        ["SPELL NAME1", "SPELL LEVEL4"],
-        ["SPELL NAME2", "SPELL LEVEL7"],
-        ["SPELL NAME5", "SPELL LEVEL5"],
-        ["SPELL NAME8", "SPELL LEVEL8"],
-        ["SPELL NAME13", "SPELL LEVEL9"],
-        ["SPELL NAME12", "SPELL LEVEL11"],
-        ["SPELL NAME14", "SPELL LEVEL14"],
-        ["SPELL NAME28", "SPELL LEVEL24"],
-        ["SPELL NAME27", "SPELL LEVEL25"],
-      ];
-      allSpells.slice(0, spellPairs.length).forEach(([lvl, name], i) => {
-        setField(spellPairs[i][0], name);
-        setField(spellPairs[i][1], lvl === "0" ? "" : lvl);
+      allSpells.slice(0, 29).forEach(([lvl, name], i) => {
+        sf(`SPELL NAME${i}`, name);
+        sf(`SPELL LEVEL${i}`, lvl === "0" ? "" : lvl);
       });
-
-      // ── PAGE 1 ────────────────────────────────────────
-
-      // Header
-      draw(p1, c.name, pos.name.x, pos.name.yFromTop, 10, true);
-      draw(
-        p1,
-        (c.background || "").toUpperCase(),
-        pos.background.x,
-        pos.background.yFromTop,
-        7,
-      );
-      draw(
-        p1,
-        (c.class || "").toUpperCase(),
-        pos.class.x,
-        pos.class.yFromTop,
-        7,
-      );
-      draw(
-        p1,
-        (c.species || "").toUpperCase(),
-        pos.species.x,
-        pos.species.yFromTop,
-        7,
-      );
-      draw(p1, c.subclass || "", 185, 74, 7);
-      draw(p1, String(c.level || 1), pos.level.x, pos.level.yFromTop, 13, true);
-      draw(p1, String(c.xp || 0), pos.xp.x, pos.xp.yFromTop, 7);
-
-      // Combat
-      draw(p1, String(this.baseAC), pos.ac.x, pos.ac.yFromTop, 13, true);
-      draw(p1, String(this.maxHP), pos.hp_cur.x, pos.hp_cur.yFromTop, 9, true);
-      draw(p1, String(this.maxHP), pos.hp_max.x, pos.hp_max.yFromTop, 9);
-      draw(p1, `1${hitDie}`, pos.hit_die.x, pos.hit_die.yFromTop, 8);
-
-      // Secondary row
-      draw(
-        p1,
-        mod(fs("DEX")),
-        pos.initiative.x,
-        pos.initiative.yFromTop,
-        14,
-        true,
-      );
-      draw(p1, speedVal, pos.speed.x, pos.speed.yFromTop, 10);
-      draw(p1, sizeVal.split(" ")[0], pos.size.x, pos.size.yFromTop, 10);
-      draw(p1, String(passive), pos.passive.x, pos.passive.yFromTop, 14, true);
-
-      // STRENGTH
-      draw(
-        p1,
-        String(fs("STR")),
-        pos.str_score.x,
-        pos.str_score.yFromTop,
-        11,
-        true,
-      );
-      draw(p1, mod(fs("STR")), pos.str_mod.x, pos.str_mod.yFromTop, 9);
-      drawDot(
-        p1,
-        pos.d_str_save.x,
-        pos.d_str_save.yFromTop,
-        this.savingThrows.includes("Strength"),
-      );
-      draw(p1, stv("STR"), pos.str_save.x, pos.str_save.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_athletics.x,
-        pos.d_athletics.yFromTop,
-        c.skills.includes("Athletics"),
-      );
-      draw(
-        p1,
-        skb("Athletics", "STR"),
-        pos.athletics.x,
-        pos.athletics.yFromTop,
-        8,
-      );
-
-      // DEXTERITY
-      draw(
-        p1,
-        String(fs("DEX")),
-        pos.dex_score.x,
-        pos.dex_score.yFromTop,
-        11,
-        true,
-      );
-      draw(p1, mod(fs("DEX")), pos.dex_mod.x, pos.dex_mod.yFromTop, 9);
-      drawDot(
-        p1,
-        pos.d_dex_save.x,
-        pos.d_dex_save.yFromTop,
-        this.savingThrows.includes("Dexterity"),
-      );
-      draw(p1, stv("DEX"), pos.dex_save.x, pos.dex_save.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_acrobatics.x,
-        pos.d_acrobatics.yFromTop,
-        c.skills.includes("Acrobatics"),
-      );
-      draw(
-        p1,
-        skb("Acrobatics", "DEX"),
-        pos.acrobatics.x,
-        pos.acrobatics.yFromTop,
-        8,
-      );
-      drawDot(
-        p1,
-        pos.d_sleight.x,
-        pos.d_sleight.yFromTop,
-        c.skills.includes("Sleight of Hand"),
-      );
-      draw(
-        p1,
-        skb("Sleight of Hand", "DEX"),
-        pos.sleight.x,
-        pos.sleight.yFromTop,
-        8,
-      );
-      drawDot(
-        p1,
-        pos.d_stealth.x,
-        pos.d_stealth.yFromTop,
-        c.skills.includes("Stealth"),
-      );
-      draw(p1, skb("Stealth", "DEX"), pos.stealth.x, pos.stealth.yFromTop, 8);
-
-      // CONSTITUTION
-      draw(
-        p1,
-        String(fs("CON")),
-        pos.con_score.x,
-        pos.con_score.yFromTop,
-        11,
-        true,
-      );
-      draw(p1, mod(fs("CON")), pos.con_mod.x, pos.con_mod.yFromTop, 9);
-      drawDot(
-        p1,
-        pos.d_con_save.x,
-        pos.d_con_save.yFromTop,
-        this.savingThrows.includes("Constitution"),
-      );
-      draw(p1, stv("CON"), pos.con_save.x, pos.con_save.yFromTop, 8);
-
-      // INTELLIGENCE
-      draw(
-        p1,
-        String(fs("INT")),
-        pos.int_score.x,
-        pos.int_score.yFromTop,
-        11,
-        true,
-      );
-      draw(p1, mod(fs("INT")), pos.int_mod.x, pos.int_mod.yFromTop, 9);
-      drawDot(
-        p1,
-        pos.d_int_save.x,
-        pos.d_int_save.yFromTop,
-        this.savingThrows.includes("Intelligence"),
-      );
-      draw(p1, stv("INT"), pos.int_save.x, pos.int_save.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_arcana.x,
-        pos.d_arcana.yFromTop,
-        c.skills.includes("Arcana"),
-      );
-      draw(p1, skb("Arcana", "INT"), pos.arcana.x, pos.arcana.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_history.x,
-        pos.d_history.yFromTop,
-        c.skills.includes("History"),
-      );
-      draw(p1, skb("History", "INT"), pos.history.x, pos.history.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_invest.x,
-        pos.d_invest.yFromTop,
-        c.skills.includes("Investigation"),
-      );
-      draw(
-        p1,
-        skb("Investigation", "INT"),
-        pos.invest.x,
-        pos.invest.yFromTop,
-        8,
-      );
-      drawDot(
-        p1,
-        pos.d_nature.x,
-        pos.d_nature.yFromTop,
-        c.skills.includes("Nature"),
-      );
-      draw(p1, skb("Nature", "INT"), pos.nature.x, pos.nature.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_religion.x,
-        pos.d_religion.yFromTop,
-        c.skills.includes("Religion"),
-      );
-      draw(
-        p1,
-        skb("Religion", "INT"),
-        pos.religion.x,
-        pos.religion.yFromTop,
-        8,
-      );
-
-      // WISDOM
-      draw(
-        p1,
-        String(fs("WIS")),
-        pos.wis_score.x,
-        pos.wis_score.yFromTop,
-        11,
-        true,
-      );
-      draw(p1, mod(fs("WIS")), pos.wis_mod.x, pos.wis_mod.yFromTop, 9);
-      drawDot(
-        p1,
-        pos.d_wis_save.x,
-        pos.d_wis_save.yFromTop,
-        this.savingThrows.includes("Wisdom"),
-      );
-      draw(p1, stv("WIS"), pos.wis_save.x, pos.wis_save.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_animal.x,
-        pos.d_animal.yFromTop,
-        c.skills.includes("Animal Handling"),
-      );
-      draw(
-        p1,
-        skb("Animal Handling", "WIS"),
-        pos.animal.x,
-        pos.animal.yFromTop,
-        8,
-      );
-      drawDot(
-        p1,
-        pos.d_insight.x,
-        pos.d_insight.yFromTop,
-        c.skills.includes("Insight"),
-      );
-      draw(p1, skb("Insight", "WIS"), pos.insight.x, pos.insight.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_medicine.x,
-        pos.d_medicine.yFromTop,
-        c.skills.includes("Medicine"),
-      );
-      draw(
-        p1,
-        skb("Medicine", "WIS"),
-        pos.medicine.x,
-        pos.medicine.yFromTop,
-        8,
-      );
-      drawDot(
-        p1,
-        pos.d_perception.x,
-        pos.d_perception.yFromTop,
-        c.skills.includes("Perception"),
-      );
-      draw(
-        p1,
-        skb("Perception", "WIS"),
-        pos.perception.x,
-        pos.perception.yFromTop,
-        8,
-      );
-      drawDot(
-        p1,
-        pos.d_survival.x,
-        pos.d_survival.yFromTop,
-        c.skills.includes("Survival"),
-      );
-      draw(
-        p1,
-        skb("Survival", "WIS"),
-        pos.survival.x,
-        pos.survival.yFromTop,
-        8,
-      );
-
-      // CHARISMA
-      draw(
-        p1,
-        String(fs("CHA")),
-        pos.cha_score.x,
-        pos.cha_score.yFromTop,
-        11,
-        true,
-      );
-      draw(p1, mod(fs("CHA")), pos.cha_mod.x, pos.cha_mod.yFromTop, 9);
-      drawDot(
-        p1,
-        pos.d_cha_save.x,
-        pos.d_cha_save.yFromTop,
-        this.savingThrows.includes("Charisma"),
-      );
-      draw(p1, stv("CHA"), pos.cha_save.x, pos.cha_save.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_deception.x,
-        pos.d_deception.yFromTop,
-        c.skills.includes("Deception"),
-      );
-      draw(
-        p1,
-        skb("Deception", "CHA"),
-        pos.deception.x,
-        pos.deception.yFromTop,
-        8,
-      );
-      drawDot(
-        p1,
-        pos.d_intim.x,
-        pos.d_intim.yFromTop,
-        c.skills.includes("Intimidation"),
-      );
-      draw(p1, skb("Intimidation", "CHA"), pos.intim.x, pos.intim.yFromTop, 8);
-      drawDot(
-        p1,
-        pos.d_perform.x,
-        pos.d_perform.yFromTop,
-        c.skills.includes("Performance"),
-      );
-      draw(
-        p1,
-        skb("Performance", "CHA"),
-        pos.perform.x,
-        pos.perform.yFromTop,
-        8,
-      );
-      drawDot(
-        p1,
-        pos.d_persuasion.x,
-        pos.d_persuasion.yFromTop,
-        c.skills.includes("Persuasion"),
-      );
-      draw(
-        p1,
-        skb("Persuasion", "CHA"),
-        pos.persuasion.x,
-        pos.persuasion.yFromTop,
-        8,
-      );
-
-      // Right column
-      const cfText =
-        this.selectedClassData?.levelPanels?.[0]?.features
-          ?.map((f) => f.title)
-          .join(", ") || "";
-      draw(p1, cfText, pos.cf_text.x, pos.cf_text.yFromTop, 8);
-
-      const stText =
-        this.selectedSpeciesData?.race?.[0]?.feats
-          ?.map((f) => f.name)
-          .join(", ") || "";
-      draw(
-        p1,
-        stText.slice(0, 120),
-        pos.sp_traits.x,
-        pos.sp_traits.yFromTop,
-        7,
-      );
-      draw(
-        p1,
-        c.backgroundData?.feat || "",
-        pos.feats.x,
-        pos.feats.yFromTop,
-        7,
-      );
-
-      const weaponProf =
-        this.selectedClassData?.coreTraits
-          ?.find((t) => t.label === "Weapon Proficiencies")
-          ?.value?.slice(0, 55) || "";
-      const eqText =
-        c.equipment === "A" ? this.equipmentOptionA : this.equipmentOptionB;
-      draw(p1, "None", pos.armor.x, pos.armor.yFromTop, 7);
-      draw(p1, weaponProf, pos.weapons.x, pos.weapons.yFromTop, 7);
-      draw(
-        p1,
-        eqText?.slice(0, 95) || "",
-        pos.equipment.x,
-        pos.equipment.yFromTop,
-        7,
-      );
-      draw(
-        p1,
-        c.backgroundData?.tool || "None",
-        pos.tools.x,
-        pos.tools.yFromTop,
-        8,
-      );
-
-      // ── PAGE 2 ────────────────────────────────────────
-      draw(p2, spellAbilityName, 26, 37, 7);
-      draw(p2, mod(fs(spellAbility)), 58, 75, 10, true);
-      draw(p2, String(spellSaveDC), 58, 98, 10, true);
-      draw(p2, `+${spellAtk}`, 58, 120, 10, true);
-
-      const fullEq = [eqText, c.backgroundData?.equipment]
-        .filter(Boolean)
-        .join(", ");
-      draw(p2, fullEq.slice(0, 100), 415, 412, 7);
 
       // ── Save & download ───────────────────────────────
       form.flatten();

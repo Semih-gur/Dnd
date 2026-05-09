@@ -43,7 +43,7 @@
       "dashable": true
     },
     { "key": "cantrips", "label": "Cantrips", "badge": false },
-    { "key": "preparedSpells", "label": "Spells", "badge": false },
+    { "key": "preparedSpells", "label": "Prep. Spells", "badge": false },
     { "key": "slot1", "label": "1", "badge": false },
     { "key": "slot2", "label": "2", "badge": false },
     { "key": "slot3", "label": "3", "badge": false },
@@ -62,6 +62,7 @@
       "feature": "Spellcasting, Innate Sorcery",
       "sorceryPoints": "—",
       "cantrips": "4",
+
       "preparedSpells": "2",
       "slot1": "2",
       "slot2": "—",
@@ -79,6 +80,7 @@
       "feature": "Font of Magic, Metamagic",
       "sorceryPoints": "2",
       "cantrips": "4",
+
       "preparedSpells": "4",
       "slot1": "3",
       "slot2": "—",
@@ -96,6 +98,7 @@
       "feature": "Sorcerer Subclass",
       "sorceryPoints": "3",
       "cantrips": "4",
+
       "preparedSpells": "6",
       "slot1": "4",
       "slot2": "2",
@@ -113,6 +116,7 @@
       "feature": "Ability Score Improvement",
       "sorceryPoints": "4",
       "cantrips": "5",
+
       "preparedSpells": "7",
       "slot1": "4",
       "slot2": "3",
@@ -130,6 +134,7 @@
       "feature": "Sorcerous Restoration",
       "sorceryPoints": "5",
       "cantrips": "5",
+
       "preparedSpells": "9",
       "slot1": "4",
       "slot2": "3",
@@ -147,6 +152,7 @@
       "feature": "Subclass Feature",
       "sorceryPoints": "6",
       "cantrips": "5",
+
       "preparedSpells": "10",
       "slot1": "4",
       "slot2": "3",
@@ -164,6 +170,7 @@
       "feature": "Sorcery Incarnate",
       "sorceryPoints": "7",
       "cantrips": "5",
+
       "preparedSpells": "11",
       "slot1": "4",
       "slot2": "3",
@@ -181,6 +188,7 @@
       "feature": "Ability Score Improvement",
       "sorceryPoints": "8",
       "cantrips": "5",
+
       "preparedSpells": "12",
       "slot1": "4",
       "slot2": "3",
@@ -198,6 +206,7 @@
       "feature": "—",
       "sorceryPoints": "9",
       "cantrips": "5",
+
       "preparedSpells": "14",
       "slot1": "4",
       "slot2": "3",
@@ -215,6 +224,7 @@
       "feature": "Metamagic",
       "sorceryPoints": "10",
       "cantrips": "6",
+
       "preparedSpells": "15",
       "slot1": "4",
       "slot2": "3",
@@ -232,6 +242,7 @@
       "feature": "—",
       "sorceryPoints": "11",
       "cantrips": "6",
+
       "preparedSpells": "16",
       "slot1": "4",
       "slot2": "3",
@@ -249,6 +260,7 @@
       "feature": "Ability Score Improvement",
       "sorceryPoints": "12",
       "cantrips": "6",
+
       "preparedSpells": "16",
       "slot1": "4",
       "slot2": "3",
@@ -266,6 +278,7 @@
       "feature": "—",
       "sorceryPoints": "13",
       "cantrips": "6",
+
       "preparedSpells": "17",
       "slot1": "4",
       "slot2": "3",
@@ -283,6 +296,7 @@
       "feature": "Subclass Feature",
       "sorceryPoints": "14",
       "cantrips": "6",
+
       "preparedSpells": "17",
       "slot1": "4",
       "slot2": "3",
@@ -300,6 +314,7 @@
       "feature": "—",
       "sorceryPoints": "15",
       "cantrips": "6",
+
       "preparedSpells": "18",
       "slot1": "4",
       "slot2": "3",
@@ -317,6 +332,7 @@
       "feature": "Ability Score Improvement",
       "sorceryPoints": "16",
       "cantrips": "6",
+
       "preparedSpells": "18",
       "slot1": "4",
       "slot2": "3",
@@ -334,6 +350,7 @@
       "feature": "Metamagic",
       "sorceryPoints": "17",
       "cantrips": "6",
+
       "preparedSpells": "19",
       "slot1": "4",
       "slot2": "3",
@@ -351,6 +368,7 @@
       "feature": "Subclass Feature",
       "sorceryPoints": "18",
       "cantrips": "6",
+
       "preparedSpells": "20",
       "slot1": "4",
       "slot2": "3",
@@ -368,6 +386,7 @@
       "feature": "Epic Boon",
       "sorceryPoints": "19",
       "cantrips": "6",
+
       "preparedSpells": "21",
       "slot1": "4",
       "slot2": "3",
@@ -385,6 +404,7 @@
       "feature": "Arcane Apotheosis",
       "sorceryPoints": "20",
       "cantrips": "6",
+
       "preparedSpells": "22",
       "slot1": "4",
       "slot2": "3",

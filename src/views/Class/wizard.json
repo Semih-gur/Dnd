@@ -38,7 +38,7 @@
     { "key": "cantrips", "label": "Cantrips", "badge": false },
     {
       "key": "preparedSpells",
-      "label": "Spells",
+      "label": "Prep. Spells",
       "badge": true,
       "badgeClass": "ps-badge"
     },

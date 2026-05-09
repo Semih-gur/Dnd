@@ -39,7 +39,7 @@
       "badgeClass": "inv-badge"
     },
     { "key": "cantrips", "label": "Cantrips", "badge": false },
-    { "key": "preparedSpells", "label": "Spells", "badge": false },
+    { "key": "preparedSpells", "label": "Prep. Spells", "badge": false },
     {
       "key": "spellSlots",
       "label": "Spell Slots",

@@ -37,7 +37,7 @@
   "tableColumns": [
     { "key": "bardic_die", "label": "Bardic Die", "badge": true },
     { "key": "cantrips", "label": "cantrips", "badge": false },
-    { "key": "spell", "label": "Spells", "badge": false },
+    { "key": "preparedSpells", "label": "Prep. Spells", "badge": false },
     { "key": "first", "label": "1", "badge": false },
     { "key": "second", "label": "2", "badge": false },
     { "key": "third", "label": "3", "badge": false },
@@ -56,7 +56,7 @@
       "feature": "Bardic Inspiration, Spellcasting",
       "bardic_die": "D6",
       "cantrips": "2",
-      "spell": "4",
+      "preparedSpells": "4",
       "first": "2",
       "second": "-",
       "third": "-",
@@ -73,7 +73,7 @@
       "feature": "Expertise, Jack of All Trades",
       "bardic_die": "D6",
       "cantrips": "2",
-      "spell": "5",
+      "preparedSpells": "5",
       "first": "3",
       "second": "-",
       "third": "-",
@@ -90,7 +90,7 @@
       "feature": "Bard Subclass",
       "bardic_die": "D6",
       "cantrips": "2",
-      "spell": "6",
+      "preparedSpells": "6",
       "first": "4",
       "second": "2",
       "third": "-",
@@ -107,7 +107,7 @@
       "feature": "Ability Score Improvement",
       "bardic_die": "D6",
       "cantrips": "3",
-      "spell": "7",
+      "preparedSpells": "7",
       "first": "4",
       "second": "3",
       "third": "-",
@@ -124,7 +124,7 @@
       "feature": "Font of Inspiration",
       "bardic_die": "D8",
       "cantrips": "3",
-      "spell": "8",
+      "preparedSpells": "9",
       "first": "4",
       "second": "3",
       "third": "2",
@@ -141,7 +141,7 @@
       "feature": "Subclass Feature",
       "bardic_die": "D8",
       "cantrips": "3",
-      "spell": "9",
+      "preparedSpells": "10",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -158,7 +158,7 @@
       "feature": "Countercharm",
       "bardic_die": "D8",
       "cantrips": "3",
-      "spell": "10",
+      "preparedSpells": "11",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -175,7 +175,7 @@
       "feature": "Ability Score Improvement",
       "bardic_die": "D8",
       "cantrips": "3",
-      "spell": "11",
+      "preparedSpells": "12",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -192,7 +192,7 @@
       "feature": "Expertise",
       "bardic_die": "D8",
       "cantrips": "3",
-      "spell": "12",
+      "preparedSpells": "14",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -209,7 +209,7 @@
       "feature": "Magical Secrets",
       "bardic_die": "D10",
       "cantrips": "4",
-      "spell": "14",
+      "preparedSpells": "15",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -226,7 +226,7 @@
       "feature": "—",
       "bardic_die": "D10",
       "cantrips": "4",
-      "spell": "15",
+      "preparedSpells": "16",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -243,7 +243,7 @@
       "feature": "Ability Score Improvement",
       "bardic_die": "D10",
       "cantrips": "4",
-      "spell": "15",
+      "preparedSpells": "16",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -260,7 +260,7 @@
       "feature": "—",
       "bardic_die": "D10",
       "cantrips": "4",
-      "spell": "16",
+      "preparedSpells": "17",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -277,7 +277,7 @@
       "feature": "Subclass Feature",
       "bardic_die": "D10",
       "cantrips": "4",
-      "spell": "18",
+      "preparedSpells": "17",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -294,7 +294,7 @@
       "feature": "—",
       "bardic_die": "D12",
       "cantrips": "4",
-      "spell": "19",
+      "preparedSpells": "18",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -311,7 +311,7 @@
       "feature": "Ability Score Improvement",
       "bardic_die": "D12",
       "cantrips": "4",
-      "spell": "19",
+      "preparedSpells": "18",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -328,7 +328,7 @@
       "feature": "—",
       "bardic_die": "D12",
       "cantrips": "4",
-      "spell": "20",
+      "preparedSpells": "19",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -345,7 +345,7 @@
       "feature": "Superior Inspiration",
       "bardic_die": "D12",
       "cantrips": "4",
-      "spell": "22",
+      "preparedSpells": "20",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -362,7 +362,7 @@
       "feature": "Epic Boon",
       "bardic_die": "D12",
       "cantrips": "4",
-      "spell": "22",
+      "preparedSpells": "21",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -379,7 +379,7 @@
       "feature": "Words of Creation",
       "bardic_die": "D12",
       "cantrips": "4",
-      "spell": "22",
+      "preparedSpells": "22",
       "first": "4",
       "second": "3",
       "third": "3",
@@ -402,7 +402,7 @@
         },
         {
           "title": "Spellcasting",
-          "body": "<p>You have learned to cast spells through your bardic arts. Charisma is your spellcasting ability and you can use a Musical Instrument as a Spellcasting Focus.</p><br/><p><b>cantripss.</b> You know two cantripss of your choice from the Bard spell list. Dancing Lights and Vicious Mockery are recommended. You gain more cantripss at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells from the Bard spell list to start. The number increases as you gain levels. Charm Person, Color Spray, Dissonant Whispers, and Healing Word are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you gain a Bard level, you can replace one spell on your list with another Bard spell for which you have spell slots.</p>"
+          "body": "<p>You have learned to cast spells through your bardic arts. Charisma is your spellcasting ability and you can use a Musical Instrument as a Spellcasting Focus.</p><br/><p><b>cantripss.</b> You know two cantripss of your choice from the  Lights and Vicious Mockery are recommended. You gain more cantripss at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells from the . The number increases as you gain levels. Charm Person, Color Spray, Dissonant Whispers, and Healing Word are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you gain a Bard level, you can replace with another  >"
         }
       ]
     },
@@ -442,7 +442,7 @@
       "features": [
         {
           "title": "Font of Inspiration",
-          "body": "<p>You now regain all your expended uses of Bardic Inspiration when you finish a Short or Long Rest. In addition, you can expend a spell slot (no action required) to regain one expended use of Bardic Inspiration.</p>"
+          "body": "<p>You now regain all your expended uses of Bardic Inspiration when you finish a Short or Long Rest. In addition, you can expe required) to regain one expended use of Bardic Inspiration.</p>"
         }
       ]
     },
@@ -487,7 +487,7 @@
       "features": [
         {
           "title": "Magical Secrets",
-          "body": "<p>Whenever you reach a Bard level and the Prepared Spells number increases, you can choose any of your new prepared spells from the Bard, Cleric, Druid, and Wizard spell lists. The chosen spells count as Bard spells for you. Whenever you replace a prepared spell, you can replace it with a spell from those lists.</p>"
+          "body": "<p>Whenever you reach a Bard level and the Prepared Spells number increases, you can choose any of your new prepared spells from the Bard, Cleric, Druid, and Wi chosen spells count as Bard spells for you. Whenever you replace a prep replace it wi.</p>"
         }
       ]
     },
@@ -532,7 +532,7 @@
       "features": [
         {
           "title": "Epic Boon",
-          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Spell Recall is recommended.</p>"
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boo.</p>"
         }
       ]
     },
@@ -541,7 +541,7 @@
       "features": [
         {
           "title": "Words of Creation",
-          "body": "<p>You always have the Power Word: Heal and Power Word: Kill spells prepared. When you cast either spell, you can target a second creature with it if that creature is within 10 feet of the first target.</p>"
+          "body": "<p>You always have the Power Word: Heal and Power Word: Kill spells prepared. When you cast ei target a second creature with it if that creature is within 10 feet of the first target.</p>"
         }
       ]
     }
