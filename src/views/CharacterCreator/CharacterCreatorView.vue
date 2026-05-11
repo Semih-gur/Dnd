@@ -2150,6 +2150,16 @@ export default {
         .filter(Boolean)
         .join(", ");
 
+      // Define these before they are used below
+      const cfText =
+        this.selectedClassData?.levelPanels?.[0]?.features
+          ?.map((f) => f.title)
+          .join(", ") || "";
+      const stText =
+        this.selectedSpeciesData?.race?.[0]?.feats
+          ?.map((f) => f.name)
+          .join(", ") || "";
+
       const response = await fetch("/sheet.pdf");
       if (!response.ok) {
         alert(`Could not load PDF: ${response.status}`);
@@ -2165,7 +2175,6 @@ export default {
           field.setText(String(val ?? ""));
           if (fontSize !== null) {
             field.setFontSize(fontSize);
-            // Remove existing default appearance so our font size takes effect
             const widgets = field.acroField.getWidgets();
             widgets.forEach((widget) => {
               widget.setDefaultAppearance(`/Helvetica ${fontSize} Tf 0 g`);
@@ -2216,7 +2225,7 @@ export default {
       sf("PASSIVE PERCEPTION", String(passive), 11);
 
       // ── Ability scores ────────────────────────────────
-      sf("STR SCORE", String(fs("STR")), 11);
+      sf("STR SCORE", "  ", String(fs("STR")), 11);
       sf("STR MOD", mod(fs("STR")), 10);
       sf("STR SAVE", stv("STR"), 9);
       sf("DEX SCORE", String(fs("DEX")), 11);
@@ -2254,10 +2263,10 @@ export default {
       sf("PERFORMANCE", skb("Performance", "CHA"), 9);
       sf("PERSUASION", skb("Persuasion", "CHA"), 9);
 
-      // ── Right column (auto-fit for long text) ─────────
-      sf("CLASS FEATURES 1", cfText, 0);
-      sf("SPECIES TRAITS", stText, 0);
-      sf("FEATS", c.backgroundData?.feat || "", 0);
+      // ── Right column ──────────────────────────────────
+      sf("CLASS FEATURES 1", cfText, 8);
+      sf("SPECIES TRAITS", stText, 8);
+      sf("FEATS", c.backgroundData?.feat || "", 8);
 
       // ── Equipment ─────────────────────────────────────
       sf(
@@ -2265,17 +2274,45 @@ export default {
         this.selectedClassData?.coreTraits?.find(
           (t) => t.label === "Weapon Proficiencies",
         )?.value || "",
-        0,
+        10,
       );
       sf("EQUIPMENT", fullEq, 0);
       sf("TOOL PROF", c.backgroundData?.tool || "", 10);
       sf("Alignment", c.alignment || "", 9);
+
+      // ── Saving throw & skill dots ─────────────────────
+      checkField("Check Box18", this.savingThrows.includes("Strength"));
+      checkField("Check Box19", c.skills.includes("Athletics"));
+      checkField("Check Box11", this.savingThrows.includes("Dexterity"));
+      checkField("Check Box8", c.skills.includes("Acrobatics"));
+      checkField("Check Box9", c.skills.includes("Sleight of Hand"));
+      checkField("Check Box10", c.skills.includes("Stealth"));
+      checkField("Check Box7", this.savingThrows.includes("Constitution"));
+      checkField("Check Box25", this.savingThrows.includes("Intelligence"));
+      checkField("Check Box24", c.skills.includes("Arcana"));
+      checkField("Check Box20", c.skills.includes("History"));
+      checkField("Check Box21", c.skills.includes("Investigation"));
+      checkField("Check Box22", c.skills.includes("Nature"));
+      checkField("Check Box23", c.skills.includes("Religion"));
+      checkField("Check Box17", this.savingThrows.includes("Wisdom"));
+      checkField("Check Box15", c.skills.includes("Animal Handling"));
+      checkField("Check Box13", c.skills.includes("Insight"));
+      checkField("Check Box12", c.skills.includes("Medicine"));
+      checkField("Check Box14", c.skills.includes("Perception"));
+      checkField("Check Box16", c.skills.includes("Survival"));
+      checkField("Check Box6", this.savingThrows.includes("Charisma"));
+      checkField("Check Box1", this.savingThrows.includes("Charisma"));
+      checkField("Check Box5", c.skills.includes("Deception"));
+      checkField("Check Box4", c.skills.includes("Intimidation"));
+      checkField("Check Box3", c.skills.includes("Performance"));
+      checkField("Check Box2", c.skills.includes("Persuasion"));
 
       // ── Page 2 spellcasting ───────────────────────────
       sf("SPELLCASTING ABILITY", spellAbilityName, 9);
       sf("SPELLCASTING MOD", mod(fs(spellAbility)), 11);
       sf("SPELL SAVE DC", String(spellSaveDC), 11);
       sf("SPELL ATTACK BONUS", `+${spellAtk}`, 11);
+
       const allSpells = [
         ...c.spells.cantrips.map((s) => ["0", this.formatName(s)]),
         ...c.spells.prepared.map((s) => ["1", this.formatName(s)]),
