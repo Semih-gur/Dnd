@@ -109,14 +109,17 @@
     </v-app-bar>
 
     <router-view></router-view>
+    <ChangelogPopup />
   </v-app>
 </template>
 
 <script>
 import router from "@/router";
+import ChangelogPopup from "@/components/ChangelogPopup.vue";
 
 export default {
   name: "App",
+  components: { ChangelogPopup },
   data() {
     return {
       isDark: true,

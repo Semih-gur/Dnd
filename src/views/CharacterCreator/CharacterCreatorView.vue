@@ -1132,13 +1132,6 @@
           <button class="sheet-btn sheet-btn-primary" @click="downloadSheet">
             <v-icon size="18">mdi-download</v-icon> Download PDF
           </button>
-          <button
-            class="sheet-btn"
-            style="background: #334155; color: #fff"
-            @click="debugMode = !debugMode"
-          >
-            Debug PDF
-          </button>
           <button class="sheet-btn sheet-btn-secondary" @click="resetCharacter">
             <v-icon size="18">mdi-refresh</v-icon> Start Over
           </button>

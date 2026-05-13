@@ -138,38 +138,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- Contact form -->
-        <div class="footer-col footer-contact">
-          <h3 class="footer-heading">Get in Touch</h3>
-          <div class="contact-form">
-            <input
-              v-model="contact.name"
-              class="contact-input"
-              placeholder="Your name"
-              type="text"
-            />
-            <input
-              v-model="contact.email"
-              class="contact-input"
-              placeholder="Your email"
-              type="email"
-            />
-            <textarea
-              v-model="contact.message"
-              class="contact-input contact-textarea"
-              placeholder="Your message — bug reports, suggestions, feedback..."
-              rows="3"
-            ></textarea>
-            <button
-              class="contact-btn"
-              @click="sendMessage"
-              :disabled="contact.sent"
-            >
-              {{ contact.sent ? "✓ Message Sent!" : "Send Message" }}
-            </button>
-          </div>
-        </div>
       </div>
 
       <div class="footer-bottom">
