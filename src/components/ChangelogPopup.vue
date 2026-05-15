@@ -52,7 +52,6 @@ export default {
             text: "Full D&D 2024 Wiki — classes, species, spells, items, feats, backgrounds",
           },
           { type: "new", text: "Character Creator with PDF export" },
-          { type: "new", text: "Dark & light theme support" },
         ],
       },
     };
