@@ -2415,6 +2415,7 @@ export default {
 
 <style scoped>
 .creator-page {
+  margin-top: 30px;
   min-height: 100vh;
   background: var(--bg-page);
   color: var(--text-body);

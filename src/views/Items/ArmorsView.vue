@@ -4,7 +4,6 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <span class="hero-eyebrow">Items</span>
           <h1 class="hero-title">Armor</h1>
           <p class="hero-subtitle">Protection for every adventurer</p>
         </div>

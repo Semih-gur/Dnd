@@ -71,7 +71,14 @@
           }}</v-icon>
           <span class="nav-label">Theme</span>
         </div>
-
+        <div
+          class="nav-item"
+          :class="{ active: $route.path === '/patrons' }"
+          @click="goTo('patrons')"
+        >
+          <v-icon class="nav-icon">mdi-account-group</v-icon>
+          <span class="nav-label">Patrons</span>
+        </div>
         <a
           href="https://www.patreon.com/YOUR_PAGE"
           target="_blank"
@@ -124,6 +131,7 @@ export default {
     return {
       isDark: true,
       navItems: [
+        { path: "patrons", label: "Patrons", icon: "mdi-account-group" },
         { path: "wiki/species", icon: "mdi-account", label: "Species" },
         { path: "wiki/classes", icon: "mdi-sword-cross", label: "Classes" },
         { path: "wiki/spells", icon: "mdi-auto-fix", label: "Spells" },
