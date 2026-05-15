@@ -75,9 +75,7 @@
             <label class="form-label">Character Level</label>
             <div class="level-display">
               <span class="level-badge">Level 1</span>
-              <span class="level-note"
-                >Higher levels coming soon for Patrons</span
-              >
+              <span class="level-note">Higher levels coming soon</span>
             </div>
           </div>
         </div>
