@@ -323,8 +323,7 @@
       <div v-if="currentStep === 4" class="step-panel">
         <h2 class="step-title">Ability Scores</h2>
         <p class="step-desc">
-          First assign your base scores, then apply your background bonuses
-          below.
+          Assign your base scores and apply your background bonuses.
         </p>
 
         <div class="method-tabs">
@@ -339,297 +338,383 @@
           </button>
         </div>
 
-        <!-- Standard Array -->
-        <div
-          v-if="character.abilityMethod === 'standard'"
-          class="ability-method-panel"
-        >
-          <p class="method-note">
-            Assign each value from the standard array to one ability. Each value
-            can only be used once.
-          </p>
-          <div class="standard-array-chips">
-            <span
-              v-for="val in standardArrayValues"
-              :key="val"
-              class="array-chip"
-              :class="{ used: isArrayValueUsed(val) }"
-              >{{ val }}</span
-            >
-          </div>
-          <div class="ability-rows">
-            <div v-for="ab in abilityList" :key="ab" class="ability-row">
-              <span class="ability-name">{{ ab }}</span>
-              <span class="ability-full-name">{{ abilityFullName(ab) }}</span>
-              <div class="ability-controls">
-                <select
-                  class="ability-select"
-                  :value="character.abilityScores[ab]"
-                  @change="assignStandardScore(ab, $event.target.value)"
-                >
-                  <option value="">—</option>
-                  <option
-                    v-for="val in standardArrayValues"
-                    :key="val"
-                    :value="val"
-                    :disabled="
-                      isArrayValueUsed(val) &&
-                      character.abilityScores[ab] !== val
-                    "
-                  >
-                    {{ val }}
-                  </option>
-                </select>
-                <span class="ability-modifier">{{
-                  modifierDisplay(character.abilityScores[ab])
-                }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Point Buy -->
-        <div
-          v-if="character.abilityMethod === 'pointbuy'"
-          class="ability-method-panel"
-        >
-          <p class="method-note">
-            You have <strong>{{ pointBuyRemaining }}</strong> points remaining.
-            Scores range from 8–15.
-          </p>
-          <div class="point-buy-cost-table">
-            <span v-for="c in pointBuyCosts" :key="c.score" class="cost-chip"
-              >{{ c.score }}<span class="cost-sub">{{ c.cost }}pt</span></span
-            >
-          </div>
-          <div class="ability-rows">
-            <div v-for="ab in abilityList" :key="ab" class="ability-row">
-              <span class="ability-name">{{ ab }}</span>
-              <span class="ability-full-name">{{ abilityFullName(ab) }}</span>
-              <div class="ability-controls">
-                <button
-                  class="pb-btn"
-                  @click="adjustPointBuy(ab, -1)"
-                  :disabled="(character.abilityScores[ab] || 8) <= 8"
-                >
-                  −
-                </button>
-                <span class="pb-score">{{
-                  character.abilityScores[ab] || 8
-                }}</span>
-                <button
-                  class="pb-btn"
-                  @click="adjustPointBuy(ab, 1)"
-                  :disabled="
-                    (character.abilityScores[ab] || 8) >= 15 ||
-                    pointBuyRemaining <= 0
-                  "
-                >
-                  +
-                </button>
-                <span class="ability-modifier">{{
-                  modifierDisplay(character.abilityScores[ab] || 8)
-                }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Roll 4d6 -->
-        <div
-          v-if="character.abilityMethod === 'roll'"
-          class="ability-method-panel"
-        >
-          <p class="method-note">
-            Roll 4d6, drop the lowest die, for each ability. Then assign the
-            results.
-          </p>
-          <button class="roll-btn" @click="rollAllScores">
-            <v-icon size="18">mdi-dice-multiple</v-icon> Roll All Scores
-          </button>
-          <div v-if="rolledScores.length" class="roll-results">
+        <div class="ability-step-layout">
+          <!-- LEFT: Allocation panel -->
+          <div class="ability-left">
+            <!-- Standard Array -->
             <div
-              v-for="(roll, i) in rolledScores"
-              :key="i"
-              class="roll-result-chip"
+              v-if="character.abilityMethod === 'standard'"
+              class="ability-method-panel"
             >
-              <span class="roll-total">{{ roll.total }}</span>
-              <span class="roll-dice">{{ roll.dice.join(", ") }}</span>
-            </div>
-          </div>
-          <div v-if="rolledScores.length" class="ability-rows">
-            <div v-for="ab in abilityList" :key="ab" class="ability-row">
-              <span class="ability-name">{{ ab }}</span>
-              <span class="ability-full-name">{{ abilityFullName(ab) }}</span>
-              <div class="ability-controls">
-                <select
-                  class="ability-select"
-                  :value="character.abilityScoreRollIds[ab]"
-                  @change="assignRolledScore(ab, $event.target.value)"
-                >
-                  <option value="">—</option>
-                  <option
-                    v-for="roll in rolledScores"
-                    :key="roll.id"
-                    :value="roll.id"
-                    :disabled="
-                      isRollUsed(roll.id) &&
-                      character.abilityScoreRollIds[ab] !== roll.id
-                    "
-                  >
-                    {{ roll.total }}
-                  </option>
-                </select>
-                <span class="ability-modifier">{{
-                  modifierDisplay(character.abilityScores[ab])
-                }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Score summary -->
-        <div v-if="allScoresAssigned" class="score-summary">
-          <div v-for="ab in abilityList" :key="ab" class="score-summary-item">
-            <span class="ss-label">{{ ab }}</span>
-            <span class="ss-score">{{ finalScore(ab) }}</span>
-            <span class="ss-mod">{{ modifierDisplay(finalScore(ab)) }}</span>
-            <span v-if="character.backgroundBonuses[ab]" class="ss-bonus"
-              >+{{ character.backgroundBonuses[ab] }} bg</span
-            >
-          </div>
-        </div>
-
-        <!-- ── Background Bonuses ───────────────────── -->
-        <div
-          v-if="allScoresAssigned && character.background"
-          class="bg-bonus-section"
-        >
-          <h3 class="bg-bonus-title">
-            Background Bonuses
-            <span class="bg-bonus-source"
-              >from {{ formatName(character.background) }}</span
-            >
-          </h3>
-          <p class="bg-bonus-note">
-            Increase abilities from:
-            <strong>{{ selectedBackgroundData.abilityScore }}</strong
-            >.<br />
-            Choose <strong>+2 to one and +1 to another</strong>, or
-            <strong>+1 to all three</strong>. No score may exceed 20.
-          </p>
-
-          <div class="method-tabs" style="margin-bottom: 1.25rem">
-            <button
-              class="method-tab"
-              :class="{ active: character.backgroundBonusMethod === '2+1' }"
-              @click="setBonusMethod('2+1')"
-            >
-              +2 / +1
-            </button>
-            <button
-              class="method-tab"
-              :class="{ active: character.backgroundBonusMethod === '1+1+1' }"
-              @click="setBonusMethod('1+1+1')"
-            >
-              +1 / +1 / +1
-            </button>
-          </div>
-
-          <div v-if="character.backgroundBonusMethod" class="bonus-rows">
-            <div
-              v-for="ab in backgroundEligibleAbilities"
-              :key="ab"
-              class="bonus-row"
-            >
-              <span class="ability-name">{{ ab }}</span>
-              <span class="ability-full-name">{{ abilityFullName(ab) }}</span>
-              <div class="ability-controls">
-                <!-- +2 / +1 mode -->
-                <template v-if="character.backgroundBonusMethod === '2+1'">
-                  <button
-                    class="bonus-chip"
-                    :class="{ active: character.backgroundBonuses[ab] === 2 }"
-                    :disabled="
-                      (character.backgroundBonuses[ab] !== 2 &&
-                        bonusAlreadyUsed(2)) ||
-                      (character.abilityScores[ab] || 0) + 2 > 20
-                    "
-                    @click="assignBonus(ab, 2)"
-                  >
-                    +2
-                  </button>
-                  <button
-                    class="bonus-chip"
-                    :class="{ active: character.backgroundBonuses[ab] === 1 }"
-                    :disabled="
-                      (character.backgroundBonuses[ab] !== 1 &&
-                        bonusAlreadyUsed(1)) ||
-                      (character.abilityScores[ab] || 0) + 1 > 20
-                    "
-                    @click="assignBonus(ab, 1)"
-                  >
-                    +1
-                  </button>
-                </template>
-                <!-- +1 / +1 / +1 mode -->
-                <template v-if="character.backgroundBonusMethod === '1+1+1'">
-                  <button
-                    class="bonus-chip"
-                    :class="{ active: character.backgroundBonuses[ab] === 1 }"
-                    :disabled="
-                      (character.backgroundBonuses[ab] !== 1 &&
-                        bonusPointsUsed >= 3) ||
-                      (character.abilityScores[ab] || 0) + 1 > 20
-                    "
-                    @click="toggleBonus111(ab)"
-                  >
-                    +1
-                  </button>
-                </template>
+              <p class="method-note">
+                Assign each value to one ability. Each value can only be used
+                once.
+              </p>
+              <div class="standard-array-chips">
                 <span
-                  class="bonus-final-score"
-                  :class="{ capped: finalScore(ab) >= 20 }"
+                  v-for="val in standardArrayValues"
+                  :key="val"
+                  class="array-chip"
+                  :class="{ used: isArrayValueUsed(val) }"
+                  >{{ val }}</span
                 >
-                  {{ finalScore(ab) }}
-                  <span class="bonus-mod-display">{{
-                    modifierDisplay(finalScore(ab))
+              </div>
+              <div class="ability-rows">
+                <div v-for="ab in abilityList" :key="ab" class="ability-row">
+                  <span class="ability-name">{{ ab }}</span>
+                  <span class="ability-full-name">{{
+                    abilityFullName(ab)
                   }}</span>
+                  <div class="ability-controls">
+                    <select
+                      class="ability-select"
+                      :value="character.abilityScores[ab]"
+                      @change="assignStandardScore(ab, $event.target.value)"
+                    >
+                      <option value="">—</option>
+                      <option
+                        v-for="val in standardArrayValues"
+                        :key="val"
+                        :value="val"
+                        v-show="
+                          !isArrayValueUsed(val) ||
+                          character.abilityScores[ab] === val
+                        "
+                      >
+                        {{ val }}
+                      </option>
+                    </select>
+                    <span class="ability-modifier">{{
+                      modifierDisplay(character.abilityScores[ab])
+                    }}</span>
+                    <span
+                      v-if="character.backgroundBonuses[ab]"
+                      class="inline-final"
+                    >
+                      → <strong>{{ finalScore(ab) }}</strong>
+                      <span class="bonus-mod-display">{{
+                        modifierDisplay(finalScore(ab))
+                      }}</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Point Buy -->
+            <div
+              v-if="character.abilityMethod === 'pointbuy'"
+              class="ability-method-panel"
+            >
+              <p class="method-note">
+                You have <strong>{{ pointBuyRemaining }}</strong> points
+                remaining. Scores range from 8–15.
+              </p>
+              <div class="point-buy-cost-table">
+                <span
+                  v-for="c in pointBuyCosts"
+                  :key="c.score"
+                  class="cost-chip"
+                >
+                  {{ c.score }}<span class="cost-sub">{{ c.cost }}pt</span>
                 </span>
               </div>
+              <div class="ability-rows">
+                <div v-for="ab in abilityList" :key="ab" class="ability-row">
+                  <span class="ability-name">{{ ab }}</span>
+                  <span class="ability-full-name">{{
+                    abilityFullName(ab)
+                  }}</span>
+                  <div class="ability-controls">
+                    <button
+                      class="pb-btn"
+                      @click="adjustPointBuy(ab, -1)"
+                      :disabled="(character.abilityScores[ab] || 8) <= 8"
+                    >
+                      −
+                    </button>
+                    <span class="pb-score">{{
+                      character.abilityScores[ab] || 8
+                    }}</span>
+                    <button
+                      class="pb-btn"
+                      @click="adjustPointBuy(ab, 1)"
+                      :disabled="
+                        (character.abilityScores[ab] || 8) >= 15 ||
+                        pointBuyRemaining <= 0
+                      "
+                    >
+                      +
+                    </button>
+                    <span class="ability-modifier">{{
+                      modifierDisplay(character.abilityScores[ab] || 8)
+                    }}</span>
+                    <span
+                      v-if="character.backgroundBonuses[ab]"
+                      class="inline-final"
+                    >
+                      → <strong>{{ finalScore(ab) }}</strong>
+                      <span class="bonus-mod-display">{{
+                        modifierDisplay(finalScore(ab))
+                      }}</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Roll 4d6 -->
+            <div
+              v-if="character.abilityMethod === 'roll'"
+              class="ability-method-panel"
+            >
+              <p class="method-note">
+                Roll 4d6, drop the lowest, for each ability. Then assign the
+                results.
+              </p>
+              <button class="roll-btn" @click="rollAllScores">
+                <v-icon size="18">mdi-dice-multiple</v-icon> Roll All Scores
+              </button>
+              <div v-if="rolledScores.length" class="roll-results">
+                <div
+                  v-for="(roll, i) in rolledScores"
+                  :key="i"
+                  class="roll-result-chip"
+                >
+                  <span class="roll-total">{{ roll.total }}</span>
+                  <span class="roll-dice">{{ roll.dice.join(", ") }}</span>
+                </div>
+              </div>
+              <div class="ability-rows">
+                <div v-for="ab in abilityList" :key="ab" class="ability-row">
+                  <span class="ability-name">{{ ab }}</span>
+                  <span class="ability-full-name">{{
+                    abilityFullName(ab)
+                  }}</span>
+                  <div class="ability-controls">
+                    <select
+                      class="ability-select"
+                      :value="character.abilityScoreRollIds[ab]"
+                      @change="assignRolledScore(ab, $event.target.value)"
+                    >
+                      <option value="">—</option>
+                      <option
+                        v-for="roll in rolledScores"
+                        :key="roll.id"
+                        :value="roll.id"
+                        v-show="
+                          !isRollUsed(roll.id) ||
+                          character.abilityScoreRollIds[ab] === roll.id
+                        "
+                      >
+                        {{ roll.total }}
+                      </option>
+                    </select>
+                    <span class="ability-modifier">{{
+                      modifierDisplay(character.abilityScores[ab])
+                    }}</span>
+                    <span
+                      v-if="character.backgroundBonuses[ab]"
+                      class="inline-final"
+                    >
+                      → <strong>{{ finalScore(ab) }}</strong>
+                      <span class="bonus-mod-display">{{
+                        modifierDisplay(finalScore(ab))
+                      }}</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              v-if="!character.abilityMethod"
+              class="bonus-incomplete"
+              style="margin-top: 1rem"
+            >
+              <v-icon size="16">mdi-information-outline</v-icon>
+              Choose a method above to assign your ability scores.
+            </div>
+
+            <!-- Score summary -->
+            <div
+              v-if="abilityList.some((ab) => character.abilityScores[ab])"
+              class="score-summary"
+              style="margin-top: 1rem"
+            >
+              <div
+                v-for="ab in abilityList"
+                :key="ab"
+                class="score-summary-item"
+              >
+                <span class="ss-label">{{ ab }}</span>
+                <span class="ss-score">{{
+                  character.abilityScores[ab] ? finalScore(ab) : "—"
+                }}</span>
+                <span class="ss-mod">{{
+                  character.abilityScores[ab]
+                    ? modifierDisplay(finalScore(ab))
+                    : "—"
+                }}</span>
+                <span v-if="character.backgroundBonuses[ab]" class="ss-bonus"
+                  >+{{ character.backgroundBonuses[ab] }} bg</span
+                >
+              </div>
             </div>
           </div>
 
-          <div v-if="bonusAssigned" class="bonus-complete">
-            <v-icon size="16" style="color: #4ade80">mdi-check-circle</v-icon>
-            Bonuses applied! Final scores shown above.
-          </div>
-          <div
-            v-else-if="character.backgroundBonusMethod"
-            class="bonus-incomplete"
-          >
-            <v-icon size="16">mdi-information-outline</v-icon>
-            <span v-if="character.backgroundBonusMethod === '2+1'">
-              Assign {{ !bonusAlreadyUsed(2) ? "+2" : ""
-              }}{{ !bonusAlreadyUsed(2) && !bonusAlreadyUsed(1) ? " and " : ""
-              }}{{ !bonusAlreadyUsed(1) ? "+1" : "" }} to continue.
-            </span>
-            <span v-else
-              >Assign {{ 3 - bonusPointsUsed }} more +1{{
-                3 - bonusPointsUsed !== 1 ? "s" : ""
-              }}
-              to continue.</span
+          <!-- RIGHT: Background bonuses -->
+          <div class="ability-right">
+            <div
+              v-if="character.background"
+              class="bg-bonus-section"
+              style="margin-top: 0"
             >
-          </div>
-        </div>
+              <h3 class="bg-bonus-title">
+                Background Bonuses
+                <span class="bg-bonus-source"
+                  >from {{ formatName(character.background) }}</span
+                >
+              </h3>
+              <p class="bg-bonus-note">
+                Eligible:
+                <strong>{{ selectedBackgroundData.abilityScore }}</strong
+                >.<br />
+                Choose <strong>+2 / +1</strong> or
+                <strong>+1 / +1 / +1</strong>. Max 20.
+              </p>
+              <div class="method-tabs" style="margin-bottom: 1rem">
+                <button
+                  class="method-tab"
+                  :class="{ active: character.backgroundBonusMethod === '2+1' }"
+                  @click="setBonusMethod('2+1')"
+                >
+                  +2 / +1
+                </button>
+                <button
+                  class="method-tab"
+                  :class="{
+                    active: character.backgroundBonusMethod === '1+1+1',
+                  }"
+                  @click="setBonusMethod('1+1+1')"
+                >
+                  +1 / +1 / +1
+                </button>
+              </div>
 
-        <div
-          v-if="allScoresAssigned && !character.background"
-          class="bonus-incomplete"
-        >
-          <v-icon size="16">mdi-information-outline</v-icon>
-          Go back to Step 3 to choose a background — it grants ability score
-          increases.
+              <div v-if="character.backgroundBonusMethod" class="bonus-rows">
+                <div
+                  v-for="ab in backgroundEligibleAbilities"
+                  :key="ab"
+                  class="bonus-row"
+                >
+                  <span class="ability-name">{{ ab }}</span>
+                  <span class="ability-full-name">{{
+                    abilityFullName(ab)
+                  }}</span>
+                  <div class="ability-controls">
+                    <template v-if="character.backgroundBonusMethod === '2+1'">
+                      <button
+                        class="bonus-chip"
+                        :class="{
+                          active: character.backgroundBonuses[ab] === 2,
+                        }"
+                        :disabled="
+                          (character.backgroundBonuses[ab] !== 2 &&
+                            bonusAlreadyUsed(2)) ||
+                          (character.abilityScores[ab] || 0) + 2 > 20
+                        "
+                        @click="assignBonus(ab, 2)"
+                      >
+                        +2
+                      </button>
+                      <button
+                        class="bonus-chip"
+                        :class="{
+                          active: character.backgroundBonuses[ab] === 1,
+                        }"
+                        :disabled="
+                          (character.backgroundBonuses[ab] !== 1 &&
+                            bonusAlreadyUsed(1)) ||
+                          (character.abilityScores[ab] || 0) + 1 > 20
+                        "
+                        @click="assignBonus(ab, 1)"
+                      >
+                        +1
+                      </button>
+                    </template>
+                    <template
+                      v-if="character.backgroundBonusMethod === '1+1+1'"
+                    >
+                      <button
+                        class="bonus-chip"
+                        :class="{
+                          active: character.backgroundBonuses[ab] === 1,
+                        }"
+                        :disabled="
+                          (character.backgroundBonuses[ab] !== 1 &&
+                            bonusPointsUsed >= 3) ||
+                          (character.abilityScores[ab] || 0) + 1 > 20
+                        "
+                        @click="toggleBonus111(ab)"
+                      >
+                        +1
+                      </button>
+                    </template>
+                    <span
+                      class="bonus-final-score"
+                      :class="{ capped: finalScore(ab) >= 20 }"
+                    >
+                      {{ finalScore(ab) }}
+                      <span class="bonus-mod-display">{{
+                        modifierDisplay(finalScore(ab))
+                      }}</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                v-if="bonusAssigned"
+                class="bonus-complete"
+                style="margin-top: 0.75rem"
+              >
+                <v-icon size="16" style="color: #4ade80"
+                  >mdi-check-circle</v-icon
+                >
+                Bonuses applied!
+              </div>
+              <div
+                v-else-if="character.backgroundBonusMethod"
+                class="bonus-incomplete"
+                style="margin-top: 0.75rem"
+              >
+                <v-icon size="16">mdi-information-outline</v-icon>
+                <span v-if="character.backgroundBonusMethod === '2+1'">
+                  Assign {{ !bonusAlreadyUsed(2) ? "+2" : ""
+                  }}{{
+                    !bonusAlreadyUsed(2) && !bonusAlreadyUsed(1) ? " and " : ""
+                  }}{{ !bonusAlreadyUsed(1) ? "+1" : "" }} to continue.
+                </span>
+                <span v-else>
+                  Assign {{ 3 - bonusPointsUsed }} more +1{{
+                    3 - bonusPointsUsed !== 1 ? "s" : ""
+                  }}
+                  to continue.
+                </span>
+              </div>
+              <div v-else class="bonus-incomplete" style="margin-top: 0.75rem">
+                <v-icon size="16">mdi-information-outline</v-icon>
+                Choose a bonus method above.
+              </div>
+            </div>
+
+            <div v-else class="bonus-incomplete" style="margin-top: 0">
+              <v-icon size="16">mdi-information-outline</v-icon>
+              Go back to Step 3 to choose a background — it grants ability score
+              increases.
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2269,7 +2354,7 @@ export default {
         )?.value || "",
         10,
       );
-      sf("EQUIPMENT", fullEq, 0);
+      sf("EQUIPMENT", fullEq, 8);
       sf("TOOL PROF", c.backgroundData?.tool || "", 10);
       sf("Alignment", c.alignment || "", 9);
 
@@ -2915,6 +3000,44 @@ export default {
 }
 .array-chip.used {
   opacity: 0.35;
+}
+.ability-step-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.ability-left {
+  min-width: 0;
+}
+
+.ability-right {
+  position: sticky;
+  top: 4rem;
+}
+
+.ability-method-panel {
+  max-width: 100%;
+}
+
+.inline-final {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #4ade80;
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .ability-step-layout {
+    grid-template-columns: 1fr;
+  }
+  .ability-right {
+    position: static;
+  }
 }
 .ability-rows {
   display: flex;
