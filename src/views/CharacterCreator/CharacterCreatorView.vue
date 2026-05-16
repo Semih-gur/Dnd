@@ -385,15 +385,6 @@
                     <span class="ability-modifier">{{
                       modifierDisplay(character.abilityScores[ab])
                     }}</span>
-                    <span
-                      v-if="character.backgroundBonuses[ab]"
-                      class="inline-final"
-                    >
-                      → <strong>{{ finalScore(ab) }}</strong>
-                      <span class="bonus-mod-display">{{
-                        modifierDisplay(finalScore(ab))
-                      }}</span>
-                    </span>
                   </div>
                 </div>
               </div>
@@ -447,15 +438,6 @@
                     <span class="ability-modifier">{{
                       modifierDisplay(character.abilityScores[ab] || 8)
                     }}</span>
-                    <span
-                      v-if="character.backgroundBonuses[ab]"
-                      class="inline-final"
-                    >
-                      → <strong>{{ finalScore(ab) }}</strong>
-                      <span class="bonus-mod-display">{{
-                        modifierDisplay(finalScore(ab))
-                      }}</span>
-                    </span>
                   </div>
                 </div>
               </div>
@@ -511,15 +493,6 @@
                     <span class="ability-modifier">{{
                       modifierDisplay(character.abilityScores[ab])
                     }}</span>
-                    <span
-                      v-if="character.backgroundBonuses[ab]"
-                      class="inline-final"
-                    >
-                      → <strong>{{ finalScore(ab) }}</strong>
-                      <span class="bonus-mod-display">{{
-                        modifierDisplay(finalScore(ab))
-                      }}</span>
-                    </span>
                   </div>
                 </div>
               </div>
@@ -3018,16 +2991,6 @@ export default {
 
 .ability-method-panel {
   max-width: 100%;
-}
-
-.inline-final {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #4ade80;
-  display: flex;
-  align-items: baseline;
-  gap: 0.2rem;
-  white-space: nowrap;
 }
 
 @media (max-width: 760px) {

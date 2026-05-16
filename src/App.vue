@@ -131,7 +131,6 @@ export default {
     return {
       isDark: true,
       navItems: [
-        { path: "patrons", label: "Patrons", icon: "mdi-account-group" },
         { path: "wiki/species", icon: "mdi-account", label: "Species" },
         { path: "wiki/classes", icon: "mdi-sword-cross", label: "Classes" },
         { path: "wiki/spells", icon: "mdi-auto-fix", label: "Spells" },
