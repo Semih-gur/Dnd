@@ -5,12 +5,12 @@
       <div class="hero">
         <div class="hero-overlay">
           <div class="hero-content">
-            <span class="hero-eyebrow">Species</span>
+            <span class="hero-eyebrow">{{ $t('race.eyebrow') }}</span>
             <h1 class="hero-title">{{ race.name }}</h1>
             <div class="hero-badges">
               <span class="badge">{{ race.type }}</span>
               <span class="badge">{{ race.size }}</span>
-              <span class="badge badge-purple">Speed {{ race.speed }}</span>
+              <span class="badge badge-purple">{{ $t('race.speed', { value: race.speed }) }}</span>
             </div>
           </div>
         </div>
@@ -19,7 +19,7 @@
       <div class="page-content">
         <!-- Flavor text -->
         <div class="section">
-          <h2 class="section-title">Overview</h2>
+          <h2 class="section-title">{{ $t('race.overview') }}</h2>
           <p
             class="section-text"
             style="white-space: pre-wrap"
@@ -29,7 +29,7 @@
 
         <!-- Traits -->
         <div class="section">
-          <h2 class="section-title">{{ race.name }} Traits</h2>
+          <h2 class="section-title">{{ $t('race.traitsTitle', { name: race.name }) }}</h2>
           <div class="traits-list">
             <div
               v-for="trait in race.feats"
@@ -37,7 +37,7 @@
               class="trait-block"
             >
               <div class="trait-header">
-                <span class="trait-name">{{ trait.name }}</span>
+                <span class="trait-name">{{ $lf(trait, 'name') }}</span>
               </div>
               <p class="trait-desc">{{ trait.desc }}</p>
 
@@ -70,8 +70,8 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <span class="hero-eyebrow">Species</span>
-          <h1 class="hero-title">Species Not Found</h1>
+          <span class="hero-eyebrow">{{ $t('race.eyebrow') }}</span>
+          <h1 class="hero-title">{{ $t('race.notFound') }}</h1>
         </div>
       </div>
     </div>

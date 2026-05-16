@@ -6,45 +6,87 @@
   "image": "barbarian.png",
   "accentColor": "#ef4444",
   "accentRgb": "239, 68, 68",
-
   "coreTraits": [
-    { "label": "Primary Ability", "value": "Strength" },
-    { "label": "Hit Point Die", "value": "D12 per Barbarian level" },
+    {
+      "label": "Primary Ability",
+      "value": "Strength",
+      "label_tr": "Birincil Nitelik",
+      "value_tr": "Güç"
+    },
+    {
+      "label": "Hit Point Die",
+      "value": "D12 per Barbarian level",
+      "label_tr": "Can Puanı Zarı",
+      "value_tr": "Barbar seviyesi başına D12"
+    },
     {
       "label": "Saving Throw Proficiencies",
-      "value": "Strength and Constitution"
+      "value": "Strength and Constitution",
+      "label_tr": "Kurtarma Atışı Uzmanlıkları",
+      "value_tr": "Güç ve Anayasa"
     },
     {
       "label": "Skill Proficiencies",
-      "value": "Choose 2: Animal Handling, Athletics, Intimidation, Nature, Perception, or Survival"
+      "value": "Choose 2: Animal Handling, Athletics, Intimidation, Nature, Perception, or Survival",
+      "label_tr": "Beceri Uzmanlıkları",
+      "value_tr": "2 seçin: Hayvan Bakımı, Atletizm, Gözdağı, Doğa, Algı veya Hayatta Kalma"
     },
-    { "label": "Weapon Proficiencies", "value": "Simple and Martial weapons" },
+    {
+      "label": "Weapon Proficiencies",
+      "value": "Simple and Martial weapons",
+      "label_tr": "Silah Uzmanlıkları",
+      "value_tr": "Basit ve Savaş Silahları"
+    },
     {
       "label": "Armor Training",
-      "value": "Light and Medium armor and Shields"
+      "value": "Light and Medium armor and Shields",
+      "label_tr": "Zırh Eğitimi",
+      "value_tr": "Hafif ve Orta Zırh ve Kalkanlar"
     },
     {
       "label": "Starting Equipment",
-      "value": "Choose A or B: (A) Greataxe, 4 Handaxes, Explorer's Pack, and 15 GP; or (B) 75 GP"
+      "value": "Choose A or B: (A) Greataxe, 4 Handaxes, Explorer's Pack, and 15 GP; or (B) 75 GP",
+      "label_tr": "Başlangıç Ekipmanı",
+      "value_tr": "A veya B seçin: (A) Büyük Balta, 4 El Baltası, Kaşif Çantası ve 15 AP; veya (B) 75 AP"
     }
   ],
-
   "subclasses": [
-    { "title": "Berserker", "icon": "mdi-emoticon-angry-outline" },
-    { "title": "Wild Heart", "icon": "mdi-paw" },
-    { "title": "World Tree", "icon": "mdi-tree" },
-    { "title": "Zealot", "icon": "mdi-flare" }
+    {
+      "title": "Berserker",
+      "icon": "mdi-emoticon-angry-outline"
+    },
+    {
+      "title": "Wild Heart",
+      "icon": "mdi-paw"
+    },
+    {
+      "title": "World Tree",
+      "icon": "mdi-tree"
+    },
+    {
+      "title": "Zealot",
+      "icon": "mdi-flare"
+    }
   ],
-
   "subclassPrefix": "Path of the",
   "subclassRoute": "/wiki/classes/barbarian/",
-
   "tableColumns": [
-    { "key": "rages", "label": "Rages" },
-    { "key": "rageDamage", "label": "Rage Damage" },
-    { "key": "weaponMastery", "label": "Weapon Mastery" }
+    {
+      "key": "rages",
+      "label": "Rages",
+      "label_tr": "Öfke"
+    },
+    {
+      "key": "rageDamage",
+      "label": "Rage Damage",
+      "label_tr": "Öfke Hasarı"
+    },
+    {
+      "key": "weaponMastery",
+      "label": "Weapon Mastery",
+      "label_tr": "Silah Hakimiyeti"
+    }
   ],
-
   "levels": [
     {
       "level": "1",
@@ -52,7 +94,8 @@
       "feature": "Rage, Unarmored Defense, Weapon Mastery",
       "rages": "2",
       "rageDamage": "+2",
-      "weaponMastery": "2"
+      "weaponMastery": "2",
+      "feature_tr": "Öfke, Zırhsız Savunma, Silah Hakimiyeti"
     },
     {
       "level": "2",
@@ -60,7 +103,8 @@
       "feature": "Danger Sense, Reckless Attack",
       "rages": "2",
       "rageDamage": "+2",
-      "weaponMastery": "2"
+      "weaponMastery": "2",
+      "feature_tr": "Tehlike Hissi, Pervasız Saldırı"
     },
     {
       "level": "3",
@@ -68,7 +112,8 @@
       "feature": "Barbarian Subclass, Primal Knowledge",
       "rages": "3",
       "rageDamage": "+2",
-      "weaponMastery": "2"
+      "weaponMastery": "2",
+      "feature_tr": "Barbar Alt Sınıfı, İlkel Bilgi"
     },
     {
       "level": "4",
@@ -76,7 +121,8 @@
       "feature": "Ability Score Improvement",
       "rages": "3",
       "rageDamage": "+2",
-      "weaponMastery": "3"
+      "weaponMastery": "3",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "5",
@@ -84,7 +130,8 @@
       "feature": "Extra Attack, Fast Movement",
       "rages": "3",
       "rageDamage": "+2",
-      "weaponMastery": "3"
+      "weaponMastery": "3",
+      "feature_tr": "Ekstra Saldırı, Hızlı Hareket"
     },
     {
       "level": "6",
@@ -92,7 +139,8 @@
       "feature": "Subclass Feature",
       "rages": "4",
       "rageDamage": "+3",
-      "weaponMastery": "3"
+      "weaponMastery": "3",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "7",
@@ -100,7 +148,8 @@
       "feature": "Feral Instinct, Instinctive Pounce",
       "rages": "4",
       "rageDamage": "+2",
-      "weaponMastery": "3"
+      "weaponMastery": "3",
+      "feature_tr": "Vahşi İçgüdü, İçgüdüsel Sıçrama"
     },
     {
       "level": "8",
@@ -108,7 +157,8 @@
       "feature": "Ability Score Improvement",
       "rages": "4",
       "rageDamage": "+2",
-      "weaponMastery": "3"
+      "weaponMastery": "3",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "9",
@@ -116,7 +166,8 @@
       "feature": "Brutal Strike",
       "rages": "4",
       "rageDamage": "+3",
-      "weaponMastery": "3"
+      "weaponMastery": "3",
+      "feature_tr": "Vahşi Darbe"
     },
     {
       "level": "10",
@@ -124,7 +175,8 @@
       "feature": "Subclass Feature",
       "rages": "4",
       "rageDamage": "+3",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "11",
@@ -132,7 +184,8 @@
       "feature": "Relentless Rage",
       "rages": "4",
       "rageDamage": "+3",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Amansız Öfke"
     },
     {
       "level": "12",
@@ -140,7 +193,8 @@
       "feature": "Ability Score Improvement",
       "rages": "5",
       "rageDamage": "+3",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "13",
@@ -148,7 +202,8 @@
       "feature": "Improved Brutal Strike",
       "rages": "5",
       "rageDamage": "+3",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Gelişmiş Vahşi Darbe"
     },
     {
       "level": "14",
@@ -156,7 +211,8 @@
       "feature": "Subclass Feature",
       "rages": "5",
       "rageDamage": "+3",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "15",
@@ -164,7 +220,8 @@
       "feature": "Persistent Rage",
       "rages": "5",
       "rageDamage": "+3",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Kalıcı Öfke"
     },
     {
       "level": "16",
@@ -172,7 +229,8 @@
       "feature": "Ability Score Improvement",
       "rages": "5",
       "rageDamage": "+4",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "17",
@@ -180,7 +238,8 @@
       "feature": "Improved Brutal Strike",
       "rages": "6",
       "rageDamage": "+4",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Gelişmiş Vahşi Darbe"
     },
     {
       "level": "18",
@@ -188,7 +247,8 @@
       "feature": "Indomitable Might",
       "rages": "6",
       "rageDamage": "+4",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Yenilmez Güç"
     },
     {
       "level": "19",
@@ -196,7 +256,8 @@
       "feature": "Epic Boon",
       "rages": "6",
       "rageDamage": "+4",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Destansı Lütuf"
     },
     {
       "level": "20",
@@ -204,25 +265,28 @@
       "feature": "Primal Champion",
       "rages": "Unlimited",
       "rageDamage": "+4",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "İlkel Şampiyon"
     }
   ],
-
   "levelPanels": [
     {
       "level": "Level 1",
       "features": [
         {
           "title": "Rage",
-          "body": "<p>You can imbue yourself with a primal power called Rage as a Bonus Action if you aren't wearing Heavy armor.</p><br/><p><b>Damage Resistance.</b> You have Resistance to Bludgeoning, Piercing, and Slashing damage.</p><br/><p><b>Rage Damage.</b> When you make an attack using Strength and deal damage, you gain a bonus shown in the Rage Damage column.</p><br/><p><b>Strength Advantage.</b> You have Advantage on Strength checks and saving throws.</p><br/><p><b>No Concentration or Spells.</b> You can't maintain Concentration or cast spells.</p><br/><p><b>Duration.</b> The Rage lasts until the end of your next turn. Extend it each round by attacking an enemy, forcing a saving throw, or taking a Bonus Action to extend. Max 10 minutes.</p>"
+          "body": "<p>You can imbue yourself with a primal power called Rage as a Bonus Action if you aren't wearing Heavy armor.</p><br/><p><b>Damage Resistance.</b> You have Resistance to Bludgeoning, Piercing, and Slashing damage.</p><br/><p><b>Rage Damage.</b> When you make an attack using Strength and deal damage, you gain a bonus shown in the Rage Damage column.</p><br/><p><b>Strength Advantage.</b> You have Advantage on Strength checks and saving throws.</p><br/><p><b>No Concentration or Spells.</b> You can't maintain Concentration or cast spells.</p><br/><p><b>Duration.</b> The Rage lasts until the end of your next turn. Extend it each round by attacking an enemy, forcing a saving throw, or taking a Bonus Action to extend. Max 10 minutes.</p>",
+          "title_tr": "Öfke"
         },
         {
           "title": "Unarmored Defense",
-          "body": "<p>While you aren't wearing any armor, your base Armor Class equals 10 plus your Dexterity and Constitution modifiers. You can use a Shield and still gain this benefit.</p>"
+          "body": "<p>While you aren't wearing any armor, your base Armor Class equals 10 plus your Dexterity and Constitution modifiers. You can use a Shield and still gain this benefit.</p>",
+          "title_tr": "Zırhsız Savunma"
         },
         {
           "title": "Weapon Mastery",
-          "body": "<p>Your training with weapons allows you to use the mastery properties of two kinds of Simple or Martial Melee weapons of your choice. Whenever you finish a Long Rest, you can change one of those weapon choices.</p>"
+          "body": "<p>Your training with weapons allows you to use the mastery properties of two kinds of Simple or Martial Melee weapons of your choice. Whenever you finish a Long Rest, you can change one of those weapon choices.</p>",
+          "title_tr": "Silah Hakimiyeti"
         }
       ]
     },
@@ -231,11 +295,13 @@
       "features": [
         {
           "title": "Danger Sense",
-          "body": "<p>You have Advantage on Dexterity saving throws unless you have the Incapacitated condition.</p>"
+          "body": "<p>You have Advantage on Dexterity saving throws unless you have the Incapacitated condition.</p>",
+          "title_tr": "Tehlike Hissi"
         },
         {
           "title": "Reckless Attack",
-          "body": "<p>When you make your first attack roll on your turn, you can decide to attack recklessly. Doing so gives you Advantage on Strength attack rolls until the start of your next turn, but attack rolls against you also have Advantage.</p>"
+          "body": "<p>When you make your first attack roll on your turn, you can decide to attack recklessly. Doing so gives you Advantage on Strength attack rolls until the start of your next turn, but attack rolls against you also have Advantage.</p>",
+          "title_tr": "Pervasız Saldırı"
         }
       ]
     },
@@ -244,11 +310,13 @@
       "features": [
         {
           "title": "Primal Knowledge",
-          "body": "<p>You gain proficiency in another skill from the Barbarian list. While Raging, you can make Strength checks for Acrobatics, Intimidation, Perception, Stealth, or Survival.</p>"
+          "body": "<p>You gain proficiency in another skill from the Barbarian list. While Raging, you can make Strength checks for Acrobatics, Intimidation, Perception, Stealth, or Survival.</p>",
+          "title_tr": "İlkel Bilgi"
         },
         {
           "title": "Barbarian Subclass",
-          "body": "<p>You gain a Barbarian subclass of your choice. Choose your path below:</p>"
+          "body": "<p>You gain a Barbarian subclass of your choice. Choose your path below:</p>",
+          "title_tr": "Barbar Alt Sınıfı"
         }
       ]
     },
@@ -257,7 +325,8 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at levels 8, 12, and 16.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at levels 8, 12, and 16.</p>",
+          "title_tr": "Nitelik Puanı Artışı"
         }
       ]
     },
@@ -266,11 +335,13 @@
       "features": [
         {
           "title": "Extra Attack",
-          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>"
+          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
+          "title_tr": "Ekstra Saldırı"
         },
         {
           "title": "Fast Movement",
-          "body": "<p>Your speed increases by 10 feet while you aren't wearing Heavy armor.</p>"
+          "body": "<p>Your speed increases by 10 feet while you aren't wearing Heavy armor.</p>",
+          "title_tr": "Hızlı Hareket"
         }
       ]
     },
@@ -279,7 +350,8 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği"
         }
       ]
     },
@@ -288,11 +360,13 @@
       "features": [
         {
           "title": "Feral Instinct",
-          "body": "<p>You have Advantage on Initiative rolls.</p>"
+          "body": "<p>You have Advantage on Initiative rolls.</p>",
+          "title_tr": "Vahşi İçgüdü"
         },
         {
           "title": "Instinctive Pounce",
-          "body": "<p>As part of the Bonus Action you take to enter your Rage, you can move up to half your Speed.</p>"
+          "body": "<p>As part of the Bonus Action you take to enter your Rage, you can move up to half your Speed.</p>",
+          "title_tr": "İçgüdüsel Sıçrama"
         }
       ]
     },
@@ -301,7 +375,8 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı"
         }
       ]
     },
@@ -310,7 +385,8 @@
       "features": [
         {
           "title": "Brutal Strike",
-          "body": "<p>If you use Reckless Attack, you can forgo Advantage on one Strength-based attack roll. If it hits, the target takes an extra 1d10 damage and you can apply one Brutal Strike effect:</p><br/><p><b>Forceful Blow.</b> Push the target 15 feet away. You can then move up to half your Speed toward them without provoking Opportunity Attacks.</p><br/><p><b>Hamstring Blow.</b> The target's Speed is reduced by 15 feet until the start of your next turn.</p>"
+          "body": "<p>If you use Reckless Attack, you can forgo Advantage on one Strength-based attack roll. If it hits, the target takes an extra 1d10 damage and you can apply one Brutal Strike effect:</p><br/><p><b>Forceful Blow.</b> Push the target 15 feet away. You can then move up to half your Speed toward them without provoking Opportunity Attacks.</p><br/><p><b>Hamstring Blow.</b> The target's Speed is reduced by 15 feet until the start of your next turn.</p>",
+          "title_tr": "Vahşi Darbe"
         }
       ]
     },
@@ -319,7 +395,8 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği"
         }
       ]
     },
@@ -328,7 +405,8 @@
       "features": [
         {
           "title": "Relentless Rage",
-          "body": "<p>If you drop to 0 HP while Raging and don't die outright, make a DC 10 Constitution save. On success, your HP becomes twice your Barbarian level. Each subsequent use increases the DC by 5, resetting on a Short or Long Rest.</p>"
+          "body": "<p>If you drop to 0 HP while Raging and don't die outright, make a DC 10 Constitution save. On success, your HP becomes twice your Barbarian level. Each subsequent use increases the DC by 5, resetting on a Short or Long Rest.</p>",
+          "title_tr": "Amansız Öfke"
         }
       ]
     },
@@ -337,7 +415,8 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı"
         }
       ]
     },
@@ -346,7 +425,8 @@
       "features": [
         {
           "title": "Improved Brutal Strike",
-          "body": "<p><b>Staggering Blow.</b> The target has Disadvantage on its next saving throw and can't make Opportunity Attacks until your next turn.</p><br/><p><b>Sundering Blow.</b> The next attack roll against the target before your next turn gains a +5 bonus.</p>"
+          "body": "<p><b>Staggering Blow.</b> The target has Disadvantage on its next saving throw and can't make Opportunity Attacks until your next turn.</p><br/><p><b>Sundering Blow.</b> The next attack roll against the target before your next turn gains a +5 bonus.</p>",
+          "title_tr": "Gelişmiş Vahşi Darbe"
         }
       ]
     },
@@ -355,7 +435,8 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği"
         }
       ]
     },
@@ -364,7 +445,8 @@
       "features": [
         {
           "title": "Persistent Rage",
-          "body": "<p>When you roll Initiative, you can regain all expended uses of Rage (once per Long Rest). Your Rage now lasts 10 minutes without extension actions, ending only if you are Unconscious or don Heavy armor.</p>"
+          "body": "<p>When you roll Initiative, you can regain all expended uses of Rage (once per Long Rest). Your Rage now lasts 10 minutes without extension actions, ending only if you are Unconscious or don Heavy armor.</p>",
+          "title_tr": "Kalıcı Öfke"
         }
       ]
     },
@@ -373,7 +455,8 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı"
         }
       ]
     },
@@ -382,7 +465,8 @@
       "features": [
         {
           "title": "Improved Brutal Strike",
-          "body": "<p>The extra damage of your Brutal Strike increases to 2d10. You can also apply two different Brutal Strike effects whenever you use this feature.</p>"
+          "body": "<p>The extra damage of your Brutal Strike increases to 2d10. You can also apply two different Brutal Strike effects whenever you use this feature.</p>",
+          "title_tr": "Gelişmiş Vahşi Darbe"
         }
       ]
     },
@@ -391,7 +475,8 @@
       "features": [
         {
           "title": "Indomitable Might",
-          "body": "<p>If your total for a Strength check or Strength saving throw is less than your Strength score, you can use that score in place of the total.</p>"
+          "body": "<p>If your total for a Strength check or Strength saving throw is less than your Strength score, you can use that score in place of the total.</p>",
+          "title_tr": "Yenilmez Güç"
         }
       ]
     },
@@ -400,7 +485,8 @@
       "features": [
         {
           "title": "Epic Boon",
-          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Irresistible Offense is recommended.</p>"
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Irresistible Offense is recommended.</p>",
+          "title_tr": "Destansı Lütuf"
         }
       ]
     },
@@ -409,9 +495,15 @@
       "features": [
         {
           "title": "Primal Champion",
-          "body": "<p>You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25.</p>"
+          "body": "<p>You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25.</p>",
+          "title_tr": "İlkel Şampiyon"
         }
       ]
     }
-  ]
+  ],
+  "name_tr": "Barbar",
+  "subtitle_tr": "İlkel geçmişi olan, savaş öfkesine girebilen sert bir savaşçı",
+  "complexity_tr": "Düşük Karmaşıklık",
+  "primaryStat_tr": "Güç · Anayasa",
+  "subclassPrefix_tr": "Yolu"
 }

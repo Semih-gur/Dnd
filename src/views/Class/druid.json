@@ -8,34 +8,74 @@
   "subclassPrefix": "Circle of the",
   "subclassRoute": "/wiki/classes/druid/",
   "multiclassTraits": "Gain the Hit Point Die and training with Light armor and Shields.",
-
   "subclasses": [
-    { "title": "Land", "icon": "mdi-leaf" },
-    { "title": "Moon", "icon": "mdi-moon-waning-crescent" },
-    { "title": "Sea", "icon": "mdi-waves" },
-    { "title": "Stars", "icon": "mdi-star-four-points" }
+    {
+      "title": "Land",
+      "icon": "mdi-leaf"
+    },
+    {
+      "title": "Moon",
+      "icon": "mdi-moon-waning-crescent"
+    },
+    {
+      "title": "Sea",
+      "icon": "mdi-waves"
+    },
+    {
+      "title": "Stars",
+      "icon": "mdi-star-four-points"
+    }
   ],
-
   "coreTraits": [
-    { "label": "Primary Ability", "value": "Wisdom" },
-    { "label": "Hit Point Die", "value": "D8 per Druid level" },
+    {
+      "label": "Primary Ability",
+      "value": "Wisdom",
+      "label_tr": "Birincil Nitelik",
+      "value_tr": "Hikmet"
+    },
+    {
+      "label": "Hit Point Die",
+      "value": "D8 per Druid level",
+      "label_tr": "Can Puanı Zarı",
+      "value_tr": "Druid seviyesi başına D8"
+    },
     {
       "label": "Saving Throw Proficiencies",
-      "value": "Intelligence and Wisdom"
+      "value": "Intelligence and Wisdom",
+      "label_tr": "Kurtarma Atışı Uzmanlıkları",
+      "value_tr": "Zeka ve Hikmet"
     },
     {
       "label": "Skill Proficiencies",
-      "value": "Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, or Survival"
+      "value": "Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, or Survival",
+      "label_tr": "Beceri Uzmanlıkları",
+      "value_tr": "2 seçin: Gizli Bilgi, Hayvan Bakımı, İçgüdü, Tıp, Doğa, Algı, Din veya Hayatta Kalma"
     },
-    { "label": "Weapon Proficiencies", "value": "Simple weapons" },
-    { "label": "Tool Proficiencies", "value": "Herbalism Kit" },
-    { "label": "Armor Training", "value": "Light armor and Shields" },
+    {
+      "label": "Weapon Proficiencies",
+      "value": "Simple weapons",
+      "label_tr": "Silah Uzmanlıkları",
+      "value_tr": "Basit Silahlar"
+    },
+    {
+      "label": "Tool Proficiencies",
+      "value": "Herbalism Kit",
+      "label_tr": "Araç Uzmanlıkları",
+      "value_tr": "Şifalı Bitki Seti"
+    },
+    {
+      "label": "Armor Training",
+      "value": "Light armor and Shields",
+      "label_tr": "Zırh Eğitimi",
+      "value_tr": "Hafif zırh ve Kalkanlar"
+    },
     {
       "label": "Starting Equipment",
-      "value": "Choose A or B: (A) Leather Armor, Shield, Sickle, Druidic Focus (Quarterstaff), Explorer's Pack, Herbalism Kit, and 9 GP; or (B) 50 GP"
+      "value": "Choose A or B: (A) Leather Armor, Shield, Sickle, Druidic Focus (Quarterstaff), Explorer's Pack, Herbalism Kit, and 9 GP; or (B) 50 GP",
+      "label_tr": "Başlangıç Ekipmanı",
+      "value_tr": "A veya B seçin: (A) Deri Zırh, Kalkan, Orak, Druidik Odaklayıcı (Asa), Kaşif Çantası, Şifalı Bitki Seti ve 9 AP; veya (B) 50 AP"
     }
   ],
-
   "tableColumns": [
     {
       "key": "wildShape",
@@ -43,25 +83,82 @@
       "badge": true,
       "badgeClass": "ws-badge"
     },
-    { "key": "cantrips", "label": "Cantrip", "badge": false },
-    { "key": "preparedSpells", "label": "Prep. Spells", "badge": false },
-    { "key": "first", "label": "1", "badge": false },
-    { "key": "second", "label": "2", "badge": false },
-    { "key": "third", "label": "3", "badge": false },
-    { "key": "fourth", "label": "4", "badge": false },
-    { "key": "fifth", "label": "5", "badge": false },
-    { "key": "sixth", "label": "6", "badge": false },
-    { "key": "seventh", "label": "7", "badge": false },
-    { "key": "eight", "label": "8", "badge": false },
-    { "key": "ninth", "label": "9", "badge": false }
+    {
+      "key": "cantrips",
+      "label": "Cantrip",
+      "badge": false
+    },
+    {
+      "key": "preparedSpells",
+      "label": "Prep. Spells",
+      "badge": false
+    },
+    {
+      "key": "first",
+      "label": "1",
+      "badge": false
+    },
+    {
+      "key": "second",
+      "label": "2",
+      "badge": false
+    },
+    {
+      "key": "third",
+      "label": "3",
+      "badge": false
+    },
+    {
+      "key": "fourth",
+      "label": "4",
+      "badge": false
+    },
+    {
+      "key": "fifth",
+      "label": "5",
+      "badge": false
+    },
+    {
+      "key": "sixth",
+      "label": "6",
+      "badge": false
+    },
+    {
+      "key": "seventh",
+      "label": "7",
+      "badge": false
+    },
+    {
+      "key": "eight",
+      "label": "8",
+      "badge": false
+    },
+    {
+      "key": "ninth",
+      "label": "9",
+      "badge": false
+    }
   ],
-
   "wildshapeTable": [
-    { "level": "2", "forms": "4", "cr": "1/4", "flySpeed": "No" },
-    { "level": "4", "forms": "6", "cr": "1/2", "flySpeed": "No" },
-    { "level": "8", "forms": "8", "cr": "1", "flySpeed": "Yes" }
+    {
+      "level": "2",
+      "forms": "4",
+      "cr": "1/4",
+      "flySpeed": "No"
+    },
+    {
+      "level": "4",
+      "forms": "6",
+      "cr": "1/2",
+      "flySpeed": "No"
+    },
+    {
+      "level": "8",
+      "forms": "8",
+      "cr": "1",
+      "flySpeed": "Yes"
+    }
   ],
-
   "levels": [
     {
       "level": "1",
@@ -78,7 +175,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Büyü Kullanımı, Druidic, Primal Order"
     },
     {
       "level": "2",
@@ -95,7 +193,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Vahşi Şekil, Wild Companion"
     },
     {
       "level": "3",
@@ -112,7 +211,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Druid Alt Sınıfı"
     },
     {
       "level": "4",
@@ -129,7 +229,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "5",
@@ -146,7 +247,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Vahşi Yenileniş"
     },
     {
       "level": "6",
@@ -163,7 +265,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "7",
@@ -180,7 +283,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Elemental Öfke"
     },
     {
       "level": "8",
@@ -197,7 +301,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "9",
@@ -231,7 +336,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "11",
@@ -265,7 +371,8 @@
       "sixth": "1",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "13",
@@ -299,7 +406,8 @@
       "sixth": "1",
       "seventh": "1",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "15",
@@ -316,7 +424,8 @@
       "sixth": "1",
       "seventh": "1",
       "eight": "1",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Gelişmiş Elemental Öfke"
     },
     {
       "level": "16",
@@ -333,7 +442,8 @@
       "sixth": "1",
       "seventh": "1",
       "eight": "1",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "17",
@@ -367,7 +477,8 @@
       "sixth": "1",
       "seventh": "1",
       "eight": "1",
-      "ninth": "1"
+      "ninth": "1",
+      "feature_tr": "Yaratık Büyüleri"
     },
     {
       "level": "19",
@@ -384,7 +495,8 @@
       "sixth": "2",
       "seventh": "1",
       "eight": "1",
-      "ninth": "1"
+      "ninth": "1",
+      "feature_tr": "Destansı Lütuf"
     },
     {
       "level": "20",
@@ -401,17 +513,18 @@
       "sixth": "2",
       "seventh": "2",
       "eight": "1",
-      "ninth": "1"
+      "ninth": "1",
+      "feature_tr": "Başdruid"
     }
   ],
-
   "levelPanels": [
     {
       "level": "Level 1",
       "features": [
         {
           "title": "Spellcasting",
-          "body": "<p>You cast spells through studying the mystical forces of nature. Wisdom is your spellcasting ability and you can use a Druidic Focus as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know two cantrips of your choice from the Druid spell list. Druidcraft and Produce Flame are recommended. You gain more cantrips at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells to start. Animal Friendship, Cure Wounds, Faerie Fire, and Thunderwave are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can replace any prepared spells with other Druid spells for which you have spell slots.</p>"
+          "body": "<p>You cast spells through studying the mystical forces of nature. Wisdom is your spellcasting ability and you can use a Druidic Focus as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know two cantrips of your choice from the Druid spell list. Druidcraft and Produce Flame are recommended. You gain more cantrips at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells to start. Animal Friendship, Cure Wounds, Faerie Fire, and Thunderwave are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can replace any prepared spells with other Druid spells for which you have spell slots.</p>",
+          "title_tr": "Büyü Kullanımı"
         },
         {
           "title": "Druidic",
@@ -428,7 +541,8 @@
       "features": [
         {
           "title": "Wild Shape",
-          "body": "<p>As a Bonus Action, you shape-shift into a Beast form you have learned. You stay in that form for hours equal to half your Druid level, or until you use Wild Shape again, become Incapacitated, or die. You can also leave early as a Bonus Action.</p><br/><p><b>Number of Uses.</b> You can use Wild Shape twice, regaining one use on a Short Rest and all uses on a Long Rest. Additional uses are gained at higher levels.</p><br/><p><b>Known Forms.</b> You know four Beast forms (max CR 1/4, no Fly Speed). The Rat, Riding Horse, Spider, and Wolf are recommended. You can replace one known form each Long Rest. The table above shows how your available forms expand as you level up.</p><br/><p><b>While Shape-Shifted.</b> You gain Temporary Hit Points equal to your Druid level. Your statistics are replaced by the Beast's stat block, but you retain your creature type, Hit Points, Hit Dice, mental ability scores, class features, languages, feats, and proficiencies. You cannot cast spells, though Concentration on already-cast spells is maintained.</p>"
+          "body": "<p>As a Bonus Action, you shape-shift into a Beast form you have learned. You stay in that form for hours equal to half your Druid level, or until you use Wild Shape again, become Incapacitated, or die. You can also leave early as a Bonus Action.</p><br/><p><b>Number of Uses.</b> You can use Wild Shape twice, regaining one use on a Short Rest and all uses on a Long Rest. Additional uses are gained at higher levels.</p><br/><p><b>Known Forms.</b> You know four Beast forms (max CR 1/4, no Fly Speed). The Rat, Riding Horse, Spider, and Wolf are recommended. You can replace one known form each Long Rest. The table above shows how your available forms expand as you level up.</p><br/><p><b>While Shape-Shifted.</b> You gain Temporary Hit Points equal to your Druid level. Your statistics are replaced by the Beast's stat block, but you retain your creature type, Hit Points, Hit Dice, mental ability scores, class features, languages, feats, and proficiencies. You cannot cast spells, though Concentration on already-cast spells is maintained.</p>",
+          "title_tr": "Vahşi Şekil"
         },
         {
           "title": "Wild Companion",
@@ -441,7 +555,8 @@
       "features": [
         {
           "title": "Druid Subclass",
-          "body": "<p>You gain a Druid subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Druid level or lower. Choose your circle below:</p>"
+          "body": "<p>You gain a Druid subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Druid level or lower. Choose your circle below:</p>",
+          "title_tr": "Druid Alt Sınıfı"
         }
       ]
     },
@@ -450,7 +565,8 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Druid levels 8, 12, and 16.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Druid levels 8, 12, and 16.</p>",
+          "title_tr": "Nitelik Puanı Artışı"
         }
       ]
     },
@@ -459,7 +575,8 @@
       "features": [
         {
           "title": "Wild Resurgence",
-          "body": "<p>Once on each of your turns, if you have no uses of Wild Shape left, you can give yourself one use by expending a spell slot (no action required).</p><br/><p>In addition, you can expend one use of Wild Shape (no action required) to give yourself a level 1 spell slot, but you can't do so again until you finish a Long Rest.</p>"
+          "body": "<p>Once on each of your turns, if you have no uses of Wild Shape left, you can give yourself one use by expending a spell slot (no action required).</p><br/><p>In addition, you can expend one use of Wild Shape (no action required) to give yourself a level 1 spell slot, but you can't do so again until you finish a Long Rest.</p>",
+          "title_tr": "Vahşi Yenileniş"
         }
       ]
     },
@@ -468,7 +585,8 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen circle.</p>"
+          "body": "<p>You gain a new feature from your chosen circle.</p>",
+          "title_tr": "Alt Sınıf Özelliği"
         }
       ]
     },
@@ -477,7 +595,8 @@
       "features": [
         {
           "title": "Elemental Fury",
-          "body": "<p>The might of the elements flows through you. Choose one of the following options:</p><br/><p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Druid cantrips.</p><br/><p><b>Primal Strike.</b> Once on each of your turns when you hit a creature with a weapon or a Beast form's attack in Wild Shape, you can cause the target to take an extra 1d8 Cold, Fire, Lightning, or Thunder damage (choose when you hit).</p>"
+          "body": "<p>The might of the elements flows through you. Choose one of the following options:</p><br/><p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Druid cantrips.</p><br/><p><b>Primal Strike.</b> Once on each of your turns when you hit a creature with a weapon or a Beast form's attack in Wild Shape, you can cause the target to take an extra 1d8 Cold, Fire, Lightning, or Thunder damage (choose when you hit).</p>",
+          "title_tr": "Elemental Öfke"
         }
       ]
     },
@@ -486,7 +605,8 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı"
         }
       ]
     },
@@ -495,7 +615,8 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen circle.</p>"
+          "body": "<p>You gain a new feature from your chosen circle.</p>",
+          "title_tr": "Alt Sınıf Özelliği"
         }
       ]
     },
@@ -504,7 +625,8 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı"
         }
       ]
     },
@@ -513,7 +635,8 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen circle.</p>"
+          "body": "<p>You gain a new feature from your chosen circle.</p>",
+          "title_tr": "Alt Sınıf Özelliği"
         }
       ]
     },
@@ -522,7 +645,8 @@
       "features": [
         {
           "title": "Improved Elemental Fury",
-          "body": "<p>The option you chose for Elemental Fury grows more powerful.</p><br/><p><b>Potent Spellcasting.</b> When you cast a Druid cantrips with a range of 10 feet or greater, the spell's range increases by 300 feet.</p><br/><p><b>Primal Strike.</b> The extra damage of your Primal Strike increases to 2d8.</p>"
+          "body": "<p>The option you chose for Elemental Fury grows more powerful.</p><br/><p><b>Potent Spellcasting.</b> When you cast a Druid cantrips with a range of 10 feet or greater, the spell's range increases by 300 feet.</p><br/><p><b>Primal Strike.</b> The extra damage of your Primal Strike increases to 2d8.</p>",
+          "title_tr": "Gelişmiş Elemental Öfke"
         }
       ]
     },
@@ -531,7 +655,8 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı"
         }
       ]
     },
@@ -540,7 +665,8 @@
       "features": [
         {
           "title": "Beast Spells",
-          "body": "<p>While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.</p>"
+          "body": "<p>While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.</p>",
+          "title_tr": "Yaratık Büyüleri"
         }
       ]
     },
@@ -549,7 +675,8 @@
       "features": [
         {
           "title": "Epic Boon",
-          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>"
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>",
+          "title_tr": "Destansı Lütuf"
         }
       ]
     },
@@ -558,9 +685,15 @@
       "features": [
         {
           "title": "Archdruid",
-          "body": "<p>The vitality of nature constantly blooms within you, granting the following benefits:</p><br/><p><b>Evergreen Wild Shape.</b> Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.</p><br/><p><b>Nature Magician.</b> You can convert uses of Wild Shape into a spell slot (no action required). Each use contributes 2 spell levels. For example, two uses produce a level 4 spell slot. Once used, you can't do so again until you finish a Long Rest.</p><br/><p><b>Longevity.</b> For every ten years that pass, your body ages only one year.</p>"
+          "body": "<p>The vitality of nature constantly blooms within you, granting the following benefits:</p><br/><p><b>Evergreen Wild Shape.</b> Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.</p><br/><p><b>Nature Magician.</b> You can convert uses of Wild Shape into a spell slot (no action required). Each use contributes 2 spell levels. For example, two uses produce a level 4 spell slot. Once used, you can't do so again until you finish a Long Rest.</p><br/><p><b>Longevity.</b> For every ten years that pass, your body ages only one year.</p>",
+          "title_tr": "Başdruid"
         }
       ]
     }
-  ]
+  ],
+  "name_tr": "Druid",
+  "subtitle_tr": "Doğanın güçlerini kullanan ve hayvan formlarına bürünen büyücü",
+  "complexity_tr": "Yüksek Karmaşıklık",
+  "primaryStat_tr": "Hikmet",
+  "subclassPrefix_tr": "Çemberi"
 }

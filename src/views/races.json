@@ -11,35 +11,43 @@
         "feats": [
           {
             "name": "Celestial Resistance",
-            "desc": "You have Resistance to Necrotic damage and Radiant damage."
+            "desc": "You have Resistance to Necrotic damage and Radiant damage.",
+            "name_tr": "Göksel Direnç"
           },
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü"
           },
           {
             "name": "Healing Hands",
-            "desc": "As a Magic action, you can touch a creature and roll a number of d4s equal to your Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once you use this trait, you can't use it again until you finish a Long Rest."
+            "desc": "As a Magic action, you can touch a creature and roll a number of d4s equal to your Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once you use this trait, you can't use it again until you finish a Long Rest.",
+            "name_tr": "İyileştirici Eller"
           },
           {
             "name": "Light Bearer",
-            "desc": "You know the Light cantrip. Charisma is your spellcasting ability for it."
+            "desc": "You know the Light cantrip. Charisma is your spellcasting ability for it.",
+            "name_tr": "Işık Taşıyıcı"
           },
           {
             "name": "Celestial Revelation",
-            "desc": "When you reach character level 3, choose one of the revelation options below. Thereafter you can use a Bonus Action to unleash the celestial energy within yourself, transforming for 1 minute or until you end it as a Bonus Action. Once you use this trait, you can't use it again until you finish a Long Rest."
+            "desc": "When you reach character level 3, choose one of the revelation options below. Thereafter you can use a Bonus Action to unleash the celestial energy within yourself, transforming for 1 minute or until you end it as a Bonus Action. Once you use this trait, you can't use it again until you finish a Long Rest.",
+            "name_tr": "Göksel Tecelli"
           },
           {
             "name": "Celestial Revelation: Heavenly Wings",
-            "desc": "You sprout spectral wings. Until the transformation ends, you have a Fly Speed equal to your Speed."
+            "desc": "You sprout spectral wings. Until the transformation ends, you have a Fly Speed equal to your Speed.",
+            "name_tr": "Göksel Tecelli: Semavi Kanatlar"
           },
           {
             "name": "Celestial Revelation: Inner Radiance",
-            "desc": "Searing light temporarily radiates from your eyes and mouth. Until the transformation ends, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your Proficiency Bonus."
+            "desc": "Searing light temporarily radiates from your eyes and mouth. Until the transformation ends, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your Proficiency Bonus.",
+            "name_tr": "Göksel Tecelli: İç Işıltı"
           },
           {
             "name": "Celestial Revelation: Necrotic Shroud",
-            "desc": "Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 + your Charisma modifier + your Proficiency Bonus) or have the Frightened condition until the end of your next turn. For the transformation's duration, once per turn when you deal damage to a creature, you can deal extra Necrotic damage equal to your Proficiency Bonus."
+            "desc": "Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 + your Charisma modifier + your Proficiency Bonus) or have the Frightened condition until the end of your next turn. For the transformation's duration, once per turn when you deal damage to a creature, you can deal extra Necrotic damage equal to your Proficiency Bonus.",
+            "name_tr": "Göksel Tecelli: Nekrotik Kefen"
           }
         ]
       }
@@ -60,34 +68,69 @@
             "desc": "Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.",
             "table": [
               [
-                { "dragon": "Black", "damage": "Acid" },
-                { "dragon": "Blue", "damage": "Lightning" },
-                { "dragon": "Brass", "damage": "Fire" },
-                { "dragon": "Bronze", "damage": "Lightning" },
-                { "dragon": "Copper", "damage": "Acid" },
-                { "dragon": "Gold", "damage": "Fire" },
-                { "dragon": "Green", "damage": "Poison" },
-                { "dragon": "Red", "damage": "Fire" },
-                { "dragon": "Silver", "damage": "Cold" },
-                { "dragon": "White", "damage": "Cold" }
+                {
+                  "dragon": "Black",
+                  "damage": "Acid"
+                },
+                {
+                  "dragon": "Blue",
+                  "damage": "Lightning"
+                },
+                {
+                  "dragon": "Brass",
+                  "damage": "Fire"
+                },
+                {
+                  "dragon": "Bronze",
+                  "damage": "Lightning"
+                },
+                {
+                  "dragon": "Copper",
+                  "damage": "Acid"
+                },
+                {
+                  "dragon": "Gold",
+                  "damage": "Fire"
+                },
+                {
+                  "dragon": "Green",
+                  "damage": "Poison"
+                },
+                {
+                  "dragon": "Red",
+                  "damage": "Fire"
+                },
+                {
+                  "dragon": "Silver",
+                  "damage": "Cold"
+                },
+                {
+                  "dragon": "White",
+                  "damage": "Cold"
+                }
               ]
-            ]
+            ],
+            "name_tr": "Ejderha Soyu"
           },
           {
             "name": "Breath Weapon",
-            "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10). You can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+            "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10). You can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+            "name_tr": "Nefes Silahı"
           },
           {
             "name": "Damage Resistance",
-            "desc": "You have Resistance to the damage type determined by your Draconic Ancestry trait."
+            "desc": "You have Resistance to the damage type determined by your Draconic Ancestry trait.",
+            "name_tr": "Hasar Direnci"
           },
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü"
           },
           {
             "name": "Draconic Flight",
-            "desc": "When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Once you use this trait, you can't use it again until you finish a Long Rest."
+            "desc": "When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Once you use this trait, you can't use it again until you finish a Long Rest.",
+            "name_tr": "Ejderha Uçuşu"
           }
         ]
       }
@@ -105,19 +148,23 @@
         "feats": [
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 120 feet."
+            "desc": "You have Darkvision with a range of 120 feet.",
+            "name_tr": "Karanlık Görüşü"
           },
           {
             "name": "Dwarven Resilience",
-            "desc": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition."
+            "desc": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.",
+            "name_tr": "Cüce Direnci"
           },
           {
             "name": "Dwarven Toughness",
-            "desc": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level."
+            "desc": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.",
+            "name_tr": "Cüce Sağlamlığı"
           },
           {
             "name": "Stonecunning",
-            "desc": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked. You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+            "desc": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked. You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+            "name_tr": "Taş Bilgeliği"
           }
         ]
       }
@@ -135,7 +182,8 @@
         "feats": [
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü"
           },
           {
             "name": "Elven Lineage",
@@ -161,19 +209,23 @@
                   "level5": "Pass Without Trace"
                 }
               ]
-            ]
+            ],
+            "name_tr": "Elf Soyu"
           },
           {
             "name": "Fey Ancestry",
-            "desc": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
+            "desc": "You have Advantage on saving throws you make to avoid or end the Charmed condition.",
+            "name_tr": "Peri Atası"
           },
           {
             "name": "Keen Senses",
-            "desc": "You have proficiency in the Insight, Perception, or Survival skill (choose one)."
+            "desc": "You have proficiency in the Insight, Perception, or Survival skill (choose one).",
+            "name_tr": "Keskin Duyular"
           },
           {
             "name": "Trance",
-            "desc": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
+            "desc": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
+            "name_tr": "Trans"
           }
         ]
       }
@@ -191,11 +243,13 @@
         "feats": [
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü"
           },
           {
             "name": "Gnomish Cunning",
-            "desc": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws."
+            "desc": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
+            "name_tr": "Gnome Kurnazlığı"
           },
           {
             "name": "Gnomish Lineage: Forest Gnome",
@@ -245,11 +299,13 @@
           },
           {
             "name": "Large Form",
-            "desc": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required)."
+            "desc": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required).",
+            "name_tr": "Büyük Beden"
           },
           {
             "name": "Powerful Build",
-            "desc": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity."
+            "desc": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.",
+            "name_tr": "Güçlü Yapı"
           }
         ]
       }
@@ -267,19 +323,23 @@
         "feats": [
           {
             "name": "Brave",
-            "desc": "You have Advantage on saving throws you make to avoid or end the Frightened condition."
+            "desc": "You have Advantage on saving throws you make to avoid or end the Frightened condition.",
+            "name_tr": "Cesur"
           },
           {
             "name": "Halfling Nimbleness",
-            "desc": "You can move through the space of any creature that is a size larger than you, but you can't stop in the same space."
+            "desc": "You can move through the space of any creature that is a size larger than you, but you can't stop in the same space.",
+            "name_tr": "Bodurcan Çevikliği"
           },
           {
             "name": "Luck",
-            "desc": "When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll."
+            "desc": "When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.",
+            "name_tr": "Şans"
           },
           {
             "name": "Naturally Stealthy",
-            "desc": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you."
+            "desc": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.",
+            "name_tr": "Doğal Gizlilik"
           }
         ]
       }
@@ -297,15 +357,18 @@
         "feats": [
           {
             "name": "Resourceful",
-            "desc": "You gain Heroic Inspiration whenever you finish a Long Rest."
+            "desc": "You gain Heroic Inspiration whenever you finish a Long Rest.",
+            "name_tr": "Becerikli"
           },
           {
             "name": "Skillful",
-            "desc": "You gain proficiency in one skill of your choice."
+            "desc": "You gain proficiency in one skill of your choice.",
+            "name_tr": "Yetenekli"
           },
           {
             "name": "Versatile",
-            "desc": "You gain an Origin feat of your choice. Skilled is recommended."
+            "desc": "You gain an Origin feat of your choice. Skilled is recommended.",
+            "name_tr": "Çok Yönlü"
           }
         ]
       }
@@ -323,15 +386,18 @@
         "feats": [
           {
             "name": "Adrenaline Rush",
-            "desc": "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus."
+            "desc": "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.",
+            "name_tr": "Adrenalin Atışı"
           },
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 120 feet."
+            "desc": "You have Darkvision with a range of 120 feet.",
+            "name_tr": "Karanlık Görüşü"
           },
           {
             "name": "Relentless Endurance",
-            "desc": "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest."
+            "desc": "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest.",
+            "name_tr": "Amansız Dayanıklılık"
           }
         ]
       }
@@ -349,7 +415,8 @@
         "feats": [
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü"
           },
           {
             "name": "Fiendish Legacy",
@@ -375,11 +442,13 @@
                   "level5": "Darkness"
                 }
               ]
-            ]
+            ],
+            "name_tr": "İblis Mirası"
           },
           {
             "name": "Otherworldly Presence",
-            "desc": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
+            "desc": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.",
+            "name_tr": "Öteki Dünya Varlığı"
           }
         ]
       }

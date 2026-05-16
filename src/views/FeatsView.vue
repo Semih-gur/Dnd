@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Feats</h1>
+          <h1 class="hero-title">{{ $t('feats.title') }}</h1>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@
             :class="{ active: tab === 'origin' }"
             @click="tab = 'origin'"
           >
-            Origin Feats
+            {{ $t('feats.tabs.origin') }}
             <span class="tab-count">{{ origin.length }}</span>
           </button>
           <button
@@ -26,7 +26,7 @@
             :class="{ active: tab === 'general' }"
             @click="tab = 'general'"
           >
-            General Feats
+            {{ $t('feats.tabs.general') }}
             <span class="tab-count">{{ general.length }}</span>
           </button>
           <button
@@ -34,7 +34,7 @@
             :class="{ active: tab === 'fightStyle' }"
             @click="tab = 'fightStyle'"
           >
-            Fighting Style
+            {{ $t('feats.tabs.fightStyle') }}
             <span class="tab-count">{{ fightStyle.length }}</span>
           </button>
           <button
@@ -42,7 +42,7 @@
             :class="{ active: tab === 'epic' }"
             @click="tab = 'epic'"
           >
-            Epic Boon
+            {{ $t('feats.tabs.epic') }}
             <span class="tab-count">{{ epic.length }}</span>
           </button>
         </div>
@@ -57,7 +57,7 @@
           @click="openFeat(feat)"
         >
           <div class="feat-card-inner">
-            <span class="feat-name">{{ capitalize(feat.name) }}</span>
+            <span class="feat-name">{{ capitalize($lf(feat, 'name')) }}</span>
             <span class="feat-preq" v-if="feat.preq">{{ feat.preq }}</span>
           </div>
           <v-icon class="feat-arrow">mdi-chevron-right</v-icon>
@@ -71,8 +71,8 @@
         <!-- Header -->
         <div class="popup-header">
           <div>
-            <span class="popup-eyebrow">{{ tabLabel }}</span>
-            <h2 class="popup-title">{{ capitalize(selectedFeat.name) }}</h2>
+            <span class="popup-eyebrow">{{ $t(`feats.tabLabels.${tab}`) }}</span>
+            <h2 class="popup-title">{{ capitalize($lf(selectedFeat, 'name')) }}</h2>
             <span class="popup-preq" v-if="selectedFeat.preq">
               <v-icon size="12">mdi-lock-outline</v-icon>
               {{ selectedFeat.preq }}
@@ -92,7 +92,7 @@
           >
             <p class="ability-text">
               <b class="ability-name" v-if="ability.aName"
-                >{{ ability.aName }}
+                >{{ $lf(ability, 'aName') }}
               </b>
               {{ ability.aDesc }}
             </p>
@@ -152,16 +152,6 @@ export default {
           fightStyle: this.fightStyle,
           epic: this.epic,
         }[this.tab] ?? []
-      );
-    },
-    tabLabel() {
-      return (
-        {
-          origin: "Origin Feat",
-          general: "General Feat",
-          fightStyle: "Fighting Style Feat",
-          epic: "Epic Boon Feat",
-        }[this.tab] ?? "Feat"
       );
     },
   },

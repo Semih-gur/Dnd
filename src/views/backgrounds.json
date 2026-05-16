@@ -6,7 +6,14 @@
     "feat": "Magic Initiate (Cleric)",
     "skill": "Insight and Religion",
     "tool": "Calligrapher's Supplies",
-    "equipment": "Choose A or B: (A) Calligrapher’s Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Calligrapher’s Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP",
+    "name_tr": "dini hizmetkar",
+    "flavor_tr": "Bir tapınakta hizmete adandınız; orada bir tanrı ya da pantheon onuruna ayinler gerçekleştirdiniz. Rahipinizin rehberliği ve kendi bağlılığınız sayesinde ilahi gücü kanalize etmeyi öğrendiniz.",
+    "abilityScore_tr": "Zeka, Hikmet, Karizma",
+    "feat_tr": "Büyü Başlatma (Din Adamı)",
+    "skill_tr": "İçgüdü ve Din",
+    "tool_tr": "Hattat Gereçleri",
+    "equipment_tr": "A veya B seçin: (A) Hattat Gereçleri, Kitap (dualar), Kutsal Sembol, Parşömen (10 yaprak), Cüppe, 8 AP; veya (B) 50 AP"
   },
   {
     "name": "artisan",
@@ -15,7 +22,14 @@
     "feat": "Skilled",
     "skill": "Deception and Sleight of Hand",
     "tool": "Forgery Kit",
-    "equipment": "Choose A or B: (A) Forgery Kit, Costume, Fine Clothes, 15 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Forgery Kit, Costume, Fine Clothes, 15 GP; or (B) 50 GP",
+    "name_tr": "zanaatkar",
+    "flavor_tr": "Yıllarca tavernadan tavernaya dolaşarak çeşitli hilelerle geçimini sağladınız; rahat bir yalana ya da sahte bir iksire ihtiyaç duyan talihsizleri avladınız.",
+    "abilityScore_tr": "Çeviklik, Anayasa, Karizma",
+    "feat_tr": "Yetenekli",
+    "skill_tr": "Aldatma ve El Çabukluğu",
+    "tool_tr": "Sahtecilik Seti",
+    "equipment_tr": "A veya B seçin: (A) Sahtecilik Seti, Kostüm, Güzel Giysiler, 15 AP; veya (B) 50 AP"
   },
   {
     "name": "criminal",
@@ -24,7 +38,14 @@
     "feat": "Alert",
     "skill": "Sleight of Hand and Stealth",
     "tool": "Thieves' Tools",
-    "equipment": "Choose A or B: (A) 2 Daggers, Thieves' Tools, Crowbar, 2 Pouches, Traveler's Clothes, 16 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) 2 Daggers, Thieves' Tools, Crowbar, 2 Pouches, Traveler's Clothes, 16 GP; or (B) 50 GP",
+    "name_tr": "suçlu",
+    "flavor_tr": "Karanlık arka sokaklarda yaşadınız; kese kestiniz ya da dükkanları soydunuz. Belki küçük bir çetenin parçasıydınız ya da yalnız kurt olarak hayatta kaldınız.",
+    "abilityScore_tr": "Çeviklik, Anayasa, Zeka",
+    "feat_tr": "Teyakkuz",
+    "skill_tr": "El Çabukluğu ve Gizlilik",
+    "tool_tr": "Hırsız Aletleri",
+    "equipment_tr": "A veya B seçin: (A) 2 Hançer, Hırsız Aletleri, Levye, 2 Kese, Gezgin Kıyafetleri, 16 AP; veya (B) 50 AP"
   },
   {
     "name": "entertainer",
@@ -33,7 +54,14 @@
     "feat": "Musician",
     "skill": "Acrobatics and Performance",
     "tool": "Choose one kind of Musical Instrument",
-    "equipment": "Choose A or B: (A) Musical Instrument (same as above), 2 Costumes, Mirror, Perfume, Traveler’s Clothes, 11 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Musical Instrument (same as above), 2 Costumes, Mirror, Perfume, Traveler’s Clothes, 11 GP; or (B) 50 GP",
+    "name_tr": "eğlendirici",
+    "flavor_tr": "Gençliğinizin büyük bölümünü gezici fuarlarda geçirdiniz; müzisyen ve akrobatlardan dersler karşılığında iş yaptınız. Bugün hâlâ alkışa muhtaç ve sahneyi özlüyorsunuz.",
+    "abilityScore_tr": "Güç, Çeviklik, Karizma",
+    "feat_tr": "Müzisyen",
+    "skill_tr": "Akrobasi ve Gösteri",
+    "tool_tr": "Bir tür Müzik Aleti seçimi",
+    "equipment_tr": "A veya B seçin: (A) Müzik Aleti, 2 Kostüm, Ayna, Parfüm, Gezgin Kıyafetleri, 11 AP; veya (B) 50 AP"
   },
   {
     "name": "farmer",
@@ -42,7 +70,14 @@
     "feat": "Tough",
     "skill": "Animal Handling and Nature",
     "tool": "Carpenter's Tools",
-    "equipment": "Choose A or B: (A) Sickle, Carpenter's Tools, Healer's Kit, Iron Pot, Shovel, Traveler's Clothes, 30 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Sickle, Carpenter's Tools, Healer's Kit, Iron Pot, Shovel, Traveler's Clothes, 30 GP; or (B) 50 GP",
+    "name_tr": "çiftçi",
+    "flavor_tr": "Toprağa yakın büyüdünüz. Hayvanlar ve tarım ile geçen yıllar size sabır ve sağlık kazandırdı. Doğanın lütuf ve gazabına derin bir saygı duyuyorsunuz.",
+    "abilityScore_tr": "Güç, Anayasa, Hikmet",
+    "feat_tr": "Sert",
+    "skill_tr": "Hayvan Bakımı ve Doğa",
+    "tool_tr": "Marangoz Aletleri",
+    "equipment_tr": "A veya B seçin: (A) Orak, Marangoz Aletleri, Şifacı Çantası, Demir Tencere, Kürek, Gezgin Kıyafetleri, 30 AP; veya (B) 50 AP"
   },
   {
     "name": "guard",
@@ -51,7 +86,14 @@
     "feat": "Alert",
     "skill": "Athletics and Perception",
     "tool": "Choose one kind of Gaming Set",
-    "equipment": "Choose A or B: (A) Spear, Light Crossbow, 20 Bolts, Gaming Set (same as above), Hooded Lantern, Manacles, Quiver, Traveler’s Clothes, 12 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Spear, Light Crossbow, 20 Bolts, Gaming Set (same as above), Hooded Lantern, Manacles, Quiver, Traveler’s Clothes, 12 GP; or (B) 50 GP",
+    "name_tr": "muhafız",
+    "flavor_tr": "Kulede sayısız saat nöbet tutmakla geçirdiniz; bir gözünüzle çevreden, öbür gözünüzle içeriden gelecek tehditlere baktınız.",
+    "abilityScore_tr": "Güç, Zeka, Hikmet",
+    "feat_tr": "Teyakkuz",
+    "skill_tr": "Atletizm ve Algı",
+    "tool_tr": "Bir tür Oyun Seti seçimi",
+    "equipment_tr": "A veya B seçin: (A) Mızrak, El Yayı, 20 Ok, Oyun Seti, Kapüşonlu Fener, Kelepçe, Ok Sadağı, Gezgin Kıyafetleri, 12 AP; veya (B) 50 AP"
   },
   {
     "name": "guide",
@@ -60,7 +102,14 @@
     "feat": "Magic Initiate (Druid)",
     "skill": "Stealth and Survival",
     "tool": "Cartographer's Tools",
-    "equipment": "Choose A or B: (A) Shortbow, 20 Arrows, Cartographer’s Tools, Bedroll, Quiver, Tent, Traveler's Clothes, 3 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Shortbow, 20 Arrows, Cartographer’s Tools, Bedroll, Quiver, Tent, Traveler's Clothes, 3 GP; or (B) 50 GP",
+    "name_tr": "rehber",
+    "flavor_tr": "Yerleşim yerlerinden uzakta, doğada büyüdünüz. Vahşi doğanın harikalarını keşfettiniz ve doğa rahiplerine rehberlik ederek kanalın büyüsünün temellerini öğrendiniz.",
+    "abilityScore_tr": "Çeviklik, Anayasa, Hikmet",
+    "feat_tr": "Büyü Başlatma (Druid)",
+    "skill_tr": "Gizlilik ve Hayatta Kalma",
+    "tool_tr": "Kartografya Aletleri",
+    "equipment_tr": "A veya B seçin: (A) Kısa Yay, 20 Ok, Kartografya Aletleri, Uyku Tulumu, Ok Sadağı, Çadır, Gezgin Kıyafetleri, 3 AP; veya (B) 50 AP"
   },
   {
     "name": "hermit",
@@ -69,7 +118,14 @@
     "feat": "Healer",
     "skill": "Medicine and Religion",
     "tool": "Herbalism Kit",
-    "equipment": "Choose A or B: (A) Quarterstaff, Herbalism Kit, Bedroll, Book (philosophy), Lamp, Oil (3 flasks), Traveler's Clothes, 16 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Quarterstaff, Herbalism Kit, Bedroll, Book (philosophy), Lamp, Oil (3 flasks), Traveler's Clothes, 16 GP; or (B) 50 GP",
+    "name_tr": "münzevi",
+    "flavor_tr": "Erken yıllarınızı en yakın yerleşim yerinin dışında bir kulübede ya da manastırda yalnız geçirdiniz. Yalnızlık size yaratılışın sırlarını düşünmek için bol zaman tanıdı.",
+    "abilityScore_tr": "Anayasa, Hikmet, Karizma",
+    "feat_tr": "Şifacı",
+    "skill_tr": "Tıp ve Din",
+    "tool_tr": "Şifalı Bitki Seti",
+    "equipment_tr": "A veya B seçin: (A) Asa, Şifalı Bitki Seti, Uyku Tulumu, Kitap (felsefe), Lamba, Yağ (3 şişe), Gezgin Kıyafetleri, 16 AP; veya (B) 50 AP"
   },
   {
     "name": "merchant",
@@ -78,7 +134,14 @@
     "feat": "Lucky",
     "skill": "Animal Handling and Persuasion",
     "tool": "Navigator's Tools",
-    "equipment": "Choose A or B: (A) Navigator’s Tools, 2 Pouches, Traveler's Clothes, 22 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Navigator’s Tools, 2 Pouches, Traveler's Clothes, 22 GP; or (B) 50 GP",
+    "name_tr": "tüccar",
+    "flavor_tr": "Bir tüccar ya da kervan başı yanında çıraklık yaparak ticaretin temellerini öğrendiniz. Geniş çevrelerde dolaştınız ve ham madde ile işlenmiş ürün alıp sattınız.",
+    "abilityScore_tr": "Anayasa, Zeka, Karizma",
+    "feat_tr": "Şanslı",
+    "skill_tr": "Hayvan Bakımı ve İkna",
+    "tool_tr": "Denizcinin Aletleri",
+    "equipment_tr": "A veya B seçin: (A) Denizcinin Aletleri, 2 Kese, Gezgin Kıyafetleri, 22 AP; veya (B) 50 AP"
   },
   {
     "name": "noble",
@@ -87,7 +150,14 @@
     "feat": "Skilled",
     "skill": "History and Persuasion",
     "tool": "Choose one kind of Gaming Set",
-    "equipment": "Choose A or B: (A) Gaming Set (same as above), Fine Clothes, Perfume, 29 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Gaming Set (same as above), Fine Clothes, Perfume, 29 GP; or (B) 50 GP",
+    "name_tr": "soylu",
+    "flavor_tr": "Zenginlik, güç ve ayrıcalık içinde büyüdünüz. Ailenizdeki aristokratlar size birinci sınıf bir eğitim sağladı; saraydaki gözlemleriniz liderlik konusunda size çok şey öğretti.",
+    "abilityScore_tr": "Güç, Zeka, Karizma",
+    "feat_tr": "Yetenekli",
+    "skill_tr": "Tarih ve İkna",
+    "tool_tr": "Bir tür Oyun Seti seçimi",
+    "equipment_tr": "A veya B seçin: (A) Oyun Seti, Güzel Giysiler, Parfüm, 29 AP; veya (B) 50 AP"
   },
   {
     "name": "sage",
@@ -96,7 +166,14 @@
     "feat": "Magic Initiate (Wizard)",
     "skill": "Arcana and History",
     "tool": "Calligrapher's Supplies",
-    "equipment": "Choose A or B: (A) Quarterstaff, Calligrapher's Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Quarterstaff, Calligrapher's Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
+    "name_tr": "bilge",
+    "flavor_tr": "Gençliğinizi manorlar ve manastırlar arasında dolaşarak geçirdiniz; kütüphanelerine erişim karşılığında çeşitli işler yaptınız. Uzun geceleri kitaplar ve tomarlar arasında geçirerek evrenin sırlarını öğrendiniz.",
+    "abilityScore_tr": "Anayasa, Zeka, Hikmet",
+    "feat_tr": "Büyü Başlatma (Sihirbaz)",
+    "skill_tr": "Gizli Bilgi ve Tarih",
+    "tool_tr": "Hattat Gereçleri",
+    "equipment_tr": "A veya B seçin: (A) Asa, Hattat Gereçleri, Kitap (tarih), Parşömen (8 yaprak), Cüppe, 8 AP; veya (B) 50 AP"
   },
   {
     "name": "sailor",
@@ -105,7 +182,14 @@
     "feat": "Tavern Brawler",
     "skill": "Acrobatics and Perception",
     "tool": "Navigator's Tools",
-    "equipment": "Choose A or B: (A) Dagger, Navigator's Tools, Rope, Traveler's Clothes, 20 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Dagger, Navigator's Tools, Rope, Traveler's Clothes, 20 GP; or (B) 50 GP",
+    "name_tr": "denizci",
+    "flavor_tr": "Bir denizci olarak yaşadınız; sırtınızda rüzgar, ayaklarınızın altında sallanan güverte. Şiddetli fırtınalarla yüzleştiniz ve denizin derinliklerinde yaşayanlarla hikayeler paylaştınız.",
+    "abilityScore_tr": "Güç, Çeviklik, Hikmet",
+    "feat_tr": "Meyhane Kavgacısı",
+    "skill_tr": "Akrobasi ve Algı",
+    "tool_tr": "Denizcinin Aletleri",
+    "equipment_tr": "A veya B seçin: (A) Hançer, Denizcinin Aletleri, İp, Gezgin Kıyafetleri, 20 AP; veya (B) 50 AP"
   },
   {
     "name": "scribe",
@@ -114,7 +198,14 @@
     "feat": "Skilled",
     "skill": "Investigation and Perception",
     "tool": "Calligrapher's Supplies",
-    "equipment": "Choose A or B: (A) Calligrapher’s Supplies, Fine Clothes, Lamp, Oil (3 flasks), Parchment (12 sheets), 23 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Calligrapher’s Supplies, Fine Clothes, Lamp, Oil (3 flasks), Parchment (12 sheets), 23 GP; or (B) 50 GP",
+    "name_tr": "yazıcı",
+    "flavor_tr": "Bilgiyi korumaya adanmış bir scriptorium'da ya da devlet dairesinde çalıştınız; temiz bir el yazısı geliştirdiniz ve ayrıntılara özen göstermeyi öğrendiniz.",
+    "abilityScore_tr": "Çeviklik, Zeka, Hikmet",
+    "feat_tr": "Yetenekli",
+    "skill_tr": "Araştırma ve Algı",
+    "tool_tr": "Hattat Gereçleri",
+    "equipment_tr": "A veya B seçin: (A) Hattat Gereçleri, Güzel Giysiler, Lamba, Yağ (3 şişe), Parşömen (12 yaprak), 23 AP; veya (B) 50 AP"
   },
   {
     "name": "soldier",
@@ -123,7 +214,14 @@
     "feat": "Savage Attacker",
     "skill": "Athletics and Intimidation",
     "tool": "Choose one kind of Gaming Set",
-    "equipment": "Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer's Kit, Quiver, Traveler’s Clothes, 14 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer's Kit, Quiver, Traveler’s Clothes, 14 GP; or (B) 50 GP",
+    "name_tr": "asker",
+    "flavor_tr": "Yetişkinliğe ulaşır ulaşmaz savaş eğitimi almaya başladınız. Savaş kanınızda akar; temel dövüş alıştırmalarını bilinçsizce yaparken kendinizi bulursunuz.",
+    "abilityScore_tr": "Güç, Çeviklik, Anayasa",
+    "feat_tr": "Vahşi Saldırgan",
+    "skill_tr": "Atletizm ve Gözdağı",
+    "tool_tr": "Bir tür Oyun Seti seçimi",
+    "equipment_tr": "A veya B seçin: (A) Mızrak, Kısa Yay, 20 Ok, Oyun Seti, Şifacı Çantası, Ok Sadağı, Gezgin Kıyafetleri, 14 AP; veya (B) 50 AP"
   },
   {
     "name": "wayfarer",
@@ -132,6 +230,13 @@
     "feat": "Lucky",
     "skill": "Insight and Stealth",
     "tool": "Thieves' Tools",
-    "equipment": "Choose A or B: (A) 2 Daggers, Thieves' Tools, Gaming Set (any), Bedroll, 2 Pouches, Traveler's Clothes, 16 GP; or (B) 50 GP"
+    "equipment": "Choose A or B: (A) 2 Daggers, Thieves' Tools, Gaming Set (any), Bedroll, 2 Pouches, Traveler's Clothes, 16 GP; or (B) 50 GP",
+    "name_tr": "yolcu",
+    "flavor_tr": "Aynı talihsizliğe uğramış kişilerle sokaklarda büyüdünüz; kimi zaman yemek için hırsızlığa başvurdunuz ama gururu ve umudu hiç yitirmediniz. Kader henüz sizinle bitmedi.",
+    "abilityScore_tr": "Çeviklik, Hikmet, Karizma",
+    "feat_tr": "Şanslı",
+    "skill_tr": "İçgüdü ve Gizlilik",
+    "tool_tr": "Hırsız Aletleri",
+    "equipment_tr": "A veya B seçin: (A) 2 Hançer, Hırsız Aletleri, Oyun Seti (herhangi), Uyku Tulumu, 2 Kese, Gezgin Kıyafetleri, 16 AP; veya (B) 50 AP"
   }
 ]

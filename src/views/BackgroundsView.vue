@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Backgrounds</h1>
+          <h1 class="hero-title">{{ $t('backgrounds.title') }}</h1>
         </div>
       </div>
     </div>
@@ -18,9 +18,9 @@
           @click="openDialog(bg)"
         >
           <div class="bg-card-inner">
-            <span class="bg-name">{{ capitalize(bg.name) }}</span>
+            <span class="bg-name">{{ capitalize($lf(bg, 'name')) }}</span>
             <div class="bg-tags">
-              <span class="bg-tag" v-if="bg.skill">{{ bg.skill }}</span>
+              <span class="bg-tag" v-if="bg.skill">{{ $lf(bg, 'skill') }}</span>
             </div>
           </div>
           <v-icon class="bg-arrow">mdi-chevron-right</v-icon>
@@ -33,34 +33,34 @@
       <div class="popup" v-if="selected">
         <div class="popup-header">
           <div>
-            <span class="popup-eyebrow">Background</span>
-            <h2 class="popup-title">{{ capitalize(selected.name) }}</h2>
+            <span class="popup-eyebrow">{{ $t('backgrounds.label') }}</span>
+            <h2 class="popup-title">{{ capitalize($lf(selected, 'name')) }}</h2>
           </div>
           <button class="popup-close" @click="dialog = false">
             <v-icon>mdi-close</v-icon>
           </button>
         </div>
-        <p class="popup-flavor" v-if="selected.flavor">{{ selected.flavor }}</p>
+        <p class="popup-flavor" v-if="selected.flavor">{{ $lf(selected, 'flavor') }}</p>
         <div class="popup-traits">
           <div class="popup-trait" v-if="selected.abilityScore">
-            <span class="trait-label">Ability Scores</span>
-            <span class="trait-value">{{ selected.abilityScore }}</span>
+            <span class="trait-label">{{ $t('backgrounds.abilityScores') }}</span>
+            <span class="trait-value">{{ $lf(selected, 'abilityScore') }}</span>
           </div>
           <div class="popup-trait" v-if="selected.feat">
-            <span class="trait-label">Feat</span>
-            <span class="trait-value">{{ selected.feat }}</span>
+            <span class="trait-label">{{ $t('backgrounds.feat') }}</span>
+            <span class="trait-value">{{ $lf(selected, 'feat') }}</span>
           </div>
           <div class="popup-trait" v-if="selected.skill">
-            <span class="trait-label">Skill Proficiencies</span>
-            <span class="trait-value">{{ selected.skill }}</span>
+            <span class="trait-label">{{ $t('backgrounds.skillProficiencies') }}</span>
+            <span class="trait-value">{{ $lf(selected, 'skill') }}</span>
           </div>
           <div class="popup-trait" v-if="selected.tool">
-            <span class="trait-label">Tool Proficiency</span>
-            <span class="trait-value">{{ selected.tool }}</span>
+            <span class="trait-label">{{ $t('backgrounds.toolProficiency') }}</span>
+            <span class="trait-value">{{ $lf(selected, 'tool') }}</span>
           </div>
           <div class="popup-trait" v-if="selected.equipment">
-            <span class="trait-label">Equipment</span>
-            <span class="trait-value">{{ selected.equipment }}</span>
+            <span class="trait-label">{{ $t('backgrounds.equipment') }}</span>
+            <span class="trait-value">{{ $lf(selected, 'equipment') }}</span>
           </div>
         </div>
       </div>

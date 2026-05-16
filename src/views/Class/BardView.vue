@@ -5,7 +5,7 @@
       <img :src="heroImage" :alt="data.name" class="hero-img" />
       <div class="hero-overlay">
         <div class="hero-content">
-          <span class="hero-eyebrow">Class</span>
+          <span class="hero-eyebrow">{{ $t('class.eyebrow') }}</span>
           <h1 class="hero-title">{{ data.name }}</h1>
           <p class="hero-subtitle">{{ data.subtitle }}</p>
           <div class="hero-badges">
@@ -19,7 +19,7 @@
     <div class="page-content">
       <!-- Core Traits -->
       <section class="section">
-        <h2 class="section-title">Core Traits</h2>
+        <h2 class="section-title">{{ $t('class.coreTraits') }}</h2>
         <div class="traits-grid">
           <div
             class="trait-row"
@@ -31,31 +31,22 @@
           </div>
         </div>
       </section>
-
-      <!-- Becoming a Bard -->
+      <!-- Becoming -->
       <section class="section">
-        <h2 class="section-title">Becoming a {{ data.name }}</h2>
+        <h2 class="section-title">{{ $t('class.becomingTitle', { name: $lf(data, 'name') }) }}</h2>
         <div class="becoming-grid">
           <div class="becoming-card">
-            <h3 class="becoming-heading">As a Level 1 Character</h3>
+            <h3 class="becoming-heading">{{ $t('class.asLevel1') }}</h3>
             <ul class="becoming-list">
-              <li>
-                Gain all the traits in the Core {{ data.name }} Traits table.
-              </li>
-              <li>
-                Gain the {{ data.name }}'s level 1 features listed in the
-                Features table.
-              </li>
+              <li>{{ $t('class.level1Traits', { name: $lf(data, 'name') }) }}</li>
+              <li>{{ $t('class.level1Features', { name: $lf(data, 'name') }) }}</li>
             </ul>
           </div>
           <div class="becoming-card">
-            <h3 class="becoming-heading">As a Multiclass Character</h3>
+            <h3 class="becoming-heading">{{ $t('class.asMulticlass') }}</h3>
             <ul class="becoming-list">
-              <li>{{ data.multiclassTraits }}</li>
-              <li>
-                Gain the {{ data.name }}'s level 1 features. See the
-                multiclassing rules to determine available spell slots.
-              </li>
+              <li>{{ $t('class.multiclassHitDie') }}</li>
+              <li>{{ $t('class.multiclassFeatures', { name: $lf(data, 'name') }) }}</li>
             </ul>
           </div>
         </div>
@@ -63,7 +54,7 @@
 
       <!-- Class Features Table -->
       <section class="section">
-        <h2 class="section-title">Class Features</h2>
+        <h2 class="section-title">{{ $t('class.classFeatures') }}</h2>
         <div class="table-wrap">
           <table class="features-table">
             <thead>
@@ -72,7 +63,7 @@
                 <th>Prof. Bonus</th>
                 <th>Features Unlocked</th>
                 <th v-for="col in data.tableColumns" :key="col.key">
-                  {{ col.label }}
+                  {{ $lf(col, 'label') }}
                 </th>
               </tr>
             </thead>
@@ -84,7 +75,7 @@
               >
                 <td class="level-cell">{{ item.level }}</td>
                 <td class="text-center">{{ item.profBonus }}</td>
-                <td>{{ item.feature }}</td>
+                <td>{{ $lf(item, 'feature') }}</td>
                 <td
                   v-for="col in data.tableColumns"
                   :key="col.key"
@@ -103,7 +94,7 @@
 
       <!-- Level Breakdown -->
       <section class="section">
-        <h2 class="section-title">Level Breakdown</h2>
+        <h2 class="section-title">{{ $t('class.levelBreakdown') }}</h2>
         <div class="panels">
           <div
             v-for="(lvl, index) in data.levelPanels"
@@ -118,7 +109,7 @@
               <div class="panel-header-left">
                 <span class="panel-level-badge">{{ lvl.level }}</span>
                 <span class="panel-features-preview">
-                  {{ lvl.features.map((f) => f.title).join(" · ") }}
+                  {{ lvl.features.map((f) => $lf(f, 'title')).join(" · ") }}
                 </span>
               </div>
               <v-icon class="panel-chevron">
@@ -140,7 +131,7 @@
                   @click="goTo(sub.title)"
                 >
                   <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
-                  <span>{{ data.subclassPrefix }} {{ sub.title }}</span>
+                  <span>{{ $lf(data, 'subclassPrefix') }} {{ sub.title }}</span>
                 </div>
               </div>
               <div class="feature-cards">
@@ -149,8 +140,8 @@
                   :key="feature.title"
                   class="feature-card"
                 >
-                  <h3 class="feature-title">{{ feature.title }}</h3>
-                  <div class="feature-body" v-html="feature.body"></div>
+                  <h3 class="feature-title">{{ $lf(feature, 'title') }}</h3>
+                  <div class="feature-body" v-html="$lf(feature, 'body')"></div>
                 </div>
               </div>
             </div>

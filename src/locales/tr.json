@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "species": "Irklar",
+    "classes": "Sınıflar",
+    "spells": "Büyüler",
+    "backgrounds": "Geçmişler",
+    "feats": "Yetenekler",
+    "items": "Eşyalar",
+    "patrons": "Destekçiler",
+    "theme": "Tema",
+    "supportUs": "Destek Ol",
+    "lightMode": "Açık temaya geç",
+    "darkMode": "Koyu temaya geç"
+  },
+
+  "home": {
+    "welcomeTo": "Hoş Geldiniz",
+    "title": "Beholder's Tavern",
+    "subtitle": "Dungeons & Dragons 2024 için eksiksiz rehberiniz. Sınıflar, ırklar, büyüler, geçmişler ve daha fazlasını keşfedin — mükemmel maceranızı yaratmak için ihtiyacınız olan her şey.",
+    "wiki": {
+      "title": "Wiki",
+      "desc": "D&D 2024'teki her sınıfı, ırkı, büyüyü, yeteneği, geçmişi ve eşyayı kapsayan kapsamlı wikimize dalın.",
+      "link": "Vikiyi Keşfet"
+    },
+    "creator": {
+      "title": "Karakter Oluşturucu",
+      "desc": "Karakterinizi adım adım oluşturun ve özelleştirin. Rehberli oluşturucumuzla sınıfınızı, ırkınızı, geçmişinizi ve daha fazlasını seçin.",
+      "link": "Oluşturmaya Başla"
+    },
+    "quickAccess": "Hızlı Erişim",
+    "footer": {
+      "tagline": "D&D 2024 için eksiksiz rehberiniz. Wizards of the Coast ile bağlantılı değildir.",
+      "wiki": "Wiki",
+      "support": "Destek",
+      "joinDiscord": "Discord'a Katıl",
+      "copyright": "© {year} Beholder's Tavern. Fan yapımı proje. D&D içerikleri Wizards of the Coast'a aittir."
+    }
+  },
+
+  "wikiHome": {
+    "title": "D&D 2024 Wiki",
+    "sections": [
+      { "path": "classes",     "label": "Sınıflar",   "desc": "Yolunuzu seçin — öfkeli Barbarlardan gizemli Sihirbazlara" },
+      { "path": "species",     "label": "Irklar",     "desc": "Dünyayı kaplayan ırkları ve halkları keşfedin" },
+      { "path": "spells",      "label": "Büyüler",    "desc": "Tüm büyü ve zeyl kataloğuna göz atın" },
+      { "path": "backgrounds", "label": "Geçmişler",  "desc": "Karakterinizin tarihini ve nereden geldiğini tanımlayın" },
+      { "path": "feats",       "label": "Yetenekler", "desc": "Güçlü yeteneklerle karakterinizi özelleştirin ve güçlendirin" },
+      { "path": "items",       "label": "Eşyalar",    "desc": "Silahlar, zırhlar, iksirler ve tüm macera gereçleri" }
+    ]
+  },
+
+  "species": {
+    "title": "Irklar",
+    "racialBonus": "Irk Bonusu",
+    "list": [
+      { "id": 0, "routeKey": "aasimar",    "label": "Aasimar",       "image": "aasimar.png",    "desc": "Göksel bir mirasa sahip olan Aasimarlar, iç ışıklarını yayar ve müttefiklerini iyileştirmek ile düşmanları ışık enerjisiyle vurmak için ilahi güç kullanır.", "bonus": "Şifa Eli" },
+      { "id": 1, "routeKey": "dragonborn", "label": "Ejderha Kanı",  "image": "dragonborn.png", "desc": "Ejderha soyundan gelen Ejderha Kanlılar, elemental nefes silahlarını ve ejderin kanatlarını kullanarak antik ejderhaların gücünü somutlaştırır.", "bonus": "Nefes Silahı" },
+      { "id": 2, "routeKey": "dwarf",      "label": "Cüce",           "image": "dwarf.png",      "desc": "Dağ koridorlarında yüzyıllar boyunca şekillenmiş, sağlam ve dayanıklı bu halk zehre direnir ve ayaklarının altındaki taştan titreme hissini kullanır.", "bonus": "Taş Bilgisi" },
+      { "id": 3, "routeKey": "elf",        "label": "Elf",            "image": "elf.png",        "desc": "Zarif ve uzun ömürlü Elfler, uyumak yerine meditasyon transına girer ve seçtikleri soydan eşsiz büyüsel armağanlar miras alır.", "bonus": "Peri Atası" },
+      { "id": 4, "routeKey": "gnome",      "label": "Gnome",          "image": "gnome.png",      "desc": "Meraklı ve yaratıcı Gnomeler, tüm Zeka, Hikmet ve Karizma kurtarma atışlarında avantaj sağlayan doğuştan gelen bir zekaya sahiptir.", "bonus": "Gnome Kurnazlığı" },
+      { "id": 5, "routeKey": "goliath",    "label": "Golyat",         "image": "goliath.png",    "desc": "Devlerin torunları olan Golyatlar, diğer ırklardan daha büyük ve güçlüdür; Büyük boyuta geçebilir ve dev atalarından güç çekebilirler.", "bonus": "Dev Atası" },
+      { "id": 6, "routeKey": "halfling",   "label": "Bodurcan",       "image": "halfling.png",   "desc": "Şanslı ve çevik Bodurcanlar hiçbir zaman kritik başarısız olmaz — herhangi bir d20 Testinde 1 attıklarında yeniden atabilir ve yeni sonucu kullanmalıdırlar.", "bonus": "Şans" },
+      { "id": 7, "routeKey": "human",      "label": "İnsan",          "image": "human.png",      "desc": "Tüm ırkların en uyumlusu olan İnsanlar, karakter yaratımında ekstra bir Köken yeteneği, ekstra bir beceri uzmanlığı ve her Uzun Dinlenmede Kahramanca İlham kazanır.", "bonus": "Çok Yönlü" },
+      { "id": 8, "routeKey": "orc",        "label": "Ork",            "image": "orc.png",        "desc": "Güçlü ve sert Orklar, Geçici Can Puanı kazanmak için Bonus Eylem olarak Koşabilir ve Uzun Dinlenmede bir kez 1 Can Puanının altına düşmeyi reddedebilir.", "bonus": "Amansız Dayanıklılık" },
+      { "id": 9, "routeKey": "tiefling",   "label": "Tiefling",       "image": "tiefling.png",   "desc": "İblis kan hatlarıyla dokunulmuş Tieflingler, benzersiz büyüler ve Ateş hasarına direnç veren şeytani bir miras seçer.", "bonus": "Şeytani Miras" }
+    ]
+  },
+
+  "classes": {
+    "title": "Sınıflar",
+    "primaryStat": "Birincil Nitelik",
+    "complexity": {
+      "1": "Düşük Karmaşıklık",
+      "2": "Orta Karmaşıklık",
+      "3": "Yüksek Karmaşıklık"
+    },
+    "list": [
+      { "id": 0,  "routeKey": "barbarian","label": "Barbar",      "desc": "İlkel geçmişi olan, savaş öfkesine girebilen sert bir savaşçı",                                                                                        "pref": "Güç / Anayasa",      "complexity": 1 },
+      { "id": 1,  "routeKey": "bard",     "label": "Ozan",        "desc": "Yaratılışın müziğinden güç alan, ilham verici bir büyücü",                                                                                              "pref": "Karizma",            "complexity": 2 },
+      { "id": 2,  "routeKey": "cleric",   "label": "Din Adamı",   "desc": "Yüce bir güce hizmet eden, ilahi büyü kullanan rahip şampiyon",                                                                                         "pref": "Hikmet",             "complexity": 2 },
+      { "id": 3,  "routeKey": "druid",    "label": "Druid",       "desc": "Ay ışığı ve bitki büyümesi, ateş ve şimşek gibi doğanın güçlerini kullanan ve hayvan formlarına bürünen bir büyücü",                                     "pref": "Hikmet",             "complexity": 3 },
+      { "id": 4,  "routeKey": "fighter",  "label": "Savaşçı",    "desc": "Çeşitli silah ve zırhlarda uzmanlaşmış dövüş ustası",                                                                                                    "pref": "Güç / Çeviklik",     "complexity": 1 },
+      { "id": 5,  "routeKey": "monk",     "label": "Keşiş",      "desc": "Fiziksel ve ruhsal mükemmelliği arayışında vücudun gücünden yararlanan dövüş sanatları ustası",                                                          "pref": "Hikmet / Çeviklik",  "complexity": 2 },
+      { "id": 6,  "routeKey": "paladin",  "label": "Paladin",     "desc": "İlahi gücü kullanan, kutsal bir yeminine bağlı kutsal savaşçı",                                                                                         "pref": "Güç / Karizma",      "complexity": 1 },
+      { "id": 7,  "routeKey": "ranger",   "label": "Avcı",       "desc": "Uygarlığın sınırlarındaki tehditleri savaş becerisi ve doğa büyüsüyle karşılayan savaşçı",                                                               "pref": "Çeviklik",           "complexity": 1 },
+      { "id": 8,  "routeKey": "rogue",    "label": "Haydut",     "desc": "Engelleri ve düşmanları gizlilik ve hileyle aşan bir şarlatan",                                                                                          "pref": "Çeviklik",           "complexity": 1 },
+      { "id": 9,  "routeKey": "sorcerer", "label": "Büyücü",     "desc": "Bir armağandan veya kan hattından doğuştan gelen büyüyle güç alan büyü kullanıcısı",                                                                    "pref": "Karizma",            "complexity": 3 },
+      { "id": 10, "routeKey": "warlock",  "label": "Afsunkar",   "desc": "Düzlem ötesi bir varlıkla yapılan pazarlıktan türeyen büyü kullanan",                                                                                   "pref": "Karizma",            "complexity": 3 },
+      { "id": 11, "routeKey": "wizard",   "label": "Sihirbaz",   "desc": "Gerçekliğin yapılarını manipüle edebilen akademik büyü kullanıcısı",                                                                                    "pref": "Zeka",               "complexity": 3 }
+    ]
+  },
+
+  "spells": {
+    "title": "Büyüler",
+    "school": "Okul",
+    "castingTime": "Dönüştürme Süresi",
+    "range": "Menzil",
+    "components": "Bileşenler",
+    "duration": "Süre",
+    "effect": "Etki",
+    "atHigherLevels": "Üst Seviyelerde",
+    "spellClasses": [
+      { "id": 1,  "routeKey": "bard",     "label": "Ozan",     "desc": "Yaratılışın müziğinden çekilen büyüsel sırlar ve ozanlık ilhamı" },
+      { "id": 2,  "routeKey": "cleric",   "label": "Din Adamı","desc": "Tanrıların gücünden ve kutsal alanlardan kanalize edilen ilahi büyü" },
+      { "id": 3,  "routeKey": "druid",    "label": "Druid",    "desc": "Ay ışığı, bitki büyümesi, ateş ve şimşeği kullanan doğa büyüsü" },
+      { "id": 6,  "routeKey": "paladin",  "label": "Paladin",  "desc": "Kutsal inançla güçlendirilen kutsal yeminler ve ilahi darbeler" },
+      { "id": 7,  "routeKey": "ranger",   "label": "Avcı",     "desc": "Uygarlığın sınırlarındaki tehditleri karşılamak için doğa büyüleri ve ilkel güç" },
+      { "id": 9,  "routeKey": "sorcerer", "label": "Büyücü",   "desc": "Doğuştan gelen büyüsel bir armağan veya kan hattından çekilen ham arkan güç" },
+      { "id": 10, "routeKey": "warlock",  "label": "Afsunkar", "desc": "Düzlem ötesi bir varlıkla yapılan bir antlaşmadan türeyen esrarengiz büyü" },
+      { "id": 11, "routeKey": "wizard",   "label": "Sihirbaz", "desc": "Gerçekliğin yapılarını manipüle edebilen akademik arkan büyü" }
+    ]
+  },
+
+  "items": {
+    "title": "Eşyalar",
+    "list": [
+      { "id": 0, "routeKey": "weapons",     "label": "Silahlar",       "desc": "Maceraperestlerin kullanabileceği kılıçlar, baltalar, oklar ve her türlü savaş aleti" },
+      { "id": 1, "routeKey": "armors",      "label": "Zırhlar",        "desc": "Savaşın ortasında sizi korumak için hafif, orta ve ağır zırhlar" },
+      { "id": 2, "routeKey": "potions",     "label": "İksirler",       "desc": "Maceralarınıza yardımcı olacak şifalı içecekler, iksirler ve büyüsel karışımlar" },
+      { "id": 3, "routeKey": "magic_items", "label": "Büyülü Eşyalar", "desc": "Arkan enerji ve antik büyülerle dolu nadir ve güçlü eşyalar" }
+    ]
+  },
+
+  "backgrounds": {
+    "title": "Geçmişler",
+    "label": "Geçmiş",
+    "abilityScores": "Nitelik Puanları",
+    "feat": "Yetenek",
+    "skillProficiencies": "Beceri Uzmanlıkları",
+    "toolProficiency": "Araç Uzmanlığı",
+    "equipment": "Ekipman"
+  },
+
+  "feats": {
+    "title": "Yetenekler",
+    "tabs": {
+      "origin": "Köken Yetenekleri",
+      "general": "Genel Yetenekler",
+      "fightStyle": "Dövüş Stili",
+      "epic": "Epik Nimet"
+    },
+    "tabLabels": {
+      "origin": "Köken Yeteneği",
+      "general": "Genel Yetenek",
+      "fightStyle": "Dövüş Stili Yeteneği",
+      "epic": "Epik Nimet Yeteneği"
+    }
+  },
+
+  "race": {
+    "eyebrow": "Irk",
+    "notFound": "Irk Bulunamadı",
+    "overview": "Genel Bakış",
+    "traitsTitle": "{name} Özellikleri",
+    "speed": "Hız {value}"
+  },
+
+  "class": {
+    "eyebrow": "Sınıf",
+    "coreTraits": "Temel Özellikler",
+    "classFeatures": "Sınıf Özellikleri",
+    "levelBreakdown": "Seviye Detayları",
+    "subclasses": "Alt Sınıflar",
+    "level": "Seviye",
+    "profBonus": "Uzm. Bonusu",
+    "featuresUnlocked": "Açılan Özellikler",
+    "becomingTitle": "{name} Olmak",
+    "asLevel1": "1. Seviye Karakter Olarak",
+    "asMulticlass": "Çok Sınıflı Karakter Olarak",
+    "level1Traits": "Temel {name} Özellikleri tablosundaki tüm özellikleri kazanın.",
+    "level1Features": "{name}'in Özellikler tablosunda listelenen 1. seviye özelliklerini kazanın.",
+    "multiclassHitDie": "Can Zarını, Savaş silahlarında uzmanlığı ve Kalkan eğitimini kazanın.",
+    "multiclassFeatures": "{name}'in Özellikler tablosunda listelenen 1. seviye özelliklerini kazanın."
+  }
+}

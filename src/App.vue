@@ -30,7 +30,7 @@
         <div
           class="theme-toggle"
           @click="toggleTheme"
-          :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+          :title="isDark ? $t('nav.lightMode') : $t('nav.darkMode')"
         >
           <v-icon class="nav-icon">{{
             isDark ? "mdi-weather-sunny" : "mdi-weather-night"
@@ -58,26 +58,37 @@
         </div>
       </nav>
 
-      <!-- Right side — theme toggle (desktop) + patreon -->
+      <!-- Right side — theme toggle (desktop) + language + patreon -->
       <div class="nav-right">
         <!-- Theme toggle — desktop only -->
         <div
           class="theme-toggle desktop-theme"
           @click="toggleTheme"
-          :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+          :title="isDark ? $t('nav.lightMode') : $t('nav.darkMode')"
         >
           <v-icon class="nav-icon">{{
             isDark ? "mdi-weather-sunny" : "mdi-weather-night"
           }}</v-icon>
-          <span class="nav-label">Theme</span>
+          <span class="nav-label">{{ $t("nav.theme") }}</span>
         </div>
+
+        <!-- Language switcher -->
+        <div
+          class="lang-toggle nav-item"
+          @click="toggleLocale"
+          :title="currentLocaleLabel"
+        >
+          <v-icon class="nav-icon">mdi-translate</v-icon>
+          <span class="nav-label">{{ currentLocaleLabel }}</span>
+        </div>
+
         <div
           class="nav-item"
           :class="{ active: $route.path === '/patrons' }"
           @click="goTo('patrons')"
         >
           <v-icon class="nav-icon">mdi-account-group</v-icon>
-          <span class="nav-label">Patrons</span>
+          <span class="nav-label">{{ $t("nav.patrons") }}</span>
         </div>
         <a
           href="https://www.patreon.com/YOUR_PAGE"
@@ -86,7 +97,7 @@
           title="Support us on Patreon"
         >
           <v-icon size="18">mdi-patreon</v-icon>
-          <span class="patreon-nav-label">Support Us</span>
+          <span class="patreon-nav-label">{{ $t("nav.supportUs") }}</span>
         </a>
       </div>
 
@@ -130,18 +141,6 @@ export default {
   data() {
     return {
       isDark: true,
-      navItems: [
-        { path: "wiki/species", icon: "mdi-account", label: "Species" },
-        { path: "wiki/classes", icon: "mdi-sword-cross", label: "Classes" },
-        { path: "wiki/spells", icon: "mdi-auto-fix", label: "Spells" },
-        {
-          path: "wiki/backgrounds",
-          icon: "mdi-map-marker-radius",
-          label: "Backgrounds",
-        },
-        { path: "wiki/feats", icon: "mdi-star-circle-outline", label: "Feats" },
-        { path: "wiki/items", icon: "mdi-bag-personal", label: "Items" },
-      ],
     };
   },
 
@@ -160,6 +159,43 @@ export default {
   },
 
   computed: {
+    navItems() {
+      return [
+        {
+          path: "wiki/species",
+          icon: "mdi-account",
+          label: this.$t("nav.species"),
+        },
+        {
+          path: "wiki/classes",
+          icon: "mdi-sword-cross",
+          label: this.$t("nav.classes"),
+        },
+        {
+          path: "wiki/spells",
+          icon: "mdi-auto-fix",
+          label: this.$t("nav.spells"),
+        },
+        {
+          path: "wiki/backgrounds",
+          icon: "mdi-map-marker-radius",
+          label: this.$t("nav.backgrounds"),
+        },
+        {
+          path: "wiki/feats",
+          icon: "mdi-star-circle-outline",
+          label: this.$t("nav.feats"),
+        },
+        {
+          path: "wiki/items",
+          icon: "mdi-bag-personal",
+          label: this.$t("nav.items"),
+        },
+      ];
+    },
+    currentLocaleLabel() {
+      return this.$i18n.locale === "tr" ? "TR" : "EN";
+    },
     breadcrumbs() {
       const segments = this.$route.path.split("/").filter(Boolean);
       const crumbs = [{ label: "Home", path: "" }];
@@ -189,6 +225,11 @@ export default {
         document.documentElement.setAttribute("data-theme", "light");
         localStorage.setItem("theme", "light");
       }
+    },
+    toggleLocale() {
+      const next = this.$i18n.locale === "en" ? "tr" : "en";
+      this.$i18n.locale = next;
+      localStorage.setItem("locale", next);
     },
   },
 };
@@ -308,6 +349,13 @@ export default {
   display: flex;
 }
 
+/* Language toggle */
+.lang-toggle {
+  min-width: 44px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 /* ── Patreon nav button ─────────────────────────── */
 .patreon-nav-btn {
   display: flex;
@@ -398,6 +446,7 @@ export default {
   width: 100%;
 }
 .crumb {
+  margin-left: 1%;
   display: flex;
   align-items: center;
   font-size: 0.78rem;

@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Items</h1>
+          <h1 class="hero-title">{{ $t('items.title') }}</h1>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
           v-for="item in items"
           :key="item.id"
           class="item-card"
-          @click="goTo(item.label)"
+          @click="goTo(item)"
         >
           <div class="card-image-wrap">
             <v-img
@@ -41,34 +41,15 @@ import router from "@/router";
 
 export default {
   methods: {
-    goTo(label) {
-      router.push("/wiki/items/" + label.replace(/\s+/g, "_").toLowerCase());
+    goTo(item) {
+      router.push("/wiki/items/" + item.routeKey);
     },
   },
-  data: () => ({
-    items: [
-      {
-        id: 0,
-        label: "Weapons",
-        desc: "Swords, axes, bows and every instrument of war available to adventurers",
-      },
-      {
-        id: 1,
-        label: "Armors",
-        desc: "Light, medium and heavy armor to protect you in the heat of battle",
-      },
-      {
-        id: 2,
-        label: "Potions",
-        desc: "Healing draughts, elixirs and magical concoctions to aid your adventure",
-      },
-      {
-        id: 3,
-        label: "Magic Items",
-        desc: "Rare and powerful items imbued with arcane energy and ancient enchantments",
-      },
-    ],
-  }),
+  computed: {
+    items() {
+      return this.$tm("items.list");
+    },
+  },
 };
 </script>
 
