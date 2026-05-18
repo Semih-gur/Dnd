@@ -72,15 +72,33 @@
           <span class="nav-label">{{ $t("nav.theme") }}</span>
         </div>
 
-        <!-- Language switcher -->
-        <div
-          class="lang-toggle nav-item"
-          @click="toggleLocale"
-          :title="currentLocaleLabel"
-        >
-          <v-icon class="nav-icon">mdi-translate</v-icon>
-          <span class="nav-label">{{ currentLocaleLabel }}</span>
-        </div>
+        <!-- Language dropdown -->
+        <v-menu location="bottom end" :offset="[4, 0]">
+          <template v-slot:activator="{ props }">
+            <div class="lang-toggle nav-item" v-bind="props">
+              <img :src="currentLanguage.flagUrl" class="lang-flag" :alt="currentLanguage.label" />
+              <span class="nav-label lang-code">
+                {{ currentLanguage.code.toUpperCase() }}
+                <v-icon class="lang-chevron">mdi-chevron-down</v-icon>
+              </span>
+            </div>
+          </template>
+          <v-list class="lang-dropdown" density="compact">
+            <v-list-item
+              v-for="lang in languages"
+              :key="lang.code"
+              @click="setLocale(lang.code)"
+              :class="{ 'lang-active': $i18n.locale === lang.code }"
+            >
+              <template v-slot:prepend>
+                <img :src="lang.flagUrl" class="lang-flag-sm" :alt="lang.label" />
+              </template>
+              <v-list-item-title class="lang-item-title">
+                {{ lang.label }}
+              </v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
 
         <div
           class="nav-item"
@@ -141,6 +159,10 @@ export default {
   data() {
     return {
       isDark: true,
+      languages: [
+        { code: "en", label: "English", flagUrl: "https://flagcdn.com/w40/gb.png" },
+        { code: "tr", label: "Türkçe",  flagUrl: "https://flagcdn.com/w40/tr.png" },
+      ],
     };
   },
 
@@ -193,8 +215,11 @@ export default {
         },
       ];
     },
-    currentLocaleLabel() {
-      return this.$i18n.locale === "tr" ? "TR" : "EN";
+    currentLanguage() {
+      return (
+        this.languages.find((l) => l.code === this.$i18n.locale) ||
+        this.languages[0]
+      );
     },
     breadcrumbs() {
       const segments = this.$route.path.split("/").filter(Boolean);
@@ -226,10 +251,9 @@ export default {
         localStorage.setItem("theme", "light");
       }
     },
-    toggleLocale() {
-      const next = this.$i18n.locale === "en" ? "tr" : "en";
-      this.$i18n.locale = next;
-      localStorage.setItem("locale", next);
+    setLocale(code) {
+      this.$i18n.locale = code;
+      localStorage.setItem("locale", code);
     },
   },
 };
@@ -351,9 +375,48 @@ export default {
 
 /* Language toggle */
 .lang-toggle {
-  min-width: 44px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  min-width: 52px;
+}
+.lang-flag {
+  width: 22px;
+  height: auto;
+  border-radius: 2px;
+  display: block;
+}
+.lang-code {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.lang-chevron {
+  font-size: 0.7rem !important;
+  opacity: 0.7;
+}
+
+/* Language dropdown list */
+.lang-dropdown {
+  min-width: 140px;
+  background: #1e1e2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px !important;
+}
+.lang-flag-sm {
+  width: 20px;
+  height: auto;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: block;
+}
+.lang-item-title {
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+.lang-active .lang-item-title {
+  color: #c084fc !important;
+}
+.lang-active {
+  background: rgba(192, 132, 252, 0.1) !important;
 }
 
 /* ── Patreon nav button ─────────────────────────── */

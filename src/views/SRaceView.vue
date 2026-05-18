@@ -23,7 +23,7 @@
           <p
             class="section-text"
             style="white-space: pre-wrap"
-            v-html="race.desc"
+            v-html="$lf(race, 'desc')"
           ></p>
         </div>
 
@@ -39,14 +39,14 @@
               <div class="trait-header">
                 <span class="trait-name">{{ $lf(trait, 'name') }}</span>
               </div>
-              <p class="trait-desc">{{ trait.desc }}</p>
+              <p class="trait-desc">{{ $lf(trait, 'desc') }}</p>
 
               <!-- Table if present -->
               <div v-if="trait.table" class="table-wrap">
                 <table class="trait-table">
                   <thead>
                     <tr>
-                      <th v-for="(val, key) in trait.table[0][0]" :key="key">
+                      <th v-for="(_, key) in trait.table[0][0]" :key="key">
                         {{ key.charAt(0).toUpperCase() + key.slice(1) }}
                       </th>
                     </tr>
