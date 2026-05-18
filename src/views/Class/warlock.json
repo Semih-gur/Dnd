@@ -92,14 +92,14 @@
       "label": "Spell Slots",
       "badge": true,
       "badgeClass": "slot-badge",
-      "label_tr": "Büyü Yuvaları"
+      "label_tr": "Büyü Slotları"
     },
     {
       "key": "slotLevel",
       "label": "Slot Level",
       "badge": true,
       "badgeClass": "lvl-badge",
-      "label_tr": "Yuva Seviyesi"
+      "label_tr": "Slot Seviyesi"
     }
   ],
   "levels": [
@@ -331,7 +331,7 @@
           "title": "Pact Magic",
           "body": "<p>Through occult ceremony, you have formed a pact with a mysterious entity. Charisma is your spellcasting ability and you can use an Arcane Focus as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know two Warlock cantrips of your choice. Eldritch Blast and Prestidigitation are recommended. You gain additional cantrips at levels 4 and 10.</p><br/><p><b>Pact Magic Slots.</b> All your Pact Magic spell slots share the same level, as shown in the Warlock Features table. You regain all expended Pact Magic spell slots when you finish a Short or Long Rest.</p><br/><p>For example, at level 5 you have two level 3 slots — casting a level 1 spell uses one of those slots and casts it at level 3.</p>",
           "title_tr": "Pakt Büyüsü",
-          "body_tr": "<p>Ezoterik bir törenle gizemli bir varlıkla pakt yaptın. Karizman büyü yapma yeteneğindir ve Büyü Odağını büyü odağı olarak kullanabilirsin.</p><br/><p><b>Pakt Büyü Yuvaları.</b> Tüm Pakt Büyü yuvaları aynı seviyeyi paylaşır. Kısa veya Uzun Dinlenmede tüm kullanılmış Pakt Büyü yuvalarını geri kazanırsın.</p><br/><p>Örneğin 5. seviyede iki adet 3. seviye yuvana sahipsin; 1. seviye büyü, bu yuvalardan birini kullanarak 3. seviyede yapılır.</p>"
+          "body_tr": "<p>Ezoterik bir törenle gizemli bir varlıkla pakt yaptın. Karizman büyü yapma yeteneğindir ve Büyü Odağını büyü odağı olarak kullanabilirsin.</p><br/><p><b>Pakt Büyü Slotları.</b> Tüm Pakt Büyü slotları aynı seviyeyi paylaşır. Kısa veya Uzun Dinlenmede tüm kullanılmış Pakt Büyü slotlarını geri kazanırsın.</p><br/><p>Örneğin 5. seviyede iki adet 3. seviye slotuna sahipsin; 1. seviye büyü, bu slotlardan birini kullanarak 3. seviyede yapılır.</p>"
         }
       ]
     },
@@ -342,7 +342,7 @@
           "title": "Magical Cunning",
           "body": "<p>You can perform an esoteric rite for 1 minute. At the end of it, you regain expended Pact Magic spell slots up to half your maximum (round up).</p><br/><p>Once you use this feature, you can't do so again until you finish a Long Rest.</p>",
           "title_tr": "Büyülü Kurnazlık",
-          "body_tr": "<p>1 dakika süren ezoterik bir ritüel gerçekleştirebilirsin. Sonunda maksimumun yarısına kadar (yukarı yuvarla) kullanılmış Pakt Büyü yuvalarını geri kazanırsın.</p><br/><p>Bu özelliği kullandıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p>"
+          "body_tr": "<p>1 dakika süren ezoterik bir ritüel gerçekleştirebilirsin. Sonunda maksimumun yarısına kadar (yukarı yuvarla) kullanılmış Pakt Büyü slotlarını geri kazanırsın.</p><br/><p>Bu özelliği kullandıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p>"
         }
       ]
     },
@@ -397,7 +397,7 @@
           "title": "Contact Patron",
           "body": "<p>You always have the Contact Other Plane spell prepared. With this feature, you can cast it without expending a spell slot to contact your patron, and you automatically succeed on the spell's saving throw.</p><br/><p>Once you cast the spell this way, you can't do so again until you finish a Long Rest.</p>",
           "title_tr": "Hamiyitle İletişim",
-          "body_tr": "<p>Her zaman Başka Düzlemle İletişim büyüsünü hazır bulundurursun. Bu özellikle, haminle iletişime geçmek için büyü yuvası harcamadan yapabilirsin ve büyünün kurtarma atışında otomatik başarılı olursun.</p><br/><p>Bu şekilde büyü yaptıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar yapamazsın.</p>"
+          "body_tr": "<p>Her zaman Başka Düzlemle İletişim büyüsünü hazır bulundurursun. Bu özellikle, haminle iletişime geçmek için büyü slotu harcamadan yapabilirsin ve büyünün kurtarma atışında otomatik başarılı olursun.</p><br/><p>Bu şekilde büyü yaptıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar yapamazsın.</p>"
         }
       ]
     },
@@ -419,7 +419,7 @@
           "title": "Mystic Arcanum (Level 6)",
           "body": "<p>Your patron grants you a magical secret. Choose one level 6 Warlock spell as this arcanum. You can cast it once without expending a spell slot per Long Rest.</p><br/><p>You gain additional arcana at levels 13 (lv 7), 15 (lv 8), and 17 (lv 9). Whenever you gain a Warlock level, you can replace one arcanum with another Warlock spell of the same level.</p>",
           "title_tr": "Mistik Arkanik (Seviye 6)",
-          "body_tr": "<p>Hamin sana büyülü bir sır bahşeder. Bu arkan olarak bir adet 6. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü yuvası harcamadan yapabilirsin.</p><br/><p>13. seviyede (sv 7), 15. seviyede (sv 8) ve 17. seviyede (sv 9) ek arkanlar kazanırsın.</p>"
+          "body_tr": "<p>Hamin sana büyülü bir sır bahşeder. Bu arkan olarak bir adet 6. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü slotu harcamadan yapabilirsin.</p><br/><p>13. seviyede (sv 7), 15. seviyede (sv 8) ve 17. seviyede (sv 9) ek arkanlar kazanırsın.</p>"
         }
       ]
     },
@@ -441,7 +441,7 @@
           "title": "Mystic Arcanum (Level 7)",
           "body": "<p>Your patron grants you another magical secret. Choose one level 7 Warlock spell. You can cast it once without a spell slot per Long Rest.</p>",
           "title_tr": "Mistik Arkanik (Seviye 7)",
-          "body_tr": "<p>Hamin sana başka bir büyülü sır bahşeder. Bir adet 7. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü yuvası olmadan yapabilirsin.</p>"
+          "body_tr": "<p>Hamin sana başka bir büyülü sır bahşeder. Bir adet 7. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü slotu olmadan yapabilirsin.</p>"
         }
       ]
     },
@@ -463,7 +463,7 @@
           "title": "Mystic Arcanum (Level 8)",
           "body": "<p>Your patron grants you another magical secret. Choose one level 8 Warlock spell. You can cast it once without a spell slot per Long Rest.</p>",
           "title_tr": "Mistik Arkanik (Seviye 8)",
-          "body_tr": "<p>Hamin sana başka bir büyülü sır bahşeder. Bir adet 8. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü yuvası olmadan yapabilirsin.</p>"
+          "body_tr": "<p>Hamin sana başka bir büyülü sır bahşeder. Bir adet 8. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü slotu olmadan yapabilirsin.</p>"
         }
       ]
     },
@@ -485,7 +485,7 @@
           "title": "Mystic Arcanum (Level 9)",
           "body": "<p>Your patron grants you a final magical secret. Choose one level 9 Warlock spell. You can cast it once without a spell slot per Long Rest.</p>",
           "title_tr": "Mistik Arkanik (Seviye 9)",
-          "body_tr": "<p>Hamin sana son büyülü sırı bahşeder. Bir adet 9. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü yuvası olmadan yapabilirsin.</p>"
+          "body_tr": "<p>Hamin sana son büyülü sırı bahşeder. Bir adet 9. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü slotu olmadan yapabilirsin.</p>"
         }
       ]
     },
@@ -507,7 +507,7 @@
           "title": "Eldritch Master",
           "body": "<p>When you use your Magical Cunning feature, you regain all your expended Pact Magic spell slots instead of only half.</p>",
           "title_tr": "Esrarengiz Usta",
-          "body_tr": "<p>Büyülü Kurnazlık özelliğini kullandığında yalnızca yarısı yerine tüm kullanılmış Pakt Büyü yuvalarını geri kazanırsın.</p>"
+          "body_tr": "<p>Büyülü Kurnazlık özelliğini kullandığında yalnızca yarısı yerine tüm kullanılmış Pakt Büyü slotlarını geri kazanırsın.</p>"
         }
       ]
     }

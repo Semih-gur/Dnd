@@ -440,7 +440,7 @@
           "title": "Extra Attack",
           "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
           "title_tr": "Ekstra Saldırı",
-          "body_tr": "<p>Turunda Saldırı eylemini yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
         }
       ]
     },
@@ -495,7 +495,7 @@
           "title": "Tireless",
           "body": "<p>Primal forces fuel you on your journeys, granting the following benefits.</p><br/><p><b>Temporary Hit Points.</b> As an action, you can give yourself Temporary Hit Points equal to 1d8 plus your Wisdom modifier (minimum 1). You can use this action a number of times equal to your Wisdom modifier (minimum once), regaining all uses on a Long Rest.</p><br/><p><b>Decrease Exhaustion.</b> Whenever you finish a Short Rest, your Exhaustion level, if any, decreases by 1.</p>",
           "title_tr": "Yorulmaz",
-          "body_tr": "<p>İlkel güçler seni yolculuklarında besler.</p><br/><p><b>Geçici Can Puanları.</b> Eylem olarak 1d8 artı Bilgelik değiştirici kadar Geçici Can Puanı kazanabilirsin. Bilgelik değiştiricine eşit sayıda (minimum bir kez) kullanabilirsin; Uzun Dinlenmede geri döner.</p><br/><p><b>Bitkinliği Azalt.</b> Kısa Dinlenmeyi bitirdiğinde Bitkinlik seviyeni 1 azaltırsın.</p>"
+          "body_tr": "<p>İlkel güçler seni yolculuklarında besler.</p><br/><p><b>Geçici Can Puanları.</b> Aksiyon olarak 1d8 artı Bilgelik değiştirici kadar Geçici Can Puanı kazanabilirsin. Bilgelik değiştiricine eşit sayıda (minimum bir kez) kullanabilirsin; Uzun Dinlenmede geri döner.</p><br/><p><b>Bitkinliği Azalt.</b> Kısa Dinlenmeyi bitirdiğinde Bitkinlik seviyeni 1 azaltırsın.</p>"
         }
       ]
     },
@@ -539,7 +539,7 @@
           "title": "Nature's Veil",
           "body": "<p>As a Bonus Action, you can invoke spirits of nature to give yourself the Invisible condition until the end of your next turn.</p><br/><p>You can use this feature a number of times equal to your Wisdom modifier (minimum once), regaining all uses on a Long Rest.</p>",
           "title_tr": "Doğanın Örtüsü",
-          "body_tr": "<p>Bonus Eylem olarak, bir sonraki turuna kadar Görünmez durumu kazanmak için doğa ruhlarını çağırabilirsin.</p><br/><p>Bu özelliği Bilgelik değiştiricine eşit sayıda (minimum bir kez) kullanabilirsin; Uzun Dinlenmede geri döner.</p>"
+          "body_tr": "<p>Bonus Aksiyon olarak, bir sonraki turuna kadar Görünmez durumu kazanmak için doğa ruhlarını çağırabilirsin.</p><br/><p>Bu özelliği Bilgelik değiştiricine eşit sayıda (minimum bir kez) kullanabilirsin; Uzun Dinlenmede geri döner.</p>"
         }
       ]
     },

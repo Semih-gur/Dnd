@@ -61,7 +61,7 @@
       { "id": 5, "routeKey": "goliath",    "label": "Golyat",         "image": "goliath.png",    "desc": "Devlerin torunları olan Golyatlar, diğer ırklardan daha büyük ve güçlüdür; Büyük boyuta geçebilir ve dev atalarından güç çekebilirler.", "bonus": "Dev Atası" },
       { "id": 6, "routeKey": "halfling",   "label": "Bodurcan",       "image": "halfling.png",   "desc": "Şanslı ve çevik Bodurcanlar hiçbir zaman kritik başarısız olmaz — herhangi bir d20 Testinde 1 attıklarında yeniden atabilir ve yeni sonucu kullanmalıdırlar.", "bonus": "Şans" },
       { "id": 7, "routeKey": "human",      "label": "İnsan",          "image": "human.png",      "desc": "Tüm ırkların en uyumlusu olan İnsanlar, karakter yaratımında ekstra bir Köken yeteneği, ekstra bir beceri uzmanlığı ve her Uzun Dinlenmede Kahramanca İlham kazanır.", "bonus": "Çok Yönlü" },
-      { "id": 8, "routeKey": "orc",        "label": "Ork",            "image": "orc.png",        "desc": "Güçlü ve sert Orklar, Geçici Can Puanı kazanmak için Bonus Eylem olarak Koşabilir ve Uzun Dinlenmede bir kez 1 Can Puanının altına düşmeyi reddedebilir.", "bonus": "Amansız Dayanıklılık" },
+      { "id": 8, "routeKey": "orc",        "label": "Ork",            "image": "orc.png",        "desc": "Güçlü ve sert Orklar, Geçici Can Puanı kazanmak için Bonus Aksiyon olarak Koşabilir ve Uzun Dinlenmede bir kez 1 Can Puanının altına düşmeyi reddedebilir.", "bonus": "Amansız Dayanıklılık" },
       { "id": 9, "routeKey": "tiefling",   "label": "Tiefling",       "image": "tiefling.png",   "desc": "İblis kan hatlarıyla dokunulmuş Tieflingler, benzersiz büyüler ve Ateş hasarına direnç veren şeytani bir miras seçer.", "bonus": "Şeytani Miras" }
     ]
   },

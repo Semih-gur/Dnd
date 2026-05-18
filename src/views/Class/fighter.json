@@ -108,7 +108,7 @@
       "secondWind": "2",
       "actionSurge": "1",
       "weaponMastery": "3",
-      "feature_tr": "Eylem Atılımı, Taktik Akıl"
+      "feature_tr": "Aksiyon Atılımı, Taktik Akıl"
     },
     {
       "level": "3",
@@ -243,7 +243,7 @@
       "secondWind": "3",
       "actionSurge": "2",
       "weaponMastery": "6",
-      "feature_tr": "Eylem Atılımı (2 kullanım)"
+      "feature_tr": "Aksiyon Atılımı (2 kullanım)"
     },
     {
       "level": "18",
@@ -287,7 +287,7 @@
           "title": "Second Wind",
           "body": "<p>As a Bonus Action, you can regain Hit Points equal to 1d10 plus your Fighter level.</p><br/><p>You can use this feature twice, regaining one use on a Short Rest and all uses on a Long Rest. You gain additional uses at higher Fighter levels as shown in the Second Wind column.</p>",
           "title_tr": "İkinci Nefes",
-          "body_tr": "<p>Bonus Eylem olarak 1d10 artı Fighter seviyene eşit Can Puanı geri kazanabilirsin.</p><br/><p>Bu özelliği iki kez kullanabilirsin; Kısa Dinlenmede bir kullanımı, Uzun Dinlenmede tüm kullanımları geri kazanırsın.</p>"
+          "body_tr": "<p>Bonus Aksiyon olarak 1d10 artı Fighter seviyene eşit Can Puanı geri kazanabilirsin.</p><br/><p>Bu özelliği iki kez kullanabilirsin; Kısa Dinlenmede bir kullanımı, Uzun Dinlenmede tüm kullanımları geri kazanırsın.</p>"
         },
         {
           "title": "Weapon Mastery",
@@ -303,8 +303,8 @@
         {
           "title": "Action Surge",
           "body": "<p>On your turn, you can take one additional action, except the Magic action. Once you use this feature, you can't do so again until you finish a Short or Long Rest.</p><br/><p>Starting at level 17, you can use it twice before a rest, but only once on the same turn.</p>",
-          "title_tr": "Eylem Atılımı",
-          "body_tr": "<p>Turunda Büyü eylemi dışında bir ek eylem alabilirsin. Bu özelliği kullandıktan sonra Kısa veya Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p><br/><p>17. seviyeden itibaren dinlenmeden önce iki kez kullanabilirsin, ancak aynı turda yalnızca bir kez.</p>"
+          "title_tr": "Aksiyon Atılımı",
+          "body_tr": "<p>Turunda Büyü aksiyonu dışında bir ek aksiyon alabilirsin. Bu özelliği kullandıktan sonra Kısa veya Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p><br/><p>17. seviyeden itibaren dinlenmeden önce iki kez kullanabilirsin, ancak aynı turda yalnızca bir kez.</p>"
         },
         {
           "title": "Tactical Mind",
@@ -343,13 +343,13 @@
           "title": "Extra Attack",
           "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
           "title_tr": "Ekstra Saldırı",
-          "body_tr": "<p>Turunda Saldırı eylemini yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
         },
         {
           "title": "Tactical Shift",
           "body": "<p>Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks.</p>",
           "title_tr": "Taktik Kayma",
-          "body_tr": "<p>Bonus Eylem olarak İkinci Rüzgarı etkinleştirdiğinde, Fırsat Saldırısı tetiklemeden Hızının yarısı kadar hareket edebilirsin.</p>"
+          "body_tr": "<p>Bonus Aksiyon olarak İkinci Rüzgarı etkinleştirdiğinde, Fırsat Saldırısı tetiklemeden Hızının yarısı kadar hareket edebilirsin.</p>"
         }
       ]
     },
@@ -421,7 +421,7 @@
           "title": "Two Extra Attacks",
           "body": "<p>You can attack three times instead of once whenever you take the Attack action on your turn.</p>",
           "title_tr": "İki Ekstra Saldırı",
-          "body_tr": "<p>Turunda Saldırı eylemini yaptığında bir kez yerine üç kez saldırabilirsin.</p>"
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine üç kez saldırabilirsin.</p>"
         }
       ]
     },
@@ -486,8 +486,8 @@
         {
           "title": "Action Surge (2 uses)",
           "body": "<p>You can now use Action Surge twice before a rest, though still only once on the same turn.</p>",
-          "title_tr": "Eylem Atılımı (2 kullanım)",
-          "body_tr": "<p>Artık dinlenmeden önce Eylem Dalgasını iki kez kullanabilirsin, ancak yine de aynı turda yalnızca bir kez.</p>"
+          "title_tr": "Aksiyon Atılımı (2 kullanım)",
+          "body_tr": "<p>Artık dinlenmeden önce Aksiyon Dalgasını iki kez kullanabilirsin, ancak yine de aynı turda yalnızca bir kez.</p>"
         }
       ]
     },
@@ -520,7 +520,7 @@
           "title": "Three Extra Attacks",
           "body": "<p>You can attack four times instead of once whenever you take the Attack action on your turn.</p>",
           "title_tr": "Üç Ekstra Saldırı",
-          "body_tr": "<p>Turunda Saldırı eylemini yaptığında bir kez yerine dört kez saldırabilirsin.</p>"
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine dört kez saldırabilirsin.</p>"
         }
       ]
     }

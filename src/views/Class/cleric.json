@@ -501,7 +501,7 @@
           "title": "Spellcasting",
           "body": "<p>You have learned to cast spells through prayer and meditation. Wisdom is your spellcasting ability and you can use a Holy Symbol as a Spellcasting Focus.</p><br/><p><b>Cantripss.</b> You know three cantripss of your choice from the Cleric spell list. Guidance, Sacred Flame, and Thaumaturgy are recommended. You gain more cantripss at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells from the Cleric spell list to start. Bless, Cure Wounds, Guiding Bolt, and Shield of Faith are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can change your list of prepared spells, replacing any of the spells there with other Cleric spells for which you have spell slots.</p>",
           "title_tr": "Büyü Kullanımı",
-          "body_tr": "<p>Dua ve meditasyon yoluyla büyü yapmayı öğrendin. Bilgeliğin büyü yapma yeteneğindir ve Kutsal Sembol büyü odağı olarak kullanabilirsin.</p><br/><p><b>Hazırlanan Büyüler.</b> Başlangıç için Rahip büyü listesinden dört adet 1. seviye büyü seç.</p><br/><p><b>Hazırlanan Büyüleri Değiştirme.</b> Uzun Dinlenmeyi bitirdiğinde, hazırlanan büyülerini büyü yuvaları olan diğer Rahip büyüleriyle değiştirebilirsin.</p>"
+          "body_tr": "<p>Dua ve meditasyon yoluyla büyü yapmayı öğrendin. Bilgeliğin büyü yapma yeteneğindir ve Kutsal Sembol büyü odağı olarak kullanabilirsin.</p><br/><p><b>Hazırlanan Büyüler.</b> Başlangıç için Rahip büyü listesinden dört adet 1. seviye büyü seç.</p><br/><p><b>Hazırlanan Büyüleri Değiştirme.</b> Uzun Dinlenmeyi bitirdiğinde, hazırlanan büyülerini büyü slotları olan diğer Rahip büyüleriyle değiştirebilirsin.</p>"
         },
         {
           "title": "Divine Order",
@@ -518,7 +518,7 @@
           "title": "Channel Divinity",
           "body": "<p>You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with two effects: Divine Spark and Turn Undead. You gain additional effects from your subclass. You can use Channel Divinity twice, regaining one use on a Short Rest and all uses on a Long Rest.</p><br/><p><b>Divine Spark.</b> As a Magic action, point your Holy Symbol at a creature within 30 feet. Roll 1d8 + your Wisdom modifier. Either restore that many Hit Points to the creature, or force a Constitution save — on a fail, it takes Necrotic or Radiant damage equal to that total (half on a success). The die increases at levels 7 (2d8), 13 (3d8), and 18 (4d8).</p><br/><p><b>Turn Undead.</b> As a Magic action, present your Holy Symbol. Each Undead of your choice within 30 feet must make a Wisdom saving throw or have the Frightened and Incapacitated conditions for 1 minute, moving as far from you as possible each turn.</p>",
           "title_tr": "İlahi Enerji Kanalı",
-          "body_tr": "<p>Dış Uçaklar'dan doğrudan ilahi enerji kanalize edebilirsin. İki etkiyle başlarsın: İlahi Kıvılcım ve Ölü Döndürme. Kanal İlahiliği'ni iki kez kullanabilirsin; Kısa Dinlenmede bir kullanımı, Uzun Dinlenmede tüm kullanımları geri kazanırsın.</p><br/><p><b>İlahi Kıvılcım.</b> Büyü eylemi olarak, 30 feet içindeki bir yaratığa Kutsal Sembolünü işaret et. 1d8 + Bilgelik değiştiricini at. Ya o kadar Can Puanı geri ver ya da Bünye kurtarması yaptır — başarısızsa Nekrotik veya Işıl hasara eşit hasar alır (başarıda yarı).</p><br/><p><b>Ölü Döndürme.</b> Büyü eylemi olarak Kutsal Sembolünü sun. Seçtiğin 30 feet içindeki her Ölü, Bilgelik kurtarması yapar ya da 1 dakika boyunca Korkmuş ve Engelli durumuna girer.</p>"
+          "body_tr": "<p>Dış Uçaklar'dan doğrudan ilahi enerji kanalize edebilirsin. İki etkiyle başlarsın: İlahi Kıvılcım ve Ölü Döndürme. Kanal İlahiliği'ni iki kez kullanabilirsin; Kısa Dinlenmede bir kullanımı, Uzun Dinlenmede tüm kullanımları geri kazanırsın.</p><br/><p><b>İlahi Kıvılcım.</b> Büyü aksiyonu olarak, 30 feet içindeki bir yaratığa Kutsal Sembolünü işaret et. 1d8 + Bilgelik değiştiricini at. Ya o kadar Can Puanı geri ver ya da Bünye kurtarması yaptır — başarısızsa Nekrotik veya Işıl hasara eşit hasar alır (başarıda yarı).</p><br/><p><b>Ölü Döndürme.</b> Büyü aksiyonu olarak Kutsal Sembolünü sun. Seçtiğin 30 feet içindeki her Ölü, Bilgelik kurtarması yapar ya da 1 dakika boyunca Korkmuş ve Engelli durumuna girer.</p>"
         }
       ]
     },
@@ -595,7 +595,7 @@
           "title": "Divine Intervention",
           "body": "<p>As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction to cast. You cast that spell without expending a spell slot or needing Material components. You can't use this feature again until you finish a Long Rest.</p>",
           "title_tr": "İlahi Müdahale",
-          "body_tr": "<p>Büyü eylemi olarak, Tepki gerektirmeyen 5. seviye veya daha düşük herhangi bir Rahip büyüsünü seç. O büyüyü büyü yuvası harcamadan veya Maddi bileşenlere ihtiyaç duymadan yaparsın. Uzun Dinlenmeyi bitirene kadar bu özelliği tekrar kullanamazsın.</p>"
+          "body_tr": "<p>Büyü aksiyonu olarak, Tepki gerektirmeyen 5. seviye veya daha düşük herhangi bir Rahip büyüsünü seç. O büyüyü büyü slotu harcamadan veya Maddi bileşenlere ihtiyaç duymadan yaparsın. Uzun Dinlenmeyi bitirene kadar bu özelliği tekrar kullanamazsın.</p>"
         }
       ]
     },

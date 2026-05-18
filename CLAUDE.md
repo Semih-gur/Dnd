@@ -34,11 +34,11 @@ Stored in `localStorage` key `"locale"`. Values: `"en"` or `"tr"`.
 - `src/views/BackgroundsView.vue` — fully uses `$lf()`
 - `src/views/feats.json` — all feat `name_tr` and ability `aName_tr` fields added
 - `src/views/FeatsView.vue` — uses `$lf()` for feat names and ability names; `$lf(ability, 'aDesc')` for descriptions
+- `src/views/feats.json` — all `aDesc_tr` fields added for feat ability descriptions
 - All 12 class JSON files (`barbarian.json` … `wizard.json`) — `title_tr`, `feature_tr`, `value_tr`, `subclassPrefix_tr` added
 - All 12 class Vue views (`BarbarianView.vue` … `WizardView.vue`) — fully use `$lf()`
 
 ### Partially translated
-- `src/views/feats.json` — `aDesc_tr` fields NOT yet added to ability descriptions (pending)
 - `src/views/races.json` — race `desc` long descriptions still in English
 - Race feat/trait `desc` short descriptions still in English
 
@@ -70,9 +70,9 @@ Stored in `localStorage` key `"locale"`. Values: `"en"` or `"tr"`.
         "abilites": [
           {
             "aName": "Initiative Proficiency.",
-            "aName_tr": "Girişim Uzmanlığı.",
+            "aName_tr": "İnisiyatif Uzmanlığı.",
             "aDesc": "When you roll Initiative...",
-            "aDesc_tr": "Girişim attığınızda..."
+            "aDesc_tr": "İnisiyatif attığınızda..."
           }
         ]
       }

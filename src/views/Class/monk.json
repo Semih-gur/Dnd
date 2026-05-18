@@ -287,7 +287,7 @@
           "title": "Martial Arts",
           "body": "<p>Your practice of martial arts gives you mastery of combat styles using Unarmed Strikes and Monk Weapons (Simple Melee weapons and Martial Melee weapons with the Light property). You gain the following benefits while unarmed or wielding only Monk Weapons and not wearing armor or a Shield.</p><br/><p><b>Bonus Unarmed Strike.</b> You can make one Unarmed Strike as a Bonus Action.</p><br/><p><b>Dexterous Attacks.</b> You can use your Dexterity modifier instead of Strength for the attack and damage rolls of your Unarmed Strikes and Monk Weapons. You can also use Dexterity for Grapple or Shove save DCs.</p><br/><p><b>Martial Arts Die.</b> You can roll 1d6 in place of the normal damage of your Unarmed Strike or Monk Weapons. This die improves as you gain Monk levels, shown in the Martial Arts Die column.</p>",
           "title_tr": "Savaş Sanatları",
-          "body_tr": "<p>Dövüş sanatları pratiğin, zırhsız veya Kalkan olmadan Çıplak Saldırı ve Keşiş Silahları kullanan savaş stillerinde ustalık sağlar.</p><br/><p><b>Bonus Çıplak Saldırı.</b> Bonus Eylem olarak bir Çıplak Saldırı yapabilirsin.</p><br/><p><b>Çevik Saldırılar.</b> Çıplak Saldırıların ve Keşiş Silahlarının saldırı ve hasar atışları için Güç yerine Çeviklik değiştiricini kullanabilirsin.</p><br/><p><b>Dövüş Sanatları Zarı.</b> Çıplak Saldırı veya Keşiş Silahlarının normal hasarı yerine 1d6 atabilirsin. Bu zar Keşiş seviyelerinle artar.</p>"
+          "body_tr": "<p>Dövüş sanatları pratiğin, zırhsız veya Kalkan olmadan Çıplak Saldırı ve Keşiş Silahları kullanan savaş stillerinde ustalık sağlar.</p><br/><p><b>Bonus Çıplak Saldırı.</b> Bonus Aksiyon olarak bir Çıplak Saldırı yapabilirsin.</p><br/><p><b>Çevik Saldırılar.</b> Çıplak Saldırıların ve Keşiş Silahlarının saldırı ve hasar atışları için Güç yerine Çeviklik değiştiricini kullanabilirsin.</p><br/><p><b>Dövüş Sanatları Zarı.</b> Çıplak Saldırı veya Keşiş Silahlarının normal hasarı yerine 1d6 atabilirsin. Bu zar Keşiş seviyelerinle artar.</p>"
         },
         {
           "title": "Unarmored Defense",
@@ -304,7 +304,7 @@
           "title": "Monk's Focus",
           "body": "<p>You harness a well of extraordinary energy represented by Focus Points. Your Monk level determines how many you have, as shown in the Focus Points column.</p><br/><p><b>Flurry of Blows.</b> Expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.</p><br/><p><b>Patient Defense.</b> Take the Disengage action as a Bonus Action. Or expend 1 Focus Point to take both Disengage and Dodge as a Bonus Action.</p><br/><p><b>Step of the Wind.</b> Take the Dash action as a Bonus Action. Or expend 1 Focus Point to take both Disengage and Dash as a Bonus Action, with doubled jump distance for the turn.</p>",
           "title_tr": "Keşişin Odağı",
-          "body_tr": "<p>Odak Puanları ile temsil edilen olağanüstü enerji rezervine sahipsin. Keşiş seviyene göre kaç tane sahip olduğun Odak Puanları sütununda gösterilir.</p><br/><p><b>Vuruş Selağı.</b> 1 Odak Puanı harcayarak Bonus Eylem olarak iki Çıplak Saldırı yap.</p><br/><p><b>Sabırlı Savunma.</b> Bonus Eylem olarak Geri Çekilme eylemini al. Veya 1 Odak Puanı harcayarak hem Geri Çekilme hem Kaçınma eylemini Bonus Eylem olarak al.</p><br/><p><b>Rüzgar Adımı.</b> Bonus Eylem olarak Koşu eylemini al. Veya 1 Odak Puanı harcayarak hem Geri Çekilme hem Koşu eylemini Bonus Eylem olarak al; bu turda zıplama mesafesi ikiye katlanır.</p>"
+          "body_tr": "<p>Odak Puanları ile temsil edilen olağanüstü enerji rezervine sahipsin. Keşiş seviyene göre kaç tane sahip olduğun Odak Puanları sütununda gösterilir.</p><br/><p><b>Vuruş Selağı.</b> 1 Odak Puanı harcayarak Bonus Aksiyon olarak iki Çıplak Saldırı yap.</p><br/><p><b>Sabırlı Savunma.</b> Bonus Aksiyon olarak Geri Çekilme aksiyonunu al. Veya 1 Odak Puanı harcayarak hem Geri Çekilme hem Kaçınma aksiyonunu Bonus Aksiyon olarak al.</p><br/><p><b>Rüzgar Adımı.</b> Bonus Aksiyon olarak Koşu aksiyonunu al. Veya 1 Odak Puanı harcayarak hem Geri Çekilme hem Koşu aksiyonunu Bonus Aksiyon olarak al; bu turda zıplama mesafesi ikiye katlanır.</p>"
         },
         {
           "title": "Unarmored Movement",
@@ -316,7 +316,7 @@
           "title": "Uncanny Metabolism",
           "body": "<p>When you roll Initiative, you can regain all expended Focus Points. When you do so, roll your Martial Arts die and regain Hit Points equal to your Monk level plus the number rolled.</p><br/><p>Once you use this feature, you can't use it again until you finish a Long Rest.</p>",
           "title_tr": "Olağandışı Metabolizma",
-          "body_tr": "<p>Girişim attığında tüm kullanılmış Odak Puanlarını geri kazanabilirsin. Bunu yaptığında Dövüş Sanatları zarını at ve Keşiş seviyene artı atılan sayıya eşit Can Puanı geri kazan.</p><br/><p>Bu özelliği kullandıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p>"
+          "body_tr": "<p>İnisiyatif attığında tüm kullanılmış Odak Puanlarını geri kazanabilirsin. Bunu yaptığında Dövüş Sanatları zarını at ve Keşiş seviyene artı atılan sayıya eşit Can Puanı geri kazan.</p><br/><p>Bu özelliği kullandıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p>"
         }
       ]
     },
@@ -361,7 +361,7 @@
           "title": "Extra Attack",
           "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
           "title_tr": "Ekstra Saldırı",
-          "body_tr": "<p>Turunda Saldırı eylemini yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
         },
         {
           "title": "Stunning Strike",
@@ -494,7 +494,7 @@
           "title": "Perfect Focus",
           "body": "<p>When you roll Initiative and have fewer than 4 Focus Points, you regain Focus Points equal to 4 minus the number you have.</p>",
           "title_tr": "Mükemmel Odak",
-          "body_tr": "<p>Girişim attığında 4'ten az Odak Puanın varsa, sahip olduğun sayı ile 4 arasındaki fark kadar Odak Puanı geri kazanırsın.</p>"
+          "body_tr": "<p>İnisiyatif attığında 4'ten az Odak Puanın varsa, sahip olduğun sayı ile 4 arasındaki fark kadar Odak Puanı geri kazanırsın.</p>"
         }
       ]
     },

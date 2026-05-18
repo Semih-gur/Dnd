@@ -482,7 +482,7 @@
           "title": "Arcane Recovery",
           "body": "<p>When you finish a Short Rest, you can choose expended spell slots to recover. The combined level of recovered slots can't exceed half your Wizard level (round up), and none can be level 6 or higher.</p><br/><p>Once you use this feature, you can't do so again until you finish a Long Rest.</p>",
           "title_tr": "Arkanik Yenileme",
-          "body_tr": "<p>Kısa Dinlenmeyi bitirdiğinde, geri kazanmak için kullanılmış büyü yuvalarını seçebilirsin. Geri kazanılan yuvaların birleşik seviyesi Sihirbaz seviyenin yarısını (yukarı yuvarla) geçemez ve hiçbiri 6. seviye veya daha yüksek olamaz.</p><br/><p>Bu özelliği kullandıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p>"
+          "body_tr": "<p>Kısa Dinlenmeyi bitirdiğinde, geri kazanmak için kullanılmış büyü slotlarını seçebilirsin. Geri kazanılan slotların birleşik seviyesi Sihirbaz seviyenin yarısını (yukarı yuvarla) geçemez ve hiçbiri 6. seviye veya daha yüksek olamaz.</p><br/><p>Bu özelliği kullandıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p>"
         }
       ]
     },
@@ -603,7 +603,7 @@
           "title": "Spell Mastery",
           "body": "<p>Choose one level 1 and one level 2 spell from your spellbook with a casting time of an Action. You always have those spells prepared and can cast them at their lowest level without expending a spell slot.</p><br/><p>To cast either spell at a higher level, you must expend a spell slot. Whenever you finish a Long Rest, you can study your spellbook and replace one of those spells with an eligible spell of the same level.</p>",
           "title_tr": "Büyü Ustalığı",
-          "body_tr": "<p>Büyü kitabından Eylem yapım süresi olan bir adet 1. seviye ve bir adet 2. seviye büyü seç. Bu büyüleri her zaman hazır bulundurur ve büyü yuvası harcamadan en düşük seviyede yapabilirsin.</p><br/><p>Bu büyülerden birini daha yüksek seviyede yapmak için büyü yuvası harcaman gerekir.</p>"
+          "body_tr": "<p>Büyü kitabından Aksiyon yapım süresi olan bir adet 1. seviye ve bir adet 2. seviye büyü seç. Bu büyüleri her zaman hazır bulundurur ve büyü slotu harcamadan en düşük seviyede yapabilirsin.</p><br/><p>Bu büyülerden birini daha yüksek seviyede yapmak için büyü slotu harcaman gerekir.</p>"
         }
       ]
     },
@@ -625,7 +625,7 @@
           "title": "Signature Spells",
           "body": "<p>Choose two level 3 spells in your spellbook as your signature spells. You always have these prepared and can cast each once at level 3 without expending a spell slot per Short or Long Rest.</p><br/><p>To cast either spell at a higher level, you must expend a spell slot.</p>",
           "title_tr": "İmza Büyüleri",
-          "body_tr": "<p>Büyü kitabındaki iki adet 3. seviye büyüyü imza büyün olarak seç. Bu büyüleri her zaman hazır bulundurur ve her Kısa veya Uzun Dinlenmede her birini 3. seviyede büyü yuvası harcamadan yapabilirsin.</p>"
+          "body_tr": "<p>Büyü kitabındaki iki adet 3. seviye büyüyü imza büyün olarak seç. Bu büyüleri her zaman hazır bulundurur ve her Kısa veya Uzun Dinlenmede her birini 3. seviyede büyü slotu harcamadan yapabilirsin.</p>"
         }
       ]
     }

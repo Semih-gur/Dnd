@@ -277,7 +277,7 @@
           "title": "Rage",
           "body": "<p>You can imbue yourself with a primal power called Rage as a Bonus Action if you aren't wearing Heavy armor.</p><br/><p><b>Damage Resistance.</b> You have Resistance to Bludgeoning, Piercing, and Slashing damage.</p><br/><p><b>Rage Damage.</b> When you make an attack using Strength and deal damage, you gain a bonus shown in the Rage Damage column.</p><br/><p><b>Strength Advantage.</b> You have Advantage on Strength checks and saving throws.</p><br/><p><b>No Concentration or Spells.</b> You can't maintain Concentration or cast spells.</p><br/><p><b>Duration.</b> The Rage lasts until the end of your next turn. Extend it each round by attacking an enemy, forcing a saving throw, or taking a Bonus Action to extend. Max 10 minutes.</p>",
           "title_tr": "Öfke",
-          "body_tr": "<p>Ağır zırh giymiyorsan Bonus Eylem olarak Öfke adı verilen ilkel bir güçle kendini besleyebilirsin.</p><br/><p><b>Hasar Direnci.</b> Künt, Delici ve Kesici hasara Direnç kazanırsın.</p><br/><p><b>Öfke Hasarı.</b> Güç kullanarak saldırı yapar ve hasar verirsen Öfke Hasarı sütunundaki bonusu kazanırsın.</p><br/><p><b>Güç Üstünlüğü.</b> Güç kontrollerinde ve kurtarma atışlarında Üstünlük kazanırsın.</p><br/><p><b>Konsantrasyon veya Büyü Yok.</b> Konsantrasyonu koruyamazsın veya büyü yapamazsın.</p><br/><p><b>Süre.</b> Öfke bir sonraki turunda sonuna kadar sürer. Bir düşmana saldırarak, kurtarma atışı yaptırarak veya Bonus Eylem kullanarak uzatabilirsin. Maksimum 10 dakika.</p>"
+          "body_tr": "<p>Ağır zırh giymiyorsan Bonus Aksiyon olarak Öfke adı verilen ilkel bir güçle kendini besleyebilirsin.</p><br/><p><b>Hasar Direnci.</b> Künt, Delici ve Kesici hasara Direnç kazanırsın.</p><br/><p><b>Öfke Hasarı.</b> Güç kullanarak saldırı yapar ve hasar verirsen Öfke Hasarı sütunundaki bonusu kazanırsın.</p><br/><p><b>Güç Üstünlüğü.</b> Güç kontrollerinde ve kurtarma atışlarında Üstünlük kazanırsın.</p><br/><p><b>Konsantrasyon veya Büyü Yok.</b> Konsantrasyonu koruyamazsın veya büyü yapamazsın.</p><br/><p><b>Süre.</b> Öfke bir sonraki turunda sonuna kadar sürer. Bir düşmana saldırarak, kurtarma atışı yaptırarak veya Bonus Aksiyon kullanarak uzatabilirsin. Maksimum 10 dakika.</p>"
         },
         {
           "title": "Unarmored Defense",
@@ -345,7 +345,7 @@
           "title": "Extra Attack",
           "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
           "title_tr": "Ekstra Saldırı",
-          "body_tr": "<p>Turunda Saldırı eylemini yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
         },
         {
           "title": "Fast Movement",
@@ -373,13 +373,13 @@
           "title": "Feral Instinct",
           "body": "<p>You have Advantage on Initiative rolls.</p>",
           "title_tr": "Vahşi İçgüdü",
-          "body_tr": "<p>Girişim atışlarında Üstünlüğe sahipsin.</p>"
+          "body_tr": "<p>İnisiyatif atışlarında Üstünlüğe sahipsin.</p>"
         },
         {
           "title": "Instinctive Pounce",
           "body": "<p>As part of the Bonus Action you take to enter your Rage, you can move up to half your Speed.</p>",
           "title_tr": "İçgüdüsel Sıçrama",
-          "body_tr": "<p>Öfkene girmek için kullandığın Bonus Eylemin bir parçası olarak Hızının yarısı kadar hareket edebilirsin.</p>"
+          "body_tr": "<p>Öfkene girmek için kullandığın Bonus Aksiyonun bir parçası olarak Hızının yarısı kadar hareket edebilirsin.</p>"
         }
       ]
     },
@@ -467,7 +467,7 @@
           "title": "Persistent Rage",
           "body": "<p>When you roll Initiative, you can regain all expended uses of Rage (once per Long Rest). Your Rage now lasts 10 minutes without extension actions, ending only if you are Unconscious or don Heavy armor.</p>",
           "title_tr": "Kalıcı Öfke",
-          "body_tr": "<p>Girişim attığında tüm kullanılmış Öfke kullanımlarını geri kazanabilirsin (Uzun Dinlenmede bir kez). Öfken artık uzatma eylemleri gerektirmeden 10 dakika sürer; yalnızca Bilinçsiz olursan veya Ağır zırh giyersen sona erer.</p>"
+          "body_tr": "<p>İnisiyatif attığında tüm kullanılmış Öfke kullanımlarını geri kazanabilirsin (Uzun Dinlenmede bir kez). Öfken artık uzatma aksiyonları gerektirmeden 10 dakika sürer; yalnızca Bilinçsiz olursan veya Ağır zırh giyersen sona erer.</p>"
         }
       ]
     },

@@ -97,7 +97,7 @@
       "profBonus": "+2",
       "feature": "Cunning Action",
       "sneakAttack": "1d6",
-      "feature_tr": "Kurnaz Eylem"
+      "feature_tr": "Kurnaz Aksiyon"
     },
     {
       "level": "3",
@@ -262,8 +262,8 @@
         {
           "title": "Cunning Action",
           "body": "<p>Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide.</p>",
-          "title_tr": "Kurnaz Eylem",
-          "body_tr": "<p>Hızlı düşüncen ve çevikliğin sayesinde turunda Bonus Eylem olarak şu eylemlerden birini yapabilirsin: Koşu, Geri Çekilme veya Saklanma.</p>"
+          "title_tr": "Kurnaz Aksiyon",
+          "body_tr": "<p>Hızlı düşüncen ve çevikliğin sayesinde turunda Bonus Aksiyon olarak şu aksiyonlardan birini yapabilirsin: Koşu, Geri Çekilme veya Saklanma.</p>"
         }
       ]
     },
@@ -280,7 +280,7 @@
           "title": "Steady Aim",
           "body": "<p>As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.</p>",
           "title_tr": "Sabit Nişan",
-          "body_tr": "<p>Bonus Eylem olarak bu turdaki bir sonraki saldırı atışında kendin Üstünlük verirsin. Bu özelliği yalnızca bu turda hareket etmediysen kullanabilirsin; kullandıktan sonra turun sonuna kadar Hızın 0 olur.</p>"
+          "body_tr": "<p>Bonus Aksiyon olarak bu turdaki bir sonraki saldırı atışında kendin Üstünlük verirsin. Bu özelliği yalnızca bu turda hareket etmediysen kullanabilirsin; kullandıktan sonra turun sonuna kadar Hızın 0 olur.</p>"
         }
       ]
     },
@@ -413,7 +413,7 @@
           "title": "Devious Strikes",
           "body": "<p>You've practiced new ways to use your Sneak Attack deviously. The following effects are added to your Cunning Strike options.</p><br/><p><b>Daze (Cost: 2d6).</b> The target must succeed on a Constitution save, or on its next turn it can do only one of the following: move, take an action, or take a Bonus Action.</p><br/><p><b>Knock Out (Cost: 6d6).</b> The target must succeed on a Constitution save, or it has the Unconscious condition for 1 minute or until it takes any damage. The target can repeat the save at the end of each of its turns.</p><br/><p><b>Obscure (Cost: 3d6).</b> The target must succeed on a Dexterity save, or it has the Blinded condition until the end of its next turn.</p>",
           "title_tr": "Sinsi Darbeler",
-          "body_tr": "<p>Gizli Saldırıyı daha sinsi kullanmanın yeni yollarını pratik ettin. Kurnaz Saldırı seçeneklerine şunlar eklenir:</p><br/><p><b>Sersemletme (2d6).</b> Hedef Bünye kurtarması yapmalı ya da bir sonraki turunda yalnızca şunlardan birini yapabilir: hareket et, eylem al veya Bonus Eylem al.</p><br/><p><b>Bayıltma (6d6).</b> Hedef Bünye kurtarması yapmalı ya da 1 dakika veya hasar alana kadar Bilinçsiz durumuna girer.</p><br/><p><b>Kararaltı (3d6).</b> Hedef Çeviklik kurtarması yapmalı ya da bir sonraki turuna kadar Kör durumuna girer.</p>"
+          "body_tr": "<p>Gizli Saldırıyı daha sinsi kullanmanın yeni yollarını pratik ettin. Kurnaz Saldırı seçeneklerine şunlar eklenir:</p><br/><p><b>Sersemletme (2d6).</b> Hedef Bünye kurtarması yapmalı ya da bir sonraki turunda yalnızca şunlardan birini yapabilir: hareket et, aksiyon al veya Bonus Aksiyon al.</p><br/><p><b>Bayıltma (6d6).</b> Hedef Bünye kurtarması yapmalı ya da 1 dakika veya hasar alana kadar Bilinçsiz durumuna girer.</p><br/><p><b>Kararaltı (3d6).</b> Hedef Çeviklik kurtarması yapmalı ya da bir sonraki turuna kadar Kör durumuna girer.</p>"
         }
       ]
     },
