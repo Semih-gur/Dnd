@@ -233,22 +233,26 @@
         {
           "title": "Expertise",
           "body": "<p>You gain Expertise in two of your skill proficiencies of your choice. Sleight of Hand and Stealth are recommended.</p><br/><p>At Rogue level 6, you gain Expertise in two more of your skill proficiencies of your choice.</p>",
-          "title_tr": "Uzmanlık"
+          "title_tr": "Uzmanlık",
+          "body_tr": "<p>Seçtiğin iki beceri uzmanlığında Uzmanlık kazanırsın. El Çabukluğu ve Gizlilik önerilir.</p><br/><p>6. Rogue seviyesinde seçtiğin iki beceri uzmanlığında daha Uzmanlık kazanırsın.</p>"
         },
         {
           "title": "Sneak Attack",
           "body": "<p>Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or Ranged weapon. The extra damage type matches the weapon's type.</p><br/><p>You don't need Advantage if at least one ally is within 5 feet of the target (not Incapacitated) and you don't have Disadvantage on the roll.</p><br/><p>The extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column.</p>",
-          "title_tr": "Sinsi Saldırı"
+          "title_tr": "Sinsi Saldırı",
+          "body_tr": "<p>Turda bir kez, saldırı atışında Üstünlüğe sahipsen ve saldırı Narin veya Menzilli silah kullanıyorsa, isabet ettiğin bir yaratığa ekstra 1d6 hasar verebilirsin.</p><br/><p>Hedefe 5 feet içinde en az bir müttefikin varsa (Engelli değil) ve atışta Dezavantajın yoksa Üstünlüğe ihtiyacın yoktur.</p><br/><p>Ekstra hasar Rogue seviyelerine göre artar.</p>"
         },
         {
           "title": "Thieves' Cant",
           "body": "<p>You know Thieves' Cant and one other language of your choice, picked up from the communities where you plied your roguish talents.</p>",
-          "title_tr": "Hırsız Dili"
+          "title_tr": "Hırsız Dili",
+          "body_tr": "<p>Hırsız Argosunu ve seçtiğin başka bir dili bilirsin.</p>"
         },
         {
           "title": "Weapon Mastery",
           "body": "<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Daggers and Shortbows. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>",
-          "title_tr": "Silah Hakimiyeti"
+          "title_tr": "Silah Hakimiyeti",
+          "body_tr": "<p>Uzmanlığa sahip olduğun iki tür silahın uzmanlık özelliklerini kullanmana izin verir. Uzun Dinlenmeyi bitirdiğinde seçtiğin silah türlerini değiştirebilirsin.</p>"
         }
       ]
     },
@@ -258,7 +262,8 @@
         {
           "title": "Cunning Action",
           "body": "<p>Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide.</p>",
-          "title_tr": "Kurnaz Eylem"
+          "title_tr": "Kurnaz Eylem",
+          "body_tr": "<p>Hızlı düşüncen ve çevikliğin sayesinde turunda Bonus Eylem olarak şu eylemlerden birini yapabilirsin: Koşu, Geri Çekilme veya Saklanma.</p>"
         }
       ]
     },
@@ -268,12 +273,14 @@
         {
           "title": "Rogue Subclass",
           "body": "<p>You gain a Rogue subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Rogue level or lower. Choose your specialization below:</p>",
-          "title_tr": "Haydut Alt Sınıfı"
+          "title_tr": "Haydut Alt Sınıfı",
+          "body_tr": "<p>Seçtiğin bir Hırsız alt sınıfı kazanırsın. Kariyerinin geri kalanında, Hırsız seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Uzmanlığını aşağıdan seç:</p>"
         },
         {
           "title": "Steady Aim",
           "body": "<p>As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.</p>",
-          "title_tr": "Sabit Nişan"
+          "title_tr": "Sabit Nişan",
+          "body_tr": "<p>Bonus Eylem olarak bu turdaki bir sonraki saldırı atışında kendin Üstünlük verirsin. Bu özelliği yalnızca bu turda hareket etmediysen kullanabilirsin; kullandıktan sonra turun sonuna kadar Hızın 0 olur.</p>"
         }
       ]
     },
@@ -283,7 +290,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Rogue levels 8, 10, 12, and 16.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
         }
       ]
     },
@@ -293,12 +301,14 @@
         {
           "title": "Cunning Strike",
           "body": "<p>When you deal Sneak Attack damage, you can add one of the following effects by forgoing the listed number of Sneak Attack dice. Save DC = 8 + your Dexterity modifier + Proficiency Bonus.</p><br/><p><b>Poison (Cost: 1d6).</b> The target makes a Constitution save or has the Poisoned condition for 1 minute. Requires a Poisoner's Kit on your person.</p><br/><p><b>Trip (Cost: 1d6).</b> If the target is Large or smaller, it must succeed on a Dexterity save or have the Prone condition.</p><br/><p><b>Withdraw (Cost: 1d6).</b> Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.</p>",
-          "title_tr": "Kurnaz Darbe"
+          "title_tr": "Kurnaz Darbe",
+          "body_tr": "<p>Gizli Saldırı hasarı verdiğinde, listelenen sayıda Gizli Saldırı zarından vazgeçerek şu etkilerden birini ekleyebilirsin. Kurtarma ZO = 8 + Çeviklik değiştirici + Uzmanlık Bonusu.</p><br/><p><b>Zehir (1d6).</b> Hedef Bünye kurtarması yapar ya da 1 dakika boyunca Zehirlenmiş durumuna girer.</p><br/><p><b>Devir (1d6).</b> Hedef Çeviklik kurtarması yapar ya da Yere Düşmüş durumuna girer.</p><br/><p><b>Geri Çekil (1d6).</b> Saldırıdan hemen sonra Fırsat Saldırısı tetiklemeden Hızının yarısı kadar hareket edersin.</p>"
         },
         {
           "title": "Uncanny Dodge",
           "body": "<p>When an attacker you can see hits you with an attack roll, you can use your Reaction to halve the attack's damage against you (round down).</p>",
-          "title_tr": "Tuhaf Savunma"
+          "title_tr": "Tuhaf Savunma",
+          "body_tr": "<p>Görebileceğin bir saldırgan sana isabet ettiğinde, saldırının hasarını yarıya indirmek için Tepkini kullanabilirsin.</p>"
         }
       ]
     },
@@ -308,7 +318,8 @@
         {
           "title": "Expertise",
           "body": "<p>You gain Expertise in two more of your skill proficiencies of your choice.</p>",
-          "title_tr": "Uzmanlık"
+          "title_tr": "Uzmanlık",
+          "body_tr": "<p>Seçtiğin iki beceri uzmanlığında Uzmanlık kazanırsın. El Çabukluğu ve Gizlilik önerilir.</p><br/><p>6. Rogue seviyesinde seçtiğin iki beceri uzmanlığında daha Uzmanlık kazanırsın.</p>"
         }
       ]
     },
@@ -318,12 +329,14 @@
         {
           "title": "Evasion",
           "body": "<p>When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage on a success and only half damage on a failure.</p><br/><p>You can't use this feature if you have the Incapacitated condition.</p>",
-          "title_tr": "Kaçınma"
+          "title_tr": "Kaçınma",
+          "body_tr": "<p>Yalnızca yarı hasar almak için Çeviklik kurtarması yapman gereken bir etkiye maruz kaldığında, başarıda hiç hasar almaz, başarısızda yalnızca yarı hasar alırsın.</p><br/><p>Engelli durumundaysan bu özellikten yararlanamarsın.</p>"
         },
         {
           "title": "Reliable Talent",
           "body": "<p>Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10.</p>",
-          "title_tr": "Güvenilir Yetenek"
+          "title_tr": "Güvenilir Yetenek",
+          "body_tr": "<p>Beceri veya alet uzmanlıklarından birini kullanan bir yetenek kontrolü yaptığında, 9 veya daha düşük d20 atışını 10 olarak sayabilirsin.</p>"
         }
       ]
     },
@@ -333,7 +346,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -343,7 +357,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen subclass.</p>",
-          "title_tr": "Alt Sınıf Özelliği"
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -353,7 +368,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -363,7 +379,8 @@
         {
           "title": "Improved Cunning Strike",
           "body": "<p>You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.</p>",
-          "title_tr": "Gelişmiş Kurnaz Darbe"
+          "title_tr": "Gelişmiş Kurnaz Darbe",
+          "body_tr": "<p>Gizli Saldırı hasarı verdiğinde her efekt için zar maliyetini ödeyerek iki Kurnaz Saldırı efektine kadar kullanabilirsin.</p>"
         }
       ]
     },
@@ -373,7 +390,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -383,7 +401,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen subclass.</p>",
-          "title_tr": "Alt Sınıf Özelliği"
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -393,7 +412,8 @@
         {
           "title": "Devious Strikes",
           "body": "<p>You've practiced new ways to use your Sneak Attack deviously. The following effects are added to your Cunning Strike options.</p><br/><p><b>Daze (Cost: 2d6).</b> The target must succeed on a Constitution save, or on its next turn it can do only one of the following: move, take an action, or take a Bonus Action.</p><br/><p><b>Knock Out (Cost: 6d6).</b> The target must succeed on a Constitution save, or it has the Unconscious condition for 1 minute or until it takes any damage. The target can repeat the save at the end of each of its turns.</p><br/><p><b>Obscure (Cost: 3d6).</b> The target must succeed on a Dexterity save, or it has the Blinded condition until the end of its next turn.</p>",
-          "title_tr": "Sinsi Darbeler"
+          "title_tr": "Sinsi Darbeler",
+          "body_tr": "<p>Gizli Saldırıyı daha sinsi kullanmanın yeni yollarını pratik ettin. Kurnaz Saldırı seçeneklerine şunlar eklenir:</p><br/><p><b>Sersemletme (2d6).</b> Hedef Bünye kurtarması yapmalı ya da bir sonraki turunda yalnızca şunlardan birini yapabilir: hareket et, eylem al veya Bonus Eylem al.</p><br/><p><b>Bayıltma (6d6).</b> Hedef Bünye kurtarması yapmalı ya da 1 dakika veya hasar alana kadar Bilinçsiz durumuna girer.</p><br/><p><b>Kararaltı (3d6).</b> Hedef Çeviklik kurtarması yapmalı ya da bir sonraki turuna kadar Kör durumuna girer.</p>"
         }
       ]
     },
@@ -403,7 +423,8 @@
         {
           "title": "Slippery Mind",
           "body": "<p>Your cunning mind is exceptionally difficult to control. You gain proficiency in Wisdom and Charisma saving throws.</p>",
-          "title_tr": "Kaygan Zihin"
+          "title_tr": "Kaygan Zihin",
+          "body_tr": "<p>Kurnaz zihni kontrol etmek son derece zordur. Bilgelik ve Karizma kurtarma atışlarında uzmanlık kazanırsın.</p>"
         }
       ]
     },
@@ -413,7 +434,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -423,7 +445,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen subclass.</p>",
-          "title_tr": "Alt Sınıf Özelliği"
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -433,7 +456,8 @@
         {
           "title": "Elusive",
           "body": "<p>You are so evasive that attackers rarely gain the upper hand. No attack roll can have Advantage against you unless you have the Incapacitated condition.</p>",
-          "title_tr": "Yakalanmaz"
+          "title_tr": "Yakalanmaz",
+          "body_tr": "<p>O kadar kaçamaksın ki saldırganlar nadiren üstünlük kazanır. Engelli değilsen hiçbir saldırı atışı sana karşı Üstünlüğe sahip olamaz.</p>"
         }
       ]
     },
@@ -443,7 +467,8 @@
         {
           "title": "Epic Boon",
           "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended.</p>",
-          "title_tr": "Destansı Lütuf"
+          "title_tr": "Destansı Lütuf",
+          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
         }
       ]
     },
@@ -453,7 +478,8 @@
         {
           "title": "Stroke of Luck",
           "body": "<p>If you fail a d20 Test, you can turn the roll into a 20. Once you use this feature, you can't use it again until you finish a Short Rest or a Long Rest.</p>",
-          "title_tr": "Şans Vuruşu"
+          "title_tr": "Şans Vuruşu",
+          "body_tr": "<p>Bir d20 Testinde başarısız olursan, atışı 20 yapabilirsin. Bu özelliği kullandıktan sonra Kısa veya Uzun Dinlenmede bir kez tekrar kullanabilirsin.</p>"
         }
       ]
     }

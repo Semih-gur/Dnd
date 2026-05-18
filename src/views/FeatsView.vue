@@ -94,7 +94,7 @@
               <b class="ability-name" v-if="ability.aName"
                 >{{ $lf(ability, 'aName') }}
               </b>
-              {{ ability.aDesc }}
+              {{ $lf(ability, 'aDesc') }}
             </p>
           </div>
         </div>

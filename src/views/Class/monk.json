@@ -286,12 +286,14 @@
         {
           "title": "Martial Arts",
           "body": "<p>Your practice of martial arts gives you mastery of combat styles using Unarmed Strikes and Monk Weapons (Simple Melee weapons and Martial Melee weapons with the Light property). You gain the following benefits while unarmed or wielding only Monk Weapons and not wearing armor or a Shield.</p><br/><p><b>Bonus Unarmed Strike.</b> You can make one Unarmed Strike as a Bonus Action.</p><br/><p><b>Dexterous Attacks.</b> You can use your Dexterity modifier instead of Strength for the attack and damage rolls of your Unarmed Strikes and Monk Weapons. You can also use Dexterity for Grapple or Shove save DCs.</p><br/><p><b>Martial Arts Die.</b> You can roll 1d6 in place of the normal damage of your Unarmed Strike or Monk Weapons. This die improves as you gain Monk levels, shown in the Martial Arts Die column.</p>",
-          "title_tr": "Savaş Sanatları"
+          "title_tr": "Savaş Sanatları",
+          "body_tr": "<p>Dövüş sanatları pratiğin, zırhsız veya Kalkan olmadan Çıplak Saldırı ve Keşiş Silahları kullanan savaş stillerinde ustalık sağlar.</p><br/><p><b>Bonus Çıplak Saldırı.</b> Bonus Eylem olarak bir Çıplak Saldırı yapabilirsin.</p><br/><p><b>Çevik Saldırılar.</b> Çıplak Saldırıların ve Keşiş Silahlarının saldırı ve hasar atışları için Güç yerine Çeviklik değiştiricini kullanabilirsin.</p><br/><p><b>Dövüş Sanatları Zarı.</b> Çıplak Saldırı veya Keşiş Silahlarının normal hasarı yerine 1d6 atabilirsin. Bu zar Keşiş seviyelerinle artar.</p>"
         },
         {
           "title": "Unarmored Defense",
           "body": "<p>While you aren't wearing armor or wielding a Shield, your base Armor Class equals 10 plus your Dexterity and Wisdom modifiers.</p>",
-          "title_tr": "Zırhsız Savunma"
+          "title_tr": "Zırhsız Savunma",
+          "body_tr": "<p>Zırh veya Kalkan taşımadığında temel Zırh Sınıfın 10 artı Çeviklik ve Bilgelik değiştiricilerine eşit olur.</p>"
         }
       ]
     },
@@ -301,17 +303,20 @@
         {
           "title": "Monk's Focus",
           "body": "<p>You harness a well of extraordinary energy represented by Focus Points. Your Monk level determines how many you have, as shown in the Focus Points column.</p><br/><p><b>Flurry of Blows.</b> Expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.</p><br/><p><b>Patient Defense.</b> Take the Disengage action as a Bonus Action. Or expend 1 Focus Point to take both Disengage and Dodge as a Bonus Action.</p><br/><p><b>Step of the Wind.</b> Take the Dash action as a Bonus Action. Or expend 1 Focus Point to take both Disengage and Dash as a Bonus Action, with doubled jump distance for the turn.</p>",
-          "title_tr": "Keşişin Odağı"
+          "title_tr": "Keşişin Odağı",
+          "body_tr": "<p>Odak Puanları ile temsil edilen olağanüstü enerji rezervine sahipsin. Keşiş seviyene göre kaç tane sahip olduğun Odak Puanları sütununda gösterilir.</p><br/><p><b>Vuruş Selağı.</b> 1 Odak Puanı harcayarak Bonus Eylem olarak iki Çıplak Saldırı yap.</p><br/><p><b>Sabırlı Savunma.</b> Bonus Eylem olarak Geri Çekilme eylemini al. Veya 1 Odak Puanı harcayarak hem Geri Çekilme hem Kaçınma eylemini Bonus Eylem olarak al.</p><br/><p><b>Rüzgar Adımı.</b> Bonus Eylem olarak Koşu eylemini al. Veya 1 Odak Puanı harcayarak hem Geri Çekilme hem Koşu eylemini Bonus Eylem olarak al; bu turda zıplama mesafesi ikiye katlanır.</p>"
         },
         {
           "title": "Unarmored Movement",
           "body": "<p>Your speed increases by 10 feet while you aren't wearing armor or wielding a Shield. This bonus increases at higher Monk levels as shown in the Unarmored Movement column.</p>",
-          "title_tr": "Zırhsız Hareket"
+          "title_tr": "Zırhsız Hareket",
+          "body_tr": "<p>Zırh veya Kalkan taşımadığında hızın 10 feet artar. Bu bonus Zırhsız Hareket sütununda gösterildiği gibi daha yüksek Keşiş seviyelerinde artar.</p>"
         },
         {
           "title": "Uncanny Metabolism",
           "body": "<p>When you roll Initiative, you can regain all expended Focus Points. When you do so, roll your Martial Arts die and regain Hit Points equal to your Monk level plus the number rolled.</p><br/><p>Once you use this feature, you can't use it again until you finish a Long Rest.</p>",
-          "title_tr": "Olağandışı Metabolizma"
+          "title_tr": "Olağandışı Metabolizma",
+          "body_tr": "<p>Girişim attığında tüm kullanılmış Odak Puanlarını geri kazanabilirsin. Bunu yaptığında Dövüş Sanatları zarını at ve Keşiş seviyene artı atılan sayıya eşit Can Puanı geri kazan.</p><br/><p>Bu özelliği kullandıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p>"
         }
       ]
     },
@@ -321,12 +326,14 @@
         {
           "title": "Deflect Attacks",
           "body": "<p>You can use your Reaction to deflect a melee or ranged attack that deals Bludgeoning, Piercing, or Slashing damage. The total damage you take is reduced by 1d10 + your Dexterity modifier + your Monk level.</p><br/><p>If you reduce the damage to 0, you can expend 1 Focus Point to redirect it. A creature within 5 feet (melee) or 60 feet (ranged) must succeed on a Dexterity saving throw or take damage equal to two rolls of your Martial Arts die + your Dexterity modifier.</p>",
-          "title_tr": "Saldırıları Saptır"
+          "title_tr": "Saldırıları Saptır",
+          "body_tr": "<p>Künt, Delici veya Kesici hasar veren yakın veya menzilli bir saldırıyı saptırmak için Tepkini kullanabilirsin. Aldığın toplam hasar 1d10 + Çeviklik değiştirici + Keşiş seviyeni kadar azalır.</p><br/><p>Hasarı 0'a indirirsen, yönlendirmek için 1 Odak Puanı harcayabilirsin. Yakın veya menzilli bir yaratık Çeviklik kurtarmasında başarısız olursa Dövüş Sanatları zarının iki atışı + Çeviklik değiştiricine eşit hasar alır.</p>"
         },
         {
           "title": "Monk Subclass",
           "body": "<p>You gain a Monk subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Monk level or lower. Choose your warrior tradition below:</p>",
-          "title_tr": "Keşiş Alt Sınıfı"
+          "title_tr": "Keşiş Alt Sınıfı",
+          "body_tr": "<p>Seçtiğin bir Keşiş alt sınıfı kazanırsın. Kariyerinin geri kalanında, Keşiş seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Savaşçı geleneğini aşağıdan seç:</p>"
         }
       ]
     },
@@ -336,12 +343,14 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Monk levels 8, 12, and 16.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
         },
         {
           "title": "Slow Fall",
           "body": "<p>You can use your Reaction when you fall to reduce any damage you take from the fall by an amount equal to five times your Monk level.</p>",
-          "title_tr": "Yavaş Düşüş"
+          "title_tr": "Yavaş Düşüş",
+          "body_tr": "<p>Düşerken Tepkini kullanarak düşüşten aldığın hasarı Keşiş seviyenin beş katı kadar azaltabilirsin.</p>"
         }
       ]
     },
@@ -351,12 +360,14 @@
         {
           "title": "Extra Attack",
           "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
-          "title_tr": "Ekstra Saldırı"
+          "title_tr": "Ekstra Saldırı",
+          "body_tr": "<p>Turunda Saldırı eylemini yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
         },
         {
           "title": "Stunning Strike",
           "body": "<p>Once per turn when you hit a creature with a Monk Weapon or Unarmed Strike, you can expend 1 Focus Point to attempt a stunning strike. The target must make a Constitution saving throw. On a failed save, the target has the Stunned condition until the start of your next turn. On a successful save, it takes Force damage equal to a roll of your Martial Arts die + your Wisdom modifier.</p>",
-          "title_tr": "Sersemletici Darbe"
+          "title_tr": "Sersemletici Darbe",
+          "body_tr": "<p>Bir Keşiş Silahı veya Çıplak Saldırıyla bir yaratığa isabet ettiğinde, turda bir kez sersemletici vuruş denemek için 1 Odak Puanı harcayabilirsin. Hedef Bünye kurtarması yapar. Başarısızsa bir sonraki turuna kadar Sersemletilmiş durumuna girer. Başarılıysa Dövüş Sanatları zarı + Bilgelik değiştiricine eşit Güç hasarı alır.</p>"
         }
       ]
     },
@@ -366,12 +377,14 @@
         {
           "title": "Empowered Strikes",
           "body": "<p>Whenever you deal damage with your Unarmed Strike, it can deal your choice of Force damage or its normal damage type.</p>",
-          "title_tr": "Güçlendirilmiş Darbeler"
+          "title_tr": "Güçlendirilmiş Darbeler",
+          "body_tr": "<p>Çıplak Saldırıyla hasar verdiğinde, bu hasar Güç veya normal hasar türünden biri olabilir.</p>"
         },
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen warrior tradition.</p>",
-          "title_tr": "Alt Sınıf Özelliği"
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -381,7 +394,8 @@
         {
           "title": "Evasion",
           "body": "<p>When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage on a success and only half damage on a failure.</p><br/><p>You don't benefit from this feature if you have the Incapacitated condition.</p>",
-          "title_tr": "Kaçınma"
+          "title_tr": "Kaçınma",
+          "body_tr": "<p>Yalnızca yarı hasar almak için Çeviklik kurtarması yapman gereken bir etkiye maruz kaldığında, başarıda hiç hasar almaz, başarısızda yalnızca yarı hasar alırsın.</p><br/><p>Engelli durumundaysan bu özellikten yararlanamarsın.</p>"
         }
       ]
     },
@@ -391,7 +405,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -401,7 +416,8 @@
         {
           "title": "Acrobatic Movement",
           "body": "<p>While you aren't wearing armor or wielding a Shield, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move.</p>",
-          "title_tr": "Akrobatik Hareket"
+          "title_tr": "Akrobatik Hareket",
+          "body_tr": "<p>Zırh veya Kalkan taşımadığında, hareketin sırasında düşmeden dikey yüzeylerde ve sıvılar üzerinde hareket edebilirsin.</p>"
         }
       ]
     },
@@ -411,17 +427,20 @@
         {
           "title": "Heightened Focus",
           "body": "<p>Your core Focus abilities improve:</p><br/><p><b>Flurry of Blows.</b> You can expend 1 Focus Point to make three Unarmed Strikes instead of two.</p><br/><p><b>Patient Defense.</b> When you expend a Focus Point for Patient Defense, you gain Temporary Hit Points equal to two rolls of your Martial Arts die.</p><br/><p><b>Step of the Wind.</b> When you expend a Focus Point for Step of the Wind, you can bring a willing Large-or-smaller creature within 5 feet with you until the end of your turn without provoking Opportunity Attacks.</p>",
-          "title_tr": "Yoğunlaşmış Odak"
+          "title_tr": "Yoğunlaşmış Odak",
+          "body_tr": "<p>Temel Odak yeteneklerin gelişir:</p><br/><p><b>Vuruş Selağı.</b> 1 Odak Puanı harcayarak iki yerine üç Çıplak Saldırı yapabilirsin.</p><br/><p><b>Sabırlı Savunma.</b> Sabırlı Savunma için Odak Puanı harcadığında iki Dövüş Sanatları zarına eşit Geçici Can Puanı kazanırsın.</p><br/><p><b>Rüzgar Adımı.</b> Rüzgar Adımı için Odak Puanı harcadığında, turunu sonuna kadar 5 feet içindeki istekli bir yaratığı yanına alabilirsin.</p>"
         },
         {
           "title": "Self-Restoration",
           "body": "<p>Through sheer force of will, you can remove one of the following conditions from yourself at the end of each of your turns: Charmed, Frightened, or Poisoned.</p><br/><p>In addition, forgoing food and drink doesn't give you levels of Exhaustion.</p>",
-          "title_tr": "Kendini Yenileme"
+          "title_tr": "Kendini Yenileme",
+          "body_tr": "<p>Saf irade gücüyle, turlarının sonunda kendinden şu durumlardan birini kaldırabilirsin: Büyülenmiş, Korkmuş veya Zehirlenmiş.</p><br/><p>Ayrıca yiyecek ve içecekten vazgeçmek sana Bitkinlik seviyeleri kazandırmaz.</p>"
         },
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen warrior tradition.</p>",
-          "title_tr": "Alt Sınıf Özelliği"
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -431,7 +450,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen warrior tradition.</p>",
-          "title_tr": "Alt Sınıf Özelliği"
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -441,7 +461,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -450,7 +471,8 @@
       "features": [
         {
           "title": "Deflect Energy",
-          "body": "<p>You can now use your Deflect Attacks feature against attacks that deal any damage type, not just Bludgeoning, Piercing, or Slashing.</p>"
+          "body": "<p>You can now use your Deflect Attacks feature against attacks that deal any damage type, not just Bludgeoning, Piercing, or Slashing.</p>",
+          "body_tr": "<p>Artık Deflect Attacks özelliğini yalnızca Künt, Delici veya Kesici hasar değil, her türlü hasara karşı kullanabilirsin.</p>"
         }
       ]
     },
@@ -460,7 +482,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -470,7 +493,8 @@
         {
           "title": "Perfect Focus",
           "body": "<p>When you roll Initiative and have fewer than 4 Focus Points, you regain Focus Points equal to 4 minus the number you have.</p>",
-          "title_tr": "Mükemmel Odak"
+          "title_tr": "Mükemmel Odak",
+          "body_tr": "<p>Girişim attığında 4'ten az Odak Puanın varsa, sahip olduğun sayı ile 4 arasındaki fark kadar Odak Puanı geri kazanırsın.</p>"
         }
       ]
     },
@@ -480,7 +504,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı"
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -490,7 +515,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen warrior tradition.</p>",
-          "title_tr": "Alt Sınıf Özelliği"
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -500,7 +526,8 @@
         {
           "title": "Superior Defense",
           "body": "<p>At the start of your turn, you can expend 3 Focus Points to bolster yourself against harm for 1 minute or until you have the Incapacitated condition. During that time, you have Resistance to all damage except Force damage.</p>",
-          "title_tr": "Üstün Savunma"
+          "title_tr": "Üstün Savunma",
+          "body_tr": "<p>Turuna başlarken 3 Odak Puanı harcayarak 1 dakika veya Engelli olana kadar hasar karşısında kendini güçlendirebilirsin. Bu süre zarfında Güç hasarı hariç tüm hasara Direnç kazanırsın.</p>"
         }
       ]
     },
@@ -510,7 +537,8 @@
         {
           "title": "Epic Boon",
           "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Irresistible Offense is recommended.</p>",
-          "title_tr": "Destansı Lütuf"
+          "title_tr": "Destansı Lütuf",
+          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
         }
       ]
     },
@@ -520,7 +548,8 @@
         {
           "title": "Body and Mind",
           "body": "<p>You have honed your body and mind to new heights. Your Dexterity and Wisdom scores each increase by 4, to a maximum of 25.</p>",
-          "title_tr": "Beden ve Zihin"
+          "title_tr": "Beden ve Zihin",
+          "body_tr": "<p>Bedenini ve zihnini yeni zirvelere taşıdın. Çeviklik ve Bilgelik puanların her biri 4 artar, maksimum 25 olur.</p>"
         }
       ]
     }

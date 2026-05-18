@@ -26,8 +26,8 @@
             v-for="trait in data.coreTraits"
             :key="trait.label"
           >
-            <span class="trait-label">{{ trait.label }}</span>
-            <span class="trait-value">{{ trait.value }}</span>
+            <span class="trait-label">{{ $lf(trait, 'label') }}</span>
+            <span class="trait-value">{{ $lf(trait, 'value') }}</span>
           </div>
         </div>
       </section>
