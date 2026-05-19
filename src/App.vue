@@ -76,7 +76,11 @@
         <v-menu location="bottom end" :offset="[4, 0]">
           <template v-slot:activator="{ props }">
             <div class="lang-toggle nav-item" v-bind="props">
-              <img :src="currentLanguage.flagUrl" class="lang-flag" :alt="currentLanguage.label" />
+              <img
+                :src="currentLanguage.flagUrl"
+                class="lang-flag"
+                :alt="currentLanguage.label"
+              />
               <span class="nav-label lang-code">
                 {{ currentLanguage.code.toUpperCase() }}
                 <v-icon class="lang-chevron">mdi-chevron-down</v-icon>
@@ -91,7 +95,11 @@
               :class="{ 'lang-active': $i18n.locale === lang.code }"
             >
               <template v-slot:prepend>
-                <img :src="lang.flagUrl" class="lang-flag-sm" :alt="lang.label" />
+                <img
+                  :src="lang.flagUrl"
+                  class="lang-flag-sm"
+                  :alt="lang.label"
+                />
               </template>
               <v-list-item-title class="lang-item-title">
                 {{ lang.label }}
@@ -160,8 +168,16 @@ export default {
     return {
       isDark: true,
       languages: [
-        { code: "en", label: "English", flagUrl: "https://flagcdn.com/w40/gb.png" },
-        { code: "tr", label: "Türkçe",  flagUrl: "https://flagcdn.com/w40/tr.png" },
+        {
+          code: "en",
+          label: "English",
+          flagUrl: "https://flagcdn.com/w40/gb.png",
+        },
+        {
+          code: "tr",
+          label: "Türkçe",
+          flagUrl: "https://flagcdn.com/w40/tr.png",
+        },
       ],
     };
   },
