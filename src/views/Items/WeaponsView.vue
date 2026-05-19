@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Weapons</h1>
+          <h1 class="hero-title">{{ $t('weapons.title') }}</h1>
         </div>
       </div>
     </div>
@@ -30,12 +30,12 @@
         <table class="weapon-table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Damage</th>
-              <th>Properties</th>
-              <th>Mastery</th>
-              <th>Weight</th>
-              <th>Cost</th>
+              <th>{{ $t('weapons.col.name') }}</th>
+              <th>{{ $t('weapons.col.damage') }}</th>
+              <th>{{ $t('weapons.col.properties') }}</th>
+              <th>{{ $t('weapons.col.mastery') }}</th>
+              <th>{{ $t('weapons.col.weight') }}</th>
+              <th>{{ $t('weapons.col.cost') }}</th>
             </tr>
           </thead>
           <tbody>
@@ -44,16 +44,16 @@
               :key="weapon.name"
               class="weapon-row"
             >
-              <td class="weapon-name">{{ weapon.name }}</td>
+              <td class="weapon-name">{{ $lf(weapon, 'name') }}</td>
               <td>
                 <span class="damage-badge" v-if="weapon.damage">{{
                   weapon.damage
                 }}</span>
               </td>
-              <td class="properties-cell">{{ weapon.properties }}</td>
+              <td class="properties-cell">{{ $lf(weapon, 'properties') }}</td>
               <td>
                 <span class="mastery-badge" v-if="weapon.mastery">{{
-                  weapon.mastery
+                  $lf(weapon, 'mastery')
                 }}</span>
               </td>
               <td>{{ weapon.weight }}</td>

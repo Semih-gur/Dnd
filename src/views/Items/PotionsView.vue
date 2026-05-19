@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Potions</h1>
+          <h1 class="hero-title">{{ $t('potions.title') }}</h1>
         </div>
       </div>
     </div>
@@ -30,10 +30,10 @@
         <table class="potion-table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Effect</th>
-              <th>Weight</th>
-              <th>Cost</th>
+              <th>{{ $t('potions.col.name') }}</th>
+              <th>{{ $t('potions.col.effect') }}</th>
+              <th>{{ $t('potions.col.weight') }}</th>
+              <th>{{ $t('potions.col.cost') }}</th>
             </tr>
           </thead>
           <tbody>
@@ -42,9 +42,9 @@
               :key="potion.name"
               class="potion-row"
             >
-              <td class="potion-name">{{ potion.name }}</td>
+              <td class="potion-name">{{ $lf(potion, 'name') }}</td>
 
-              <td class="effect-cell">{{ potion.effect }}</td>
+              <td class="effect-cell">{{ $lf(potion, 'effect') }}</td>
               <td>{{ potion.weight }}</td>
               <td>{{ potion.cost }}</td>
             </tr>

@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">{{ className }} Spells</h1>
+          <h1 class="hero-title">{{ className }} {{ $t('spells.titleSuffix') }}</h1>
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
             :class="{ active: tab === level }"
             @click="tab = level"
           >
-            {{ level === "0" ? "Cantrips" : `Level ${level}` }}
+            {{ level === "0" ? $t('spells.cantrips') : $t('spells.levelLabel', { n: level }) }}
           </button>
         </div>
       </div>
@@ -59,20 +59,20 @@
               @click="goToSpell(spell)"
             >
               <td class="col-name">
-                <span class="spell-name">{{ formatName(spell.name) }}</span>
+                <span class="spell-name">{{ formatName($lf(spell, 'name')) }}</span>
               </td>
               <td class="col-school">
-                <span class="school-badge">{{ spell.school.trim() }}</span>
+                <span class="school-badge">{{ $lf(spell, 'school').trim() }}</span>
               </td>
               <td class="col-casting_time">
-                <span class="truncate">{{ spell.casting_time }}</span>
+                <span class="truncate">{{ translateValue(spell.casting_time) }}</span>
               </td>
-              <td class="col-range">{{ spell.range }}</td>
+              <td class="col-range">{{ translateValue(spell.range) }}</td>
               <td class="col-duration">
-                <span class="truncate">{{ spell.duration }}</span>
+                <span class="truncate">{{ translateValue(spell.duration) }}</span>
               </td>
               <td class="col-components">
-                <span class="truncate">{{ spell.components }}</span>
+                <span class="truncate">{{ $lf(spell, 'components') }}</span>
               </td>
             </tr>
           </tbody>
@@ -93,14 +93,6 @@ export default {
       allSpells,
       sortKey: "name",
       sortDir: "asc",
-      columns: [
-        { key: "name", label: "Name" },
-        { key: "school", label: "School" },
-        { key: "casting_time", label: "Cast Time" },
-        { key: "range", label: "Range" },
-        { key: "duration", label: "Duration" },
-        { key: "components", label: "Components" },
-      ],
     };
   },
 
@@ -111,6 +103,16 @@ export default {
   },
 
   computed: {
+    columns() {
+      return [
+        { key: "name",         label: this.$t('spells.col.name') },
+        { key: "school",       label: this.$t('spells.col.school') },
+        { key: "casting_time", label: this.$t('spells.col.castingTime') },
+        { key: "range",        label: this.$t('spells.col.range') },
+        { key: "duration",     label: this.$t('spells.col.duration') },
+        { key: "components",   label: this.$t('spells.col.components') },
+      ];
+    },
     className() {
       const raw = this.$route.params.className || "";
       return raw.charAt(0).toUpperCase() + raw.slice(1).toLowerCase();
@@ -161,7 +163,33 @@ export default {
       );
     },
     formatName(name) {
+      if (!name) return "";
+      if (!name.includes("_")) return name.charAt(0).toUpperCase() + name.slice(1);
       return name.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+    },
+    translateValue(val) {
+      if (!val || this.$i18n.locale !== "tr") return val;
+      return val
+        .replace(/Bonus Action/gi, "Bonus Aksiyon")
+        .replace(/\bAction\b/gi, "Aksiyon")
+        .replace(/\bReaction\b/gi, "Tepki")
+        .replace(/\bSelf\b/gi, "Kendisi")
+        .replace(/\bTouch\b/gi, "Dokunma")
+        .replace(/\bInstantaneous\b/gi, "Anlık")
+        .replace(/\bConcentration\b/gi, "Konsantrasyon")
+        .replace(/\bUp to\b/gi, "En fazla")
+        .replace(/\buntil dispelled\b/gi, "Dağıtılana kadar")
+        .replace(/\bSight\b/gi, "Görüş")
+        .replace(/\bUnlimited\b/gi, "Sınırsız")
+        .replace(/\b(\d+) minutes?\b/gi, "$1 dakika")
+        .replace(/\b(\d+) hours?\b/gi, "$1 saat")
+        .replace(/\b(\d+) rounds?\b/gi, "$1 tur")
+        .replace(/\b(\d+) days?\b/gi, "$1 gün")
+        .replace(/\bfeet\b/gi, "fit")
+        .replace(/\bfoot\b/gi, "fit")
+        .replace(/(\d)\s*ft\b/gi, "$1 fit")
+        .replace(/\bft\b/gi, "fit")
+        .replace(/\bmiles?\b/gi, "mil");
     },
     goToSpell(spell) {
       router.push(

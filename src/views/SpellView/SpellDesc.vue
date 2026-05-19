@@ -4,8 +4,8 @@
     <div class="hero" v-if="spell">
       <div class="hero-overlay">
         <div class="hero-content">
-          <span class="hero-eyebrow">{{ spell.school }}</span>
-          <h1 class="hero-title">{{ formatName(spell.name) }}</h1>
+          <span class="hero-eyebrow">{{ $lf(spell, 'school').trim() }}</span>
+          <h1 class="hero-title">{{ formatName($lf(spell, 'name')) }}</h1>
           <div class="hero-badges">
             <span class="badge">{{ levelLabel }}</span>
             <span
@@ -37,35 +37,35 @@
       <!-- Stat pills -->
       <div class="stats-row">
         <div class="stat-pill">
-          <span class="stat-label">Cast Time</span>
-          <span class="stat-value">{{ spell.casting_time }}</span>
+          <span class="stat-label">{{ $t('spells.col.castingTime') }}</span>
+          <span class="stat-value">{{ translateValue(spell.casting_time) }}</span>
         </div>
         <div class="stat-pill">
-          <span class="stat-label">Range</span>
-          <span class="stat-value">{{ spell.range }}</span>
+          <span class="stat-label">{{ $t('spells.col.range') }}</span>
+          <span class="stat-value">{{ translateValue(spell.range) }}</span>
         </div>
         <div class="stat-pill">
-          <span class="stat-label">Duration</span>
-          <span class="stat-value">{{ spell.duration }}</span>
+          <span class="stat-label">{{ $t('spells.col.duration') }}</span>
+          <span class="stat-value">{{ translateValue(spell.duration) }}</span>
         </div>
         <div class="stat-pill">
-          <span class="stat-label">Components</span>
-          <span class="stat-value">{{ spell.components }}</span>
+          <span class="stat-label">{{ $t('spells.col.components') }}</span>
+          <span class="stat-value">{{ $lf(spell, 'components') }}</span>
         </div>
       </div>
 
       <!-- Effect -->
       <div class="section">
-        <h2 class="section-title">Effect</h2>
+        <h2 class="section-title">{{ $t('spells.effect') }}</h2>
         <p class="section-text" style="white-space: pre-wrap">
-          {{ spell.effect }}
+          {{ $lf(spell, 'effect') }}
         </p>
       </div>
 
       <!-- Higher levels -->
       <div class="section" v-if="spell.upgrade">
-        <h2 class="section-title">At Higher Levels</h2>
-        <p class="section-text upgrade">{{ spell.upgrade }}</p>
+        <h2 class="section-title">{{ $t('spells.atHigherLevels') }}</h2>
+        <p class="section-text upgrade">{{ $lf(spell, 'upgrade') }}</p>
       </div>
     </div>
 
@@ -73,12 +73,12 @@
     <div class="page-content" v-else>
       <div class="not-found-wrap">
         <v-icon class="not-found-icon">mdi-auto-fix</v-icon>
-        <p class="not-found-title">Spell not found</p>
+        <p class="not-found-title">{{ $t('spells.notFound') }}</p>
         <p class="not-found-sub">
           Check the spell name in the URL matches your JSON exactly.
         </p>
         <button class="not-found-btn" @click="$router.push('/wiki/spells')">
-          Back to Spells
+          {{ $t('spells.backToSpells') }}
         </button>
       </div>
     </div>
@@ -105,8 +105,8 @@ export default {
         const found = levelEntry.spells.find((s) => s.name === this.spellName);
         if (found) {
           return levelEntry.level === "0"
-            ? "Cantrip"
-            : `Level ${levelEntry.level}`;
+            ? this.$t('spells.cantrip')
+            : this.$t('spells.levelLabel', { n: levelEntry.level });
         }
       }
       return "";
@@ -115,7 +115,32 @@ export default {
   methods: {
     formatName(name) {
       if (!name) return "";
+      if (!name.includes("_")) return name.charAt(0).toUpperCase() + name.slice(1);
       return name.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+    },
+    translateValue(val) {
+      if (!val || this.$i18n.locale !== "tr") return val;
+      return val
+        .replace(/Bonus Action/gi, "Bonus Aksiyon")
+        .replace(/\bAction\b/gi, "Aksiyon")
+        .replace(/\bReaction\b/gi, "Tepki")
+        .replace(/\bSelf\b/gi, "Kendisi")
+        .replace(/\bTouch\b/gi, "Dokunma")
+        .replace(/\bInstantaneous\b/gi, "Anlık")
+        .replace(/\bConcentration\b/gi, "Konsantrasyon")
+        .replace(/\bUp to\b/gi, "En fazla")
+        .replace(/\buntil dispelled\b/gi, "Dağıtılana kadar")
+        .replace(/\bSight\b/gi, "Görüş")
+        .replace(/\bUnlimited\b/gi, "Sınırsız")
+        .replace(/\b(\d+) minutes?\b/gi, "$1 dakika")
+        .replace(/\b(\d+) hours?\b/gi, "$1 saat")
+        .replace(/\b(\d+) rounds?\b/gi, "$1 tur")
+        .replace(/\b(\d+) days?\b/gi, "$1 gün")
+        .replace(/\bfeet\b/gi, "fit")
+        .replace(/\bfoot\b/gi, "fit")
+        .replace(/(\d)\s*ft\b/gi, "$1 fit")
+        .replace(/\bft\b/gi, "fit")
+        .replace(/\bmiles?\b/gi, "mil");
     },
   },
 };

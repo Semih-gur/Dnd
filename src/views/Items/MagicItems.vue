@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Magic Items</h1>
+          <h1 class="hero-title">{{ $t('magicItems.title') }}</h1>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
         <input
           v-model="search"
           class="search-input"
-          placeholder="Search items..."
+          :placeholder="$t('magicItems.searchPlaceholder')"
           type="text"
         />
         <span class="search-icon">⌕</span>
@@ -47,7 +47,7 @@
           <thead>
             <tr>
               <th
-                v-for="col in columns"
+                v-for="col in tableColumns"
                 :key="col.key"
                 :class="{ sorted: sortKey === col.key }"
                 @click="setSort(col.key)"
@@ -71,23 +71,23 @@
               class="item-row"
               @click="openItem(item)"
             >
-              <td class="item-name">{{ item.name }}</td>
+              <td class="item-name">{{ $lf(item, 'name') }}</td>
               <td>
-                <span class="type-badge">{{ item.type }}</span>
+                <span class="type-badge">{{ $lf(item, 'type') }}</span>
               </td>
               <td>
                 <span
                   class="attune-badge"
                   :class="item.attuned !== '-' ? 'yes' : 'no'"
                 >
-                  {{ item.attuned !== "-" ? item.attuned : "No" }}
+                  {{ item.attuned !== "-" ? item.attuned : $t('magicItems.noAttunement') }}
                 </span>
               </td>
               <td class="price-cell">{{ item.price }}</td>
             </tr>
             <tr v-if="filteredItems.length === 0">
               <td colspan="4" class="empty-row">
-                No items found matching "{{ search }}"
+                {{ $t('magicItems.noItems', { q: search }) }}
               </td>
             </tr>
           </tbody>
@@ -100,21 +100,21 @@
       <div class="popup" v-if="selectedItem">
         <div class="popup-header">
           <div>
-            <span class="popup-eyebrow">{{ formatType(tab) }} Magic Item</span>
-            <h2 class="popup-title">{{ selectedItem.name }}</h2>
+            <span class="popup-eyebrow">{{ formatType(tab) }} {{ $t('magicItems.popupEyebrow') }}</span>
+            <h2 class="popup-title">{{ $lf(selectedItem, 'name') }}</h2>
             <div class="popup-meta">
-              <span class="type-badge">{{ selectedItem.type }}</span>
+              <span class="type-badge">{{ $lf(selectedItem, 'type') }}</span>
               <span
                 class="attune-badge"
                 :class="selectedItem.attuned !== '-' ? 'yes' : 'no'"
               >
                 {{
                   selectedItem.attuned !== "-"
-                    ? "Requires Attunement" +
+                    ? $t('magicItems.requiresAttunement') +
                       (selectedItem.attuned !== "Yes"
                         ? " (" + selectedItem.attuned + ")"
                         : "")
-                    : "No Attunement"
+                    : $t('magicItems.noAttunement')
                 }}
               </span>
             </div>
@@ -125,13 +125,13 @@
         </div>
 
         <div class="popup-price">
-          <span class="price-label">Estimated Value</span>
+          <span class="price-label">{{ $t('magicItems.estimatedValue') }}</span>
           <span class="price-value">{{ selectedItem.price }}</span>
         </div>
 
         <div class="popup-desc">
-          <h3 class="popup-desc-title">Description</h3>
-          <p class="popup-desc-text">{{ selectedItem.description }}</p>
+          <h3 class="popup-desc-title">{{ $t('magicItems.description') }}</h3>
+          <p class="popup-desc-text">{{ $lf(selectedItem, 'description') }}</p>
         </div>
       </div>
     </v-dialog>
@@ -151,16 +151,19 @@ export default {
       sortDir: "asc",
       dialog: false,
       selectedItem: null,
-      columns: [
-        { key: "name", label: "Name" },
-        { key: "type", label: "Type" },
-        { key: "attuned", label: "Attunement" },
-        { key: "price", label: "Price" },
-      ],
+      columns: [],
     };
   },
 
   computed: {
+    tableColumns() {
+      return [
+        { key: "name",    label: this.$t('magicItems.col.name') },
+        { key: "type",    label: this.$t('magicItems.col.type') },
+        { key: "attuned", label: this.$t('magicItems.col.attunement') },
+        { key: "price",   label: this.$t('magicItems.col.price') },
+      ];
+    },
     currentItems() {
       return this.items.find((c) => c.type === this.tab)?.items ?? [];
     },
@@ -198,10 +201,10 @@ export default {
 
   methods: {
     formatType(type) {
-      return type
-        .split(" ")
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(" ");
+      const key = "magicItems.rarity." + type.replace(" ", "_");
+      const tr = this.$t(key);
+      if (tr !== key) return tr;
+      return type.split(" ").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
     },
     setSort(key) {
       if (this.sortKey === key) {

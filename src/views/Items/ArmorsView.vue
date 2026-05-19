@@ -4,8 +4,8 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Armor</h1>
-          <p class="hero-subtitle">Protection for every adventurer</p>
+          <h1 class="hero-title">{{ $t('armors.title') }}</h1>
+          <p class="hero-subtitle">{{ $t('armors.subtitle') }}</p>
         </div>
       </div>
     </div>
@@ -31,12 +31,12 @@
         <table class="armor-table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Armor Class</th>
-              <th>Str Requirement</th>
-              <th>Stealth</th>
-              <th>Weight</th>
-              <th>Cost</th>
+              <th>{{ $t('armors.col.name') }}</th>
+              <th>{{ $t('armors.col.ac') }}</th>
+              <th>{{ $t('armors.col.str') }}</th>
+              <th>{{ $t('armors.col.stealth') }}</th>
+              <th>{{ $t('armors.col.weight') }}</th>
+              <th>{{ $t('armors.col.cost') }}</th>
             </tr>
           </thead>
           <tbody>
@@ -45,7 +45,7 @@
               :key="weapon.name"
               class="armor-row"
             >
-              <td class="armor-name">{{ weapon.name }}</td>
+              <td class="armor-name">{{ $lf(weapon, 'name') }}</td>
               <td>{{ weapon.ac }}</td>
               <td>{{ weapon.strength }}</td>
               <td>
@@ -57,7 +57,7 @@
                       : 'normal'
                   "
                 >
-                  {{ weapon.stealth }}
+                  {{ weapon.stealth === 'Disadvantage' ? $t('armors.disadvantage') : weapon.stealth }}
                 </span>
               </td>
               <td>{{ weapon.weight }}</td>

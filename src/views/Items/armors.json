@@ -8,7 +8,8 @@
         "strength": "—",
         "stealth": "Disadvantage",
         "weight": "8 lb.",
-        "cost": "5 GP"
+        "cost": "5 GP",
+        "name_tr": "Yastıklı"
       },
       {
         "name": "Leather",
@@ -16,7 +17,8 @@
         "strength": "—",
         "stealth": "—",
         "weight": "10 lb.",
-        "cost": "10 GP"
+        "cost": "10 GP",
+        "name_tr": "Deri"
       },
       {
         "name": "Studded Leather",
@@ -24,7 +26,8 @@
         "strength": "—",
         "stealth": "—",
         "weight": "13 lb.",
-        "cost": "45 GP"
+        "cost": "45 GP",
+        "name_tr": "Çivili Deri"
       }
     ]
   },
@@ -37,7 +40,8 @@
         "strength": "—",
         "stealth": "—",
         "weight": "12 lb.",
-        "cost": "10 GP"
+        "cost": "10 GP",
+        "name_tr": "Post"
       },
       {
         "name": "Chain Shirt",
@@ -45,7 +49,8 @@
         "strength": "—",
         "stealth": "—",
         "weight": "20 lb.",
-        "cost": "50 GP"
+        "cost": "50 GP",
+        "name_tr": "Zincir Gömlek"
       },
       {
         "name": "Scale Mail",
@@ -53,7 +58,8 @@
         "strength": "—",
         "stealth": "Disadvantage",
         "weight": "45 lb.",
-        "cost": "50 GP"
+        "cost": "50 GP",
+        "name_tr": "Pul Zırh"
       },
       {
         "name": "Breastplate",
@@ -61,7 +67,8 @@
         "strength": "—",
         "stealth": "—",
         "weight": "20 lb.",
-        "cost": "400 GP"
+        "cost": "400 GP",
+        "name_tr": "Göğüs Zırhı"
       },
       {
         "name": "Half Plate",
@@ -69,7 +76,8 @@
         "strength": "—",
         "stealth": "Disadvantage",
         "weight": "40 lb.",
-        "cost": "750 GP"
+        "cost": "750 GP",
+        "name_tr": "Yarım Levha"
       }
     ]
   },
@@ -82,7 +90,8 @@
         "strength": "—",
         "stealth": "Disadvantage",
         "weight": "40 lb.",
-        "cost": "30 GP"
+        "cost": "30 GP",
+        "name_tr": "Halka Zırh"
       },
       {
         "name": "Chain Mail",
@@ -90,7 +99,8 @@
         "strength": "Str 13",
         "stealth": "Disadvantage",
         "weight": "55 lb.",
-        "cost": "75 GP"
+        "cost": "75 GP",
+        "name_tr": "Zincir Zırh"
       },
       {
         "name": "Splint",
@@ -98,7 +108,8 @@
         "strength": "Str 15",
         "stealth": "Disadvantage",
         "weight": "60 lb.",
-        "cost": "200 GP"
+        "cost": "200 GP",
+        "name_tr": "Takviyeli Zırh"
       },
       {
         "name": "Plate",
@@ -106,7 +117,8 @@
         "strength": "Str 15",
         "stealth": "Disadvantage",
         "weight": "65 lb.",
-        "cost": "1,500 GP"
+        "cost": "1,500 GP",
+        "name_tr": "Levha Zırh"
       }
     ]
   },
@@ -119,7 +131,8 @@
         "strength": "—",
         "stealth": "—",
         "weight": "6 lb.",
-        "cost": "10 GP"
+        "cost": "10 GP",
+        "name_tr": "Kalkan"
       }
     ]
   }

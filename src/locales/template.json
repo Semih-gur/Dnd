@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "species": "",
+    "classes": "",
+    "spells": "",
+    "backgrounds": "",
+    "feats": "",
+    "items": "",
+    "patrons": "",
+    "theme": "",
+    "supportUs": "",
+    "lightMode": "",
+    "darkMode": ""
+  },
+  "home": {
+    "welcomeTo": "",
+    "title": "",
+    "subtitle": "",
+    "wiki": {
+      "title": "",
+      "desc": "",
+      "link": ""
+    },
+    "creator": {
+      "title": "",
+      "desc": "",
+      "link": ""
+    },
+    "quickAccess": "",
+    "footer": {
+      "tagline": "",
+      "wiki": "",
+      "support": "",
+      "joinDiscord": "",
+      "copyright": ""
+    }
+  },
+  "wikiHome": {
+    "title": "",
+    "sections": [
+      { "path": "classes",     "label": "", "desc": "" },
+      { "path": "species",     "label": "", "desc": "" },
+      { "path": "spells",      "label": "", "desc": "" },
+      { "path": "backgrounds", "label": "", "desc": "" },
+      { "path": "feats",       "label": "", "desc": "" },
+      { "path": "items",       "label": "", "desc": "" }
+    ]
+  },
+  "species": {
+    "title": "",
+    "racialBonus": "",
+    "list": [
+      { "id": 0, "routeKey": "aasimar",    "image": "aasimar.png",    "label": "", "desc": "", "bonus": "" },
+      { "id": 1, "routeKey": "dragonborn", "image": "dragonborn.png", "label": "", "desc": "", "bonus": "" },
+      { "id": 2, "routeKey": "dwarf",      "image": "dwarf.png",      "label": "", "desc": "", "bonus": "" },
+      { "id": 3, "routeKey": "elf",        "image": "elf.png",        "label": "", "desc": "", "bonus": "" },
+      { "id": 4, "routeKey": "gnome",      "image": "gnome.png",      "label": "", "desc": "", "bonus": "" },
+      { "id": 5, "routeKey": "goliath",    "image": "goliath.png",    "label": "", "desc": "", "bonus": "" },
+      { "id": 6, "routeKey": "halfling",   "image": "halfling.png",   "label": "", "desc": "", "bonus": "" },
+      { "id": 7, "routeKey": "human",      "image": "human.png",      "label": "", "desc": "", "bonus": "" },
+      { "id": 8, "routeKey": "orc",        "image": "orc.png",        "label": "", "desc": "", "bonus": "" },
+      { "id": 9, "routeKey": "tiefling",   "image": "tiefling.png",   "label": "", "desc": "", "bonus": "" }
+    ]
+  },
+  "classes": {
+    "title": "",
+    "primaryStat": "",
+    "complexity": {
+      "1": "",
+      "2": "",
+      "3": ""
+    },
+    "list": [
+      { "id": 0,  "routeKey": "barbarian", "label": "", "desc": "", "pref": "", "complexity": 1 },
+      { "id": 1,  "routeKey": "bard",      "label": "", "desc": "", "pref": "", "complexity": 2 },
+      { "id": 2,  "routeKey": "cleric",    "label": "", "desc": "", "pref": "", "complexity": 2 },
+      { "id": 3,  "routeKey": "druid",     "label": "", "desc": "", "pref": "", "complexity": 3 },
+      { "id": 4,  "routeKey": "fighter",   "label": "", "desc": "", "pref": "", "complexity": 1 },
+      { "id": 5,  "routeKey": "monk",      "label": "", "desc": "", "pref": "", "complexity": 2 },
+      { "id": 6,  "routeKey": "paladin",   "label": "", "desc": "", "pref": "", "complexity": 1 },
+      { "id": 7,  "routeKey": "ranger",    "label": "", "desc": "", "pref": "", "complexity": 1 },
+      { "id": 8,  "routeKey": "rogue",     "label": "", "desc": "", "pref": "", "complexity": 1 },
+      { "id": 9,  "routeKey": "sorcerer",  "label": "", "desc": "", "pref": "", "complexity": 3 },
+      { "id": 10, "routeKey": "warlock",   "label": "", "desc": "", "pref": "", "complexity": 3 },
+      { "id": 11, "routeKey": "wizard",    "label": "", "desc": "", "pref": "", "complexity": 3 }
+    ]
+  },
+  "spells": {
+    "title": "",
+    "school": "",
+    "castingTime": "",
+    "range": "",
+    "components": "",
+    "duration": "",
+    "effect": "",
+    "atHigherLevels": "",
+    "spellClasses": [
+      { "id": 1,  "routeKey": "bard",     "label": "", "desc": "" },
+      { "id": 2,  "routeKey": "cleric",   "label": "", "desc": "" },
+      { "id": 3,  "routeKey": "druid",    "label": "", "desc": "" },
+      { "id": 6,  "routeKey": "paladin",  "label": "", "desc": "" },
+      { "id": 7,  "routeKey": "ranger",   "label": "", "desc": "" },
+      { "id": 9,  "routeKey": "sorcerer", "label": "", "desc": "" },
+      { "id": 10, "routeKey": "warlock",  "label": "", "desc": "" },
+      { "id": 11, "routeKey": "wizard",   "label": "", "desc": "" }
+    ],
+    "cantrips": "",
+    "cantrip": "",
+    "levelLabel": "",
+    "titleSuffix": "",
+    "col": {
+      "name": "",
+      "school": "",
+      "castingTime": "",
+      "range": "",
+      "duration": "",
+      "components": ""
+    },
+    "notFound": "",
+    "backToSpells": ""
+  },
+  "items": {
+    "title": "",
+    "list": [
+      { "id": 0, "routeKey": "weapons",     "label": "", "desc": "" },
+      { "id": 1, "routeKey": "armors",      "label": "", "desc": "" },
+      { "id": 2, "routeKey": "potions",     "label": "", "desc": "" },
+      { "id": 3, "routeKey": "magic_items", "label": "", "desc": "" }
+    ]
+  },
+  "backgrounds": {
+    "title": "",
+    "label": "",
+    "abilityScores": "",
+    "feat": "",
+    "skillProficiencies": "",
+    "toolProficiency": "",
+    "equipment": ""
+  },
+  "feats": {
+    "title": "",
+    "tabs": {
+      "origin": "",
+      "general": "",
+      "fightStyle": "",
+      "epic": ""
+    },
+    "tabLabels": {
+      "origin": "",
+      "general": "",
+      "fightStyle": "",
+      "epic": ""
+    }
+  },
+  "race": {
+    "eyebrow": "",
+    "notFound": "",
+    "overview": "",
+    "traitsTitle": "",
+    "speed": ""
+  },
+  "class": {
+    "eyebrow": "",
+    "coreTraits": "",
+    "classFeatures": "",
+    "levelBreakdown": "",
+    "subclasses": "",
+    "level": "",
+    "profBonus": "",
+    "featuresUnlocked": "",
+    "becomingTitle": "",
+    "asLevel1": "",
+    "asMulticlass": "",
+    "level1Traits": "",
+    "level1Features": "",
+    "multiclassHitDie": "",
+    "multiclassFeatures": ""
+  }
+}

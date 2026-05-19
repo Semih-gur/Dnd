@@ -12,7 +12,6 @@
     "lightMode": "Switch to light mode",
     "darkMode": "Switch to dark mode"
   },
-
   "home": {
     "welcomeTo": "Welcome to",
     "title": "Beholder's Tavern",
@@ -36,36 +35,127 @@
       "copyright": "© {year} Beholder's Tavern. Fan-made project. D&D content belongs to Wizards of the Coast."
     }
   },
-
   "wikiHome": {
     "title": "D&D 2024 Wiki",
     "sections": [
-      { "path": "classes",     "label": "Classes",     "desc": "Choose your path — from raging Barbarians to arcane Wizards" },
-      { "path": "species",     "label": "Species",     "desc": "Explore the races and peoples that inhabit the world" },
-      { "path": "spells",      "label": "Spells",      "desc": "Browse the full catalogue of magic spells and cantrips" },
-      { "path": "backgrounds", "label": "Backgrounds", "desc": "Define your character's history and where they came from" },
-      { "path": "feats",       "label": "Feats",       "desc": "Customize and strengthen your character with powerful abilities" },
-      { "path": "items",       "label": "Items",       "desc": "Weapons, armor, potions and all manner of adventuring gear" }
+      {
+        "path": "classes",
+        "label": "Classes",
+        "desc": "Choose your path — from raging Barbarians to arcane Wizards"
+      },
+      {
+        "path": "species",
+        "label": "Species",
+        "desc": "Explore the races and peoples that inhabit the world"
+      },
+      {
+        "path": "spells",
+        "label": "Spells",
+        "desc": "Browse the full catalogue of magic spells and cantrips"
+      },
+      {
+        "path": "backgrounds",
+        "label": "Backgrounds",
+        "desc": "Define your character's history and where they came from"
+      },
+      {
+        "path": "feats",
+        "label": "Feats",
+        "desc": "Customize and strengthen your character with powerful abilities"
+      },
+      {
+        "path": "items",
+        "label": "Items",
+        "desc": "Weapons, armor, potions and all manner of adventuring gear"
+      }
     ]
   },
-
   "species": {
     "title": "Species",
     "racialBonus": "Racial Bonus",
     "list": [
-      { "id": 0, "routeKey": "aasimar",   "label": "Aasimar",   "image": "aasimar.png",   "desc": "Blessed with a celestial heritage, Aasimar radiate inner light and wield divine power to heal allies and smite enemies with radiant energy.", "bonus": "Healing Hands" },
-      { "id": 1, "routeKey": "dragonborn","label": "Dragonborn","image": "dragonborn.png","desc": "Born of draconic lineage, Dragonborn command elemental breath weapons and draconic wings, embodying the might of ancient dragons.", "bonus": "Breath Weapon" },
-      { "id": 2, "routeKey": "dwarf",     "label": "Dwarf",     "image": "dwarf.png",     "desc": "Hardy and resilient folk forged by centuries in mountain halls, Dwarves resist poison and channel tremorsense through the stone beneath their feet.", "bonus": "Stonecunning" },
-      { "id": 3, "routeKey": "elf",       "label": "Elf",       "image": "elf.png",       "desc": "Graceful and long-lived, Elves enter a meditative trance instead of sleeping and inherit unique magical gifts from their chosen lineage.", "bonus": "Fey Ancestry" },
-      { "id": 4, "routeKey": "gnome",     "label": "Gnome",     "image": "gnome.png",     "desc": "Curious and inventive, Gnomes have an innate cleverness that grants them advantage on all Intelligence, Wisdom, and Charisma saving throws.", "bonus": "Gnomish Cunning" },
-      { "id": 5, "routeKey": "goliath",   "label": "Goliath",   "image": "goliath.png",   "desc": "Descendants of giants, Goliaths stand above other races in size and strength, able to grow Large and draw power from their giant ancestry.", "bonus": "Giant Ancestry" },
-      { "id": 6, "routeKey": "halfling",  "label": "Halfling",  "image": "halfling.png",  "desc": "Lucky and nimble, Halflings never suffer critical failures — when they roll a 1 on any d20 Test they can reroll and must use the new roll.", "bonus": "Luck" },
-      { "id": 7, "routeKey": "human",     "label": "Human",     "image": "human.png",     "desc": "The most adaptable of all races, Humans gain an extra Origin feat at character creation, an extra skill proficiency, and Heroic Inspiration every Long Rest.", "bonus": "Versatile" },
-      { "id": 8, "routeKey": "orc",       "label": "Orc",       "image": "orc.png",       "desc": "Powerful and fierce, Orcs can Dash as a Bonus Action to gain Temporary Hit Points, and once per Long Rest refuse to fall below 1 Hit Point.", "bonus": "Relentless Endurance" },
-      { "id": 9, "routeKey": "tiefling",  "label": "Tiefling",  "image": "tiefling.png",  "desc": "Touched by infernal bloodlines, Tieflings choose a fiendish legacy that grants unique spells and resistance to Fire damage.", "bonus": "Fiendish Legacy" }
+      {
+        "id": 0,
+        "routeKey": "aasimar",
+        "label": "Aasimar",
+        "image": "aasimar.png",
+        "desc": "Blessed with a celestial heritage, Aasimar radiate inner light and wield divine power to heal allies and smite enemies with radiant energy.",
+        "bonus": "Healing Hands"
+      },
+      {
+        "id": 1,
+        "routeKey": "dragonborn",
+        "label": "Dragonborn",
+        "image": "dragonborn.png",
+        "desc": "Born of draconic lineage, Dragonborn command elemental breath weapons and draconic wings, embodying the might of ancient dragons.",
+        "bonus": "Breath Weapon"
+      },
+      {
+        "id": 2,
+        "routeKey": "dwarf",
+        "label": "Dwarf",
+        "image": "dwarf.png",
+        "desc": "Hardy and resilient folk forged by centuries in mountain halls, Dwarves resist poison and channel tremorsense through the stone beneath their feet.",
+        "bonus": "Stonecunning"
+      },
+      {
+        "id": 3,
+        "routeKey": "elf",
+        "label": "Elf",
+        "image": "elf.png",
+        "desc": "Graceful and long-lived, Elves enter a meditative trance instead of sleeping and inherit unique magical gifts from their chosen lineage.",
+        "bonus": "Fey Ancestry"
+      },
+      {
+        "id": 4,
+        "routeKey": "gnome",
+        "label": "Gnome",
+        "image": "gnome.png",
+        "desc": "Curious and inventive, Gnomes have an innate cleverness that grants them advantage on all Intelligence, Wisdom, and Charisma saving throws.",
+        "bonus": "Gnomish Cunning"
+      },
+      {
+        "id": 5,
+        "routeKey": "goliath",
+        "label": "Goliath",
+        "image": "goliath.png",
+        "desc": "Descendants of giants, Goliaths stand above other races in size and strength, able to grow Large and draw power from their giant ancestry.",
+        "bonus": "Giant Ancestry"
+      },
+      {
+        "id": 6,
+        "routeKey": "halfling",
+        "label": "Halfling",
+        "image": "halfling.png",
+        "desc": "Lucky and nimble, Halflings never suffer critical failures — when they roll a 1 on any d20 Test they can reroll and must use the new roll.",
+        "bonus": "Luck"
+      },
+      {
+        "id": 7,
+        "routeKey": "human",
+        "label": "Human",
+        "image": "human.png",
+        "desc": "The most adaptable of all races, Humans gain an extra Origin feat at character creation, an extra skill proficiency, and Heroic Inspiration every Long Rest.",
+        "bonus": "Versatile"
+      },
+      {
+        "id": 8,
+        "routeKey": "orc",
+        "label": "Orc",
+        "image": "orc.png",
+        "desc": "Powerful and fierce, Orcs can Dash as a Bonus Action to gain Temporary Hit Points, and once per Long Rest refuse to fall below 1 Hit Point.",
+        "bonus": "Relentless Endurance"
+      },
+      {
+        "id": 9,
+        "routeKey": "tiefling",
+        "label": "Tiefling",
+        "image": "tiefling.png",
+        "desc": "Touched by infernal bloodlines, Tieflings choose a fiendish legacy that grants unique spells and resistance to Fire damage.",
+        "bonus": "Fiendish Legacy"
+      }
     ]
   },
-
   "classes": {
     "title": "Classes",
     "primaryStat": "Primary Stat",
@@ -75,21 +165,104 @@
       "3": "High Complexity"
     },
     "list": [
-      { "id": 0,  "routeKey": "barbarian","label": "Barbarian","desc": "A fierce warrior of primitive background who can enter a battle rage",                                                                                    "pref": "Strength / Constitution", "complexity": 1 },
-      { "id": 1,  "routeKey": "bard",     "label": "Bard",     "desc": "An inspiring magician whose power echoes the music of creation",                                                                                          "pref": "Charisma",                "complexity": 2 },
-      { "id": 2,  "routeKey": "cleric",   "label": "Cleric",   "desc": "A priestly champion who wields divine magic in service of a higher power",                                                                                "pref": "Wisdom",                  "complexity": 2 },
-      { "id": 3,  "routeKey": "druid",    "label": "Druid",    "desc": "A mage wielding the powers of nature — moonlight and plant growth, fire and lightning — and adopting animal forms",                                        "pref": "Wisdom",                  "complexity": 3 },
-      { "id": 4,  "routeKey": "fighter",  "label": "Fighter",  "desc": "A master of martial combat, skilled with a variety of weapons and armor",                                                                                  "pref": "Strength / Dexterity",    "complexity": 1 },
-      { "id": 5,  "routeKey": "monk",     "label": "Monk",     "desc": "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",                                               "pref": "Wisdom / Dexterity",      "complexity": 2 },
-      { "id": 6,  "routeKey": "paladin",  "label": "Paladin",  "desc": "A holy warrior bound to a sacred oath, harnessing power of divine",                                                                                       "pref": "Strength / Charisma",     "complexity": 1 },
-      { "id": 7,  "routeKey": "ranger",   "label": "Ranger",   "desc": "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",                                                        "pref": "Dexterity",               "complexity": 1 },
-      { "id": 8,  "routeKey": "rogue",    "label": "Rogue",    "desc": "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",                                                                              "pref": "Dexterity",               "complexity": 1 },
-      { "id": 9,  "routeKey": "sorcerer", "label": "Sorcerer", "desc": "A spell-caster who draws on inherent magic from a gift or bloodline",                                                                                     "pref": "Charisma",                "complexity": 3 },
-      { "id": 10, "routeKey": "warlock",  "label": "Warlock",  "desc": "A wielder of magic derived from a bargain with an extra-planar entity",                                                                                   "pref": "Charisma",                "complexity": 3 },
-      { "id": 11, "routeKey": "wizard",   "label": "Wizard",   "desc": "A scholarly magic-user capable of manipulating the structures of reality",                                                                                "pref": "Intelligence",            "complexity": 3 }
+      {
+        "id": 0,
+        "routeKey": "barbarian",
+        "label": "Barbarian",
+        "desc": "A fierce warrior of primitive background who can enter a battle rage",
+        "pref": "Strength / Constitution",
+        "complexity": 1
+      },
+      {
+        "id": 1,
+        "routeKey": "bard",
+        "label": "Bard",
+        "desc": "An inspiring magician whose power echoes the music of creation",
+        "pref": "Charisma",
+        "complexity": 2
+      },
+      {
+        "id": 2,
+        "routeKey": "cleric",
+        "label": "Cleric",
+        "desc": "A priestly champion who wields divine magic in service of a higher power",
+        "pref": "Wisdom",
+        "complexity": 2
+      },
+      {
+        "id": 3,
+        "routeKey": "druid",
+        "label": "Druid",
+        "desc": "A mage wielding the powers of nature — moonlight and plant growth, fire and lightning — and adopting animal forms",
+        "pref": "Wisdom",
+        "complexity": 3
+      },
+      {
+        "id": 4,
+        "routeKey": "fighter",
+        "label": "Fighter",
+        "desc": "A master of martial combat, skilled with a variety of weapons and armor",
+        "pref": "Strength / Dexterity",
+        "complexity": 1
+      },
+      {
+        "id": 5,
+        "routeKey": "monk",
+        "label": "Monk",
+        "desc": "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",
+        "pref": "Wisdom / Dexterity",
+        "complexity": 2
+      },
+      {
+        "id": 6,
+        "routeKey": "paladin",
+        "label": "Paladin",
+        "desc": "A holy warrior bound to a sacred oath, harnessing power of divine",
+        "pref": "Strength / Charisma",
+        "complexity": 1
+      },
+      {
+        "id": 7,
+        "routeKey": "ranger",
+        "label": "Ranger",
+        "desc": "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
+        "pref": "Dexterity",
+        "complexity": 1
+      },
+      {
+        "id": 8,
+        "routeKey": "rogue",
+        "label": "Rogue",
+        "desc": "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
+        "pref": "Dexterity",
+        "complexity": 1
+      },
+      {
+        "id": 9,
+        "routeKey": "sorcerer",
+        "label": "Sorcerer",
+        "desc": "A spell-caster who draws on inherent magic from a gift or bloodline",
+        "pref": "Charisma",
+        "complexity": 3
+      },
+      {
+        "id": 10,
+        "routeKey": "warlock",
+        "label": "Warlock",
+        "desc": "A wielder of magic derived from a bargain with an extra-planar entity",
+        "pref": "Charisma",
+        "complexity": 3
+      },
+      {
+        "id": 11,
+        "routeKey": "wizard",
+        "label": "Wizard",
+        "desc": "A scholarly magic-user capable of manipulating the structures of reality",
+        "pref": "Intelligence",
+        "complexity": 3
+      }
     ]
   },
-
   "spells": {
     "title": "Spells",
     "school": "School",
@@ -100,27 +273,99 @@
     "effect": "Effect",
     "atHigherLevels": "At Higher Levels",
     "spellClasses": [
-      { "id": 1,  "routeKey": "bard",     "label": "Bard",    "desc": "Magical secrets and bardic inspiration drawn from the music of creation" },
-      { "id": 2,  "routeKey": "cleric",   "label": "Cleric",  "desc": "Divine magic channelled from the power of the gods and sacred domains" },
-      { "id": 3,  "routeKey": "druid",    "label": "Druid",   "desc": "Nature magic wielding moonlight, plant growth, fire and lightning" },
-      { "id": 6,  "routeKey": "paladin",  "label": "Paladin", "desc": "Sacred oaths and divine smites empowered by holy conviction" },
-      { "id": 7,  "routeKey": "ranger",   "label": "Ranger",  "desc": "Nature spells and primal magic to combat threats at civilisation's edge" },
-      { "id": 9,  "routeKey": "sorcerer", "label": "Sorcerer","desc": "Raw arcane power drawn from an innate magical gift or bloodline" },
-      { "id": 10, "routeKey": "warlock",  "label": "Warlock", "desc": "Eldritch magic derived from a pact with an extra-planar entity" },
-      { "id": 11, "routeKey": "wizard",   "label": "Wizard",  "desc": "Scholarly arcane magic capable of manipulating the structures of reality" }
-    ]
+      {
+        "id": 1,
+        "routeKey": "bard",
+        "label": "Bard",
+        "desc": "Magical secrets and bardic inspiration drawn from the music of creation"
+      },
+      {
+        "id": 2,
+        "routeKey": "cleric",
+        "label": "Cleric",
+        "desc": "Divine magic channelled from the power of the gods and sacred domains"
+      },
+      {
+        "id": 3,
+        "routeKey": "druid",
+        "label": "Druid",
+        "desc": "Nature magic wielding moonlight, plant growth, fire and lightning"
+      },
+      {
+        "id": 6,
+        "routeKey": "paladin",
+        "label": "Paladin",
+        "desc": "Sacred oaths and divine smites empowered by holy conviction"
+      },
+      {
+        "id": 7,
+        "routeKey": "ranger",
+        "label": "Ranger",
+        "desc": "Nature spells and primal magic to combat threats at civilisation's edge"
+      },
+      {
+        "id": 9,
+        "routeKey": "sorcerer",
+        "label": "Sorcerer",
+        "desc": "Raw arcane power drawn from an innate magical gift or bloodline"
+      },
+      {
+        "id": 10,
+        "routeKey": "warlock",
+        "label": "Warlock",
+        "desc": "Eldritch magic derived from a pact with an extra-planar entity"
+      },
+      {
+        "id": 11,
+        "routeKey": "wizard",
+        "label": "Wizard",
+        "desc": "Scholarly arcane magic capable of manipulating the structures of reality"
+      }
+    ],
+    "cantrips": "Cantrips",
+    "cantrip": "Cantrip",
+    "levelLabel": "Level {n}",
+    "titleSuffix": "Spells",
+    "col": {
+      "name": "Name",
+      "school": "School",
+      "castingTime": "Cast Time",
+      "range": "Range",
+      "duration": "Duration",
+      "components": "Components"
+    },
+    "notFound": "Spell Not Found",
+    "backToSpells": "Back to Spells"
   },
-
   "items": {
     "title": "Items",
     "list": [
-      { "id": 0, "routeKey": "weapons",     "label": "Weapons",     "desc": "Swords, axes, bows and every instrument of war available to adventurers" },
-      { "id": 1, "routeKey": "armors",      "label": "Armors",      "desc": "Light, medium and heavy armor to protect you in the heat of battle" },
-      { "id": 2, "routeKey": "potions",     "label": "Potions",     "desc": "Healing draughts, elixirs and magical concoctions to aid your adventure" },
-      { "id": 3, "routeKey": "magic_items", "label": "Magic Items", "desc": "Rare and powerful items imbued with arcane energy and ancient enchantments" }
+      {
+        "id": 0,
+        "routeKey": "weapons",
+        "label": "Weapons",
+        "desc": "Swords, axes, bows and every instrument of war available to adventurers"
+      },
+      {
+        "id": 1,
+        "routeKey": "armors",
+        "label": "Armors",
+        "desc": "Light, medium and heavy armor to protect you in the heat of battle"
+      },
+      {
+        "id": 2,
+        "routeKey": "potions",
+        "label": "Potions",
+        "desc": "Healing draughts, elixirs and magical concoctions to aid your adventure"
+      },
+      {
+        "id": 3,
+        "routeKey": "magic_items",
+        "label": "Magic Items",
+        "desc": "Rare and powerful items imbued with arcane energy and ancient enchantments"
+      }
     ]
   },
-
   "backgrounds": {
     "title": "Backgrounds",
     "label": "Background",
@@ -130,7 +375,6 @@
     "toolProficiency": "Tool Proficiency",
     "equipment": "Equipment"
   },
-
   "feats": {
     "title": "Feats",
     "tabs": {
@@ -146,7 +390,6 @@
       "epic": "Epic Boon Feat"
     }
   },
-
   "race": {
     "eyebrow": "Species",
     "notFound": "Species Not Found",
@@ -154,7 +397,6 @@
     "traitsTitle": "{name} Traits",
     "speed": "Speed {value}"
   },
-
   "class": {
     "eyebrow": "Class",
     "coreTraits": "Core Traits",

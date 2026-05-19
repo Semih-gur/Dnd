@@ -7,21 +7,27 @@
         "rarity": "Common",
         "effect": "When you drink this potion, you gain a Climb Speed equal to your Speed for 1 hour. During this time, you have Advantage on Strength (Athletics) checks made to climb. The potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors.",
         "weight": "½ lb.",
-        "cost": "50 GP"
+        "cost": "50 GP",
+        "name_tr": "Tırmanma İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Hızınıza eşit bir Tırmanma Hızı kazanırsınız. Bu süre zarfında tırmanmak için yapılan Güç (Atletizm) kontrollerinde Avantaj kazanırsınız. İksir, taş bantlarını andıran kahverengi, gümüş ve gri katmanlardan oluşur. Şişeyi sallamak renkleri karıştırmaz."
       },
       {
         "name": "Potion of Comprehension",
         "rarity": "Common",
         "effect": "When you drink this potion, you gain the effect of the Comprehend Languages spell for 1 hour (no Concentration required).",
         "weight": "½ lb.",
-        "cost": "50 GP"
+        "cost": "50 GP",
+        "name_tr": "Anlama İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Dil Anlama büyüsünün etkisini kazanırsınız (Konsantrasyon gerekmez)."
       },
       {
         "name": "Potion of Healing",
         "rarity": "Common",
         "effect": "As a Bonus Action, you can drink this potion or administer it to another creature within 5 feet. The creature that drinks the magical red fluid regains 2d4 + 2 Hit Points.",
         "weight": "½ lb.",
-        "cost": "50 GP"
+        "cost": "50 GP",
+        "name_tr": "İyileştirme İksiri",
+        "effect_tr": "Bonus Aksiyon olarak bu iksiri içebilir ya da 5 fit içindeki başka bir yaratığa uygulayabilirsiniz. Büyülü kırmızı sıvıyı içen yaratık 2d4 + 2 Can Puanı yeniden kazanır."
       }
     ]
   },
@@ -33,63 +39,81 @@
         "rarity": "Uncommon",
         "effect": "When you drink this potion, you can cast the Animal Friendship spell (save DC 13) for 1 hour at will. Agitating this muddy liquid brings little bits into view: a fish scale, a hummingbird tongue, a cat claw, or a squirrel hair.",
         "weight": "½ lb.",
-        "cost": "100 GP"
+        "cost": "100 GP",
+        "name_tr": "Hayvan Dostluğu İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca istediğiniz zaman Hayvan Dostluğu büyüsünü (kurtarma ZS 13) uygulayabilirsiniz. Bu çamurlu sıvıyı karıştırdığınızda içinde küçük parçacıklar belirir: bir balık pulu, bir sinekkuşu dili, bir kedi tırnağı ya da bir sincap kılı."
       },
       {
         "name": "Potion of Fire Breath",
         "rarity": "Uncommon",
         "effect": "After drinking this potion, you can use a Bonus Action to exhale fire at a target within 30 feet. The target must make a DC 13 Dexterity saving throw, taking 4d6 Fire damage on a failed save or half on a success. The effect ends after you exhale fire three times or when 1 hour has passed. This potion's orange liquid flickers and smoke fills the top of the container.",
         "weight": "½ lb.",
-        "cost": "150 GP"
+        "cost": "150 GP",
+        "name_tr": "Ateş Nefesi İksiri",
+        "effect_tr": "Bu iksiri içtikten sonra, Bonus Aksiyon kullanarak 30 fit içindeki bir hedefe ateş üfleyebilirsiniz. Hedef, GZ 13 Çeviklik kurtarma atışı yapmalıdır; başarısız olursa 4d6 Ateş hasarı alır, başarılı olursa yarısını alır. Etki, üç kez ateş üfledikten ya da 1 saat geçtikten sonra sona erer. Bu iksirin turuncu sıvısı titreşir ve kabın üst kısmını duman doldurur."
       },
       {
         "name": "Potion of Giant Strength (Hill)",
         "rarity": "Uncommon",
         "effect": "When you drink this potion, your Strength score changes to 21 for 1 hour. The potion has no effect if your Strength is already 21 or higher. This potion's transparent liquid has floating in it a sliver of fingernail from a hill giant.",
         "weight": "½ lb.",
-        "cost": "100 GP"
+        "cost": "100 GP",
+        "name_tr": "Dev Gücü İksiri (Tepe)",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Güç puanınız 21 olur. İksirin Gücünüz zaten 21 veya daha yüksekse etkisi olmaz. Bu iksirin şeffaf sıvısında bir tepe devinin tırnağından bir dilim yüzer."
       },
       {
         "name": "Potion of Greater Healing",
         "rarity": "Uncommon",
         "effect": "As a Bonus Action, you can drink this potion or administer it to another creature within 5 feet. The creature that drinks it regains 4d4 + 4 Hit Points.",
         "weight": "½ lb.",
-        "cost": "100 GP"
+        "cost": "100 GP",
+        "name_tr": "Büyük İyileştirme İksiri",
+        "effect_tr": "Bonus Aksiyon olarak bu iksiri içebilir ya da 5 fit içindeki başka bir yaratığa uygulayabilirsiniz. İçen yaratık 4d4 + 4 Can Puanı yeniden kazanır."
       },
       {
         "name": "Potion of Growth",
         "rarity": "Uncommon",
         "effect": "When you drink this potion, you gain the Enlarge effect of the Enlarge/Reduce spell for 1d4 hours (no Concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
         "weight": "½ lb.",
-        "cost": "200 GP"
+        "cost": "200 GP",
+        "name_tr": "Büyüme İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1d4 saat boyunca Büyüt/Küçült büyüsünün Büyüt etkisini kazanırsınız (Konsantrasyon gerekmez). İksirin sıvısındaki kırmızılık küçük bir damladan genişleyerek etraftaki berrak sıvıyı boyar, ardından küçülür. Şişeyi sallamak bu süreci engellemez."
       },
       {
         "name": "Potion of Poison",
         "rarity": "Uncommon",
         "effect": "This concoction looks, smells, and tastes like a Potion of Healing or other beneficial potion. However, it is actually poison masked by illusion magic. An Identify spell reveals its true nature. If you drink it, you take 3d6 Poison damage and must succeed on a DC 13 Constitution saving throw or have the Poisoned condition. At the start of each of your turns while Poisoned this way, you take 3d6 Poison damage. At the end of each of your turns, you can repeat the saving throw, ending the effect on a success.",
         "weight": "½ lb.",
-        "cost": "100 GP"
+        "cost": "100 GP",
+        "name_tr": "Zehir İksiri",
+        "effect_tr": "Bu karışım görünüş, koku ve tat olarak bir İyileştirme İksiri ya da başka faydalı bir iksire benzer. Ancak aslında yanılsama büyüsüyle gizlenmiş bir zehirdir. Tanımlama büyüsü gerçek doğasını ortaya çıkarır. İçerseniz, 3d6 Zehir hasarı alırsınız ve GZ 13 Anayasa kurtarma atışını geçemezseniz Zehirlenmiş durumuna girersiniz. Bu şekilde Zehirlenmiş olduğunuzda her turunuzun başında 3d6 Zehir hasarı alırsınız. Her turunuzun sonunda kurtarma atışını tekrarlayabilirsiniz; başarılı olursanız etki sona erer."
       },
       {
         "name": "Potion of Resistance",
         "rarity": "Uncommon",
         "effect": "When you drink this potion, you gain Resistance to one damage type for 1 hour. The DM chooses the type or determines it randomly: 1 Acid, 2 Cold, 3 Fire, 4 Force, 5 Lightning, 6 Necrotic, 7 Poison, 8 Psychic, 9 Radiant, 10 Thunder.",
         "weight": "½ lb.",
-        "cost": "300 GP"
+        "cost": "300 GP",
+        "name_tr": "Direnç İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca bir hasar türüne Direnç kazanırsınız. ZM türü seçer ya da rastgele belirler: 1 Asit, 2 Soğuk, 3 Ateş, 4 Kuvvet, 5 Yıldırım, 6 Nekrotik, 7 Zehir, 8 Psişik, 9 Işıl, 10 Gök Gürültüsü."
       },
       {
         "name": "Potion of Water Breathing",
         "rarity": "Uncommon",
         "effect": "You can breathe underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
         "weight": "½ lb.",
-        "cost": "180 GP"
+        "cost": "180 GP",
+        "name_tr": "Su Altında Nefes İksiri",
+        "effect_tr": "Bu iksiri içtikten sonra 1 saat boyunca su altında nefes alabilirsiniz. Bulutlu yeşil sıvısı deniz kokusunu taşır ve içinde denizanası gibi bir kabarcık yüzer."
       },
       {
         "name": "Philter of Love",
         "rarity": "Uncommon",
         "effect": "The next time you see a creature within 10 minutes after drinking this philter, you become Charmed by that creature for 1 hour. If the creature is of a species and gender you are normally attracted to, you also regard it as your true love while you are Charmed. This rose-hued, bubbling liquid contains one easy-to-miss bubble shaped like a heart.",
         "weight": "½ lb.",
-        "cost": "150 GP"
+        "cost": "150 GP",
+        "name_tr": "Aşk Büyüsü",
+        "effect_tr": "Bu iksiri içtikten sonraki 10 dakika içinde ilk gördüğünüz yaratık tarafından 1 saat boyunca Büyülenmiş olursunuz. Eğer bu yaratık normalde ilgilendiğiniz türden ve cinsiyetteyse, Büyülenmiş olduğunuz süre boyunca onu gerçek aşkınız olarak görürsünüz. Bu gül pembesi, köpüren sıvı içinde kalp şeklinde kolayca gözden kaçan bir kabarcık barındırır."
       }
     ]
   },
@@ -101,84 +125,108 @@
         "rarity": "Rare",
         "effect": "When you drink this potion, it cures any disease afflicting you, and it removes the Blinded, Deafened, Paralyzed, and Poisoned conditions. The clear, red liquid has tiny bubbles of light in it.",
         "weight": "½ lb.",
-        "cost": "120 GP"
+        "cost": "120 GP",
+        "name_tr": "Sağlık Eliksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, sizi etkileyen herhangi bir hastalık iyileşir ve Kör, Sağır, Felçli ve Zehirlenmiş durumları ortadan kalkar. Berrak kırmızı sıvının içinde küçük ışık kabarcıkları yüzer."
       },
       {
         "name": "Potion of Clairvoyance",
         "rarity": "Rare",
         "effect": "When you drink this potion, you gain the effect of the Clairvoyance spell for 10 minutes (no Concentration required). An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.",
         "weight": "½ lb.",
-        "cost": "960 GP"
+        "cost": "960 GP",
+        "name_tr": "Açık Görü İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 10 dakika boyunca Açık Görü büyüsünün etkisini kazanırsınız (Konsantrasyon gerekmez). Bu sarımsı sıvıda yüzen bir göz bebeği, iksir açıldığında ortadan kaybolur."
       },
       {
         "name": "Potion of Diminution",
         "rarity": "Rare",
         "effect": "When you drink this potion, you gain the Reduce effect of the Enlarge/Reduce spell for 1d4 hours (no Concentration required). The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.",
         "weight": "½ lb.",
-        "cost": "270 GP"
+        "cost": "270 GP",
+        "name_tr": "Küçülme İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1d4 saat boyunca Büyüt/Küçült büyüsünün Küçült etkisini kazanırsınız (Konsantrasyon gerekmez). İksirin sıvısındaki kırmızılık sürekli olarak küçük bir damlaya büzülür, ardından genişleyerek etraftaki berrak sıvıyı boyar. Şişeyi sallamak bu süreci engellemez."
       },
       {
         "name": "Potion of Gaseous Form",
         "rarity": "Rare",
         "effect": "When you drink this potion, you gain the effect of the Gaseous Form spell for 1 hour (no Concentration required) or until you end the effect as a Bonus Action. This potion's container seems to hold fog that moves and pours like water.",
         "weight": "½ lb.",
-        "cost": "300 GP"
+        "cost": "300 GP",
+        "name_tr": "Gaz Formu İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Gaz Formu büyüsünün etkisini kazanırsınız (Konsantrasyon gerekmez) ya da Bonus Aksiyon olarak etkiyi sonlandırabilirsiniz. Bu iksirin kabı, su gibi hareket eden ve dökülen sis tutar gibi görünür."
       },
       {
         "name": "Potion of Giant Strength (Fire)",
         "rarity": "Rare",
         "effect": "When you drink this potion, your Strength score changes to 25 for 1 hour. The potion has no effect if your Strength is already 25 or higher. This potion's transparent liquid has floating in it a sliver of fingernail from a fire giant.",
         "weight": "½ lb.",
-        "cost": "700 GP"
+        "cost": "700 GP",
+        "name_tr": "Dev Gücü İksiri (Ateş)",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Güç puanınız 25 olur. İksirin Gücünüz zaten 25 veya daha yüksekse etkisi olmaz. Bu iksirin şeffaf sıvısında bir ateş devinin tırnağından bir dilim yüzer."
       },
       {
         "name": "Potion of Giant Strength (Frost)",
         "rarity": "Rare",
         "effect": "When you drink this potion, your Strength score changes to 23 for 1 hour. The potion has no effect if your Strength is already 23 or higher. This potion's transparent liquid has floating in it a sliver of fingernail from a frost giant.",
         "weight": "½ lb.",
-        "cost": "500 GP"
+        "cost": "500 GP",
+        "name_tr": "Dev Gücü İksiri (Don)",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Güç puanınız 23 olur. İksirin Gücünüz zaten 23 veya daha yüksekse etkisi olmaz. Bu iksirin şeffaf sıvısında bir don devinin tırnağından bir dilim yüzer."
       },
       {
         "name": "Potion of Giant Strength (Stone)",
         "rarity": "Rare",
         "effect": "When you drink this potion, your Strength score changes to 23 for 1 hour. The potion has no effect if your Strength is already 23 or higher. This potion's transparent liquid has floating in it a sliver of fingernail from a stone giant.",
         "weight": "½ lb.",
-        "cost": "500 GP"
+        "cost": "500 GP",
+        "name_tr": "Dev Gücü İksiri (Taş)",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Güç puanınız 23 olur. İksirin Gücünüz zaten 23 veya daha yüksekse etkisi olmaz. Bu iksirin şeffaf sıvısında bir taş devinin tırnağından bir dilim yüzer."
       },
       {
         "name": "Potion of Heroism",
         "rarity": "Rare",
         "effect": "For 1 hour after drinking this potion, you gain 10 Temporary Hit Points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no Concentration required). This blue potion bubbles and steams as if boiling.",
         "weight": "½ lb.",
-        "cost": "180 GP"
+        "cost": "180 GP",
+        "name_tr": "Kahramanlık İksiri",
+        "effect_tr": "Bu iksiri içtikten sonra 1 saat boyunca 10 Geçici Can Puanı kazanırsınız. Aynı süre boyunca Kutsama büyüsünün (Konsantrasyon gerekmez) etkisi altındasınızdır. Bu mavi iksir kaynayan bir şeymiş gibi köpürür ve buhar çıkarır."
       },
       {
         "name": "Potion of Invisibility",
         "rarity": "Rare",
         "effect": "This potion's container looks empty but feels as though it holds liquid. When you drink it, you have the Invisible condition for 1 hour. Anything you wear or carry is invisible with you. The effect ends early if you make an attack roll, deal damage, or cast a spell.",
         "weight": "½ lb.",
-        "cost": "180 GP"
+        "cost": "180 GP",
+        "name_tr": "Görünmezlik İksiri",
+        "effect_tr": "Bu iksirin kabı boş görünür ama sıvı tutuyor gibi hissettirır. İçtiğinizde 1 saat boyunca Görünmez durumuna girersiniz. Taşıdığınız her şey de sizinle birlikte görünmez olur. Saldırı atışı yaparsanız, hasar verirseniz ya da büyü kullanırsanız etki erken sona erer."
       },
       {
         "name": "Potion of Invulnerability",
         "rarity": "Rare",
         "effect": "For 1 minute after drinking this potion, you have Resistance to all damage. The potion's syrupy liquid looks like liquefied iron.",
         "weight": "½ lb.",
-        "cost": "3,840 GP"
+        "cost": "3,840 GP",
+        "name_tr": "Kırılmazlık İksiri",
+        "effect_tr": "Bu iksiri içtikten sonra 1 dakika boyunca tüm hasarlara Direnç kazanırsınız. İksirin şurup kıvamındaki sıvısı sıvılaşmış demir gibi görünür."
       },
       {
         "name": "Potion of Mind Reading",
         "rarity": "Rare",
         "effect": "When you drink this potion, you gain the effect of the Detect Thoughts spell (save DC 13) for 10 minutes (no Concentration required). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
         "weight": "½ lb.",
-        "cost": "180 GP"
+        "cost": "180 GP",
+        "name_tr": "Zihin Okuma İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 10 dakika boyunca Düşünce Algılama büyüsünün (kurtarma ZS 13) etkisini kazanırsınız (Konsantrasyon gerekmez). İksirin yoğun mor sıvısında yüzen pembe oval bir bulut bulunur."
       },
       {
         "name": "Potion of Superior Healing",
         "rarity": "Rare",
         "effect": "As a Bonus Action, you can drink this potion or administer it to another creature within 5 feet. The creature that drinks it regains 8d4 + 8 Hit Points.",
         "weight": "½ lb.",
-        "cost": "450 GP"
+        "cost": "450 GP",
+        "name_tr": "Üstün İyileştirme İksiri",
+        "effect_tr": "Bonus Aksiyon olarak bu iksiri içebilir ya da 5 fit içindeki başka bir yaratığa uygulayabilirsiniz. İçen yaratık 8d4 + 8 Can Puanı yeniden kazanır."
       }
     ]
   },
@@ -190,49 +238,63 @@
         "rarity": "Very Rare",
         "effect": "When you drink this potion, you gain a Fly Speed equal to your Speed for 1 hour and can hover. If you are in the air when the potion wears off, you fall unless you have some other means of staying aloft. An eyeball bobs in this potion's yellowish liquid but vanishes when the potion is opened.",
         "weight": "½ lb.",
-        "cost": "500 GP"
+        "cost": "500 GP",
+        "name_tr": "Uçuş İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Hızınıza eşit bir Uçuş Hızı kazanır ve havada asılı kalabilirsiniz. İkisir aşınırken havadaysanız, başka bir şekilde havada kalma imkânınız yoksa düşersiniz. Bu iksirin sarımsı sıvısında yüzen bir göz bebeği, iksir açıldığında ortadan kaybolur."
       },
       {
         "name": "Potion of Giant Strength (Cloud)",
         "rarity": "Very Rare",
         "effect": "When you drink this potion, your Strength score changes to 27 for 1 hour. The potion has no effect if your Strength is already 27 or higher. This potion's transparent liquid has floating in it a sliver of fingernail from a cloud giant.",
         "weight": "½ lb.",
-        "cost": "2,000 GP"
+        "cost": "2,000 GP",
+        "name_tr": "Dev Gücü İksiri (Bulut)",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Güç puanınız 27 olur. İksirin Gücünüz zaten 27 veya daha yüksekse etkisi olmaz. Bu iksirin şeffaf sıvısında bir bulut devinin tırnağından bir dilim yüzer."
       },
       {
         "name": "Potion of Greater Invisibility",
         "rarity": "Very Rare",
         "effect": "When you drink this potion, you gain the effect of the Greater Invisibility spell for 1 minute. Unlike a standard Potion of Invisibility, this effect does not end if you make an attack roll, deal damage, or cast a spell.",
         "weight": "½ lb.",
-        "cost": "1,000 GP"
+        "cost": "1,000 GP",
+        "name_tr": "Büyük Görünmezlik İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 dakika boyunca Büyük Görünmezlik büyüsünün etkisini kazanırsınız. Standart Görünmezlik İksirinin aksine, saldırı atışı yapmanız, hasar vermeniz ya da büyü kullanmanız etkiyi sona erdirmez."
       },
       {
         "name": "Potion of Longevity",
         "rarity": "Very Rare",
         "effect": "When you drink this potion, your physical age is reduced by 1d6 + 6 years, to a minimum of 13 years. Each time you subsequently drink a Potion of Longevity, there is a 10 percent cumulative chance that you instead age by 1d6 + 6 years. Suspended in this amber liquid are a scorpion's tail, an adder's fang, a dead spider, and a tiny heart that, against all reason, is still beating. These ingredients vanish when the potion is opened.",
         "weight": "½ lb.",
-        "cost": "9,000 GP"
+        "cost": "9,000 GP",
+        "name_tr": "Uzun Ömür İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, fiziksel yaşınız minimum 13 olmak kaydıyla 1d6 + 6 yıl azalır. Sonraki her Uzun Ömür İksiri içişinizde, %10 artan bir olasılıkla bunun yerine 1d6 + 6 yıl yaşlanabilirsiniz. Bu kehribar renkli sıvıda akrep kuyruğu, engerek dişi, ölü bir örümcek ve nedense hâlâ atan küçük bir kalp askıda durur. Bu malzemeler iksir açıldığında ortadan kaybolur."
       },
       {
         "name": "Potion of Speed",
         "rarity": "Very Rare",
         "effect": "When you drink this potion, you gain the effect of the Haste spell for 1 minute (no Concentration required). The potion's yellow fluid is streaked with black and swirls on its own.",
         "weight": "½ lb.",
-        "cost": "400 GP"
+        "cost": "400 GP",
+        "name_tr": "Hız İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 dakika boyunca Acele büyüsünün etkisini kazanırsınız (Konsantrasyon gerekmez). İksirin sarı sıvısı siyah çizgilerle bezeli olup kendi kendine döner."
       },
       {
         "name": "Potion of Supreme Healing",
         "rarity": "Very Rare",
         "effect": "As a Bonus Action, you can drink this potion or administer it to another creature within 5 feet. The creature that drinks it regains 10d4 + 20 Hit Points.",
         "weight": "½ lb.",
-        "cost": "1,350 GP"
+        "cost": "1,350 GP",
+        "name_tr": "Yüce İyileştirme İksiri",
+        "effect_tr": "Bonus Aksiyon olarak bu iksiri içebilir ya da 5 fit içindeki başka bir yaratığa uygulayabilirsiniz. İçen yaratık 10d4 + 20 Can Puanı yeniden kazanır."
       },
       {
         "name": "Potion of Vitality",
         "rarity": "Very Rare",
         "effect": "When you drink this potion, it removes any Exhaustion you are suffering and cures any disease or poison affecting you. For the next 24 hours, you regain the maximum number of Hit Points for any Hit Die you spend. The potion's crimson liquid regularly pulses with dull light, calling to mind a heartbeat.",
         "weight": "½ lb.",
-        "cost": "960 GP"
+        "cost": "960 GP",
+        "name_tr": "Yaşam Gücü İksiri",
+        "effect_tr": "Bu iksiri içtiğinizde, yaşadığınız tüm Bitkinlik kaldırılır ve sizi etkileyen hastalık ya da zehir iyileşir. Sonraki 24 saat boyunca harcadığınız her Vuruş Zarı için azami Can Puanı yeniden kazanırsınız. İksirin kızıl sıvısı düzenli aralıklarla soluk bir ışıkla titrer; kalp atışını akla getirir."
       }
     ]
   },
@@ -244,7 +306,9 @@
         "rarity": "Legendary",
         "effect": "When you drink this potion, your Strength score changes to 29 for 1 hour. The potion has no effect if your Strength is already 29 or higher. This potion's transparent liquid has floating in it a sliver of fingernail from a storm giant. Vibrant blue and deeply purple, studded with dots of white and silver, this potion reminds one of the night sky.",
         "weight": "½ lb.",
-        "cost": "50,000 GP"
+        "cost": "50,000 GP",
+        "name_tr": "Dev Gücü İksiri (Fırtına)",
+        "effect_tr": "Bu iksiri içtiğinizde, 1 saat boyunca Güç puanınız 29 olur. İksirin Gücünüz zaten 29 veya daha yüksekse etkisi olmaz. Bu iksirin şeffaf sıvısında bir fırtına devinin tırnağından bir dilim yüzer. Canlı mavi ve koyu mor, beyaz ve gümüş noktalarla bezeli bu ikisir gece gökyüzünü akla getirir."
       }
     ]
   }

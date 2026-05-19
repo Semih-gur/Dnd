@@ -37,9 +37,29 @@ Stored in `localStorage` key `"locale"`. Values: `"en"` or `"tr"`.
 - All 12 class JSON files (`barbarian.json` … `wizard.json`) — `title_tr`, `feature_tr`, `value_tr`, `subclassPrefix_tr` added
 - All 12 class Vue views (`BarbarianView.vue` … `WizardView.vue`) — fully use `$lf()`
 
-### Not started
-- `src/views/SpellView/` — spell names, school, effect, upgrade
-- `src/views/Items/` — weapons, armors, potions, magic items
+### Fully translated (continued)
+- `src/views/Items/weapons.json` — all 38 weapons: `name_tr`, `properties_tr`, `mastery_tr`
+- `src/views/Items/armors.json` — all 14 armors: `name_tr`
+- `src/views/Items/potions.json` — all 32 potions: `name_tr`, `effect_tr`
+- `src/views/Items/magicItems.json` — all 210 magic items: `type_tr`, `description_tr`, `name_tr`
+- `src/views/Items/WeaponsView.vue` — fully uses `$lf()` and `$t()`
+- `src/views/Items/ArmorsView.vue` — fully uses `$lf()` and `$t()`
+- `src/views/Items/PotionsView.vue` — fully uses `$lf()` and `$t()`
+- `src/views/Items/MagicItems.vue` — fully uses `$lf()` and `$t()`
+- `src/views/SpellView/allSpells.json` (level "0") — all 32 cantrips: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`
+- `src/views/SpellView/CSpellView.vue` — fully uses `$lf()` and `$t()` (tab labels, column headers, name, school)
+- `src/views/SpellView/SpellDesc.vue` — fully uses `$lf()` and `$t()` (name, school, effect, upgrade, stat labels)
+
+### Fully translated (continued)
+- `src/views/SpellView/allSpells.json` level 1 — all 63 spells: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`, `components_tr` where needed
+- `src/views/SpellView/allSpells.json` level 2 — all 68 spells: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`, `components_tr` where needed
+- `src/views/SpellView/allSpells.json` level 3 — all 61 spells: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`, `components_tr` where needed
+- `src/views/SpellView/allSpells.json` level 4 — all 45 spells: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`, `components_tr` where needed
+- `src/views/SpellView/allSpells.json` level 5 — all 54 spells: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`, `components_tr` where needed
+- `src/views/SpellView/allSpells.json` level 6 — all 40 spells: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`, `components_tr` where needed
+- `src/views/SpellView/allSpells.json` level 7 — all 22 spells: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`, `components_tr` where needed
+- `src/views/SpellView/allSpells.json` level 8 — all 21 spells: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`, `components_tr` where needed
+- `src/views/SpellView/allSpells.json` level 9 — all 20 spells: `name_tr`, `school_tr`, `effect_tr`, `upgrade_tr`, `components_tr` where needed
 
 ---
 
