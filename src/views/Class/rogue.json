@@ -10,19 +10,23 @@
   "subclasses": [
     {
       "title": "Arcane Trickster",
-      "icon": "mdi-hat-fedora"
+      "icon": "mdi-hat-fedora",
+      "title_tr": "Gizemli Hileci"
     },
     {
       "title": "Assassin",
-      "icon": "mdi-skull"
+      "icon": "mdi-skull",
+      "title_tr": "Suikastçı"
     },
     {
       "title": "Soulknife",
-      "icon": "mdi-brain"
+      "icon": "mdi-brain",
+      "title_tr": "Ruh Bıçağı"
     },
     {
       "title": "Thief",
-      "icon": "mdi-drama-masks"
+      "icon": "mdi-drama-masks",
+      "title_tr": "Hırsız"
     }
   ],
   "coreTraits": [

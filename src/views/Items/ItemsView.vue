@@ -18,12 +18,14 @@
           @click="goTo(item)"
         >
           <div class="card-image-wrap">
-            <v-img
-              src="../../assets/image.png"
-              :alt="item.label"
-              cover
-              class="card-img"
-            ></v-img>
+            <div class="card-img-clip">
+              <v-img
+                src="../../assets/image.png"
+                :alt="item.label"
+                cover
+                class="card-img"
+              ></v-img>
+            </div>
             <div class="card-gradient-overlay"></div>
           </div>
           <div class="card-body">
@@ -164,12 +166,17 @@ export default {
   overflow: visible;
   flex-shrink: 0;
 }
+.card-img-clip {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .card-img {
   width: 100%;
   height: 100%;
   transition: transform 0.35s ease;
 }
-.item-card:hover .card-image-wrap :deep(.v-img) {
+.item-card:hover .card-img-clip :deep(.v-img) {
   transform: scale(1.05);
 }
 

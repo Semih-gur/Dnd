@@ -10,19 +10,23 @@
   "subclasses": [
     {
       "title": "Aberrant Sorcery",
-      "icon": "mdi-alien"
+      "icon": "mdi-alien",
+      "title_tr": "Sapkın Büyücülük"
     },
     {
       "title": "Clockwork Sorcery",
-      "icon": "mdi-cog"
+      "icon": "mdi-cog",
+      "title_tr": "Çarklı Büyücülük"
     },
     {
       "title": "Draconic Sorcery",
-      "icon": "mdi-dragon"
+      "icon": "mdi-dragon",
+      "title_tr": "Ejderha Büyücülüğü"
     },
     {
       "title": "Wild Magic Sorcery",
-      "icon": "mdi-creation"
+      "icon": "mdi-creation",
+      "title_tr": "Vahşi Büyücülük"
     }
   ],
   "coreTraits": [

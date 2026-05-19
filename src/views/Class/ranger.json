@@ -10,19 +10,23 @@
   "subclasses": [
     {
       "title": "Beast Master",
-      "icon": "mdi-paw"
+      "icon": "mdi-paw",
+      "title_tr": "Canavar Ustası"
     },
     {
       "title": "Fey Wanderer",
-      "icon": "mdi-shimmer"
+      "icon": "mdi-shimmer",
+      "title_tr": "Peri Gezgini"
     },
     {
       "title": "Gloom Stalker",
-      "icon": "mdi-eye-off"
+      "icon": "mdi-eye-off",
+      "title_tr": "Karanlık Avcısı"
     },
     {
       "title": "Hunter",
-      "icon": "mdi-crosshairs"
+      "icon": "mdi-crosshairs",
+      "title_tr": "Avcı"
     }
   ],
   "coreTraits": [

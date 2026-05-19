@@ -10,19 +10,23 @@
   "subclasses": [
     {
       "title": "Battle Master",
-      "icon": "mdi-chess-knight"
+      "icon": "mdi-chess-knight",
+      "title_tr": "Savaş Ustası"
     },
     {
       "title": "Champion",
-      "icon": "mdi-shield-half-full"
+      "icon": "mdi-shield-half-full",
+      "title_tr": "Şampiyon"
     },
     {
       "title": "Eldritch Knight",
-      "icon": "mdi-hat-fedora"
+      "icon": "mdi-hat-fedora",
+      "title_tr": "Gizemli Şövalye"
     },
     {
       "title": "Psi Warrior",
-      "icon": "mdi-brain"
+      "icon": "mdi-brain",
+      "title_tr": "Psi Savaşçı"
     }
   ],
   "coreTraits": [

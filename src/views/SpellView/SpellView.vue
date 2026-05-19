@@ -18,7 +18,9 @@
           @click="goTo(cspell)"
         >
           <div class="card-image-wrap">
-            <img :src="cspell.art" :alt="cspell.label" class="card-img" />
+            <div class="card-img-clip">
+              <img :src="cspell.art" :alt="cspell.label" class="card-img" />
+            </div>
             <div class="card-gradient-overlay"></div>
           </div>
           <div class="card-body">
@@ -182,6 +184,11 @@ export default {
   aspect-ratio: 1 / 1;
   overflow: visible;
   flex-shrink: 0;
+}
+.card-img-clip {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .card-img {
   width: 100%;

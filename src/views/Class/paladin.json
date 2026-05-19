@@ -11,19 +11,23 @@
   "subclasses": [
     {
       "title": "Devotion",
-      "icon": "mdi-star-four-points"
+      "icon": "mdi-star-four-points",
+      "title_tr": "Adanmışlık"
     },
     {
       "title": "Glory",
-      "icon": "mdi-trophy"
+      "icon": "mdi-trophy",
+      "title_tr": "Zafer"
     },
     {
       "title": "the Ancients",
-      "icon": "mdi-leaf"
+      "icon": "mdi-leaf",
+      "title_tr": "Kadimler"
     },
     {
       "title": "Vengeance",
-      "icon": "mdi-sword"
+      "icon": "mdi-sword",
+      "title_tr": "İntikam"
     }
   ],
   "coreTraits": [

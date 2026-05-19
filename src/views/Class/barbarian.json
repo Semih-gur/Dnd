@@ -53,19 +53,23 @@
   "subclasses": [
     {
       "title": "Berserker",
-      "icon": "mdi-emoticon-angry-outline"
+      "icon": "mdi-emoticon-angry-outline",
+      "title_tr": "Berserker"
     },
     {
       "title": "Wild Heart",
-      "icon": "mdi-paw"
+      "icon": "mdi-paw",
+      "title_tr": "Vahşi Kalp"
     },
     {
       "title": "World Tree",
-      "icon": "mdi-tree"
+      "icon": "mdi-tree",
+      "title_tr": "Dünya Ağacı"
     },
     {
       "title": "Zealot",
-      "icon": "mdi-flare"
+      "icon": "mdi-flare",
+      "title_tr": "Fanatik"
     }
   ],
   "subclassPrefix": "Path of the",

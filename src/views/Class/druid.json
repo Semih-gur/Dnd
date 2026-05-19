@@ -11,19 +11,23 @@
   "subclasses": [
     {
       "title": "Land",
-      "icon": "mdi-leaf"
+      "icon": "mdi-leaf",
+      "title_tr": "Toprak"
     },
     {
       "title": "Moon",
-      "icon": "mdi-moon-waning-crescent"
+      "icon": "mdi-moon-waning-crescent",
+      "title_tr": "Ay"
     },
     {
       "title": "Sea",
-      "icon": "mdi-waves"
+      "icon": "mdi-waves",
+      "title_tr": "Deniz"
     },
     {
       "title": "Stars",
-      "icon": "mdi-star-four-points"
+      "icon": "mdi-star-four-points",
+      "title_tr": "Yıldızlar"
     }
   ],
   "coreTraits": [

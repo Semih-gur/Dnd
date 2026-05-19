@@ -10,19 +10,23 @@
   "subclasses": [
     {
       "title": "Archfey Patron",
-      "icon": "mdi-flower"
+      "icon": "mdi-flower",
+      "title_tr": "Baş Peri Hamilesi"
     },
     {
       "title": "Celestial Patron",
-      "icon": "mdi-white-balance-sunny"
+      "icon": "mdi-white-balance-sunny",
+      "title_tr": "Göksel Hamile"
     },
     {
       "title": "Fiend Patron",
-      "icon": "mdi-fire"
+      "icon": "mdi-fire",
+      "title_tr": "İfrit Hamilesi"
     },
     {
       "title": "Great Old One Patron",
-      "icon": "mdi-eye-outline"
+      "icon": "mdi-eye-outline",
+      "title_tr": "Kadim Büyük Hamile"
     }
   ],
   "coreTraits": [

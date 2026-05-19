@@ -11,19 +11,23 @@
   "subclasses": [
     {
       "title": "Mercy",
-      "icon": "mdi-hand-heart"
+      "icon": "mdi-hand-heart",
+      "title_tr": "Merhamet"
     },
     {
       "title": "Shadow",
-      "icon": "mdi-weather-night"
+      "icon": "mdi-weather-night",
+      "title_tr": "Gölge"
     },
     {
       "title": "the Elements",
-      "icon": "mdi-weather-tornado"
+      "icon": "mdi-weather-tornado",
+      "title_tr": "Elementler"
     },
     {
       "title": "the Open Hand",
-      "icon": "mdi-hand-back-right"
+      "icon": "mdi-hand-back-right",
+      "title_tr": "Açık El"
     }
   ],
   "coreTraits": [

@@ -140,7 +140,7 @@
                   @click="goTo(sub.title)"
                 >
                   <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
-                  <span>{{ sub.title }} {{ data.subclassSuffix }}</span>
+                  <span>{{ $lf(sub, 'title') }} {{ $lf(data, 'subclassSuffix') }}</span>
                 </div>
               </div>
               <div class="feature-cards">

@@ -12,19 +12,23 @@
   "subclasses": [
     {
       "title": "Dance",
-      "icon": "mdi-shoe-ballet"
+      "icon": "mdi-shoe-ballet",
+      "title_tr": "Dans"
     },
     {
       "title": "Glamour",
-      "icon": "mdi-sparkles"
+      "icon": "mdi-sparkles",
+      "title_tr": "Büyü"
     },
     {
       "title": "Lore",
-      "icon": "mdi-book-open-page-variant"
+      "icon": "mdi-book-open-page-variant",
+      "title_tr": "Bilgi"
     },
     {
       "title": "Valor",
-      "icon": "mdi-sword"
+      "icon": "mdi-sword",
+      "title_tr": "Cesaret"
     }
   ],
   "coreTraits": [

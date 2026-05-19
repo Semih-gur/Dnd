@@ -28,14 +28,15 @@ Stored in `localStorage` key `"locale"`. Values: `"en"` or `"tr"`.
 
 ### Fully translated
 - `src/locales/tr.json` — all static UI strings
-- `src/views/races.json` — all 10 races: `desc_tr`, feat `name_tr`, feat `desc_tr` fully added
-- `src/views/SRaceView.vue` — uses `$lf(race, 'desc')` and `$lf(trait, 'name')` and `$lf(trait, 'desc')`
+- `src/views/races.json` — all 10 races: `name_tr`, `desc_tr`, feat `name_tr`, feat `desc_tr` fully added
+- `src/views/SRaceView.vue` — uses `$lf(race, 'name')`, `$lf(race, 'desc')`, `$lf(trait, 'name')`, `$lf(trait, 'desc')`
 - `src/views/backgrounds.json` — all 15 backgrounds: `name_tr`, `flavor_tr`, `abilityScore_tr`, `feat_tr`, `skill_tr`, `tool_tr`, `equipment_tr`
 - `src/views/BackgroundsView.vue` — fully uses `$lf()`
 - `src/views/feats.json` — all feat `name_tr`, `aName_tr`, and `aDesc_tr` fields added
 - `src/views/FeatsView.vue` — uses `$lf()` for feat names, ability names, and ability descriptions
 - All 12 class JSON files (`barbarian.json` … `wizard.json`) — `title_tr`, `feature_tr`, `value_tr`, `subclassPrefix_tr` added
 - All 12 class Vue views (`BarbarianView.vue` … `WizardView.vue`) — fully use `$lf()`
+- `src/views/Class/subClasses.json` — all 48 subclasses fully translated: `displayName_tr`, `title_tr` on all features, `desc_tr` on all 241 features; `cleric.json` has `subclassSuffix_tr: "Alanı"`
 
 ### Fully translated (continued)
 - `src/views/Items/weapons.json` — all 38 weapons: `name_tr`, `properties_tr`, `mastery_tr`

@@ -6,7 +6,7 @@
         <div class="hero-overlay">
           <div class="hero-content">
             <span class="hero-eyebrow">{{ $t('race.eyebrow') }}</span>
-            <h1 class="hero-title">{{ race.name }}</h1>
+            <h1 class="hero-title">{{ $lf(race, 'name') }}</h1>
             <div class="hero-badges">
               <span class="badge">{{ race.type }}</span>
               <span class="badge">{{ race.size }}</span>
@@ -29,7 +29,7 @@
 
         <!-- Traits -->
         <div class="section">
-          <h2 class="section-title">{{ $t('race.traitsTitle', { name: race.name }) }}</h2>
+          <h2 class="section-title">{{ $t('race.traitsTitle', { name: $lf(race, 'name') }) }}</h2>
           <div class="traits-list">
             <div
               v-for="trait in race.feats"

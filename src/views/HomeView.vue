@@ -7,6 +7,12 @@
         <span class="hero-eyebrow">{{ $t('home.welcomeTo') }}</span>
         <h1 class="hero-title">{{ $t('home.title') }}</h1>
         <p class="hero-subtitle">{{ $t('home.subtitle') }}</p>
+        <p class="hero-discord">
+          {{ $t('home.discordText') }}
+          <a href="https://discord.gg/bg5cPMJe" target="_blank" class="discord-link">
+            <v-icon size="16">mdi-discord</v-icon> Discord
+          </a>
+        </p>
       </div>
     </div>
 
@@ -85,7 +91,7 @@
               <v-icon size="20">mdi-patreon</v-icon>
             </a>
             <a
-              href="https://discord.gg/YOUR_SERVER"
+              href="https://discord.gg/bg5cPMJe"
               target="_blank"
               class="social-link"
             >
@@ -115,7 +121,7 @@
               <a href="https://www.patreon.com/YOUR_PAGE" target="_blank">Patreon</a>
             </li>
             <li>
-              <a href="https://discord.gg/YOUR_SERVER" target="_blank">{{ $t('home.footer.joinDiscord') }}</a>
+              <a href="https://discord.gg/bg5cPMJe" target="_blank">{{ $t('home.footer.joinDiscord') }}</a>
             </li>
           </ul>
         </div>
@@ -234,7 +240,24 @@ export default {
   font-size: 1rem;
   color: var(--text-subtle);
   line-height: 1.75;
+  margin: 0 0 0.75rem;
+}
+.hero-discord {
+  font-size: 0.9rem;
+  color: var(--text-subtle);
   margin: 0 0 2rem;
+}
+.discord-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #5865f2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+.discord-link:hover {
+  opacity: 0.8;
 }
 
 /* ── Feature cards ──────────────────────────────── */

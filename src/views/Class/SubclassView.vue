@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">{{ subclassName }}</h1>
+          <h1 class="hero-title">{{ $lf(subClass, 'displayName') }}</h1>
         </div>
       </div>
     </div>
@@ -24,11 +24,11 @@
 
           <!-- Feature card -->
           <div class="feature-card">
-            <h2 class="feature-title">{{ subClass.title }}</h2>
+            <h2 class="feature-title">{{ $lf(subClass, 'title') }}</h2>
             <span
               class="feature-body"
               style="white-space: pre-wrap"
-              v-html="subClass.desc"
+              v-html="$lf(subClass, 'desc')"
             ></span>
 
             <!-- Spell table -->

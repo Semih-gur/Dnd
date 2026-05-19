@@ -13,19 +13,23 @@
   "subclasses": [
     {
       "title": "Life",
-      "icon": "mdi-heart-pulse"
+      "icon": "mdi-heart-pulse",
+      "title_tr": "Yaşam"
     },
     {
       "title": "Light",
-      "icon": "mdi-white-balance-sunny"
+      "icon": "mdi-white-balance-sunny",
+      "title_tr": "Işık"
     },
     {
       "title": "Trickery",
-      "icon": "mdi-drama-masks"
+      "icon": "mdi-drama-masks",
+      "title_tr": "Hile"
     },
     {
       "title": "War",
-      "icon": "mdi-sword-cross"
+      "icon": "mdi-sword-cross",
+      "title_tr": "Savaş"
     }
   ],
   "coreTraits": [
@@ -670,5 +674,6 @@
   "subtitle_tr": "Yüce bir güce hizmet eden, ilahi büyü kullanan rahip şampiyon",
   "complexity_tr": "Orta Karmaşıklık",
   "primaryStat_tr": "Hikmet",
-  "subclassPrefix_tr": "Alanı"
+  "subclassPrefix_tr": "Alanı",
+  "subclassSuffix_tr": "Alanı"
 }

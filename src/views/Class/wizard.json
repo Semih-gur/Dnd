@@ -10,19 +10,23 @@
   "subclasses": [
     {
       "title": "Abjurer",
-      "icon": "mdi-shield-half-full"
+      "icon": "mdi-shield-half-full",
+      "title_tr": "Savunmacı"
     },
     {
       "title": "Diviner",
-      "icon": "mdi-eye"
+      "icon": "mdi-eye",
+      "title_tr": "Kahin"
     },
     {
       "title": "Evoker",
-      "icon": "mdi-lightning-bolt"
+      "icon": "mdi-lightning-bolt",
+      "title_tr": "Çağırıcı"
     },
     {
       "title": "Illusionist",
-      "icon": "mdi-creation"
+      "icon": "mdi-creation",
+      "title_tr": "Yanılsamacı"
     }
   ],
   "coreTraits": [
