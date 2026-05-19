@@ -398,6 +398,7 @@ export default {
   width: 100%;
 }
 .crumb {
+  margin-left: 1%;
   display: flex;
   align-items: center;
   font-size: 0.78rem;
