@@ -20,6 +20,22 @@ export default createVuetify({
 
   theme: {
     defaultTheme: "dark",
+    themes: {
+      dark: {
+        dark: true,
+        colors: {
+          background: "#0e0e1a",
+          surface: "#12121f",
+        },
+      },
+      light: {
+        dark: false,
+        colors: {
+          background: "#f0f0f8",
+          surface: "#ffffff",
+        },
+      },
+    },
   },
 });
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides

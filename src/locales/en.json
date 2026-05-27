@@ -16,11 +16,11 @@
   "home": {
     "welcomeTo": "Welcome to",
     "title": "Beholder's Tavern",
-    "subtitle": "Your complete companion for Dungeons & Dragons 2024. Explore classes, species, spells, backgrounds and more — everything you need to craft your perfect adventure.",
+    "subtitle": "Your complete companion for Dungeons & Dragons 5.5. Explore classes, species, spells, backgrounds and more — everything you need to craft your perfect adventure.",
     "discordText": "Join our community on",
     "wiki": {
       "title": "Wiki",
-      "desc": "Dive into our comprehensive wiki covering every class, species, spell, feat, background and item in D&D 2024.",
+      "desc": "Dive into our comprehensive wiki covering every class, species, spell, feat, background and item in D&D 5.5.",
       "link": "Explore Wiki"
     },
     "creator": {
@@ -30,7 +30,7 @@
     },
     "quickAccess": "Quick Access",
     "footer": {
-      "tagline": "Your complete D&D 2024 companion. Not affiliated with Wizards of the Coast.",
+      "tagline": "Your complete D&D 5.5 companion. Not affiliated with Wizards of the Coast.",
       "wiki": "Wiki",
       "support": "Support",
       "joinDiscord": "Join Discord",
@@ -38,7 +38,7 @@
     }
   },
   "wikiHome": {
-    "title": "D&D 2024 Wiki",
+    "title": "D&D 5.5 Wiki",
     "sections": [
       {
         "path": "classes",

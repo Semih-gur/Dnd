@@ -41,7 +41,7 @@
       <!-- Logo / Home -->
       <div class="nav-brand" @click="goTo('')">
         <v-icon class="brand-icon">mdi-dragon</v-icon>
-        <span class="brand-title">D&D 2024</span>
+        <span class="brand-title">D&D 5.5</span>
       </div>
 
       <!-- Desktop nav links -->
@@ -187,6 +187,7 @@ export default {
     if (saved === "light") {
       this.isDark = false;
       document.documentElement.setAttribute("data-theme", "light");
+      this.$vuetify.theme.global.name = "light";
     }
   },
 
@@ -266,9 +267,11 @@ export default {
       this.isDark = !this.isDark;
       if (this.isDark) {
         document.documentElement.removeAttribute("data-theme");
+        this.$vuetify.theme.global.name = "dark";
         localStorage.setItem("theme", "dark");
       } else {
         document.documentElement.setAttribute("data-theme", "light");
+        this.$vuetify.theme.global.name = "light";
         localStorage.setItem("theme", "light");
       }
     },
@@ -297,7 +300,7 @@ export default {
   cursor: pointer;
   flex-shrink: 0;
   padding-right: 1.5rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid var(--nav-border);
   user-select: none;
 }
 .brand-icon {
@@ -309,7 +312,7 @@ export default {
   font-weight: 700;
   letter-spacing: 0.04em;
   white-space: nowrap;
-  color: #f1f5f9;
+  color: var(--nav-text-active);
 }
 
 /* ── Desktop nav ────────────────────────────────── */
@@ -330,12 +333,12 @@ export default {
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
   position: relative;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--nav-text);
   user-select: none;
 }
 .nav-item:hover {
-  background: rgba(255, 255, 255, 0.04);
-  color: #f1f5f9;
+  background: var(--hover-bg);
+  color: var(--nav-text-active);
 }
 .nav-item.active {
   color: #c084fc;
@@ -380,13 +383,13 @@ export default {
   padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--nav-text);
   transition: background 0.15s ease, color 0.15s ease;
   user-select: none;
 }
 .theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.04);
-  color: #f1f5f9;
+  background: var(--hover-bg);
+  color: var(--nav-text-active);
 }
 
 /* Desktop theme shows, mobile theme hides */
@@ -519,8 +522,8 @@ export default {
 .nav-bar :deep(.v-toolbar__extension) {
   padding: 0 1.5rem;
   height: 36px !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--breadcrumb-ext-border);
+  background: var(--breadcrumb-ext-bg);
 }
 .breadcrumb-inner {
   display: flex;
@@ -548,21 +551,21 @@ export default {
   background: rgba(192, 132, 252, 0.08);
 }
 .crumb-active {
-  color: #f1f5f9;
+  color: var(--nav-text-active);
   cursor: default;
   font-weight: 600;
 }
 .crumb-active:hover {
   background: transparent;
-  color: #f1f5f9;
+  color: var(--nav-text-active);
 }
 .crumb-only {
   cursor: default;
-  color: #f1f5f9;
+  color: var(--nav-text-active);
 }
 .crumb-only:hover {
   background: transparent;
-  color: #f1f5f9;
+  color: var(--nav-text-active);
 }
 .crumb-home-icon {
   font-size: 0.95rem !important;
@@ -570,6 +573,6 @@ export default {
 }
 .crumb-sep {
   font-size: 0.9rem !important;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--breadcrumb-sep);
 }
 </style>

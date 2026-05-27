@@ -5,7 +5,7 @@
       <div class="header-inner">
         <span class="header-eyebrow">Beholder's Tavern</span>
         <h1 class="header-title">Character Creator</h1>
-        <p class="header-sub">Build your Level 1 character for D&D 2024</p>
+        <p class="header-sub">Build your Level 1 character for D&D 5.5</p>
       </div>
     </div>
 

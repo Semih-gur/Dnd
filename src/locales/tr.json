@@ -16,11 +16,11 @@
   "home": {
     "welcomeTo": "Hoş Geldiniz",
     "title": "Beholder's Tavern",
-    "subtitle": "Dungeons & Dragons 2024 için eksiksiz rehberiniz. Sınıflar, ırklar, büyüler, geçmişler ve daha fazlasını keşfedin — mükemmel maceranızı yaratmak için ihtiyacınız olan her şey.",
+    "subtitle": "Dungeons & Dragons 5.5 için eksiksiz rehberiniz. Sınıflar, ırklar, büyüler, geçmişler ve daha fazlasını keşfedin — mükemmel maceranızı yaratmak için ihtiyacınız olan her şey.",
     "discordText": "Topluluğumuza katılın:",
     "wiki": {
       "title": "Wiki",
-      "desc": "D&D 2024'teki her sınıfı, ırkı, büyüyü, yeteneği, geçmişi ve eşyayı kapsayan kapsamlı wikimize dalın.",
+      "desc": "D&D 5.5'teki her sınıfı, ırkı, büyüyü, yeteneği, geçmişi ve eşyayı kapsayan kapsamlı wikimize dalın.",
       "link": "Vikiyi Keşfet"
     },
     "creator": {
@@ -30,7 +30,7 @@
     },
     "quickAccess": "Hızlı Erişim",
     "footer": {
-      "tagline": "D&D 2024 için eksiksiz rehberiniz. Wizards of the Coast ile bağlantılı değildir.",
+      "tagline": "D&D 5.5 için eksiksiz rehberiniz. Wizards of the Coast ile bağlantılı değildir.",
       "wiki": "Wiki",
       "support": "Destek",
       "joinDiscord": "Discord'a Katıl",
@@ -38,7 +38,7 @@
     }
   },
   "wikiHome": {
-    "title": "D&D 2024 Wiki",
+    "title": "D&D 5.5 Wiki",
     "sections": [
       {
         "path": "classes",

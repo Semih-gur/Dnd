@@ -20,7 +20,7 @@
           <div class="card-image-wrap">
             <div class="card-img-clip">
               <v-img
-                src="../../assets/image.png"
+                :src="artMap[item.routeKey]"
                 :alt="item.label"
                 cover
                 class="card-img"
@@ -41,7 +41,17 @@
 <script>
 import router from "@/router";
 
+const artMap = {
+  weapons:     require("../../assets/items/weapons.svg"),
+  armors:      require("../../assets/items/armors.svg"),
+  potions:     require("../../assets/items/potions.svg"),
+  magic_items: require("../../assets/items/magicItems.svg"),
+};
+
 export default {
+  data() {
+    return { artMap };
+  },
   methods: {
     goTo(item) {
       router.push("/wiki/items/" + item.routeKey);

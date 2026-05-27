@@ -49,7 +49,7 @@ export default {
         changes: [
           {
             type: "new",
-            text: "Full D&D 2024 Wiki — classes, species, spells, items, feats, backgrounds",
+            text: "Full D&D 5.5 Wiki — classes, species, spells, items, feats, backgrounds",
           },
           { type: "new", text: "Character Creator with PDF export" },
         ],

@@ -46,11 +46,11 @@ export default {
       router.push("/wiki/species/" + item.routeKey);
     },
     getImage(filename) {
-      if (!filename) return require("../assets/image.png");
+      if (!filename) return null;
       try {
         return require(`../assets/races/${filename}`);
       } catch {
-        return require("../assets/image.png");
+        return null;
       }
     },
   },

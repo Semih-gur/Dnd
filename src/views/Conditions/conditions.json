@@ -37,7 +37,7 @@
   {
     "name": "Grappled",
     "name_tr": "Yakalanmış",
-    "icon": "mdi-hand-front-right",
+    "icon": "mdi-hand-right",
     "desc": "A Grappled creature's Speed becomes 0 and can't benefit from any bonus to Speed. The condition ends if the grappler is Incapacitated, or if the creature is moved out of the grappler's reach.",
     "desc_tr": "Yakalanmış yaratığın Hızı 0 olur ve Hız bonuslarından yararlanamaz. Yakalayan Etkisiz Hale Gelirse veya yaratık yakalayıcının erişim alanı dışına çıkarsa durum sona erer."
   },
