@@ -11,37 +11,55 @@
         "feats": [
           {
             "name": "Celestial Resistance",
-            "desc": "You have Resistance to Necrotic damage and Radiant damage."
+            "desc": "You have Resistance to Necrotic damage and Radiant damage.",
+            "name_tr": "Göksel Direnç",
+            "desc_tr": "Nekrotik hasara ve Kutsal hasara Direncin vardır."
           },
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü",
+            "desc_tr": "60 feet menzilinde Karanlık Görüşün vardır."
           },
           {
             "name": "Healing Hands",
-            "desc": "As a Magic action, you can touch a creature and roll a number of d4s equal to your Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once you use this trait, you can't use it again until you finish a Long Rest."
+            "desc": "As a Magic action, you can touch a creature and roll a number of d4s equal to your Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once you use this trait, you can't use it again until you finish a Long Rest.",
+            "name_tr": "İyileştirici Eller",
+            "desc_tr": "Büyü Aksiyonu olarak, bir yaratığa dokunabilir ve Uzmanlık Bonusun kadar d4 atabilirsin. Yaratık, toplam rulo kadar Can Puanı geri kazanır. Bu özelliği bir kez kullandıktan sonra Uzun Dinlenme tamamlayana kadar tekrar kullanamazsın."
           },
           {
             "name": "Light Bearer",
-            "desc": "You know the Light cantrip. Charisma is your spellcasting ability for it."
+            "desc": "You know the Light cantrip. Charisma is your spellcasting ability for it.",
+            "name_tr": "Işık Taşıyıcı",
+            "desc_tr": "Işık basit büyüsünü bilirsin. Bu büyü için büyü yapma yeteneğin Karizma'dır."
           },
           {
             "name": "Celestial Revelation",
-            "desc": "When you reach character level 3, choose one of the revelation options below. Thereafter you can use a Bonus Action to unleash the celestial energy within yourself, transforming for 1 minute or until you end it as a Bonus Action. Once you use this trait, you can't use it again until you finish a Long Rest."
+            "desc": "When you reach character level 3, choose one of the revelation options below. Thereafter you can use a Bonus Action to unleash the celestial energy within yourself, transforming for 1 minute or until you end it as a Bonus Action. Once you use this trait, you can't use it again until you finish a Long Rest.",
+            "name_tr": "Göksel Tecelli",
+            "desc_tr": "Karakter seviye 3'e ulaştığında, aşağıdaki tecelli seçeneklerinden birini seç. Bundan sonra, içindeki göksel enerjiyi serbest bırakmak için Bonus Aksiyon kullanabilir; 1 dakika boyunca ya da Bonus Aksiyon olarak bitirene kadar dönüşüme girebilirsin. Bu özelliği bir kez kullandıktan sonra Uzun Dinlenme tamamlayana kadar tekrar kullanamazsın."
           },
           {
             "name": "Celestial Revelation: Heavenly Wings",
-            "desc": "You sprout spectral wings. Until the transformation ends, you have a Fly Speed equal to your Speed."
+            "desc": "You sprout spectral wings. Until the transformation ends, you have a Fly Speed equal to your Speed.",
+            "name_tr": "Göksel Tecelli: Semavi Kanatlar",
+            "desc_tr": "Hayali kanatlar büyürsün. Dönüşüm sonlanana kadar Uçuş Hızın, Hızına eşit olur."
           },
           {
             "name": "Celestial Revelation: Inner Radiance",
-            "desc": "Searing light temporarily radiates from your eyes and mouth. Until the transformation ends, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your Proficiency Bonus."
+            "desc": "Searing light temporarily radiates from your eyes and mouth. Until the transformation ends, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your Proficiency Bonus.",
+            "name_tr": "Göksel Tecelli: İç Işıltı",
+            "desc_tr": "Gözlerinden ve ağzından geçici olarak yakıcı bir ışık yayılır. Dönüşüm sonlanana kadar 10 feet yarıçapında Parlak Işık ve ek 10 feet için Loş Işık yayarsın; her turunun sonunda 10 feet yakınındaki her yaratık Uzmanlık Bonusun kadar Kutsal hasar alır."
           },
           {
             "name": "Celestial Revelation: Necrotic Shroud",
-            "desc": "Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 + your Charisma modifier + your Proficiency Bonus) or have the Frightened condition until the end of your next turn. For the transformation's duration, once per turn when you deal damage to a creature, you can deal extra Necrotic damage equal to your Proficiency Bonus."
+            "desc": "Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 + your Charisma modifier + your Proficiency Bonus) or have the Frightened condition until the end of your next turn. For the transformation's duration, once per turn when you deal damage to a creature, you can deal extra Necrotic damage equal to your Proficiency Bonus.",
+            "name_tr": "Göksel Tecelli: Nekrotik Kefen",
+            "desc_tr": "Gözlerin geçici olarak karanlık havuzlara dönüşür ve sırtından geçici olarak uçamayan kanatlar filizlenir. Müttefiklerinden başka, 10 feet yakınındaki yaratıklar Karizma kurtarma atışında başarılı olmalıdır (GZ 8 + Karizma modifikatörün + Uzmanlık Bonusun) yoksa bir sonraki turunun sonuna kadar Korkmuş durumuna girerler. Dönüşüm süresince, tur başına bir kez bir yaratığa hasar verdiğinde Uzmanlık Bonusun kadar ekstra Nekrotik hasar verebilirsin."
           }
-        ]
+        ],
+        "desc_tr": "Aasimar'lar, ruhlarında Üst Düzlemlerin bir kıvılcımını taşıyan ölümlülerdir. İster meleksi bir varlıktan türemiş, ister göksel güçle dolu olsunlar, bu kıvılcımı körükleyerek ışık, şifa ve semavi öfke getirebilirler. Aasimar'lar herhangi bir ölümlü topluluk içinde ortaya çıkabilir. Ebeveynlerine benzerler ama 160 yıla kadar yaşarlar ve göksel miraslarına işaret eden özellikler taşırlar: metalik çiller, ışıl ışıl gözler, bir hale ya da gümüş, opal yeşili veya bakır kırmızısı deri renkleri.",
+        "name_tr": "Aasimar"
       }
     ]
   },
@@ -60,36 +78,78 @@
             "desc": "Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.",
             "table": [
               [
-                { "dragon": "Black", "damage": "Acid" },
-                { "dragon": "Blue", "damage": "Lightning" },
-                { "dragon": "Brass", "damage": "Fire" },
-                { "dragon": "Bronze", "damage": "Lightning" },
-                { "dragon": "Copper", "damage": "Acid" },
-                { "dragon": "Gold", "damage": "Fire" },
-                { "dragon": "Green", "damage": "Poison" },
-                { "dragon": "Red", "damage": "Fire" },
-                { "dragon": "Silver", "damage": "Cold" },
-                { "dragon": "White", "damage": "Cold" }
+                {
+                  "dragon": "Black",
+                  "damage": "Acid"
+                },
+                {
+                  "dragon": "Blue",
+                  "damage": "Lightning"
+                },
+                {
+                  "dragon": "Brass",
+                  "damage": "Fire"
+                },
+                {
+                  "dragon": "Bronze",
+                  "damage": "Lightning"
+                },
+                {
+                  "dragon": "Copper",
+                  "damage": "Acid"
+                },
+                {
+                  "dragon": "Gold",
+                  "damage": "Fire"
+                },
+                {
+                  "dragon": "Green",
+                  "damage": "Poison"
+                },
+                {
+                  "dragon": "Red",
+                  "damage": "Fire"
+                },
+                {
+                  "dragon": "Silver",
+                  "damage": "Cold"
+                },
+                {
+                  "dragon": "White",
+                  "damage": "Cold"
+                }
               ]
-            ]
+            ],
+            "name_tr": "Ejderha Soyu",
+            "desc_tr": "Soyun bir ejderha ataya dayanmaktadır. Ejderha Ataları tablosundan ejderha türünü seç. Seçimin, Nefes Silahı ve Hasar Direnci özelliklerini ve görünüşünü etkiler."
           },
           {
             "name": "Breath Weapon",
-            "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10). You can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+            "desc": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10). You can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+            "name_tr": "Nefes Silahı",
+            "desc_tr": "Sıranın Saldırı Aksiyonunu aldığında, saldırılarından birini 15 feet'lik bir Koni ya da 5 feet genişliğinde 30 feet'lik bir Hat şeklinde büyülü enerji nefesiyle değiştirebilirsin (her seferinde seç). O alandaki her yaratık Çeviklik kurtarma atışı yapmalıdır (GZ 8 artı Bünye modifikatörün ve Uzmanlık Bonusun). Başarısız kurtarma atışında yaratık, Ejderha Soyun tarafından belirlenen türde 1d10 hasar alır. Başarılı kurtarma atışında yarım hasar alır. Bu hasar karakter seviye 5'te (2d10), 11'de (3d10) ve 17'de (4d10) 1d10 artar. Bu Nefes Silahını Uzmanlık Bonusun kadar kullanabilirsin ve Uzun Dinlenme tamamladığında harcanan tüm kullanımları geri kazanırsın."
           },
           {
             "name": "Damage Resistance",
-            "desc": "You have Resistance to the damage type determined by your Draconic Ancestry trait."
+            "desc": "You have Resistance to the damage type determined by your Draconic Ancestry trait.",
+            "name_tr": "Hasar Direnci",
+            "desc_tr": "Ejderha Soyu özelliğin tarafından belirlenen hasar türüne Direncin vardır."
           },
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü",
+            "desc_tr": "60 feet menzilinde Karanlık Görüşün vardır."
           },
           {
             "name": "Draconic Flight",
-            "desc": "When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Once you use this trait, you can't use it again until you finish a Long Rest."
+            "desc": "When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Once you use this trait, you can't use it again until you finish a Long Rest.",
+            "name_tr": "Ejderha Uçuşu",
+            "desc_tr": "Karakter seviye 5'e ulaştığında, geçici uçuş için ejderha büyüsünü kanalize edebilirsin. Bonus Aksiyon olarak, sırtında 10 dakika ya da kanatları geri çekene kadar (aksiyon gerekmez) veya Eylem Yapamaz Durumda olana kadar hayali kanatlar filizlenir. Bu süre zarfında Uçuş Hızın, Hızına eşit olur. Bu özelliği bir kez kullandıktan sonra Uzun Dinlenme tamamlayana kadar tekrar kullanamazsın."
           }
-        ]
+        ],
+        "desc_tr": "Ejderha Soylularının ataları, renkli ve metalik ejderhaların yumurtalarından çıktı. Bir efsaneye göre bu yumurtalar, çok evrenini ejderhakind erdemlerini somutlaştıran insanlarla doldurmak isteyen ejderha tanrıları Bahamut ve Tiamat tarafından kutsandı. Ejderha Soylular, kendilerini korkuyla ve anlayışsızlıkla karşılayan bir dünyada gururla yürürler.",
+        "name_tr": "Ejderha Kanı"
       }
     ]
   },
@@ -105,21 +165,31 @@
         "feats": [
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 120 feet."
+            "desc": "You have Darkvision with a range of 120 feet.",
+            "name_tr": "Karanlık Görüşü",
+            "desc_tr": "120 feet menzilinde Karanlık Görüşün vardır."
           },
           {
             "name": "Dwarven Resilience",
-            "desc": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition."
+            "desc": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.",
+            "name_tr": "Cüce Direnci",
+            "desc_tr": "Zehir hasarına Direncin vardır. Ayrıca Zehirlenmiş durumunu önlemek veya sona erdirmek için yaptığın kurtarma atışlarında Avantajın vardır."
           },
           {
             "name": "Dwarven Toughness",
-            "desc": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level."
+            "desc": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.",
+            "name_tr": "Cüce Sağlamlığı",
+            "desc_tr": "Can Puan maksimumun 1 artar ve her seviye kazandığında 1 daha artar."
           },
           {
             "name": "Stonecunning",
-            "desc": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked. You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+            "desc": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked. You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+            "name_tr": "Taş Bilgeliği",
+            "desc_tr": "Bonus Aksiyon olarak, 10 dakika boyunca 60 feet menzilinde Sarsıntı Hissi kazanırsın. Bu Sarsıntı Hissini kullanmak için taş bir yüzeyde durman veya taş bir yüzeye dokunman gerekir. Taş doğal veya işlenmiş olabilir. Bu Bonus Aksiyonu Uzmanlık Bonusun kadar kullanabilirsin ve Uzun Dinlenme tamamladığında harcanan tüm kullanımları geri kazanırsın."
           }
-        ]
+        ],
+        "desc_tr": "Cüceler, dağlara ve derin yere olan atalardan gelen bağlantılarıyla tanımlanır. Ruh Demircisi Moradin, Cüceleri yarattığında taş ve değerli metallerle çalıştı; bu köken onların dayanıklılığında ve direncinde hâlâ kendini gösterir. Cüceler genellikle toplu yapılıdır, 4 ile 5 feet arasında durur ve onları olağanüstü sağlam kılan geniş yapıları vardır.",
+        "name_tr": "Cüce"
       }
     ]
   },
@@ -135,7 +205,9 @@
         "feats": [
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü",
+            "desc_tr": "60 feet menzilinde Karanlık Görüşün vardır."
           },
           {
             "name": "Elven Lineage",
@@ -161,21 +233,31 @@
                   "level5": "Pass Without Trace"
                 }
               ]
-            ]
+            ],
+            "name_tr": "Elf Soyu",
+            "desc_tr": "Sana doğaüstü yetenekler kazandıran bir soyun parçasısın. Elf Soyları tablosundan bir soy seç. O soyun 1. seviye faydasını kazanırsın. Karakter seviye 3 ve 5'e ulaştığında, tabloda gösterildiği gibi daha yüksek seviyeli bir büyü öğrenirsin. O büyü her zaman hazır olur. Büyü slotu kullanmadan bir kez yapabilirsin ve Uzun Dinlenme tamamladığında bu yeteneği geri kazanırsın. Bu büyüler için büyü yapma yeteneğin Zeka, Bilgelik veya Karizma'dır (soy seçiminde belirle)."
           },
           {
             "name": "Fey Ancestry",
-            "desc": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
+            "desc": "You have Advantage on saving throws you make to avoid or end the Charmed condition.",
+            "name_tr": "Peri Atası",
+            "desc_tr": "Büyülenmiş durumunu önlemek veya sona erdirmek için yaptığın kurtarma atışlarında Avantajın vardır."
           },
           {
             "name": "Keen Senses",
-            "desc": "You have proficiency in the Insight, Perception, or Survival skill (choose one)."
+            "desc": "You have proficiency in the Insight, Perception, or Survival skill (choose one).",
+            "name_tr": "Keskin Duyular",
+            "desc_tr": "Kavrayış, Algı veya Hayatta Kalma becerisinde uzmanlığın vardır (birini seç)."
           },
           {
             "name": "Trance",
-            "desc": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
+            "desc": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
+            "name_tr": "Trans",
+            "desc_tr": "Uyuman gerekmez ve büyü seni uyutamaz. O saatleri trana benzer bir meditasyonda geçirirsen, bilincini korurken 4 saatte Uzun Dinlenme tamamlayabilirsin."
           }
-        ]
+        ],
+        "desc_tr": "Tanrı Corellon tarafından yaratılan ilk Elfler, formlarını istedikleri gibi değiştirebilirdi. Lolth'un ihaneti sonrasında bu yeteneği kaybettiler ve sabit formlara sahip olmaya mahkum edildiler. Elflerin sivri kulakları vardır ve yüz ile vücut tüyünden yoksundur. Yaklaşık 750 yıl yaşarlar ve uyumazlar; bunun yerine trana benzer bir meditasyon haline girerler. Üç soy mevcuttur: genellikle Karanlık Altın'da yaşayan Drow'lar; Periwild büyüsüyle dolu Yüksek Elfler ve ilkçağ ormanlarının büyüsünü taşıyan Orman Elfleri.",
+        "name_tr": "Elf"
       }
     ]
   },
@@ -191,21 +273,31 @@
         "feats": [
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü",
+            "desc_tr": "60 feet menzilinde Karanlık Görüşün vardır."
           },
           {
             "name": "Gnomish Cunning",
-            "desc": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws."
+            "desc": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
+            "name_tr": "Gnome Kurnazlığı",
+            "desc_tr": "Zeka, Bilgelik ve Karizma kurtarma atışlarında Avantajın vardır."
           },
           {
             "name": "Gnomish Lineage: Forest Gnome",
-            "desc": "You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+            "desc": "You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+            "name_tr": "Gnome Soyu: Orman Gnome'u",
+            "desc_tr": "Küçük Yanılsama basit büyüsünü bilirsin. Ayrıca Hayvanlarla Konuş büyüsü her zaman hazır olur. Büyü slotu kullanmadan Uzmanlık Bonusun kadar kullanabilirsin ve Uzun Dinlenme tamamladığında harcanan tüm kullanımları geri kazanırsın."
           },
           {
             "name": "Gnomish Lineage: Rock Gnome",
-            "desc": "You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box."
+            "desc": "You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box.",
+            "name_tr": "Gnome Soyu: Kaya Gnome'u",
+            "desc_tr": "Onarma ve Hokkabazlık basit büyülerini bilirsin. Bunun yanı sıra, oyuncak, çakmak veya müzik kutusu gibi Çok Küçük bir saat mekanizmalı cihaz (ZS 5, 1 Can Puanı) oluşturmak için Hokkabazlık büyüsü yaparak 10 dakika harcayabilirsin."
           }
-        ]
+        ],
+        "desc_tr": "Gnomlar, icat, yanılsama ve yer altı yaşamının tanrıları tarafından yaratılmış büyülü halklardır. İlk Gnomlar, toprağa gömülü değerli taşların büyüsünden şekillendi ve o büyüyle bağları hâlâ sürmektedir. Gnomlar genellikle kısa ve ince yapılıdır, 3 ile 4 feet arasında durur; kurcalama ve keşfe düşkün meraklı varlıklardır.",
+        "name_tr": "Gnome"
       }
     ]
   },
@@ -221,37 +313,55 @@
         "feats": [
           {
             "name": "Giant Ancestry: Cloud's Jaunt",
-            "desc": "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+            "desc": "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+            "name_tr": "Dev Atası: Bulutun Yolculuğu",
+            "desc_tr": "Bonus Aksiyon olarak, görebildiğin boş bir alana büyüsel olarak 30 feetee kadar ışınlanabilirsin. Bu faydayı Uzmanlık Bonusun kadar kullanabilirsin ve Uzun Dinlenme tamamladığında harcanan tüm kullanımları geri kazanırsın."
           },
           {
             "name": "Giant Ancestry: Fire's Burn",
-            "desc": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
+            "desc": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
+            "name_tr": "Dev Atası: Ateşin Yanması",
+            "desc_tr": "Saldırı rolosuyla bir hedefe isabet edip hasar verdiğinde, hedefe aynı zamanda 1d10 Ateş hasarı verebilirsin. Bu faydayı Uzmanlık Bonusun kadar kullanabilirsin ve Uzun Dinlenme tamamladığında harcanan tüm kullanımları geri kazanırsın."
           },
           {
             "name": "Giant Ancestry: Frost's Chill",
-            "desc": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn."
+            "desc": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.",
+            "name_tr": "Dev Atası: Kışın Soğuğu",
+            "desc_tr": "Saldırı rolosuyla bir hedefe isabet edip hasar verdiğinde, hedefe aynı zamanda 1d6 Soğuk hasarı verebilir ve bir sonraki turunun başına kadar onun Hızını 10 feet azaltabilirsin."
           },
           {
             "name": "Giant Ancestry: Hill's Tumble",
-            "desc": "When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition."
+            "desc": "When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition.",
+            "name_tr": "Dev Atası: Tepenin Yuvarlanması",
+            "desc_tr": "Saldırı rolosuyla Büyük veya daha küçük bir yaratığa isabet edip hasar verdiğinde, hedefe Yerde Yatma durumu verebilirsin."
           },
           {
             "name": "Giant Ancestry: Stone's Endurance",
-            "desc": "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total."
+            "desc": "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.",
+            "name_tr": "Dev Atası: Taşın Dayanıklılığı",
+            "desc_tr": "Hasar aldığında, 1d12 atmak için Tepki alabilirsin. Atılan sayıya Bünye modifikatörünü ekle ve hasarı bu toplamla azalt."
           },
           {
             "name": "Giant Ancestry: Storm's Thunder",
-            "desc": "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature."
+            "desc": "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.",
+            "name_tr": "Dev Atası: Fırtınanın Gök Gürültüsü",
+            "desc_tr": "60 feet yakınındaki bir yaratıktan hasar aldığında, o yaratığa 1d8 Gök Gürültüsü hasarı vermek için Tepki alabilirsin."
           },
           {
             "name": "Large Form",
-            "desc": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required)."
+            "desc": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required).",
+            "name_tr": "Büyük Beden",
+            "desc_tr": "Karakter seviye 5'ten itibaren, yeterince geniş bir alandaysan Bonus Aksiyon olarak boyunu Büyük olarak değiştirebilirsin. Bu dönüşüm 10 dakika ya da bitirene kadar sürer (aksiyon gerekmez)."
           },
           {
             "name": "Powerful Build",
-            "desc": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity."
+            "desc": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.",
+            "name_tr": "Güçlü Yapı",
+            "desc_tr": "Yakalanmış durumunu sona erdirmek için yaptığın herhangi bir nitelik kontrolünde Avantajın vardır. Ayrıca taşıma kapasiteni belirlerken bir boy büyük sayılırsın."
           }
-        ]
+        ],
+        "desc_tr": "Goliath'lar, devlerden uzak bir şekilde türemiş ve onların büyüklüğü ile gücünün bir kısmını miras almışlardır. Taşlar, gökyüzü ve rüzgar, Goliath'lar için et ve kan kadar önemlidir. Dayanıklılıkları ve rekabetçi yapıları onları doğal maceracılar kılar. 7 ile 8 feet arasında dururlar ve genellikle görkemli olarak kabul edilirler.",
+        "name_tr": "Golyat"
       }
     ]
   },
@@ -267,21 +377,31 @@
         "feats": [
           {
             "name": "Brave",
-            "desc": "You have Advantage on saving throws you make to avoid or end the Frightened condition."
+            "desc": "You have Advantage on saving throws you make to avoid or end the Frightened condition.",
+            "name_tr": "Cesur",
+            "desc_tr": "Korkmuş durumunu önlemek veya sona erdirmek için yaptığın kurtarma atışlarında Avantajın vardır."
           },
           {
             "name": "Halfling Nimbleness",
-            "desc": "You can move through the space of any creature that is a size larger than you, but you can't stop in the same space."
+            "desc": "You can move through the space of any creature that is a size larger than you, but you can't stop in the same space.",
+            "name_tr": "Bodurcan Çevikliği",
+            "desc_tr": "Senden bir boy büyük herhangi bir yaratığın bulunduğu alandan geçebilirsin, ancak aynı alanda duramaksın."
           },
           {
             "name": "Luck",
-            "desc": "When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll."
+            "desc": "When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.",
+            "name_tr": "Şans",
+            "desc_tr": "D20 Testinin d20'sinde 1 attığında, zarı yeniden atabilirsin; yeni ruloyu kullanmak zorundasın."
           },
           {
             "name": "Naturally Stealthy",
-            "desc": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you."
+            "desc": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.",
+            "name_tr": "Doğal Gizlilik",
+            "desc_tr": "Yalnızca senden en az bir boy büyük bir yaratık tarafından gizlenmiş olsan bile Saklanma Aksiyonunu alabilirsin."
           }
-        ]
+        ],
+        "desc_tr": "Bodurcanlar, ev konforunu seven ama macera ve gezme arzusuyla çekilen küçük, çevik halklardır. Pratik ve beceriklidirler; tehlikeden sıyrılma ve iyi şansa ulaşma konusunda özel bir yetenekleri vardır.",
+        "name_tr": "Bodurcan"
       }
     ]
   },
@@ -297,17 +417,25 @@
         "feats": [
           {
             "name": "Resourceful",
-            "desc": "You gain Heroic Inspiration whenever you finish a Long Rest."
+            "desc": "You gain Heroic Inspiration whenever you finish a Long Rest.",
+            "name_tr": "Becerikli",
+            "desc_tr": "Uzun Dinlenme tamamladığında Kahramanca İlham kazanırsın."
           },
           {
             "name": "Skillful",
-            "desc": "You gain proficiency in one skill of your choice."
+            "desc": "You gain proficiency in one skill of your choice.",
+            "name_tr": "Yetenekli",
+            "desc_tr": "Seçtiğin bir beceride uzmanlık kazanırsın."
           },
           {
             "name": "Versatile",
-            "desc": "You gain an Origin feat of your choice. Skilled is recommended."
+            "desc": "You gain an Origin feat of your choice. Skilled is recommended.",
+            "name_tr": "Çok Yönlü",
+            "desc_tr": "Seçtiğin bir Köken yeteneği kazanırsın. Yetenekli önerilir."
           }
-        ]
+        ],
+        "desc_tr": "İnsanlar, çok evrende tüm türlerin en uyumlu ve yaygın olanıdır. Hırslı yapıları, merakları ve dinmek bilmez istekleri, büyük imparatorluklar kurmalarına ve bilinen dünyanın her köşesine yayılmalarına izin vermiştir.",
+        "name_tr": "İnsan"
       }
     ]
   },
@@ -323,17 +451,25 @@
         "feats": [
           {
             "name": "Adrenaline Rush",
-            "desc": "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus."
+            "desc": "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.",
+            "name_tr": "Adrenalin Atışı",
+            "desc_tr": "Atılış Aksiyonunu Bonus Aksiyon olarak alabilirsin. Bunu yaptığında Uzmanlık Bonusun kadar Geçici Can Puanı kazanırsın."
           },
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 120 feet."
+            "desc": "You have Darkvision with a range of 120 feet.",
+            "name_tr": "Karanlık Görüşü",
+            "desc_tr": "120 feet menzilinde Karanlık Görüşün vardır."
           },
           {
             "name": "Relentless Endurance",
-            "desc": "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest."
+            "desc": "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest.",
+            "name_tr": "Amansız Dayanıklılık",
+            "desc_tr": "0 Can Puanına düşürülüp hemen öldürülmediğinde, bunun yerine 1 Can Puanına düşebilirsin. Bu özelliği bir kez kullandıktan sonra Uzun Dinlenme tamamlayana kadar tekrar kullanamazsın."
           }
-        ]
+        ],
+        "desc_tr": "Orklar, yaratılışlarını katliam ve fırtınaların güçlü tanrısı Gruumsh'a bağlar; o onların kalplerine öfke ve açlık doldurdu. Gruumsh'un zulümünden yüz çeviren Orklar bile onun armağanlarını taşır: ilerleme konusundaki amansız irade ve teslim olmayı reddeden bir vücut.",
+        "name_tr": "Ork"
       }
     ]
   },
@@ -349,7 +485,9 @@
         "feats": [
           {
             "name": "Darkvision",
-            "desc": "You have Darkvision with a range of 60 feet."
+            "desc": "You have Darkvision with a range of 60 feet.",
+            "name_tr": "Karanlık Görüşü",
+            "desc_tr": "60 feet menzilinde Karanlık Görüşün vardır."
           },
           {
             "name": "Fiendish Legacy",
@@ -375,13 +513,19 @@
                   "level5": "Darkness"
                 }
               ]
-            ]
+            ],
+            "name_tr": "İblis Mirası",
+            "desc_tr": "Sana doğaüstü yetenekler kazandıran bir mirasın alıcısısın. İblis Mirasları tablosundan bir miras seç. Seçilen mirasın 1. seviye faydasını kazanırsın. Karakter seviye 3 ve 5'e ulaştığında, tabloda gösterildiği gibi daha yüksek seviyeli bir büyü öğrenirsin."
           },
           {
             "name": "Otherworldly Presence",
-            "desc": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
+            "desc": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.",
+            "name_tr": "Öteki Dünya Varlığı",
+            "desc_tr": "Mucizeler basit büyüsünü bilirsin. Bu özellikle yaptığında, büyü İblis Mirası özelliğin için kullandığın büyü yapma yeteneğini kullanır."
           }
-        ]
+        ],
+        "desc_tr": "Şeytan Melezler ya Alt Düzlemlerde doğmuştur ya da oradan gelen iblis ataları vardır. Bir Şeytan Mezlez'in iblissi özellikleri gurur veya utanç kaynağı olabilir; bazen her ikisi de. Üç iblissi miras vardır: iblislere ve kaosa bağlı Uçurum mirası; yugoloth'lara ve gece kocakarılarına bağlı Chthonik miras; ve şeytanlardan gelen Cehennemsel miras.",
+        "name_tr": "Tiefling"
       }
     ]
   }

@@ -7,36 +7,72 @@
   "accentRgb": "99, 102, 241",
   "subclassRoute": "/wiki/classes/fighter/",
   "multiclassTraits": "Gain the Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.",
-
   "subclasses": [
-    { "title": "Battle Master", "icon": "mdi-chess-knight" },
-    { "title": "Champion", "icon": "mdi-shield-half-full" },
-    { "title": "Eldritch Knight", "icon": "mdi-hat-fedora" },
-    { "title": "Psi Warrior", "icon": "mdi-brain" }
+    {
+      "title": "Battle Master",
+      "icon": "mdi-chess-knight",
+      "title_tr": "Savaş Ustası"
+    },
+    {
+      "title": "Champion",
+      "icon": "mdi-shield-half-full",
+      "title_tr": "Şampiyon"
+    },
+    {
+      "title": "Eldritch Knight",
+      "icon": "mdi-hat-fedora",
+      "title_tr": "Gizemli Şövalye"
+    },
+    {
+      "title": "Psi Warrior",
+      "icon": "mdi-brain",
+      "title_tr": "Psi Savaşçı"
+    }
   ],
-
   "coreTraits": [
-    { "label": "Primary Ability", "value": "Strength or Dexterity" },
-    { "label": "Hit Point Die", "value": "D10 per Fighter level" },
+    {
+      "label": "Primary Ability",
+      "value": "Strength or Dexterity",
+      "label_tr": "Birincil Nitelik",
+      "value_tr": "Güç veya Çeviklik"
+    },
+    {
+      "label": "Hit Point Die",
+      "value": "D10 per Fighter level",
+      "label_tr": "Can Puanı Zarı",
+      "value_tr": "Savaşçı seviyesi başına D10"
+    },
     {
       "label": "Saving Throw Proficiencies",
-      "value": "Strength and Constitution"
+      "value": "Strength and Constitution",
+      "label_tr": "Kurtarma Atışı Uzmanlıkları",
+      "value_tr": "Güç ve Bünye"
     },
     {
       "label": "Skill Proficiencies",
-      "value": "Choose 2: Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Persuasion, or Survival"
+      "value": "Choose 2: Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Persuasion, or Survival",
+      "label_tr": "Beceri Uzmanlıkları",
+      "value_tr": "2 seçin: Akrobasi, Hayvan Bakımı, Atletizm, Tarih, İçgüdü, Gözdağı, Algı, İkna veya Hayatta Kalma"
     },
-    { "label": "Weapon Proficiencies", "value": "Simple and Martial weapons" },
+    {
+      "label": "Weapon Proficiencies",
+      "value": "Simple and Martial weapons",
+      "label_tr": "Silah Uzmanlıkları",
+      "value_tr": "Basit ve Savaş Silahları"
+    },
     {
       "label": "Armor Training",
-      "value": "Light, Medium, and Heavy armor and Shields"
+      "value": "Light, Medium, and Heavy armor and Shields",
+      "label_tr": "Zırh Eğitimi",
+      "value_tr": "Hafif, Orta ve Ağır zırh ve Kalkanlar"
     },
     {
       "label": "Starting Equipment",
-      "value": "Choose A or B: (A) Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer's Pack, and 4 GP; or (B) 155 GP"
+      "value": "Choose A or B: (A) Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer's Pack, and 4 GP; or (B) 155 GP",
+      "label_tr": "Başlangıç Ekipmanı",
+      "value_tr": "A veya B seçin: (A) Zincir Zırh, Büyük Kılıç, Zincirgürz, 8 Kısa Mızrak, Zindan Çantası ve 4 AP; veya (B) 155 AP"
     }
   ],
-
   "tableColumns": [
     {
       "key": "secondWind",
@@ -55,10 +91,10 @@
       "key": "weaponMastery",
       "label": "Weapon Mastery",
       "badge": true,
-      "badgeClass": "wm-badge"
+      "badgeClass": "wm-badge",
+      "label_tr": "Silah Hakimiyeti"
     }
   ],
-
   "levels": [
     {
       "level": "1",
@@ -66,7 +102,8 @@
       "feature": "Fighting Style, Second Wind, Weapon Mastery",
       "secondWind": "2",
       "actionSurge": "—",
-      "weaponMastery": "3"
+      "weaponMastery": "3",
+      "feature_tr": "Dövüş Stili, İkinci Nefes, Silah Hakimiyeti"
     },
     {
       "level": "2",
@@ -74,7 +111,8 @@
       "feature": "Action Surge, Tactical Mind",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "3"
+      "weaponMastery": "3",
+      "feature_tr": "Aksiyon Atılımı, Taktik Akıl"
     },
     {
       "level": "3",
@@ -82,7 +120,8 @@
       "feature": "Fighter Subclass",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "3"
+      "weaponMastery": "3",
+      "feature_tr": "Savaşçı Alt Sınıfı"
     },
     {
       "level": "4",
@@ -90,7 +129,8 @@
       "feature": "Ability Score Improvement",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "5",
@@ -98,7 +138,8 @@
       "feature": "Extra Attack, Tactical Shift",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Ekstra Saldırı, Taktik Kayma"
     },
     {
       "level": "6",
@@ -106,7 +147,8 @@
       "feature": "Ability Score Improvement",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "7",
@@ -114,7 +156,8 @@
       "feature": "Subclass Feature",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "8",
@@ -122,7 +165,8 @@
       "feature": "Ability Score Improvement",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "9",
@@ -130,7 +174,8 @@
       "feature": "Indomitable, Tactical Master",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "4"
+      "weaponMastery": "4",
+      "feature_tr": "Yenilmez, Taktik Usta"
     },
     {
       "level": "10",
@@ -138,7 +183,8 @@
       "feature": "Subclass Feature",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "5"
+      "weaponMastery": "5",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "11",
@@ -146,7 +192,8 @@
       "feature": "Two Extra Attacks",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "5"
+      "weaponMastery": "5",
+      "feature_tr": "İki Ekstra Saldırı"
     },
     {
       "level": "12",
@@ -154,7 +201,8 @@
       "feature": "Ability Score Improvement",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "5"
+      "weaponMastery": "5",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "13",
@@ -162,7 +210,8 @@
       "feature": "Studied Attacks",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "5"
+      "weaponMastery": "5",
+      "feature_tr": "İncelenmiş Saldırılar"
     },
     {
       "level": "14",
@@ -170,7 +219,8 @@
       "feature": "Ability Score Improvement",
       "secondWind": "2",
       "actionSurge": "1",
-      "weaponMastery": "5"
+      "weaponMastery": "5",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "15",
@@ -178,7 +228,8 @@
       "feature": "Subclass Feature",
       "secondWind": "3",
       "actionSurge": "1",
-      "weaponMastery": "5"
+      "weaponMastery": "5",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "16",
@@ -186,7 +237,8 @@
       "feature": "Ability Score Improvement",
       "secondWind": "3",
       "actionSurge": "1",
-      "weaponMastery": "6"
+      "weaponMastery": "6",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "17",
@@ -194,7 +246,8 @@
       "feature": "Action Surge (2 uses)",
       "secondWind": "3",
       "actionSurge": "2",
-      "weaponMastery": "6"
+      "weaponMastery": "6",
+      "feature_tr": "Aksiyon Atılımı (2 kullanım)"
     },
     {
       "level": "18",
@@ -202,7 +255,8 @@
       "feature": "Subclass Feature",
       "secondWind": "3",
       "actionSurge": "2",
-      "weaponMastery": "6"
+      "weaponMastery": "6",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "19",
@@ -210,7 +264,8 @@
       "feature": "Epic Boon",
       "secondWind": "3",
       "actionSurge": "2",
-      "weaponMastery": "6"
+      "weaponMastery": "6",
+      "feature_tr": "Destansı Lütuf"
     },
     {
       "level": "20",
@@ -218,25 +273,31 @@
       "feature": "Three Extra Attacks",
       "secondWind": "3",
       "actionSurge": "2",
-      "weaponMastery": "6"
+      "weaponMastery": "6",
+      "feature_tr": "Üç Ekstra Saldırı"
     }
   ],
-
   "levelPanels": [
     {
       "level": "Level 1",
       "features": [
         {
           "title": "Fighting Style",
-          "body": "<p>You have honed your martial prowess and gain a Fighting Style feat of your choice. Defense is recommended. Whenever you gain a Fighter level, you can replace the feat you chose with a different Fighting Style feat.</p>"
+          "body": "<p>You have honed your martial prowess and gain a Fighting Style feat of your choice. Defense is recommended. Whenever you gain a Fighter level, you can replace the feat you chose with a different Fighting Style feat.</p>",
+          "title_tr": "Dövüş Stili",
+          "body_tr": "<p>Savaş ustalığını geliştirdin ve seçtiğin bir Savaş Stili yeteneği kazanırsın. Savunma önerilir. Bir Fighter seviyesi kazandığında seçtiğin yeteneği farklı bir Savaş Stili yeteneğiyle değiştirebilirsin.</p>"
         },
         {
           "title": "Second Wind",
-          "body": "<p>As a Bonus Action, you can regain Hit Points equal to 1d10 plus your Fighter level.</p><br/><p>You can use this feature twice, regaining one use on a Short Rest and all uses on a Long Rest. You gain additional uses at higher Fighter levels as shown in the Second Wind column.</p>"
+          "body": "<p>As a Bonus Action, you can regain Hit Points equal to 1d10 plus your Fighter level.</p><br/><p>You can use this feature twice, regaining one use on a Short Rest and all uses on a Long Rest. You gain additional uses at higher Fighter levels as shown in the Second Wind column.</p>",
+          "title_tr": "İkinci Nefes",
+          "body_tr": "<p>Bonus Aksiyon olarak 1d10 artı Fighter seviyene eşit Can Puanı geri kazanabilirsin.</p><br/><p>Bu özelliği iki kez kullanabilirsin; Kısa Dinlenmede bir kullanımı, Uzun Dinlenmede tüm kullanımları geri kazanırsın.</p>"
         },
         {
           "title": "Weapon Mastery",
-          "body": "<p>Your training with weapons allows you to use the mastery properties of three kinds of Simple or Martial weapons of your choice. Whenever you finish a Long Rest, you can practice weapon drills and change one of those weapon choices.</p><br/><p>When you reach certain Fighter levels, you gain the ability to use the mastery properties of more kinds of weapons, as shown in the Weapon Mastery column.</p>"
+          "body": "<p>Your training with weapons allows you to use the mastery properties of three kinds of Simple or Martial weapons of your choice. Whenever you finish a Long Rest, you can practice weapon drills and change one of those weapon choices.</p><br/><p>When you reach certain Fighter levels, you gain the ability to use the mastery properties of more kinds of weapons, as shown in the Weapon Mastery column.</p>",
+          "title_tr": "Silah Hakimiyeti",
+          "body_tr": "<p>Silah eğitimin seçtiğin üç tür Basit veya Savaş silahının uzmanlık özelliklerini kullanmana izin verir. Uzun Dinlenmeyi bitirdiğinde seçimlerden birini değiştirebilirsin.</p>"
         }
       ]
     },
@@ -245,11 +306,15 @@
       "features": [
         {
           "title": "Action Surge",
-          "body": "<p>On your turn, you can take one additional action, except the Magic action. Once you use this feature, you can't do so again until you finish a Short or Long Rest.</p><br/><p>Starting at level 17, you can use it twice before a rest, but only once on the same turn.</p>"
+          "body": "<p>On your turn, you can take one additional action, except the Magic action. Once you use this feature, you can't do so again until you finish a Short or Long Rest.</p><br/><p>Starting at level 17, you can use it twice before a rest, but only once on the same turn.</p>",
+          "title_tr": "Aksiyon Atılımı",
+          "body_tr": "<p>Turunda Büyü aksiyonu dışında bir ek aksiyon alabilirsin. Bu özelliği kullandıktan sonra Kısa veya Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p><br/><p>17. seviyeden itibaren dinlenmeden önce iki kez kullanabilirsin, ancak aynı turda yalnızca bir kez.</p>"
         },
         {
           "title": "Tactical Mind",
-          "body": "<p>When you fail an ability check, you can expend a use of your Second Wind to push yourself toward success. Rather than regaining Hit Points, you roll 1d10 and add the number rolled to the ability check, potentially turning it into a success. If the check still fails, this use of Second Wind isn't expended.</p>"
+          "body": "<p>When you fail an ability check, you can expend a use of your Second Wind to push yourself toward success. Rather than regaining Hit Points, you roll 1d10 and add the number rolled to the ability check, potentially turning it into a success. If the check still fails, this use of Second Wind isn't expended.</p>",
+          "title_tr": "Taktik Akıl",
+          "body_tr": "<p>Yetenek kontrolünde başarısız olursan, başarıya doğru ilerlemek için İkinci Rüzgar kullanımı harcayabilirsin. Can Puanı geri kazanmak yerine 1d10 atıp yetenek kontrolüne eklersin. Kontrol yine başarısız olursa bu kullanım harcanmaz.</p>"
         }
       ]
     },
@@ -258,7 +323,9 @@
       "features": [
         {
           "title": "Fighter Subclass",
-          "body": "<p>You gain a Fighter subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Fighter level or lower. Choose your specialization below:</p>"
+          "body": "<p>You gain a Fighter subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Fighter level or lower. Choose your specialization below:</p>",
+          "title_tr": "Savaşçı Alt Sınıfı",
+          "body_tr": "<p>Seçtiğin bir Fighter alt sınıfı kazanırsın. Kariyerinin geri kalanında, Fighter seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Uzmanlığını aşağıdan seç:</p>"
         }
       ]
     },
@@ -267,7 +334,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Fighter levels 6, 8, 12, 14, and 16.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Fighter levels 6, 8, 12, 14, and 16.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
         }
       ]
     },
@@ -276,11 +345,15 @@
       "features": [
         {
           "title": "Extra Attack",
-          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>"
+          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
+          "title_tr": "Ekstra Saldırı",
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
         },
         {
           "title": "Tactical Shift",
-          "body": "<p>Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks.</p>"
+          "body": "<p>Whenever you activate your Second Wind with a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks.</p>",
+          "title_tr": "Taktik Kayma",
+          "body_tr": "<p>Bonus Aksiyon olarak İkinci Rüzgarı etkinleştirdiğinde, Fırsat Saldırısı tetiklemeden Hızının yarısı kadar hareket edebilirsin.</p>"
         }
       ]
     },
@@ -289,7 +362,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -298,7 +373,9 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -307,7 +384,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -316,11 +395,15 @@
       "features": [
         {
           "title": "Indomitable",
-          "body": "<p>If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can't use this feature again until you finish a Long Rest.</p><br/><p>You can use this feature twice before a Long Rest starting at level 13, and three times before a Long Rest starting at level 17.</p>"
+          "body": "<p>If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can't use this feature again until you finish a Long Rest.</p><br/><p>You can use this feature twice before a Long Rest starting at level 13, and three times before a Long Rest starting at level 17.</p>",
+          "title_tr": "Yenilmez",
+          "body_tr": "<p>Kurtarma atışında başarısız olursan, Fighter seviyenin bonusunu ekleyerek yeniden atabilirsin. Uzun Dinlenmeyi bitirene kadar bu özelliği tekrar kullanamazsın.</p><br/><p>13. seviyeden itibaren Uzun Dinlenmeden önce iki kez, 17. seviyeden itibaren üç kez kullanabilirsin.</p>"
         },
         {
           "title": "Tactical Master",
-          "body": "<p>When you attack with a weapon whose mastery property you can use, you can replace that property with the Push, Sap, or Slow property for that attack.</p>"
+          "body": "<p>When you attack with a weapon whose mastery property you can use, you can replace that property with the Push, Sap, or Slow property for that attack.</p>",
+          "title_tr": "Taktik Usta",
+          "body_tr": "<p>Uzmanlık özelliğini kullanabileceğin bir silahla saldırırken, o saldırı için özelliği İtme, Zayıflatma veya Yavaşlatma özelliğiyle değiştirebilirsin.</p>"
         }
       ]
     },
@@ -329,7 +412,9 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -338,7 +423,9 @@
       "features": [
         {
           "title": "Two Extra Attacks",
-          "body": "<p>You can attack three times instead of once whenever you take the Attack action on your turn.</p>"
+          "body": "<p>You can attack three times instead of once whenever you take the Attack action on your turn.</p>",
+          "title_tr": "İki Ekstra Saldırı",
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine üç kez saldırabilirsin.</p>"
         }
       ]
     },
@@ -347,7 +434,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -356,7 +445,9 @@
       "features": [
         {
           "title": "Studied Attacks",
-          "body": "<p>You study your opponents and learn from each attack you make. If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn.</p>"
+          "body": "<p>You study your opponents and learn from each attack you make. If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn.</p>",
+          "title_tr": "İncelenmiş Saldırılar",
+          "body_tr": "<p>Rakiplerini inceler ve her saldırıdan ders çıkarırsın. Bir yaratığa saldırı atışı yapıp ıskalarsanın, bir sonraki turuna kadar o yaratığa karşı bir sonraki saldırı atışında Üstünlüğe sahipsin.</p>"
         }
       ]
     },
@@ -365,7 +456,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -374,7 +467,9 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -383,7 +478,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -392,7 +489,9 @@
       "features": [
         {
           "title": "Action Surge (2 uses)",
-          "body": "<p>You can now use Action Surge twice before a rest, though still only once on the same turn.</p>"
+          "body": "<p>You can now use Action Surge twice before a rest, though still only once on the same turn.</p>",
+          "title_tr": "Aksiyon Atılımı (2 kullanım)",
+          "body_tr": "<p>Artık dinlenmeden önce Aksiyon Dalgasını iki kez kullanabilirsin, ancak yine de aynı turda yalnızca bir kez.</p>"
         }
       ]
     },
@@ -401,7 +500,9 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -410,7 +511,9 @@
       "features": [
         {
           "title": "Epic Boon",
-          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Combat Prowess is recommended.</p>"
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Combat Prowess is recommended.</p>",
+          "title_tr": "Destansı Lütuf",
+          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
         }
       ]
     },
@@ -419,9 +522,16 @@
       "features": [
         {
           "title": "Three Extra Attacks",
-          "body": "<p>You can attack four times instead of once whenever you take the Attack action on your turn.</p>"
+          "body": "<p>You can attack four times instead of once whenever you take the Attack action on your turn.</p>",
+          "title_tr": "Üç Ekstra Saldırı",
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine dört kez saldırabilirsin.</p>"
         }
       ]
     }
-  ]
+  ],
+  "name_tr": "Savaşçı",
+  "subtitle_tr": "Çeşitli silah ve zırhlarda uzmanlaşmış dövüş ustası",
+  "complexity_tr": "Düşük Karmaşıklık",
+  "primaryStat_tr": "Güç · Çeviklik",
+  "subclassPrefix_tr": "Arketip"
 }

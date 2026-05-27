@@ -10,53 +10,136 @@
   "subclassSuffix": "Domain",
   "subclassRoute": "/wiki/classes/cleric/",
   "multiclassTraits": "Gain the Hit Point Die and training with Light and Medium armor and Shields.",
-
   "subclasses": [
-    { "title": "Life", "icon": "mdi-heart-pulse" },
-    { "title": "Light", "icon": "mdi-white-balance-sunny" },
-    { "title": "Trickery", "icon": "mdi-drama-masks" },
-    { "title": "War", "icon": "mdi-sword-cross" }
+    {
+      "title": "Life",
+      "icon": "mdi-heart-pulse",
+      "title_tr": "Yaşam"
+    },
+    {
+      "title": "Light",
+      "icon": "mdi-white-balance-sunny",
+      "title_tr": "Işık"
+    },
+    {
+      "title": "Trickery",
+      "icon": "mdi-drama-masks",
+      "title_tr": "Hile"
+    },
+    {
+      "title": "War",
+      "icon": "mdi-sword-cross",
+      "title_tr": "Savaş"
+    }
   ],
-
   "coreTraits": [
-    { "label": "Primary Ability", "value": "Wisdom" },
-    { "label": "Hit Point Die", "value": "D8 per Cleric level" },
-    { "label": "Saving Throw Proficiencies", "value": "Wisdom and Charisma" },
+    {
+      "label": "Primary Ability",
+      "value": "Wisdom",
+      "label_tr": "Birincil Nitelik",
+      "value_tr": "Hikmet"
+    },
+    {
+      "label": "Hit Point Die",
+      "value": "D8 per Cleric level",
+      "label_tr": "Can Puanı Zarı",
+      "value_tr": "Din Adamı seviyesi başına D8"
+    },
+    {
+      "label": "Saving Throw Proficiencies",
+      "value": "Wisdom and Charisma",
+      "label_tr": "Kurtarma Atışı Uzmanlıkları",
+      "value_tr": "Hikmet ve Karizma"
+    },
     {
       "label": "Skill Proficiencies",
-      "value": "Choose 2: History, Insight, Medicine, Persuasion, or Religion"
+      "value": "Choose 2: History, Insight, Medicine, Persuasion, or Religion",
+      "label_tr": "Beceri Uzmanlıkları",
+      "value_tr": "2 seçin: Tarih, İçgüdü, Tıp, İkna veya Din"
     },
-    { "label": "Weapon Proficiencies", "value": "Simple weapons" },
+    {
+      "label": "Weapon Proficiencies",
+      "value": "Simple weapons",
+      "label_tr": "Silah Uzmanlıkları",
+      "value_tr": "Basit Silahlar"
+    },
     {
       "label": "Armor Training",
-      "value": "Light and Medium armor and Shields"
+      "value": "Light and Medium armor and Shields",
+      "label_tr": "Zırh Eğitimi",
+      "value_tr": "Hafif ve Orta Zırh ve Kalkanlar"
     },
     {
       "label": "Starting Equipment",
-      "value": "Choose A or B: (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest's Pack, and 7 GP; or (B) 110 GP"
+      "value": "Choose A or B: (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest's Pack, and 7 GP; or (B) 110 GP",
+      "label_tr": "Başlangıç Ekipmanı",
+      "value_tr": "A veya B seçin: (A) Zincir Gömlek, Kalkan, Topuz, Kutsal Sembol, Rahip Çantası ve 7 AP; veya (B) 110 AP"
     }
   ],
-
   "tableColumns": [
     {
       "key": "channelDivinity",
       "label": "Channel Divinity",
       "badge": true,
-      "badgeClass": "cd-badge"
+      "badgeClass": "cd-badge",
+      "label_tr": "İlahi Kanal"
     },
-    { "key": "cantrips", "label": "Cantrips", "badge": false },
-    { "key": "preparedSpells", "label": "Prep. Spells", "badge": false },
-    { "key": "first", "label": "1", "badge": false },
-    { "key": "second", "label": "2", "badge": false },
-    { "key": "third", "label": "3", "badge": false },
-    { "key": "fourth", "label": "4", "badge": false },
-    { "key": "fifth", "label": "5", "badge": false },
-    { "key": "sixth", "label": "6", "badge": false },
-    { "key": "seventh", "label": "7", "badge": false },
-    { "key": "eight", "label": "8", "badge": false },
-    { "key": "ninth", "label": "9", "badge": false }
+    {
+      "key": "cantrips",
+      "label": "Cantrips",
+      "badge": false
+    },
+    {
+      "key": "preparedSpells",
+      "label": "Prep. Spells",
+      "badge": false
+    },
+    {
+      "key": "first",
+      "label": "1",
+      "badge": false
+    },
+    {
+      "key": "second",
+      "label": "2",
+      "badge": false
+    },
+    {
+      "key": "third",
+      "label": "3",
+      "badge": false
+    },
+    {
+      "key": "fourth",
+      "label": "4",
+      "badge": false
+    },
+    {
+      "key": "fifth",
+      "label": "5",
+      "badge": false
+    },
+    {
+      "key": "sixth",
+      "label": "6",
+      "badge": false
+    },
+    {
+      "key": "seventh",
+      "label": "7",
+      "badge": false
+    },
+    {
+      "key": "eight",
+      "label": "8",
+      "badge": false
+    },
+    {
+      "key": "ninth",
+      "label": "9",
+      "badge": false
+    }
   ],
-
   "levels": [
     {
       "level": "1",
@@ -73,7 +156,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Büyü Kullanımı, İlahi Düzen"
     },
     {
       "level": "2",
@@ -90,7 +174,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "İlahi Enerji Kanalı"
     },
     {
       "level": "3",
@@ -107,7 +192,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Din Adamı Alt Sınıfı"
     },
     {
       "level": "4",
@@ -124,7 +210,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "5",
@@ -141,7 +228,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Ölümsüzleri Yak"
     },
     {
       "level": "6",
@@ -158,7 +246,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "7",
@@ -175,7 +264,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Kutsanmış Darbeler"
     },
     {
       "level": "8",
@@ -192,7 +282,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "9",
@@ -226,7 +317,8 @@
       "sixth": "-",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "İlahi Müdahale"
     },
     {
       "level": "11",
@@ -260,7 +352,8 @@
       "sixth": "1",
       "seventh": "-",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "13",
@@ -294,7 +387,8 @@
       "sixth": "1",
       "seventh": "1",
       "eight": "-",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Gelişmiş Kutsanmış Darbeler"
     },
     {
       "level": "15",
@@ -328,7 +422,8 @@
       "sixth": "1",
       "seventh": "1",
       "eight": "1",
-      "ninth": "-"
+      "ninth": "-",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "17",
@@ -345,7 +440,8 @@
       "sixth": "1",
       "seventh": "1",
       "eight": "1",
-      "ninth": "1"
+      "ninth": "1",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "18",
@@ -379,7 +475,8 @@
       "sixth": "2",
       "seventh": "1",
       "eight": "1",
-      "ninth": "1"
+      "ninth": "1",
+      "feature_tr": "Destansı Lütuf"
     },
     {
       "level": "20",
@@ -396,21 +493,25 @@
       "sixth": "2",
       "seventh": "2",
       "eight": "1",
-      "ninth": "1"
+      "ninth": "1",
+      "feature_tr": "Büyük İlahi Müdahale"
     }
   ],
-
   "levelPanels": [
     {
       "level": "Level 1",
       "features": [
         {
           "title": "Spellcasting",
-          "body": "<p>You have learned to cast spells through prayer and meditation. Wisdom is your spellcasting ability and you can use a Holy Symbol as a Spellcasting Focus.</p><br/><p><b>Cantripss.</b> You know three cantripss of your choice from the Cleric spell list. Guidance, Sacred Flame, and Thaumaturgy are recommended. You gain more cantripss at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells from the Cleric spell list to start. Bless, Cure Wounds, Guiding Bolt, and Shield of Faith are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can change your list of prepared spells, replacing any of the spells there with other Cleric spells for which you have spell slots.</p>"
+          "body": "<p>You have learned to cast spells through prayer and meditation. Wisdom is your spellcasting ability and you can use a Holy Symbol as a Spellcasting Focus.</p><br/><p><b>Cantripss.</b> You know three cantripss of your choice from the Cleric spell list. Guidance, Sacred Flame, and Thaumaturgy are recommended. You gain more cantripss at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells from the Cleric spell list to start. Bless, Cure Wounds, Guiding Bolt, and Shield of Faith are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can change your list of prepared spells, replacing any of the spells there with other Cleric spells for which you have spell slots.</p>",
+          "title_tr": "Büyü Kullanımı",
+          "body_tr": "<p>Dua ve meditasyon yoluyla büyü yapmayı öğrendin. Bilgeliğin büyü yapma yeteneğindir ve Kutsal Sembol büyü odağı olarak kullanabilirsin.</p><br/><p><b>Hazırlanan Büyüler.</b> Başlangıç için Rahip büyü listesinden dört adet 1. seviye büyü seç.</p><br/><p><b>Hazırlanan Büyüleri Değiştirme.</b> Uzun Dinlenmeyi bitirdiğinde, hazırlanan büyülerini büyü slotları olan diğer Rahip büyüleriyle değiştirebilirsin.</p>"
         },
         {
           "title": "Divine Order",
-          "body": "<p>You have dedicated yourself to one of the following sacred roles of your choice.</p><br/><p><b>Protector.</b> Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.</p><br/><p><b>Thaumaturge.</b> You know one extra cantrips from the Cleric spell list. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks equal to your Wisdom modifier (minimum of +1).</p>"
+          "body": "<p>You have dedicated yourself to one of the following sacred roles of your choice.</p><br/><p><b>Protector.</b> Trained for battle, you gain proficiency with Martial weapons and training with Heavy armor.</p><br/><p><b>Thaumaturge.</b> You know one extra cantrips from the Cleric spell list. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks equal to your Wisdom modifier (minimum of +1).</p>",
+          "title_tr": "İlahi Düzen",
+          "body_tr": "<p>Aşağıdaki kutsal rollerden birini kendine adamışsın.</p><br/><p><b>Koruyucu.</b> Savaş için eğitilmiş olarak Savaş silahlarında uzmanlık ve Ağır zırh eğitimi kazanırsın.</p><br/><p><b>Thaumaturge.</b> Rahip büyü listesinden ekstra bir büyü bilirsin. Ayrıca ilahi bağlantın Zeka (Gizli Bilim veya Din) kontrollerine Bilgelik değiştirici kadar bonus sağlar (minimum +1).</p>"
         }
       ]
     },
@@ -419,7 +520,9 @@
       "features": [
         {
           "title": "Channel Divinity",
-          "body": "<p>You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with two effects: Divine Spark and Turn Undead. You gain additional effects from your subclass. You can use Channel Divinity twice, regaining one use on a Short Rest and all uses on a Long Rest.</p><br/><p><b>Divine Spark.</b> As a Magic action, point your Holy Symbol at a creature within 30 feet. Roll 1d8 + your Wisdom modifier. Either restore that many Hit Points to the creature, or force a Constitution save — on a fail, it takes Necrotic or Radiant damage equal to that total (half on a success). The die increases at levels 7 (2d8), 13 (3d8), and 18 (4d8).</p><br/><p><b>Turn Undead.</b> As a Magic action, present your Holy Symbol. Each Undead of your choice within 30 feet must make a Wisdom saving throw or have the Frightened and Incapacitated conditions for 1 minute, moving as far from you as possible each turn.</p>"
+          "body": "<p>You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with two effects: Divine Spark and Turn Undead. You gain additional effects from your subclass. You can use Channel Divinity twice, regaining one use on a Short Rest and all uses on a Long Rest.</p><br/><p><b>Divine Spark.</b> As a Magic action, point your Holy Symbol at a creature within 30 feet. Roll 1d8 + your Wisdom modifier. Either restore that many Hit Points to the creature, or force a Constitution save — on a fail, it takes Necrotic or Radiant damage equal to that total (half on a success). The die increases at levels 7 (2d8), 13 (3d8), and 18 (4d8).</p><br/><p><b>Turn Undead.</b> As a Magic action, present your Holy Symbol. Each Undead of your choice within 30 feet must make a Wisdom saving throw or have the Frightened and Incapacitated conditions for 1 minute, moving as far from you as possible each turn.</p>",
+          "title_tr": "İlahi Enerji Kanalı",
+          "body_tr": "<p>Dış Uçaklar'dan doğrudan ilahi enerji kanalize edebilirsin. İki etkiyle başlarsın: İlahi Kıvılcım ve Ölü Döndürme. Kanal İlahiliği'ni iki kez kullanabilirsin; Kısa Dinlenmede bir kullanımı, Uzun Dinlenmede tüm kullanımları geri kazanırsın.</p><br/><p><b>İlahi Kıvılcım.</b> Büyü aksiyonu olarak, 30 feet içindeki bir yaratığa Kutsal Sembolünü işaret et. 1d8 + Bilgelik değiştiricini at. Ya o kadar Can Puanı geri ver ya da Bünye kurtarması yaptır — başarısızsa Nekrotik veya Işıl hasara eşit hasar alır (başarıda yarı).</p><br/><p><b>Ölü Döndürme.</b> Büyü aksiyonu olarak Kutsal Sembolünü sun. Seçtiğin 30 feet içindeki her Ölü, Bilgelik kurtarması yapar ya da 1 dakika boyunca Korkmuş ve Engelli durumuna girer.</p>"
         }
       ]
     },
@@ -428,7 +531,9 @@
       "features": [
         {
           "title": "Cleric Subclass",
-          "body": "<p>You gain a Cleric subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Cleric level or lower. Choose your domain below:</p>"
+          "body": "<p>You gain a Cleric subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Cleric level or lower. Choose your domain below:</p>",
+          "title_tr": "Din Adamı Alt Sınıfı",
+          "body_tr": "<p>Seçtiğin bir Rahip alt sınıfı kazanırsın. Kariyerinin geri kalanında, Rahip seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Alanını aşağıdan seç:</p>"
         }
       ]
     },
@@ -437,7 +542,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Cleric levels 8, 12, and 16.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Cleric levels 8, 12, and 16.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
         }
       ]
     },
@@ -446,7 +553,9 @@
       "features": [
         {
           "title": "Sear Undead",
-          "body": "<p>Whenever you use Turn Undead, you can roll a number of d8s equal to your Wisdom modifier (minimum of 1d8) and add the rolls together. Each Undead that fails its saving throw against that use of Turn Undead takes Radiant damage equal to the roll's total. This damage doesn't end the turn effect.</p>"
+          "body": "<p>Whenever you use Turn Undead, you can roll a number of d8s equal to your Wisdom modifier (minimum of 1d8) and add the rolls together. Each Undead that fails its saving throw against that use of Turn Undead takes Radiant damage equal to the roll's total. This damage doesn't end the turn effect.</p>",
+          "title_tr": "Ölümsüzleri Yak",
+          "body_tr": "<p>Ölü Döndürme kullandığında, Bilgelik değiştiricine eşit sayıda d8 atabilirsin (minimum 1d8) ve toplamı hesaplarsın. Kurtarma atışında başarısız olan her Ölü, toplama eşit Işıl hasar alır. Bu hasar döndürme etkisini sona erdirmez.</p>"
         }
       ]
     },
@@ -455,7 +564,9 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen domain.</p>"
+          "body": "<p>You gain a new feature from your chosen domain.</p>",
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -464,7 +575,9 @@
       "features": [
         {
           "title": "Blessed Strikes",
-          "body": "<p>Divine power infuses you in battle. Choose one of the following options:</p><br/><p><b>Divine Strike.</b> Once on each of your turns when you hit a creature with a weapon attack, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).</p><br/><p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Cleric cantrips.</p>"
+          "body": "<p>Divine power infuses you in battle. Choose one of the following options:</p><br/><p><b>Divine Strike.</b> Once on each of your turns when you hit a creature with a weapon attack, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).</p><br/><p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Cleric cantrips.</p>",
+          "title_tr": "Kutsanmış Darbeler",
+          "body_tr": "<p>İlahi güç savaşta seni besler. Aşağıdaki seçeneklerden birini seç:</p><br/><p><b>İlahi Vuruş.</b> Her turda bir kez silah saldırısıyla bir yaratığa isabet ettiğinde, hedefe ekstra 1d8 Nekrotik veya Işıl hasar verebilirsin.</p><br/><p><b>Güçlü Büyü Yapma.</b> Herhangi bir Rahip büyüsüyle verdiğin hasara Bilgelik değiştiricini ekle.</p>"
         }
       ]
     },
@@ -473,7 +586,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -482,7 +597,9 @@
       "features": [
         {
           "title": "Divine Intervention",
-          "body": "<p>As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction to cast. You cast that spell without expending a spell slot or needing Material components. You can't use this feature again until you finish a Long Rest.</p>"
+          "body": "<p>As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction to cast. You cast that spell without expending a spell slot or needing Material components. You can't use this feature again until you finish a Long Rest.</p>",
+          "title_tr": "İlahi Müdahale",
+          "body_tr": "<p>Büyü aksiyonu olarak, Tepki gerektirmeyen 5. seviye veya daha düşük herhangi bir Rahip büyüsünü seç. O büyüyü büyü slotu harcamadan veya Maddi bileşenlere ihtiyaç duymadan yaparsın. Uzun Dinlenmeyi bitirene kadar bu özelliği tekrar kullanamazsın.</p>"
         }
       ]
     },
@@ -491,7 +608,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -500,7 +619,9 @@
       "features": [
         {
           "title": "Improved Blessed Strikes",
-          "body": "<p>The option you chose for Blessed Strikes grows more powerful.</p><br/><p><b>Divine Strike.</b> The extra damage of your Divine Strike increases to 2d8.</p><br/><p><b>Potent Spellcasting.</b> When you cast a Cleric cantrips and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet, granting Temporary Hit Points equal to twice your Wisdom modifier.</p>"
+          "body": "<p>The option you chose for Blessed Strikes grows more powerful.</p><br/><p><b>Divine Strike.</b> The extra damage of your Divine Strike increases to 2d8.</p><br/><p><b>Potent Spellcasting.</b> When you cast a Cleric cantrips and deal damage to a creature with it, you can give vitality to yourself or another creature within 60 feet, granting Temporary Hit Points equal to twice your Wisdom modifier.</p>",
+          "title_tr": "Gelişmiş Kutsanmış Darbeler",
+          "body_tr": "<p>Kutsanmış Vuruşlar için seçtiğin seçenek daha güçlü hale gelir.</p><br/><p><b>İlahi Vuruş.</b> İlahi Vuruşunun ekstra hasarı 2d8'e yükselir.</p><br/><p><b>Güçlü Büyü Yapma.</b> Bir Rahip büyüsüyle hasar verdiğinde, kendin veya 60 feet içindeki bir yaratığa Bilgelik değiştiricinin iki katına eşit Geçici Can Puanı verebilirsin.</p>"
         }
       ]
     },
@@ -509,7 +630,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -518,7 +641,9 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen domain.</p>"
+          "body": "<p>You gain a new feature from your chosen domain.</p>",
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -527,7 +652,9 @@
       "features": [
         {
           "title": "Epic Boon",
-          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.</p>"
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.</p>",
+          "title_tr": "Destansı Lütuf",
+          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
         }
       ]
     },
@@ -536,9 +663,17 @@
       "features": [
         {
           "title": "Greater Divine Intervention",
-          "body": "<p>When you use your Divine Intervention feature, you can choose Wish when you select a spell. If you do so, you can't use Divine Intervention again until you finish 2d4 Long Rests.</p>"
+          "body": "<p>When you use your Divine Intervention feature, you can choose Wish when you select a spell. If you do so, you can't use Divine Intervention again until you finish 2d4 Long Rests.</p>",
+          "title_tr": "Büyük İlahi Müdahale",
+          "body_tr": "<p>İlahi Müdahale özelliğini kullandığında büyü seçerken Dilek'i seçebilirsin. Bunu yaparsan, 2d4 Uzun Dinlenmeyi bitirene kadar İlahi Müdahale'yi tekrar kullanamazsın.</p>"
         }
       ]
     }
-  ]
+  ],
+  "name_tr": "Din Adamı",
+  "subtitle_tr": "Yüce bir güce hizmet eden, ilahi büyü kullanan rahip şampiyon",
+  "complexity_tr": "Orta Karmaşıklık",
+  "primaryStat_tr": "Hikmet",
+  "subclassPrefix_tr": "Alanı",
+  "subclassSuffix_tr": "Alanı"
 }

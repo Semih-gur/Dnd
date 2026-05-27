@@ -3,7 +3,7 @@
     <!-- Hero Banner — no image -->
     <div class="hero">
       <div class="hero-content">
-        <span class="hero-eyebrow">Class</span>
+        <span class="hero-eyebrow">{{ $t('class.eyebrow') }}</span>
         <h1 class="hero-title">{{ data.name }}</h1>
         <p class="hero-subtitle">{{ data.subtitle }}</p>
         <div class="hero-badges">
@@ -16,15 +16,15 @@
     <div class="page-content">
       <!-- Core Traits -->
       <section class="section">
-        <h2 class="section-title">Core Traits</h2>
+        <h2 class="section-title">{{ $t('class.coreTraits') }}</h2>
         <div class="traits-grid">
           <div
             class="trait-row"
             v-for="trait in data.coreTraits"
             :key="trait.label"
           >
-            <span class="trait-label">{{ trait.label }}</span>
-            <span class="trait-value">{{ trait.value }}</span>
+            <span class="trait-label">{{ $lf(trait, 'label') }}</span>
+            <span class="trait-value">{{ $lf(trait, 'value') }}</span>
           </div>
         </div>
       </section>
@@ -60,7 +60,7 @@
 
       <!-- Class Features Table -->
       <section class="section">
-        <h2 class="section-title">Class Features</h2>
+        <h2 class="section-title">{{ $t('class.classFeatures') }}</h2>
         <div class="table-wrap">
           <table class="features-table">
             <thead>
@@ -69,7 +69,7 @@
                 <th>Prof. Bonus</th>
                 <th>Features Unlocked</th>
                 <th v-for="col in data.tableColumns" :key="col.key">
-                  {{ col.label }}
+                  {{ $lf(col, 'label') }}
                 </th>
               </tr>
             </thead>
@@ -81,7 +81,7 @@
               >
                 <td class="level-cell">{{ item.level }}</td>
                 <td class="text-center">{{ item.profBonus }}</td>
-                <td>{{ item.feature }}</td>
+                <td>{{ $lf(item, 'feature') }}</td>
                 <td
                   v-for="col in data.tableColumns"
                   :key="col.key"
@@ -107,7 +107,7 @@
 
       <!-- Level Breakdown -->
       <section class="section">
-        <h2 class="section-title">Level Breakdown</h2>
+        <h2 class="section-title">{{ $t('class.levelBreakdown') }}</h2>
         <div class="panels">
           <div
             v-for="(lvl, index) in data.levelPanels"
@@ -122,7 +122,7 @@
               <div class="panel-header-left">
                 <span class="panel-level-badge">{{ lvl.level }}</span>
                 <span class="panel-features-preview">
-                  {{ lvl.features.map((f) => f.title).join(" · ") }}
+                  {{ lvl.features.map((f) => $lf(f, 'title')).join(" · ") }}
                 </span>
               </div>
               <v-icon class="panel-chevron">
@@ -144,7 +144,7 @@
                   @click="goTo(sub.title)"
                 >
                   <v-icon class="subclass-icon">{{ sub.icon }}</v-icon>
-                  <span>{{ data.subclassPrefix }} {{ sub.title }}</span>
+                  <span>{{ $lf(data, 'subclassPrefix') }} {{ $lf(sub, 'title') }}</span>
                 </div>
               </div>
               <div class="feature-cards">
@@ -153,8 +153,8 @@
                   :key="feature.title"
                   class="feature-card"
                 >
-                  <h3 class="feature-title">{{ feature.title }}</h3>
-                  <div class="feature-body" v-html="feature.body"></div>
+                  <h3 class="feature-title">{{ $lf(feature, 'title') }}</h3>
+                  <div class="feature-body" v-html="$lf(feature, 'body')"></div>
                 </div>
               </div>
             </div>

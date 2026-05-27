@@ -30,7 +30,7 @@
         <div
           class="theme-toggle"
           @click="toggleTheme"
-          :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+          :title="isDark ? $t('nav.lightMode') : $t('nav.darkMode')"
         >
           <v-icon class="nav-icon">{{
             isDark ? "mdi-weather-sunny" : "mdi-weather-night"
@@ -58,26 +58,63 @@
         </div>
       </nav>
 
-      <!-- Right side — theme toggle (desktop) + patreon -->
+      <!-- Right side — theme toggle (desktop) + language + patreon -->
       <div class="nav-right">
         <!-- Theme toggle — desktop only -->
         <div
           class="theme-toggle desktop-theme"
           @click="toggleTheme"
-          :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+          :title="isDark ? $t('nav.lightMode') : $t('nav.darkMode')"
         >
           <v-icon class="nav-icon">{{
             isDark ? "mdi-weather-sunny" : "mdi-weather-night"
           }}</v-icon>
-          <span class="nav-label">Theme</span>
+          <span class="nav-label">{{ $t("nav.theme") }}</span>
         </div>
+
+        <!-- Language dropdown -->
+        <v-menu location="bottom end" :offset="[4, 0]">
+          <template v-slot:activator="{ props }">
+            <div class="lang-toggle nav-item" v-bind="props">
+              <img
+                :src="currentLanguage.flagUrl"
+                class="lang-flag"
+                :alt="currentLanguage.label"
+              />
+              <span class="nav-label lang-code">
+                {{ currentLanguage.code.toUpperCase() }}
+                <v-icon class="lang-chevron">mdi-chevron-down</v-icon>
+              </span>
+            </div>
+          </template>
+          <v-list class="lang-dropdown" density="compact">
+            <v-list-item
+              v-for="lang in languages"
+              :key="lang.code"
+              @click="setLocale(lang.code)"
+              :class="{ 'lang-active': $i18n.locale === lang.code }"
+            >
+              <template v-slot:prepend>
+                <img
+                  :src="lang.flagUrl"
+                  class="lang-flag-sm"
+                  :alt="lang.label"
+                />
+              </template>
+              <v-list-item-title class="lang-item-title">
+                {{ lang.label }}
+              </v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
         <div
           class="nav-item"
           :class="{ active: $route.path === '/patrons' }"
           @click="goTo('patrons')"
         >
           <v-icon class="nav-icon">mdi-account-group</v-icon>
-          <span class="nav-label">Patrons</span>
+          <span class="nav-label">{{ $t("nav.patrons") }}</span>
         </div>
         <a
           href="https://www.patreon.com/YOUR_PAGE"
@@ -86,7 +123,7 @@
           title="Support us on Patreon"
         >
           <v-icon size="18">mdi-patreon</v-icon>
-          <span class="patreon-nav-label">Support Us</span>
+          <span class="patreon-nav-label">{{ $t("nav.supportUs") }}</span>
         </a>
       </div>
 
@@ -130,17 +167,17 @@ export default {
   data() {
     return {
       isDark: true,
-      navItems: [
-        { path: "wiki/species", icon: "mdi-account", label: "Species" },
-        { path: "wiki/classes", icon: "mdi-sword-cross", label: "Classes" },
-        { path: "wiki/spells", icon: "mdi-auto-fix", label: "Spells" },
+      languages: [
         {
-          path: "wiki/backgrounds",
-          icon: "mdi-map-marker-radius",
-          label: "Backgrounds",
+          code: "en",
+          label: "English",
+          flagUrl: "https://flagcdn.com/w40/gb.png",
         },
-        { path: "wiki/feats", icon: "mdi-star-circle-outline", label: "Feats" },
-        { path: "wiki/items", icon: "mdi-bag-personal", label: "Items" },
+        {
+          code: "tr",
+          label: "Türkçe",
+          flagUrl: "https://flagcdn.com/w40/tr.png",
+        },
       ],
     };
   },
@@ -160,6 +197,51 @@ export default {
   },
 
   computed: {
+    navItems() {
+      return [
+        {
+          path: "wiki/species",
+          icon: "mdi-account",
+          label: this.$t("nav.species"),
+        },
+        {
+          path: "wiki/classes",
+          icon: "mdi-sword-cross",
+          label: this.$t("nav.classes"),
+        },
+        {
+          path: "wiki/spells",
+          icon: "mdi-auto-fix",
+          label: this.$t("nav.spells"),
+        },
+        {
+          path: "wiki/backgrounds",
+          icon: "mdi-map-marker-radius",
+          label: this.$t("nav.backgrounds"),
+        },
+        {
+          path: "wiki/feats",
+          icon: "mdi-star-circle-outline",
+          label: this.$t("nav.feats"),
+        },
+        {
+          path: "wiki/items",
+          icon: "mdi-bag-personal",
+          label: this.$t("nav.items"),
+        },
+        {
+          path: "wiki/conditions",
+          icon: "mdi-alert-circle-outline",
+          label: this.$t("nav.conditions"),
+        },
+      ];
+    },
+    currentLanguage() {
+      return (
+        this.languages.find((l) => l.code === this.$i18n.locale) ||
+        this.languages[0]
+      );
+    },
     breadcrumbs() {
       const segments = this.$route.path.split("/").filter(Boolean);
       const crumbs = [{ label: "Home", path: "" }];
@@ -189,6 +271,10 @@ export default {
         document.documentElement.setAttribute("data-theme", "light");
         localStorage.setItem("theme", "light");
       }
+    },
+    setLocale(code) {
+      this.$i18n.locale = code;
+      localStorage.setItem("locale", code);
     },
   },
 };
@@ -306,6 +392,52 @@ export default {
 /* Desktop theme shows, mobile theme hides */
 .desktop-theme {
   display: flex;
+}
+
+/* Language toggle */
+.lang-toggle {
+  min-width: 52px;
+}
+.lang-flag {
+  width: 22px;
+  height: auto;
+  border-radius: 2px;
+  display: block;
+}
+.lang-code {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.lang-chevron {
+  font-size: 0.7rem !important;
+  opacity: 0.7;
+}
+
+/* Language dropdown list */
+.lang-dropdown {
+  min-width: 140px;
+  background: #1e1e2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px !important;
+}
+.lang-flag-sm {
+  width: 20px;
+  height: auto;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: block;
+}
+.lang-item-title {
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+.lang-active .lang-item-title {
+  color: #c084fc !important;
+}
+.lang-active {
+  background: rgba(192, 132, 252, 0.1) !important;
 }
 
 /* ── Patreon nav button ─────────────────────────── */

@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Spells</h1>
+          <h1 class="hero-title">{{ $t('spells.title') }}</h1>
         </div>
       </div>
     </div>
@@ -15,10 +15,12 @@
           v-for="cspell in classes"
           :key="cspell.id"
           class="spell-card"
-          @click="goTo(cspell.label)"
+          @click="goTo(cspell)"
         >
           <div class="card-image-wrap">
-            <img :src="cspell.art" :alt="cspell.label" class="card-img" />
+            <div class="card-img-clip">
+              <img :src="cspell.art" :alt="cspell.label" class="card-img" />
+            </div>
             <div class="card-gradient-overlay"></div>
           </div>
           <div class="card-body">
@@ -34,65 +36,31 @@
 <script>
 import router from "@/router";
 
+const spellArts = {
+  bard:     require("@/assets/classes/bard.png"),
+  cleric:   require("@/assets/classes/cleric.png"),
+  druid:    require("@/assets/classes/druid.png"),
+  paladin:  require("@/assets/classes/paladin.png"),
+  ranger:   require("@/assets/classes/ranger.png"),
+  sorcerer: require("@/assets/classes/sorcerer.png"),
+  warlock:  require("@/assets/classes/warlock.png"),
+  wizard:   require("@/assets/classes/wizard.png"),
+};
+
 export default {
   methods: {
-    goTo(label) {
-      router.push("/wiki/spells/" + label.replace(/\s+/g, "_").toLowerCase());
+    goTo(item) {
+      router.push("/wiki/spells/" + item.routeKey);
     },
   },
-  data: () => ({
-    classes: [
-      {
-        id: 1,
-        label: "Bard",
-        desc: "Magical secrets and bardic inspiration drawn from the music of creation",
-        art: require("@/assets/classes/bard.png"),
-      },
-      {
-        id: 2,
-        label: "Cleric",
-        desc: "Divine magic channelled from the power of the gods and sacred domains",
-        art: require("@/assets/classes/cleric.png"),
-      },
-      {
-        id: 3,
-        label: "Druid",
-        desc: "Nature magic wielding moonlight, plant growth, fire and lightning",
-        art: require("@/assets/classes/druid.png"),
-      },
-
-      {
-        id: 6,
-        label: "Paladin",
-        desc: "Sacred oaths and divine smites empowered by holy conviction",
-        art: require("@/assets/classes/paladin.png"),
-      },
-      {
-        id: 7,
-        label: "Ranger",
-        desc: "Nature spells and primal magic to combat threats at civilisation's edge",
-        art: require("@/assets/classes/ranger.png"),
-      },
-      {
-        id: 9,
-        label: "Sorcerer",
-        desc: "Raw arcane power drawn from an innate magical gift or bloodline",
-        art: require("@/assets/classes/sorcerer.png"),
-      },
-      {
-        id: 10,
-        label: "Warlock",
-        desc: "Eldritch magic derived from a pact with an extra-planar entity",
-        art: require("@/assets/classes/warlock.png"),
-      },
-      {
-        id: 11,
-        label: "Wizard",
-        desc: "Scholarly arcane magic capable of manipulating the structures of reality",
-        art: require("@/assets/classes/wizard.png"),
-      },
-    ],
-  }),
+  computed: {
+    classes() {
+      return this.$tm("spells.spellClasses").map((c) => ({
+        ...c,
+        art: spellArts[c.routeKey],
+      }));
+    },
+  },
 };
 </script>
 
@@ -216,6 +184,11 @@ export default {
   aspect-ratio: 1 / 1;
   overflow: visible;
   flex-shrink: 0;
+}
+.card-img-clip {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .card-img {
   width: 100%;

@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Weapons</h1>
+          <h1 class="hero-title">{{ $t('weapons.title') }}</h1>
         </div>
       </div>
     </div>
@@ -26,16 +26,16 @@
       </div>
 
       <!-- Table -->
-      <div class="table-wrap">
+      <div class="table-wrap" style="margin-bottom: 3rem;">
         <table class="weapon-table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Damage</th>
-              <th>Properties</th>
-              <th>Mastery</th>
-              <th>Weight</th>
-              <th>Cost</th>
+              <th>{{ $t('weapons.col.name') }}</th>
+              <th>{{ $t('weapons.col.damage') }}</th>
+              <th>{{ $t('weapons.col.properties') }}</th>
+              <th>{{ $t('weapons.col.mastery') }}</th>
+              <th>{{ $t('weapons.col.weight') }}</th>
+              <th>{{ $t('weapons.col.cost') }}</th>
             </tr>
           </thead>
           <tbody>
@@ -44,16 +44,16 @@
               :key="weapon.name"
               class="weapon-row"
             >
-              <td class="weapon-name">{{ weapon.name }}</td>
+              <td class="weapon-name">{{ $lf(weapon, 'name') }}</td>
               <td>
                 <span class="damage-badge" v-if="weapon.damage">{{
                   weapon.damage
                 }}</span>
               </td>
-              <td class="properties-cell">{{ weapon.properties }}</td>
+              <td class="properties-cell">{{ $lf(weapon, 'properties') }}</td>
               <td>
                 <span class="mastery-badge" v-if="weapon.mastery">{{
-                  weapon.mastery
+                  $lf(weapon, 'mastery')
                 }}</span>
               </td>
               <td>{{ weapon.weight }}</td>
@@ -62,18 +62,50 @@
           </tbody>
         </table>
       </div>
+      <!-- Glossary -->
+      <div class="glossary-grid">
+        <div class="glossary-group">
+          <h2 class="glossary-title">{{ $t('weapons.propertiesTitle') }}</h2>
+          <div class="glossary-list">
+            <div
+              v-for="entry in glossary.properties"
+              :key="entry.name"
+              class="glossary-card"
+            >
+              <span class="glossary-name">{{ $lf(entry, 'name') }}</span>
+              <p class="glossary-desc">{{ $lf(entry, 'desc') }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glossary-group">
+          <h2 class="glossary-title">{{ $t('weapons.masteriesTitle') }}</h2>
+          <div class="glossary-list">
+            <div
+              v-for="entry in glossary.masteries"
+              :key="entry.name"
+              class="glossary-card"
+            >
+              <span class="glossary-name">{{ $lf(entry, 'name') }}</span>
+              <p class="glossary-desc">{{ $lf(entry, 'desc') }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import weapons from "./weapons.json";
+import glossary from "./weaponGlossary.json";
 
 export default {
   data() {
     return {
       tab: weapons[0].type,
       weapons,
+      glossary,
     };
   },
 
@@ -278,6 +310,45 @@ export default {
   white-space: nowrap;
 }
 
+/* ── Glossary ───────────────────────────────────── */
+.glossary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.glossary-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.glossary-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  background: rgba(var(--accent-rgb), 0.03);
+}
+.glossary-name {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 0.3rem;
+}
+.glossary-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
 /* ── Mobile ─────────────────────────────────────── */
 @media (max-width: 640px) {
   .hero {
@@ -288,6 +359,9 @@ export default {
   }
   .hero-overlay {
     padding: 1.25rem 1.5rem;
+  }
+  .glossary-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

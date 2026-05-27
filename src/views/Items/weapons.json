@@ -8,7 +8,10 @@
         "properties": "Light",
         "mastery": "Slow",
         "weight": "2 lb.",
-        "cost": "1 SP"
+        "cost": "1 SP",
+        "name_tr": "Sopa",
+        "properties_tr": "Hafif",
+        "mastery_tr": "Yavaşlat"
       },
       {
         "name": "Dagger",
@@ -16,7 +19,10 @@
         "properties": "Finesse, Light, Thrown (Range 20/60)",
         "mastery": "Nick",
         "weight": "1 lb.",
-        "cost": "2 GP"
+        "cost": "2 GP",
+        "name_tr": "Hançer",
+        "properties_tr": "İncelik, Hafif, Fırlatılabilir (Menzil 20/60)",
+        "mastery_tr": "Çentikle"
       },
       {
         "name": "Greatclub",
@@ -24,7 +30,10 @@
         "properties": "Two-Handed",
         "mastery": "Push",
         "weight": "10 lb.",
-        "cost": "2 SP"
+        "cost": "2 SP",
+        "name_tr": "Büyük Sopa",
+        "properties_tr": "İki Elli",
+        "mastery_tr": "İt"
       },
       {
         "name": "Handaxe",
@@ -32,7 +41,10 @@
         "properties": "Light, Thrown (Range 20/60)",
         "mastery": "Vex",
         "weight": "2 lb.",
-        "cost": "5 GP"
+        "cost": "5 GP",
+        "name_tr": "El Baltası",
+        "properties_tr": "Hafif, Fırlatılabilir (Menzil 20/60)",
+        "mastery_tr": "Rahatsız Et"
       },
       {
         "name": "Javelin",
@@ -40,7 +52,10 @@
         "properties": "Thrown (Range 30/120)",
         "mastery": "Slow",
         "weight": "2 lb.",
-        "cost": "5 SP"
+        "cost": "5 SP",
+        "name_tr": "Kısa Mızrak",
+        "properties_tr": "Fırlatılabilir (Menzil 30/120)",
+        "mastery_tr": "Yavaşlat"
       },
       {
         "name": "Light Hammer",
@@ -48,7 +63,10 @@
         "properties": "Light, Thrown (Range 20/60)",
         "mastery": "Nick",
         "weight": "2 lb.",
-        "cost": "2 GP"
+        "cost": "2 GP",
+        "name_tr": "Hafif Çekiç",
+        "properties_tr": "Hafif, Fırlatılabilir (Menzil 20/60)",
+        "mastery_tr": "Çentikle"
       },
       {
         "name": "Mace",
@@ -56,7 +74,9 @@
         "properties": "—",
         "mastery": "Sap",
         "weight": "4 lb.",
-        "cost": "5 GP"
+        "cost": "5 GP",
+        "name_tr": "Topuz",
+        "mastery_tr": "Yıprat"
       },
       {
         "name": "Quarterstaff",
@@ -64,7 +84,10 @@
         "properties": "Versatile (1d8)",
         "mastery": "Topple",
         "weight": "4 lb.",
-        "cost": "2 SP"
+        "cost": "2 SP",
+        "name_tr": "Uzun Sopa",
+        "properties_tr": "Çok Yönlü (1d8)",
+        "mastery_tr": "Yıkıt"
       },
       {
         "name": "Sickle",
@@ -72,7 +95,10 @@
         "properties": "Light",
         "mastery": "Nick",
         "weight": "2 lb.",
-        "cost": "1 GP"
+        "cost": "1 GP",
+        "name_tr": "Orak",
+        "properties_tr": "Hafif",
+        "mastery_tr": "Çentikle"
       },
       {
         "name": "Spear",
@@ -80,7 +106,10 @@
         "properties": "Thrown (Range 20/60), Versatile (1d8)",
         "mastery": "Sap",
         "weight": "3 lb.",
-        "cost": "1 GP"
+        "cost": "1 GP",
+        "name_tr": "Mızrak",
+        "properties_tr": "Fırlatılabilir (Menzil 20/60), Çok Yönlü (1d8)",
+        "mastery_tr": "Yıprat"
       }
     ]
   },
@@ -93,7 +122,10 @@
         "properties": "Versatile (1d10)",
         "mastery": "Topple",
         "weight": "4 lb.",
-        "cost": "10 GP"
+        "cost": "10 GP",
+        "name_tr": "Savaş Baltası",
+        "properties_tr": "Çok Yönlü (1d10)",
+        "mastery_tr": "Yıkıt"
       },
       {
         "name": "Flail",
@@ -101,7 +133,9 @@
         "properties": "—",
         "mastery": "Sap",
         "weight": "2 lb.",
-        "cost": "10 GP"
+        "cost": "10 GP",
+        "name_tr": "Zincirgürz",
+        "mastery_tr": "Yıprat"
       },
       {
         "name": "Glaive",
@@ -109,7 +143,10 @@
         "properties": "Heavy, Reach, Two-Handed",
         "mastery": "Graze",
         "weight": "6 lb.",
-        "cost": "20 GP"
+        "cost": "20 GP",
+        "name_tr": "Gleyv",
+        "properties_tr": "Ağır, Erişim, İki Elli",
+        "mastery_tr": "Sıyır"
       },
       {
         "name": "Greataxe",
@@ -117,7 +154,10 @@
         "properties": "Heavy, Two-Handed",
         "mastery": "Cleave",
         "weight": "7 lb.",
-        "cost": "30 GP"
+        "cost": "30 GP",
+        "name_tr": "Büyük Balta",
+        "properties_tr": "Ağır, İki Elli",
+        "mastery_tr": "Yar"
       },
       {
         "name": "Greatsword",
@@ -125,7 +165,10 @@
         "properties": "Heavy, Two-Handed",
         "mastery": "Graze",
         "weight": "6 lb.",
-        "cost": "50 GP"
+        "cost": "50 GP",
+        "name_tr": "Büyük Kılıç",
+        "properties_tr": "Ağır, İki Elli",
+        "mastery_tr": "Sıyır"
       },
       {
         "name": "Halberd",
@@ -133,7 +176,10 @@
         "properties": "Heavy, Reach, Two-Handed",
         "mastery": "Cleave",
         "weight": "6 lb.",
-        "cost": "20 GP"
+        "cost": "20 GP",
+        "name_tr": "Halberd",
+        "properties_tr": "Ağır, Erişim, İki Elli",
+        "mastery_tr": "Yar"
       },
       {
         "name": "Lance",
@@ -141,7 +187,10 @@
         "properties": "Heavy, Reach, Two-Handed (unless mounted)",
         "mastery": "Topple",
         "weight": "6 lb.",
-        "cost": "10 GP"
+        "cost": "10 GP",
+        "name_tr": "Süngü",
+        "properties_tr": "Ağır, Erişim, İki Elli (binekli değilken)",
+        "mastery_tr": "Yıkıt"
       },
       {
         "name": "Longsword",
@@ -149,7 +198,10 @@
         "properties": "Versatile (1d10)",
         "mastery": "Sap",
         "weight": "3 lb.",
-        "cost": "15 GP"
+        "cost": "15 GP",
+        "name_tr": "Uzun Kılıç",
+        "properties_tr": "Çok Yönlü (1d10)",
+        "mastery_tr": "Yıprat"
       },
       {
         "name": "Maul",
@@ -157,7 +209,10 @@
         "properties": "Heavy, Two-Handed",
         "mastery": "Topple",
         "weight": "10 lb.",
-        "cost": "10 GP"
+        "cost": "10 GP",
+        "name_tr": "Ağır Tokmak",
+        "properties_tr": "Ağır, İki Elli",
+        "mastery_tr": "Yıkıt"
       },
       {
         "name": "Morningstar",
@@ -165,7 +220,9 @@
         "properties": "—",
         "mastery": "Sap",
         "weight": "4 lb.",
-        "cost": "15 GP"
+        "cost": "15 GP",
+        "name_tr": "Sabahyıldızı",
+        "mastery_tr": "Yıprat"
       },
       {
         "name": "Pike",
@@ -173,7 +230,10 @@
         "properties": "Heavy, Reach, Two-Handed",
         "mastery": "Push",
         "weight": "18 lb.",
-        "cost": "5 GP"
+        "cost": "5 GP",
+        "name_tr": "Pike Mızrağı",
+        "properties_tr": "Ağır, Erişim, İki Elli",
+        "mastery_tr": "İt"
       },
       {
         "name": "Rapier",
@@ -181,7 +241,10 @@
         "properties": "Finesse",
         "mastery": "Vex",
         "weight": "2 lb.",
-        "cost": "25 GP"
+        "cost": "25 GP",
+        "name_tr": "Rapiyer",
+        "properties_tr": "İncelik",
+        "mastery_tr": "Rahatsız Et"
       },
       {
         "name": "Scimitar",
@@ -189,7 +252,10 @@
         "properties": "Finesse, Light",
         "mastery": "Nick",
         "weight": "3 lb.",
-        "cost": "25 GP"
+        "cost": "25 GP",
+        "name_tr": "Pala",
+        "properties_tr": "İncelik, Hafif",
+        "mastery_tr": "Çentikle"
       },
       {
         "name": "Shortsword",
@@ -197,7 +263,10 @@
         "properties": "Finesse, Light",
         "mastery": "Vex",
         "weight": "2 lb.",
-        "cost": "10 GP"
+        "cost": "10 GP",
+        "name_tr": "Kısa Kılıç",
+        "properties_tr": "İncelik, Hafif",
+        "mastery_tr": "Rahatsız Et"
       },
       {
         "name": "Trident",
@@ -205,7 +274,10 @@
         "properties": "Thrown (Range 20/60), Versatile (1d10)",
         "mastery": "Topple",
         "weight": "4 lb.",
-        "cost": "5 GP"
+        "cost": "5 GP",
+        "name_tr": "Yaba",
+        "properties_tr": "Fırlatılabilir (Menzil 20/60), Çok Yönlü (1d10)",
+        "mastery_tr": "Yıkıt"
       },
       {
         "name": "War Pick",
@@ -213,7 +285,10 @@
         "properties": "Versatile (1d10)",
         "mastery": "Sap",
         "weight": "2 lb.",
-        "cost": "5 GP"
+        "cost": "5 GP",
+        "name_tr": "Savaş Kazması",
+        "properties_tr": "Çok Yönlü (1d10)",
+        "mastery_tr": "Yıprat"
       },
       {
         "name": "Warhammer",
@@ -221,7 +296,10 @@
         "properties": "Versatile (1d10)",
         "mastery": "Push",
         "weight": "5 lb.",
-        "cost": "15 GP"
+        "cost": "15 GP",
+        "name_tr": "Savaş Çekici",
+        "properties_tr": "Çok Yönlü (1d10)",
+        "mastery_tr": "İt"
       },
       {
         "name": "Whip",
@@ -229,7 +307,10 @@
         "properties": "Finesse, Reach",
         "mastery": "Slow",
         "weight": "3 lb.",
-        "cost": "2 GP"
+        "cost": "2 GP",
+        "name_tr": "Kamçı",
+        "properties_tr": "İncelik, Erişim",
+        "mastery_tr": "Yavaşlat"
       }
     ]
   },
@@ -242,7 +323,10 @@
         "properties": "Finesse, Thrown (Range 20/60)",
         "mastery": "Vex",
         "weight": "1/4 lb.",
-        "cost": "5 CP"
+        "cost": "5 CP",
+        "name_tr": "Dart",
+        "properties_tr": "İncelik, Fırlatılabilir (Menzil 20/60)",
+        "mastery_tr": "Rahatsız Et"
       },
       {
         "name": "Light Crossbow",
@@ -250,7 +334,10 @@
         "properties": "Ammunition (Range 80/320), Loading, Two-Handed",
         "mastery": "Slow",
         "weight": "5 lb.",
-        "cost": "25 GP"
+        "cost": "25 GP",
+        "name_tr": "Hafif Yay Tüfeği",
+        "properties_tr": "Mühimmat (Menzil 80/320), Şarj, İki Elli",
+        "mastery_tr": "Yavaşlat"
       },
       {
         "name": "Shortbow",
@@ -258,7 +345,10 @@
         "properties": "Ammunition (Range 80/320), Two-Handed",
         "mastery": "Vex",
         "weight": "2 lb.",
-        "cost": "25 GP"
+        "cost": "25 GP",
+        "name_tr": "Kısa Yay",
+        "properties_tr": "Mühimmat (Menzil 80/320), İki Elli",
+        "mastery_tr": "Rahatsız Et"
       },
       {
         "name": "Sling",
@@ -266,11 +356,13 @@
         "properties": "Ammunition (Range 30/120)",
         "mastery": "Slow",
         "weight": "—",
-        "cost": "1 SP"
+        "cost": "1 SP",
+        "name_tr": "Sapan",
+        "properties_tr": "Mühimmat (Menzil 30/120)",
+        "mastery_tr": "Yavaşlat"
       }
     ]
   },
-
   {
     "type": "martial_ranged_weapons",
     "items": [
@@ -280,7 +372,10 @@
         "properties": "Ammunition (Range 25/100), Loading",
         "mastery": "Vex",
         "weight": "1 lb.",
-        "cost": "10 GP"
+        "cost": "10 GP",
+        "name_tr": "Üflemeli Tüfek",
+        "properties_tr": "Mühimmat (Menzil 25/100), Şarj",
+        "mastery_tr": "Rahatsız Et"
       },
       {
         "name": "Hand Crossbow",
@@ -288,7 +383,10 @@
         "properties": "Ammunition (Range 30/120), Light, Loading",
         "mastery": "Vex",
         "weight": "3 lb.",
-        "cost": "75 GP"
+        "cost": "75 GP",
+        "name_tr": "El Yay Tüfeği",
+        "properties_tr": "Mühimmat (Menzil 30/120), Hafif, Şarj",
+        "mastery_tr": "Rahatsız Et"
       },
       {
         "name": "Heavy Crossbow",
@@ -296,7 +394,10 @@
         "properties": "Ammunition (Range 100/400), Heavy, Loading, Two-Handed",
         "mastery": "Push",
         "weight": "18 lb.",
-        "cost": "50 GP"
+        "cost": "50 GP",
+        "name_tr": "Ağır Yay Tüfeği",
+        "properties_tr": "Mühimmat (Menzil 100/400), Ağır, Şarj, İki Elli",
+        "mastery_tr": "İt"
       },
       {
         "name": "Longbow",
@@ -304,7 +405,10 @@
         "properties": "Ammunition (Range 150/600), Heavy, Two-Handed",
         "mastery": "Slow",
         "weight": "2 lb.",
-        "cost": "50 GP"
+        "cost": "50 GP",
+        "name_tr": "Uzun Yay",
+        "properties_tr": "Mühimmat (Menzil 150/600), Ağır, İki Elli",
+        "mastery_tr": "Yavaşlat"
       },
       {
         "name": "Musket",
@@ -312,7 +416,10 @@
         "properties": "Ammunition (Range 40/120), Loading, Two-Handed",
         "mastery": "Slow",
         "weight": "10 lb.",
-        "cost": "500 GP"
+        "cost": "500 GP",
+        "name_tr": "Tüfek",
+        "properties_tr": "Mühimmat (Menzil 40/120), Şarj, İki Elli",
+        "mastery_tr": "Yavaşlat"
       },
       {
         "name": "Pistol",
@@ -320,7 +427,10 @@
         "properties": "Ammunition (Range 30/90), Loading",
         "mastery": "Vex",
         "weight": "3 lb.",
-        "cost": "250 GP"
+        "cost": "250 GP",
+        "name_tr": "Tabanca",
+        "properties_tr": "Mühimmat (Menzil 30/90), Şarj",
+        "mastery_tr": "Rahatsız Et"
       }
     ]
   }

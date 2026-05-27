@@ -7,36 +7,72 @@
   "accentRgb": "74, 222, 128",
   "subclassRoute": "/wiki/classes/ranger/",
   "multiclassTraits": "Gain the Hit Point Die, proficiency with Martial weapons, proficiency in one skill from the Ranger's list, and training with Light and Medium armor and Shields.",
-
   "subclasses": [
-    { "title": "Beast Master", "icon": "mdi-paw" },
-    { "title": "Fey Wanderer", "icon": "mdi-shimmer" },
-    { "title": "Gloom Stalker", "icon": "mdi-eye-off" },
-    { "title": "Hunter", "icon": "mdi-crosshairs" }
+    {
+      "title": "Beast Master",
+      "icon": "mdi-paw",
+      "title_tr": "Canavar Ustası"
+    },
+    {
+      "title": "Fey Wanderer",
+      "icon": "mdi-shimmer",
+      "title_tr": "Peri Gezgini"
+    },
+    {
+      "title": "Gloom Stalker",
+      "icon": "mdi-eye-off",
+      "title_tr": "Karanlık Avcısı"
+    },
+    {
+      "title": "Hunter",
+      "icon": "mdi-crosshairs",
+      "title_tr": "Avcı"
+    }
   ],
-
   "coreTraits": [
-    { "label": "Primary Ability", "value": "Dexterity and Wisdom" },
-    { "label": "Hit Point Die", "value": "D10 per Ranger level" },
+    {
+      "label": "Primary Ability",
+      "value": "Dexterity and Wisdom",
+      "label_tr": "Birincil Nitelik",
+      "value_tr": "Çeviklik ve Hikmet"
+    },
+    {
+      "label": "Hit Point Die",
+      "value": "D10 per Ranger level",
+      "label_tr": "Can Puanı Zarı",
+      "value_tr": "Avcı seviyesi başına D10"
+    },
     {
       "label": "Saving Throw Proficiencies",
-      "value": "Strength and Dexterity"
+      "value": "Strength and Dexterity",
+      "label_tr": "Kurtarma Atışı Uzmanlıkları",
+      "value_tr": "Güç ve Çeviklik"
     },
     {
       "label": "Skill Proficiencies",
-      "value": "Choose 3: Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, or Survival"
+      "value": "Choose 3: Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, or Survival",
+      "label_tr": "Beceri Uzmanlıkları",
+      "value_tr": "3 seçin: Hayvan Bakımı, Atletizm, İçgüdü, Araştırma, Doğa, Algı, Gizlilik veya Hayatta Kalma"
     },
-    { "label": "Weapon Proficiencies", "value": "Simple and Martial weapons" },
+    {
+      "label": "Weapon Proficiencies",
+      "value": "Simple and Martial weapons",
+      "label_tr": "Silah Uzmanlıkları",
+      "value_tr": "Basit ve Savaş Silahları"
+    },
     {
       "label": "Armor Training",
-      "value": "Light and Medium armor and Shields"
+      "value": "Light and Medium armor and Shields",
+      "label_tr": "Zırh Eğitimi",
+      "value_tr": "Hafif ve Orta Zırh ve Kalkanlar"
     },
     {
       "label": "Starting Equipment",
-      "value": "Choose A or B: (A) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Druidic Focus, Explorer's Pack, and 7 GP; or (B) 150 GP"
+      "value": "Choose A or B: (A) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Druidic Focus, Explorer's Pack, and 7 GP; or (B) 150 GP",
+      "label_tr": "Başlangıç Ekipmanı",
+      "value_tr": "A veya B seçin: (A) Çivili Deri Zırh, Pala, Kısa Kılıç, Uzun Yay, 20 Ok, Ok Sadağı, Druidik Odaklayıcı, Kaşif Çantası ve 7 AP; veya (B) 150 AP"
     }
   ],
-
   "tableColumns": [
     {
       "key": "favoredEnemy",
@@ -50,13 +86,32 @@
       "badge": true,
       "badgeClass": "ps-badge"
     },
-    { "key": "slot1", "label": "1st", "badge": false },
-    { "key": "slot2", "label": "2nd", "badge": false },
-    { "key": "slot3", "label": "3rd", "badge": false },
-    { "key": "slot4", "label": "4th", "badge": false },
-    { "key": "slot5", "label": "5th", "badge": false }
+    {
+      "key": "slot1",
+      "label": "1st",
+      "badge": false
+    },
+    {
+      "key": "slot2",
+      "label": "2nd",
+      "badge": false
+    },
+    {
+      "key": "slot3",
+      "label": "3rd",
+      "badge": false
+    },
+    {
+      "key": "slot4",
+      "label": "4th",
+      "badge": false
+    },
+    {
+      "key": "slot5",
+      "label": "5th",
+      "badge": false
+    }
   ],
-
   "levels": [
     {
       "level": "1",
@@ -68,7 +123,8 @@
       "slot2": "—",
       "slot3": "—",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Büyü Kullanımı, Tercihli Düşman, Silah Hakimiyeti"
     },
     {
       "level": "2",
@@ -80,7 +136,8 @@
       "slot2": "—",
       "slot3": "—",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Becerikli Kaşif, Dövüş Stili"
     },
     {
       "level": "3",
@@ -92,7 +149,8 @@
       "slot2": "—",
       "slot3": "—",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Avcı Alt Sınıfı"
     },
     {
       "level": "4",
@@ -104,7 +162,8 @@
       "slot2": "—",
       "slot3": "—",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "5",
@@ -116,7 +175,8 @@
       "slot2": "2",
       "slot3": "—",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Ekstra Saldırı"
     },
     {
       "level": "6",
@@ -128,7 +188,8 @@
       "slot2": "2",
       "slot3": "—",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Gezgin"
     },
     {
       "level": "7",
@@ -140,7 +201,8 @@
       "slot2": "3",
       "slot3": "—",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "8",
@@ -152,7 +214,8 @@
       "slot2": "3",
       "slot3": "—",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "9",
@@ -164,7 +227,8 @@
       "slot2": "3",
       "slot3": "2",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Uzmanlık"
     },
     {
       "level": "10",
@@ -176,7 +240,8 @@
       "slot2": "3",
       "slot3": "2",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Yorulmaz"
     },
     {
       "level": "11",
@@ -188,7 +253,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "12",
@@ -200,7 +266,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "—",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "13",
@@ -212,7 +279,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "1",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Amansız Avcı"
     },
     {
       "level": "14",
@@ -224,7 +292,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "1",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Doğanın Örtüsü"
     },
     {
       "level": "15",
@@ -236,7 +305,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "2",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Alt Sınıf Özelliği"
     },
     {
       "level": "16",
@@ -248,7 +318,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "2",
-      "slot5": "—"
+      "slot5": "—",
+      "feature_tr": "Nitelik Puanı Artışı"
     },
     {
       "level": "17",
@@ -260,7 +331,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "3",
-      "slot5": "1"
+      "slot5": "1",
+      "feature_tr": "Hassas Avcı"
     },
     {
       "level": "18",
@@ -272,7 +344,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "3",
-      "slot5": "1"
+      "slot5": "1",
+      "feature_tr": "Vahşi Duyular"
     },
     {
       "level": "19",
@@ -284,7 +357,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "3",
-      "slot5": "2"
+      "slot5": "2",
+      "feature_tr": "Destansı Lütuf"
     },
     {
       "level": "20",
@@ -296,25 +370,31 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "3",
-      "slot5": "2"
+      "slot5": "2",
+      "feature_tr": "Düşman Katili"
     }
   ],
-
   "levelPanels": [
     {
       "level": "Level 1",
       "features": [
         {
           "title": "Spellcasting",
-          "body": "<p>Wisdom is your spellcasting ability for Ranger spells, and you can use a Druidic Focus as a Spellcasting Focus.</p><br/><p>To start, choose two level 1 Ranger spells. Cure Wounds and Ensnaring Strike are recommended. Whenever you finish a Long Rest, you can replace one spell on your list with another Ranger spell for which you have spell slots.</p>"
+          "body": "<p>Wisdom is your spellcasting ability for Ranger spells, and you can use a Druidic Focus as a Spellcasting Focus.</p><br/><p>To start, choose two level 1 Ranger spells. Cure Wounds and Ensnaring Strike are recommended. Whenever you finish a Long Rest, you can replace one spell on your list with another Ranger spell for which you have spell slots.</p>",
+          "title_tr": "Büyü Kullanımı",
+          "body_tr": "<p>Bilgeliğin Ranger büyüleri için büyü yapma yeteneğindir ve Druidik Odak büyü odağı olarak kullanabilirsin.</p><br/><p>Başlangıç için iki adet 1. seviye Ranger büyüsü seç. Uzun Dinlenmeyi bitirdiğinde listedeki bir büyüyü başka bir Ranger büyüsüyle değiştirebilirsin.</p>"
         },
         {
           "title": "Favored Enemy",
-          "body": "<p>You always have the Hunter's Mark spell prepared. You can cast it twice without expending a spell slot, regaining all uses when you finish a Long Rest.</p><br/><p>The number of free casts increases when you reach certain Ranger levels, as shown in the Favored Enemy column.</p>"
+          "body": "<p>You always have the Hunter's Mark spell prepared. You can cast it twice without expending a spell slot, regaining all uses when you finish a Long Rest.</p><br/><p>The number of free casts increases when you reach certain Ranger levels, as shown in the Favored Enemy column.</p>",
+          "title_tr": "Tercihli Düşman",
+          "body_tr": "<p>Her zaman Avcının İşareti büyüsünü hazır bulundurursun. Büyü yuvası harcamadan iki kez yapabilirsin; Uzun Dinlenmeyi bitirdiğinde tüm kullanımları geri kazanırsın.</p>"
         },
         {
           "title": "Weapon Mastery",
-          "body": "<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longbows and Shortswords. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>"
+          "body": "<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longbows and Shortswords. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>",
+          "title_tr": "Silah Hakimiyeti",
+          "body_tr": "<p>Uzmanlığa sahip olduğun iki tür silahın uzmanlık özelliklerini kullanmana izin verir. Uzun Dinlenmeyi bitirdiğinde seçtiğin silah türlerini değiştirebilirsin.</p>"
         }
       ]
     },
@@ -323,11 +403,15 @@
       "features": [
         {
           "title": "Deft Explorer",
-          "body": "<p>Thanks to your travels, you gain the following benefits.</p><br/><p><b>Expertise.</b> Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill.</p><br/><p><b>Languages.</b> You know two languages of your choice from the language tables.</p>"
+          "body": "<p>Thanks to your travels, you gain the following benefits.</p><br/><p><b>Expertise.</b> Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill.</p><br/><p><b>Languages.</b> You know two languages of your choice from the language tables.</p>",
+          "title_tr": "Becerikli Kaşif",
+          "body_tr": "<p>Seyahatler sayesinde şu faydaları kazanırsın.</p><br/><p><b>Uzmanlık.</b> Uzmanlığa sahip olmadığın bir beceri uzmanlığını seç. O beceride Uzmanlık kazanırsın.</p><br/><p><b>Diller.</b> Dil tablolarından seçtiğin iki dili bilirsin.</p>"
         },
         {
           "title": "Fighting Style",
-          "body": "<p>You gain a Fighting Style feat of your choice. Alternatively, you can choose the Druidic Warrior option below.</p><br/><p><b>Druidic Warrior.</b> You learn two Druid cantrips of your choice (Guidance and Starry Wisp recommended). They count as Ranger spells using Wisdom as your spellcasting ability. You can replace one cantrip per Ranger level gained.</p>"
+          "body": "<p>You gain a Fighting Style feat of your choice. Alternatively, you can choose the Druidic Warrior option below.</p><br/><p><b>Druidic Warrior.</b> You learn two Druid cantrips of your choice (Guidance and Starry Wisp recommended). They count as Ranger spells using Wisdom as your spellcasting ability. You can replace one cantrip per Ranger level gained.</p>",
+          "title_tr": "Dövüş Stili",
+          "body_tr": "<p>Seçtiğin bir Savaş Stili yeteneği kazanırsın. Alternatif olarak Druidik Savaşçı seçeneğini seçebilirsin.</p><br/><p><b>Druidik Savaşçı.</b> İki Druid büyüsü öğrenirsin. Bunlar Ranger büyüleri sayılır ve Bilgeliğin büyü yapma yeteneğin olur.</p>"
         }
       ]
     },
@@ -336,7 +420,9 @@
       "features": [
         {
           "title": "Ranger Subclass",
-          "body": "<p>You gain a Ranger subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Ranger level or lower. Choose your specialization below:</p>"
+          "body": "<p>You gain a Ranger subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Ranger level or lower. Choose your specialization below:</p>",
+          "title_tr": "Avcı Alt Sınıfı",
+          "body_tr": "<p>Seçtiğin bir Ranger alt sınıfı kazanırsın. Kariyerinin geri kalanında, Ranger seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Uzmanlığını aşağıdan seç:</p>"
         }
       ]
     },
@@ -345,7 +431,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Ranger levels 8, 12, and 16.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Ranger levels 8, 12, and 16.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
         }
       ]
     },
@@ -354,7 +442,9 @@
       "features": [
         {
           "title": "Extra Attack",
-          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>"
+          "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
+          "title_tr": "Ekstra Saldırı",
+          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
         }
       ]
     },
@@ -363,7 +453,9 @@
       "features": [
         {
           "title": "Roving",
-          "body": "<p>Your Speed increases by 10 feet while you aren't wearing Heavy Armor. You also have a Climb Speed and a Swim Speed equal to your Speed.</p>"
+          "body": "<p>Your Speed increases by 10 feet while you aren't wearing Heavy Armor. You also have a Climb Speed and a Swim Speed equal to your Speed.</p>",
+          "title_tr": "Gezgin",
+          "body_tr": "<p>Ağır zırh giymediğinde hızın 10 feet artar. Ayrıca Hızına eşit Tırmanma ve Yüzme Hızına sahipsin.</p>"
         }
       ]
     },
@@ -372,7 +464,9 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -381,7 +475,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -390,7 +486,9 @@
       "features": [
         {
           "title": "Expertise",
-          "body": "<p>Choose two of your skill proficiencies with which you lack Expertise. You gain Expertise in those skills.</p>"
+          "body": "<p>Choose two of your skill proficiencies with which you lack Expertise. You gain Expertise in those skills.</p>",
+          "title_tr": "Uzmanlık",
+          "body_tr": "<p>Uzmanlığa sahip olmadığın iki beceri uzmanlığını seç. O becerilerde Uzmanlık kazanırsın.</p>"
         }
       ]
     },
@@ -399,7 +497,9 @@
       "features": [
         {
           "title": "Tireless",
-          "body": "<p>Primal forces fuel you on your journeys, granting the following benefits.</p><br/><p><b>Temporary Hit Points.</b> As an action, you can give yourself Temporary Hit Points equal to 1d8 plus your Wisdom modifier (minimum 1). You can use this action a number of times equal to your Wisdom modifier (minimum once), regaining all uses on a Long Rest.</p><br/><p><b>Decrease Exhaustion.</b> Whenever you finish a Short Rest, your Exhaustion level, if any, decreases by 1.</p>"
+          "body": "<p>Primal forces fuel you on your journeys, granting the following benefits.</p><br/><p><b>Temporary Hit Points.</b> As an action, you can give yourself Temporary Hit Points equal to 1d8 plus your Wisdom modifier (minimum 1). You can use this action a number of times equal to your Wisdom modifier (minimum once), regaining all uses on a Long Rest.</p><br/><p><b>Decrease Exhaustion.</b> Whenever you finish a Short Rest, your Exhaustion level, if any, decreases by 1.</p>",
+          "title_tr": "Yorulmaz",
+          "body_tr": "<p>İlkel güçler seni yolculuklarında besler.</p><br/><p><b>Geçici Can Puanları.</b> Aksiyon olarak 1d8 artı Bilgelik değiştirici kadar Geçici Can Puanı kazanabilirsin. Bilgelik değiştiricine eşit sayıda (minimum bir kez) kullanabilirsin; Uzun Dinlenmede geri döner.</p><br/><p><b>Bitkinliği Azalt.</b> Kısa Dinlenmeyi bitirdiğinde Bitkinlik seviyeni 1 azaltırsın.</p>"
         }
       ]
     },
@@ -408,7 +508,9 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -417,7 +519,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -426,7 +530,9 @@
       "features": [
         {
           "title": "Relentless Hunter",
-          "body": "<p>Taking damage can't break your Concentration on Hunter's Mark.</p>"
+          "body": "<p>Taking damage can't break your Concentration on Hunter's Mark.</p>",
+          "title_tr": "Amansız Avcı",
+          "body_tr": "<p>Hasar almak Avcının İşareti büyündeki Konsantrasyonunu bozmaz.</p>"
         }
       ]
     },
@@ -435,7 +541,9 @@
       "features": [
         {
           "title": "Nature's Veil",
-          "body": "<p>As a Bonus Action, you can invoke spirits of nature to give yourself the Invisible condition until the end of your next turn.</p><br/><p>You can use this feature a number of times equal to your Wisdom modifier (minimum once), regaining all uses on a Long Rest.</p>"
+          "body": "<p>As a Bonus Action, you can invoke spirits of nature to give yourself the Invisible condition until the end of your next turn.</p><br/><p>You can use this feature a number of times equal to your Wisdom modifier (minimum once), regaining all uses on a Long Rest.</p>",
+          "title_tr": "Doğanın Örtüsü",
+          "body_tr": "<p>Bonus Aksiyon olarak, bir sonraki turuna kadar Görünmez durumu kazanmak için doğa ruhlarını çağırabilirsin.</p><br/><p>Bu özelliği Bilgelik değiştiricine eşit sayıda (minimum bir kez) kullanabilirsin; Uzun Dinlenmede geri döner.</p>"
         }
       ]
     },
@@ -444,7 +552,9 @@
       "features": [
         {
           "title": "Subclass Feature",
-          "body": "<p>You gain a new feature from your chosen subclass.</p>"
+          "body": "<p>You gain a new feature from your chosen subclass.</p>",
+          "title_tr": "Alt Sınıf Özelliği",
+          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
         }
       ]
     },
@@ -453,7 +563,9 @@
       "features": [
         {
           "title": "Ability Score Improvement",
-          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>"
+          "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
+          "title_tr": "Nitelik Puanı Artışı",
+          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
         }
       ]
     },
@@ -462,7 +574,9 @@
       "features": [
         {
           "title": "Precise Hunter",
-          "body": "<p>You have Advantage on attack rolls against the creature currently marked by your Hunter's Mark.</p>"
+          "body": "<p>You have Advantage on attack rolls against the creature currently marked by your Hunter's Mark.</p>",
+          "title_tr": "Hassas Avcı",
+          "body_tr": "<p>Avcının İşaretiyle işaretlenen yaratığa karşı saldırı atışlarında Üstünlüğe sahipsin.</p>"
         }
       ]
     },
@@ -471,7 +585,9 @@
       "features": [
         {
           "title": "Feral Senses",
-          "body": "<p>Your connection to the forces of nature grants you Blindsight with a range of 30 feet.</p>"
+          "body": "<p>Your connection to the forces of nature grants you Blindsight with a range of 30 feet.</p>",
+          "title_tr": "Vahşi Duyular",
+          "body_tr": "<p>Doğanın güçleriyle bağlantın sana 30 feet menzilli Kör Görüşü kazandırır.</p>"
         }
       ]
     },
@@ -480,7 +596,9 @@
       "features": [
         {
           "title": "Epic Boon",
-          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>"
+          "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>",
+          "title_tr": "Destansı Lütuf",
+          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
         }
       ]
     },
@@ -489,9 +607,16 @@
       "features": [
         {
           "title": "Foe Slayer",
-          "body": "<p>The damage die of your Hunter's Mark is a d10 rather than a d6.</p>"
+          "body": "<p>The damage die of your Hunter's Mark is a d10 rather than a d6.</p>",
+          "title_tr": "Düşman Katili",
+          "body_tr": "<p>Avcının İşaretinin hasar zarı d6 yerine d10 olur.</p>"
         }
       ]
     }
-  ]
+  ],
+  "name_tr": "Avcı",
+  "subtitle_tr": "Uygarlığın sınırlarındaki tehditleri doğa büyüsüyle karşılayan savaşçı",
+  "complexity_tr": "Düşük Karmaşıklık",
+  "primaryStat_tr": "Çeviklik",
+  "subclassPrefix_tr": "Efendisi"
 }

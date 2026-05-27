@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Classes</h1>
+          <h1 class="hero-title">{{ $t('classes.title') }}</h1>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
         v-for="cclass in classes"
         :key="cclass.id"
         class="class-card"
-        @click="goTo(cclass.label)"
+        @click="goTo(cclass)"
       >
         <div class="card-image-wrap">
           <div class="card-img-clip">
@@ -34,7 +34,7 @@
           <h2 class="card-title">{{ cclass.label }}</h2>
           <p class="card-desc">{{ cclass.desc }}</p>
           <div class="card-pref">
-            <span class="pref-label">Primary Stat</span>
+            <span class="pref-label">{{ $t('classes.primaryStat') }}</span>
             <span class="pref-value">{{ cclass.pref }}</span>
           </div>
         </div>
@@ -46,115 +46,39 @@
 
 <script>
 import router from "@/router";
+
+const classArts = {
+  barbarian: require("../assets/classes/barbarian.png"),
+  bard:      require("../assets/classes/bard.png"),
+  cleric:    require("../assets/classes/cleric.png"),
+  druid:     require("../assets/classes/druid.png"),
+  fighter:   require("../assets/classes/fighter.png"),
+  monk:      require("../assets/classes/monk.png"),
+  paladin:   require("../assets/classes/paladin.png"),
+  ranger:    require("../assets/classes/ranger.png"),
+  rogue:     require("../assets/classes/rogue.png"),
+  sorcerer:  require("../assets/classes/sorcerer.png"),
+  warlock:   require("../assets/classes/warlock.png"),
+  wizard:    require("../assets/classes/wizard.png"),
+};
+
 export default {
   methods: {
     complexityLabel(n) {
-      return ["", "Low", "Medium", "High"][n] + " Complexity";
+      return this.$t(`classes.complexity.${n}`);
     },
-    goTo(label) {
-      router.push("/wiki/classes/" + label.replace(" ", "_").toLowerCase());
+    goTo(item) {
+      router.push("/wiki/classes/" + item.routeKey);
     },
   },
-  data: () => ({
-    classes: [
-      {
-        id: 0,
-        label: "Barbarian",
-        desc: "A fierce warrior of primitive background who can enter a battle rage",
-        pref: "Strength / Constitution",
-        art: require("../assets/classes/barbarian.png"),
-        complexity: 1,
-      },
-      {
-        id: 1,
-        label: "Bard",
-        desc: "An inspiring magician whose power echoes the music of creation",
-        pref: "Charisma",
-        art: require("../assets/classes/bard.png"),
-        complexity: 2,
-      },
-      {
-        id: 2,
-        label: "Cleric",
-        desc: "A priestly champion who wields divine magic in service of a higher power",
-        pref: "Wisdom",
-        art: require("../assets/classes/cleric.png"),
-        complexity: 2,
-      },
-      {
-        id: 3,
-        label: "Druid",
-        desc: "A mage wielding the powers of nature— moonlight and plant growth, fire and lightning—and adopting animal forms",
-        pref: "Wisdom",
-        art: require("../assets/classes/druid.png"),
-        complexity: 3,
-      },
-      {
-        id: 4,
-        label: "Fighter",
-        desc: "A master of martial combat, skilled with a variety of weapons and armor",
-        pref: "Strength / Dexterity",
-        art: require("../assets/classes/fighter.png"),
-        complexity: 1,
-      },
-      {
-        id: 5,
-        label: "Monk",
-        desc: "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",
-        pref: "Wisdom / Dexterity",
-        art: require("../assets/classes/monk.png"),
-        complexity: 2,
-      },
-      {
-        id: 6,
-        label: "Paladin",
-        desc: "A holy warrior bound to a sacred oath, harnessing power of divine",
-        pref: "Strength / Charisma",
-        art: require("../assets/classes/paladin.png"),
-        complexity: 1,
-      },
-      {
-        id: 7,
-        label: "Ranger",
-        desc: "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
-        pref: "Dexterity",
-        art: require("../assets/classes/ranger.png"),
-        complexity: 1,
-      },
-      {
-        id: 8,
-        label: "Rogue",
-        desc: "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
-        pref: "Dexterity",
-        art: require("../assets/classes/rogue.png"),
-        complexity: 1,
-      },
-      {
-        id: 9,
-        label: "Sorcerer",
-        desc: "A spell-caster who draws on inherent magic from a gift or bloodline",
-        pref: "Charisma",
-        art: require("../assets/classes/sorcerer.png"),
-        complexity: 3,
-      },
-      {
-        id: 10,
-        label: "Warlock",
-        desc: "A wielder of magic derived from a bargain with an extra-planar entity",
-        pref: "Charisma",
-        art: require("../assets/classes/warlock.png"),
-        complexity: 3,
-      },
-      {
-        id: 11,
-        label: "Wizard",
-        desc: "A scholarly magic-user capable of manipulating the structures of reality",
-        pref: "Intelligence",
-        art: require("../assets/classes/wizard.png"),
-        complexity: 3,
-      },
-    ],
-  }),
+  computed: {
+    classes() {
+      return this.$tm("classes.list").map((c) => ({
+        ...c,
+        art: classArts[c.routeKey],
+      }));
+    },
+  },
 };
 </script>
 

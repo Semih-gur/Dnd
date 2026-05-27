@@ -4,12 +4,14 @@
     <div class="hero">
       <div class="hero-bg"></div>
       <div class="hero-content">
-        <span class="hero-eyebrow">Welcome to</span>
-        <h1 class="hero-title">Beholder's Tavern</h1>
-        <p class="hero-subtitle">
-          Your complete companion for Dungeons & Dragons 2024. Explore classes,
-          species, spells, backgrounds and more — everything you need to craft
-          your perfect adventure.
+        <span class="hero-eyebrow">{{ $t('home.welcomeTo') }}</span>
+        <h1 class="hero-title">{{ $t('home.title') }}</h1>
+        <p class="hero-subtitle">{{ $t('home.subtitle') }}</p>
+        <p class="hero-discord">
+          {{ $t('home.discordText') }}
+          <a href="https://discord.gg/bg5cPMJe" target="_blank" class="discord-link">
+            <v-icon size="16">mdi-discord</v-icon> Discord
+          </a>
         </p>
       </div>
     </div>
@@ -28,13 +30,10 @@
           </div>
           <div class="feature-body">
             <v-icon class="feature-icon">mdi-book-open-variant</v-icon>
-            <h2 class="feature-title">Wiki</h2>
-            <p class="feature-desc">
-              Dive into our comprehensive wiki covering every class, species,
-              spell, feat, background and item in D&D 2024.
-            </p>
+            <h2 class="feature-title">{{ $t('home.wiki.title') }}</h2>
+            <p class="feature-desc">{{ $t('home.wiki.desc') }}</p>
             <span class="feature-link"
-              >Explore Wiki <v-icon size="14">mdi-arrow-right</v-icon></span
+              >{{ $t('home.wiki.link') }} <v-icon size="14">mdi-arrow-right</v-icon></span
             >
           </div>
         </div>
@@ -50,13 +49,10 @@
           </div>
           <div class="feature-body">
             <v-icon class="feature-icon">mdi-account-plus</v-icon>
-            <h2 class="feature-title">Character Creator</h2>
-            <p class="feature-desc">
-              Build and customise your character step by step. Choose your
-              class, species, background and more with our guided creator.
-            </p>
+            <h2 class="feature-title">{{ $t('home.creator.title') }}</h2>
+            <p class="feature-desc">{{ $t('home.creator.desc') }}</p>
             <span class="feature-link"
-              >Start Building <v-icon size="14">mdi-arrow-right</v-icon></span
+              >{{ $t('home.creator.link') }} <v-icon size="14">mdi-arrow-right</v-icon></span
             >
           </div>
         </div>
@@ -65,7 +61,7 @@
 
     <!-- Quick links -->
     <div class="quick-section">
-      <h2 class="quick-title">Quick Access</h2>
+      <h2 class="quick-title">{{ $t('home.quickAccess') }}</h2>
       <div class="quick-grid">
         <div
           v-for="link in quickLinks"
@@ -85,10 +81,7 @@
         <!-- Brand -->
         <div class="footer-brand">
           <span class="footer-logo">Beholder's Tavern</span>
-          <p class="footer-tagline">
-            Your complete D&D 2024 companion. Not affiliated with Wizards of the
-            Coast.
-          </p>
+          <p class="footer-tagline">{{ $t('home.footer.tagline') }}</p>
           <div class="footer-socials">
             <a
               href="https://www.patreon.com/YOUR_PAGE"
@@ -98,7 +91,7 @@
               <v-icon size="20">mdi-patreon</v-icon>
             </a>
             <a
-              href="https://discord.gg/YOUR_SERVER"
+              href="https://discord.gg/bg5cPMJe"
               target="_blank"
               class="social-link"
             >
@@ -109,42 +102,33 @@
 
         <!-- Wiki links -->
         <div class="footer-col">
-          <h3 class="footer-heading">Wiki</h3>
+          <h3 class="footer-heading">{{ $t('home.footer.wiki') }}</h3>
           <ul class="footer-links">
-            <li><router-link to="/wiki/classes">Classes</router-link></li>
-            <li><router-link to="/wiki/species">Species</router-link></li>
-            <li><router-link to="/wiki/spells">Spells</router-link></li>
-            <li>
-              <router-link to="/wiki/backgrounds">Backgrounds</router-link>
-            </li>
-            <li><router-link to="/wiki/feats">Feats</router-link></li>
-            <li><router-link to="/wiki/items">Items</router-link></li>
+            <li><router-link to="/wiki/classes">{{ $t('nav.classes') }}</router-link></li>
+            <li><router-link to="/wiki/species">{{ $t('nav.species') }}</router-link></li>
+            <li><router-link to="/wiki/spells">{{ $t('nav.spells') }}</router-link></li>
+            <li><router-link to="/wiki/backgrounds">{{ $t('nav.backgrounds') }}</router-link></li>
+            <li><router-link to="/wiki/feats">{{ $t('nav.feats') }}</router-link></li>
+            <li><router-link to="/wiki/items">{{ $t('nav.items') }}</router-link></li>
           </ul>
         </div>
 
         <!-- Support links -->
         <div class="footer-col">
-          <h3 class="footer-heading">Support</h3>
+          <h3 class="footer-heading">{{ $t('home.footer.support') }}</h3>
           <ul class="footer-links">
             <li>
-              <a href="https://www.patreon.com/YOUR_PAGE" target="_blank"
-                >Patreon</a
-              >
+              <a href="https://www.patreon.com/YOUR_PAGE" target="_blank">Patreon</a>
             </li>
             <li>
-              <a href="https://discord.gg/YOUR_SERVER" target="_blank"
-                >Join Discord</a
-              >
+              <a href="https://discord.gg/bg5cPMJe" target="_blank">{{ $t('home.footer.joinDiscord') }}</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>
-          © {{ new Date().getFullYear() }} Beholder's Tavern. Fan-made project.
-          D&D content belongs to Wizards of the Coast.
-        </p>
+        <p>{{ $t('home.footer.copyright', { year: new Date().getFullYear() }) }}</p>
       </div>
     </footer>
   </div>
@@ -162,30 +146,21 @@ export default {
       router.push("/character_creator");
     },
   },
+  computed: {
+    quickLinks() {
+      return [
+        { label: this.$t('nav.classes'),     icon: "mdi-sword-cross",         path: "/wiki/classes" },
+        { label: this.$t('nav.species'),     icon: "mdi-account",             path: "/wiki/species" },
+        { label: this.$t('nav.spells'),      icon: "mdi-auto-fix",            path: "/wiki/spells" },
+        { label: this.$t('nav.backgrounds'), icon: "mdi-map-marker-radius",   path: "/wiki/backgrounds" },
+        { label: this.$t('nav.feats'),       icon: "mdi-star-circle-outline", path: "/wiki/feats" },
+        { label: this.$t('nav.items'),       icon: "mdi-bag-personal",        path: "/wiki/items" },
+      ];
+    },
+  },
   data() {
     return {
-      contact: {
-        name: "",
-        email: "",
-        message: "",
-        sent: false,
-      },
-      quickLinks: [
-        { label: "Classes", icon: "mdi-sword-cross", path: "/wiki/classes" },
-        { label: "Species", icon: "mdi-account", path: "/wiki/species" },
-        { label: "Spells", icon: "mdi-auto-fix", path: "/wiki/spells" },
-        {
-          label: "Backgrounds",
-          icon: "mdi-map-marker-radius",
-          path: "/wiki/backgrounds",
-        },
-        {
-          label: "Feats",
-          icon: "mdi-star-circle-outline",
-          path: "/wiki/feats",
-        },
-        { label: "Items", icon: "mdi-bag-personal", path: "/wiki/items" },
-      ],
+      contact: { name: "", email: "", message: "", sent: false },
     };
   },
 };
@@ -265,7 +240,24 @@ export default {
   font-size: 1rem;
   color: var(--text-subtle);
   line-height: 1.75;
+  margin: 0 0 0.75rem;
+}
+.hero-discord {
+  font-size: 0.9rem;
+  color: var(--text-subtle);
   margin: 0 0 2rem;
+}
+.discord-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #5865f2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+.discord-link:hover {
+  opacity: 0.8;
 }
 
 /* ── Feature cards ──────────────────────────────── */

@@ -1,6 +1,6 @@
 <template>
   <div class="wiki-home">
-    <h1 class="page-title">D&D 2024 Wiki</h1>
+    <h1 class="page-title">{{ $t('wikiHome.title') }}</h1>
     <div class="wiki-grid">
       <div
         v-for="section in sections"
@@ -24,52 +24,30 @@
 <script>
 import router from "@/router";
 
+const artMap = {
+  classes:     require("../assets/wikiPage/class.png"),
+  species:     require("../assets/wikiPage/spells.png"),
+  spells:      require("../assets/wikiPage/spells.png"),
+  backgrounds: require("../assets/wikiPage/backgrounds.png"),
+  feats:       require("../assets/wikiPage/quill.png"),
+  items:       require("../assets/wikiPage/items.png"),
+  conditions:  require("../assets/wikiPage/quill.png"),
+};
+
 export default {
   methods: {
     goTo(page) {
       router.push("wiki/" + page);
     },
   },
-  data: () => ({
-    sections: [
-      {
-        path: "classes",
-        label: "Classes",
-        desc: "Choose your path — from raging Barbarians to arcane Wizards",
-        art: require("../assets/wikiPage/class.png"),
-      },
-      {
-        path: "species",
-        label: "Species",
-        desc: "Explore the races and peoples that inhabit the world",
-        art: require("../assets/wikiPage/spells.png"),
-      },
-      {
-        path: "spells",
-        label: "Spells",
-        desc: "Browse the full catalogue of magic spells and cantrips",
-        art: require("../assets/wikiPage/spells.png"),
-      },
-      {
-        path: "backgrounds",
-        label: "Backgrounds",
-        desc: "Define your character's history and where they came from",
-        art: require("../assets/wikiPage/backgrounds.png"),
-      },
-      {
-        path: "feats",
-        label: "Feats",
-        desc: "Customize and strengthen your character with powerful abilities",
-        art: require("../assets/wikiPage/quill.png"),
-      },
-      {
-        path: "items",
-        label: "Items",
-        desc: "Weapons, armor, potions and all manner of adventuring gear",
-        art: require("../assets/wikiPage/items.png"),
-      },
-    ],
-  }),
+  computed: {
+    sections() {
+      return this.$tm("wikiHome.sections").map((s) => ({
+        ...s,
+        art: artMap[s.path],
+      }));
+    },
+  },
 };
 </script>
 

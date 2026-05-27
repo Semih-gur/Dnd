@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Blinded",
+    "name_tr": "Kör",
+    "icon": "mdi-eye-off",
+    "desc": "A Blinded creature can't see and automatically fails any ability check that requires sight. Attack rolls against the creature have Advantage, and the creature's attack rolls have Disadvantage.",
+    "desc_tr": "Kör yaratık göremez ve görme gerektiren tüm yetenek kontrollerinde otomatik olarak başarısız olur. Yaratığa karşı saldırı atışları Avantajlıdır; yaratığın saldırı atışları ise Dezavantajlıdır."
+  },
+  {
+    "name": "Charmed",
+    "name_tr": "Büyülenmiş",
+    "icon": "mdi-heart",
+    "desc": "A Charmed creature can't attack the charmer or target them with harmful abilities or magical effects. The charmer has Advantage on any ability check to interact socially with the creature.",
+    "desc_tr": "Büyülenmiş yaratık büyüleyenine saldıramaz veya zararlı yetenek ya da büyülerle onu hedefleyemez. Büyüleyenin yaratıkla sosyal etkileşim kontrollerinde Avantajı vardır."
+  },
+  {
+    "name": "Deafened",
+    "name_tr": "Sağır",
+    "icon": "mdi-ear-hearing-off",
+    "desc": "A Deafened creature can't hear and automatically fails any ability check that requires hearing.",
+    "desc_tr": "Sağır yaratık duyamaz ve işitme gerektiren tüm yetenek kontrollerinde otomatik olarak başarısız olur."
+  },
+  {
+    "name": "Exhaustion",
+    "name_tr": "Yorgunluk",
+    "icon": "mdi-sleep",
+    "desc": "Exhaustion has 6 levels. Each level imposes a cumulative −2 penalty to all d20 Tests (attack rolls, ability checks, saving throws). At level 5 the creature's Speed drops to 0. At level 6 the creature dies. Finishing a Long Rest removes one level.",
+    "desc_tr": "Yorgunluğun 6 seviyesi vardır. Her seviye tüm d20 Testlerine (saldırı atışları, yetenek kontrolleri, kurtarma atışları) birikimli −2 ceza uygular. 5. seviyede Hız 0'a düşer. 6. seviyede yaratık ölür. Uzun Dinlenme bir seviyeyi giderir."
+  },
+  {
+    "name": "Frightened",
+    "name_tr": "Korkmuş",
+    "icon": "mdi-run-fast",
+    "desc": "A Frightened creature has Disadvantage on ability checks and attack rolls while the source of its fear is within line of sight. The creature can't willingly move closer to the source of its fear.",
+    "desc_tr": "Korkmuş yaratık, korku kaynağı görüş hattındayken yetenek kontrolleri ve saldırı atışlarında Dezavantajlıdır. Yaratık isteğiyle korku kaynağına doğru hareket edemez."
+  },
+  {
+    "name": "Grappled",
+    "name_tr": "Yakalanmış",
+    "icon": "mdi-hand-front-right",
+    "desc": "A Grappled creature's Speed becomes 0 and can't benefit from any bonus to Speed. The condition ends if the grappler is Incapacitated, or if the creature is moved out of the grappler's reach.",
+    "desc_tr": "Yakalanmış yaratığın Hızı 0 olur ve Hız bonuslarından yararlanamaz. Yakalayan Etkisiz Hale Gelirse veya yaratık yakalayıcının erişim alanı dışına çıkarsa durum sona erer."
+  },
+  {
+    "name": "Incapacitated",
+    "name_tr": "Etkisiz Hale Gelmiş",
+    "icon": "mdi-cancel",
+    "desc": "An Incapacitated creature can't take actions or reactions.",
+    "desc_tr": "Etkisiz Hale Gelmiş yaratık eylem veya tepki alamaz."
+  },
+  {
+    "name": "Invisible",
+    "name_tr": "Görünmez",
+    "icon": "mdi-vanish",
+    "desc": "An Invisible creature can't be seen without magic or special senses. Attack rolls against it have Disadvantage; its attack rolls have Advantage. It can still be detected by sound, smell, or other senses.",
+    "desc_tr": "Görünmez yaratık büyü veya özel duyular olmadan görülemez. Yaratığa karşı saldırı atışları Dezavantajlıdır; yaratığın saldırı atışları Avantajlıdır. Ses, koku veya diğer duyularla hâlâ tespit edilebilir."
+  },
+  {
+    "name": "Paralyzed",
+    "name_tr": "Felçli",
+    "icon": "mdi-lightning-bolt-outline",
+    "desc": "A Paralyzed creature is Incapacitated and can't move or speak. It automatically fails Strength and Dexterity saving throws. Attack rolls against it have Advantage, and any hit within 5 feet is a critical hit.",
+    "desc_tr": "Felçli yaratık Etkisiz Hale Gelmiştir; hareket edemez ve konuşamaz. Güç ve Çeviklik kurtarma atışlarında otomatik olarak başarısız olur. Saldırı atışları Avantajlıdır ve 5 feet içinden isabet eden her saldırı kritik vuruştur."
+  },
+  {
+    "name": "Petrified",
+    "name_tr": "Taşlaşmış",
+    "icon": "mdi-diamond-stone",
+    "desc": "A Petrified creature is transformed into solid inanimate matter. It is Incapacitated, unaware of its surroundings, and can't move or speak. It automatically fails Strength and Dexterity saving throws, has Resistance to all damage, and is immune to poison and disease (existing effects are suspended, not cured). Attack rolls against it have Advantage.",
+    "desc_tr": "Taşlaşmış yaratık katı cansız bir maddeye dönüşür. Etkisiz Hale Gelmiştir, çevresinden habersizdir, hareket edemez ve konuşamaz. Güç ve Çeviklik kurtarma atışlarında otomatik başarısız olur, tüm hasara Direnci vardır ve zehir ile hastalıklara karşı bağışıktır (aktif etkiler askıya alınır, iyileştirilmez). Saldırı atışları Avantajlıdır."
+  },
+  {
+    "name": "Poisoned",
+    "name_tr": "Zehirlenmiş",
+    "icon": "mdi-biohazard",
+    "desc": "A Poisoned creature has Disadvantage on attack rolls and ability checks.",
+    "desc_tr": "Zehirlenmiş yaratığın saldırı atışları ve yetenek kontrolleri Dezavantajlıdır."
+  },
+  {
+    "name": "Prone",
+    "name_tr": "Yere Düşmüş",
+    "icon": "mdi-human-handsdown",
+    "desc": "A Prone creature can only crawl (costs 1 extra foot per foot moved) unless it stands up (costs half its Speed). Melee attack rolls against it have Advantage; ranged attack rolls have Disadvantage. Its own melee attack rolls have Disadvantage.",
+    "desc_tr": "Yere Düşmüş yaratık yalnızca sürünerek hareket edebilir (her foot 1 ekstra foot harcar) ya da kalkabilir (Hızının yarısını harcar). Yakın dövüş saldırıları Avantajlıdır; menzilli saldırılar Dezavantajlıdır. Yaratığın kendi yakın dövüş saldırıları Dezavantajlıdır."
+  },
+  {
+    "name": "Restrained",
+    "name_tr": "Kısıtlanmış",
+    "icon": "mdi-link-variant",
+    "desc": "A Restrained creature's Speed becomes 0. Attack rolls against it have Advantage; its attack rolls have Disadvantage. It has Disadvantage on Dexterity saving throws.",
+    "desc_tr": "Kısıtlanmış yaratığın Hızı 0 olur. Saldırı atışları Avantajlıdır; yaratığın saldırı atışları Dezavantajlıdır. Çeviklik kurtarma atışlarında Dezavantajlıdır."
+  },
+  {
+    "name": "Stunned",
+    "name_tr": "Sersemletilmiş",
+    "icon": "mdi-star-circle",
+    "desc": "A Stunned creature is Incapacitated, can't move, and can only speak falteringly. It automatically fails Strength and Dexterity saving throws. Attack rolls against it have Advantage.",
+    "desc_tr": "Sersemletilmiş yaratık Etkisiz Hale Gelmiştir, hareket edemez ve yalnızca güçlükle konuşabilir. Güç ve Çeviklik kurtarma atışlarında otomatik olarak başarısız olur. Saldırı atışları Avantajlıdır."
+  },
+  {
+    "name": "Unconscious",
+    "name_tr": "Bilinçsiz",
+    "icon": "mdi-moon-waning-crescent",
+    "desc": "An Unconscious creature is Incapacitated, can't move or speak, is unaware of its surroundings, drops held objects, and falls Prone. It automatically fails Strength and Dexterity saving throws. Attack rolls against it have Advantage, and any hit within 5 feet is a critical hit.",
+    "desc_tr": "Bilinçsiz yaratık Etkisiz Hale Gelmiştir, hareket edemez ve konuşamaz, çevresinden habersizdir, tuttuğu nesneleri düşürür ve Yere Düşmüş olur. Güç ve Çeviklik kurtarma atışlarında otomatik olarak başarısız olur. Saldırı atışları Avantajlıdır ve 5 feet içinden isabet eden her saldırı kritik vuruştur."
+  }
+]

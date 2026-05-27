@@ -7,287 +7,410 @@
         "type": "Armor",
         "attuned": "-",
         "price": "100 GP",
-        "description": "This armor never gets dirty. No matter what muck or grime it encounters, the armor remains perfectly clean at all times."
+        "description": "This armor never gets dirty. No matter what muck or grime it encounters, the armor remains perfectly clean at all times.",
+        "type_tr": "Zırh",
+        "description_tr": "Bu zırh hiç kirlenmez. Hangi çamur ya da kire bulaşırsa bulaşsın, zırh her zaman mükemmel temizlikte kalır.",
+        "name_tr": "Parıldayan Zırh"
       },
       {
         "name": "Bead of Nourishment",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "This bead dissolves in your mouth and provides as much nourishment as one day of rations."
+        "description": "This bead dissolves in your mouth and provides as much nourishment as one day of rations.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu boncuk ağzınızda erir ve bir günlük erzakın sağladığı kadar besin sağlar.",
+        "name_tr": "Beslenme Boncuğu"
       },
       {
         "name": "Bead of Refreshment",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "This bead dissolves in liquid, turning up to 1 pint into fresh, cold drinking water."
+        "description": "This bead dissolves in liquid, turning up to 1 pint into fresh, cold drinking water.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu boncuk bir sıvı içinde erir; 1 pinte kadar sıvıyı taze, soğuk içme suyuna dönüştürür.",
+        "name_tr": "Serinleme Boncuğu"
       },
       {
         "name": "Boots of False Tracks",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "100 GP",
-        "description": "These boots allow you to leave tracks of a different creature of similar size."
+        "description": "These boots allow you to leave tracks of a different creature of similar size.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu botlar, benzer boyuttaki farklı bir yaratığın izlerini bırakmanızı sağlar.",
+        "name_tr": "Sahte İz Botları"
       },
       {
         "name": "Candle of the Deep",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "100 GP",
-        "description": "This candle burns without being consumed and functions underwater."
+        "description": "This candle burns without being consumed and functions underwater.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu mum tükenmeden yanar ve su altında işlev görür.",
+        "name_tr": "Derinliklerin Mumu"
       },
       {
         "name": "Cast-Off Armor",
         "type": "Armor",
         "attuned": "-",
         "price": "100 GP",
-        "description": "You can remove this armor as an action."
+        "description": "You can remove this armor as an action.",
+        "type_tr": "Zırh",
+        "description_tr": "Bu zırhı bir aksiyonla çıkarabilirsiniz.",
+        "name_tr": "Çıkarılabilir Zırh"
       },
       {
         "name": "Cloak of Billowing",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "As a bonus action, you can cause this cloak to billow dramatically."
+        "description": "As a bonus action, you can cause this cloak to billow dramatically.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bonus Aksiyon olarak bu pelerinin dramatik biçimde şişmesini sağlayabilirsiniz.",
+        "name_tr": "Şişen Pelerin"
       },
       {
         "name": "Cloak of Many Fashions",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "75 GP",
-        "description": "You can change the cloak’s color, style, and apparent quality."
+        "description": "You can change the cloak’s color, style, and apparent quality.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Pelerinin rengini, stilini ve görünür kalitesini değiştirebilirsiniz.",
+        "name_tr": "Çok Modlu Pelerin"
       },
       {
         "name": "Clockwork Amulet",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "100 GP",
-        "description": "Once per day, you can forgo rolling a d20 and instead treat it as a 10."
+        "description": "Once per day, you can forgo rolling a d20 and instead treat it as a 10.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Günde bir kez, d20 atmak yerine sonucu 10 olarak sayabilirsiniz.",
+        "name_tr": "Saat Mekanizmalı Muska"
       },
       {
         "name": "Clothes of Mending",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "This outfit repairs itself of tears and damage over time."
+        "description": "This outfit repairs itself of tears and damage over time.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu kıyafet, yırtıkları ve hasarları zamanla kendi kendine onarır.",
+        "name_tr": "Onarıcı Kıyafet"
       },
       {
         "name": "Dark Shard Amulet",
         "type": "Wondrous Item",
         "attuned": "Yes (Warlock)",
         "price": "100 GP",
-        "description": "You can attempt to cast a cantrip from any class spell list."
+        "description": "You can attempt to cast a cantrip from any class spell list.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Herhangi bir sınıfın büyü listesinden bir hazır büyü kullanmayı deneyebilirsiniz.",
+        "name_tr": "Karanlık Kıymık Muska"
       },
       {
         "name": "Dread Helm",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "75 GP",
-        "description": "This helm makes your eyes glow red."
+        "description": "This helm makes your eyes glow red.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu miğfer gözlerinizin kırmızı parlayarak görünmesini sağlar.",
+        "name_tr": "Korku Miğferi"
       },
       {
         "name": "Ear Horn of Hearing",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "This horn negates disadvantage on hearing-based Perception checks."
+        "description": "This horn negates disadvantage on hearing-based Perception checks.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu boynuz, işitmeye dayalı Algılama kontrollerindeki dezavantajı ortadan kaldırır.",
+        "name_tr": "İşitme Boynuzu"
       },
       {
         "name": "Enduring Spellbook",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "100 GP",
-        "description": "This spellbook is resistant to fire, water, and damage."
+        "description": "This spellbook is resistant to fire, water, and damage.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu büyü kitabı ateşe, suya ve hasara karşı dirençlidir.",
+        "name_tr": "Dayanıklı Büyü Kitabı"
       },
       {
         "name": "Ersatz Eye",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "100 GP",
-        "description": "This artificial eye replaces a missing one and grants normal vision."
+        "description": "This artificial eye replaces a missing one and grants normal vision.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu yapay göz, eksik gözün yerine geçer ve normal görüş sağlar.",
+        "name_tr": "Yapay Göz"
       },
       {
         "name": "Hat of Vermin",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "You can pull harmless vermin from this hat."
+        "description": "You can pull harmless vermin from this hat.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu şapkadan zararsız haşerat çıkarabilirsiniz.",
+        "name_tr": "Haşerat Şapkası"
       },
       {
         "name": "Hat of Wizardry",
         "type": "Wondrous Item",
         "attuned": "Yes (Wizard)",
         "price": "100 GP",
-        "description": "You can attempt to cast wizard cantrips you don’t know."
+        "description": "You can attempt to cast wizard cantrips you don’t know.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bilmediğiniz büyücü hazır büyülerini kullanmayı deneyebilirsiniz.",
+        "name_tr": "Büyücülük Şapkası"
       },
       {
         "name": "Heward’s Handy Spice Pouch",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "75 GP",
-        "description": "This pouch produces seasoning for food."
+        "description": "This pouch produces seasoning for food.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu kese, yiyecekler için çeşitli baharatlar üretir.",
+        "name_tr": "Heward’un Kullanışlı Baharat Kesesi"
       },
       {
         "name": "Horn of Silent Alarm",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "75 GP",
-        "description": "This horn alerts designated creatures silently."
+        "description": "This horn alerts designated creatures silently.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu boynuz belirlediğiniz yaratıkları sessizce uyarır.",
+        "name_tr": "Sessiz Alarm Boynuzu"
       },
       {
         "name": "Instrument of Illusions",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "100 GP",
-        "description": "While playing, you can create minor illusion effects."
+        "description": "While playing, you can create minor illusion effects.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Çalarken küçük yanılsama efektleri yaratabilirsiniz.",
+        "name_tr": "Yanılsama Enstrümanı"
       },
       {
         "name": "Instrument of Scribing",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "75 GP",
-        "description": "You can write magical musical notation."
+        "description": "You can write magical musical notation.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Büyüsel müzik notasyonu yazabilirsiniz.",
+        "name_tr": "Yazı Enstrümanı"
       },
       {
         "name": "Lock of Trickery",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "100 GP",
-        "description": "This lock is harder to pick and can confuse thieves."
+        "description": "This lock is harder to pick and can confuse thieves.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu kilit, açılması daha zordur ve hırsızları şaşırtabilir.",
+        "name_tr": "Hile Kilidi"
       },
       {
         "name": "Moon-Touched Sword",
         "type": "Weapon",
         "attuned": "-",
         "price": "100 GP",
-        "description": "This sword sheds moonlight in darkness."
+        "description": "This sword sheds moonlight in darkness.",
+        "type_tr": "Silah",
+        "description_tr": "Bu kılıç karanlıkta ay ışığı saçar.",
+        "name_tr": "Ay Dokunuşlu Kılıç"
       },
       {
         "name": "Mystery Key",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "This key has a small chance to unlock any lock."
+        "description": "This key has a small chance to unlock any lock.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu anahtarın herhangi bir kilidi açma ihtimali küçük de olsa mevcuttur.",
+        "name_tr": "Gizem Anahtarı"
       },
       {
         "name": "Orb of Direction",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "This orb always points north."
+        "description": "This orb always points north.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu küre her zaman kuzeyi gösterir.",
+        "name_tr": "Yön Küresi"
       },
       {
         "name": "Orb of Time",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "This orb tells the time of day."
+        "description": "This orb tells the time of day.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu küre günün saatini söyler.",
+        "name_tr": "Zaman Küresi"
       },
       {
         "name": "Perfume of Bewitching",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "100 GP",
-        "description": "This perfume grants advantage on Charisma checks briefly."
+        "description": "This perfume grants advantage on Charisma checks briefly.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu parfüm, kısa bir süre için Karizma kontrollerinde avantaj sağlar.",
+        "name_tr": "Büyüleyici Parfüm"
       },
       {
         "name": "Pipe of Smoke Monsters",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "75 GP",
-        "description": "You can create smoke shapes resembling creatures."
+        "description": "You can create smoke shapes resembling creatures.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Yaratıklara benzer duman şekilleri oluşturabilirsiniz.",
+        "name_tr": "Duman Canavarları Piposu"
       },
       {
         "name": "Pole of Angling",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "This pole transforms into a fishing rod."
+        "description": "This pole transforms into a fishing rod.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu sırık bir olta çubuğuna dönüşür.",
+        "name_tr": "Balık Tutma Sırığı"
       },
       {
         "name": "Pole of Collapsing",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "This pole collapses into a small size."
+        "description": "This pole collapses into a small size.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu sırık küçük bir boyuta katlanır.",
+        "name_tr": "Katlanır Sırık"
       },
       {
         "name": "Potion of Climbing",
         "type": "Potion",
         "attuned": "-",
         "price": "50 GP",
-        "description": "You gain a climbing speed for 1 hour."
+        "description": "You gain a climbing speed for 1 hour.",
+        "type_tr": "İksir",
+        "description_tr": "1 saat boyunca bir tırmanma hızı kazanırsınız.",
+        "name_tr": "Tırmanma İksiri"
       },
       {
         "name": "Potion of Healing",
         "type": "Potion",
         "attuned": "-",
         "price": "50 GP",
-        "description": "You regain 2d4 + 2 hit points when you drink this potion."
+        "description": "You regain 2d4 + 2 hit points when you drink this potion.",
+        "type_tr": "İksir",
+        "description_tr": "Bu iksiri içtiğinizde 2d4 + 2 Can Puanı yeniden kazanırsınız.",
+        "name_tr": "İyileştirme İksiri"
       },
       {
         "name": "Spell Scroll (Cantrip)",
         "type": "Scroll",
         "attuned": "-",
         "price": "25 GP",
-        "description": "Contains a single cantrip spell."
+        "description": "Contains a single cantrip spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir hazır büyü içerir.",
+        "name_tr": "Büyü Tomarı (Hazır Büyü)"
       },
       {
         "name": "Spell Scroll (1st Level)",
         "type": "Scroll",
         "attuned": "-",
         "price": "50 GP",
-        "description": "Contains a single 1st-level spell."
+        "description": "Contains a single 1st-level spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir 1. seviye büyü içerir.",
+        "name_tr": "Büyü Tomarı (1. Seviye)"
       },
       {
         "name": "Ruby of the War Mage",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "100 GP",
-        "description": "You can use a weapon as a spellcasting focus."
+        "description": "You can use a weapon as a spellcasting focus.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bir silahı büyü odağı olarak kullanabilirsiniz.",
+        "name_tr": "Savaş Büyücüsü Yakutu"
       },
       {
         "name": "Shield of Expression",
         "type": "Armor (Shield)",
         "attuned": "-",
         "price": "75 GP",
-        "description": "You can change the face displayed on the shield."
+        "description": "You can change the face displayed on the shield.",
+        "type_tr": "Zırh (Kalkan)",
+        "description_tr": "Kalkanda görüntülenen yüzü değiştirebilirsiniz.",
+        "name_tr": "İfadeli Kalkan"
       },
       {
         "name": "Staff of Adornment",
         "type": "Staff",
         "attuned": "-",
         "price": "75 GP",
-        "description": "You can attach small objects to this staff."
+        "description": "You can attach small objects to this staff.",
+        "type_tr": "Asa",
+        "description_tr": "Bu asaya küçük nesneler takabilirsiniz.",
+        "name_tr": "Süsleme Asası"
       },
       {
         "name": "Staff of Birdcalls",
         "type": "Staff",
         "attuned": "-",
         "price": "75 GP",
-        "description": "This staff produces bird sounds."
+        "description": "This staff produces bird sounds.",
+        "type_tr": "Asa",
+        "description_tr": "Bu asa kuş sesleri çıkarır.",
+        "name_tr": "Kuş Sesi Asası"
       },
       {
         "name": "Staff of Flowers",
         "type": "Staff",
         "attuned": "-",
         "price": "75 GP",
-        "description": "You can cause flowers to sprout nearby."
+        "description": "You can cause flowers to sprout nearby.",
+        "type_tr": "Asa",
+        "description_tr": "Yakınlarda çiçek açmasını sağlayabilirsiniz.",
+        "name_tr": "Çiçek Asası"
       },
       {
         "name": "Talking Doll",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "100 GP",
-        "description": "This doll can speak recorded phrases."
+        "description": "This doll can speak recorded phrases.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu bebek kaydedilmiş cümleler söyleyebilir.",
+        "name_tr": "Konuşan Bebek"
       },
       {
         "name": "Tankard of Sobriety",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "50 GP",
-        "description": "You cannot become intoxicated while using this tankard."
+        "description": "You cannot become intoxicated while using this tankard.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu tankardı kullanırken sarhoş olamazsınız.",
+        "name_tr": "Ayıklık Tankardı"
       }
     ]
   },
@@ -299,245 +422,350 @@
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "500 GP",
-        "description": "This ceramic jug can produce various liquids such as water, beer, honey, or acid each day."
+        "description": "This ceramic jug can produce various liquids such as water, beer, honey, or acid each day.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu seramik sürahi, her gün su, bira, bal veya asit gibi çeşitli sıvılar üretebilir.",
+        "name_tr": "Simya Sürahisi"
       },
       {
         "name": "Amulet of Proof Against Detection and Location",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "750 GP",
-        "description": "You are hidden from divination magic and cannot be targeted by such effects."
+        "description": "You are hidden from divination magic and cannot be targeted by such effects.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Kehanet büyüsünden gizlenirsiniz ve bu tür etkilerin hedefi olamazsınız.",
+        "name_tr": "Tespit ve Konum Karşıtı Muska"
       },
       {
         "name": "Bag of Holding",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "400 GP",
-        "description": "This bag has an interior space larger than its outside dimensions."
+        "description": "This bag has an interior space larger than its outside dimensions.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu çantanın iç hacmi dış boyutlarından çok daha büyüktür.",
+        "name_tr": "Tutma Çantası"
       },
       {
         "name": "Boots of Elvenkind",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "400 GP",
-        "description": "Your steps make no sound, granting advantage on Dexterity (Stealth) checks relying on movement."
+        "description": "Your steps make no sound, granting advantage on Dexterity (Stealth) checks relying on movement.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Adımlarınız ses çıkarmaz; harekete dayalı Çeviklik (Gizlilik) kontrollerinde avantaj sağlar.",
+        "name_tr": "Elf Botları"
       },
       {
         "name": "Boots of Striding and Springing",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "600 GP",
-        "description": "Your walking speed becomes 30 feet and your jump distance is tripled."
+        "description": "Your walking speed becomes 30 feet and your jump distance is tripled.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Yürüme hızınız 30 fit olur ve zıplama mesafeniz üç katına çıkar.",
+        "name_tr": "Yürüyüş ve Sıçrama Botları"
       },
       {
         "name": "Bracers of Archery",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "500 GP",
-        "description": "You gain proficiency with longbows and shortbows and a bonus to damage rolls."
+        "description": "You gain proficiency with longbows and shortbows and a bonus to damage rolls.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Uzun yay ve kısa yayla yeterlilik kazanır, hasar atışlarına bonus alırsınız.",
+        "name_tr": "Okçuluk Bileklikleri"
       },
       {
         "name": "Broom of Flying",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "800 GP",
-        "description": "This broom grants a flying speed when ridden."
+        "description": "This broom grants a flying speed when ridden.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu süpürge, binildiğinde uçuş hızı sağlar.",
+        "name_tr": "Uçan Süpürge"
       },
       {
         "name": "Cap of Water Breathing",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "400 GP",
-        "description": "You can breathe underwater while wearing this cap."
+        "description": "You can breathe underwater while wearing this cap.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu şapkayı takarken su altında nefes alabilirsiniz.",
+        "name_tr": "Su Altı Nefes Şapkası"
       },
       {
         "name": "Cloak of Elvenkind",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "600 GP",
-        "description": "You gain advantage on Stealth checks and disadvantage on attempts to see you."
+        "description": "You gain advantage on Stealth checks and disadvantage on attempts to see you.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Gizlilik kontrollerinde avantaj, sizi görmeye çalışan kontrollerde ise dezavantaj sağlar.",
+        "name_tr": "Elf Pelerini"
       },
       {
         "name": "Cloak of Protection",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "700 GP",
-        "description": "You gain +1 bonus to AC and saving throws."
+        "description": "You gain +1 bonus to AC and saving throws.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "ZS ve kurtarma atışlarına +1 bonus kazanırsınız.",
+        "name_tr": "Koruma Pelerini"
       },
       {
         "name": "Decanter of Endless Water",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "500 GP",
-        "description": "This decanter produces fresh or salt water on command."
+        "description": "This decanter produces fresh or salt water on command.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu sürahi komutla tatlı ya da tuzlu su üretir.",
+        "name_tr": "Sonsuz Su Sürahisi"
       },
       {
         "name": "Driftglobe",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "300 GP",
-        "description": "This orb sheds light or can cast the daylight spell."
+        "description": "This orb sheds light or can cast the daylight spell.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu küre ışık saçar ya da aydınlatma büyüsü kullanabilir.",
+        "name_tr": "Yüzen Küre"
       },
       {
         "name": "Eyes of Minute Seeing",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "400 GP",
-        "description": "You can see extremely fine details and have advantage on Investigation checks."
+        "description": "You can see extremely fine details and have advantage on Investigation checks.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Son derece ince ayrıntıları görebilir ve Araştırma kontrollerinde avantaj kazanırsınız.",
+        "name_tr": "İnce Görüş Gözlüğü"
       },
       {
         "name": "Gauntlets of Ogre Power",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "800 GP",
-        "description": "Your Strength score becomes 19 while wearing these gauntlets."
+        "description": "Your Strength score becomes 19 while wearing these gauntlets.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu eldivenleri takarken Güç puanınız 19 olur.",
+        "name_tr": "Oger Gücü Eldivenleri"
       },
       {
         "name": "Gloves of Missile Snaring",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "600 GP",
-        "description": "You can reduce damage from ranged weapon attacks and potentially catch the projectile."
+        "description": "You can reduce damage from ranged weapon attacks and potentially catch the projectile.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Menzilli silah saldırılarından gelen hasarı azaltabilir, mermileri yakalayabilirsiniz.",
+        "name_tr": "Mermi Yakalama Eldivenleri"
       },
       {
         "name": "Goggles of Night",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "400 GP",
-        "description": "You gain darkvision out to 60 feet."
+        "description": "You gain darkvision out to 60 feet.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "60 fit'e kadar karanlık görüşü kazanırsınız.",
+        "name_tr": "Gece Gözlüğü"
       },
       {
         "name": "Hat of Disguise",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "600 GP",
-        "description": "You can cast disguise self at will."
+        "description": "You can cast disguise self at will.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "İstediğiniz zaman kendini gizleme büyüsü kullanabilirsiniz.",
+        "name_tr": "Kılık Değiştirme Şapkası"
       },
       {
         "name": "Helm of Comprehending Languages",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "500 GP",
-        "description": "You can understand spoken and written languages."
+        "description": "You can understand spoken and written languages.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Konuşulan ve yazılı dilleri anlayabilirsiniz.",
+        "name_tr": "Dil Anlama Miğferi"
       },
       {
         "name": "Immovable Rod",
         "type": "Rod",
         "attuned": "-",
         "price": "600 GP",
-        "description": "This rod can be fixed in place in midair and hold significant weight."
+        "description": "This rod can be fixed in place in midair and hold significant weight.",
+        "type_tr": "Çubuk",
+        "description_tr": "Bu çubuk havada sabitlenebilir ve önemli ağırlıkları tutabilir.",
+        "name_tr": "Sabit Çubuk"
       },
       {
         "name": "Javelin of Lightning",
         "type": "Weapon",
         "attuned": "-",
         "price": "700 GP",
-        "description": "This javelin transforms into a bolt of lightning when thrown."
+        "description": "This javelin transforms into a bolt of lightning when thrown.",
+        "type_tr": "Silah",
+        "description_tr": "Bu kısa mızrak fırlatıldığında bir yıldırım şimşeğine dönüşür.",
+        "name_tr": "Yıldırım Kısa Mızrağı"
       },
       {
         "name": "Lantern of Revealing",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "500 GP",
-        "description": "Invisible creatures and objects are visible in the lantern’s light."
+        "description": "Invisible creatures and objects are visible in the lantern’s light.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Fenerinin ışığında görünmez yaratıklar ve nesneler görünür hale gelir.",
+        "name_tr": "Ortaya Çıkarma Feneri"
       },
       {
         "name": "Mithral Armor",
         "type": "Armor",
         "attuned": "-",
         "price": "800 GP",
-        "description": "This armor is lighter and does not impose disadvantage on Stealth checks."
+        "description": "This armor is lighter and does not impose disadvantage on Stealth checks.",
+        "type_tr": "Zırh",
+        "description_tr": "Bu zırh daha hafiftir ve Gizlilik kontrollerinde dezavantaj uygulamaz.",
+        "name_tr": "Mitril Zırh"
       },
       {
         "name": "Pearl of Power",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "800 GP",
-        "description": "You can regain an expended spell slot of up to 3rd level."
+        "description": "You can regain an expended spell slot of up to 3rd level.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "3. seviyeye kadar kullanılmış bir büyü slotunu geri kazanabilirsiniz.",
+        "name_tr": "Güç İncisi"
       },
       {
         "name": "Periapt of Wound Closure",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "700 GP",
-        "description": "You stabilize automatically when dying and regain more hit points when spending Hit Dice."
+        "description": "You stabilize automatically when dying and regain more hit points when spending Hit Dice.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Ölüm halinde otomatik olarak stabilleşirsiniz ve Vuruş Zarlarıyla daha fazla can puanı yeniden kazanırsınız.",
+        "name_tr": "Yara Kapama Madalyonu"
       },
       {
         "name": "Quiver of Ehlonna",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "600 GP",
-        "description": "This quiver can store multiple types of ammunition and weapons."
+        "description": "This quiver can store multiple types of ammunition and weapons.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu sadak birden fazla türde mühimmat ve silah saklayabilir.",
+        "name_tr": "Ehlonna'nın Sadağı"
       },
       {
         "name": "Ring of Jumping",
         "type": "Ring",
         "attuned": "Yes",
         "price": "500 GP",
-        "description": "You can cast jump at will."
+        "description": "You can cast jump at will.",
+        "type_tr": "Yüzük",
+        "description_tr": "İstediğiniz zaman Zıplama büyüsü kullanabilirsiniz.",
+        "name_tr": "Zıplama Yüzüğü"
       },
       {
         "name": "Ring of Mind Shielding",
         "type": "Ring",
         "attuned": "Yes",
         "price": "800 GP",
-        "description": "Your thoughts cannot be read, and you are protected from lie detection."
+        "description": "Your thoughts cannot be read, and you are protected from lie detection.",
+        "type_tr": "Yüzük",
+        "description_tr": "Düşünceleriniz okunamaz ve yalan tespitine karşı korunursunuz.",
+        "name_tr": "Zihin Kalkanı Yüzüğü"
       },
       {
         "name": "Slippers of Spider Climbing",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "700 GP",
-        "description": "You can move along walls and ceilings as if under the spider climb spell."
+        "description": "You can move along walls and ceilings as if under the spider climb spell.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Örümcek Tırmanma büyüsündeymiş gibi duvar ve tavanlarda hareket edebilirsiniz.",
+        "name_tr": "Örümcek Tırmanma Terliği"
       },
       {
         "name": "Wand of Magic Missiles",
         "type": "Wand",
         "attuned": "Yes",
         "price": "700 GP",
-        "description": "This wand can cast magic missile with charges."
+        "description": "This wand can cast magic missile with charges.",
+        "type_tr": "Değnek",
+        "description_tr": "Bu değnek, şarjlarla Sihirli Füze kullanabilir.",
+        "name_tr": "Sihirli Füze Değneği"
       },
       {
         "name": "Weapon +1",
         "type": "Weapon",
         "attuned": "-",
         "price": "800 GP",
-        "description": "You gain a +1 bonus to attack and damage rolls made with this magic weapon."
+        "description": "You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
+        "type_tr": "Silah",
+        "description_tr": "Bu büyülü silahla yapılan saldırı ve hasar atışlarına +1 bonus kazanırsınız.",
+        "name_tr": "+1 Silah"
       },
       {
         "name": "Potion of Greater Healing",
         "type": "Potion",
         "attuned": "-",
         "price": "150 GP",
-        "description": "You regain 4d4 + 4 hit points when you drink this potion."
+        "description": "You regain 4d4 + 4 hit points when you drink this potion.",
+        "type_tr": "İksir",
+        "description_tr": "Bu iksiri içtiğinizde 4d4 + 4 Can Puanı yeniden kazanırsınız.",
+        "name_tr": "Büyük İyileştirme İksiri"
       },
       {
         "name": "Potion of Fire Breath",
         "type": "Potion",
         "attuned": "-",
         "price": "200 GP",
-        "description": "You can exhale fire as an action for a short duration."
+        "description": "You can exhale fire as an action for a short duration.",
+        "type_tr": "İksir",
+        "description_tr": "Kısa bir süre boyunca Bonus Aksiyon olarak ateş üfleyebilirsiniz.",
+        "name_tr": "Ateş Nefesi İksiri"
       },
       {
         "name": "Potion of Hill Giant Strength",
         "type": "Potion",
         "attuned": "-",
         "price": "200 GP",
-        "description": "Your Strength becomes 21 for 1 hour."
+        "description": "Your Strength becomes 21 for 1 hour.",
+        "type_tr": "İksir",
+        "description_tr": "1 saat boyunca Gücünüz 21 olur.",
+        "name_tr": "Tepe Devi Gücü İksiri"
       },
       {
         "name": "Spell Scroll (2nd Level)",
         "type": "Scroll",
         "attuned": "-",
         "price": "150 GP",
-        "description": "Contains a single 2nd-level spell."
+        "description": "Contains a single 2nd-level spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir 2. seviye büyü içerir.",
+        "name_tr": "Büyü Tomarı (2. Seviye)"
       },
       {
         "name": "Spell Scroll (3rd Level)",
         "type": "Scroll",
         "attuned": "-",
         "price": "300 GP",
-        "description": "Contains a single 3rd-level spell."
+        "description": "Contains a single 3rd-level spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir 3. seviye büyü içerir.",
+        "name_tr": "Büyü Tomarı (3. Seviye)"
       }
     ]
   },
@@ -549,329 +777,470 @@
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "3000 GP",
-        "description": "Your Constitution score becomes 19 while wearing this amulet."
+        "description": "Your Constitution score becomes 19 while wearing this amulet.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu madalyonu takarken Anayasa puanınız 19 olur.",
+        "name_tr": "Sağlık Muskası"
       },
       {
         "name": "Armor +2",
         "type": "Armor",
         "attuned": "-",
         "price": "4000 GP",
-        "description": "You gain a +2 bonus to AC while wearing this armor."
+        "description": "You gain a +2 bonus to AC while wearing this armor.",
+        "type_tr": "Zırh",
+        "description_tr": "Bu zırhı giyerken ZS'nize +2 bonus kazanırsınız.",
+        "name_tr": "+2 Zırh"
       },
       {
         "name": "Belt of Hill Giant Strength",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "Your Strength score becomes 21 while wearing this belt."
+        "description": "Your Strength score becomes 21 while wearing this belt.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu kemeri takarken Güç puanınız 21 olur.",
+        "name_tr": "Tepe Devi Gücü Kemeri"
       },
       {
         "name": "Boots of Levitation",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "3000 GP",
-        "description": "You can cast levitate on yourself at will."
+        "description": "You can cast levitate on yourself at will.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Kendinize istediğiniz zaman Levitasyon büyüsü kullanabilirsiniz.",
+        "name_tr": "Levitasyon Botları"
       },
       {
         "name": "Bracers of Defense",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "3500 GP",
-        "description": "You gain +2 bonus to AC if you are not wearing armor or using a shield."
+        "description": "You gain +2 bonus to AC if you are not wearing armor or using a shield.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Zırh giymez ve kalkan kullanmazsanız ZS'nize +2 bonus kazanırsınız.",
+        "name_tr": "Savunma Bileklikleri"
       },
       {
         "name": "Cape of the Mountebank",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "3000 GP",
-        "description": "You can cast dimension door once per day."
+        "description": "You can cast dimension door once per day.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Günde bir kez boyut kapısı büyüsü kullanabilirsiniz.",
+        "name_tr": "Şarlatan Pelerini"
       },
       {
         "name": "Chime of Opening",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "3000 GP",
-        "description": "This chime can open locked or magically sealed objects."
+        "description": "This chime can open locked or magically sealed objects.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu çan kilitli ya da büyüyle mühürlenmiş nesneleri açabilir.",
+        "name_tr": "Açma Çanı"
       },
       {
         "name": "Cloak of Displacement",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "Attacks against you have disadvantage until you are hit."
+        "description": "Attacks against you have disadvantage until you are hit.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Size yapılan saldırılar, vurulana dek dezavantajla gerçekleşir.",
+        "name_tr": "Yer Değiştirme Pelerini"
       },
       {
         "name": "Cube of Force",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "5000 GP",
-        "description": "Creates a barrier that can block different types of matter or energy."
+        "description": "Creates a barrier that can block different types of matter or energy.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Farklı madde ya da enerji türlerini engelleyebilen bir bariyer oluşturur.",
+        "name_tr": "Kuvvet Küpü"
       },
       {
         "name": "Daern’s Instant Fortress",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "5000 GP",
-        "description": "This small cube transforms into a large stone fortress."
+        "description": "This small cube transforms into a large stone fortress.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu küçük küp büyük bir taş kaleye dönüşür.",
+        "name_tr": "Daern’in Anlık Kalesi"
       },
       {
         "name": "Dagger of Venom",
         "type": "Weapon",
         "attuned": "-",
         "price": "3000 GP",
-        "description": "You can coat the blade with poison, dealing extra poison damage."
+        "description": "You can coat the blade with poison, dealing extra poison damage.",
+        "type_tr": "Silah",
+        "description_tr": "Bıçağı zehirle kaplayarak ekstra zehir hasarı verebilirsiniz.",
+        "name_tr": "Zehir Hançeri"
       },
       {
         "name": "Dimensional Shackles",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "3000 GP",
-        "description": "Restrains creatures and prevents teleportation or planar travel."
+        "description": "Restrains creatures and prevents teleportation or planar travel.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Yaratıkları kısıtlar ve teleportasyon veya düzlem geçişini engeller.",
+        "name_tr": "Boyutsal Kelepçeler"
       },
       {
         "name": "Dragon Slayer",
         "type": "Weapon",
         "attuned": "-",
         "price": "4000 GP",
-        "description": "Deals extra damage to dragons."
+        "description": "Deals extra damage to dragons.",
+        "type_tr": "Silah",
+        "description_tr": "Ejderhalara ekstra hasar verir.",
+        "name_tr": "Ejderha Katili"
       },
       {
         "name": "Elven Chain",
         "type": "Armor",
         "attuned": "-",
         "price": "3500 GP",
-        "description": "This armor can be worn without proficiency and grants good AC."
+        "description": "This armor can be worn without proficiency and grants good AC.",
+        "type_tr": "Zırh",
+        "description_tr": "Bu zırh ustalıksız giyilebilir ve iyi bir ZS sağlar.",
+        "name_tr": "Elf Zinciri"
       },
       {
         "name": "Flame Tongue",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "This weapon deals extra fire damage when ignited."
+        "description": "This weapon deals extra fire damage when ignited.",
+        "type_tr": "Silah",
+        "description_tr": "Ateşlendiğinde bu silah ekstra ateş hasarı verir.",
+        "name_tr": "Alev Dili"
       },
       {
         "name": "Gem of Seeing",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "Allows you to see invisible objects and illusions."
+        "description": "Allows you to see invisible objects and illusions.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Görünmez nesneleri ve yanılsamaları görmenizi sağlar.",
+        "name_tr": "Görüş Mücevheri"
       },
       {
         "name": "Giant Slayer",
         "type": "Weapon",
         "attuned": "-",
         "price": "4000 GP",
-        "description": "Deals extra damage to giants."
+        "description": "Deals extra damage to giants.",
+        "type_tr": "Silah",
+        "description_tr": "Devlere ekstra hasar verir.",
+        "name_tr": "Dev Katili"
       },
       {
         "name": "Helm of Teleportation",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "5000 GP",
-        "description": "Allows casting teleport using charges."
+        "description": "Allows casting teleport using charges.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Şarjlarla Işınlanma büyüsü kullanmanızı sağlar.",
+        "name_tr": "Işınlanma Miğferi"
       },
       {
         "name": "Horn of Blasting",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "3000 GP",
-        "description": "Emits a destructive blast of thunder damage."
+        "description": "Emits a destructive blast of thunder damage.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Yıkıcı bir ses dalgası yayar ve gök gürültüsü hasarı verir.",
+        "name_tr": "Patlama Boynuzu"
       },
       {
         "name": "Mantle of Spell Resistance",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "5000 GP",
-        "description": "You have advantage on saving throws against spells."
+        "description": "You have advantage on saving throws against spells.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Büyülere karşı kurtarma atışlarında avantaj kazanırsınız.",
+        "name_tr": "Büyü Direnci Mantosu"
       },
       {
         "name": "Necklace of Fireballs",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "3500 GP",
-        "description": "Beads can be thrown to cast fireball."
+        "description": "Beads can be thrown to cast fireball.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Boncuklar fırlatılarak ateş topu büyüsü kullanılabilir.",
+        "name_tr": "Ateş Topu Kolyesi"
       },
       {
         "name": "Periapt of Proof Against Poison",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "3000 GP",
-        "description": "You are immune to poison damage and the poisoned condition."
+        "description": "You are immune to poison damage and the poisoned condition.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Zehir hasarına ve Zehirlenmiş durumuna karşı bağışıklık kazanırsınız.",
+        "name_tr": "Zehir Karşıtı Madalyon"
       },
       {
         "name": "Ring of Evasion",
         "type": "Ring",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "Lets you succeed on Dexterity saves instead of failing."
+        "description": "Lets you succeed on Dexterity saves instead of failing.",
+        "type_tr": "Yüzük",
+        "description_tr": "Başarısız Çeviklik kurtarma atışlarını başarılı kılmanızı sağlar.",
+        "name_tr": "Kaçınma Yüzüğü"
       },
       {
         "name": "Ring of Feather Falling",
         "type": "Ring",
         "attuned": "-",
         "price": "2500 GP",
-        "description": "You fall slowly and take no falling damage."
+        "description": "You fall slowly and take no falling damage.",
+        "type_tr": "Yüzük",
+        "description_tr": "Yavaşça düşer ve düşme hasarı almazsınız.",
+        "name_tr": "Tüy Düşüşü Yüzüğü"
       },
       {
         "name": "Ring of Protection",
         "type": "Ring",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "You gain +1 to AC and saving throws."
+        "description": "You gain +1 to AC and saving throws.",
+        "type_tr": "Yüzük",
+        "description_tr": "ZS ve kurtarma atışlarına +1 bonus kazanırsınız.",
+        "name_tr": "Koruma Yüzüğü"
       },
       {
         "name": "Ring of Spell Storing",
         "type": "Ring",
         "attuned": "Yes",
         "price": "5000 GP",
-        "description": "Stores spells that can be cast later."
+        "description": "Stores spells that can be cast later.",
+        "type_tr": "Yüzük",
+        "description_tr": "Daha sonra kullanılmak üzere büyüler depolar.",
+        "name_tr": "Büyü Depolama Yüzüğü"
       },
       {
         "name": "Robe of Eyes",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "Grants vision in all directions and ability to see invisible creatures."
+        "description": "Grants vision in all directions and ability to see invisible creatures.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Her yönde görüş ve görünmez yaratıkları görme yeteneği kazanırsınız.",
+        "name_tr": "Göz Cübbesi"
       },
       {
         "name": "Rod of Rulership",
         "type": "Rod",
         "attuned": "-",
         "price": "4000 GP",
-        "description": "You can charm creatures in a large radius."
+        "description": "You can charm creatures in a large radius.",
+        "type_tr": "Çubuk",
+        "description_tr": "Büyük bir yarıçapı kapsayan yaratıkları büyüleyebilirsiniz.",
+        "name_tr": "Yönetim Çubuğu"
       },
       {
         "name": "Shield +2",
         "type": "Armor (Shield)",
         "attuned": "-",
         "price": "4000 GP",
-        "description": "You gain a +2 bonus to AC with this shield."
+        "description": "You gain a +2 bonus to AC with this shield.",
+        "type_tr": "Zırh (Kalkan)",
+        "description_tr": "Bu kalkanla ZS'nize +2 bonus kazanırsınız.",
+        "name_tr": "+2 Kalkan"
       },
       {
         "name": "Staff of Healing",
         "type": "Staff",
         "attuned": "Yes",
         "price": "5000 GP",
-        "description": "Allows casting healing spells using charges."
+        "description": "Allows casting healing spells using charges.",
+        "type_tr": "Asa",
+        "description_tr": "Şarjlarla iyileştirme büyüleri kullanmanızı sağlar.",
+        "name_tr": "İyileştirme Asası"
       },
       {
         "name": "Staff of Swarming Insects",
         "type": "Staff",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "Creates a swarm of insects that obscures vision and harms enemies."
+        "description": "Creates a swarm of insects that obscures vision and harms enemies.",
+        "type_tr": "Asa",
+        "description_tr": "Görüşü kapatan ve düşmanlara zarar veren bir böcek sürüsü oluşturur.",
+        "name_tr": "Böcek Sürüsü Asası"
       },
       {
         "name": "Sword of Life Stealing",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "Deals extra necrotic damage on critical hits."
+        "description": "Deals extra necrotic damage on critical hits.",
+        "type_tr": "Silah",
+        "description_tr": "Kritik vuruşlarda ekstra nekrotik hasar verir.",
+        "name_tr": "Can Çalan Kılıç"
       },
       {
         "name": "Wand of Binding",
         "type": "Wand",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "Restrains creatures with magical energy."
+        "description": "Restrains creatures with magical energy.",
+        "type_tr": "Değnek",
+        "description_tr": "Yaratıkları büyüsel enerjiyle kısıtlar.",
+        "name_tr": "Bağlama Değneği"
       },
       {
         "name": "Wand of Enemy Detection",
         "type": "Wand",
         "attuned": "Yes",
         "price": "3500 GP",
-        "description": "Detects hostile creatures nearby."
+        "description": "Detects hostile creatures nearby.",
+        "type_tr": "Değnek",
+        "description_tr": "Yakındaki düşman yaratıkları tespit eder.",
+        "name_tr": "Düşman Tespiti Değneği"
       },
       {
         "name": "Wand of Fear",
         "type": "Wand",
         "attuned": "Yes",
         "price": "4000 GP",
-        "description": "Emits a cone of fear."
+        "description": "Emits a cone of fear.",
+        "type_tr": "Değnek",
+        "description_tr": "Bir korku konisi yayar.",
+        "name_tr": "Korku Değneği"
       },
       {
         "name": "Wand of Fireballs",
         "type": "Wand",
         "attuned": "Yes",
         "price": "5000 GP",
-        "description": "Casts fireball using charges."
+        "description": "Casts fireball using charges.",
+        "type_tr": "Değnek",
+        "description_tr": "Şarjlarla ateş topu büyüsü kullanır.",
+        "name_tr": "Ateş Topu Değneği"
       },
       {
         "name": "Wand of Lightning Bolts",
         "type": "Wand",
         "attuned": "Yes",
         "price": "5000 GP",
-        "description": "Casts lightning bolt using charges."
+        "description": "Casts lightning bolt using charges.",
+        "type_tr": "Değnek",
+        "description_tr": "Şarjlarla yıldırım okları büyüsü kullanır.",
+        "name_tr": "Yıldırım Okları Değneği"
       },
       {
         "name": "Weapon +2",
         "type": "Weapon",
         "attuned": "-",
         "price": "4000 GP",
-        "description": "You gain a +2 bonus to attack and damage rolls."
+        "description": "You gain a +2 bonus to attack and damage rolls.",
+        "type_tr": "Silah",
+        "description_tr": "Saldırı ve hasar atışlarına +2 bonus kazanırsınız.",
+        "name_tr": "+2 Silah"
       },
       {
         "name": "Potion of Superior Healing",
         "type": "Potion",
         "attuned": "-",
         "price": "500 GP",
-        "description": "You regain 8d4 + 8 hit points when you drink this potion."
+        "description": "You regain 8d4 + 8 hit points when you drink this potion.",
+        "type_tr": "İksir",
+        "description_tr": "Bu iksiri içtiğinizde 8d4 + 8 Can Puanı yeniden kazanırsınız.",
+        "name_tr": "Üstün İyileştirme İksiri"
       },
       {
         "name": "Potion of Clairvoyance",
         "type": "Potion",
         "attuned": "-",
         "price": "400 GP",
-        "description": "You gain the effect of the clairvoyance spell."
+        "description": "You gain the effect of the clairvoyance spell.",
+        "type_tr": "İksir",
+        "description_tr": "Açık görü büyüsünün etkisini kazanırsınız.",
+        "name_tr": "Açık Görü İksiri"
       },
       {
         "name": "Potion of Diminution",
         "type": "Potion",
         "attuned": "-",
         "price": "400 GP",
-        "description": "You shrink as if affected by reduce."
+        "description": "You shrink as if affected by reduce.",
+        "type_tr": "İksir",
+        "description_tr": "Küçültme etkisiyle etkileniyormuş gibi küçülürsünüz.",
+        "name_tr": "Küçülme İksiri"
       },
       {
         "name": "Potion of Gaseous Form",
         "type": "Potion",
         "attuned": "-",
         "price": "400 GP",
-        "description": "You transform into mist."
+        "description": "You transform into mist.",
+        "type_tr": "İksir",
+        "description_tr": "Sise dönüşürsünüz.",
+        "name_tr": "Gaz Formu İksiri"
       },
       {
         "name": "Potion of Frost Giant Strength",
         "type": "Potion",
         "attuned": "-",
         "price": "600 GP",
-        "description": "Your Strength becomes 23 for 1 hour."
+        "description": "Your Strength becomes 23 for 1 hour.",
+        "type_tr": "İksir",
+        "description_tr": "1 saat boyunca Gücünüz 23 olur.",
+        "name_tr": "Don Devi Gücü İksiri"
       },
       {
         "name": "Potion of Heroism",
         "type": "Potion",
         "attuned": "-",
         "price": "400 GP",
-        "description": "Grants temporary hit points and bless effect."
+        "description": "Grants temporary hit points and bless effect.",
+        "type_tr": "İksir",
+        "description_tr": "Geçici can puanları ve kutsama etkisi kazanırsınız.",
+        "name_tr": "Kahramanlık İksiri"
       },
       {
         "name": "Potion of Invulnerability",
         "type": "Potion",
         "attuned": "-",
         "price": "800 GP",
-        "description": "You gain resistance to all damage for 1 minute."
+        "description": "You gain resistance to all damage for 1 minute.",
+        "type_tr": "İksir",
+        "description_tr": "1 dakika boyunca tüm hasarlara Direnç kazanırsınız.",
+        "name_tr": "Kırılmazlık İksiri"
       },
       {
         "name": "Spell Scroll (4th Level)",
         "type": "Scroll",
         "attuned": "-",
         "price": "500 GP",
-        "description": "Contains a single 4th-level spell."
+        "description": "Contains a single 4th-level spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir 4. seviye büyü içerir.",
+        "name_tr": "Büyü Tomarı (4. Seviye)"
       },
       {
         "name": "Spell Scroll (5th Level)",
         "type": "Scroll",
         "attuned": "-",
         "price": "1000 GP",
-        "description": "Contains a single 5th-level spell."
+        "description": "Contains a single 5th-level spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir 5. seviye büyü içerir.",
+        "name_tr": "Büyü Tomarı (5. Seviye)"
       }
     ]
   },
@@ -883,301 +1252,430 @@
         "type": "Armor (Shield)",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "This shield floats beside you and grants its bonus without needing to be held."
+        "description": "This shield floats beside you and grants its bonus without needing to be held.",
+        "type_tr": "Zırh (Kalkan)",
+        "description_tr": "Bu kalkan yanınızda uçarak tutulmadan bonus sağlar.",
+        "name_tr": "Hareketli Kalkan"
       },
       {
         "name": "Armor +3",
         "type": "Armor",
         "attuned": "-",
         "price": "25000 GP",
-        "description": "You gain a +3 bonus to AC while wearing this armor."
+        "description": "You gain a +3 bonus to AC while wearing this armor.",
+        "type_tr": "Zırh",
+        "description_tr": "Bu zırhı giyerken ZS'nize +3 bonus kazanırsınız.",
+        "name_tr": "+3 Zırh"
       },
       {
         "name": "Belt of Fire Giant Strength",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Your Strength score becomes 25 while wearing this belt."
+        "description": "Your Strength score becomes 25 while wearing this belt.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu kemeri takarken Güç puanınız 25 olur.",
+        "name_tr": "Ateş Devi Gücü Kemeri"
       },
       {
         "name": "Belt of Frost Giant Strength",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Your Strength score becomes 23 while wearing this belt."
+        "description": "Your Strength score becomes 23 while wearing this belt.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu kemeri takarken Güç puanınız 23 olur.",
+        "name_tr": "Don Devi Gücü Kemeri"
       },
       {
         "name": "Belt of Stone Giant Strength",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Your Strength score becomes 23 while wearing this belt."
+        "description": "Your Strength score becomes 23 while wearing this belt.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu kemeri takarken Güç puanınız 23 olur.",
+        "name_tr": "Taş Devi Gücü Kemeri"
       },
       {
         "name": "Carpet of Flying",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "20000 GP",
-        "description": "This carpet can fly and carry creatures through the air."
+        "description": "This carpet can fly and carry creatures through the air.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu halı uçarak yaratıkları havada taşıyabilir.",
+        "name_tr": "Uçan Halı"
       },
       {
         "name": "Cloak of Arachnida",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "18000 GP",
-        "description": "Grants resistance to poison, climbing ability, and web-related powers."
+        "description": "Grants resistance to poison, climbing ability, and web-related powers.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Zehire Direnç, tırmanma yeteneği ve ağ ile ilgili güçler kazanırsınız.",
+        "name_tr": "Örümcek Pelerini"
       },
       {
         "name": "Crystal Ball",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Allows casting scrying to observe distant locations."
+        "description": "Allows casting scrying to observe distant locations.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Uzak konumları gözlemlemek için Kristal Küre büyüsü kullanmanızı sağlar.",
+        "name_tr": "Kristal Küre"
       },
       {
         "name": "Dancing Sword",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "This sword can fight on its own when released."
+        "description": "This sword can fight on its own when released.",
+        "type_tr": "Silah",
+        "description_tr": "Bu kılıç bırakıldığında kendi başına savaşabilir.",
+        "name_tr": "Dans Eden Kılıç"
       },
       {
         "name": "Defender",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "25000 GP",
-        "description": "You can transfer bonus from attack to AC."
+        "description": "You can transfer bonus from attack to AC.",
+        "type_tr": "Silah",
+        "description_tr": "Saldırıdan ZS'ye bonus aktarabilirsiniz.",
+        "name_tr": "Savunucu"
       },
       {
         "name": "Dragon Scale Mail",
         "type": "Armor",
         "attuned": "-",
         "price": "20000 GP",
-        "description": "Grants resistance to a dragon’s damage type and bonuses."
+        "description": "Grants resistance to a dragon’s damage type and bonuses.",
+        "type_tr": "Zırh",
+        "description_tr": "Bir ejderhanın hasar türüne Direnç ve çeşitli bonuslar sağlar.",
+        "name_tr": "Ejderha Pul Zırhı"
       },
       {
         "name": "Dwarven Plate",
         "type": "Armor",
         "attuned": "-",
         "price": "22000 GP",
-        "description": "Grants bonus AC and reduces forced movement."
+        "description": "Grants bonus AC and reduces forced movement.",
+        "type_tr": "Zırh",
+        "description_tr": "Ekstra ZS bonusu sağlar ve zorla hareketi azaltır.",
+        "name_tr": "Cüce Levha Zırhı"
       },
       {
         "name": "Frost Brand",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Deals extra cold damage and grants fire resistance."
+        "description": "Deals extra cold damage and grants fire resistance.",
+        "type_tr": "Silah",
+        "description_tr": "Ekstra soğuk hasarı verir ve ateşe Direnç kazandırır.",
+        "name_tr": "Don Damgası"
       },
       {
         "name": "Helm of Brilliance",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Contains gems that can cast powerful spells."
+        "description": "Contains gems that can cast powerful spells.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Güçlü büyüler kullanabilen mücevherler içerir.",
+        "name_tr": "Parlaklık Miğferi"
       },
       {
         "name": "Manual of Bodily Health",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "25000 GP",
-        "description": "Increases your Constitution score permanently."
+        "description": "Increases your Constitution score permanently.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Anayasa puanınızı kalıcı olarak artırır.",
+        "name_tr": "Beden Sağlığı El Kitabı"
       },
       {
         "name": "Manual of Gainful Exercise",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "25000 GP",
-        "description": "Increases your Strength score permanently."
+        "description": "Increases your Strength score permanently.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Güç puanınızı kalıcı olarak artırır.",
+        "name_tr": "Faydalı Egzersiz El Kitabı"
       },
       {
         "name": "Manual of Quickness of Action",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "25000 GP",
-        "description": "Increases your Dexterity score permanently."
+        "description": "Increases your Dexterity score permanently.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Çeviklik puanınızı kalıcı olarak artırır.",
+        "name_tr": "Aksiyon Hızı El Kitabı"
       },
       {
         "name": "Mirror of Life Trapping",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "20000 GP",
-        "description": "Can trap creatures inside extradimensional cells."
+        "description": "Can trap creatures inside extradimensional cells.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Yaratıkları boyutlararası hücrelerin içine hapsedebilir.",
+        "name_tr": "Hayat Tuzaklayan Ayna"
       },
       {
         "name": "Nine Lives Stealer",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "22000 GP",
-        "description": "Can instantly slay creatures under certain conditions."
+        "description": "Can instantly slay creatures under certain conditions.",
+        "type_tr": "Silah",
+        "description_tr": "Belirli koşullarda yaratıkları anında öldürebilir.",
+        "name_tr": "Dokuz Can Çalan"
       },
       {
         "name": "Oathbow",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "22000 GP",
-        "description": "Deals extra damage to a sworn enemy."
+        "description": "Deals extra damage to a sworn enemy.",
+        "type_tr": "Silah",
+        "description_tr": "Yeminli bir düşmana ekstra hasar verir.",
+        "name_tr": "Yemin Yayı"
       },
       {
         "name": "Rod of Absorption",
         "type": "Rod",
         "attuned": "Yes",
         "price": "25000 GP",
-        "description": "Absorbs spells and converts them into spell slots."
+        "description": "Absorbs spells and converts them into spell slots.",
+        "type_tr": "Çubuk",
+        "description_tr": "Büyüleri emer ve bunları büyü slotuna dönüştürür.",
+        "name_tr": "Emme Çubuğu"
       },
       {
         "name": "Rod of Alertness",
         "type": "Rod",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Grants bonuses to perception and initiative."
+        "description": "Grants bonuses to perception and initiative.",
+        "type_tr": "Çubuk",
+        "description_tr": "Algılama ve İnisiyatife bonuslar sağlar.",
+        "name_tr": "Uyanıklık Çubuğu"
       },
       {
         "name": "Rod of Security",
         "type": "Rod",
         "attuned": "-",
         "price": "22000 GP",
-        "description": "Creates a safe extradimensional space."
+        "description": "Creates a safe extradimensional space.",
+        "type_tr": "Çubuk",
+        "description_tr": "Güvenli bir boyutlararası alan yaratır.",
+        "name_tr": "Güvenlik Çubuğu"
       },
       {
         "name": "Scimitar of Speed",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Allows an extra attack as a bonus action."
+        "description": "Allows an extra attack as a bonus action.",
+        "type_tr": "Silah",
+        "description_tr": "Bonus Aksiyon olarak ekstra bir saldırı yapmanızı sağlar.",
+        "name_tr": "Hız Palası"
       },
       {
         "name": "Spellguard Shield",
         "type": "Armor (Shield)",
         "attuned": "Yes",
         "price": "22000 GP",
-        "description": "Grants advantage on saving throws against spells."
+        "description": "Grants advantage on saving throws against spells.",
+        "type_tr": "Zırh (Kalkan)",
+        "description_tr": "Büyülere karşı kurtarma atışlarında avantaj sağlar.",
+        "name_tr": "Büyü Koruyucu Kalkan"
       },
       {
         "name": "Staff of Fire",
         "type": "Staff",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Allows casting powerful fire spells."
+        "description": "Allows casting powerful fire spells.",
+        "type_tr": "Asa",
+        "description_tr": "Güçlü ateş büyüleri kullanmanızı sağlar.",
+        "name_tr": "Ateş Asası"
       },
       {
         "name": "Staff of Frost",
         "type": "Staff",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Allows casting powerful cold spells."
+        "description": "Allows casting powerful cold spells.",
+        "type_tr": "Asa",
+        "description_tr": "Güçlü soğuk büyüler kullanmanızı sağlar.",
+        "name_tr": "Don Asası"
       },
       {
         "name": "Staff of Power",
         "type": "Staff",
         "attuned": "Yes",
         "price": "25000 GP",
-        "description": "Grants bonuses to AC, saves, and powerful spellcasting."
+        "description": "Grants bonuses to AC, saves, and powerful spellcasting.",
+        "type_tr": "Asa",
+        "description_tr": "ZS, kurtarma atışları ve güçlü büyü kullanımına bonuslar sağlar.",
+        "name_tr": "Güç Asası"
       },
       {
         "name": "Staff of Striking",
         "type": "Staff",
         "attuned": "Yes",
         "price": "20000 GP",
-        "description": "Deals extra force damage on hits."
+        "description": "Deals extra force damage on hits.",
+        "type_tr": "Asa",
+        "description_tr": "Vuruşlarda ekstra kuvvet hasarı verir.",
+        "name_tr": "Vuruş Asası"
       },
       {
         "name": "Staff of Thunder and Lightning",
         "type": "Staff",
         "attuned": "Yes",
         "price": "22000 GP",
-        "description": "Controls thunder and lightning effects."
+        "description": "Controls thunder and lightning effects.",
+        "type_tr": "Asa",
+        "description_tr": "Gök gürültüsü ve yıldırım efektlerini kontrol eder.",
+        "name_tr": "Gök Gürültüsü ve Yıldırım Asası"
       },
       {
         "name": "Sword of Sharpness",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "22000 GP",
-        "description": "Deals extra damage and can sever limbs."
+        "description": "Deals extra damage and can sever limbs.",
+        "type_tr": "Silah",
+        "description_tr": "Ekstra hasar verir ve uzuvları koparabilir.",
+        "name_tr": "Keskinlik Kılıcı"
       },
       {
         "name": "Tome of Clear Thought",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "25000 GP",
-        "description": "Increases your Intelligence score permanently."
+        "description": "Increases your Intelligence score permanently.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Zekâ puanınızı kalıcı olarak artırır.",
+        "name_tr": "Net Düşünce Kitabı"
       },
       {
         "name": "Tome of Leadership and Influence",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "25000 GP",
-        "description": "Increases your Charisma score permanently."
+        "description": "Increases your Charisma score permanently.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Karizma puanınızı kalıcı olarak artırır.",
+        "name_tr": "Liderlik ve Etki Kitabı"
       },
       {
         "name": "Tome of Understanding",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "25000 GP",
-        "description": "Increases your Wisdom score permanently."
+        "description": "Increases your Wisdom score permanently.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Basiret puanınızı kalıcı olarak artırır.",
+        "name_tr": "Anlayış Kitabı"
       },
       {
         "name": "Weapon +3",
         "type": "Weapon",
         "attuned": "-",
         "price": "25000 GP",
-        "description": "You gain a +3 bonus to attack and damage rolls."
+        "description": "You gain a +3 bonus to attack and damage rolls.",
+        "type_tr": "Silah",
+        "description_tr": "Saldırı ve hasar atışlarına +3 bonus kazanırsınız.",
+        "name_tr": "+3 Silah"
       },
       {
         "name": "Potion of Supreme Healing",
         "type": "Potion",
         "attuned": "-",
         "price": "1500 GP",
-        "description": "You regain 10d4 + 20 hit points when you drink this potion."
+        "description": "You regain 10d4 + 20 hit points when you drink this potion.",
+        "type_tr": "İksir",
+        "description_tr": "Bu iksiri içtiğinizde 10d4 + 20 Can Puanı yeniden kazanırsınız.",
+        "name_tr": "Yüce İyileştirme İksiri"
       },
       {
         "name": "Potion of Invisibility",
         "type": "Potion",
         "attuned": "-",
         "price": "1200 GP",
-        "description": "You become invisible for 1 hour or until you attack or cast a spell."
+        "description": "You become invisible for 1 hour or until you attack or cast a spell.",
+        "type_tr": "İksir",
+        "description_tr": "1 saat boyunca görünmez olursunuz ya da saldırır ya da büyü kullanırsanız etki sona erer.",
+        "name_tr": "Görünmezlik İksiri"
       },
       {
         "name": "Potion of Speed",
         "type": "Potion",
         "attuned": "-",
         "price": "1200 GP",
-        "description": "You gain the effects of the haste spell for 1 minute."
+        "description": "You gain the effects of the haste spell for 1 minute.",
+        "type_tr": "İksir",
+        "description_tr": "1 dakika boyunca Hızlanma büyüsünün etkilerini kazanırsınız.",
+        "name_tr": "Hız İksiri"
       },
       {
         "name": "Potion of Flying",
         "type": "Potion",
         "attuned": "-",
         "price": "1200 GP",
-        "description": "You gain a flying speed for 1 hour."
+        "description": "You gain a flying speed for 1 hour.",
+        "type_tr": "İksir",
+        "description_tr": "1 saat boyunca uçuş hızı kazanırsınız.",
+        "name_tr": "Uçuş İksiri"
       },
       {
         "name": "Potion of Cloud Giant Strength",
         "type": "Potion",
         "attuned": "-",
         "price": "1500 GP",
-        "description": "Your Strength becomes 27 for 1 hour."
+        "description": "Your Strength becomes 27 for 1 hour.",
+        "type_tr": "İksir",
+        "description_tr": "1 saat boyunca Gücünüz 27 olur.",
+        "name_tr": "Bulut Devi Gücü İksiri"
       },
       {
         "name": "Spell Scroll (6th Level)",
         "type": "Scroll",
         "attuned": "-",
         "price": "2000 GP",
-        "description": "Contains a single 6th-level spell."
+        "description": "Contains a single 6th-level spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir 6. seviye büyü içerir.",
+        "name_tr": "Büyü Tomarı (6. Seviye)"
       },
       {
         "name": "Spell Scroll (7th Level)",
         "type": "Scroll",
         "attuned": "-",
         "price": "3000 GP",
-        "description": "Contains a single 7th-level spell."
+        "description": "Contains a single 7th-level spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir 7. seviye büyü içerir.",
+        "name_tr": "Büyü Tomarı (7. Seviye)"
       },
       {
         "name": "Spell Scroll (8th Level)",
         "type": "Scroll",
         "attuned": "-",
         "price": "4000 GP",
-        "description": "Contains a single 8th-level spell."
+        "description": "Contains a single 8th-level spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir 8. seviye büyü içerir.",
+        "name_tr": "Büyü Tomarı (8. Seviye)"
       }
     ]
   },
@@ -1189,203 +1687,290 @@
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "100000 GP",
-        "description": "A mechanical lobster-like vehicle that can walk, swim, and perform various actions underwater."
+        "description": "A mechanical lobster-like vehicle that can walk, swim, and perform various actions underwater.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Yürüyebilen, yüzebilen ve su altında çeşitli aksiyonlar gerçekleştirebilen mekanik bir ıstakoza benzer araç.",
+        "name_tr": "Kwalish'in Aparatı"
       },
       {
         "name": "Armor +3 (Plate)",
         "type": "Armor",
         "attuned": "-",
         "price": "100000 GP",
-        "description": "You gain a +3 bonus to AC while wearing this armor."
+        "description": "You gain a +3 bonus to AC while wearing this armor.",
+        "type_tr": "Zırh",
+        "description_tr": "Bu zırhı giyerken ZS'nize +3 bonus kazanırsınız.",
+        "name_tr": "+3 Levha Zırh"
       },
       {
         "name": "Belt of Cloud Giant Strength",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "90000 GP",
-        "description": "Your Strength score becomes 27 while wearing this belt."
+        "description": "Your Strength score becomes 27 while wearing this belt.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu kemeri takarken Güç puanınız 27 olur.",
+        "name_tr": "Bulut Devi Gücü Kemeri"
       },
       {
         "name": "Belt of Storm Giant Strength",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Your Strength score becomes 29 while wearing this belt."
+        "description": "Your Strength score becomes 29 while wearing this belt.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bu kemeri takarken Güç puanınız 29 olur.",
+        "name_tr": "Fırtına Devi Gücü Kemeri"
       },
       {
         "name": "Blackrazor",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A sentient greatsword that devours souls and grants power to its wielder."
+        "description": "A sentient greatsword that devours souls and grants power to its wielder.",
+        "type_tr": "Silah",
+        "description_tr": "Ruh yutan ve kullanıcısına güç veren bilinçli bir büyük kılıç.",
+        "name_tr": "Kara Ustura"
       },
       {
         "name": "Cloak of Invisibility",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "95000 GP",
-        "description": "You can turn invisible for extended periods."
+        "description": "You can turn invisible for extended periods.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Uzun süreler boyunca görünmez olabilirsiniz.",
+        "name_tr": "Görünmezlik Pelerini"
       },
       {
         "name": "Crystal Ball (True Seeing)",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Allows scrying and grants true seeing."
+        "description": "Allows scrying and grants true seeing.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Kristal küre büyüsü kullanmanıza ve gerçek görüş kazanmanıza olanak tanır.",
+        "name_tr": "Kristal Küre (Gerçek Görüş)"
       },
       {
         "name": "Defender (Legendary)",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "You can transfer its bonus to AC, up to +3."
+        "description": "You can transfer its bonus to AC, up to +3.",
+        "type_tr": "Silah",
+        "description_tr": "+3'e kadar olan bonusu ZS'nize aktarabilirsiniz.",
+        "name_tr": "Savunucu (Efsanevi)"
       },
       {
         "name": "Efreeti Bottle",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "90000 GP",
-        "description": "Contains an efreeti that may grant wishes or attack."
+        "description": "Contains an efreeti that may grant wishes or attack.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Dilek verebilecek ya da saldırabilecek bir efriti barındırır.",
+        "name_tr": "Efrit Şişesi"
       },
       {
         "name": "Hammer of Thunderbolts",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "A powerful hammer that can slay giants and increase Strength."
+        "description": "A powerful hammer that can slay giants and increase Strength.",
+        "type_tr": "Silah",
+        "description_tr": "Devleri öldürebilen ve Güç puanını artıran güçlü bir çekiç.",
+        "name_tr": "Yıldırım Tokmağı"
       },
       {
         "name": "Holy Avenger",
         "type": "Weapon",
         "attuned": "Yes (Paladin)",
         "price": "100000 GP",
-        "description": "A sacred weapon that deals extra radiant damage and grants aura protection."
+        "description": "A sacred weapon that deals extra radiant damage and grants aura protection.",
+        "type_tr": "Silah",
+        "description_tr": "Ekstra ışıl hasar veren ve aura koruması sağlayan kutsal bir silah.",
+        "name_tr": "Kutsal İntikamcı"
       },
       {
         "name": "Iron Flask",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "90000 GP",
-        "description": "Can trap creatures inside and release them later."
+        "description": "Can trap creatures inside and release them later.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Yaratıkları içine hapsedebilir ve daha sonra serbest bırakabilirsiniz.",
+        "name_tr": "Demir Şişe"
       },
       {
         "name": "Luck Blade",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Grants luck bonuses and may contain wishes."
+        "description": "Grants luck bonuses and may contain wishes.",
+        "type_tr": "Silah",
+        "description_tr": "Şans bonusları sağlar ve dilekler barındırabilir.",
+        "name_tr": "Şans Kılıcı"
       },
       {
         "name": "Plate Armor of Etherealness",
         "type": "Armor",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Allows the wearer to enter the Ethereal Plane."
+        "description": "Allows the wearer to enter the Ethereal Plane.",
+        "type_tr": "Zırh",
+        "description_tr": "Giyen kişinin Esir Düzlem'e geçmesine olanak tanır.",
+        "name_tr": "Esir Düzlem Levha Zırhı"
       },
       {
         "name": "Ring of Djinni Summoning",
         "type": "Ring",
         "attuned": "Yes",
         "price": "95000 GP",
-        "description": "Summons a djinni ally."
+        "description": "Summons a djinni ally.",
+        "type_tr": "Yüzük",
+        "description_tr": "Bir cin müttefik çağırır.",
+        "name_tr": "Cin Çağırma Yüzüğü"
       },
       {
         "name": "Ring of Elemental Command (Air)",
         "type": "Ring",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Grants powers over air elementals and wind."
+        "description": "Grants powers over air elementals and wind.",
+        "type_tr": "Yüzük",
+        "description_tr": "Hava elementalleri ve rüzgar üzerinde güçler kazandırır.",
+        "name_tr": "Eleman Komutası Yüzüğü (Hava)"
       },
       {
         "name": "Ring of Elemental Command (Earth)",
         "type": "Ring",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Grants powers over earth elementals."
+        "description": "Grants powers over earth elementals.",
+        "type_tr": "Yüzük",
+        "description_tr": "Toprak elementalleri üzerinde güçler kazandırır.",
+        "name_tr": "Eleman Komutası Yüzüğü (Toprak)"
       },
       {
         "name": "Ring of Elemental Command (Fire)",
         "type": "Ring",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Grants powers over fire elementals."
+        "description": "Grants powers over fire elementals.",
+        "type_tr": "Yüzük",
+        "description_tr": "Ateş elementalleri üzerinde güçler kazandırır.",
+        "name_tr": "Eleman Komutası Yüzüğü (Ateş)"
       },
       {
         "name": "Ring of Elemental Command (Water)",
         "type": "Ring",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Grants powers over water elementals."
+        "description": "Grants powers over water elementals.",
+        "type_tr": "Yüzük",
+        "description_tr": "Su elementalleri üzerinde güçler kazandırır.",
+        "name_tr": "Eleman Komutası Yüzüğü (Su)"
       },
       {
         "name": "Ring of Invisibility",
         "type": "Ring",
         "attuned": "Yes",
         "price": "95000 GP",
-        "description": "Allows you to become invisible at will."
+        "description": "Allows you to become invisible at will.",
+        "type_tr": "Yüzük",
+        "description_tr": "İstediğiniz zaman görünmez olabilirsiniz.",
+        "name_tr": "Görünmezlik Yüzüğü"
       },
       {
         "name": "Ring of Spell Turning",
         "type": "Ring",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Reflects spells back at their caster."
+        "description": "Reflects spells back at their caster.",
+        "type_tr": "Yüzük",
+        "description_tr": "Büyüleri geri yansıtır.",
+        "name_tr": "Büyü Döndürme Yüzüğü"
       },
       {
         "name": "Robe of the Archmagi",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Grants powerful defensive and spellcasting bonuses."
+        "description": "Grants powerful defensive and spellcasting bonuses.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Güçlü savunma ve büyü kullanımı bonusları sağlar.",
+        "name_tr": "Baş Sihirbaz Cübbesi"
       },
       {
         "name": "Rod of Lordly Might",
         "type": "Rod",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "A versatile rod with multiple powerful functions."
+        "description": "A versatile rod with multiple powerful functions.",
+        "type_tr": "Çubuk",
+        "description_tr": "Birden fazla güçlü işlevi olan çok yönlü bir çubuk.",
+        "name_tr": "Yüce Güç Çubuğu"
       },
       {
         "name": "Sphere of Annihilation",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "Artifact",
-        "description": "A sphere that disintegrates anything it touches."
+        "description": "A sphere that disintegrates anything it touches.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Dokunduğu her şeyi dağıtan bir küre.",
+        "name_tr": "İmha Küresi"
       },
       {
         "name": "Staff of the Magi",
         "type": "Staff",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "One of the most powerful staffs, granting numerous spells and defenses."
+        "description": "One of the most powerful staffs, granting numerous spells and defenses.",
+        "type_tr": "Asa",
+        "description_tr": "En güçlü asalardan biri; çok sayıda büyü ve savunma sağlar.",
+        "name_tr": "Magi Asası"
       },
       {
         "name": "Vorpal Sword",
         "type": "Weapon",
         "attuned": "Yes",
         "price": "100000 GP",
-        "description": "Can decapitate enemies on a critical hit."
+        "description": "Can decapitate enemies on a critical hit.",
+        "type_tr": "Silah",
+        "description_tr": "Kritik vuruşlarda düşmanların başını kesebilir.",
+        "name_tr": "Vorpal Kılıç"
       },
       {
         "name": "Well of Many Worlds",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "90000 GP",
-        "description": "Creates portals to other planes of existence."
+        "description": "Creates portals to other planes of existence.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Varoluşun başka düzlemlerine geçitler oluşturur.",
+        "name_tr": "Çok Dünyalı Kuyu"
       },
       {
         "name": "Potion of Storm Giant Strength",
         "type": "Potion",
         "attuned": "-",
         "price": "5000 GP",
-        "description": "Your Strength becomes 29 for 1 hour."
+        "description": "Your Strength becomes 29 for 1 hour.",
+        "type_tr": "İksir",
+        "description_tr": "1 saat boyunca Gücünüz 29 olur.",
+        "name_tr": "Fırtına Devi Gücü İksiri"
       },
       {
         "name": "Spell Scroll (9th Level)",
         "type": "Scroll",
         "attuned": "-",
         "price": "10000 GP",
-        "description": "Contains a single 9th-level spell."
+        "description": "Contains a single 9th-level spell.",
+        "type_tr": "Tomar",
+        "description_tr": "Tek bir 9. seviye büyü içerir.",
+        "name_tr": "Büyü Tomarı (9. Seviye)"
       }
     ]
   },
@@ -1397,105 +1982,150 @@
         "type": "Weapon (Greataxe)",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A legendary dwarven relic granting immense power, divine protection, and mastery over craftsmanship and battle."
+        "description": "A legendary dwarven relic granting immense power, divine protection, and mastery over craftsmanship and battle.",
+        "type_tr": "Silah (Büyük Balta)",
+        "description_tr": "Muazzam güç, ilahi koruma ve zanaatkârlık ile savaş üzerinde ustalık sağlayan efsanevi bir cüce emaneti.",
+        "name_tr": "Cüce Lordlarının Baltası"
       },
       {
         "name": "Book of Exalted Deeds",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A holy tome that grants powerful divine magic and inspires righteousness, but rejects evil users."
+        "description": "A holy tome that grants powerful divine magic and inspires righteousness, but rejects evil users.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Güçlü ilahi büyü kazandıran ve doğruluğu ilham eden kutsal bir tomar; kötü kullanıcıları reddeder.",
+        "name_tr": "Yüce Eylemlerin Kitabı"
       },
       {
         "name": "Book of Vile Darkness",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A corrupting tome of forbidden knowledge that grants dark powers and tempts its reader toward evil."
+        "description": "A corrupting tome of forbidden knowledge that grants dark powers and tempts its reader toward evil.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Okuyucusunu kötülüğe çeken karanlık güçler ve yasaklı bilgi sağlayan bozucu bir tomar.",
+        "name_tr": "İğrenç Karanlığın Kitabı"
       },
       {
         "name": "Crystal Sphere (Spelljammer Artifact)",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "Artifact",
-        "description": "A massive crystal sphere enclosing entire worlds and enabling planar or cosmic travel via Spelljamming ships."
+        "description": "A massive crystal sphere enclosing entire worlds and enabling planar or cosmic travel via Spelljamming ships.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Tüm dünyaları kapsayan ve Spelljammer gemileri aracılığıyla düzlemler arası ya da kozmik seyahate olanak tanıyan devasa bir kristal küre.",
+        "name_tr": "Kristal Küre (Spelljammer Eseri)"
       },
       {
         "name": "Eye of Vecna",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A sinister artifact granting forbidden necromantic and arcane powers, but corrupting its wielder."
+        "description": "A sinister artifact granting forbidden necromantic and arcane powers, but corrupting its wielder.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Kullanıcısını bozan, yasaklı nekromantik ve arkanik güçler kazandıran uğursuz bir eser.",
+        "name_tr": "Vecna'nın Gözü"
       },
       {
         "name": "Hand of Vecna",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A severed hand that fuses with the user, granting immense dark magical power at a great cost."
+        "description": "A severed hand that fuses with the user, granting immense dark magical power at a great cost.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Kullanıcıyla kaynaşan, büyük bir bedel karşılığında muazzam karanlık büyüsel güç veren kesilmiş bir el.",
+        "name_tr": "Vecna'nın Eli"
       },
       {
         "name": "Horseshoes of a Zephyr Steed",
         "type": "Wondrous Item",
         "attuned": "-",
         "price": "Artifact",
-        "description": "Transforms a horse into a near-mythical steed capable of incredible speed and flight-like movement."
+        "description": "Transforms a horse into a near-mythical steed capable of incredible speed and flight-like movement.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Bir atı inanılmaz hız ve uçuşa yakın hareket kabiliyetine sahip efsanevi bir bineğe dönüştürür.",
+        "name_tr": "Zephyr Bineğinin Nalları"
       },
       {
         "name": "Orb of Dragonkind",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "Allows control and communication with dragons, but risks domination by draconic will."
+        "description": "Allows control and communication with dragons, but risks domination by draconic will.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Ejderhaları kontrol etmeyi ve onlarla iletişim kurmayı sağlar; ancak ejderha iradesiyle denetim altına alınma riski taşır.",
+        "name_tr": "Ejderha Türü Küresi"
       },
       {
         "name": "Regalia of Might (Complete Set)",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A set of crown, scepter, and orb granting rulership-level power, protection, and command authority."
+        "description": "A set of crown, scepter, and orb granting rulership-level power, protection, and command authority.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Hükümdar düzeyinde güç, koruma ve kumanda yetkisi veren taç, asa ve küre seti.",
+        "name_tr": "Güç Regalia'sı (Tam Set)"
       },
       {
         "name": "Rod of Seven Parts",
         "type": "Rod",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A fragmented rod that becomes more powerful as its parts are reunited, culminating in reality-shaping abilities."
+        "description": "A fragmented rod that becomes more powerful as its parts are reunited, culminating in reality-shaping abilities.",
+        "type_tr": "Çubuk",
+        "description_tr": "Parçalar bir araya geldikçe güçlenen, gerçekliği şekillendirme yeteneklerine ulaşan parçalanmış bir çubuk.",
+        "name_tr": "Yedi Parçalı Çubuk"
       },
       {
         "name": "Scepter of the Sorcerer-Kings",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A desert-born artifact granting control over elemental magic and rulership influence."
+        "description": "A desert-born artifact granting control over elemental magic and rulership influence.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Elementel büyü ve hükümranlık etkisi üzerinde kontrol sağlayan çöl kökenli bir eser.",
+        "name_tr": "Büyücü Kralların Asası"
       },
       {
         "name": "Shadowfell Shard",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A fragment of the Shadowfell that grants necrotic power and manipulation of fear and darkness."
+        "description": "A fragment of the Shadowfell that grants necrotic power and manipulation of fear and darkness.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Nekrotik güç ile korku ve karanlığın manipülasyonunu kazandıran bir Gölge Perdesi parçası.",
+        "name_tr": "Gölge Perdesi Kırığı"
       },
       {
         "name": "Talisman of Pure Good",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A divine talisman that unleashes radiant destruction against evil creatures."
+        "description": "A divine talisman that unleashes radiant destruction against evil creatures.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Kötü yaratıklara karşı ışıl yıkım salan ilahi bir tılsım.",
+        "name_tr": "Saf İyilik Tılsımı"
       },
       {
         "name": "Talisman of Ultimate Evil",
         "type": "Wondrous Item",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "A dark talisman that can open portals to destructive forces and corrupt reality."
+        "description": "A dark talisman that can open portals to destructive forces and corrupt reality.",
+        "type_tr": "Olağanüstü Eşya",
+        "description_tr": "Yıkıcı güçlere kapılar açabilen ve gerçekliği bozabilen karanlık bir tılsım.",
+        "name_tr": "Nihai Kötülük Tılsımı"
       },
       {
         "name": "The Axe of the Dwarvish Lords (Awakened State)",
         "type": "Weapon (Greataxe)",
         "attuned": "Yes",
         "price": "Artifact",
-        "description": "In its awakened state, the axe grants near-divine strength and reshapes stone and metal at will."
+        "description": "In its awakened state, the axe grants near-divine strength and reshapes stone and metal at will.",
+        "type_tr": "Silah (Büyük Balta)",
+        "description_tr": "Uyanmış haliyle balta, tanrısal güce yakın bir güç kazandırır ve taşı ve metali istediği gibi şekillendirir.",
+        "name_tr": "Cüce Lordlarının Baltası (Uyanmış Hal)"
       }
     ]
   }

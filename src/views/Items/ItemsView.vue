@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Items</h1>
+          <h1 class="hero-title">{{ $t('items.title') }}</h1>
         </div>
       </div>
     </div>
@@ -15,15 +15,17 @@
           v-for="item in items"
           :key="item.id"
           class="item-card"
-          @click="goTo(item.label)"
+          @click="goTo(item)"
         >
           <div class="card-image-wrap">
-            <v-img
-              src="../../assets/image.png"
-              :alt="item.label"
-              cover
-              class="card-img"
-            ></v-img>
+            <div class="card-img-clip">
+              <v-img
+                src="../../assets/image.png"
+                :alt="item.label"
+                cover
+                class="card-img"
+              ></v-img>
+            </div>
             <div class="card-gradient-overlay"></div>
           </div>
           <div class="card-body">
@@ -41,34 +43,15 @@ import router from "@/router";
 
 export default {
   methods: {
-    goTo(label) {
-      router.push("/wiki/items/" + label.replace(/\s+/g, "_").toLowerCase());
+    goTo(item) {
+      router.push("/wiki/items/" + item.routeKey);
     },
   },
-  data: () => ({
-    items: [
-      {
-        id: 0,
-        label: "Weapons",
-        desc: "Swords, axes, bows and every instrument of war available to adventurers",
-      },
-      {
-        id: 1,
-        label: "Armors",
-        desc: "Light, medium and heavy armor to protect you in the heat of battle",
-      },
-      {
-        id: 2,
-        label: "Potions",
-        desc: "Healing draughts, elixirs and magical concoctions to aid your adventure",
-      },
-      {
-        id: 3,
-        label: "Magic Items",
-        desc: "Rare and powerful items imbued with arcane energy and ancient enchantments",
-      },
-    ],
-  }),
+  computed: {
+    items() {
+      return this.$tm("items.list");
+    },
+  },
 };
 </script>
 
@@ -183,12 +166,17 @@ export default {
   overflow: visible;
   flex-shrink: 0;
 }
+.card-img-clip {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .card-img {
   width: 100%;
   height: 100%;
   transition: transform 0.35s ease;
 }
-.item-card:hover .card-image-wrap :deep(.v-img) {
+.item-card:hover .card-img-clip :deep(.v-img) {
   transform: scale(1.05);
 }
 

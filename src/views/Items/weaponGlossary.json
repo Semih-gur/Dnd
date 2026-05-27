@@ -1,0 +1,108 @@
+{
+  "properties": [
+    {
+      "name": "Ammunition",
+      "name_tr": "Mühimmat",
+      "desc": "You can use this weapon to make a ranged attack only if you have ammunition to fire from it. Each attack expends one piece of ammunition. Drawing ammunition is part of the attack and requires a free hand. After combat, you can spend 1 minute to recover half your expended ammunition (rounded down).",
+      "desc_tr": "Bu silahla menzilli saldırı yapabilmek için ateşleyeceğiniz mühimmatın olması gerekir. Her saldırıda bir mühimmat harcanır. Mühimmatı çekmek saldırının bir parçasıdır ve serbest bir el gerektirir. Savaştan sonra 1 dakika harcayarak kullanılan mühimmatın yarısını (aşağı yuvarlanır) geri toplayabilirsiniz."
+    },
+    {
+      "name": "Finesse",
+      "name_tr": "İncelik",
+      "desc": "When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.",
+      "desc_tr": "İncelik özelliğine sahip bir silahla saldırırken, saldırı ve hasar atışları için Güç veya Çeviklik değiştirgecinizi seçebilirsiniz. Her iki atış için de aynı değiştirgeyi kullanmalısınız."
+    },
+    {
+      "name": "Heavy",
+      "name_tr": "Ağır",
+      "desc": "You have Disadvantage on attack rolls with a Heavy weapon if it's a Melee weapon and your Strength score isn't at least 13, or if it's a Ranged weapon and your Dexterity score isn't at least 13.",
+      "desc_tr": "Ağır bir silahla saldırı atışlarında Dezavantajlısınızdır; yakın dövüş silahıysa Güç puanınızın, menzilli silahsa Çeviklik puanınızın en az 13 olması gerekir."
+    },
+    {
+      "name": "Light",
+      "name_tr": "Hafif",
+      "desc": "When you take the Attack action and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn with a different Light weapon. You don't add your ability modifier to the extra attack's damage unless that modifier is negative.",
+      "desc_tr": "Saldırı eylemi gerçekleştirip Hafif bir silahla saldırdığınızda, aynı sırada Bonus Eylem olarak farklı bir Hafif silahla ekstra saldırı yapabilirsiniz. Değiştirgeniz negatif değilse ekstra saldırının hasarına yetenek değiştirgenizi eklemezsiniz."
+    },
+    {
+      "name": "Loading",
+      "name_tr": "Şarj",
+      "desc": "You can fire only one piece of ammunition from a Loading weapon when you use an action, Bonus Action, or Reaction to fire it, regardless of the number of attacks you can normally make.",
+      "desc_tr": "Şarj özelliğine sahip bir silahtan eylem, Bonus Eylem veya Tepki kullanarak yalnızca bir mühimmat ateşleyebilirsiniz; normalde kaç saldırı yapabildiğinizden bağımsız olarak."
+    },
+    {
+      "name": "Reach",
+      "name_tr": "Erişim",
+      "desc": "A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for opportunity attacks with it.",
+      "desc_tr": "Erişim özelliğine sahip bir silah, saldırı menzilini ve fırsat saldırıları için belirlenen menzili 5 feet artırır."
+    },
+    {
+      "name": "Thrown",
+      "name_tr": "Fırlatılabilir",
+      "desc": "You can throw this weapon to make a ranged attack, and you can draw it as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with it.",
+      "desc_tr": "Bu silahı fırlatarak menzilli saldırı yapabilirsiniz; silahı çekmek saldırının bir parçasıdır. Yakın dövüş silahıysa, yakın dövüşteki aynı yetenek değiştirgesini saldırı ve hasar atışları için kullanırsınız."
+    },
+    {
+      "name": "Two-Handed",
+      "name_tr": "İki Elli",
+      "desc": "This weapon requires two hands when you attack with it.",
+      "desc_tr": "Bu silahla saldırı yaparken iki el kullanmanız gerekir."
+    },
+    {
+      "name": "Versatile",
+      "name_tr": "Çok Yönlü",
+      "desc": "This weapon can be used with one or two hands. The damage value in parentheses is the damage dealt when the weapon is used with two hands.",
+      "desc_tr": "Bu silah bir veya iki elle kullanılabilir. Parantez içindeki hasar değeri, silahın iki elle kullanıldığındaki hasarını gösterir."
+    }
+  ],
+  "masteries": [
+    {
+      "name": "Cleave",
+      "name_tr": "Yar",
+      "desc": "If you hit a creature with a melee attack using this weapon, you can make a melee attack against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier unless it is negative.",
+      "desc_tr": "Bu silahla bir yaratığa yakın dövüş saldırısıyla vurursanız, erişim alanınızdaki ve birinci yaratığın 5 feet yakınındaki ikinci bir yaratığa karşı yakın dövüş saldırısı yapabilirsiniz. İsabet ederseniz ikinci yaratık silahın hasarını alır; yetenek değiştirgeniz negatifse eklenir."
+    },
+    {
+      "name": "Graze",
+      "name_tr": "Sıyır",
+      "desc": "If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage can't be increased in any way.",
+      "desc_tr": "Bu silahla bir yaratığa saldırı atışınız isabet etmezse, saldırı için kullandığınız yetenek değiştirgeciniz kadar hasarı o yaratığa verebilirsiniz. Bu hasar hiçbir şekilde artırılamaz."
+    },
+    {
+      "name": "Nick",
+      "name_tr": "Çentikle",
+      "desc": "When you make the extra attack granted by the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can still make only one extra attack per turn with this property.",
+      "desc_tr": "Hafif özelliğinin sağladığı ekstra saldırıyı Bonus Eylem yerine Saldırı eyleminin bir parçası olarak yapabilirsiniz. Yine de bu özellikle sıra başına yalnızca bir ekstra saldırı yapabilirsiniz."
+    },
+    {
+      "name": "Push",
+      "name_tr": "İt",
+      "desc": "If you hit a creature with this weapon and deal damage, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+      "desc_tr": "Bu silahla bir yaratığa vurup hasar verirseniz, Büyük veya daha küçük yaratığı kendinizden 10 feet uzağa itebilirsiniz."
+    },
+    {
+      "name": "Sap",
+      "name_tr": "Yıprat",
+      "desc": "If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.",
+      "desc_tr": "Bu silahla bir yaratığa vurursanız, o yaratık bir sonraki sıranızın başına kadar yapacağı bir sonraki saldırı atışında Dezavantajlıdır."
+    },
+    {
+      "name": "Slow",
+      "name_tr": "Yavaşlat",
+      "desc": "If you hit a creature with this weapon and deal damage, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons with this property, the Speed reduction doesn't exceed 10 feet.",
+      "desc_tr": "Bu silahla bir yaratığa vurup hasar verirseniz, bir sonraki sıranızın başına kadar hızını 10 feet azaltabilirsiniz. Bu özelliğe sahip silahlardan birden fazlasıyla vurulsa bile hız azalması 10 feet'i aşmaz."
+    },
+    {
+      "name": "Topple",
+      "name_tr": "Yıkıt",
+      "desc": "If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 + the ability modifier used to make the attack roll + your Proficiency Bonus). On a failed save, the creature has the Prone condition.",
+      "desc_tr": "Bu silahla bir yaratığa vurursanız, yaratığı bir Anayasa kurtarma atışı yapmaya zorlayabilirsiniz (ZS 8 + saldırı için kullanılan yetenek değiştirgeniz + Uzmanlık Bonusunuz). Başarısız olursa yaratık Yere Düşmüş durumuna girer."
+    },
+    {
+      "name": "Vex",
+      "name_tr": "Rahatsız Et",
+      "desc": "If you hit a creature with this weapon and deal damage, you have Advantage on your next attack roll against that creature before the end of your next turn.",
+      "desc_tr": "Bu silahla bir yaratığa vurup hasar verirseniz, bir sonraki sıranızın sonuna kadar o yaratığa karşı yapacağınız bir sonraki saldırı atışında Avantajlısınızdır."
+    }
+  ]
+}

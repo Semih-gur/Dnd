@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">Species</h1>
+          <h1 class="hero-title">{{ $t('species.title') }}</h1>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
         v-for="s in species"
         :key="s.id"
         class="species-card"
-        @click="goTo(s.label)"
+        @click="goTo(s)"
       >
         <div class="card-image-wrap">
           <div class="card-img-clip">
@@ -27,7 +27,7 @@
           <h2 class="card-title">{{ s.label }}</h2>
           <p class="card-desc">{{ s.desc }}</p>
           <div class="card-bonus">
-            <span class="bonus-label">Racial Bonus</span>
+            <span class="bonus-label">{{ $t('species.racialBonus') }}</span>
             <span class="bonus-value">{{ s.bonus }}</span>
           </div>
         </div>
@@ -42,8 +42,8 @@ import router from "@/router";
 
 export default {
   methods: {
-    goTo(label) {
-      router.push("/wiki/species/" + label.replace(/\s+/g, "_").toLowerCase());
+    goTo(item) {
+      router.push("/wiki/species/" + item.routeKey);
     },
     getImage(filename) {
       if (!filename) return require("../assets/image.png");
@@ -54,80 +54,11 @@ export default {
       }
     },
   },
-  data: () => ({
-    species: [
-      {
-        id: 0,
-        label: "Aasimar",
-        image: "aasimar.png",
-        desc: "Blessed with a celestial heritage, Aasimar radiate inner light and wield divine power to heal allies and smite enemies with radiant energy.",
-        bonus: "Healing Hands",
-      },
-      {
-        id: 1,
-        label: "Dragonborn",
-        image: "dragonborn.png",
-        desc: "Born of draconic lineage, Dragonborn command elemental breath weapons and draconic wings, embodying the might of ancient dragons.",
-        bonus: "Breath Weapon",
-      },
-      {
-        id: 2,
-        label: "Dwarf",
-        image: "dwarf.png",
-        desc: "Hardy and resilient folk forged by centuries in mountain halls, Dwarves resist poison and channel tremorsense through the stone beneath their feet.",
-        bonus: "Stonecunning",
-      },
-      {
-        id: 3,
-        label: "Elf",
-        image: "elf.png",
-        desc: "Graceful and long-lived, Elves enter a meditative trance instead of sleeping and inherit unique magical gifts from their chosen lineage.",
-        bonus: "Fey Ancestry",
-      },
-      {
-        id: 4,
-        label: "Gnome",
-        image: "gnome.png",
-        desc: "Curious and inventive, Gnomes have an innate cleverness that grants them advantage on all Intelligence, Wisdom, and Charisma saving throws.",
-        bonus: "Gnomish Cunning",
-      },
-      {
-        id: 5,
-        label: "Goliath",
-        image: "goliath.png",
-        desc: "Descendants of giants, Goliaths stand above other races in size and strength, able to grow Large and draw power from their giant ancestry.",
-        bonus: "Giant Ancestry",
-      },
-      {
-        id: 6,
-        label: "Halfling",
-        image: "halfling.png",
-        desc: "Lucky and nimble, Halflings never suffer critical failures — when they roll a 1 on any d20 Test they can reroll and must use the new roll.",
-        bonus: "Luck",
-      },
-      {
-        id: 7,
-        label: "Human",
-        image: "human.png",
-        desc: "The most adaptable of all races, Humans gain an extra Origin feat at character creation, an extra skill proficiency, and Heroic Inspiration every Long Rest.",
-        bonus: "Versatile",
-      },
-      {
-        id: 8,
-        label: "Orc",
-        image: "orc.png",
-        desc: "Powerful and fierce, Orcs can Dash as a Bonus Action to gain Temporary Hit Points, and once per Long Rest refuse to fall below 1 Hit Point.",
-        bonus: "Relentless Endurance",
-      },
-      {
-        id: 9,
-        label: "Tiefling",
-        image: "tiefling.png",
-        desc: "Touched by infernal bloodlines, Tieflings choose a fiendish legacy that grants unique spells and resistance to Fire damage.",
-        bonus: "Fiendish Legacy",
-      },
-    ],
-  }),
+  computed: {
+    species() {
+      return this.$tm("species.list");
+    },
+  },
 };
 </script>
 
