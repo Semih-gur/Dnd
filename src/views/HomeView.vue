@@ -26,7 +26,7 @@
         <div class="feature-card" @click="goWiki()">
           <div class="feature-card-inner">
             <v-img
-              src="../assets/wiki.svg"
+              :src="require('../assets/wiki.svg')"
               alt="Wiki"
               class="feature-img"
               contain
@@ -46,7 +46,7 @@
         <div class="feature-card" @click="goChar()">
           <div class="feature-card-inner">
             <v-img
-              src="../assets/cCreator.svg"
+              :src="require('../assets/cCreator.svg')"
               alt="Character Creator"
               class="feature-img"
               contain
