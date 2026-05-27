@@ -6,6 +6,7 @@
     "backgrounds": "Backgrounds",
     "feats": "Feats",
     "items": "Items",
+    "conditions": "Conditions",
     "patrons": "Patrons",
     "theme": "Theme",
     "supportUs": "Support Us",
@@ -68,6 +69,11 @@
         "path": "items",
         "label": "Items",
         "desc": "Weapons, armor, potions and all manner of adventuring gear"
+      },
+      {
+        "path": "conditions",
+        "label": "Conditions",
+        "desc": "Status effects that alter a creature's capabilities — from Blinded to Unconscious"
       }
     ]
   },
@@ -389,6 +395,69 @@
       "general": "General Feat",
       "fightStyle": "Fighting Style Feat",
       "epic": "Epic Boon Feat"
+    }
+  },
+  "conditions": {
+    "title": "Conditions",
+    "subtitle": "Status effects that can alter a creature's capabilities in play"
+  },
+  "weapons": {
+    "title": "Weapons",
+    "propertiesTitle": "Weapon Properties",
+    "masteriesTitle": "Weapon Masteries",
+    "col": {
+      "name": "Name",
+      "damage": "Damage",
+      "properties": "Properties",
+      "mastery": "Mastery",
+      "weight": "Weight",
+      "cost": "Cost"
+    }
+  },
+  "armors": {
+    "title": "Armors",
+    "subtitle": "Protection for every adventurer",
+    "col": {
+      "name": "Name",
+      "ac": "Armor Class",
+      "str": "Str Requirement",
+      "stealth": "Stealth",
+      "weight": "Weight",
+      "cost": "Cost"
+    },
+    "disadvantage": "Disadvantage"
+  },
+  "potions": {
+    "title": "Potions",
+    "col": {
+      "name": "Name",
+      "effect": "Effect",
+      "weight": "Weight",
+      "cost": "Cost"
+    }
+  },
+  "magicItems": {
+    "title": "Magic Items",
+    "searchPlaceholder": "Search items...",
+    "noItems": "No items found matching \"{q}\"",
+    "estimatedValue": "Estimated Value",
+    "description": "Description",
+    "requiresAttunement": "Requires Attunement",
+    "noAttunement": "No Attunement",
+    "popupEyebrow": "Magic Item",
+    "col": {
+      "name": "Name",
+      "type": "Type",
+      "attunement": "Attunement",
+      "price": "Price"
+    },
+    "rarity": {
+      "common": "Common",
+      "uncommon": "Uncommon",
+      "rare": "Rare",
+      "very_rare": "Very Rare",
+      "legendary": "Legendary",
+      "artifact": "Artifact"
     }
   },
   "race": {

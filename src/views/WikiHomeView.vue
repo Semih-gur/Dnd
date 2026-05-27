@@ -31,6 +31,7 @@ const artMap = {
   backgrounds: require("../assets/wikiPage/backgrounds.png"),
   feats:       require("../assets/wikiPage/quill.png"),
   items:       require("../assets/wikiPage/items.png"),
+  conditions:  require("../assets/wikiPage/quill.png"),
 };
 
 export default {

@@ -229,6 +229,11 @@ export default {
           icon: "mdi-bag-personal",
           label: this.$t("nav.items"),
         },
+        {
+          path: "wiki/conditions",
+          icon: "mdi-alert-circle-outline",
+          label: this.$t("nav.conditions"),
+        },
       ];
     },
     currentLanguage() {

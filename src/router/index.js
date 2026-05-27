@@ -30,6 +30,7 @@ import SpellDesc from "@/views/SpellView/SpellDesc.vue";
 import MagicItems from "@/views/Items/MagicItems.vue";
 import CharacterCreatorView from "@/views/CharacterCreator/CharacterCreatorView.vue";
 import PatronsView from "@/views/PatronsView.vue";
+import ConditionsView from "@/views/Conditions/ConditionsView.vue";
 
 const routes = [
   {
@@ -176,6 +177,11 @@ const routes = [
     path: "/wiki/items/magic_items",
     name: "Magic Items",
     component: MagicItems,
+  },
+  {
+    path: "/wiki/conditions",
+    name: "Conditions",
+    component: ConditionsView,
   },
   {
     path: "/character_creator",

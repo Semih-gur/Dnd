@@ -6,6 +6,7 @@
     "backgrounds": "Geçmişler",
     "feats": "Yetenekler",
     "items": "Eşyalar",
+    "conditions": "Durumlar",
     "patrons": "Destekçiler",
     "theme": "Tema",
     "supportUs": "Destek Ol",
@@ -68,6 +69,11 @@
         "path": "items",
         "label": "Eşyalar",
         "desc": "Silahlar, zırhlar, iksirler ve tüm macera gereçleri"
+      },
+      {
+        "path": "conditions",
+        "label": "Durumlar",
+        "desc": "Yaratıkların yeteneklerini değiştiren durum etkileri — Kör'den Bilinçsiz'e"
       }
     ]
   },
@@ -391,8 +397,14 @@
       "epic": "Epik Nimet Yeteneği"
     }
   },
+  "conditions": {
+    "title": "Durumlar",
+    "subtitle": "Yaratıkların yeteneklerini oyun sırasında değiştirebilen durum etkileri"
+  },
   "weapons": {
     "title": "Silahlar",
+    "propertiesTitle": "Silah Özellikleri",
+    "masteriesTitle": "Silah Uzmanlıkları",
     "col": {
       "name": "İsim",
       "damage": "Hasar",
