@@ -1,8 +1,8 @@
-{
+﻿{
   "name": "Barbarian",
   "subtitle": "A fierce warrior of primitive background who can enter a battle rage",
   "complexity": "Low Complexity",
-  "primaryStat": "Strength · Constitution",
+  "primaryStat": "Strength Â· Constitution",
   "image": "barbarian.png",
   "accentColor": "#ef4444",
   "accentRgb": "239, 68, 68",
@@ -11,43 +11,43 @@
       "label": "Primary Ability",
       "value": "Strength",
       "label_tr": "Birincil Nitelik",
-      "value_tr": "Güç"
+      "value_tr": "GÃ¼Ã§"
     },
     {
       "label": "Hit Point Die",
       "value": "D12 per Barbarian level",
-      "label_tr": "Can Puanı Zarı",
-      "value_tr": "Barbar seviyesi başına D12"
+      "label_tr": "Can PuanÄ± ZarÄ±",
+      "value_tr": "Barbar seviyesi baÅŸÄ±na D12"
     },
     {
       "label": "Saving Throw Proficiencies",
       "value": "Strength and Constitution",
-      "label_tr": "Kurtarma Atışı Uzmanlıkları",
-      "value_tr": "Güç ve Bünye"
+      "label_tr": "Kurtarma AtÄ±ÅŸÄ± UzmanlÄ±klarÄ±",
+      "value_tr": "GÃ¼Ã§ ve BÃ¼nye"
     },
     {
       "label": "Skill Proficiencies",
       "value": "Choose 2: Animal Handling, Athletics, Intimidation, Nature, Perception, or Survival",
-      "label_tr": "Beceri Uzmanlıkları",
-      "value_tr": "2 seçin: Hayvan Bakımı, Atletizm, Gözdağı, Doğa, Algı veya Hayatta Kalma"
+      "label_tr": "Beceri UzmanlÄ±klarÄ±",
+      "value_tr": "2 seÃ§in: Hayvan BakÄ±mÄ±, Atletizm, GÃ¶zdaÄŸÄ±, DoÄŸa, AlgÄ± veya Hayatta Kalma"
     },
     {
       "label": "Weapon Proficiencies",
       "value": "Simple and Martial weapons",
-      "label_tr": "Silah Uzmanlıkları",
-      "value_tr": "Basit ve Savaş Silahları"
+      "label_tr": "Silah UzmanlÄ±klarÄ±",
+      "value_tr": "Basit ve SavaÅŸ SilahlarÄ±"
     },
     {
       "label": "Armor Training",
       "value": "Light and Medium armor and Shields",
-      "label_tr": "Zırh Eğitimi",
-      "value_tr": "Hafif ve Orta Zırh ve Kalkanlar"
+      "label_tr": "ZÄ±rh EÄŸitimi",
+      "value_tr": "Hafif ve Orta ZÄ±rh ve Kalkanlar"
     },
     {
       "label": "Starting Equipment",
       "value": "Choose A or B: (A) Greataxe, 4 Handaxes, Explorer's Pack, and 15 GP; or (B) 75 GP",
-      "label_tr": "Başlangıç Ekipmanı",
-      "value_tr": "A veya B seçin: (A) Büyük Balta, 4 El Baltası, Kaşif Çantası ve 15 AP; veya (B) 75 AP"
+      "label_tr": "BaÅŸlangÄ±Ã§ EkipmanÄ±",
+      "value_tr": "A veya B seÃ§in: (A) BÃ¼yÃ¼k Balta, 4 El BaltasÄ±, KaÅŸif Ã‡antasÄ± ve 15 AP; veya (B) 75 AP"
     }
   ],
   "subclasses": [
@@ -59,12 +59,12 @@
     {
       "title": "Wild Heart",
       "icon": "mdi-paw",
-      "title_tr": "Vahşi Kalp"
+      "title_tr": "VahÅŸi Kalp"
     },
     {
       "title": "World Tree",
       "icon": "mdi-tree",
-      "title_tr": "Dünya Ağacı"
+      "title_tr": "DÃ¼nya AÄŸacÄ±"
     },
     {
       "title": "Zealot",
@@ -73,17 +73,17 @@
     }
   ],
   "subclassPrefix": "Path of the",
-  "subclassRoute": "/wiki/classes/barbarian/",
+  "subclassRoute": "/dnd/2024/wiki/classes/barbarian/",
   "tableColumns": [
     {
       "key": "rages",
       "label": "Rages",
-      "label_tr": "Öfke"
+      "label_tr": "Ã–fke"
     },
     {
       "key": "rageDamage",
       "label": "Rage Damage",
-      "label_tr": "Öfke Hasarı"
+      "label_tr": "Ã–fke HasarÄ±"
     },
     {
       "key": "weaponMastery",
@@ -99,7 +99,7 @@
       "rages": "2",
       "rageDamage": "+2",
       "weaponMastery": "2",
-      "feature_tr": "Öfke, Zırhsız Savunma, Silah Hakimiyeti"
+      "feature_tr": "Ã–fke, ZÄ±rhsÄ±z Savunma, Silah Hakimiyeti"
     },
     {
       "level": "2",
@@ -108,7 +108,7 @@
       "rages": "2",
       "rageDamage": "+2",
       "weaponMastery": "2",
-      "feature_tr": "Tehlike Hissi, Pervasız Saldırı"
+      "feature_tr": "Tehlike Hissi, PervasÄ±z SaldÄ±rÄ±"
     },
     {
       "level": "3",
@@ -117,7 +117,7 @@
       "rages": "3",
       "rageDamage": "+2",
       "weaponMastery": "2",
-      "feature_tr": "Barbar Alt Sınıfı, İlkel Bilgi"
+      "feature_tr": "Barbar Alt SÄ±nÄ±fÄ±, Ä°lkel Bilgi"
     },
     {
       "level": "4",
@@ -126,7 +126,7 @@
       "rages": "3",
       "rageDamage": "+2",
       "weaponMastery": "3",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "5",
@@ -135,7 +135,7 @@
       "rages": "3",
       "rageDamage": "+2",
       "weaponMastery": "3",
-      "feature_tr": "Ekstra Saldırı, Hızlı Hareket"
+      "feature_tr": "Ekstra SaldÄ±rÄ±, HÄ±zlÄ± Hareket"
     },
     {
       "level": "6",
@@ -144,7 +144,7 @@
       "rages": "4",
       "rageDamage": "+3",
       "weaponMastery": "3",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "7",
@@ -153,7 +153,7 @@
       "rages": "4",
       "rageDamage": "+2",
       "weaponMastery": "3",
-      "feature_tr": "Vahşi İçgüdü, İçgüdüsel Sıçrama"
+      "feature_tr": "VahÅŸi Ä°Ã§gÃ¼dÃ¼, Ä°Ã§gÃ¼dÃ¼sel SÄ±Ã§rama"
     },
     {
       "level": "8",
@@ -162,7 +162,7 @@
       "rages": "4",
       "rageDamage": "+2",
       "weaponMastery": "3",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "9",
@@ -171,7 +171,7 @@
       "rages": "4",
       "rageDamage": "+3",
       "weaponMastery": "3",
-      "feature_tr": "Vahşi Darbe"
+      "feature_tr": "VahÅŸi Darbe"
     },
     {
       "level": "10",
@@ -180,7 +180,7 @@
       "rages": "4",
       "rageDamage": "+3",
       "weaponMastery": "4",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "11",
@@ -189,7 +189,7 @@
       "rages": "4",
       "rageDamage": "+3",
       "weaponMastery": "4",
-      "feature_tr": "Amansız Öfke"
+      "feature_tr": "AmansÄ±z Ã–fke"
     },
     {
       "level": "12",
@@ -198,7 +198,7 @@
       "rages": "5",
       "rageDamage": "+3",
       "weaponMastery": "4",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "13",
@@ -207,7 +207,7 @@
       "rages": "5",
       "rageDamage": "+3",
       "weaponMastery": "4",
-      "feature_tr": "Gelişmiş Vahşi Darbe"
+      "feature_tr": "GeliÅŸmiÅŸ VahÅŸi Darbe"
     },
     {
       "level": "14",
@@ -216,7 +216,7 @@
       "rages": "5",
       "rageDamage": "+3",
       "weaponMastery": "4",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "15",
@@ -225,7 +225,7 @@
       "rages": "5",
       "rageDamage": "+3",
       "weaponMastery": "4",
-      "feature_tr": "Kalıcı Öfke"
+      "feature_tr": "KalÄ±cÄ± Ã–fke"
     },
     {
       "level": "16",
@@ -234,7 +234,7 @@
       "rages": "5",
       "rageDamage": "+4",
       "weaponMastery": "4",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "17",
@@ -243,7 +243,7 @@
       "rages": "6",
       "rageDamage": "+4",
       "weaponMastery": "4",
-      "feature_tr": "Gelişmiş Vahşi Darbe"
+      "feature_tr": "GeliÅŸmiÅŸ VahÅŸi Darbe"
     },
     {
       "level": "18",
@@ -252,7 +252,7 @@
       "rages": "6",
       "rageDamage": "+4",
       "weaponMastery": "4",
-      "feature_tr": "Yenilmez Güç"
+      "feature_tr": "Yenilmez GÃ¼Ã§"
     },
     {
       "level": "19",
@@ -261,7 +261,7 @@
       "rages": "6",
       "rageDamage": "+4",
       "weaponMastery": "4",
-      "feature_tr": "Destansı Lütuf"
+      "feature_tr": "DestansÄ± LÃ¼tuf"
     },
     {
       "level": "20",
@@ -270,7 +270,7 @@
       "rages": "Unlimited",
       "rageDamage": "+4",
       "weaponMastery": "4",
-      "feature_tr": "İlkel Şampiyon"
+      "feature_tr": "Ä°lkel Åampiyon"
     }
   ],
   "levelPanels": [
@@ -280,20 +280,20 @@
         {
           "title": "Rage",
           "body": "<p>You can imbue yourself with a primal power called Rage as a Bonus Action if you aren't wearing Heavy armor.</p><br/><p><b>Damage Resistance.</b> You have Resistance to Bludgeoning, Piercing, and Slashing damage.</p><br/><p><b>Rage Damage.</b> When you make an attack using Strength and deal damage, you gain a bonus shown in the Rage Damage column.</p><br/><p><b>Strength Advantage.</b> You have Advantage on Strength checks and saving throws.</p><br/><p><b>No Concentration or Spells.</b> You can't maintain Concentration or cast spells.</p><br/><p><b>Duration.</b> The Rage lasts until the end of your next turn. Extend it each round by attacking an enemy, forcing a saving throw, or taking a Bonus Action to extend. Max 10 minutes.</p>",
-          "title_tr": "Öfke",
-          "body_tr": "<p>Ağır zırh giymiyorsan Bonus Aksiyon olarak Öfke adı verilen ilkel bir güçle kendini besleyebilirsin.</p><br/><p><b>Hasar Direnci.</b> Künt, Delici ve Kesici hasara Direnç kazanırsın.</p><br/><p><b>Öfke Hasarı.</b> Güç kullanarak saldırı yapar ve hasar verirsen Öfke Hasarı sütunundaki bonusu kazanırsın.</p><br/><p><b>Güç Üstünlüğü.</b> Güç kontrollerinde ve kurtarma atışlarında Üstünlük kazanırsın.</p><br/><p><b>Konsantrasyon veya Büyü Yok.</b> Konsantrasyonu koruyamazsın veya büyü yapamazsın.</p><br/><p><b>Süre.</b> Öfke bir sonraki turunda sonuna kadar sürer. Bir düşmana saldırarak, kurtarma atışı yaptırarak veya Bonus Aksiyon kullanarak uzatabilirsin. Maksimum 10 dakika.</p>"
+          "title_tr": "Ã–fke",
+          "body_tr": "<p>AÄŸÄ±r zÄ±rh giymiyorsan Bonus Aksiyon olarak Ã–fke adÄ± verilen ilkel bir gÃ¼Ã§le kendini besleyebilirsin.</p><br/><p><b>Hasar Direnci.</b> KÃ¼nt, Delici ve Kesici hasara DirenÃ§ kazanÄ±rsÄ±n.</p><br/><p><b>Ã–fke HasarÄ±.</b> GÃ¼Ã§ kullanarak saldÄ±rÄ± yapar ve hasar verirsen Ã–fke HasarÄ± sÃ¼tunundaki bonusu kazanÄ±rsÄ±n.</p><br/><p><b>GÃ¼Ã§ ÃœstÃ¼nlÃ¼ÄŸÃ¼.</b> GÃ¼Ã§ kontrollerinde ve kurtarma atÄ±ÅŸlarÄ±nda ÃœstÃ¼nlÃ¼k kazanÄ±rsÄ±n.</p><br/><p><b>Konsantrasyon veya BÃ¼yÃ¼ Yok.</b> Konsantrasyonu koruyamazsÄ±n veya bÃ¼yÃ¼ yapamazsÄ±n.</p><br/><p><b>SÃ¼re.</b> Ã–fke bir sonraki turunda sonuna kadar sÃ¼rer. Bir dÃ¼ÅŸmana saldÄ±rarak, kurtarma atÄ±ÅŸÄ± yaptÄ±rarak veya Bonus Aksiyon kullanarak uzatabilirsin. Maksimum 10 dakika.</p>"
         },
         {
           "title": "Unarmored Defense",
           "body": "<p>While you aren't wearing any armor, your base Armor Class equals 10 plus your Dexterity and Constitution modifiers. You can use a Shield and still gain this benefit.</p>",
-          "title_tr": "Zırhsız Savunma",
-          "body_tr": "<p>Herhangi bir zırh giymediğinde temel Zırh Sınıfın 10 artı Çeviklik ve Bünye değiştiricilerine eşit olur. Kalkan kullanabilir ve yine de bu faydadan yararlanabilirsin.</p>"
+          "title_tr": "ZÄ±rhsÄ±z Savunma",
+          "body_tr": "<p>Herhangi bir zÄ±rh giymediÄŸinde temel ZÄ±rh SÄ±nÄ±fÄ±n 10 artÄ± Ã‡eviklik ve BÃ¼nye deÄŸiÅŸtiricilerine eÅŸit olur. Kalkan kullanabilir ve yine de bu faydadan yararlanabilirsin.</p>"
         },
         {
           "title": "Weapon Mastery",
           "body": "<p>Your training with weapons allows you to use the mastery properties of two kinds of Simple or Martial Melee weapons of your choice. Whenever you finish a Long Rest, you can change one of those weapon choices.</p>",
           "title_tr": "Silah Hakimiyeti",
-          "body_tr": "<p>Silah eğitimin, seçtiğin iki tür Basit veya Savaş Yakın Dövüş silahının uzmanlık özelliklerini kullanmana izin verir. Uzun Dinlenmeyi bitirdiğinde bu seçimlerden birini değiştirebilirsin.</p>"
+          "body_tr": "<p>Silah eÄŸitimin, seÃ§tiÄŸin iki tÃ¼r Basit veya SavaÅŸ YakÄ±n DÃ¶vÃ¼ÅŸ silahÄ±nÄ±n uzmanlÄ±k Ã¶zelliklerini kullanmana izin verir. Uzun Dinlenmeyi bitirdiÄŸinde bu seÃ§imlerden birini deÄŸiÅŸtirebilirsin.</p>"
         }
       ]
     },
@@ -304,13 +304,13 @@
           "title": "Danger Sense",
           "body": "<p>You have Advantage on Dexterity saving throws unless you have the Incapacitated condition.</p>",
           "title_tr": "Tehlike Hissi",
-          "body_tr": "<p>Engelli durumunda olmadıkça Çeviklik kurtarma atışlarında Üstünlüğe sahipsin.</p>"
+          "body_tr": "<p>Engelli durumunda olmadÄ±kÃ§a Ã‡eviklik kurtarma atÄ±ÅŸlarÄ±nda ÃœstÃ¼nlÃ¼ÄŸe sahipsin.</p>"
         },
         {
           "title": "Reckless Attack",
           "body": "<p>When you make your first attack roll on your turn, you can decide to attack recklessly. Doing so gives you Advantage on Strength attack rolls until the start of your next turn, but attack rolls against you also have Advantage.</p>",
-          "title_tr": "Pervasız Saldırı",
-          "body_tr": "<p>Turunda ilk saldırı atışını yaptığında pervasızca saldırmaya karar verebilirsin. Bunu yapmak sana bir sonraki turuna kadar Güç saldırı atışlarında Üstünlük sağlar, ancak sana karşı saldırı atışları da Üstünlük kazanır.</p>"
+          "title_tr": "PervasÄ±z SaldÄ±rÄ±",
+          "body_tr": "<p>Turunda ilk saldÄ±rÄ± atÄ±ÅŸÄ±nÄ± yaptÄ±ÄŸÄ±nda pervasÄ±zca saldÄ±rmaya karar verebilirsin. Bunu yapmak sana bir sonraki turuna kadar GÃ¼Ã§ saldÄ±rÄ± atÄ±ÅŸlarÄ±nda ÃœstÃ¼nlÃ¼k saÄŸlar, ancak sana karÅŸÄ± saldÄ±rÄ± atÄ±ÅŸlarÄ± da ÃœstÃ¼nlÃ¼k kazanÄ±r.</p>"
         }
       ]
     },
@@ -320,14 +320,14 @@
         {
           "title": "Primal Knowledge",
           "body": "<p>You gain proficiency in another skill from the Barbarian list. While Raging, you can make Strength checks for Acrobatics, Intimidation, Perception, Stealth, or Survival.</p>",
-          "title_tr": "İlkel Bilgi",
-          "body_tr": "<p>Barbar listesinden başka bir beceride uzmanlık kazanırsın. Öfkelenirken Akrobasi, Gözdağı, Algı, Gizlilik veya Hayatta Kalma için Güç kontrolleri yapabilirsin.</p>"
+          "title_tr": "Ä°lkel Bilgi",
+          "body_tr": "<p>Barbar listesinden baÅŸka bir beceride uzmanlÄ±k kazanÄ±rsÄ±n. Ã–fkelenirken Akrobasi, GÃ¶zdaÄŸÄ±, AlgÄ±, Gizlilik veya Hayatta Kalma iÃ§in GÃ¼Ã§ kontrolleri yapabilirsin.</p>"
         },
         {
           "title": "Barbarian Subclass",
           "body": "<p>You gain a Barbarian subclass of your choice. Choose your path below:</p>",
-          "title_tr": "Barbar Alt Sınıfı",
-          "body_tr": "<p>Seçtiğin bir Barbar alt sınıfı kazanırsın. Yolunu aşağıdan seç:</p>"
+          "title_tr": "Barbar Alt SÄ±nÄ±fÄ±",
+          "body_tr": "<p>SeÃ§tiÄŸin bir Barbar alt sÄ±nÄ±fÄ± kazanÄ±rsÄ±n. Yolunu aÅŸaÄŸÄ±dan seÃ§:</p>"
         }
       ]
     },
@@ -337,8 +337,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at levels 8, 12, and 16.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n. Bu Ã¶zelliÄŸi belirli seviyelerde tekrar kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -348,14 +348,14 @@
         {
           "title": "Extra Attack",
           "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
-          "title_tr": "Ekstra Saldırı",
-          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
+          "title_tr": "Ekstra SaldÄ±rÄ±",
+          "body_tr": "<p>Turunda SaldÄ±rÄ± aksiyonunu yaptÄ±ÄŸÄ±nda bir kez yerine iki kez saldÄ±rabilirsin.</p>"
         },
         {
           "title": "Fast Movement",
           "body": "<p>Your speed increases by 10 feet while you aren't wearing Heavy armor.</p>",
-          "title_tr": "Hızlı Hareket",
-          "body_tr": "<p>Ağır zırh giymediğinde hızın 10 feet artar.</p>"
+          "title_tr": "HÄ±zlÄ± Hareket",
+          "body_tr": "<p>AÄŸÄ±r zÄ±rh giymediÄŸinde hÄ±zÄ±n 10 feet artar.</p>"
         }
       ]
     },
@@ -365,8 +365,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen subclass.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -376,14 +376,14 @@
         {
           "title": "Feral Instinct",
           "body": "<p>You have Advantage on Initiative rolls.</p>",
-          "title_tr": "Vahşi İçgüdü",
-          "body_tr": "<p>İnisiyatif atışlarında Üstünlüğe sahipsin.</p>"
+          "title_tr": "VahÅŸi Ä°Ã§gÃ¼dÃ¼",
+          "body_tr": "<p>Ä°nisiyatif atÄ±ÅŸlarÄ±nda ÃœstÃ¼nlÃ¼ÄŸe sahipsin.</p>"
         },
         {
           "title": "Instinctive Pounce",
           "body": "<p>As part of the Bonus Action you take to enter your Rage, you can move up to half your Speed.</p>",
-          "title_tr": "İçgüdüsel Sıçrama",
-          "body_tr": "<p>Öfkene girmek için kullandığın Bonus Aksiyonun bir parçası olarak Hızının yarısı kadar hareket edebilirsin.</p>"
+          "title_tr": "Ä°Ã§gÃ¼dÃ¼sel SÄ±Ã§rama",
+          "body_tr": "<p>Ã–fkene girmek iÃ§in kullandÄ±ÄŸÄ±n Bonus Aksiyonun bir parÃ§asÄ± olarak HÄ±zÄ±nÄ±n yarÄ±sÄ± kadar hareket edebilirsin.</p>"
         }
       ]
     },
@@ -393,8 +393,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -404,8 +404,8 @@
         {
           "title": "Brutal Strike",
           "body": "<p>If you use Reckless Attack, you can forgo Advantage on one Strength-based attack roll. If it hits, the target takes an extra 1d10 damage and you can apply one Brutal Strike effect:</p><br/><p><b>Forceful Blow.</b> Push the target 15 feet away. You can then move up to half your Speed toward them without provoking Opportunity Attacks.</p><br/><p><b>Hamstring Blow.</b> The target's Speed is reduced by 15 feet until the start of your next turn.</p>",
-          "title_tr": "Vahşi Darbe",
-          "body_tr": "<p>Pervasız Saldırı kullanırsan, bir Güç tabanlı saldırı atışındaki Üstünlükten vazgeçebilirsin. İsabet ederse hedef ekstra 1d10 hasar alır ve bir Vahşi Vuruş efekti uygulayabilirsin:</p><br/><p><b>Güçlü Vuruş.</b> Hedefi 15 feet uzağa it. Ardından Fırsat Saldırısı tetiklemeden onlara doğru Hızının yarısı kadar hareket edebilirsin.</p><br/><p><b>Kıç Kasını Zayıflat.</b> Hedefin Hızı bir sonraki turuna kadar 15 feet azalır.</p>"
+          "title_tr": "VahÅŸi Darbe",
+          "body_tr": "<p>PervasÄ±z SaldÄ±rÄ± kullanÄ±rsan, bir GÃ¼Ã§ tabanlÄ± saldÄ±rÄ± atÄ±ÅŸÄ±ndaki ÃœstÃ¼nlÃ¼kten vazgeÃ§ebilirsin. Ä°sabet ederse hedef ekstra 1d10 hasar alÄ±r ve bir VahÅŸi VuruÅŸ efekti uygulayabilirsin:</p><br/><p><b>GÃ¼Ã§lÃ¼ VuruÅŸ.</b> Hedefi 15 feet uzaÄŸa it. ArdÄ±ndan FÄ±rsat SaldÄ±rÄ±sÄ± tetiklemeden onlara doÄŸru HÄ±zÄ±nÄ±n yarÄ±sÄ± kadar hareket edebilirsin.</p><br/><p><b>KÄ±Ã§ KasÄ±nÄ± ZayÄ±flat.</b> Hedefin HÄ±zÄ± bir sonraki turuna kadar 15 feet azalÄ±r.</p>"
         }
       ]
     },
@@ -415,8 +415,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen subclass.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -426,8 +426,8 @@
         {
           "title": "Relentless Rage",
           "body": "<p>If you drop to 0 HP while Raging and don't die outright, make a DC 10 Constitution save. On success, your HP becomes twice your Barbarian level. Each subsequent use increases the DC by 5, resetting on a Short or Long Rest.</p>",
-          "title_tr": "Amansız Öfke",
-          "body_tr": "<p>Öfkelenirken 0 Can Puanına düşersen ve hemen ölmezsen, ZO 10 Bünye kurtarması yap. Başarılıysan Can Puanın Barbar seviyenin iki katına eşit olur. Sonraki her kullanım ZO'yu 5 artırır; Kısa veya Uzun Dinlenmede sıfırlanır.</p>"
+          "title_tr": "AmansÄ±z Ã–fke",
+          "body_tr": "<p>Ã–fkelenirken 0 Can PuanÄ±na dÃ¼ÅŸersen ve hemen Ã¶lmezsen, ZO 10 BÃ¼nye kurtarmasÄ± yap. BaÅŸarÄ±lÄ±ysan Can PuanÄ±n Barbar seviyenin iki katÄ±na eÅŸit olur. Sonraki her kullanÄ±m ZO'yu 5 artÄ±rÄ±r; KÄ±sa veya Uzun Dinlenmede sÄ±fÄ±rlanÄ±r.</p>"
         }
       ]
     },
@@ -437,8 +437,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -448,8 +448,8 @@
         {
           "title": "Improved Brutal Strike",
           "body": "<p><b>Staggering Blow.</b> The target has Disadvantage on its next saving throw and can't make Opportunity Attacks until your next turn.</p><br/><p><b>Sundering Blow.</b> The next attack roll against the target before your next turn gains a +5 bonus.</p>",
-          "title_tr": "Gelişmiş Vahşi Darbe",
-          "body_tr": "<p><b>Sersemletici Vuruş.</b> Hedef bir sonraki kurtarma atışında Dezavantaja sahip olur ve bir sonraki turuna kadar Fırsat Saldırısı yapamaz.</p><br/><p><b>Parçalayıcı Vuruş.</b> Bir sonraki turuna kadar hedefe karşı yapılan bir sonraki saldırı atışı +5 bonus kazanır.</p>"
+          "title_tr": "GeliÅŸmiÅŸ VahÅŸi Darbe",
+          "body_tr": "<p><b>Sersemletici VuruÅŸ.</b> Hedef bir sonraki kurtarma atÄ±ÅŸÄ±nda Dezavantaja sahip olur ve bir sonraki turuna kadar FÄ±rsat SaldÄ±rÄ±sÄ± yapamaz.</p><br/><p><b>ParÃ§alayÄ±cÄ± VuruÅŸ.</b> Bir sonraki turuna kadar hedefe karÅŸÄ± yapÄ±lan bir sonraki saldÄ±rÄ± atÄ±ÅŸÄ± +5 bonus kazanÄ±r.</p>"
         }
       ]
     },
@@ -459,8 +459,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen subclass.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -470,8 +470,8 @@
         {
           "title": "Persistent Rage",
           "body": "<p>When you roll Initiative, you can regain all expended uses of Rage (once per Long Rest). Your Rage now lasts 10 minutes without extension actions, ending only if you are Unconscious or don Heavy armor.</p>",
-          "title_tr": "Kalıcı Öfke",
-          "body_tr": "<p>İnisiyatif attığında tüm kullanılmış Öfke kullanımlarını geri kazanabilirsin (Uzun Dinlenmede bir kez). Öfken artık uzatma aksiyonları gerektirmeden 10 dakika sürer; yalnızca Bilinçsiz olursan veya Ağır zırh giyersen sona erer.</p>"
+          "title_tr": "KalÄ±cÄ± Ã–fke",
+          "body_tr": "<p>Ä°nisiyatif attÄ±ÄŸÄ±nda tÃ¼m kullanÄ±lmÄ±ÅŸ Ã–fke kullanÄ±mlarÄ±nÄ± geri kazanabilirsin (Uzun Dinlenmede bir kez). Ã–fken artÄ±k uzatma aksiyonlarÄ± gerektirmeden 10 dakika sÃ¼rer; yalnÄ±zca BilinÃ§siz olursan veya AÄŸÄ±r zÄ±rh giyersen sona erer.</p>"
         }
       ]
     },
@@ -481,8 +481,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -492,8 +492,8 @@
         {
           "title": "Improved Brutal Strike",
           "body": "<p>The extra damage of your Brutal Strike increases to 2d10. You can also apply two different Brutal Strike effects whenever you use this feature.</p>",
-          "title_tr": "Gelişmiş Vahşi Darbe",
-          "body_tr": "<p><b>Sersemletici Vuruş.</b> Hedef bir sonraki kurtarma atışında Dezavantaja sahip olur ve bir sonraki turuna kadar Fırsat Saldırısı yapamaz.</p><br/><p><b>Parçalayıcı Vuruş.</b> Bir sonraki turuna kadar hedefe karşı yapılan bir sonraki saldırı atışı +5 bonus kazanır.</p>"
+          "title_tr": "GeliÅŸmiÅŸ VahÅŸi Darbe",
+          "body_tr": "<p><b>Sersemletici VuruÅŸ.</b> Hedef bir sonraki kurtarma atÄ±ÅŸÄ±nda Dezavantaja sahip olur ve bir sonraki turuna kadar FÄ±rsat SaldÄ±rÄ±sÄ± yapamaz.</p><br/><p><b>ParÃ§alayÄ±cÄ± VuruÅŸ.</b> Bir sonraki turuna kadar hedefe karÅŸÄ± yapÄ±lan bir sonraki saldÄ±rÄ± atÄ±ÅŸÄ± +5 bonus kazanÄ±r.</p>"
         }
       ]
     },
@@ -503,8 +503,8 @@
         {
           "title": "Indomitable Might",
           "body": "<p>If your total for a Strength check or Strength saving throw is less than your Strength score, you can use that score in place of the total.</p>",
-          "title_tr": "Yenilmez Güç",
-          "body_tr": "<p>Güç kontrolü veya Güç kurtarma atışı toplamın Güç puanından düşükse, toplam yerine o puanı kullanabilirsin.</p>"
+          "title_tr": "Yenilmez GÃ¼Ã§",
+          "body_tr": "<p>GÃ¼Ã§ kontrolÃ¼ veya GÃ¼Ã§ kurtarma atÄ±ÅŸÄ± toplamÄ±n GÃ¼Ã§ puanÄ±ndan dÃ¼ÅŸÃ¼kse, toplam yerine o puanÄ± kullanabilirsin.</p>"
         }
       ]
     },
@@ -514,8 +514,8 @@
         {
           "title": "Epic Boon",
           "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Irresistible Offense is recommended.</p>",
-          "title_tr": "Destansı Lütuf",
-          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
+          "title_tr": "DestansÄ± LÃ¼tuf",
+          "body_tr": "<p>DestansÄ± LÃ¼tuf yeteneÄŸi veya uygun olduÄŸun baÅŸka bir yetenek kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -525,15 +525,15 @@
         {
           "title": "Primal Champion",
           "body": "<p>You embody primal power. Your Strength and Constitution scores increase by 4, to a maximum of 25.</p>",
-          "title_tr": "İlkel Şampiyon",
-          "body_tr": "<p>İlkel gücü somutlaştırırsın. Güç ve Bünye puanların 4 artar, maksimum 25 olur.</p>"
+          "title_tr": "Ä°lkel Åampiyon",
+          "body_tr": "<p>Ä°lkel gÃ¼cÃ¼ somutlaÅŸtÄ±rÄ±rsÄ±n. GÃ¼Ã§ ve BÃ¼nye puanlarÄ±n 4 artar, maksimum 25 olur.</p>"
         }
       ]
     }
   ],
   "name_tr": "Barbar",
-  "subtitle_tr": "İlkel geçmişi olan, savaş öfkesine girebilen sert bir savaşçı",
-  "complexity_tr": "Düşük Karmaşıklık",
-  "primaryStat_tr": "Güç · Bünye",
+  "subtitle_tr": "Ä°lkel geÃ§miÅŸi olan, savaÅŸ Ã¶fkesine girebilen sert bir savaÅŸÃ§Ä±",
+  "complexity_tr": "DÃ¼ÅŸÃ¼k KarmaÅŸÄ±klÄ±k",
+  "primaryStat_tr": "GÃ¼Ã§ Â· BÃ¼nye",
   "subclassPrefix_tr": "Yolu"
 }

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import WikiHomeView from "../views/WikiHomeView.vue";
+import LandingView from "@/views/LandingView.vue";
 import HomeViewVue from "@/views/HomeView.vue";
 import RacesView from "@/views/RacesView.vue";
 import ClassesView from "@/views/ClassesView.vue";
@@ -35,164 +36,175 @@ import ConditionsView from "@/views/Conditions/ConditionsView.vue";
 const routes = [
   {
     path: "/",
+    name: "landing",
+    component: LandingView,
+  },
+  {
+    path: "/dnd/2024",
     name: "home",
     component: HomeViewVue,
-  },
-  {
-    path: "/wiki",
-    name: "Wiki",
-    component: WikiHomeView,
-  },
-  {
-    path: "/wiki/species",
-    name: "Species",
-    component: RacesView,
-  },
-  {
-    path: "/wiki/species/:label",
-    name: "SRace",
-    component: SRaceView,
-  },
-  {
-    path: "/wiki/classes",
-    name: "Classes",
-    component: ClassesView,
-  },
-  {
-    path: "/wiki/classes/barbarian",
-    name: "Barbarian",
-    component: BarbarianView,
-  },
-  {
-    path: "/wiki/classes/bard",
-    name: "Bard",
-    component: BardView,
-  },
-  {
-    path: "/wiki/classes/cleric",
-    name: "Cleric",
-    component: ClericView,
-  },
-  {
-    path: "/wiki/classes/druid",
-    name: "Druid",
-    component: DruidView,
-  },
-  {
-    path: "/wiki/classes/fighter",
-    name: "Fighter",
-    component: FighterView,
-  },
-  {
-    path: "/wiki/classes/monk",
-    name: "Monk",
-    component: MonkView,
-  },
-  {
-    path: "/wiki/classes/paladin",
-    name: "Paladin",
-    component: PaladinView,
-  },
-  {
-    path: "/wiki/classes/ranger",
-    name: "Ranger",
-    component: RangerView,
-  },
-  {
-    path: "/wiki/classes/rogue",
-    name: "Rogue",
-    component: RogueView,
-  },
-  {
-    path: "/wiki/classes/sorcerer",
-    name: "Sorcerer",
-    component: SorcererView,
-  },
-  {
-    path: "/wiki/classes/warlock",
-    name: "Warlock",
-    component: WarlockView,
-  },
-  {
-    path: "/wiki/classes/wizard",
-    name: "Wizard",
-    component: WizardView,
-  },
-  {
-    path: "/wiki/classes/:class/:subclass",
-    name: "Subclass",
-    component: SubclassView,
-  },
-  {
-    path: "/wiki/spells",
-    name: "Spells",
-    component: SpellsView,
-  },
-  {
-    path: "/wiki/spells/:className",
-    name: "cSpells",
-    component: CspellView,
-  },
-  {
-    path: "/wiki/spells/:className/:spellName",
-    name: "Spell",
-    component: SpellDesc,
-  },
-  {
-    path: "/wiki/backgrounds",
-    name: "backgrounds",
-    component: BackgroundsView,
-  },
-  {
-    path: "/wiki/backgrounds/:background",
-    name: "Background",
-    component: BackgrView,
-  },
-  {
-    path: "/wiki/feats",
-    name: "Feats",
-    component: FeatsView,
-  },
-  {
-    path: "/wiki/items",
-    name: "Items",
-    component: ItemsView,
-  },
-  {
-    path: "/wiki/items/weapons",
-    name: "Weapons",
-    component: WeaponsView,
-  },
-  {
-    path: "/wiki/items/armors",
-    name: "Armors",
-    component: ArmorsView,
-  },
-  {
-    path: "/wiki/items/potions",
-    name: "Potions",
-    component: PotionsView,
-  },
-  {
-    path: "/wiki/items/magic_items",
-    name: "Magic Items",
-    component: MagicItems,
-  },
-  {
-    path: "/wiki/conditions",
-    name: "Conditions",
-    component: ConditionsView,
-  },
-  {
-    path: "/character_creator",
-    name: "CharacterCreator",
-    component: CharacterCreatorView,
   },
   {
     path: "/patrons",
     name: "Patrons",
     component: PatronsView,
   },
+  {
+    path: "/character_creator",
+    name: "CharacterCreator",
+    component: CharacterCreatorView,
+  },
+
+  // ── D&D 2024 ─────────────────────────────────────
+  {
+    path: "/dnd/2024/wiki",
+    name: "Wiki",
+    component: WikiHomeView,
+  },
+  {
+    path: "/dnd/2024/wiki/species",
+    name: "Species",
+    component: RacesView,
+  },
+  {
+    path: "/dnd/2024/wiki/species/:label",
+    name: "SRace",
+    component: SRaceView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes",
+    name: "Classes",
+    component: ClassesView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/barbarian",
+    name: "Barbarian",
+    component: BarbarianView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/bard",
+    name: "Bard",
+    component: BardView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/cleric",
+    name: "Cleric",
+    component: ClericView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/druid",
+    name: "Druid",
+    component: DruidView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/fighter",
+    name: "Fighter",
+    component: FighterView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/monk",
+    name: "Monk",
+    component: MonkView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/paladin",
+    name: "Paladin",
+    component: PaladinView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/ranger",
+    name: "Ranger",
+    component: RangerView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/rogue",
+    name: "Rogue",
+    component: RogueView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/sorcerer",
+    name: "Sorcerer",
+    component: SorcererView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/warlock",
+    name: "Warlock",
+    component: WarlockView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/wizard",
+    name: "Wizard",
+    component: WizardView,
+  },
+  {
+    path: "/dnd/2024/wiki/classes/:class/:subclass",
+    name: "Subclass",
+    component: SubclassView,
+  },
+  {
+    path: "/dnd/2024/wiki/spells",
+    name: "Spells",
+    component: SpellsView,
+  },
+  {
+    path: "/dnd/2024/wiki/spells/:className",
+    name: "cSpells",
+    component: CspellView,
+  },
+  {
+    path: "/dnd/2024/wiki/spells/:className/:spellName",
+    name: "Spell",
+    component: SpellDesc,
+  },
+  {
+    path: "/dnd/2024/wiki/backgrounds",
+    name: "backgrounds",
+    component: BackgroundsView,
+  },
+  {
+    path: "/dnd/2024/wiki/backgrounds/:background",
+    name: "Background",
+    component: BackgrView,
+  },
+  {
+    path: "/dnd/2024/wiki/feats",
+    name: "Feats",
+    component: FeatsView,
+  },
+  {
+    path: "/dnd/2024/wiki/items",
+    name: "Items",
+    component: ItemsView,
+  },
+  {
+    path: "/dnd/2024/wiki/items/weapons",
+    name: "Weapons",
+    component: WeaponsView,
+  },
+  {
+    path: "/dnd/2024/wiki/items/armors",
+    name: "Armors",
+    component: ArmorsView,
+  },
+  {
+    path: "/dnd/2024/wiki/items/potions",
+    name: "Potions",
+    component: PotionsView,
+  },
+  {
+    path: "/dnd/2024/wiki/items/magic_items",
+    name: "Magic Items",
+    component: MagicItems,
+  },
+  {
+    path: "/dnd/2024/wiki/conditions",
+    name: "Conditions",
+    component: ConditionsView,
+  },
+
+  // ── Legacy redirects ──────────────────────────────
+  { path: "/wiki", redirect: "/dnd/2024/wiki" },
+  { path: "/wiki/:pathMatch(.*)*", redirect: (to) => "/dnd/2024/wiki/" + to.params.pathMatch },
 ];
 
 const router = createRouter({

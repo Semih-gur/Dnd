@@ -68,7 +68,7 @@ export default {
       return this.$t(`classes.complexity.${n}`);
     },
     goTo(item) {
-      router.push("/wiki/classes/" + item.routeKey);
+      router.push("/dnd/2024/wiki/classes/" + item.routeKey);
     },
   },
   computed: {

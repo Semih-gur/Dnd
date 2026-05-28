@@ -1,32 +1,32 @@
-{
+﻿{
   "name": "Sorcerer",
   "subtitle": "A spellcaster who draws on inherent magic from a gift or bloodline",
   "complexity": "High Complexity",
   "primaryStat": "Charisma",
   "accentColor": "#f472b6",
   "accentRgb": "244, 114, 182",
-  "subclassRoute": "/wiki/classes/sorcerer/",
+  "subclassRoute": "/dnd/2024/wiki/classes/sorcerer/",
   "multiclassTraits": "Gain the Hit Point Die from the Core Sorcerer Traits table.",
   "subclasses": [
     {
       "title": "Aberrant Sorcery",
       "icon": "mdi-alien",
-      "title_tr": "Sapkın Büyücülük"
+      "title_tr": "SapkÄ±n BÃ¼yÃ¼cÃ¼lÃ¼k"
     },
     {
       "title": "Clockwork Sorcery",
       "icon": "mdi-cog",
-      "title_tr": "Çarklı Büyücülük"
+      "title_tr": "Ã‡arklÄ± BÃ¼yÃ¼cÃ¼lÃ¼k"
     },
     {
       "title": "Draconic Sorcery",
       "icon": "mdi-dragon",
-      "title_tr": "Ejderha Büyücülüğü"
+      "title_tr": "Ejderha BÃ¼yÃ¼cÃ¼lÃ¼ÄŸÃ¼"
     },
     {
       "title": "Wild Magic Sorcery",
       "icon": "mdi-creation",
-      "title_tr": "Vahşi Büyücülük"
+      "title_tr": "VahÅŸi BÃ¼yÃ¼cÃ¼lÃ¼k"
     }
   ],
   "coreTraits": [
@@ -39,38 +39,38 @@
     {
       "label": "Hit Point Die",
       "value": "D6 per Sorcerer level",
-      "label_tr": "Can Puanı Zarı",
-      "value_tr": "Büyücü seviyesi başına D6"
+      "label_tr": "Can PuanÄ± ZarÄ±",
+      "value_tr": "BÃ¼yÃ¼cÃ¼ seviyesi baÅŸÄ±na D6"
     },
     {
       "label": "Saving Throw Proficiencies",
       "value": "Constitution and Charisma",
-      "label_tr": "Kurtarma Atışı Uzmanlıkları",
-      "value_tr": "Bünye ve Karizma"
+      "label_tr": "Kurtarma AtÄ±ÅŸÄ± UzmanlÄ±klarÄ±",
+      "value_tr": "BÃ¼nye ve Karizma"
     },
     {
       "label": "Skill Proficiencies",
       "value": "Choose 2: Arcana, Deception, Insight, Intimidation, Persuasion, or Religion",
-      "label_tr": "Beceri Uzmanlıkları",
-      "value_tr": "2 seçin: Gizli Bilgi, Aldatma, İçgüdü, Gözdağı, İkna veya Din"
+      "label_tr": "Beceri UzmanlÄ±klarÄ±",
+      "value_tr": "2 seÃ§in: Gizli Bilgi, Aldatma, Ä°Ã§gÃ¼dÃ¼, GÃ¶zdaÄŸÄ±, Ä°kna veya Din"
     },
     {
       "label": "Weapon Proficiencies",
       "value": "Simple weapons",
-      "label_tr": "Silah Uzmanlıkları",
+      "label_tr": "Silah UzmanlÄ±klarÄ±",
       "value_tr": "Basit Silahlar"
     },
     {
       "label": "Armor Training",
       "value": "None",
-      "label_tr": "Zırh Eğitimi",
+      "label_tr": "ZÄ±rh EÄŸitimi",
       "value_tr": "Yok"
     },
     {
       "label": "Starting Equipment",
       "value": "Choose A or B: (A) Spear, 2 Daggers, Arcane Focus (crystal), Dungeoneer's Pack, and 28 GP; or (B) 50 GP",
-      "label_tr": "Başlangıç Ekipmanı",
-      "value_tr": "A veya B seçin: (A) Mızrak, 2 Hançer, Arkanik Odaklayıcı (kristal), Zindan Çantası ve 28 AP; veya (B) 50 AP"
+      "label_tr": "BaÅŸlangÄ±Ã§ EkipmanÄ±",
+      "value_tr": "A veya B seÃ§in: (A) MÄ±zrak, 2 HanÃ§er, Arkanik OdaklayÄ±cÄ± (kristal), Zindan Ã‡antasÄ± ve 28 AP; veya (B) 50 AP"
     }
   ],
   "tableColumns": [
@@ -142,19 +142,19 @@
       "level": "1",
       "profBonus": "+2",
       "feature": "Spellcasting, Innate Sorcery",
-      "sorceryPoints": "—",
+      "sorceryPoints": "â€”",
       "cantrips": "4",
       "preparedSpells": "2",
       "slot1": "2",
-      "slot2": "—",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Büyü Kullanımı, Doğuştan Büyücülük"
+      "slot2": "â€”",
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "BÃ¼yÃ¼ KullanÄ±mÄ±, DoÄŸuÅŸtan BÃ¼yÃ¼cÃ¼lÃ¼k"
     },
     {
       "level": "2",
@@ -164,15 +164,15 @@
       "cantrips": "4",
       "preparedSpells": "4",
       "slot1": "3",
-      "slot2": "—",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Büyü Pınarı, Üst Büyü"
+      "slot2": "â€”",
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "BÃ¼yÃ¼ PÄ±narÄ±, Ãœst BÃ¼yÃ¼"
     },
     {
       "level": "3",
@@ -183,14 +183,14 @@
       "preparedSpells": "6",
       "slot1": "4",
       "slot2": "2",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Büyücü Alt Sınıfı"
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "BÃ¼yÃ¼cÃ¼ Alt SÄ±nÄ±fÄ±"
     },
     {
       "level": "4",
@@ -201,14 +201,14 @@
       "preparedSpells": "7",
       "slot1": "4",
       "slot2": "3",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "5",
@@ -220,13 +220,13 @@
       "slot1": "4",
       "slot2": "3",
       "slot3": "2",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Büyücü Yenilenişi"
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "BÃ¼yÃ¼cÃ¼ YenileniÅŸi"
     },
     {
       "level": "6",
@@ -238,13 +238,13 @@
       "slot1": "4",
       "slot2": "3",
       "slot3": "3",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "7",
@@ -257,12 +257,12 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "1",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Büyücülüğün Cisimleşmesi"
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "BÃ¼yÃ¼cÃ¼lÃ¼ÄŸÃ¼n CisimleÅŸmesi"
     },
     {
       "level": "8",
@@ -275,17 +275,17 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "2",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "9",
       "profBonus": "+4",
-      "feature": "—",
+      "feature": "â€”",
       "sorceryPoints": "9",
       "cantrips": "5",
       "preparedSpells": "14",
@@ -294,10 +294,10 @@
       "slot3": "3",
       "slot4": "3",
       "slot5": "1",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—"
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”"
     },
     {
       "level": "10",
@@ -311,16 +311,16 @@
       "slot3": "3",
       "slot4": "3",
       "slot5": "2",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Üst Büyü"
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Ãœst BÃ¼yÃ¼"
     },
     {
       "level": "11",
       "profBonus": "+4",
-      "feature": "—",
+      "feature": "â€”",
       "sorceryPoints": "11",
       "cantrips": "6",
       "preparedSpells": "16",
@@ -330,9 +330,9 @@
       "slot4": "3",
       "slot5": "2",
       "slot6": "1",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—"
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”"
     },
     {
       "level": "12",
@@ -347,15 +347,15 @@
       "slot4": "3",
       "slot5": "2",
       "slot6": "1",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "13",
       "profBonus": "+5",
-      "feature": "—",
+      "feature": "â€”",
       "sorceryPoints": "13",
       "cantrips": "6",
       "preparedSpells": "17",
@@ -366,8 +366,8 @@
       "slot5": "2",
       "slot6": "1",
       "slot7": "1",
-      "slot8": "—",
-      "slot9": "—"
+      "slot8": "â€”",
+      "slot9": "â€”"
     },
     {
       "level": "14",
@@ -383,14 +383,14 @@
       "slot5": "2",
       "slot6": "1",
       "slot7": "1",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "15",
       "profBonus": "+5",
-      "feature": "—",
+      "feature": "â€”",
       "sorceryPoints": "15",
       "cantrips": "6",
       "preparedSpells": "18",
@@ -402,7 +402,7 @@
       "slot6": "1",
       "slot7": "1",
       "slot8": "1",
-      "slot9": "—"
+      "slot9": "â€”"
     },
     {
       "level": "16",
@@ -419,8 +419,8 @@
       "slot6": "1",
       "slot7": "1",
       "slot8": "1",
-      "slot9": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot9": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "17",
@@ -438,7 +438,7 @@
       "slot7": "1",
       "slot8": "1",
       "slot9": "1",
-      "feature_tr": "Üst Büyü"
+      "feature_tr": "Ãœst BÃ¼yÃ¼"
     },
     {
       "level": "18",
@@ -456,7 +456,7 @@
       "slot7": "1",
       "slot8": "1",
       "slot9": "1",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "19",
@@ -474,7 +474,7 @@
       "slot7": "1",
       "slot8": "1",
       "slot9": "1",
-      "feature_tr": "Destansı Lütuf"
+      "feature_tr": "DestansÄ± LÃ¼tuf"
     },
     {
       "level": "20",
@@ -492,7 +492,7 @@
       "slot7": "2",
       "slot8": "1",
       "slot9": "1",
-      "feature_tr": "Arkanik Yükseliş"
+      "feature_tr": "Arkanik YÃ¼kseliÅŸ"
     }
   ],
   "levelPanels": [
@@ -502,14 +502,14 @@
         {
           "title": "Spellcasting",
           "body": "<p>Drawing from your innate magic, you cast spells. Charisma is your spellcasting ability and you can use an Arcane Focus as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know four cantrips of your choice. Light, Prestidigitation, Shocking Grasp, and Sorcerous Burst are recommended. You gain additional cantrips at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose two level 1 Sorcerer spells to start. Burning Hands and Detect Magic are recommended. The number increases as you gain Sorcerer levels. You can replace one prepared spell per level gained.</p>",
-          "title_tr": "Büyü Kullanımı",
-          "body_tr": "<p>Doğuştan gelen büyüyü kullanarak büyü yaparsın. Karizman büyü yapma yeteneğindir ve Büyü Odağını büyü odağı olarak kullanabilirsin.</p><br/><p><b>Hazırlanan Büyüler.</b> Başlangıç için iki adet 1. seviye büyü seç. Sorcerer seviyesi kazandıkça sayı artar.</p>"
+          "title_tr": "BÃ¼yÃ¼ KullanÄ±mÄ±",
+          "body_tr": "<p>DoÄŸuÅŸtan gelen bÃ¼yÃ¼yÃ¼ kullanarak bÃ¼yÃ¼ yaparsÄ±n. Karizman bÃ¼yÃ¼ yapma yeteneÄŸindir ve BÃ¼yÃ¼ OdaÄŸÄ±nÄ± bÃ¼yÃ¼ odaÄŸÄ± olarak kullanabilirsin.</p><br/><p><b>HazÄ±rlanan BÃ¼yÃ¼ler.</b> BaÅŸlangÄ±Ã§ iÃ§in iki adet 1. seviye bÃ¼yÃ¼ seÃ§. Sorcerer seviyesi kazandÄ±kÃ§a sayÄ± artar.</p>"
         },
         {
           "title": "Innate Sorcery",
           "body": "<p>As a Bonus Action, you can unleash your simmering innate magic for 1 minute, gaining the following benefits:</p><br/><p>The spell save DC of your Sorcerer spells increases by 1.</p><br/><p>You have Advantage on the attack rolls of Sorcerer spells you cast.</p><br/><p>You can use this feature twice, regaining all uses when you finish a Long Rest.</p>",
-          "title_tr": "Doğuştan Büyücülük",
-          "body_tr": "<p>Bonus Aksiyon olarak 1 dakika boyunca doğuştan gelen büyünü serbest bırakabilirsin:</p><br/><p>Sorcerer büyülerinin büyü kurtarma ZO'su 1 artar.</p><br/><p>Sorcerer büyülerinin saldırı atışlarında Üstünlüğe sahip olursun.</p><br/><p>Bu özelliği iki kez kullanabilirsin; Uzun Dinlenmede tüm kullanımlar geri döner.</p>"
+          "title_tr": "DoÄŸuÅŸtan BÃ¼yÃ¼cÃ¼lÃ¼k",
+          "body_tr": "<p>Bonus Aksiyon olarak 1 dakika boyunca doÄŸuÅŸtan gelen bÃ¼yÃ¼nÃ¼ serbest bÄ±rakabilirsin:</p><br/><p>Sorcerer bÃ¼yÃ¼lerinin bÃ¼yÃ¼ kurtarma ZO'su 1 artar.</p><br/><p>Sorcerer bÃ¼yÃ¼lerinin saldÄ±rÄ± atÄ±ÅŸlarÄ±nda ÃœstÃ¼nlÃ¼ÄŸe sahip olursun.</p><br/><p>Bu Ã¶zelliÄŸi iki kez kullanabilirsin; Uzun Dinlenmede tÃ¼m kullanÄ±mlar geri dÃ¶ner.</p>"
         }
       ]
     },
@@ -519,14 +519,14 @@
         {
           "title": "Font of Magic",
           "body": "<p>You have 2 Sorcery Points, gaining more as shown in the Sorcery Points column. All points are regained on a Long Rest.</p><br/><p><b>Converting Spell Slots.</b> Expend a spell slot to gain Sorcery Points equal to the slot's level (no action required).</p><br/><p><b>Creating Spell Slots.</b> As a Bonus Action, convert Sorcery Points into a spell slot (max level 5). Costs: 1st=2pts, 2nd=3pts, 3rd=5pts, 4th=6pts, 5th=7pts. Created slots vanish on a Long Rest.</p>",
-          "title_tr": "Büyü Pınarı",
-          "body_tr": "<p>2 Büyücü Puanına sahipsin; Büyücü Puanları sütununda gösterildiği gibi daha fazlasını kazanırsın. Tüm puanlar Uzun Dinlenmede geri döner.</p><br/><p><b>Büyü Slotlarını Dönüştürme.</b> Büyü yuvası harcayarak yuvanın seviyesine eşit Büyücü Puanı kazanırsın.</p><br/><p><b>Büyü Slotu Oluşturma.</b> Bonus Aksiyon olarak Büyücü Puanlarını büyü slotuna dönüştürebilirsin (maksimum 5. seviye). Maliyetler: 1.=2pt, 2.=3pt, 3.=5pt, 4.=6pt, 5.=7pt.</p>"
+          "title_tr": "BÃ¼yÃ¼ PÄ±narÄ±",
+          "body_tr": "<p>2 BÃ¼yÃ¼cÃ¼ PuanÄ±na sahipsin; BÃ¼yÃ¼cÃ¼ PuanlarÄ± sÃ¼tununda gÃ¶sterildiÄŸi gibi daha fazlasÄ±nÄ± kazanÄ±rsÄ±n. TÃ¼m puanlar Uzun Dinlenmede geri dÃ¶ner.</p><br/><p><b>BÃ¼yÃ¼ SlotlarÄ±nÄ± DÃ¶nÃ¼ÅŸtÃ¼rme.</b> BÃ¼yÃ¼ yuvasÄ± harcayarak yuvanÄ±n seviyesine eÅŸit BÃ¼yÃ¼cÃ¼ PuanÄ± kazanÄ±rsÄ±n.</p><br/><p><b>BÃ¼yÃ¼ Slotu OluÅŸturma.</b> Bonus Aksiyon olarak BÃ¼yÃ¼cÃ¼ PuanlarÄ±nÄ± bÃ¼yÃ¼ slotuna dÃ¶nÃ¼ÅŸtÃ¼rebilirsin (maksimum 5. seviye). Maliyetler: 1.=2pt, 2.=3pt, 3.=5pt, 4.=6pt, 5.=7pt.</p>"
         },
         {
           "title": "Metamagic",
           "body": "<p>Because your magic flows from within, you can alter your spells. Choose two Metamagic options now, two more at level 10, and two more at level 17. You can use only one option per spell unless noted otherwise.</p><br/><p><b>Careful Spell (1 pt).</b> Up to your Charisma modifier creatures auto-succeed their saves.</p><p><b>Distant Spell (1 pt).</b> Double a spell's range, or change Touch to 30 feet.</p><p><b>Empowered Spell (1 pt).</b> Reroll up to your Charisma modifier damage dice. Combinable.</p><p><b>Extended Spell (1 pt).</b> Double a spell's duration (up to 24 hours). Gain Advantage on Concentration saves.</p><p><b>Heightened Spell (2 pts).</b> One target has Disadvantage on its save against the spell.</p><p><b>Quickened Spell (2 pts).</b> Change a spell's casting time from Action to Bonus Action.</p><p><b>Seeking Spell (1 pt).</b> If a spell attack misses, reroll the d20. Combinable.</p><p><b>Subtle Spell (1 pt).</b> Cast without Verbal, Somatic, or Material components.</p><p><b>Transmuted Spell (1 pt).</b> Change damage type among: Acid, Cold, Fire, Lightning, Poison, Thunder.</p><p><b>Twinned Spell (1 pt).</b> Increase the spell's effective level by 1 to target an additional creature.</p>",
-          "title_tr": "Üst Büyü",
-          "body_tr": "<p>Büyün içinden aktığından büyülerini değiştirebilirsin. Şimdi iki Metamagic seçeneği seç, 10. seviyede iki tane daha, 17. seviyede iki tane daha.</p><br/><p><b>Dikkatli Büyü (1 pt).</b> Karizman değiştiricine kadar yaratık kurtarmada otomatik başarılı olur.</p><p><b>Uzak Büyü (1 pt).</b> Büyünün menzilini ikiye katla veya Dokunuş'u 30 feet yap.</p><p><b>Güçlendirilmiş Büyü (1 pt).</b> Karizman değiştiricine kadar hasar zarını yeniden at. Birleştirilebilir.</p><p><b>Uzatılmış Büyü (1 pt).</b> Büyünün süresini ikiye katla (24 saate kadar).</p><p><b>Yükseltilmiş Büyü (2 pt).</b> Bir hedef büyüye karşı kurtarmasında Dezavantaja sahip olur.</p><p><b>Hızlandırılmış Büyü (2 pt).</b> Büyünün yapım süresini Aksiyondan Bonus Aksiyona dönüştür.</p><p><b>İzleyen Büyü (1 pt).</b> Bir büyü saldırısı ıskalasanız d20'yi yeniden at. Birleştirilebilir.</p><p><b>Sessiz Büyü (1 pt).</b> Sözlü, Bedensel veya Maddi bileşenler olmadan yap.</p><p><b>Dönüştürülmüş Büyü (1 pt).</b> Hasar türünü Asit, Soğuk, Ateş, Şimşek, Zehir veya Gök Gürültüsü arasında değiştir.</p><p><b>İkizlenmiş Büyü (1 pt).</b> Ek bir yaratığı hedef almak için büyünün etkin seviyesini 1 artır.</p>"
+          "title_tr": "Ãœst BÃ¼yÃ¼",
+          "body_tr": "<p>BÃ¼yÃ¼n iÃ§inden aktÄ±ÄŸÄ±ndan bÃ¼yÃ¼lerini deÄŸiÅŸtirebilirsin. Åimdi iki Metamagic seÃ§eneÄŸi seÃ§, 10. seviyede iki tane daha, 17. seviyede iki tane daha.</p><br/><p><b>Dikkatli BÃ¼yÃ¼ (1 pt).</b> Karizman deÄŸiÅŸtiricine kadar yaratÄ±k kurtarmada otomatik baÅŸarÄ±lÄ± olur.</p><p><b>Uzak BÃ¼yÃ¼ (1 pt).</b> BÃ¼yÃ¼nÃ¼n menzilini ikiye katla veya DokunuÅŸ'u 30 feet yap.</p><p><b>GÃ¼Ã§lendirilmiÅŸ BÃ¼yÃ¼ (1 pt).</b> Karizman deÄŸiÅŸtiricine kadar hasar zarÄ±nÄ± yeniden at. BirleÅŸtirilebilir.</p><p><b>UzatÄ±lmÄ±ÅŸ BÃ¼yÃ¼ (1 pt).</b> BÃ¼yÃ¼nÃ¼n sÃ¼resini ikiye katla (24 saate kadar).</p><p><b>YÃ¼kseltilmiÅŸ BÃ¼yÃ¼ (2 pt).</b> Bir hedef bÃ¼yÃ¼ye karÅŸÄ± kurtarmasÄ±nda Dezavantaja sahip olur.</p><p><b>HÄ±zlandÄ±rÄ±lmÄ±ÅŸ BÃ¼yÃ¼ (2 pt).</b> BÃ¼yÃ¼nÃ¼n yapÄ±m sÃ¼resini Aksiyondan Bonus Aksiyona dÃ¶nÃ¼ÅŸtÃ¼r.</p><p><b>Ä°zleyen BÃ¼yÃ¼ (1 pt).</b> Bir bÃ¼yÃ¼ saldÄ±rÄ±sÄ± Ä±skalasanÄ±z d20'yi yeniden at. BirleÅŸtirilebilir.</p><p><b>Sessiz BÃ¼yÃ¼ (1 pt).</b> SÃ¶zlÃ¼, Bedensel veya Maddi bileÅŸenler olmadan yap.</p><p><b>DÃ¶nÃ¼ÅŸtÃ¼rÃ¼lmÃ¼ÅŸ BÃ¼yÃ¼ (1 pt).</b> Hasar tÃ¼rÃ¼nÃ¼ Asit, SoÄŸuk, AteÅŸ, ÅimÅŸek, Zehir veya GÃ¶k GÃ¼rÃ¼ltÃ¼sÃ¼ arasÄ±nda deÄŸiÅŸtir.</p><p><b>Ä°kizlenmiÅŸ BÃ¼yÃ¼ (1 pt).</b> Ek bir yaratÄ±ÄŸÄ± hedef almak iÃ§in bÃ¼yÃ¼nÃ¼n etkin seviyesini 1 artÄ±r.</p>"
         }
       ]
     },
@@ -536,8 +536,8 @@
         {
           "title": "Sorcerer Subclass",
           "body": "<p>You gain a Sorcerer subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Sorcerer level or lower. Choose your origin below:</p>",
-          "title_tr": "Büyücü Alt Sınıfı",
-          "body_tr": "<p>Seçtiğin bir Büyücü alt sınıfı kazanırsın. Kariyerinin geri kalanında, Sorcerer seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Kökenini aşağıdan seç:</p>"
+          "title_tr": "BÃ¼yÃ¼cÃ¼ Alt SÄ±nÄ±fÄ±",
+          "body_tr": "<p>SeÃ§tiÄŸin bir BÃ¼yÃ¼cÃ¼ alt sÄ±nÄ±fÄ± kazanÄ±rsÄ±n. Kariyerinin geri kalanÄ±nda, Sorcerer seviyene eÅŸit veya dÃ¼ÅŸÃ¼k olan alt sÄ±nÄ±f Ã¶zelliklerini kazanÄ±rsÄ±n. KÃ¶kenini aÅŸaÄŸÄ±dan seÃ§:</p>"
         }
       ]
     },
@@ -547,8 +547,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Sorcerer levels 8, 12, and 16.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n. Bu Ã¶zelliÄŸi belirli seviyelerde tekrar kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -558,8 +558,8 @@
         {
           "title": "Sorcerous Restoration",
           "body": "<p>When you finish a Short Rest, you can regain expended Sorcery Points up to half your Sorcerer level (round down). Once you use this feature, you can't do so again until you finish a Long Rest.</p>",
-          "title_tr": "Büyücü Yenilenişi",
-          "body_tr": "<p>Kısa Dinlenmeyi bitirdiğinde, Sorcerer seviyenin yarısına kadar (aşağı yuvarla) kullanılmış Büyücü Puanlarını geri kazanabilirsin. Bu özelliği Uzun Dinlenmeyi bitirene kadar bir kez kullanabilirsin.</p>"
+          "title_tr": "BÃ¼yÃ¼cÃ¼ YenileniÅŸi",
+          "body_tr": "<p>KÄ±sa Dinlenmeyi bitirdiÄŸinde, Sorcerer seviyenin yarÄ±sÄ±na kadar (aÅŸaÄŸÄ± yuvarla) kullanÄ±lmÄ±ÅŸ BÃ¼yÃ¼cÃ¼ PuanlarÄ±nÄ± geri kazanabilirsin. Bu Ã¶zelliÄŸi Uzun Dinlenmeyi bitirene kadar bir kez kullanabilirsin.</p>"
         }
       ]
     },
@@ -569,8 +569,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen origin.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -580,8 +580,8 @@
         {
           "title": "Sorcery Incarnate",
           "body": "<p>If you have no uses of Innate Sorcery left, you can activate it by spending 2 Sorcery Points when you take the Bonus Action.</p><br/><p>In addition, while your Innate Sorcery feature is active, you can use up to two of your Metamagic options on each spell you cast.</p>",
-          "title_tr": "Büyücülüğün Cisimleşmesi",
-          "body_tr": "<p>Doğuştan Büyü kullanımın kalmadıysa, Bonus Aksiyon alırken 2 Büyücü Puanı harcayarak etkinleştirebilirsin.</p><br/><p>Ayrıca Doğuştan Büyü özelliğin etkinken, yaptığın her büyüde iki Metamagic seçeneği kullanabilirsin.</p>"
+          "title_tr": "BÃ¼yÃ¼cÃ¼lÃ¼ÄŸÃ¼n CisimleÅŸmesi",
+          "body_tr": "<p>DoÄŸuÅŸtan BÃ¼yÃ¼ kullanÄ±mÄ±n kalmadÄ±ysa, Bonus Aksiyon alÄ±rken 2 BÃ¼yÃ¼cÃ¼ PuanÄ± harcayarak etkinleÅŸtirebilirsin.</p><br/><p>AyrÄ±ca DoÄŸuÅŸtan BÃ¼yÃ¼ Ã¶zelliÄŸin etkinken, yaptÄ±ÄŸÄ±n her bÃ¼yÃ¼de iki Metamagic seÃ§eneÄŸi kullanabilirsin.</p>"
         }
       ]
     },
@@ -591,8 +591,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -602,8 +602,8 @@
         {
           "title": "Metamagic",
           "body": "<p>You gain two additional Metamagic options of your choice.</p>",
-          "title_tr": "Üst Büyü",
-          "body_tr": "<p>Büyün içinden aktığından büyülerini değiştirebilirsin. Şimdi iki Metamagic seçeneği seç, 10. seviyede iki tane daha, 17. seviyede iki tane daha.</p><br/><p><b>Dikkatli Büyü (1 pt).</b> Karizman değiştiricine kadar yaratık kurtarmada otomatik başarılı olur.</p><p><b>Uzak Büyü (1 pt).</b> Büyünün menzilini ikiye katla veya Dokunuş'u 30 feet yap.</p><p><b>Güçlendirilmiş Büyü (1 pt).</b> Karizman değiştiricine kadar hasar zarını yeniden at. Birleştirilebilir.</p><p><b>Uzatılmış Büyü (1 pt).</b> Büyünün süresini ikiye katla (24 saate kadar).</p><p><b>Yükseltilmiş Büyü (2 pt).</b> Bir hedef büyüye karşı kurtarmasında Dezavantaja sahip olur.</p><p><b>Hızlandırılmış Büyü (2 pt).</b> Büyünün yapım süresini Aksiyondan Bonus Aksiyona dönüştür.</p><p><b>İzleyen Büyü (1 pt).</b> Bir büyü saldırısı ıskalasanız d20'yi yeniden at. Birleştirilebilir.</p><p><b>Sessiz Büyü (1 pt).</b> Sözlü, Bedensel veya Maddi bileşenler olmadan yap.</p><p><b>Dönüştürülmüş Büyü (1 pt).</b> Hasar türünü Asit, Soğuk, Ateş, Şimşek, Zehir veya Gök Gürültüsü arasında değiştir.</p><p><b>İkizlenmiş Büyü (1 pt).</b> Ek bir yaratığı hedef almak için büyünün etkin seviyesini 1 artır.</p>"
+          "title_tr": "Ãœst BÃ¼yÃ¼",
+          "body_tr": "<p>BÃ¼yÃ¼n iÃ§inden aktÄ±ÄŸÄ±ndan bÃ¼yÃ¼lerini deÄŸiÅŸtirebilirsin. Åimdi iki Metamagic seÃ§eneÄŸi seÃ§, 10. seviyede iki tane daha, 17. seviyede iki tane daha.</p><br/><p><b>Dikkatli BÃ¼yÃ¼ (1 pt).</b> Karizman deÄŸiÅŸtiricine kadar yaratÄ±k kurtarmada otomatik baÅŸarÄ±lÄ± olur.</p><p><b>Uzak BÃ¼yÃ¼ (1 pt).</b> BÃ¼yÃ¼nÃ¼n menzilini ikiye katla veya DokunuÅŸ'u 30 feet yap.</p><p><b>GÃ¼Ã§lendirilmiÅŸ BÃ¼yÃ¼ (1 pt).</b> Karizman deÄŸiÅŸtiricine kadar hasar zarÄ±nÄ± yeniden at. BirleÅŸtirilebilir.</p><p><b>UzatÄ±lmÄ±ÅŸ BÃ¼yÃ¼ (1 pt).</b> BÃ¼yÃ¼nÃ¼n sÃ¼resini ikiye katla (24 saate kadar).</p><p><b>YÃ¼kseltilmiÅŸ BÃ¼yÃ¼ (2 pt).</b> Bir hedef bÃ¼yÃ¼ye karÅŸÄ± kurtarmasÄ±nda Dezavantaja sahip olur.</p><p><b>HÄ±zlandÄ±rÄ±lmÄ±ÅŸ BÃ¼yÃ¼ (2 pt).</b> BÃ¼yÃ¼nÃ¼n yapÄ±m sÃ¼resini Aksiyondan Bonus Aksiyona dÃ¶nÃ¼ÅŸtÃ¼r.</p><p><b>Ä°zleyen BÃ¼yÃ¼ (1 pt).</b> Bir bÃ¼yÃ¼ saldÄ±rÄ±sÄ± Ä±skalasanÄ±z d20'yi yeniden at. BirleÅŸtirilebilir.</p><p><b>Sessiz BÃ¼yÃ¼ (1 pt).</b> SÃ¶zlÃ¼, Bedensel veya Maddi bileÅŸenler olmadan yap.</p><p><b>DÃ¶nÃ¼ÅŸtÃ¼rÃ¼lmÃ¼ÅŸ BÃ¼yÃ¼ (1 pt).</b> Hasar tÃ¼rÃ¼nÃ¼ Asit, SoÄŸuk, AteÅŸ, ÅimÅŸek, Zehir veya GÃ¶k GÃ¼rÃ¼ltÃ¼sÃ¼ arasÄ±nda deÄŸiÅŸtir.</p><p><b>Ä°kizlenmiÅŸ BÃ¼yÃ¼ (1 pt).</b> Ek bir yaratÄ±ÄŸÄ± hedef almak iÃ§in bÃ¼yÃ¼nÃ¼n etkin seviyesini 1 artÄ±r.</p>"
         }
       ]
     },
@@ -613,8 +613,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -624,8 +624,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen origin.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -635,8 +635,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -646,8 +646,8 @@
         {
           "title": "Metamagic",
           "body": "<p>You gain two additional Metamagic options of your choice.</p>",
-          "title_tr": "Üst Büyü",
-          "body_tr": "<p>Büyün içinden aktığından büyülerini değiştirebilirsin. Şimdi iki Metamagic seçeneği seç, 10. seviyede iki tane daha, 17. seviyede iki tane daha.</p><br/><p><b>Dikkatli Büyü (1 pt).</b> Karizman değiştiricine kadar yaratık kurtarmada otomatik başarılı olur.</p><p><b>Uzak Büyü (1 pt).</b> Büyünün menzilini ikiye katla veya Dokunuş'u 30 feet yap.</p><p><b>Güçlendirilmiş Büyü (1 pt).</b> Karizman değiştiricine kadar hasar zarını yeniden at. Birleştirilebilir.</p><p><b>Uzatılmış Büyü (1 pt).</b> Büyünün süresini ikiye katla (24 saate kadar).</p><p><b>Yükseltilmiş Büyü (2 pt).</b> Bir hedef büyüye karşı kurtarmasında Dezavantaja sahip olur.</p><p><b>Hızlandırılmış Büyü (2 pt).</b> Büyünün yapım süresini Aksiyondan Bonus Aksiyona dönüştür.</p><p><b>İzleyen Büyü (1 pt).</b> Bir büyü saldırısı ıskalasanız d20'yi yeniden at. Birleştirilebilir.</p><p><b>Sessiz Büyü (1 pt).</b> Sözlü, Bedensel veya Maddi bileşenler olmadan yap.</p><p><b>Dönüştürülmüş Büyü (1 pt).</b> Hasar türünü Asit, Soğuk, Ateş, Şimşek, Zehir veya Gök Gürültüsü arasında değiştir.</p><p><b>İkizlenmiş Büyü (1 pt).</b> Ek bir yaratığı hedef almak için büyünün etkin seviyesini 1 artır.</p>"
+          "title_tr": "Ãœst BÃ¼yÃ¼",
+          "body_tr": "<p>BÃ¼yÃ¼n iÃ§inden aktÄ±ÄŸÄ±ndan bÃ¼yÃ¼lerini deÄŸiÅŸtirebilirsin. Åimdi iki Metamagic seÃ§eneÄŸi seÃ§, 10. seviyede iki tane daha, 17. seviyede iki tane daha.</p><br/><p><b>Dikkatli BÃ¼yÃ¼ (1 pt).</b> Karizman deÄŸiÅŸtiricine kadar yaratÄ±k kurtarmada otomatik baÅŸarÄ±lÄ± olur.</p><p><b>Uzak BÃ¼yÃ¼ (1 pt).</b> BÃ¼yÃ¼nÃ¼n menzilini ikiye katla veya DokunuÅŸ'u 30 feet yap.</p><p><b>GÃ¼Ã§lendirilmiÅŸ BÃ¼yÃ¼ (1 pt).</b> Karizman deÄŸiÅŸtiricine kadar hasar zarÄ±nÄ± yeniden at. BirleÅŸtirilebilir.</p><p><b>UzatÄ±lmÄ±ÅŸ BÃ¼yÃ¼ (1 pt).</b> BÃ¼yÃ¼nÃ¼n sÃ¼resini ikiye katla (24 saate kadar).</p><p><b>YÃ¼kseltilmiÅŸ BÃ¼yÃ¼ (2 pt).</b> Bir hedef bÃ¼yÃ¼ye karÅŸÄ± kurtarmasÄ±nda Dezavantaja sahip olur.</p><p><b>HÄ±zlandÄ±rÄ±lmÄ±ÅŸ BÃ¼yÃ¼ (2 pt).</b> BÃ¼yÃ¼nÃ¼n yapÄ±m sÃ¼resini Aksiyondan Bonus Aksiyona dÃ¶nÃ¼ÅŸtÃ¼r.</p><p><b>Ä°zleyen BÃ¼yÃ¼ (1 pt).</b> Bir bÃ¼yÃ¼ saldÄ±rÄ±sÄ± Ä±skalasanÄ±z d20'yi yeniden at. BirleÅŸtirilebilir.</p><p><b>Sessiz BÃ¼yÃ¼ (1 pt).</b> SÃ¶zlÃ¼, Bedensel veya Maddi bileÅŸenler olmadan yap.</p><p><b>DÃ¶nÃ¼ÅŸtÃ¼rÃ¼lmÃ¼ÅŸ BÃ¼yÃ¼ (1 pt).</b> Hasar tÃ¼rÃ¼nÃ¼ Asit, SoÄŸuk, AteÅŸ, ÅimÅŸek, Zehir veya GÃ¶k GÃ¼rÃ¼ltÃ¼sÃ¼ arasÄ±nda deÄŸiÅŸtir.</p><p><b>Ä°kizlenmiÅŸ BÃ¼yÃ¼ (1 pt).</b> Ek bir yaratÄ±ÄŸÄ± hedef almak iÃ§in bÃ¼yÃ¼nÃ¼n etkin seviyesini 1 artÄ±r.</p>"
         }
       ]
     },
@@ -657,8 +657,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen origin.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -668,8 +668,8 @@
         {
           "title": "Epic Boon",
           "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>",
-          "title_tr": "Destansı Lütuf",
-          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
+          "title_tr": "DestansÄ± LÃ¼tuf",
+          "body_tr": "<p>DestansÄ± LÃ¼tuf yeteneÄŸi veya uygun olduÄŸun baÅŸka bir yetenek kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -679,15 +679,15 @@
         {
           "title": "Arcane Apotheosis",
           "body": "<p>While your Innate Sorcery feature is active, you can use one Metamagic option on each of your turns without spending Sorcery Points on it.</p>",
-          "title_tr": "Arkanik Yükseliş",
-          "body_tr": "<p>Doğuştan Büyü etkinken, her turunda bir Metamagic seçeneğini Büyücü Puanı harcamadan kullanabilirsin.</p>"
+          "title_tr": "Arkanik YÃ¼kseliÅŸ",
+          "body_tr": "<p>DoÄŸuÅŸtan BÃ¼yÃ¼ etkinken, her turunda bir Metamagic seÃ§eneÄŸini BÃ¼yÃ¼cÃ¼ PuanÄ± harcamadan kullanabilirsin.</p>"
         }
       ]
     }
   ],
-  "name_tr": "Büyücü",
-  "subtitle_tr": "Doğuştan gelen büyüsel bir armağanla güç alan büyü kullanıcısı",
-  "complexity_tr": "Yüksek Karmaşıklık",
+  "name_tr": "BÃ¼yÃ¼cÃ¼",
+  "subtitle_tr": "DoÄŸuÅŸtan gelen bÃ¼yÃ¼sel bir armaÄŸanla gÃ¼Ã§ alan bÃ¼yÃ¼ kullanÄ±cÄ±sÄ±",
+  "complexity_tr": "YÃ¼ksek KarmaÅŸÄ±klÄ±k",
   "primaryStat_tr": "Karizma",
-  "subclassPrefix_tr": "Kökeni"
+  "subclassPrefix_tr": "KÃ¶keni"
 }

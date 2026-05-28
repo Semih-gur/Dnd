@@ -14,9 +14,10 @@
     "darkMode": "Koyu temaya geç"
   },
   "home": {
+    "chooseGame": "Oyununuzu seçin",
     "welcomeTo": "Hoş Geldiniz",
     "title": "Beholder's Tavern",
-    "subtitle": "Dungeons & Dragons 5.5 için eksiksiz rehberiniz. Sınıflar, ırklar, büyüler, geçmişler ve daha fazlasını keşfedin — mükemmel maceranızı yaratmak için ihtiyacınız olan her şey.",
+    "subtitle": "Masa başı RPG'ler için eksiksiz rehberiniz. Kurallar, sınıflar, büyüler, lore ve daha fazlasını keşfedin — masada ihtiyacınız olan her şey tek bir yerde.",
     "discordText": "Topluluğumuza katılın:",
     "wiki": {
       "title": "Wiki",
@@ -30,11 +31,12 @@
     },
     "quickAccess": "Hızlı Erişim",
     "footer": {
-      "tagline": "D&D 5.5 için eksiksiz rehberiniz. Wizards of the Coast ile bağlantılı değildir.",
-      "wiki": "Wiki",
+      "tagline": "TTRPG rehberiniz. Herhangi bir yayıncı ile bağlantılı değildir.",
+      "contact": "İletişim",
+      "contactDesc": "Bir öneriniz mi var ya da bir hata mı buldunuz? Bize mesaj gönderin.",
       "support": "Destek",
       "joinDiscord": "Discord'a Katıl",
-      "copyright": "© {year} Beholder's Tavern. Fan yapımı proje. D&D içerikleri Wizards of the Coast'a aittir."
+      "copyright": "© {year} Beholder's Tavern. Fan yapımı proje."
     }
   },
   "wikiHome": {

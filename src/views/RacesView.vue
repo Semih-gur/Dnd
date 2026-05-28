@@ -43,7 +43,7 @@ import router from "@/router";
 export default {
   methods: {
     goTo(item) {
-      router.push("/wiki/species/" + item.routeKey);
+      router.push("/dnd/2024/wiki/species/" + item.routeKey);
     },
     getImage(filename) {
       if (!filename) return null;

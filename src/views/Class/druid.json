@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "Druid",
   "subtitle": "A priest of the Old Faith, wielding the powers of nature and adopting animal forms",
   "complexity": "High Complexity",
@@ -6,7 +6,7 @@
   "accentColor": "#a3e635",
   "accentRgb": "163, 230, 53",
   "subclassPrefix": "Circle of the",
-  "subclassRoute": "/wiki/classes/druid/",
+  "subclassRoute": "/dnd/2024/wiki/classes/druid/",
   "multiclassTraits": "Gain the Hit Point Die and training with Light armor and Shields.",
   "subclasses": [
     {
@@ -27,7 +27,7 @@
     {
       "title": "Stars",
       "icon": "mdi-star-four-points",
-      "title_tr": "Yıldızlar"
+      "title_tr": "YÄ±ldÄ±zlar"
     }
   ],
   "coreTraits": [
@@ -40,44 +40,44 @@
     {
       "label": "Hit Point Die",
       "value": "D8 per Druid level",
-      "label_tr": "Can Puanı Zarı",
-      "value_tr": "Druid seviyesi başına D8"
+      "label_tr": "Can PuanÄ± ZarÄ±",
+      "value_tr": "Druid seviyesi baÅŸÄ±na D8"
     },
     {
       "label": "Saving Throw Proficiencies",
       "value": "Intelligence and Wisdom",
-      "label_tr": "Kurtarma Atışı Uzmanlıkları",
+      "label_tr": "Kurtarma AtÄ±ÅŸÄ± UzmanlÄ±klarÄ±",
       "value_tr": "Zeka ve Hikmet"
     },
     {
       "label": "Skill Proficiencies",
       "value": "Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, or Survival",
-      "label_tr": "Beceri Uzmanlıkları",
-      "value_tr": "2 seçin: Gizli Bilgi, Hayvan Bakımı, İçgüdü, Tıp, Doğa, Algı, Din veya Hayatta Kalma"
+      "label_tr": "Beceri UzmanlÄ±klarÄ±",
+      "value_tr": "2 seÃ§in: Gizli Bilgi, Hayvan BakÄ±mÄ±, Ä°Ã§gÃ¼dÃ¼, TÄ±p, DoÄŸa, AlgÄ±, Din veya Hayatta Kalma"
     },
     {
       "label": "Weapon Proficiencies",
       "value": "Simple weapons",
-      "label_tr": "Silah Uzmanlıkları",
+      "label_tr": "Silah UzmanlÄ±klarÄ±",
       "value_tr": "Basit Silahlar"
     },
     {
       "label": "Tool Proficiencies",
       "value": "Herbalism Kit",
-      "label_tr": "Araç Uzmanlıkları",
-      "value_tr": "Şifalı Bitki Seti"
+      "label_tr": "AraÃ§ UzmanlÄ±klarÄ±",
+      "value_tr": "ÅifalÄ± Bitki Seti"
     },
     {
       "label": "Armor Training",
       "value": "Light armor and Shields",
-      "label_tr": "Zırh Eğitimi",
-      "value_tr": "Hafif zırh ve Kalkanlar"
+      "label_tr": "ZÄ±rh EÄŸitimi",
+      "value_tr": "Hafif zÄ±rh ve Kalkanlar"
     },
     {
       "label": "Starting Equipment",
       "value": "Choose A or B: (A) Leather Armor, Shield, Sickle, Druidic Focus (Quarterstaff), Explorer's Pack, Herbalism Kit, and 9 GP; or (B) 50 GP",
-      "label_tr": "Başlangıç Ekipmanı",
-      "value_tr": "A veya B seçin: (A) Deri Zırh, Kalkan, Orak, Druidik Odaklayıcı (Asa), Kaşif Çantası, Şifalı Bitki Seti ve 9 AP; veya (B) 50 AP"
+      "label_tr": "BaÅŸlangÄ±Ã§ EkipmanÄ±",
+      "value_tr": "A veya B seÃ§in: (A) Deri ZÄ±rh, Kalkan, Orak, Druidik OdaklayÄ±cÄ± (Asa), KaÅŸif Ã‡antasÄ±, ÅifalÄ± Bitki Seti ve 9 AP; veya (B) 50 AP"
     }
   ],
   "tableColumns": [
@@ -180,7 +180,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Büyü Kullanımı, Druidic, Primal Order"
+      "feature_tr": "BÃ¼yÃ¼ KullanÄ±mÄ±, Druidic, Primal Order"
     },
     {
       "level": "2",
@@ -198,7 +198,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Vahşi Şekil, Wild Companion"
+      "feature_tr": "VahÅŸi Åekil, Wild Companion"
     },
     {
       "level": "3",
@@ -216,7 +216,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Druid Alt Sınıfı"
+      "feature_tr": "Druid Alt SÄ±nÄ±fÄ±"
     },
     {
       "level": "4",
@@ -234,7 +234,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "5",
@@ -252,7 +252,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Vahşi Yenileniş"
+      "feature_tr": "VahÅŸi YenileniÅŸ"
     },
     {
       "level": "6",
@@ -270,7 +270,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "7",
@@ -288,7 +288,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Elemental Öfke"
+      "feature_tr": "Elemental Ã–fke"
     },
     {
       "level": "8",
@@ -306,12 +306,12 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "9",
       "profBonus": "+4",
-      "feature": "—",
+      "feature": "â€”",
       "wildShape": "3",
       "cantrips": "3",
       "preparedSpells": "14",
@@ -341,12 +341,12 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "11",
       "profBonus": "+4",
-      "feature": "—",
+      "feature": "â€”",
       "wildShape": "3",
       "cantrips": "4",
       "preparedSpells": "16",
@@ -376,12 +376,12 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "13",
       "profBonus": "+5",
-      "feature": "—",
+      "feature": "â€”",
       "wildShape": "3",
       "cantrips": "4",
       "preparedSpells": "17",
@@ -411,7 +411,7 @@
       "seventh": "1",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "15",
@@ -429,7 +429,7 @@
       "seventh": "1",
       "eight": "1",
       "ninth": "-",
-      "feature_tr": "Gelişmiş Elemental Öfke"
+      "feature_tr": "GeliÅŸmiÅŸ Elemental Ã–fke"
     },
     {
       "level": "16",
@@ -447,12 +447,12 @@
       "seventh": "1",
       "eight": "1",
       "ninth": "-",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "17",
       "profBonus": "+6",
-      "feature": "—",
+      "feature": "â€”",
       "wildShape": "4",
       "cantrips": "4",
       "preparedSpells": "19",
@@ -482,7 +482,7 @@
       "seventh": "1",
       "eight": "1",
       "ninth": "1",
-      "feature_tr": "Yaratık Büyüleri"
+      "feature_tr": "YaratÄ±k BÃ¼yÃ¼leri"
     },
     {
       "level": "19",
@@ -500,7 +500,7 @@
       "seventh": "1",
       "eight": "1",
       "ninth": "1",
-      "feature_tr": "Destansı Lütuf"
+      "feature_tr": "DestansÄ± LÃ¼tuf"
     },
     {
       "level": "20",
@@ -518,7 +518,7 @@
       "seventh": "2",
       "eight": "1",
       "ninth": "1",
-      "feature_tr": "Başdruid"
+      "feature_tr": "BaÅŸdruid"
     }
   ],
   "levelPanels": [
@@ -528,18 +528,18 @@
         {
           "title": "Spellcasting",
           "body": "<p>You cast spells through studying the mystical forces of nature. Wisdom is your spellcasting ability and you can use a Druidic Focus as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know two cantrips of your choice from the Druid spell list. Druidcraft and Produce Flame are recommended. You gain more cantrips at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells to start. Animal Friendship, Cure Wounds, Faerie Fire, and Thunderwave are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can replace any prepared spells with other Druid spells for which you have spell slots.</p>",
-          "title_tr": "Büyü Kullanımı",
-          "body_tr": "<p>Doğanın mistik güçlerini inceleyerek büyü yaparsın. Bilgeliğin büyü yapma yeteneğindir ve Druidik Odak büyü odağı olarak kullanabilirsin.</p><br/><p><b>Hazırlanan Büyüler.</b> Başlangıç için dört adet 1. seviye büyü seç. Hayvan Dostluğu, Yaraları İyileştirme, Peri Ateşi ve Gök Gürültüsü Dalgası önerilir.</p><br/><p><b>Hazırlanan Büyüleri Değiştirme.</b> Uzun Dinlenmeyi bitirdiğinde, hazırlanan büyülerini büyü slotları olan diğer Druid büyüleriyle değiştirebilirsin.</p>"
+          "title_tr": "BÃ¼yÃ¼ KullanÄ±mÄ±",
+          "body_tr": "<p>DoÄŸanÄ±n mistik gÃ¼Ã§lerini inceleyerek bÃ¼yÃ¼ yaparsÄ±n. BilgeliÄŸin bÃ¼yÃ¼ yapma yeteneÄŸindir ve Druidik Odak bÃ¼yÃ¼ odaÄŸÄ± olarak kullanabilirsin.</p><br/><p><b>HazÄ±rlanan BÃ¼yÃ¼ler.</b> BaÅŸlangÄ±Ã§ iÃ§in dÃ¶rt adet 1. seviye bÃ¼yÃ¼ seÃ§. Hayvan DostluÄŸu, YaralarÄ± Ä°yileÅŸtirme, Peri AteÅŸi ve GÃ¶k GÃ¼rÃ¼ltÃ¼sÃ¼ DalgasÄ± Ã¶nerilir.</p><br/><p><b>HazÄ±rlanan BÃ¼yÃ¼leri DeÄŸiÅŸtirme.</b> Uzun Dinlenmeyi bitirdiÄŸinde, hazÄ±rlanan bÃ¼yÃ¼lerini bÃ¼yÃ¼ slotlarÄ± olan diÄŸer Druid bÃ¼yÃ¼leriyle deÄŸiÅŸtirebilirsin.</p>"
         },
         {
           "title": "Druidic",
           "body": "<p>You know Druidic, the secret language of Druids. You always have the Speak with Animals spell prepared.</p><br/><p>You can use Druidic to leave hidden messages. You and others who know Druidic automatically spot such messages. Others spot them with a DC 15 Intelligence (Investigation) check but can't decipher them without magic.</p>",
-          "body_tr": "<p>Druidlerin gizli dili olan Druidik'i bilirsin. Her zaman Hayvanlarla Konuşma büyüsünü hazır bulundurursun.</p><br/><p>Druidik ile gizli mesajlar bırakabilirsin. Sen ve Druidik bilen diğerleri bu mesajları otomatik olarak fark eder. Diğerleri ZO 15 Zeka (Araştırma) kontrolüyle fark edebilir ancak büyü olmadan çözemez.</p>"
+          "body_tr": "<p>Druidlerin gizli dili olan Druidik'i bilirsin. Her zaman Hayvanlarla KonuÅŸma bÃ¼yÃ¼sÃ¼nÃ¼ hazÄ±r bulundurursun.</p><br/><p>Druidik ile gizli mesajlar bÄ±rakabilirsin. Sen ve Druidik bilen diÄŸerleri bu mesajlarÄ± otomatik olarak fark eder. DiÄŸerleri ZO 15 Zeka (AraÅŸtÄ±rma) kontrolÃ¼yle fark edebilir ancak bÃ¼yÃ¼ olmadan Ã§Ã¶zemez.</p>"
         },
         {
           "title": "Primal Order",
           "body": "<p>You have dedicated yourself to one of the following sacred roles of your choice.</p><br/><p><b>Magician.</b> You know one extra cantrips from the Druid spell list. Your mystical connection to nature gives you a bonus to Intelligence (Arcana or Nature) checks equal to your Wisdom modifier (minimum +1).</p><br/><p><b>Warden.</b> Trained for battle, you gain proficiency with Martial weapons and training with Medium armor.</p>",
-          "body_tr": "<p>Aşağıdaki kutsal rollerden birini kendine adamışsın.</p><br/><p><b>Büyücü.</b> Druid büyü listesinden ekstra bir büyü bilirsin. Doğayla bağlantın Zeka (Gizli Bilim veya Doğa) kontrollerine Bilgelik değiştirici kadar bonus sağlar (minimum +1).</p><br/><p><b>Bekçi.</b> Savaş için eğitilmiş olarak Savaş silahlarında uzmanlık ve Orta zırh eğitimi kazanırsın.</p>"
+          "body_tr": "<p>AÅŸaÄŸÄ±daki kutsal rollerden birini kendine adamÄ±ÅŸsÄ±n.</p><br/><p><b>BÃ¼yÃ¼cÃ¼.</b> Druid bÃ¼yÃ¼ listesinden ekstra bir bÃ¼yÃ¼ bilirsin. DoÄŸayla baÄŸlantÄ±n Zeka (Gizli Bilim veya DoÄŸa) kontrollerine Bilgelik deÄŸiÅŸtirici kadar bonus saÄŸlar (minimum +1).</p><br/><p><b>BekÃ§i.</b> SavaÅŸ iÃ§in eÄŸitilmiÅŸ olarak SavaÅŸ silahlarÄ±nda uzmanlÄ±k ve Orta zÄ±rh eÄŸitimi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -549,13 +549,13 @@
         {
           "title": "Wild Shape",
           "body": "<p>As a Bonus Action, you shape-shift into a Beast form you have learned. You stay in that form for hours equal to half your Druid level, or until you use Wild Shape again, become Incapacitated, or die. You can also leave early as a Bonus Action.</p><br/><p><b>Number of Uses.</b> You can use Wild Shape twice, regaining one use on a Short Rest and all uses on a Long Rest. Additional uses are gained at higher levels.</p><br/><p><b>Known Forms.</b> You know four Beast forms (max CR 1/4, no Fly Speed). The Rat, Riding Horse, Spider, and Wolf are recommended. You can replace one known form each Long Rest. The table above shows how your available forms expand as you level up.</p><br/><p><b>While Shape-Shifted.</b> You gain Temporary Hit Points equal to your Druid level. Your statistics are replaced by the Beast's stat block, but you retain your creature type, Hit Points, Hit Dice, mental ability scores, class features, languages, feats, and proficiencies. You cannot cast spells, though Concentration on already-cast spells is maintained.</p>",
-          "title_tr": "Vahşi Şekil",
-          "body_tr": "<p>Bonus Aksiyon olarak, öğrendiğin bir Canavar formuna dönüşürsün. Druid seviyenin yarısına eşit saatler boyunca o formda kalırsın ya da Wild Shape'i tekrar kullanana, Engelli olana veya ölene kadar. Bonus Aksiyon olarak erken de çıkabilirsin.</p><br/><p><b>Kullanım Sayısı.</b> Wild Shape'i iki kez kullanabilirsin; Kısa Dinlenmede bir kullanımı, Uzun Dinlenmede tüm kullanımları geri kazanırsın.</p><br/><p><b>Bilinen Formlar.</b> Dört Canavar formu bilirsin (maksimum ZD 1/4, Uçuş Hızı yok). Her Uzun Dinlenmede bilinen bir formu değiştirebilirsin.</p><br/><p><b>Dönüşürken.</b> Druid seviyene eşit Geçici Can Puanı kazanırsın. İstatistiklerin Canavarın istatistik bloğuyla değiştirilir, ancak yaratık türünü, Can Puanlarını, İsabet Zarlarını, zihinsel nitelik puanlarını, sınıf özelliklerini ve uzmanlıkları korursun. Büyü yapamazsın, ancak halihazırda yapılan büyülerdeki Konsantrasyon sürdürülür.</p>"
+          "title_tr": "VahÅŸi Åekil",
+          "body_tr": "<p>Bonus Aksiyon olarak, Ã¶ÄŸrendiÄŸin bir Canavar formuna dÃ¶nÃ¼ÅŸÃ¼rsÃ¼n. Druid seviyenin yarÄ±sÄ±na eÅŸit saatler boyunca o formda kalÄ±rsÄ±n ya da Wild Shape'i tekrar kullanana, Engelli olana veya Ã¶lene kadar. Bonus Aksiyon olarak erken de Ã§Ä±kabilirsin.</p><br/><p><b>KullanÄ±m SayÄ±sÄ±.</b> Wild Shape'i iki kez kullanabilirsin; KÄ±sa Dinlenmede bir kullanÄ±mÄ±, Uzun Dinlenmede tÃ¼m kullanÄ±mlarÄ± geri kazanÄ±rsÄ±n.</p><br/><p><b>Bilinen Formlar.</b> DÃ¶rt Canavar formu bilirsin (maksimum ZD 1/4, UÃ§uÅŸ HÄ±zÄ± yok). Her Uzun Dinlenmede bilinen bir formu deÄŸiÅŸtirebilirsin.</p><br/><p><b>DÃ¶nÃ¼ÅŸÃ¼rken.</b> Druid seviyene eÅŸit GeÃ§ici Can PuanÄ± kazanÄ±rsÄ±n. Ä°statistiklerin CanavarÄ±n istatistik bloÄŸuyla deÄŸiÅŸtirilir, ancak yaratÄ±k tÃ¼rÃ¼nÃ¼, Can PuanlarÄ±nÄ±, Ä°sabet ZarlarÄ±nÄ±, zihinsel nitelik puanlarÄ±nÄ±, sÄ±nÄ±f Ã¶zelliklerini ve uzmanlÄ±klarÄ± korursun. BÃ¼yÃ¼ yapamazsÄ±n, ancak halihazÄ±rda yapÄ±lan bÃ¼yÃ¼lerdeki Konsantrasyon sÃ¼rdÃ¼rÃ¼lÃ¼r.</p>"
         },
         {
           "title": "Wild Companion",
           "body": "<p>As a Magic action, you can expend a spell slot or a use of Wild Shape to cast Find Familiar without Material components. The familiar is Fey and disappears when you finish a Long Rest.</p>",
-          "body_tr": "<p>Büyü aksiyonu olarak, Maddi bileşenler olmadan Tanıdık Bul büyüsü yapmak için bir büyü slotu veya Wild Shape kullanımı harcayabilirsin. Tanıdık Peri'dir ve Uzun Dinlenmeyi bitirdiğinde kaybolur.</p>"
+          "body_tr": "<p>BÃ¼yÃ¼ aksiyonu olarak, Maddi bileÅŸenler olmadan TanÄ±dÄ±k Bul bÃ¼yÃ¼sÃ¼ yapmak iÃ§in bir bÃ¼yÃ¼ slotu veya Wild Shape kullanÄ±mÄ± harcayabilirsin. TanÄ±dÄ±k Peri'dir ve Uzun Dinlenmeyi bitirdiÄŸinde kaybolur.</p>"
         }
       ]
     },
@@ -565,8 +565,8 @@
         {
           "title": "Druid Subclass",
           "body": "<p>You gain a Druid subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Druid level or lower. Choose your circle below:</p>",
-          "title_tr": "Druid Alt Sınıfı",
-          "body_tr": "<p>Seçtiğin bir Druid alt sınıfı kazanırsın. Kariyerinin geri kalanında, Druid seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Çevreni aşağıdan seç:</p>"
+          "title_tr": "Druid Alt SÄ±nÄ±fÄ±",
+          "body_tr": "<p>SeÃ§tiÄŸin bir Druid alt sÄ±nÄ±fÄ± kazanÄ±rsÄ±n. Kariyerinin geri kalanÄ±nda, Druid seviyene eÅŸit veya dÃ¼ÅŸÃ¼k olan alt sÄ±nÄ±f Ã¶zelliklerini kazanÄ±rsÄ±n. Ã‡evreni aÅŸaÄŸÄ±dan seÃ§:</p>"
         }
       ]
     },
@@ -576,8 +576,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Druid levels 8, 12, and 16.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n. Bu Ã¶zelliÄŸi belirli seviyelerde tekrar kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -587,8 +587,8 @@
         {
           "title": "Wild Resurgence",
           "body": "<p>Once on each of your turns, if you have no uses of Wild Shape left, you can give yourself one use by expending a spell slot (no action required).</p><br/><p>In addition, you can expend one use of Wild Shape (no action required) to give yourself a level 1 spell slot, but you can't do so again until you finish a Long Rest.</p>",
-          "title_tr": "Vahşi Yenileniş",
-          "body_tr": "<p>Her turunda bir kez Wild Shape kullanımın kalmadıysa, büyü slotu harcayarak kendine bir kullanım verebilirsin (aksiyon gerektirmez).</p><br/><p>Ayrıca bir Wild Shape kullanımı harcayarak kendine 1. seviye büyü slotu verebilirsin, ancak Uzun Dinlenmeyi bitirene kadar bunu tekrar yapamazsın.</p>"
+          "title_tr": "VahÅŸi YenileniÅŸ",
+          "body_tr": "<p>Her turunda bir kez Wild Shape kullanÄ±mÄ±n kalmadÄ±ysa, bÃ¼yÃ¼ slotu harcayarak kendine bir kullanÄ±m verebilirsin (aksiyon gerektirmez).</p><br/><p>AyrÄ±ca bir Wild Shape kullanÄ±mÄ± harcayarak kendine 1. seviye bÃ¼yÃ¼ slotu verebilirsin, ancak Uzun Dinlenmeyi bitirene kadar bunu tekrar yapamazsÄ±n.</p>"
         }
       ]
     },
@@ -598,8 +598,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen circle.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -609,8 +609,8 @@
         {
           "title": "Elemental Fury",
           "body": "<p>The might of the elements flows through you. Choose one of the following options:</p><br/><p><b>Potent Spellcasting.</b> Add your Wisdom modifier to the damage you deal with any Druid cantrips.</p><br/><p><b>Primal Strike.</b> Once on each of your turns when you hit a creature with a weapon or a Beast form's attack in Wild Shape, you can cause the target to take an extra 1d8 Cold, Fire, Lightning, or Thunder damage (choose when you hit).</p>",
-          "title_tr": "Elemental Öfke",
-          "body_tr": "<p>Elementlerin gücü senden akar. Aşağıdaki seçeneklerden birini seç:</p><br/><p><b>Güçlü Büyü Yapma.</b> Herhangi bir Druid büyüsüyle verdiğin hasara Bilgelik değiştiricini ekle.</p><br/><p><b>İlkel Vuruş.</b> Her turda bir kez Wild Shape'de silah veya Canavar formu saldırısıyla isabet ettiğinde, hedefe ekstra 1d8 Soğuk, Ateş, Şimşek veya Gök Gürültüsü hasarı verebilirsin.</p>"
+          "title_tr": "Elemental Ã–fke",
+          "body_tr": "<p>Elementlerin gÃ¼cÃ¼ senden akar. AÅŸaÄŸÄ±daki seÃ§eneklerden birini seÃ§:</p><br/><p><b>GÃ¼Ã§lÃ¼ BÃ¼yÃ¼ Yapma.</b> Herhangi bir Druid bÃ¼yÃ¼sÃ¼yle verdiÄŸin hasara Bilgelik deÄŸiÅŸtiricini ekle.</p><br/><p><b>Ä°lkel VuruÅŸ.</b> Her turda bir kez Wild Shape'de silah veya Canavar formu saldÄ±rÄ±sÄ±yla isabet ettiÄŸinde, hedefe ekstra 1d8 SoÄŸuk, AteÅŸ, ÅimÅŸek veya GÃ¶k GÃ¼rÃ¼ltÃ¼sÃ¼ hasarÄ± verebilirsin.</p>"
         }
       ]
     },
@@ -620,8 +620,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -631,8 +631,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen circle.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -642,8 +642,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -653,8 +653,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen circle.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -664,8 +664,8 @@
         {
           "title": "Improved Elemental Fury",
           "body": "<p>The option you chose for Elemental Fury grows more powerful.</p><br/><p><b>Potent Spellcasting.</b> When you cast a Druid cantrips with a range of 10 feet or greater, the spell's range increases by 300 feet.</p><br/><p><b>Primal Strike.</b> The extra damage of your Primal Strike increases to 2d8.</p>",
-          "title_tr": "Gelişmiş Elemental Öfke",
-          "body_tr": "<p>Elemental Öfke için seçtiğin seçenek daha güçlü hale gelir.</p><br/><p><b>Güçlü Büyü Yapma.</b> 10 feet veya daha geniş menzilli bir Druid büyüsü yaptığında büyünün menzili 300 feet artar.</p><br/><p><b>İlkel Vuruş.</b> İlkel Vuruşunun ekstra hasarı 2d8'e yükselir.</p>"
+          "title_tr": "GeliÅŸmiÅŸ Elemental Ã–fke",
+          "body_tr": "<p>Elemental Ã–fke iÃ§in seÃ§tiÄŸin seÃ§enek daha gÃ¼Ã§lÃ¼ hale gelir.</p><br/><p><b>GÃ¼Ã§lÃ¼ BÃ¼yÃ¼ Yapma.</b> 10 feet veya daha geniÅŸ menzilli bir Druid bÃ¼yÃ¼sÃ¼ yaptÄ±ÄŸÄ±nda bÃ¼yÃ¼nÃ¼n menzili 300 feet artar.</p><br/><p><b>Ä°lkel VuruÅŸ.</b> Ä°lkel VuruÅŸunun ekstra hasarÄ± 2d8'e yÃ¼kselir.</p>"
         }
       ]
     },
@@ -675,8 +675,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -686,8 +686,8 @@
         {
           "title": "Beast Spells",
           "body": "<p>While using Wild Shape, you can cast spells in Beast form, except for any spell that has a Material component with a cost specified or that consumes its Material component.</p>",
-          "title_tr": "Yaratık Büyüleri",
-          "body_tr": "<p>Wild Shape kullanırken, belirlenmiş maliyet içeren Maddi bileşen gerektiren büyüler hariç, Canavar formunda büyü yapabilirsin.</p>"
+          "title_tr": "YaratÄ±k BÃ¼yÃ¼leri",
+          "body_tr": "<p>Wild Shape kullanÄ±rken, belirlenmiÅŸ maliyet iÃ§eren Maddi bileÅŸen gerektiren bÃ¼yÃ¼ler hariÃ§, Canavar formunda bÃ¼yÃ¼ yapabilirsin.</p>"
         }
       ]
     },
@@ -697,8 +697,8 @@
         {
           "title": "Epic Boon",
           "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.</p>",
-          "title_tr": "Destansı Lütuf",
-          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
+          "title_tr": "DestansÄ± LÃ¼tuf",
+          "body_tr": "<p>DestansÄ± LÃ¼tuf yeteneÄŸi veya uygun olduÄŸun baÅŸka bir yetenek kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -708,15 +708,15 @@
         {
           "title": "Archdruid",
           "body": "<p>The vitality of nature constantly blooms within you, granting the following benefits:</p><br/><p><b>Evergreen Wild Shape.</b> Whenever you roll Initiative and have no uses of Wild Shape left, you regain one expended use of it.</p><br/><p><b>Nature Magician.</b> You can convert uses of Wild Shape into a spell slot (no action required). Each use contributes 2 spell levels. For example, two uses produce a level 4 spell slot. Once used, you can't do so again until you finish a Long Rest.</p><br/><p><b>Longevity.</b> For every ten years that pass, your body ages only one year.</p>",
-          "title_tr": "Başdruid",
-          "body_tr": "<p>Doğanın canlılığı sürekli içinde filizlenir, şu faydaları sağlar:</p><br/><p><b>Daima Taze Wild Shape.</b> İnisiyatif attığında ve Wild Shape kullanımın kalmadıysa, kullanılmış bir kullanımı geri kazanırsın.</p><br/><p><b>Doğa Büyücüsü.</b> Wild Shape kullanımlarını büyü slotuna dönüştürebilirsin (aksiyon gerektirmez). Her kullanım 2 büyü seviyesi sağlar. Bir kez kullandıktan sonra Uzun Dinlenmeyi bitirene kadar bunu tekrar yapamazsın.</p><br/><p><b>Uzun Ömür.</b> Her geçen on yılda vücudun yalnızca bir yıl yaşlanır.</p>"
+          "title_tr": "BaÅŸdruid",
+          "body_tr": "<p>DoÄŸanÄ±n canlÄ±lÄ±ÄŸÄ± sÃ¼rekli iÃ§inde filizlenir, ÅŸu faydalarÄ± saÄŸlar:</p><br/><p><b>Daima Taze Wild Shape.</b> Ä°nisiyatif attÄ±ÄŸÄ±nda ve Wild Shape kullanÄ±mÄ±n kalmadÄ±ysa, kullanÄ±lmÄ±ÅŸ bir kullanÄ±mÄ± geri kazanÄ±rsÄ±n.</p><br/><p><b>DoÄŸa BÃ¼yÃ¼cÃ¼sÃ¼.</b> Wild Shape kullanÄ±mlarÄ±nÄ± bÃ¼yÃ¼ slotuna dÃ¶nÃ¼ÅŸtÃ¼rebilirsin (aksiyon gerektirmez). Her kullanÄ±m 2 bÃ¼yÃ¼ seviyesi saÄŸlar. Bir kez kullandÄ±ktan sonra Uzun Dinlenmeyi bitirene kadar bunu tekrar yapamazsÄ±n.</p><br/><p><b>Uzun Ã–mÃ¼r.</b> Her geÃ§en on yÄ±lda vÃ¼cudun yalnÄ±zca bir yÄ±l yaÅŸlanÄ±r.</p>"
         }
       ]
     }
   ],
   "name_tr": "Druid",
-  "subtitle_tr": "Doğanın güçlerini kullanan ve hayvan formlarına bürünen büyücü",
-  "complexity_tr": "Yüksek Karmaşıklık",
+  "subtitle_tr": "DoÄŸanÄ±n gÃ¼Ã§lerini kullanan ve hayvan formlarÄ±na bÃ¼rÃ¼nen bÃ¼yÃ¼cÃ¼",
+  "complexity_tr": "YÃ¼ksek KarmaÅŸÄ±klÄ±k",
   "primaryStat_tr": "Hikmet",
-  "subclassPrefix_tr": "Çemberi"
+  "subclassPrefix_tr": "Ã‡emberi"
 }

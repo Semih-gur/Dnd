@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">{{ $t('wikiHome.title') }}</h1>
+          <h1 class="hero-title">{{ $t("wikiHome.title") }}</h1>
         </div>
       </div>
     </div>
@@ -37,19 +37,19 @@
 import router from "@/router";
 
 const artMap = {
-  classes:     require("../assets/wikiPage/class.svg"),
-  species:     require("../assets/wikiPage/species.svg"),
-  spells:      require("../assets/wikiPage/spells.svg"),
+  classes: require("../assets/wikiPage/class.svg"),
+  species: require("../assets/wikiPage/species.svg"),
+  spells: require("../assets/wikiPage/spells.svg"),
   backgrounds: require("../assets/wikiPage/backgrounds.svg"),
-  feats:       require("../assets/wikiPage/feats.svg"),
-  items:       require("../assets/wikiPage/items.svg"),
-  conditions:  require("../assets/wikiPage/conditions.svg"),
+  feats: require("../assets/wikiPage/feats.svg"),
+  items: require("../assets/wikiPage/items.svg"),
+  conditions: require("../assets/wikiPage/conditions.svg"),
 };
 
 export default {
   methods: {
     goTo(page) {
-      router.push("wiki/" + page);
+      router.push("/dnd/2024/wiki/" + page);
     },
   },
   computed: {

@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "Bard",
   "subtitle": "An inspiring magician whose power echoes the music of creation",
   "complexity": "Medium Complexity",
@@ -7,7 +7,7 @@
   "accentColor": "#fb923c",
   "accentRgb": "251, 146, 60",
   "subclassPrefix": "College of",
-  "subclassRoute": "/wiki/classes/bard/",
+  "subclassRoute": "/dnd/2024/wiki/classes/bard/",
   "multiclassTraits": "Gain the Hit Point Die, proficiency in one skill of your choice, proficiency with one Musical Instrument, and training with Light armor.",
   "subclasses": [
     {
@@ -18,7 +18,7 @@
     {
       "title": "Glamour",
       "icon": "mdi-sparkles",
-      "title_tr": "Büyü"
+      "title_tr": "BÃ¼yÃ¼"
     },
     {
       "title": "Lore",
@@ -41,44 +41,44 @@
     {
       "label": "Hit Point Die",
       "value": "D8 per Bard level",
-      "label_tr": "Can Puanı Zarı",
-      "value_tr": "Ozan seviyesi başına D8"
+      "label_tr": "Can PuanÄ± ZarÄ±",
+      "value_tr": "Ozan seviyesi baÅŸÄ±na D8"
     },
     {
       "label": "Saving Throw Proficiencies",
       "value": "Dexterity and Charisma",
-      "label_tr": "Kurtarma Atışı Uzmanlıkları",
-      "value_tr": "Çeviklik ve Karizma"
+      "label_tr": "Kurtarma AtÄ±ÅŸÄ± UzmanlÄ±klarÄ±",
+      "value_tr": "Ã‡eviklik ve Karizma"
     },
     {
       "label": "Skill Proficiencies",
       "value": "Choose any 3 skills",
-      "label_tr": "Beceri Uzmanlıkları",
-      "value_tr": "Herhangi 3 beceri seçin"
+      "label_tr": "Beceri UzmanlÄ±klarÄ±",
+      "value_tr": "Herhangi 3 beceri seÃ§in"
     },
     {
       "label": "Tool Proficiencies",
       "value": "Choose 3 Musical Instruments",
-      "label_tr": "Araç Uzmanlıkları",
-      "value_tr": "3 Müzik Aleti seçin"
+      "label_tr": "AraÃ§ UzmanlÄ±klarÄ±",
+      "value_tr": "3 MÃ¼zik Aleti seÃ§in"
     },
     {
       "label": "Weapon Proficiencies",
       "value": "Simple weapons",
-      "label_tr": "Silah Uzmanlıkları",
+      "label_tr": "Silah UzmanlÄ±klarÄ±",
       "value_tr": "Basit Silahlar"
     },
     {
       "label": "Armor Training",
       "value": "Light armor",
-      "label_tr": "Zırh Eğitimi",
-      "value_tr": "Hafif Zırh"
+      "label_tr": "ZÄ±rh EÄŸitimi",
+      "value_tr": "Hafif ZÄ±rh"
     },
     {
       "label": "Starting Equipment",
       "value": "Choose A or B: (A) Leather Armor, 2 Daggers, Musical Instrument of your choice, Entertainer's Pack, and 19 GP; or (B) 90 GP",
-      "label_tr": "Başlangıç Ekipmanı",
-      "value_tr": "A veya B seçin: (A) Deri Zırh, 2 Hançer, Seçtiğiniz Müzik Aleti, Eğlendirici Çantası ve 19 AP; veya (B) 90 AP"
+      "label_tr": "BaÅŸlangÄ±Ã§ EkipmanÄ±",
+      "value_tr": "A veya B seÃ§in: (A) Deri ZÄ±rh, 2 HanÃ§er, SeÃ§tiÄŸiniz MÃ¼zik Aleti, EÄŸlendirici Ã‡antasÄ± ve 19 AP; veya (B) 90 AP"
     }
   ],
   "tableColumns": [
@@ -160,7 +160,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Ozan İlhamı, Büyü Kullanımı"
+      "feature_tr": "Ozan Ä°lhamÄ±, BÃ¼yÃ¼ KullanÄ±mÄ±"
     },
     {
       "level": "2",
@@ -178,7 +178,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Uzmanlık, Her İşin Ustası"
+      "feature_tr": "UzmanlÄ±k, Her Ä°ÅŸin UstasÄ±"
     },
     {
       "level": "3",
@@ -196,7 +196,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Ozan Alt Sınıfı"
+      "feature_tr": "Ozan Alt SÄ±nÄ±fÄ±"
     },
     {
       "level": "4",
@@ -214,7 +214,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "5",
@@ -232,7 +232,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "İlham Pınarı"
+      "feature_tr": "Ä°lham PÄ±narÄ±"
     },
     {
       "level": "6",
@@ -250,7 +250,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "7",
@@ -268,7 +268,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Karşı Büyü"
+      "feature_tr": "KarÅŸÄ± BÃ¼yÃ¼"
     },
     {
       "level": "8",
@@ -286,7 +286,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "9",
@@ -304,7 +304,7 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Uzmanlık"
+      "feature_tr": "UzmanlÄ±k"
     },
     {
       "level": "10",
@@ -322,12 +322,12 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Büyülü Sırlar"
+      "feature_tr": "BÃ¼yÃ¼lÃ¼ SÄ±rlar"
     },
     {
       "level": "11",
       "profBonus": "+4",
-      "feature": "—",
+      "feature": "â€”",
       "bardic_die": "D10",
       "cantrips": "4",
       "preparedSpells": "16",
@@ -357,12 +357,12 @@
       "seventh": "-",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "13",
       "profBonus": "+5",
-      "feature": "—",
+      "feature": "â€”",
       "bardic_die": "D10",
       "cantrips": "4",
       "preparedSpells": "17",
@@ -392,12 +392,12 @@
       "seventh": "1",
       "eight": "-",
       "ninth": "-",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "15",
       "profBonus": "+5",
-      "feature": "—",
+      "feature": "â€”",
       "bardic_die": "D12",
       "cantrips": "4",
       "preparedSpells": "18",
@@ -427,12 +427,12 @@
       "seventh": "1",
       "eight": "1",
       "ninth": "-",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "17",
       "profBonus": "+6",
-      "feature": "—",
+      "feature": "â€”",
       "bardic_die": "D12",
       "cantrips": "4",
       "preparedSpells": "19",
@@ -462,7 +462,7 @@
       "seventh": "1",
       "eight": "1",
       "ninth": "1",
-      "feature_tr": "Üstün İlham"
+      "feature_tr": "ÃœstÃ¼n Ä°lham"
     },
     {
       "level": "19",
@@ -480,7 +480,7 @@
       "seventh": "1",
       "eight": "1",
       "ninth": "1",
-      "feature_tr": "Destansı Lütuf"
+      "feature_tr": "DestansÄ± LÃ¼tuf"
     },
     {
       "level": "20",
@@ -498,7 +498,7 @@
       "seventh": "2",
       "eight": "1",
       "ninth": "1",
-      "feature_tr": "Yaratılışın Sözleri"
+      "feature_tr": "YaratÄ±lÄ±ÅŸÄ±n SÃ¶zleri"
     }
   ],
   "levelPanels": [
@@ -508,14 +508,14 @@
         {
           "title": "Bardic Inspiration",
           "body": "<p>You can supernaturally inspire others through words, music, or dance, represented by your Bardic Inspiration die (a d6).</p><br/><p><b>Using Bardic Inspiration.</b> As a Bonus Action, inspire a creature within 60 feet that can see or hear you. That creature gains one Bardic Inspiration die. Once within the next hour, when the creature fails a D20 Test, it can roll the die and add it to the d20, potentially turning a failure into a success. The die is expended when rolled.</p><br/><p><b>Number of Uses.</b> You can confer a Bardic Inspiration die a number of times equal to your Charisma modifier (minimum once), regaining all uses on a Long Rest.</p><br/><p><b>At Higher Levels.</b> The die becomes a d8 at level 5, a d10 at level 10, and a d12 at level 15.</p>",
-          "title_tr": "Ozan İlhamı",
-          "body_tr": "<p>Sözler, müzik veya dans aracılığıyla doğaüstü biçimde başkalarını ilham edebilirsin; bu, Bardik İlham zarın (d6) ile temsil edilir.</p><br/><p><b>Bardik İlham Kullanımı.</b> Bonus Aksiyon olarak 60 feet içindeki görebileceğin veya duyabileceğin bir yaratığı ilham et. O yaratık bir Bardik İlham zarı kazanır. Sonraki bir saat içinde başarısız olduğu bir D20 Testinde zarı atıp d20'ye ekleyerek başarısızlığı başarıya dönüştürebilir.</p><br/><p><b>Kullanım Sayısı.</b> Karizman değiştiricine eşit sayıda Bardik İlham verebilirsin (minimum bir kez); tüm kullanımlar Uzun Dinlenmede geri döner.</p><br/><p><b>Yüksek Seviyelerde.</b> Zar 5. seviyede d8, 10. seviyede d10, 15. seviyede d12 olur.</p>"
+          "title_tr": "Ozan Ä°lhamÄ±",
+          "body_tr": "<p>SÃ¶zler, mÃ¼zik veya dans aracÄ±lÄ±ÄŸÄ±yla doÄŸaÃ¼stÃ¼ biÃ§imde baÅŸkalarÄ±nÄ± ilham edebilirsin; bu, Bardik Ä°lham zarÄ±n (d6) ile temsil edilir.</p><br/><p><b>Bardik Ä°lham KullanÄ±mÄ±.</b> Bonus Aksiyon olarak 60 feet iÃ§indeki gÃ¶rebileceÄŸin veya duyabileceÄŸin bir yaratÄ±ÄŸÄ± ilham et. O yaratÄ±k bir Bardik Ä°lham zarÄ± kazanÄ±r. Sonraki bir saat iÃ§inde baÅŸarÄ±sÄ±z olduÄŸu bir D20 Testinde zarÄ± atÄ±p d20'ye ekleyerek baÅŸarÄ±sÄ±zlÄ±ÄŸÄ± baÅŸarÄ±ya dÃ¶nÃ¼ÅŸtÃ¼rebilir.</p><br/><p><b>KullanÄ±m SayÄ±sÄ±.</b> Karizman deÄŸiÅŸtiricine eÅŸit sayÄ±da Bardik Ä°lham verebilirsin (minimum bir kez); tÃ¼m kullanÄ±mlar Uzun Dinlenmede geri dÃ¶ner.</p><br/><p><b>YÃ¼ksek Seviyelerde.</b> Zar 5. seviyede d8, 10. seviyede d10, 15. seviyede d12 olur.</p>"
         },
         {
           "title": "Spellcasting",
           "body": "<p>You have learned to cast spells through your bardic arts. Charisma is your spellcasting ability and you can use a Musical Instrument as a Spellcasting Focus.</p><br/><p><b>cantripss.</b> You know two cantripss of your choice from the  Lights and Vicious Mockery are recommended. You gain more cantripss at levels 4 and 10.</p><br/><p><b>Prepared Spells.</b> Choose four level 1 spells from the . The number increases as you gain levels. Charm Person, Color Spray, Dissonant Whispers, and Healing Word are recommended.</p><br/><p><b>Changing Your Prepared Spells.</b> Whenever you gain a Bard level, you can replace with another  >",
-          "title_tr": "Büyü Kullanımı",
-          "body_tr": "<p>Bard sanatların aracılığıyla büyü yapmayı öğrendin. Karizman büyü yapma yeteneğindir ve Müzik Aleti büyü odağı olarak kullanabilirsin.</p><br/><p><b>Hazırlanan Büyüler.</b> Dört adet 1. seviye büyü seç. Büyü sayısı seviye kazandıkça artar.</p><br/><p><b>Hazırlanan Büyüleri Değiştirme.</b> Bir Bard seviyesi kazandığında, hazırlanmış büyülerden birini başka bir Bard büyüsüyle değiştirebilirsin.</p>"
+          "title_tr": "BÃ¼yÃ¼ KullanÄ±mÄ±",
+          "body_tr": "<p>Bard sanatlarÄ±n aracÄ±lÄ±ÄŸÄ±yla bÃ¼yÃ¼ yapmayÄ± Ã¶ÄŸrendin. Karizman bÃ¼yÃ¼ yapma yeteneÄŸindir ve MÃ¼zik Aleti bÃ¼yÃ¼ odaÄŸÄ± olarak kullanabilirsin.</p><br/><p><b>HazÄ±rlanan BÃ¼yÃ¼ler.</b> DÃ¶rt adet 1. seviye bÃ¼yÃ¼ seÃ§. BÃ¼yÃ¼ sayÄ±sÄ± seviye kazandÄ±kÃ§a artar.</p><br/><p><b>HazÄ±rlanan BÃ¼yÃ¼leri DeÄŸiÅŸtirme.</b> Bir Bard seviyesi kazandÄ±ÄŸÄ±nda, hazÄ±rlanmÄ±ÅŸ bÃ¼yÃ¼lerden birini baÅŸka bir Bard bÃ¼yÃ¼sÃ¼yle deÄŸiÅŸtirebilirsin.</p>"
         }
       ]
     },
@@ -525,14 +525,14 @@
         {
           "title": "Expertise",
           "body": "<p>You gain Expertise in two of your skill proficiencies of your choice. Performance and Persuasion are recommended. At Bard level 9, you gain Expertise in two more skills.</p>",
-          "title_tr": "Uzmanlık",
-          "body_tr": "<p>Seçtiğin iki beceri uzmanlığında Uzmanlık kazanırsın. Performans ve İkna önerilir. 9. Bard seviyesinde iki beceride daha Uzmanlık kazanırsın.</p>"
+          "title_tr": "UzmanlÄ±k",
+          "body_tr": "<p>SeÃ§tiÄŸin iki beceri uzmanlÄ±ÄŸÄ±nda UzmanlÄ±k kazanÄ±rsÄ±n. Performans ve Ä°kna Ã¶nerilir. 9. Bard seviyesinde iki beceride daha UzmanlÄ±k kazanÄ±rsÄ±n.</p>"
         },
         {
           "title": "Jack of All Trades",
           "body": "<p>You can add half your Proficiency Bonus (round down) to any ability check you make that uses a skill proficiency you lack and that doesn't otherwise use your Proficiency Bonus.</p>",
-          "title_tr": "Her İşin Ustası",
-          "body_tr": "<p>Uzmanlık Bonusunu kullanmadığın ve normal olarak Beceri Uzmanlık Bonusu kullanmayan herhangi bir yetenek kontrolüne, Uzmanlık Bonusunun yarısını (aşağı yuvarla) ekleyebilirsin.</p>"
+          "title_tr": "Her Ä°ÅŸin UstasÄ±",
+          "body_tr": "<p>UzmanlÄ±k Bonusunu kullanmadÄ±ÄŸÄ±n ve normal olarak Beceri UzmanlÄ±k Bonusu kullanmayan herhangi bir yetenek kontrolÃ¼ne, UzmanlÄ±k Bonusunun yarÄ±sÄ±nÄ± (aÅŸaÄŸÄ± yuvarla) ekleyebilirsin.</p>"
         }
       ]
     },
@@ -542,8 +542,8 @@
         {
           "title": "Bard Subclass",
           "body": "<p>You gain a Bard subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Bard level or lower. Choose your college below:</p>",
-          "title_tr": "Ozan Alt Sınıfı",
-          "body_tr": "<p>Seçtiğin bir Bard alt sınıfı kazanırsın. Kariyerinin geri kalanında, Bard seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Kolejini aşağıdan seç:</p>"
+          "title_tr": "Ozan Alt SÄ±nÄ±fÄ±",
+          "body_tr": "<p>SeÃ§tiÄŸin bir Bard alt sÄ±nÄ±fÄ± kazanÄ±rsÄ±n. Kariyerinin geri kalanÄ±nda, Bard seviyene eÅŸit veya dÃ¼ÅŸÃ¼k olan alt sÄ±nÄ±f Ã¶zelliklerini kazanÄ±rsÄ±n. Kolejini aÅŸaÄŸÄ±dan seÃ§:</p>"
         }
       ]
     },
@@ -553,8 +553,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Bard levels 8, 12, 16, and 19.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n. Bu Ã¶zelliÄŸi belirli seviyelerde tekrar kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -564,8 +564,8 @@
         {
           "title": "Font of Inspiration",
           "body": "<p>You now regain all your expended uses of Bardic Inspiration when you finish a Short or Long Rest. In addition, you can expe required) to regain one expended use of Bardic Inspiration.</p>",
-          "title_tr": "İlham Pınarı",
-          "body_tr": "<p>Artık Kısa veya Uzun Dinlenmeyi bitirdiğinde tüm kullanılmış Bardik İlham kullanımlarını geri kazanırsın.</p>"
+          "title_tr": "Ä°lham PÄ±narÄ±",
+          "body_tr": "<p>ArtÄ±k KÄ±sa veya Uzun Dinlenmeyi bitirdiÄŸinde tÃ¼m kullanÄ±lmÄ±ÅŸ Bardik Ä°lham kullanÄ±mlarÄ±nÄ± geri kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -575,8 +575,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen college.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -586,8 +586,8 @@
         {
           "title": "Countercharm",
           "body": "<p>If you or a creature within 30 feet of you fails a saving throw against an effect that applies the Charmed or Frightened condition, you can take a Reaction to cause the save to be rerolled, and the new roll has Advantage.</p>",
-          "title_tr": "Karşı Büyü",
-          "body_tr": "<p>Sen veya 30 feet içindeki bir yaratık Büyülenmiş veya Korkmuş durumu uygulayan bir etkiye karşı kurtarma atışında başarısız olursa, Tepki olarak atışın yeniden atılmasına neden olabilirsin ve yeni atış Üstünlüğe sahip olur.</p>"
+          "title_tr": "KarÅŸÄ± BÃ¼yÃ¼",
+          "body_tr": "<p>Sen veya 30 feet iÃ§indeki bir yaratÄ±k BÃ¼yÃ¼lenmiÅŸ veya KorkmuÅŸ durumu uygulayan bir etkiye karÅŸÄ± kurtarma atÄ±ÅŸÄ±nda baÅŸarÄ±sÄ±z olursa, Tepki olarak atÄ±ÅŸÄ±n yeniden atÄ±lmasÄ±na neden olabilirsin ve yeni atÄ±ÅŸ ÃœstÃ¼nlÃ¼ÄŸe sahip olur.</p>"
         }
       ]
     },
@@ -597,8 +597,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -608,8 +608,8 @@
         {
           "title": "Expertise",
           "body": "<p>You gain Expertise in two more of your skill proficiencies of your choice.</p>",
-          "title_tr": "Uzmanlık",
-          "body_tr": "<p>Seçtiğin iki beceri uzmanlığında Uzmanlık kazanırsın. Performans ve İkna önerilir. 9. Bard seviyesinde iki beceride daha Uzmanlık kazanırsın.</p>"
+          "title_tr": "UzmanlÄ±k",
+          "body_tr": "<p>SeÃ§tiÄŸin iki beceri uzmanlÄ±ÄŸÄ±nda UzmanlÄ±k kazanÄ±rsÄ±n. Performans ve Ä°kna Ã¶nerilir. 9. Bard seviyesinde iki beceride daha UzmanlÄ±k kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -619,8 +619,8 @@
         {
           "title": "Magical Secrets",
           "body": "<p>Whenever you reach a Bard level and the Prepared Spells number increases, you can choose any of your new prepared spells from the Bard, Cleric, Druid, and Wi chosen spells count as Bard spells for you. Whenever you replace a prep replace it wi.</p>",
-          "title_tr": "Büyülü Sırlar",
-          "body_tr": "<p>Bir Bard seviyesine ulaştığında ve Hazırlanan Büyüler sayısı artarsa, yeni büyülerini Bard, Rahip veya Druid büyü listesinden seçebilirsin. Seçilen büyüler senin için Bard büyüleri sayılır.</p>"
+          "title_tr": "BÃ¼yÃ¼lÃ¼ SÄ±rlar",
+          "body_tr": "<p>Bir Bard seviyesine ulaÅŸtÄ±ÄŸÄ±nda ve HazÄ±rlanan BÃ¼yÃ¼ler sayÄ±sÄ± artarsa, yeni bÃ¼yÃ¼lerini Bard, Rahip veya Druid bÃ¼yÃ¼ listesinden seÃ§ebilirsin. SeÃ§ilen bÃ¼yÃ¼ler senin iÃ§in Bard bÃ¼yÃ¼leri sayÄ±lÄ±r.</p>"
         }
       ]
     },
@@ -630,8 +630,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -641,8 +641,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen college.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -652,8 +652,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -663,8 +663,8 @@
         {
           "title": "Superior Inspiration",
           "body": "<p>When you roll Initiative, you regain expended uses of Bardic Inspiration until you have two if you have fewer than that.</p>",
-          "title_tr": "Üstün İlham",
-          "body_tr": "<p>İnisiyatif attığında, ikiden az Bardik İlhamın varsa iki olana kadar kullanımları geri kazanırsın.</p>"
+          "title_tr": "ÃœstÃ¼n Ä°lham",
+          "body_tr": "<p>Ä°nisiyatif attÄ±ÄŸÄ±nda, ikiden az Bardik Ä°lhamÄ±n varsa iki olana kadar kullanÄ±mlarÄ± geri kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -674,8 +674,8 @@
         {
           "title": "Epic Boon",
           "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boo.</p>",
-          "title_tr": "Destansı Lütuf",
-          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
+          "title_tr": "DestansÄ± LÃ¼tuf",
+          "body_tr": "<p>DestansÄ± LÃ¼tuf yeteneÄŸi veya uygun olduÄŸun baÅŸka bir yetenek kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -685,15 +685,15 @@
         {
           "title": "Words of Creation",
           "body": "<p>You always have the Power Word: Heal and Power Word: Kill spells prepared. When you cast ei target a second creature with it if that creature is within 10 feet of the first target.</p>",
-          "title_tr": "Yaratılışın Sözleri",
-          "body_tr": "<p>Her zaman Güç Sözü: İyileştir ve Güç Sözü: Öldür büyülerini hazır bulundurursun. Bu büyülerden birini yaptığında, ilk hedefin 10 feet içindeyse ikinci bir yaratığı da hedef alabilirsin.</p>"
+          "title_tr": "YaratÄ±lÄ±ÅŸÄ±n SÃ¶zleri",
+          "body_tr": "<p>Her zaman GÃ¼Ã§ SÃ¶zÃ¼: Ä°yileÅŸtir ve GÃ¼Ã§ SÃ¶zÃ¼: Ã–ldÃ¼r bÃ¼yÃ¼lerini hazÄ±r bulundurursun. Bu bÃ¼yÃ¼lerden birini yaptÄ±ÄŸÄ±nda, ilk hedefin 10 feet iÃ§indeyse ikinci bir yaratÄ±ÄŸÄ± da hedef alabilirsin.</p>"
         }
       ]
     }
   ],
   "name_tr": "Ozan",
-  "subtitle_tr": "Yaratılışın müziğinden güç alan, ilham verici bir büyücü",
-  "complexity_tr": "Orta Karmaşıklık",
+  "subtitle_tr": "YaratÄ±lÄ±ÅŸÄ±n mÃ¼ziÄŸinden gÃ¼Ã§ alan, ilham verici bir bÃ¼yÃ¼cÃ¼",
+  "complexity_tr": "Orta KarmaÅŸÄ±klÄ±k",
   "primaryStat_tr": "Karizma",
   "subclassPrefix_tr": "Koleji"
 }

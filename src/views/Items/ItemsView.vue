@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     goTo(item) {
-      router.push("/wiki/items/" + item.routeKey);
+      router.push("/dnd/2024/wiki/items/" + item.routeKey);
     },
   },
   computed: {

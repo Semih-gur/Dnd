@@ -160,6 +160,7 @@
 <script>
 import router from "@/router";
 import ChangelogPopup from "@/components/ChangelogPopup.vue";
+import { dnd2024Nav } from "@/systems.js";
 
 export default {
   name: "App",
@@ -199,43 +200,14 @@ export default {
 
   computed: {
     navItems() {
-      return [
-        {
-          path: "wiki/species",
-          icon: "mdi-account",
-          label: this.$t("nav.species"),
-        },
-        {
-          path: "wiki/classes",
-          icon: "mdi-sword-cross",
-          label: this.$t("nav.classes"),
-        },
-        {
-          path: "wiki/spells",
-          icon: "mdi-auto-fix",
-          label: this.$t("nav.spells"),
-        },
-        {
-          path: "wiki/backgrounds",
-          icon: "mdi-map-marker-radius",
-          label: this.$t("nav.backgrounds"),
-        },
-        {
-          path: "wiki/feats",
-          icon: "mdi-star-circle-outline",
-          label: this.$t("nav.feats"),
-        },
-        {
-          path: "wiki/items",
-          icon: "mdi-bag-personal",
-          label: this.$t("nav.items"),
-        },
-        {
-          path: "wiki/conditions",
-          icon: "mdi-alert-circle-outline",
-          label: this.$t("nav.conditions"),
-        },
-      ];
+      if (this.$route.path.startsWith("/dnd/2024")) {
+        return dnd2024Nav.map((item) => ({
+          path: item.path,
+          icon: item.icon,
+          label: this.$t(item.labelKey),
+        }));
+      }
+      return [];
     },
     currentLanguage() {
       return (
@@ -244,15 +216,25 @@ export default {
       );
     },
     breadcrumbs() {
+      const SKIP = new Set(["dnd", "wod"]);
+      const LABELS = {
+        "2024": "D&D 2024",
+        "5e": "D&D 5e",
+        "vtm": "Vampire: the Masquerade",
+        "werewolf": "Werewolf: the Apocalypse",
+        "mage": "Mage: the Ascension",
+      };
       const segments = this.$route.path.split("/").filter(Boolean);
       const crumbs = [{ label: "Home", path: "" }];
       segments.reduce((acc, segment) => {
         const path = acc ? `${acc}/${segment}` : segment;
-        const label = segment
-          .split("_")
-          .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-          .join(" ");
-        crumbs.push({ label, path });
+        if (!SKIP.has(segment)) {
+          const label = LABELS[segment] || segment
+            .split("_")
+            .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+            .join(" ");
+          crumbs.push({ label, path });
+        }
         return path;
       }, "");
       return crumbs;

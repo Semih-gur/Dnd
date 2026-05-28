@@ -50,7 +50,7 @@ const spellArts = {
 export default {
   methods: {
     goTo(item) {
-      router.push("/wiki/spells/" + item.routeKey);
+      router.push("/dnd/2024/wiki/spells/" + item.routeKey);
     },
   },
   computed: {

@@ -1,17 +1,17 @@
-{
+﻿{
   "name": "Wizard",
   "subtitle": "A scholarly magic-user capable of manipulating the structures of spellcasting",
   "complexity": "High Complexity",
   "primaryStat": "Intelligence",
   "accentColor": "#38bdf8",
   "accentRgb": "56, 189, 248",
-  "subclassRoute": "/wiki/classes/wizard/",
+  "subclassRoute": "/dnd/2024/wiki/classes/wizard/",
   "multiclassTraits": "Gain the Hit Point Die from the Core Wizard Traits table.",
   "subclasses": [
     {
       "title": "Abjurer",
       "icon": "mdi-shield-half-full",
-      "title_tr": "Savunmacı"
+      "title_tr": "SavunmacÄ±"
     },
     {
       "title": "Diviner",
@@ -21,12 +21,12 @@
     {
       "title": "Evoker",
       "icon": "mdi-lightning-bolt",
-      "title_tr": "Çağırıcı"
+      "title_tr": "Ã‡aÄŸÄ±rÄ±cÄ±"
     },
     {
       "title": "Illusionist",
       "icon": "mdi-creation",
-      "title_tr": "Yanılsamacı"
+      "title_tr": "YanÄ±lsamacÄ±"
     }
   ],
   "coreTraits": [
@@ -39,38 +39,38 @@
     {
       "label": "Hit Point Die",
       "value": "D6 per Wizard level",
-      "label_tr": "Can Puanı Zarı",
-      "value_tr": "Sihirbaz seviyesi başına D6"
+      "label_tr": "Can PuanÄ± ZarÄ±",
+      "value_tr": "Sihirbaz seviyesi baÅŸÄ±na D6"
     },
     {
       "label": "Saving Throw Proficiencies",
       "value": "Intelligence and Wisdom",
-      "label_tr": "Kurtarma Atışı Uzmanlıkları",
+      "label_tr": "Kurtarma AtÄ±ÅŸÄ± UzmanlÄ±klarÄ±",
       "value_tr": "Zeka ve Hikmet"
     },
     {
       "label": "Skill Proficiencies",
       "value": "Choose 2: Arcana, History, Insight, Investigation, Medicine, Nature, or Religion",
-      "label_tr": "Beceri Uzmanlıkları",
-      "value_tr": "2 seçin: Gizli Bilgi, Tarih, İçgüdü, Araştırma, Tıp, Doğa veya Din"
+      "label_tr": "Beceri UzmanlÄ±klarÄ±",
+      "value_tr": "2 seÃ§in: Gizli Bilgi, Tarih, Ä°Ã§gÃ¼dÃ¼, AraÅŸtÄ±rma, TÄ±p, DoÄŸa veya Din"
     },
     {
       "label": "Weapon Proficiencies",
       "value": "Simple weapons",
-      "label_tr": "Silah Uzmanlıkları",
+      "label_tr": "Silah UzmanlÄ±klarÄ±",
       "value_tr": "Basit Silahlar"
     },
     {
       "label": "Armor Training",
       "value": "None",
-      "label_tr": "Zırh Eğitimi",
+      "label_tr": "ZÄ±rh EÄŸitimi",
       "value_tr": "Yok"
     },
     {
       "label": "Starting Equipment",
       "value": "Choose A or B: (A) 2 Daggers, Arcane Focus (Quarterstaff), Robe, Spellbook, Scholar's Pack, and 5 GP; or (B) 55 GP",
-      "label_tr": "Başlangıç Ekipmanı",
-      "value_tr": "A veya B seçin: (A) 2 Hançer, Arkanik Odaklayıcı (Asa), Cüppe, Büyü Kitabı, Âlim Çantası ve 5 AP; veya (B) 55 AP"
+      "label_tr": "BaÅŸlangÄ±Ã§ EkipmanÄ±",
+      "value_tr": "A veya B seÃ§in: (A) 2 HanÃ§er, Arkanik OdaklayÄ±cÄ± (Asa), CÃ¼ppe, BÃ¼yÃ¼ KitabÄ±, Ã‚lim Ã‡antasÄ± ve 5 AP; veya (B) 55 AP"
     }
   ],
   "tableColumns": [
@@ -139,15 +139,15 @@
       "cantrips": "3",
       "preparedSpells": "4",
       "slot1": "2",
-      "slot2": "—",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Büyü Kullanımı, Ritual Adept, Arkanik Yenileme"
+      "slot2": "â€”",
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "BÃ¼yÃ¼ KullanÄ±mÄ±, Ritual Adept, Arkanik Yenileme"
     },
     {
       "level": "2",
@@ -156,15 +156,15 @@
       "cantrips": "3",
       "preparedSpells": "5",
       "slot1": "3",
-      "slot2": "—",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Âlim"
+      "slot2": "â€”",
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Ã‚lim"
     },
     {
       "level": "3",
@@ -174,14 +174,14 @@
       "preparedSpells": "6",
       "slot1": "4",
       "slot2": "2",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Sihirbaz Alt Sınıfı"
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Sihirbaz Alt SÄ±nÄ±fÄ±"
     },
     {
       "level": "4",
@@ -191,14 +191,14 @@
       "preparedSpells": "7",
       "slot1": "4",
       "slot2": "3",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "5",
@@ -209,13 +209,13 @@
       "slot1": "4",
       "slot2": "3",
       "slot3": "2",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Büyü Ezberleme"
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "BÃ¼yÃ¼ Ezberleme"
     },
     {
       "level": "6",
@@ -226,29 +226,29 @@
       "slot1": "4",
       "slot2": "3",
       "slot3": "3",
-      "slot4": "—",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "7",
       "profBonus": "+3",
-      "feature": "—",
+      "feature": "â€”",
       "cantrips": "4",
       "preparedSpells": "11",
       "slot1": "4",
       "slot2": "3",
       "slot3": "3",
       "slot4": "1",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—"
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”"
     },
     {
       "level": "8",
@@ -260,17 +260,17 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "2",
-      "slot5": "—",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot5": "â€”",
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "9",
       "profBonus": "+4",
-      "feature": "—",
+      "feature": "â€”",
       "cantrips": "4",
       "preparedSpells": "14",
       "slot1": "4",
@@ -278,10 +278,10 @@
       "slot3": "3",
       "slot4": "3",
       "slot5": "1",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—"
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”"
     },
     {
       "level": "10",
@@ -294,16 +294,16 @@
       "slot3": "3",
       "slot4": "3",
       "slot5": "2",
-      "slot6": "—",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "slot6": "â€”",
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "11",
       "profBonus": "+4",
-      "feature": "—",
+      "feature": "â€”",
       "cantrips": "5",
       "preparedSpells": "16",
       "slot1": "4",
@@ -312,9 +312,9 @@
       "slot4": "3",
       "slot5": "2",
       "slot6": "1",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—"
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”"
     },
     {
       "level": "12",
@@ -328,15 +328,15 @@
       "slot4": "3",
       "slot5": "2",
       "slot6": "1",
-      "slot7": "—",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot7": "â€”",
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "13",
       "profBonus": "+5",
-      "feature": "—",
+      "feature": "â€”",
       "cantrips": "5",
       "preparedSpells": "17",
       "slot1": "4",
@@ -346,8 +346,8 @@
       "slot5": "2",
       "slot6": "1",
       "slot7": "1",
-      "slot8": "—",
-      "slot9": "—"
+      "slot8": "â€”",
+      "slot9": "â€”"
     },
     {
       "level": "14",
@@ -362,14 +362,14 @@
       "slot5": "2",
       "slot6": "1",
       "slot7": "1",
-      "slot8": "—",
-      "slot9": "—",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "slot8": "â€”",
+      "slot9": "â€”",
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "15",
       "profBonus": "+5",
-      "feature": "—",
+      "feature": "â€”",
       "cantrips": "5",
       "preparedSpells": "19",
       "slot1": "4",
@@ -380,7 +380,7 @@
       "slot6": "1",
       "slot7": "1",
       "slot8": "1",
-      "slot9": "—"
+      "slot9": "â€”"
     },
     {
       "level": "16",
@@ -396,13 +396,13 @@
       "slot6": "1",
       "slot7": "1",
       "slot8": "1",
-      "slot9": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot9": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "17",
       "profBonus": "+6",
-      "feature": "—",
+      "feature": "â€”",
       "cantrips": "5",
       "preparedSpells": "22",
       "slot1": "4",
@@ -430,7 +430,7 @@
       "slot7": "1",
       "slot8": "1",
       "slot9": "1",
-      "feature_tr": "Büyü Ustalığı"
+      "feature_tr": "BÃ¼yÃ¼ UstalÄ±ÄŸÄ±"
     },
     {
       "level": "19",
@@ -447,7 +447,7 @@
       "slot7": "1",
       "slot8": "1",
       "slot9": "1",
-      "feature_tr": "Destansı Lütuf"
+      "feature_tr": "DestansÄ± LÃ¼tuf"
     },
     {
       "level": "20",
@@ -464,7 +464,7 @@
       "slot7": "2",
       "slot8": "1",
       "slot9": "1",
-      "feature_tr": "İmza Büyüleri"
+      "feature_tr": "Ä°mza BÃ¼yÃ¼leri"
     }
   ],
   "levelPanels": [
@@ -474,19 +474,19 @@
         {
           "title": "Spellcasting",
           "body": "<p>Intelligence is your spellcasting ability for Wizard spells, and you can use an Arcane Focus or your spellbook as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know three Wizard cantrips of your choice. Light, Mage Hand, and Ray of Frost are recommended. You gain additional cantrips at levels 4 and 10.</p><br/><p><b>Spellbook.</b> Your spellbook starts with six level 1 Wizard spells of your choice. Detect Magic, Feather Fall, Mage Armor, Magic Missile, Sleep, and Thunderwave are recommended. You add two Wizard spells each time you gain a Wizard level after 1.</p><br/><p><b>Copying Spells.</b> You can copy a Wizard spell you find into your spellbook. Each spell level costs 2 hours and 50 GP to transcribe. Copying from your own book costs 1 hour and 10 GP per level.</p>",
-          "title_tr": "Büyü Kullanımı",
-          "body_tr": "<p>Zeka Sihirbaz büyüleri için büyü yapma yeteneğindir ve Büyü Odağını veya büyü kitabını büyü odağı olarak kullanabilirsin.</p><br/><p><b>Büyü Kitabı.</b> Büyü kitabın seçtiğin altı adet 1. seviye Sihirbaz büyüsüyle başlar. Her Sihirbaz seviyesi kazandıktan sonra iki Sihirbaz büyüsü eklersin.</p><br/><p><b>Büyüleri Kopyalama.</b> Bulduğun bir Sihirbaz büyüsünü büyü kitabına kopyalayabilirsin. Her büyü seviyesi kopyalamak için 2 saat ve 50 AP gerektirir.</p>"
+          "title_tr": "BÃ¼yÃ¼ KullanÄ±mÄ±",
+          "body_tr": "<p>Zeka Sihirbaz bÃ¼yÃ¼leri iÃ§in bÃ¼yÃ¼ yapma yeteneÄŸindir ve BÃ¼yÃ¼ OdaÄŸÄ±nÄ± veya bÃ¼yÃ¼ kitabÄ±nÄ± bÃ¼yÃ¼ odaÄŸÄ± olarak kullanabilirsin.</p><br/><p><b>BÃ¼yÃ¼ KitabÄ±.</b> BÃ¼yÃ¼ kitabÄ±n seÃ§tiÄŸin altÄ± adet 1. seviye Sihirbaz bÃ¼yÃ¼sÃ¼yle baÅŸlar. Her Sihirbaz seviyesi kazandÄ±ktan sonra iki Sihirbaz bÃ¼yÃ¼sÃ¼ eklersin.</p><br/><p><b>BÃ¼yÃ¼leri Kopyalama.</b> BulduÄŸun bir Sihirbaz bÃ¼yÃ¼sÃ¼nÃ¼ bÃ¼yÃ¼ kitabÄ±na kopyalayabilirsin. Her bÃ¼yÃ¼ seviyesi kopyalamak iÃ§in 2 saat ve 50 AP gerektirir.</p>"
         },
         {
           "title": "Ritual Adept",
           "body": "<p>You can cast any spell as a Ritual if that spell has the Ritual tag and the spell is in your spellbook. You needn't have the spell prepared, but you must read from the book to cast it this way.</p>",
-          "body_tr": "<p>Büyü kitabında olan ve Ritüel etiketi taşıyan herhangi bir büyüyü Ritüel olarak yapabilirsin. Büyünün hazırlanmış olması gerekmez, ancak bu şekilde yapmak için kitaptan okumalısın.</p>"
+          "body_tr": "<p>BÃ¼yÃ¼ kitabÄ±nda olan ve RitÃ¼el etiketi taÅŸÄ±yan herhangi bir bÃ¼yÃ¼yÃ¼ RitÃ¼el olarak yapabilirsin. BÃ¼yÃ¼nÃ¼n hazÄ±rlanmÄ±ÅŸ olmasÄ± gerekmez, ancak bu ÅŸekilde yapmak iÃ§in kitaptan okumalÄ±sÄ±n.</p>"
         },
         {
           "title": "Arcane Recovery",
           "body": "<p>When you finish a Short Rest, you can choose expended spell slots to recover. The combined level of recovered slots can't exceed half your Wizard level (round up), and none can be level 6 or higher.</p><br/><p>Once you use this feature, you can't do so again until you finish a Long Rest.</p>",
           "title_tr": "Arkanik Yenileme",
-          "body_tr": "<p>Kısa Dinlenmeyi bitirdiğinde, geri kazanmak için kullanılmış büyü slotlarını seçebilirsin. Geri kazanılan slotların birleşik seviyesi Sihirbaz seviyenin yarısını (yukarı yuvarla) geçemez ve hiçbiri 6. seviye veya daha yüksek olamaz.</p><br/><p>Bu özelliği kullandıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p>"
+          "body_tr": "<p>KÄ±sa Dinlenmeyi bitirdiÄŸinde, geri kazanmak iÃ§in kullanÄ±lmÄ±ÅŸ bÃ¼yÃ¼ slotlarÄ±nÄ± seÃ§ebilirsin. Geri kazanÄ±lan slotlarÄ±n birleÅŸik seviyesi Sihirbaz seviyenin yarÄ±sÄ±nÄ± (yukarÄ± yuvarla) geÃ§emez ve hiÃ§biri 6. seviye veya daha yÃ¼ksek olamaz.</p><br/><p>Bu Ã¶zelliÄŸi kullandÄ±ktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsÄ±n.</p>"
         }
       ]
     },
@@ -496,8 +496,8 @@
         {
           "title": "Scholar",
           "body": "<p>While studying magic, you also specialized in an academic field. Choose one skill in which you have proficiency from: Arcana, History, Investigation, Medicine, Nature, or Religion. You gain Expertise in the chosen skill.</p>",
-          "title_tr": "Âlim",
-          "body_tr": "<p>Büyüyü incelerken akademik bir alanda da uzmanlaştın. Uzmanlığa sahip olduğun bir beceriden birini seç: Gizli Bilim, Tarih, Araştırma, Tıp, Doğa veya Din. Seçilen beceride Uzmanlık kazanırsın.</p>"
+          "title_tr": "Ã‚lim",
+          "body_tr": "<p>BÃ¼yÃ¼yÃ¼ incelerken akademik bir alanda da uzmanlaÅŸtÄ±n. UzmanlÄ±ÄŸa sahip olduÄŸun bir beceriden birini seÃ§: Gizli Bilim, Tarih, AraÅŸtÄ±rma, TÄ±p, DoÄŸa veya Din. SeÃ§ilen beceride UzmanlÄ±k kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -507,8 +507,8 @@
         {
           "title": "Wizard Subclass",
           "body": "<p>You gain a Wizard subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Wizard level or lower. Choose your arcane tradition below:</p>",
-          "title_tr": "Sihirbaz Alt Sınıfı",
-          "body_tr": "<p>Seçtiğin bir Sihirbaz alt sınıfı kazanırsın. Kariyerinin geri kalanında, Sihirbaz seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Büyülü geleneğini aşağıdan seç:</p>"
+          "title_tr": "Sihirbaz Alt SÄ±nÄ±fÄ±",
+          "body_tr": "<p>SeÃ§tiÄŸin bir Sihirbaz alt sÄ±nÄ±fÄ± kazanÄ±rsÄ±n. Kariyerinin geri kalanÄ±nda, Sihirbaz seviyene eÅŸit veya dÃ¼ÅŸÃ¼k olan alt sÄ±nÄ±f Ã¶zelliklerini kazanÄ±rsÄ±n. BÃ¼yÃ¼lÃ¼ geleneÄŸini aÅŸaÄŸÄ±dan seÃ§:</p>"
         }
       ]
     },
@@ -518,8 +518,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Wizard levels 8, 12, and 16.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n. Bu Ã¶zelliÄŸi belirli seviyelerde tekrar kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -529,8 +529,8 @@
         {
           "title": "Memorize Spell",
           "body": "<p>Whenever you finish a Short Rest, you can study your spellbook and replace one of the level 1+ Wizard spells you have prepared with another level 1+ spell from the book.</p>",
-          "title_tr": "Büyü Ezberleme",
-          "body_tr": "<p>Kısa Dinlenmeyi bitirdiğinde büyü kitabını inceleyebilir ve hazırladığın 1. seviye ve üzeri Sihirbaz büyülerinden birini kitaptaki başka bir büyüyle değiştirebilirsin.</p>"
+          "title_tr": "BÃ¼yÃ¼ Ezberleme",
+          "body_tr": "<p>KÄ±sa Dinlenmeyi bitirdiÄŸinde bÃ¼yÃ¼ kitabÄ±nÄ± inceleyebilir ve hazÄ±rladÄ±ÄŸÄ±n 1. seviye ve Ã¼zeri Sihirbaz bÃ¼yÃ¼lerinden birini kitaptaki baÅŸka bir bÃ¼yÃ¼yle deÄŸiÅŸtirebilirsin.</p>"
         }
       ]
     },
@@ -540,8 +540,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen arcane tradition.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -551,8 +551,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -562,8 +562,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen arcane tradition.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -573,8 +573,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -584,8 +584,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen arcane tradition.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -595,8 +595,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -606,8 +606,8 @@
         {
           "title": "Spell Mastery",
           "body": "<p>Choose one level 1 and one level 2 spell from your spellbook with a casting time of an Action. You always have those spells prepared and can cast them at their lowest level without expending a spell slot.</p><br/><p>To cast either spell at a higher level, you must expend a spell slot. Whenever you finish a Long Rest, you can study your spellbook and replace one of those spells with an eligible spell of the same level.</p>",
-          "title_tr": "Büyü Ustalığı",
-          "body_tr": "<p>Büyü kitabından Aksiyon yapım süresi olan bir adet 1. seviye ve bir adet 2. seviye büyü seç. Bu büyüleri her zaman hazır bulundurur ve büyü slotu harcamadan en düşük seviyede yapabilirsin.</p><br/><p>Bu büyülerden birini daha yüksek seviyede yapmak için büyü slotu harcaman gerekir.</p>"
+          "title_tr": "BÃ¼yÃ¼ UstalÄ±ÄŸÄ±",
+          "body_tr": "<p>BÃ¼yÃ¼ kitabÄ±ndan Aksiyon yapÄ±m sÃ¼resi olan bir adet 1. seviye ve bir adet 2. seviye bÃ¼yÃ¼ seÃ§. Bu bÃ¼yÃ¼leri her zaman hazÄ±r bulundurur ve bÃ¼yÃ¼ slotu harcamadan en dÃ¼ÅŸÃ¼k seviyede yapabilirsin.</p><br/><p>Bu bÃ¼yÃ¼lerden birini daha yÃ¼ksek seviyede yapmak iÃ§in bÃ¼yÃ¼ slotu harcaman gerekir.</p>"
         }
       ]
     },
@@ -617,8 +617,8 @@
         {
           "title": "Epic Boon",
           "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Spell Recall is recommended.</p>",
-          "title_tr": "Destansı Lütuf",
-          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
+          "title_tr": "DestansÄ± LÃ¼tuf",
+          "body_tr": "<p>DestansÄ± LÃ¼tuf yeteneÄŸi veya uygun olduÄŸun baÅŸka bir yetenek kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -628,15 +628,15 @@
         {
           "title": "Signature Spells",
           "body": "<p>Choose two level 3 spells in your spellbook as your signature spells. You always have these prepared and can cast each once at level 3 without expending a spell slot per Short or Long Rest.</p><br/><p>To cast either spell at a higher level, you must expend a spell slot.</p>",
-          "title_tr": "İmza Büyüleri",
-          "body_tr": "<p>Büyü kitabındaki iki adet 3. seviye büyüyü imza büyün olarak seç. Bu büyüleri her zaman hazır bulundurur ve her Kısa veya Uzun Dinlenmede her birini 3. seviyede büyü slotu harcamadan yapabilirsin.</p>"
+          "title_tr": "Ä°mza BÃ¼yÃ¼leri",
+          "body_tr": "<p>BÃ¼yÃ¼ kitabÄ±ndaki iki adet 3. seviye bÃ¼yÃ¼yÃ¼ imza bÃ¼yÃ¼n olarak seÃ§. Bu bÃ¼yÃ¼leri her zaman hazÄ±r bulundurur ve her KÄ±sa veya Uzun Dinlenmede her birini 3. seviyede bÃ¼yÃ¼ slotu harcamadan yapabilirsin.</p>"
         }
       ]
     }
   ],
   "name_tr": "Sihirbaz",
-  "subtitle_tr": "Gerçekliğin yapılarını manipüle edebilen akademik büyü kullanıcısı",
-  "complexity_tr": "Yüksek Karmaşıklık",
+  "subtitle_tr": "GerÃ§ekliÄŸin yapÄ±larÄ±nÄ± manipÃ¼le edebilen akademik bÃ¼yÃ¼ kullanÄ±cÄ±sÄ±",
+  "complexity_tr": "YÃ¼ksek KarmaÅŸÄ±klÄ±k",
   "primaryStat_tr": "Zeka",
   "subclassPrefix_tr": "Okulu"
 }

@@ -77,7 +77,7 @@
         <p class="not-found-sub">
           Check the spell name in the URL matches your JSON exactly.
         </p>
-        <button class="not-found-btn" @click="$router.push('/wiki/spells')">
+        <button class="not-found-btn" @click="$router.push('/dnd/2024/wiki/spells')">
           {{ $t('spells.backToSpells') }}
         </button>
       </div>

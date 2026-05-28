@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "Paladin",
   "subtitle": "A holy warrior bound to a sacred oath, wielding divine magic and martial might",
   "complexity": "Low Complexity",
@@ -6,13 +6,13 @@
   "accentColor": "#fbbf24",
   "accentRgb": "251, 191, 36",
   "subclassPrefix": "Oath of",
-  "subclassRoute": "/wiki/classes/paladin/",
+  "subclassRoute": "/dnd/2024/wiki/classes/paladin/",
   "multiclassTraits": "Gain the Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields.",
   "subclasses": [
     {
       "title": "Devotion",
       "icon": "mdi-star-four-points",
-      "title_tr": "Adanmışlık"
+      "title_tr": "AdanmÄ±ÅŸlÄ±k"
     },
     {
       "title": "Glory",
@@ -27,7 +27,7 @@
     {
       "title": "Vengeance",
       "icon": "mdi-sword",
-      "title_tr": "İntikam"
+      "title_tr": "Ä°ntikam"
     }
   ],
   "coreTraits": [
@@ -35,43 +35,43 @@
       "label": "Primary Ability",
       "value": "Strength and Charisma",
       "label_tr": "Birincil Nitelik",
-      "value_tr": "Güç ve Karizma"
+      "value_tr": "GÃ¼Ã§ ve Karizma"
     },
     {
       "label": "Hit Point Die",
       "value": "D10 per Paladin level",
-      "label_tr": "Can Puanı Zarı",
-      "value_tr": "Paladin seviyesi başına D10"
+      "label_tr": "Can PuanÄ± ZarÄ±",
+      "value_tr": "Paladin seviyesi baÅŸÄ±na D10"
     },
     {
       "label": "Saving Throw Proficiencies",
       "value": "Wisdom and Charisma",
-      "label_tr": "Kurtarma Atışı Uzmanlıkları",
+      "label_tr": "Kurtarma AtÄ±ÅŸÄ± UzmanlÄ±klarÄ±",
       "value_tr": "Hikmet ve Karizma"
     },
     {
       "label": "Skill Proficiencies",
       "value": "Choose 2: Athletics, Insight, Intimidation, Medicine, Persuasion, or Religion",
-      "label_tr": "Beceri Uzmanlıkları",
-      "value_tr": "2 seçin: Atletizm, İçgüdü, Gözdağı, Tıp, İkna veya Din"
+      "label_tr": "Beceri UzmanlÄ±klarÄ±",
+      "value_tr": "2 seÃ§in: Atletizm, Ä°Ã§gÃ¼dÃ¼, GÃ¶zdaÄŸÄ±, TÄ±p, Ä°kna veya Din"
     },
     {
       "label": "Weapon Proficiencies",
       "value": "Simple and Martial weapons",
-      "label_tr": "Silah Uzmanlıkları",
-      "value_tr": "Basit ve Savaş Silahları"
+      "label_tr": "Silah UzmanlÄ±klarÄ±",
+      "value_tr": "Basit ve SavaÅŸ SilahlarÄ±"
     },
     {
       "label": "Armor Training",
       "value": "Light, Medium, and Heavy armor and Shields",
-      "label_tr": "Zırh Eğitimi",
-      "value_tr": "Hafif, Orta ve Ağır zırh ve Kalkanlar"
+      "label_tr": "ZÄ±rh EÄŸitimi",
+      "value_tr": "Hafif, Orta ve AÄŸÄ±r zÄ±rh ve Kalkanlar"
     },
     {
       "label": "Starting Equipment",
       "value": "Choose A or B: (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest's Pack, and 9 GP; or (B) 150 GP",
-      "label_tr": "Başlangıç Ekipmanı",
-      "value_tr": "A veya B seçin: (A) Zincir Zırh, Kalkan, Uzun Kılıç, 6 Kısa Mızrak, Kutsal Sembol, Rahip Çantası ve 9 AP; veya (B) 150 AP"
+      "label_tr": "BaÅŸlangÄ±Ã§ EkipmanÄ±",
+      "value_tr": "A veya B seÃ§in: (A) Zincir ZÄ±rh, Kalkan, Uzun KÄ±lÄ±Ã§, 6 KÄ±sa MÄ±zrak, Kutsal Sembol, Rahip Ã‡antasÄ± ve 9 AP; veya (B) 150 AP"
     }
   ],
   "tableColumns": [
@@ -81,7 +81,7 @@
       "badge": true,
       "badgeClass": "cd-badge",
       "dashable": true,
-      "label_tr": "İlahi Kanal"
+      "label_tr": "Ä°lahi Kanal"
     },
     {
       "key": "preparedSpells",
@@ -120,27 +120,27 @@
       "level": "1",
       "profBonus": "+2",
       "feature": "Lay on Hands, Spellcasting, Weapon Mastery",
-      "channelDivinity": "—",
+      "channelDivinity": "â€”",
       "preparedSpells": "2",
       "slot1": "2",
-      "slot2": "—",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "El Sürerek Şifa, Büyü Kullanımı, Silah Hakimiyeti"
+      "slot2": "â€”",
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "El SÃ¼rerek Åifa, BÃ¼yÃ¼ KullanÄ±mÄ±, Silah Hakimiyeti"
     },
     {
       "level": "2",
       "profBonus": "+2",
       "feature": "Fighting Style, Paladin's Smite",
-      "channelDivinity": "—",
+      "channelDivinity": "â€”",
       "preparedSpells": "3",
       "slot1": "2",
-      "slot2": "—",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Dövüş Stili, Paladin'in Darbesi"
+      "slot2": "â€”",
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "DÃ¶vÃ¼ÅŸ Stili, Paladin'in Darbesi"
     },
     {
       "level": "3",
@@ -149,11 +149,11 @@
       "channelDivinity": "2",
       "preparedSpells": "4",
       "slot1": "3",
-      "slot2": "—",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "İlahi Enerji Kanalı, Paladin Alt Sınıfı"
+      "slot2": "â€”",
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "Ä°lahi Enerji KanalÄ±, Paladin Alt SÄ±nÄ±fÄ±"
     },
     {
       "level": "4",
@@ -162,11 +162,11 @@
       "channelDivinity": "2",
       "preparedSpells": "5",
       "slot1": "3",
-      "slot2": "—",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot2": "â€”",
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "5",
@@ -176,10 +176,10 @@
       "preparedSpells": "6",
       "slot1": "4",
       "slot2": "2",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Ekstra Saldırı, Sadık Binek"
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "Ekstra SaldÄ±rÄ±, SadÄ±k Binek"
     },
     {
       "level": "6",
@@ -189,10 +189,10 @@
       "preparedSpells": "6",
       "slot1": "4",
       "slot2": "2",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Koruma Aurası"
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "Koruma AurasÄ±"
     },
     {
       "level": "7",
@@ -202,10 +202,10 @@
       "preparedSpells": "7",
       "slot1": "4",
       "slot2": "3",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "8",
@@ -215,10 +215,10 @@
       "preparedSpells": "7",
       "slot1": "4",
       "slot2": "3",
-      "slot3": "—",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot3": "â€”",
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "9",
@@ -229,9 +229,9 @@
       "slot1": "4",
       "slot2": "3",
       "slot3": "2",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Düşmanları Kahret"
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "DÃ¼ÅŸmanlarÄ± Kahret"
     },
     {
       "level": "10",
@@ -242,9 +242,9 @@
       "slot1": "4",
       "slot2": "3",
       "slot3": "2",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Cesaret Aurası"
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "Cesaret AurasÄ±"
     },
     {
       "level": "11",
@@ -255,9 +255,9 @@
       "slot1": "4",
       "slot2": "3",
       "slot3": "3",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Işıltılı Darbeler"
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "IÅŸÄ±ltÄ±lÄ± Darbeler"
     },
     {
       "level": "12",
@@ -268,9 +268,9 @@
       "slot1": "4",
       "slot2": "3",
       "slot3": "3",
-      "slot4": "—",
-      "slot5": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot4": "â€”",
+      "slot5": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "13",
@@ -282,8 +282,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "1",
-      "slot5": "—",
-      "feature_tr": "Büyü Slotu Artışı"
+      "slot5": "â€”",
+      "feature_tr": "BÃ¼yÃ¼ Slotu ArtÄ±ÅŸÄ±"
     },
     {
       "level": "14",
@@ -295,8 +295,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "1",
-      "slot5": "—",
-      "feature_tr": "İyileştirici Dokunuş"
+      "slot5": "â€”",
+      "feature_tr": "Ä°yileÅŸtirici DokunuÅŸ"
     },
     {
       "level": "15",
@@ -308,8 +308,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "2",
-      "slot5": "—",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "slot5": "â€”",
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "16",
@@ -321,8 +321,8 @@
       "slot2": "3",
       "slot3": "3",
       "slot4": "2",
-      "slot5": "—",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "slot5": "â€”",
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "17",
@@ -335,7 +335,7 @@
       "slot3": "3",
       "slot4": "3",
       "slot5": "1",
-      "feature_tr": "Büyü Slotu Artışı"
+      "feature_tr": "BÃ¼yÃ¼ Slotu ArtÄ±ÅŸÄ±"
     },
     {
       "level": "18",
@@ -348,7 +348,7 @@
       "slot3": "3",
       "slot4": "3",
       "slot5": "1",
-      "feature_tr": "Aura Genişlemesi"
+      "feature_tr": "Aura GeniÅŸlemesi"
     },
     {
       "level": "19",
@@ -361,7 +361,7 @@
       "slot3": "3",
       "slot4": "3",
       "slot5": "2",
-      "feature_tr": "Destansı Lütuf"
+      "feature_tr": "DestansÄ± LÃ¼tuf"
     },
     {
       "level": "20",
@@ -374,7 +374,7 @@
       "slot3": "3",
       "slot4": "3",
       "slot5": "2",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     }
   ],
   "levelPanels": [
@@ -384,20 +384,20 @@
         {
           "title": "Lay on Hands",
           "body": "<p>Your blessed touch can heal wounds. You have a healing pool equal to five times your Paladin level, replenished on a Long Rest.</p><br/><p>As a Bonus Action, touch a creature and restore Hit Points up to the remaining pool amount. You can also expend 5 Hit Points from the pool to remove the Poisoned condition (those points don't also restore Hit Points).</p>",
-          "title_tr": "El Sürerek Şifa",
-          "body_tr": "<p>Kutsanmış dokunuşun yaraları iyileştirebilir. Paladin seviyenin beş katına eşit bir iyileştirme havuzuna sahipsin; Uzun Dinlenmede yenilenir.</p><br/><p>Bonus Aksiyon olarak bir yaratığa dokun ve kalan havuz miktarına kadar Can Puanı geri ver. Ayrıca Zehirlenmiş durumunu kaldırmak için havuzdan 5 Can Puanı harcayabilirsin.</p>"
+          "title_tr": "El SÃ¼rerek Åifa",
+          "body_tr": "<p>KutsanmÄ±ÅŸ dokunuÅŸun yaralarÄ± iyileÅŸtirebilir. Paladin seviyenin beÅŸ katÄ±na eÅŸit bir iyileÅŸtirme havuzuna sahipsin; Uzun Dinlenmede yenilenir.</p><br/><p>Bonus Aksiyon olarak bir yaratÄ±ÄŸa dokun ve kalan havuz miktarÄ±na kadar Can PuanÄ± geri ver. AyrÄ±ca ZehirlenmiÅŸ durumunu kaldÄ±rmak iÃ§in havuzdan 5 Can PuanÄ± harcayabilirsin.</p>"
         },
         {
           "title": "Spellcasting",
           "body": "<p>Charisma is your spellcasting ability for Paladin spells, and you can use a Holy Symbol as a Spellcasting Focus.</p><br/><p>To start, choose two level 1 Paladin spells. Heroism and Searing Smite are recommended. Whenever you finish a Long Rest, you can replace one spell on your list with another Paladin spell for which you have spell slots.</p>",
-          "title_tr": "Büyü Kullanımı",
-          "body_tr": "<p>Karizman Paladin büyüleri için büyü yapma yeteneğindir ve Kutsal Sembol büyü odağı olarak kullanabilirsin.</p><br/><p>Başlangıç için iki adet 1. seviye Paladin büyüsü seç. Uzun Dinlenmeyi bitirdiğinde listedeki bir büyüyü başka bir Paladin büyüsüyle değiştirebilirsin.</p>"
+          "title_tr": "BÃ¼yÃ¼ KullanÄ±mÄ±",
+          "body_tr": "<p>Karizman Paladin bÃ¼yÃ¼leri iÃ§in bÃ¼yÃ¼ yapma yeteneÄŸindir ve Kutsal Sembol bÃ¼yÃ¼ odaÄŸÄ± olarak kullanabilirsin.</p><br/><p>BaÅŸlangÄ±Ã§ iÃ§in iki adet 1. seviye Paladin bÃ¼yÃ¼sÃ¼ seÃ§. Uzun Dinlenmeyi bitirdiÄŸinde listedeki bir bÃ¼yÃ¼yÃ¼ baÅŸka bir Paladin bÃ¼yÃ¼sÃ¼yle deÄŸiÅŸtirebilirsin.</p>"
         },
         {
           "title": "Weapon Mastery",
           "body": "<p>Your training allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Longswords and Javelins. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.</p>",
           "title_tr": "Silah Hakimiyeti",
-          "body_tr": "<p>Eğitimin, uzmanlığa sahip olduğun iki tür silahın uzmanlık özelliklerini kullanmana izin verir. Uzun Dinlenmeyi bitirdiğinde seçtiğin silah türlerini değiştirebilirsin.</p>"
+          "body_tr": "<p>EÄŸitimin, uzmanlÄ±ÄŸa sahip olduÄŸun iki tÃ¼r silahÄ±n uzmanlÄ±k Ã¶zelliklerini kullanmana izin verir. Uzun Dinlenmeyi bitirdiÄŸinde seÃ§tiÄŸin silah tÃ¼rlerini deÄŸiÅŸtirebilirsin.</p>"
         }
       ]
     },
@@ -407,14 +407,14 @@
         {
           "title": "Fighting Style",
           "body": "<p>You gain a Fighting Style feat of your choice. Alternatively, you can choose the Blessed Warrior option below.</p><br/><p><b>Blessed Warrior.</b> You learn two Cleric cantrips of your choice (Guidance and Sacred Flame are recommended). They count as Paladin spells, using Charisma as your spellcasting ability. You can replace one cantrip per Paladin level gained.</p>",
-          "title_tr": "Dövüş Stili",
-          "body_tr": "<p>Seçtiğin bir Savaş Stili yeteneği kazanırsın. Alternatif olarak aşağıdaki Kutsanmış Savaşçı seçeneğini seçebilirsin.</p><br/><p><b>Kutsanmış Savaşçı.</b> İki Rahip büyüsü öğrenirsin. Bunlar Paladin büyüleri sayılır ve Karizman büyü yapma yeteneğin olur.</p>"
+          "title_tr": "DÃ¶vÃ¼ÅŸ Stili",
+          "body_tr": "<p>SeÃ§tiÄŸin bir SavaÅŸ Stili yeteneÄŸi kazanÄ±rsÄ±n. Alternatif olarak aÅŸaÄŸÄ±daki KutsanmÄ±ÅŸ SavaÅŸÃ§Ä± seÃ§eneÄŸini seÃ§ebilirsin.</p><br/><p><b>KutsanmÄ±ÅŸ SavaÅŸÃ§Ä±.</b> Ä°ki Rahip bÃ¼yÃ¼sÃ¼ Ã¶ÄŸrenirsin. Bunlar Paladin bÃ¼yÃ¼leri sayÄ±lÄ±r ve Karizman bÃ¼yÃ¼ yapma yeteneÄŸin olur.</p>"
         },
         {
           "title": "Paladin's Smite",
           "body": "<p>You always have the Divine Smite spell prepared. In addition, you can cast it once without expending a spell slot, regaining this ability when you finish a Long Rest.</p>",
           "title_tr": "Paladin'in Darbesi",
-          "body_tr": "<p>Her zaman İlahi Çarpma büyüsünü hazır bulundurursun. Ayrıca büyü slotu harcamadan bir kez yapabilirsin; Uzun Dinlenmeyi bitirdiğinde bu yeteneği geri kazanırsın.</p>"
+          "body_tr": "<p>Her zaman Ä°lahi Ã‡arpma bÃ¼yÃ¼sÃ¼nÃ¼ hazÄ±r bulundurursun. AyrÄ±ca bÃ¼yÃ¼ slotu harcamadan bir kez yapabilirsin; Uzun Dinlenmeyi bitirdiÄŸinde bu yeteneÄŸi geri kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -424,14 +424,14 @@
         {
           "title": "Channel Divinity",
           "body": "<p>You can channel divine energy from the Outer Planes. You start with Divine Sense. Additional Channel Divinity options come from your subclass.</p><br/><p>You can use Channel Divinity twice, regaining one use on a Short Rest and all uses on a Long Rest. You gain an additional use at level 11.</p><br/><p><b>Divine Sense.</b> As a Bonus Action, open your awareness for 10 minutes. You know the location of any Celestial, Fiend, or Undead within 60 feet, and detect consecrated or desecrated places or objects in the same radius.</p>",
-          "title_tr": "İlahi Enerji Kanalı",
-          "body_tr": "<p>Dış Uçaklar'dan ilahi enerji kanalize edebilirsin. İlahi Duyuyla başlarsın. Kanal İlahiliği'ni iki kez kullanabilirsin; Kısa Dinlenmede bir kullanımı, Uzun Dinlenmede tüm kullanımları geri kazanırsın.</p><br/><p><b>İlahi Duyum.</b> Bonus Aksiyon olarak 10 dakika boyunca farkındalığını aç. 60 feet içindeki herhangi bir Göksel, İblis veya Ölü'nün konumunu bilirsin.</p>"
+          "title_tr": "Ä°lahi Enerji KanalÄ±",
+          "body_tr": "<p>DÄ±ÅŸ UÃ§aklar'dan ilahi enerji kanalize edebilirsin. Ä°lahi Duyuyla baÅŸlarsÄ±n. Kanal Ä°lahiliÄŸi'ni iki kez kullanabilirsin; KÄ±sa Dinlenmede bir kullanÄ±mÄ±, Uzun Dinlenmede tÃ¼m kullanÄ±mlarÄ± geri kazanÄ±rsÄ±n.</p><br/><p><b>Ä°lahi Duyum.</b> Bonus Aksiyon olarak 10 dakika boyunca farkÄ±ndalÄ±ÄŸÄ±nÄ± aÃ§. 60 feet iÃ§indeki herhangi bir GÃ¶ksel, Ä°blis veya Ã–lÃ¼'nÃ¼n konumunu bilirsin.</p>"
         },
         {
           "title": "Paladin Subclass",
           "body": "<p>You gain a Paladin subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Paladin level or lower. Choose your sacred oath below:</p>",
-          "title_tr": "Paladin Alt Sınıfı",
-          "body_tr": "<p>Seçtiğin bir Paladin alt sınıfı kazanırsın. Kariyerinin geri kalanında, Paladin seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Kutsal yeminini aşağıdan seç:</p>"
+          "title_tr": "Paladin Alt SÄ±nÄ±fÄ±",
+          "body_tr": "<p>SeÃ§tiÄŸin bir Paladin alt sÄ±nÄ±fÄ± kazanÄ±rsÄ±n. Kariyerinin geri kalanÄ±nda, Paladin seviyene eÅŸit veya dÃ¼ÅŸÃ¼k olan alt sÄ±nÄ±f Ã¶zelliklerini kazanÄ±rsÄ±n. Kutsal yeminini aÅŸaÄŸÄ±dan seÃ§:</p>"
         }
       ]
     },
@@ -441,8 +441,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Paladin levels 8, 12, and 16.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n. Bu Ã¶zelliÄŸi belirli seviyelerde tekrar kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -452,14 +452,14 @@
         {
           "title": "Extra Attack",
           "body": "<p>You can attack twice instead of once whenever you take the Attack action on your turn.</p>",
-          "title_tr": "Ekstra Saldırı",
-          "body_tr": "<p>Turunda Saldırı aksiyonunu yaptığında bir kez yerine iki kez saldırabilirsin.</p>"
+          "title_tr": "Ekstra SaldÄ±rÄ±",
+          "body_tr": "<p>Turunda SaldÄ±rÄ± aksiyonunu yaptÄ±ÄŸÄ±nda bir kez yerine iki kez saldÄ±rabilirsin.</p>"
         },
         {
           "title": "Faithful Steed",
           "body": "<p>You always have the Find Steed spell prepared. You can also cast it once without expending a spell slot, regaining this ability when you finish a Long Rest.</p>",
-          "title_tr": "Sadık Binek",
-          "body_tr": "<p>Her zaman Binek Bul büyüsünü hazır bulundurursun. Büyü yuvası harcamadan bir kez yapabilirsin; Uzun Dinlenmeyi bitirdiğinde bu yeteneği geri kazanırsın.</p>"
+          "title_tr": "SadÄ±k Binek",
+          "body_tr": "<p>Her zaman Binek Bul bÃ¼yÃ¼sÃ¼nÃ¼ hazÄ±r bulundurursun. BÃ¼yÃ¼ yuvasÄ± harcamadan bir kez yapabilirsin; Uzun Dinlenmeyi bitirdiÄŸinde bu yeteneÄŸi geri kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -469,8 +469,8 @@
         {
           "title": "Aura of Protection",
           "body": "<p>You radiate a protective aura in a 10-foot Emanation (inactive while Incapacitated). You and allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum +1).</p><br/><p>If multiple Paladins are present, a creature benefits from only one Aura of Protection at a time.</p>",
-          "title_tr": "Koruma Aurası",
-          "body_tr": "<p>10 feet'lik bir Yayılım alanında koruyucu bir aura yayarsın (Engelli iken etkisiz). Sen ve auradaki müttefikler, Karizman değiştiricine eşit (minimum +1) kurtarma atışlarına bonus kazanır.</p>"
+          "title_tr": "Koruma AurasÄ±",
+          "body_tr": "<p>10 feet'lik bir YayÄ±lÄ±m alanÄ±nda koruyucu bir aura yayarsÄ±n (Engelli iken etkisiz). Sen ve auradaki mÃ¼ttefikler, Karizman deÄŸiÅŸtiricine eÅŸit (minimum +1) kurtarma atÄ±ÅŸlarÄ±na bonus kazanÄ±r.</p>"
         }
       ]
     },
@@ -480,8 +480,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen oath.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -491,8 +491,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -502,8 +502,8 @@
         {
           "title": "Abjure Foes",
           "body": "<p>As a Magic action, expend one use of Channel Divinity to overwhelm foes with awe. Target a number of creatures equal to your Charisma modifier (minimum one) within 60 feet.</p><br/><p>Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute or until it takes damage. While Frightened this way, a target can do only one of the following on its turn: move, take an action, or take a Bonus Action.</p>",
-          "title_tr": "Düşmanları Kahret",
-          "body_tr": "<p>Büyü aksiyonu olarak, düşmanları hayranlıkla bunaltmak için bir Kanal İlahiliği kullanımı harca. Karizman değiştiricine eşit sayıda (minimum bir) 60 feet içindeki yaratığı hedef al.</p><br/><p>Her hedef Bilgelik kurtarması yapar ya da 1 dakika boyunca veya hasar alana kadar Korkmuş durumuna girer.</p>"
+          "title_tr": "DÃ¼ÅŸmanlarÄ± Kahret",
+          "body_tr": "<p>BÃ¼yÃ¼ aksiyonu olarak, dÃ¼ÅŸmanlarÄ± hayranlÄ±kla bunaltmak iÃ§in bir Kanal Ä°lahiliÄŸi kullanÄ±mÄ± harca. Karizman deÄŸiÅŸtiricine eÅŸit sayÄ±da (minimum bir) 60 feet iÃ§indeki yaratÄ±ÄŸÄ± hedef al.</p><br/><p>Her hedef Bilgelik kurtarmasÄ± yapar ya da 1 dakika boyunca veya hasar alana kadar KorkmuÅŸ durumuna girer.</p>"
         }
       ]
     },
@@ -513,8 +513,8 @@
         {
           "title": "Aura of Courage",
           "body": "<p>You and your allies have Immunity to the Frightened condition while in your Aura of Protection. If a Frightened ally enters the aura, that condition has no effect while there.</p>",
-          "title_tr": "Cesaret Aurası",
-          "body_tr": "<p>Sen ve müttefiklerinin Koruma Aurandayken Korkmuş durumuna karşı Bağışıklığı vardır.</p>"
+          "title_tr": "Cesaret AurasÄ±",
+          "body_tr": "<p>Sen ve mÃ¼ttefiklerinin Koruma Aurandayken KorkmuÅŸ durumuna karÅŸÄ± BaÄŸÄ±ÅŸÄ±klÄ±ÄŸÄ± vardÄ±r.</p>"
         }
       ]
     },
@@ -524,8 +524,8 @@
         {
           "title": "Radiant Strikes",
           "body": "<p>Your strikes carry supernatural power. When you hit a target with a Melee weapon or Unarmed Strike, the target takes an extra 1d8 Radiant damage.</p>",
-          "title_tr": "Işıltılı Darbeler",
-          "body_tr": "<p>Darbelerine doğaüstü güç yüklenmiştir. Yakın Dövüş silahı veya Çıplak Saldırıyla bir hedefe isabet ettiğinde, hedef ekstra 1d8 Işıl hasar alır.</p>"
+          "title_tr": "IÅŸÄ±ltÄ±lÄ± Darbeler",
+          "body_tr": "<p>Darbelerine doÄŸaÃ¼stÃ¼ gÃ¼Ã§ yÃ¼klenmiÅŸtir. YakÄ±n DÃ¶vÃ¼ÅŸ silahÄ± veya Ã‡Ä±plak SaldÄ±rÄ±yla bir hedefe isabet ettiÄŸinde, hedef ekstra 1d8 IÅŸÄ±l hasar alÄ±r.</p>"
         }
       ]
     },
@@ -535,8 +535,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -546,8 +546,8 @@
         {
           "title": "Spell Slot Increase",
           "body": "<p>You gain access to 4th-level spell slots, increasing your magical power and the number of spells you can prepare.</p>",
-          "title_tr": "Büyü Slotu Artışı",
-          "body_tr": "<p>Daha yüksek seviyeli büyü slotlarına erişim kazanırsın; bu büyü gücünü ve hazırlayabileceğin büyü sayısını artırır.</p>"
+          "title_tr": "BÃ¼yÃ¼ Slotu ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Daha yÃ¼ksek seviyeli bÃ¼yÃ¼ slotlarÄ±na eriÅŸim kazanÄ±rsÄ±n; bu bÃ¼yÃ¼ gÃ¼cÃ¼nÃ¼ ve hazÄ±rlayabileceÄŸin bÃ¼yÃ¼ sayÄ±sÄ±nÄ± artÄ±rÄ±r.</p>"
         }
       ]
     },
@@ -557,8 +557,8 @@
         {
           "title": "Restoring Touch",
           "body": "<p>When you use Lay On Hands on a creature, you can also remove one or more of the following conditions: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. You must expend 5 Hit Points from the healing pool per condition removed (those points don't also restore Hit Points).</p>",
-          "title_tr": "İyileştirici Dokunuş",
-          "body_tr": "<p>Lay on Hands kullanırken şu durumlardan birini veya daha fazlasını da kaldırabilirsin: Kör, Büyülenmiş, Sağır, Korkmuş, Felçli veya Sersemletilmiş. Kaldırılan her durum için iyileştirme havuzundan 5 Can Puanı harcaman gerekir.</p>"
+          "title_tr": "Ä°yileÅŸtirici DokunuÅŸ",
+          "body_tr": "<p>Lay on Hands kullanÄ±rken ÅŸu durumlardan birini veya daha fazlasÄ±nÄ± da kaldÄ±rabilirsin: KÃ¶r, BÃ¼yÃ¼lenmiÅŸ, SaÄŸÄ±r, KorkmuÅŸ, FelÃ§li veya SersemletilmiÅŸ. KaldÄ±rÄ±lan her durum iÃ§in iyileÅŸtirme havuzundan 5 Can PuanÄ± harcaman gerekir.</p>"
         }
       ]
     },
@@ -568,8 +568,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen oath.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -579,8 +579,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -590,8 +590,8 @@
         {
           "title": "Spell Slot Increase",
           "body": "<p>You gain access to 5th-level spell slots, unlocking the most powerful Paladin spells.</p>",
-          "title_tr": "Büyü Slotu Artışı",
-          "body_tr": "<p>Daha yüksek seviyeli büyü slotlarına erişim kazanırsın; bu büyü gücünü ve hazırlayabileceğin büyü sayısını artırır.</p>"
+          "title_tr": "BÃ¼yÃ¼ Slotu ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Daha yÃ¼ksek seviyeli bÃ¼yÃ¼ slotlarÄ±na eriÅŸim kazanÄ±rsÄ±n; bu bÃ¼yÃ¼ gÃ¼cÃ¼nÃ¼ ve hazÄ±rlayabileceÄŸin bÃ¼yÃ¼ sayÄ±sÄ±nÄ± artÄ±rÄ±r.</p>"
         }
       ]
     },
@@ -601,8 +601,8 @@
         {
           "title": "Aura Expansion",
           "body": "<p>Your Aura of Protection is now a 30-foot Emanation.</p>",
-          "title_tr": "Aura Genişlemesi",
-          "body_tr": "<p>Koruma Auran artık 30 feet'lik bir Yayılım alanına sahip olur.</p>"
+          "title_tr": "Aura GeniÅŸlemesi",
+          "body_tr": "<p>Koruma Auran artÄ±k 30 feet'lik bir YayÄ±lÄ±m alanÄ±na sahip olur.</p>"
         }
       ]
     },
@@ -612,8 +612,8 @@
         {
           "title": "Epic Boon",
           "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Truesight is recommended.</p>",
-          "title_tr": "Destansı Lütuf",
-          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
+          "title_tr": "DestansÄ± LÃ¼tuf",
+          "body_tr": "<p>DestansÄ± LÃ¼tuf yeteneÄŸi veya uygun olduÄŸun baÅŸka bir yetenek kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -623,15 +623,15 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen oath.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     }
   ],
   "name_tr": "Paladin",
-  "subtitle_tr": "İlahi gücü kullanan, kutsal bir yeminine bağlı kutsal savaşçı",
-  "complexity_tr": "Düşük Karmaşıklık",
-  "primaryStat_tr": "Güç · Karizma",
+  "subtitle_tr": "Ä°lahi gÃ¼cÃ¼ kullanan, kutsal bir yeminine baÄŸlÄ± kutsal savaÅŸÃ§Ä±",
+  "complexity_tr": "DÃ¼ÅŸÃ¼k KarmaÅŸÄ±klÄ±k",
+  "primaryStat_tr": "GÃ¼Ã§ Â· Karizma",
   "subclassPrefix_tr": "Yemini"
 }

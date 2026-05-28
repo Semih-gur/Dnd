@@ -193,7 +193,7 @@ export default {
     },
     goToSpell(spell) {
       router.push(
-        "/wiki/spells/" + this.$route.params.className + "/" + spell.name,
+        "/dnd/2024/wiki/spells/" + this.$route.params.className + "/" + spell.name,
       );
     },
     setSort(key) {

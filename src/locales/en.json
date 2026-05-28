@@ -14,9 +14,10 @@
     "darkMode": "Switch to dark mode"
   },
   "home": {
+    "chooseGame": "Choose your game",
     "welcomeTo": "Welcome to",
     "title": "Beholder's Tavern",
-    "subtitle": "Your complete companion for Dungeons & Dragons 5.5. Explore classes, species, spells, backgrounds and more — everything you need to craft your perfect adventure.",
+    "subtitle": "Your complete companion for tabletop RPGs. Explore rules, classes, spells, lore and more — everything you need at the table, all in one place.",
     "discordText": "Join our community on",
     "wiki": {
       "title": "Wiki",
@@ -30,11 +31,12 @@
     },
     "quickAccess": "Quick Access",
     "footer": {
-      "tagline": "Your complete D&D 5.5 companion. Not affiliated with Wizards of the Coast.",
-      "wiki": "Wiki",
+      "tagline": "Your TTRPG companion. Not affiliated with any publisher.",
+      "contact": "Contact",
+      "contactDesc": "Have a suggestion or found an error? Drop us a message.",
       "support": "Support",
       "joinDiscord": "Join Discord",
-      "copyright": "© {year} Beholder's Tavern. Fan-made project. D&D content belongs to Wizards of the Coast."
+      "copyright": "© {year} Beholder's Tavern. Fan-made project."
     }
   },
   "wikiHome": {

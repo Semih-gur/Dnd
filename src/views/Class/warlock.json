@@ -1,32 +1,32 @@
-{
+﻿{
   "name": "Warlock",
   "subtitle": "A wielder of magic that is derived from a bargain with an extraplanar entity",
   "complexity": "High Complexity",
   "primaryStat": "Charisma",
   "accentColor": "#a855f7",
   "accentRgb": "168, 85, 247",
-  "subclassRoute": "/wiki/classes/warlock/",
+  "subclassRoute": "/dnd/2024/wiki/classes/warlock/",
   "multiclassTraits": "Gain the Hit Point Die and training with Light armor.",
   "subclasses": [
     {
       "title": "Archfey Patron",
       "icon": "mdi-flower",
-      "title_tr": "Baş Peri Hamilesi"
+      "title_tr": "BaÅŸ Peri Hamilesi"
     },
     {
       "title": "Celestial Patron",
       "icon": "mdi-white-balance-sunny",
-      "title_tr": "Göksel Hamile"
+      "title_tr": "GÃ¶ksel Hamile"
     },
     {
       "title": "Fiend Patron",
       "icon": "mdi-fire",
-      "title_tr": "İfrit Hamilesi"
+      "title_tr": "Ä°frit Hamilesi"
     },
     {
       "title": "Great Old One Patron",
       "icon": "mdi-eye-outline",
-      "title_tr": "Kadim Büyük Hamile"
+      "title_tr": "Kadim BÃ¼yÃ¼k Hamile"
     }
   ],
   "coreTraits": [
@@ -39,38 +39,38 @@
     {
       "label": "Hit Point Die",
       "value": "D8 per Warlock level",
-      "label_tr": "Can Puanı Zarı",
-      "value_tr": "Afsunkar seviyesi başına D8"
+      "label_tr": "Can PuanÄ± ZarÄ±",
+      "value_tr": "Afsunkar seviyesi baÅŸÄ±na D8"
     },
     {
       "label": "Saving Throw Proficiencies",
       "value": "Wisdom and Charisma",
-      "label_tr": "Kurtarma Atışı Uzmanlıkları",
+      "label_tr": "Kurtarma AtÄ±ÅŸÄ± UzmanlÄ±klarÄ±",
       "value_tr": "Hikmet ve Karizma"
     },
     {
       "label": "Skill Proficiencies",
       "value": "Choose 2: Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion",
-      "label_tr": "Beceri Uzmanlıkları",
-      "value_tr": "2 seçin: Gizli Bilgi, Aldatma, Tarih, Gözdağı, Araştırma, Doğa veya Din"
+      "label_tr": "Beceri UzmanlÄ±klarÄ±",
+      "value_tr": "2 seÃ§in: Gizli Bilgi, Aldatma, Tarih, GÃ¶zdaÄŸÄ±, AraÅŸtÄ±rma, DoÄŸa veya Din"
     },
     {
       "label": "Weapon Proficiencies",
       "value": "Simple weapons",
-      "label_tr": "Silah Uzmanlıkları",
+      "label_tr": "Silah UzmanlÄ±klarÄ±",
       "value_tr": "Basit Silahlar"
     },
     {
       "label": "Armor Training",
       "value": "Light armor",
-      "label_tr": "Zırh Eğitimi",
-      "value_tr": "Hafif Zırh"
+      "label_tr": "ZÄ±rh EÄŸitimi",
+      "value_tr": "Hafif ZÄ±rh"
     },
     {
       "label": "Starting Equipment",
       "value": "Choose A or B: (A) Leather Armor, Sickle, 2 Daggers, Arcane Focus (orb), Book (occult lore), Scholar's Pack, and 15 GP; or (B) 100 GP",
-      "label_tr": "Başlangıç Ekipmanı",
-      "value_tr": "A veya B seçin: (A) Deri Zırh, Orak, 2 Hançer, Arkanik Odaklayıcı (küre), Kitap (okültizm bilgisi), Âlim Çantası ve 15 AP; veya (B) 100 AP"
+      "label_tr": "BaÅŸlangÄ±Ã§ EkipmanÄ±",
+      "value_tr": "A veya B seÃ§in: (A) Deri ZÄ±rh, Orak, 2 HanÃ§er, Arkanik OdaklayÄ±cÄ± (kÃ¼re), Kitap (okÃ¼ltizm bilgisi), Ã‚lim Ã‡antasÄ± ve 15 AP; veya (B) 100 AP"
     }
   ],
   "tableColumns": [
@@ -79,7 +79,7 @@
       "label": "Invocations",
       "badge": true,
       "badgeClass": "inv-badge",
-      "label_tr": "Çağrışımlar"
+      "label_tr": "Ã‡aÄŸrÄ±ÅŸÄ±mlar"
     },
     {
       "key": "cantrips",
@@ -96,7 +96,7 @@
       "label": "Spell Slots",
       "badge": true,
       "badgeClass": "slot-badge",
-      "label_tr": "Büyü Slotları"
+      "label_tr": "BÃ¼yÃ¼ SlotlarÄ±"
     },
     {
       "key": "slotLevel",
@@ -116,7 +116,7 @@
       "preparedSpells": "2",
       "spellSlots": "1",
       "slotLevel": "1",
-      "feature_tr": "Esrarengiz Çağrılar, Pakt Büyüsü"
+      "feature_tr": "Esrarengiz Ã‡aÄŸrÄ±lar, Pakt BÃ¼yÃ¼sÃ¼"
     },
     {
       "level": "2",
@@ -127,7 +127,7 @@
       "preparedSpells": "3",
       "spellSlots": "2",
       "slotLevel": "1",
-      "feature_tr": "Büyülü Kurnazlık"
+      "feature_tr": "BÃ¼yÃ¼lÃ¼ KurnazlÄ±k"
     },
     {
       "level": "3",
@@ -138,7 +138,7 @@
       "preparedSpells": "4",
       "spellSlots": "2",
       "slotLevel": "2",
-      "feature_tr": "Afsunkar Alt Sınıfı"
+      "feature_tr": "Afsunkar Alt SÄ±nÄ±fÄ±"
     },
     {
       "level": "4",
@@ -149,12 +149,12 @@
       "preparedSpells": "5",
       "spellSlots": "2",
       "slotLevel": "2",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "5",
       "profBonus": "+3",
-      "feature": "—",
+      "feature": "â€”",
       "invocations": "5",
       "cantrips": "3",
       "preparedSpells": "6",
@@ -170,12 +170,12 @@
       "preparedSpells": "7",
       "spellSlots": "2",
       "slotLevel": "3",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "7",
       "profBonus": "+3",
-      "feature": "—",
+      "feature": "â€”",
       "invocations": "6",
       "cantrips": "3",
       "preparedSpells": "8",
@@ -191,7 +191,7 @@
       "preparedSpells": "9",
       "spellSlots": "2",
       "slotLevel": "4",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "9",
@@ -202,7 +202,7 @@
       "preparedSpells": "10",
       "spellSlots": "2",
       "slotLevel": "5",
-      "feature_tr": "Hamiyitle İletişim"
+      "feature_tr": "Hamiyitle Ä°letiÅŸim"
     },
     {
       "level": "10",
@@ -213,7 +213,7 @@
       "preparedSpells": "10",
       "spellSlots": "2",
       "slotLevel": "5",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "11",
@@ -234,7 +234,7 @@
       "preparedSpells": "11",
       "spellSlots": "3",
       "slotLevel": "5",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "13",
@@ -255,7 +255,7 @@
       "preparedSpells": "12",
       "spellSlots": "3",
       "slotLevel": "5",
-      "feature_tr": "Alt Sınıf Özelliği"
+      "feature_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi"
     },
     {
       "level": "15",
@@ -276,7 +276,7 @@
       "preparedSpells": "13",
       "spellSlots": "3",
       "slotLevel": "5",
-      "feature_tr": "Nitelik Puanı Artışı"
+      "feature_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±"
     },
     {
       "level": "17",
@@ -291,7 +291,7 @@
     {
       "level": "18",
       "profBonus": "+6",
-      "feature": "—",
+      "feature": "â€”",
       "invocations": "10",
       "cantrips": "4",
       "preparedSpells": "14",
@@ -307,7 +307,7 @@
       "preparedSpells": "15",
       "spellSlots": "4",
       "slotLevel": "5",
-      "feature_tr": "Destansı Lütuf"
+      "feature_tr": "DestansÄ± LÃ¼tuf"
     },
     {
       "level": "20",
@@ -328,14 +328,14 @@
         {
           "title": "Eldritch Invocations",
           "body": "<p>You have unearthed pieces of forbidden knowledge that imbue you with abiding magical ability. You gain one invocation of your choice, such as Pact of the Tome.</p><br/><p>If an invocation has a prerequisite, you must meet it to learn it. Whenever you gain a Warlock level, you can replace one invocation with another you qualify for. You gain more invocations at higher levels as shown in the Invocations column.</p>",
-          "title_tr": "Esrarengiz Çağrılar",
-          "body_tr": "<p>Seni kalıcı büyü yeteneğiyle donatan yasak bilginin parçalarını keşfettin. Seçtiğin bir çağırma kazanırsın.</p><br/><p>Bir çağırmanın önkoşulu varsa, öğrenmek için onu karşılaman gerekir. Bir Warlock seviyesi kazandığında, bir çağırmayı uygun olduğun başka biriyle değiştirebilirsin.</p>"
+          "title_tr": "Esrarengiz Ã‡aÄŸrÄ±lar",
+          "body_tr": "<p>Seni kalÄ±cÄ± bÃ¼yÃ¼ yeteneÄŸiyle donatan yasak bilginin parÃ§alarÄ±nÄ± keÅŸfettin. SeÃ§tiÄŸin bir Ã§aÄŸÄ±rma kazanÄ±rsÄ±n.</p><br/><p>Bir Ã§aÄŸÄ±rmanÄ±n Ã¶nkoÅŸulu varsa, Ã¶ÄŸrenmek iÃ§in onu karÅŸÄ±laman gerekir. Bir Warlock seviyesi kazandÄ±ÄŸÄ±nda, bir Ã§aÄŸÄ±rmayÄ± uygun olduÄŸun baÅŸka biriyle deÄŸiÅŸtirebilirsin.</p>"
         },
         {
           "title": "Pact Magic",
-          "body": "<p>Through occult ceremony, you have formed a pact with a mysterious entity. Charisma is your spellcasting ability and you can use an Arcane Focus as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know two Warlock cantrips of your choice. Eldritch Blast and Prestidigitation are recommended. You gain additional cantrips at levels 4 and 10.</p><br/><p><b>Pact Magic Slots.</b> All your Pact Magic spell slots share the same level, as shown in the Warlock Features table. You regain all expended Pact Magic spell slots when you finish a Short or Long Rest.</p><br/><p>For example, at level 5 you have two level 3 slots — casting a level 1 spell uses one of those slots and casts it at level 3.</p>",
-          "title_tr": "Pakt Büyüsü",
-          "body_tr": "<p>Ezoterik bir törenle gizemli bir varlıkla pakt yaptın. Karizman büyü yapma yeteneğindir ve Büyü Odağını büyü odağı olarak kullanabilirsin.</p><br/><p><b>Pakt Büyü Slotları.</b> Tüm Pakt Büyü slotları aynı seviyeyi paylaşır. Kısa veya Uzun Dinlenmede tüm kullanılmış Pakt Büyü slotlarını geri kazanırsın.</p><br/><p>Örneğin 5. seviyede iki adet 3. seviye slotuna sahipsin; 1. seviye büyü, bu slotlardan birini kullanarak 3. seviyede yapılır.</p>"
+          "body": "<p>Through occult ceremony, you have formed a pact with a mysterious entity. Charisma is your spellcasting ability and you can use an Arcane Focus as a Spellcasting Focus.</p><br/><p><b>Cantrips.</b> You know two Warlock cantrips of your choice. Eldritch Blast and Prestidigitation are recommended. You gain additional cantrips at levels 4 and 10.</p><br/><p><b>Pact Magic Slots.</b> All your Pact Magic spell slots share the same level, as shown in the Warlock Features table. You regain all expended Pact Magic spell slots when you finish a Short or Long Rest.</p><br/><p>For example, at level 5 you have two level 3 slots â€” casting a level 1 spell uses one of those slots and casts it at level 3.</p>",
+          "title_tr": "Pakt BÃ¼yÃ¼sÃ¼",
+          "body_tr": "<p>Ezoterik bir tÃ¶renle gizemli bir varlÄ±kla pakt yaptÄ±n. Karizman bÃ¼yÃ¼ yapma yeteneÄŸindir ve BÃ¼yÃ¼ OdaÄŸÄ±nÄ± bÃ¼yÃ¼ odaÄŸÄ± olarak kullanabilirsin.</p><br/><p><b>Pakt BÃ¼yÃ¼ SlotlarÄ±.</b> TÃ¼m Pakt BÃ¼yÃ¼ slotlarÄ± aynÄ± seviyeyi paylaÅŸÄ±r. KÄ±sa veya Uzun Dinlenmede tÃ¼m kullanÄ±lmÄ±ÅŸ Pakt BÃ¼yÃ¼ slotlarÄ±nÄ± geri kazanÄ±rsÄ±n.</p><br/><p>Ã–rneÄŸin 5. seviyede iki adet 3. seviye slotuna sahipsin; 1. seviye bÃ¼yÃ¼, bu slotlardan birini kullanarak 3. seviyede yapÄ±lÄ±r.</p>"
         }
       ]
     },
@@ -345,8 +345,8 @@
         {
           "title": "Magical Cunning",
           "body": "<p>You can perform an esoteric rite for 1 minute. At the end of it, you regain expended Pact Magic spell slots up to half your maximum (round up).</p><br/><p>Once you use this feature, you can't do so again until you finish a Long Rest.</p>",
-          "title_tr": "Büyülü Kurnazlık",
-          "body_tr": "<p>1 dakika süren ezoterik bir ritüel gerçekleştirebilirsin. Sonunda maksimumun yarısına kadar (yukarı yuvarla) kullanılmış Pakt Büyü slotlarını geri kazanırsın.</p><br/><p>Bu özelliği kullandıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsın.</p>"
+          "title_tr": "BÃ¼yÃ¼lÃ¼ KurnazlÄ±k",
+          "body_tr": "<p>1 dakika sÃ¼ren ezoterik bir ritÃ¼el gerÃ§ekleÅŸtirebilirsin. Sonunda maksimumun yarÄ±sÄ±na kadar (yukarÄ± yuvarla) kullanÄ±lmÄ±ÅŸ Pakt BÃ¼yÃ¼ slotlarÄ±nÄ± geri kazanÄ±rsÄ±n.</p><br/><p>Bu Ã¶zelliÄŸi kullandÄ±ktan sonra Uzun Dinlenmeyi bitirene kadar tekrar kullanamazsÄ±n.</p>"
         }
       ]
     },
@@ -356,8 +356,8 @@
         {
           "title": "Warlock Subclass",
           "body": "<p>You gain a Warlock subclass of your choice. For the rest of your career, you gain each of your subclass's features that are of your Warlock level or lower. Choose your patron below:</p>",
-          "title_tr": "Afsunkar Alt Sınıfı",
-          "body_tr": "<p>Seçtiğin bir Warlock alt sınıfı kazanırsın. Kariyerinin geri kalanında, Warlock seviyene eşit veya düşük olan alt sınıf özelliklerini kazanırsın. Hamini aşağıdan seç:</p>"
+          "title_tr": "Afsunkar Alt SÄ±nÄ±fÄ±",
+          "body_tr": "<p>SeÃ§tiÄŸin bir Warlock alt sÄ±nÄ±fÄ± kazanÄ±rsÄ±n. Kariyerinin geri kalanÄ±nda, Warlock seviyene eÅŸit veya dÃ¼ÅŸÃ¼k olan alt sÄ±nÄ±f Ã¶zelliklerini kazanÄ±rsÄ±n. Hamini aÅŸaÄŸÄ±dan seÃ§:</p>"
         }
       ]
     },
@@ -367,8 +367,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Warlock levels 8, 12, and 16.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın. Bu özelliği belirli seviyelerde tekrar kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n. Bu Ã¶zelliÄŸi belirli seviyelerde tekrar kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -378,8 +378,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen patron.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -389,8 +389,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -400,8 +400,8 @@
         {
           "title": "Contact Patron",
           "body": "<p>You always have the Contact Other Plane spell prepared. With this feature, you can cast it without expending a spell slot to contact your patron, and you automatically succeed on the spell's saving throw.</p><br/><p>Once you cast the spell this way, you can't do so again until you finish a Long Rest.</p>",
-          "title_tr": "Hamiyitle İletişim",
-          "body_tr": "<p>Her zaman Başka Düzlemle İletişim büyüsünü hazır bulundurursun. Bu özellikle, haminle iletişime geçmek için büyü slotu harcamadan yapabilirsin ve büyünün kurtarma atışında otomatik başarılı olursun.</p><br/><p>Bu şekilde büyü yaptıktan sonra Uzun Dinlenmeyi bitirene kadar tekrar yapamazsın.</p>"
+          "title_tr": "Hamiyitle Ä°letiÅŸim",
+          "body_tr": "<p>Her zaman BaÅŸka DÃ¼zlemle Ä°letiÅŸim bÃ¼yÃ¼sÃ¼nÃ¼ hazÄ±r bulundurursun. Bu Ã¶zellikle, haminle iletiÅŸime geÃ§mek iÃ§in bÃ¼yÃ¼ slotu harcamadan yapabilirsin ve bÃ¼yÃ¼nÃ¼n kurtarma atÄ±ÅŸÄ±nda otomatik baÅŸarÄ±lÄ± olursun.</p><br/><p>Bu ÅŸekilde bÃ¼yÃ¼ yaptÄ±ktan sonra Uzun Dinlenmeyi bitirene kadar tekrar yapamazsÄ±n.</p>"
         }
       ]
     },
@@ -411,8 +411,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen patron.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -423,7 +423,7 @@
           "title": "Mystic Arcanum (Level 6)",
           "body": "<p>Your patron grants you a magical secret. Choose one level 6 Warlock spell as this arcanum. You can cast it once without expending a spell slot per Long Rest.</p><br/><p>You gain additional arcana at levels 13 (lv 7), 15 (lv 8), and 17 (lv 9). Whenever you gain a Warlock level, you can replace one arcanum with another Warlock spell of the same level.</p>",
           "title_tr": "Mistik Arkanik (Seviye 6)",
-          "body_tr": "<p>Hamin sana büyülü bir sır bahşeder. Bu arkan olarak bir adet 6. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü slotu harcamadan yapabilirsin.</p><br/><p>13. seviyede (sv 7), 15. seviyede (sv 8) ve 17. seviyede (sv 9) ek arkanlar kazanırsın.</p>"
+          "body_tr": "<p>Hamin sana bÃ¼yÃ¼lÃ¼ bir sÄ±r bahÅŸeder. Bu arkan olarak bir adet 6. seviye Warlock bÃ¼yÃ¼sÃ¼ seÃ§. Uzun Dinlenmede bir kez bÃ¼yÃ¼ slotu harcamadan yapabilirsin.</p><br/><p>13. seviyede (sv 7), 15. seviyede (sv 8) ve 17. seviyede (sv 9) ek arkanlar kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -433,8 +433,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -445,7 +445,7 @@
           "title": "Mystic Arcanum (Level 7)",
           "body": "<p>Your patron grants you another magical secret. Choose one level 7 Warlock spell. You can cast it once without a spell slot per Long Rest.</p>",
           "title_tr": "Mistik Arkanik (Seviye 7)",
-          "body_tr": "<p>Hamin sana başka bir büyülü sır bahşeder. Bir adet 7. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü slotu olmadan yapabilirsin.</p>"
+          "body_tr": "<p>Hamin sana baÅŸka bir bÃ¼yÃ¼lÃ¼ sÄ±r bahÅŸeder. Bir adet 7. seviye Warlock bÃ¼yÃ¼sÃ¼ seÃ§. Uzun Dinlenmede bir kez bÃ¼yÃ¼ slotu olmadan yapabilirsin.</p>"
         }
       ]
     },
@@ -455,8 +455,8 @@
         {
           "title": "Subclass Feature",
           "body": "<p>You gain a new feature from your chosen patron.</p>",
-          "title_tr": "Alt Sınıf Özelliği",
-          "body_tr": "<p>Seçtiğin alt sınıftan yeni bir özellik kazanırsın.</p>"
+          "title_tr": "Alt SÄ±nÄ±f Ã–zelliÄŸi",
+          "body_tr": "<p>SeÃ§tiÄŸin alt sÄ±nÄ±ftan yeni bir Ã¶zellik kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -467,7 +467,7 @@
           "title": "Mystic Arcanum (Level 8)",
           "body": "<p>Your patron grants you another magical secret. Choose one level 8 Warlock spell. You can cast it once without a spell slot per Long Rest.</p>",
           "title_tr": "Mistik Arkanik (Seviye 8)",
-          "body_tr": "<p>Hamin sana başka bir büyülü sır bahşeder. Bir adet 8. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü slotu olmadan yapabilirsin.</p>"
+          "body_tr": "<p>Hamin sana baÅŸka bir bÃ¼yÃ¼lÃ¼ sÄ±r bahÅŸeder. Bir adet 8. seviye Warlock bÃ¼yÃ¼sÃ¼ seÃ§. Uzun Dinlenmede bir kez bÃ¼yÃ¼ slotu olmadan yapabilirsin.</p>"
         }
       ]
     },
@@ -477,8 +477,8 @@
         {
           "title": "Ability Score Improvement",
           "body": "<p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>",
-          "title_tr": "Nitelik Puanı Artışı",
-          "body_tr": "<p>Nitelik Puanı Geliştirme yeteneğini veya uygun olduğun başka bir yeteneği kazanırsın.</p>"
+          "title_tr": "Nitelik PuanÄ± ArtÄ±ÅŸÄ±",
+          "body_tr": "<p>Nitelik PuanÄ± GeliÅŸtirme yeteneÄŸini veya uygun olduÄŸun baÅŸka bir yeteneÄŸi kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -489,7 +489,7 @@
           "title": "Mystic Arcanum (Level 9)",
           "body": "<p>Your patron grants you a final magical secret. Choose one level 9 Warlock spell. You can cast it once without a spell slot per Long Rest.</p>",
           "title_tr": "Mistik Arkanik (Seviye 9)",
-          "body_tr": "<p>Hamin sana son büyülü sırı bahşeder. Bir adet 9. seviye Warlock büyüsü seç. Uzun Dinlenmede bir kez büyü slotu olmadan yapabilirsin.</p>"
+          "body_tr": "<p>Hamin sana son bÃ¼yÃ¼lÃ¼ sÄ±rÄ± bahÅŸeder. Bir adet 9. seviye Warlock bÃ¼yÃ¼sÃ¼ seÃ§. Uzun Dinlenmede bir kez bÃ¼yÃ¼ slotu olmadan yapabilirsin.</p>"
         }
       ]
     },
@@ -499,8 +499,8 @@
         {
           "title": "Epic Boon",
           "body": "<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.</p>",
-          "title_tr": "Destansı Lütuf",
-          "body_tr": "<p>Destansı Lütuf yeteneği veya uygun olduğun başka bir yetenek kazanırsın.</p>"
+          "title_tr": "DestansÄ± LÃ¼tuf",
+          "body_tr": "<p>DestansÄ± LÃ¼tuf yeteneÄŸi veya uygun olduÄŸun baÅŸka bir yetenek kazanÄ±rsÄ±n.</p>"
         }
       ]
     },
@@ -511,14 +511,14 @@
           "title": "Eldritch Master",
           "body": "<p>When you use your Magical Cunning feature, you regain all your expended Pact Magic spell slots instead of only half.</p>",
           "title_tr": "Esrarengiz Usta",
-          "body_tr": "<p>Büyülü Kurnazlık özelliğini kullandığında yalnızca yarısı yerine tüm kullanılmış Pakt Büyü slotlarını geri kazanırsın.</p>"
+          "body_tr": "<p>BÃ¼yÃ¼lÃ¼ KurnazlÄ±k Ã¶zelliÄŸini kullandÄ±ÄŸÄ±nda yalnÄ±zca yarÄ±sÄ± yerine tÃ¼m kullanÄ±lmÄ±ÅŸ Pakt BÃ¼yÃ¼ slotlarÄ±nÄ± geri kazanÄ±rsÄ±n.</p>"
         }
       ]
     }
   ],
   "name_tr": "Afsunkar",
-  "subtitle_tr": "Düzlem ötesi bir varlıkla yapılan pazarlıktan türeyen büyü kullanan",
-  "complexity_tr": "Yüksek Karmaşıklık",
+  "subtitle_tr": "DÃ¼zlem Ã¶tesi bir varlÄ±kla yapÄ±lan pazarlÄ±ktan tÃ¼reyen bÃ¼yÃ¼ kullanan",
+  "complexity_tr": "YÃ¼ksek KarmaÅŸÄ±klÄ±k",
   "primaryStat_tr": "Karizma",
   "subclassPrefix_tr": "Hamisi"
 }

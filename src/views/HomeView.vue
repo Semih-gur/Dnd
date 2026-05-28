@@ -1,25 +1,5 @@
 <template>
   <div class="home-page">
-    <!-- Hero section -->
-    <div class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-content">
-        <span class="hero-eyebrow">{{ $t("home.welcomeTo") }}</span>
-        <h1 class="hero-title">{{ $t("home.title") }}</h1>
-        <p class="hero-subtitle">{{ $t("home.subtitle") }}</p>
-        <p class="hero-discord">
-          {{ $t("home.discordText") }}
-          <a
-            href="https://discord.gg/bg5cPMJe"
-            target="_blank"
-            class="discord-link"
-          >
-            <v-icon size="16">mdi-discord</v-icon> Discord
-          </a>
-        </p>
-      </div>
-    </div>
-
     <!-- Feature cards -->
     <div class="features-section">
       <div class="features-grid">
@@ -80,89 +60,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <!-- Brand -->
-        <div class="footer-brand">
-          <span class="footer-logo">Beholder's Tavern</span>
-          <p class="footer-tagline">{{ $t("home.footer.tagline") }}</p>
-          <div class="footer-socials">
-            <a
-              href="https://www.patreon.com/YOUR_PAGE"
-              target="_blank"
-              class="social-link"
-            >
-              <v-icon size="20">mdi-patreon</v-icon>
-            </a>
-            <a
-              href="https://discord.gg/bg5cPMJe"
-              target="_blank"
-              class="social-link"
-            >
-              <v-icon size="20">mdi-discord</v-icon>
-            </a>
-          </div>
-        </div>
-
-        <!-- Wiki links -->
-        <div class="footer-col">
-          <h3 class="footer-heading">{{ $t("home.footer.wiki") }}</h3>
-          <ul class="footer-links">
-            <li>
-              <router-link to="/wiki/classes">{{
-                $t("nav.classes")
-              }}</router-link>
-            </li>
-            <li>
-              <router-link to="/wiki/species">{{
-                $t("nav.species")
-              }}</router-link>
-            </li>
-            <li>
-              <router-link to="/wiki/spells">{{
-                $t("nav.spells")
-              }}</router-link>
-            </li>
-            <li>
-              <router-link to="/wiki/backgrounds">{{
-                $t("nav.backgrounds")
-              }}</router-link>
-            </li>
-            <li>
-              <router-link to="/wiki/feats">{{ $t("nav.feats") }}</router-link>
-            </li>
-            <li>
-              <router-link to="/wiki/items">{{ $t("nav.items") }}</router-link>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Support links -->
-        <div class="footer-col">
-          <h3 class="footer-heading">{{ $t("home.footer.support") }}</h3>
-          <ul class="footer-links">
-            <li>
-              <a href="https://www.patreon.com/YOUR_PAGE" target="_blank"
-                >Patreon</a
-              >
-            </li>
-            <li>
-              <a href="https://discord.gg/bg5cPMJe" target="_blank">{{
-                $t("home.footer.joinDiscord")
-              }}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>
-          {{ $t("home.footer.copyright", { year: new Date().getFullYear() }) }}
-        </p>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -172,7 +69,7 @@ import router from "@/router";
 export default {
   methods: {
     goWiki() {
-      router.push("/wiki");
+      router.push("/dnd/2024/wiki");
     },
     goChar() {
       router.push("/character_creator");
@@ -184,146 +81,52 @@ export default {
         {
           label: this.$t("nav.classes"),
           icon: "mdi-sword-cross",
-          path: "/wiki/classes",
+          path: "/dnd/2024/wiki/classes",
         },
         {
           label: this.$t("nav.species"),
           icon: "mdi-account",
-          path: "/wiki/species",
+          path: "/dnd/2024/wiki/species",
         },
         {
           label: this.$t("nav.spells"),
           icon: "mdi-auto-fix",
-          path: "/wiki/spells",
+          path: "/dnd/2024/wiki/spells",
         },
         {
           label: this.$t("nav.backgrounds"),
           icon: "mdi-map-marker-radius",
-          path: "/wiki/backgrounds",
+          path: "/dnd/2024/wiki/backgrounds",
         },
         {
           label: this.$t("nav.feats"),
           icon: "mdi-star-circle-outline",
-          path: "/wiki/feats",
+          path: "/dnd/2024/wiki/feats",
         },
         {
           label: this.$t("nav.items"),
           icon: "mdi-bag-personal",
-          path: "/wiki/items",
+          path: "/dnd/2024/wiki/items",
         },
       ];
     },
-  },
-  data() {
-    return {
-      contact: { name: "", email: "", message: "", sent: false },
-    };
   },
 };
 </script>
 
 <style scoped>
-/* ── Page ───────────────────────────────────────── */
 .home-page {
-  margin-top: 20px;
+  margin-top: 5%;
   min-height: 100vh;
   background: var(--bg-page);
   color: var(--text-body);
 }
 
-/* ── Hero ───────────────────────────────────────── */
-.hero {
-  position: relative;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 5rem 2rem 4rem;
-  overflow: hidden;
-}
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-      ellipse at 50% 0%,
-      rgba(var(--accent-rgb), 0.18) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse at 20% 80%,
-      rgba(var(--accent-rgb), 0.08) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      ellipse at 80% 60%,
-      rgba(var(--accent-rgb), 0.06) 0%,
-      transparent 40%
-    );
-}
-.hero-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(
-    circle,
-    rgba(var(--accent-rgb), 0.06) 1px,
-    transparent 1px
-  );
-  background-size: 40px 40px;
-}
-.hero-content {
-  position: relative;
-  max-width: 680px;
-}
-.hero-eyebrow {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-}
-.hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  margin: 0 0 1.25rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-.hero-subtitle {
-  font-size: 1rem;
-  color: var(--text-subtle);
-  line-height: 1.75;
-  margin: 0 0 0.75rem;
-}
-.hero-discord {
-  font-size: 0.9rem;
-  color: var(--text-subtle);
-  margin: 0 0 2rem;
-}
-.discord-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  color: #5865f2;
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.15s ease;
-}
-.discord-link:hover {
-  opacity: 0.8;
-}
-
 /* ── Feature cards ──────────────────────────────── */
 .features-section {
   max-width: 900px;
-  margin: -80px auto 0;
-  padding: 0 1.5rem 4rem;
-  position: relative;
-  z-index: 1;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
 }
 .features-grid {
   display: grid;
@@ -334,11 +137,7 @@ export default {
   .features-grid {
     grid-template-columns: 1fr;
   }
-  .hero-title {
-    font-size: 2.5rem;
-  }
 }
-
 .feature-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -352,7 +151,6 @@ export default {
   box-shadow: 0 12px 32px var(--shadow-card);
   border-color: rgba(var(--accent-rgb), 0.2);
 }
-
 .feature-card-inner {
   position: relative;
   width: 100%;
@@ -369,15 +167,6 @@ export default {
 .feature-card:hover .feature-img {
   transform: scale(1.05);
 }
-.feature-gradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background: linear-gradient(to bottom, transparent, var(--bg-card));
-}
-
 .feature-body {
   padding: 1.25rem 1.5rem 1.5rem;
 }
@@ -471,222 +260,5 @@ export default {
 }
 .quick-card:hover .quick-label {
   color: var(--accent);
-}
-/* ── Patreon Banner ─────────────────────────────── */
-.patreon-banner {
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.15) 0%,
-    rgba(var(--bg-page-rgb), 0.95) 100%
-  );
-  border-top: 1px solid rgba(249, 115, 22, 0.3);
-  border-bottom: 1px solid rgba(249, 115, 22, 0.3);
-  padding: 2rem 1.5rem;
-}
-.patreon-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.patreon-left {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-.patreon-icon {
-  font-size: 2.5rem !important;
-  color: #f97316;
-  flex-shrink: 0;
-}
-.patreon-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.25rem;
-}
-.patreon-desc {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin: 0;
-  max-width: 500px;
-}
-.patreon-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.75rem;
-  background: #f97316;
-  color: #fff;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  border-radius: 999px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background 0.15s ease, transform 0.15s ease;
-  flex-shrink: 0;
-}
-.patreon-btn:hover {
-  background: #ea6c00;
-  transform: translateY(-2px);
-}
-
-/* ── Footer ─────────────────────────────────────── */
-.site-footer {
-  background: var(--bg-footer);
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 3rem;
-}
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem 3rem;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
-  gap: 3rem;
-}
-@media (max-width: 900px) {
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .footer-inner {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Brand */
-.footer-logo {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.footer-tagline {
-  font-size: 0.8rem;
-  color: var(--text-faint2);
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-.footer-socials {
-  display: flex;
-  gap: 0.75rem;
-}
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: var(--border-faint);
-  border: 1px solid var(--border-light);
-  color: var(--text-subtle);
-  text-decoration: none;
-  transition: all 0.15s ease;
-}
-.social-link:hover {
-  background: rgba(var(--accent-rgb), 0.1);
-  border-color: rgba(var(--accent-rgb), 0.3);
-  color: var(--accent);
-}
-
-/* Columns */
-.footer-heading {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.footer-links a,
-.footer-links .router-link-active {
-  font-size: 0.875rem;
-  color: var(--text-subtle);
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-.footer-links a:hover {
-  color: var(--accent);
-}
-
-/* Contact form */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.contact-input {
-  width: 100%;
-  padding: 0.6rem 0.875rem;
-  background: var(--border-faint);
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-  color: var(--text-body);
-  font-size: 0.82rem;
-  outline: none;
-  transition: border-color 0.15s ease;
-  box-sizing: border-box;
-  resize: none;
-  font-family: inherit;
-}
-.contact-input::placeholder {
-  color: var(--text-faint);
-}
-.contact-input:focus {
-  border-color: rgba(var(--accent-rgb), 0.4);
-}
-.contact-textarea {
-  min-height: 80px;
-}
-.contact-btn {
-  padding: 0.6rem 1.25rem;
-  background: rgba(var(--accent-rgb), 0.15);
-  border: 1px solid rgba(var(--accent-rgb), 0.4);
-  border-radius: 8px;
-  color: var(--accent);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-.contact-btn:hover:not(:disabled) {
-  background: rgba(var(--accent-rgb), 0.25);
-}
-.contact-btn:disabled {
-  color: #a3e635;
-  border-color: rgba(163, 230, 53, 0.4);
-  background: rgba(163, 230, 53, 0.1);
-  cursor: default;
-}
-
-/* Bottom bar */
-.footer-bottom {
-  border-top: 1px solid var(--border-faint);
-  padding: 1.25rem 1.5rem;
-  text-align: center;
-}
-.footer-bottom p {
-  font-size: 0.75rem;
-  color: var(--text-faint);
-  margin: 0;
 }
 </style>
