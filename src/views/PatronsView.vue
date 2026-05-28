@@ -170,18 +170,20 @@ export default {
   },
 
   async mounted() {
-  try {
-    const res = await fetch("https://beholders-tavern-api.asemihgur.workers.dev/api/patrons");
-    if (!res.ok) throw new Error("Failed to fetch");
-    const data = await res.json();
-    this.patrons = Array.isArray(data) ? data : [];
-  } catch (err) {
-    console.error(err);
-    this.error = true;
-  } finally {
-    this.loading = false;
-  }
-},
+    try {
+      const res = await fetch(
+        "https://beholders-tavern-api.asemihgur.workers.dev/api/patrons",
+      );
+      if (!res.ok) throw new Error("Failed to fetch");
+      this.patrons = await res.json();
+    } catch (err) {
+      console.error(err);
+      this.error = true;
+    } finally {
+      this.loading = false;
+    }
+  },
+};
 </script>
 
 <style scoped>

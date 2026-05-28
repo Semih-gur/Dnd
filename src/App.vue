@@ -117,7 +117,7 @@
           <span class="nav-label">{{ $t("nav.patrons") }}</span>
         </div>
         <a
-          href="https://www.patreon.com/YOUR_PAGE"
+          href="https://www.patreon.com/BeholdersTavern"
           target="_blank"
           class="patreon-nav-btn"
           title="Support us on Patreon"
