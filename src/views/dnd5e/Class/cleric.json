@@ -1,0 +1,14 @@
+{
+  "name": "Cleric",
+  "subtitle": "Coming soon — D&D 5e (2014)",
+  "complexity": "—",
+  "primaryStat": "—",
+  "image": "cleric.png",
+  "coreTraits": [],
+  "tableColumns": [],
+  "levels": [],
+  "levelPanels": [],
+  "subclasses": [],
+  "subclassPrefix": "",
+  "subclassRoute": "/dnd/5e/wiki/classes/cleric/"
+}

@@ -160,7 +160,7 @@
 <script>
 import router from "@/router";
 import ChangelogPopup from "@/components/ChangelogPopup.vue";
-import { dnd2024Nav } from "@/systems.js";
+import { dnd2024Nav, dnd5eNav } from "@/systems.js";
 
 export default {
   name: "App",
@@ -202,6 +202,13 @@ export default {
     navItems() {
       if (this.$route.path.startsWith("/dnd/2024")) {
         return dnd2024Nav.map((item) => ({
+          path: item.path,
+          icon: item.icon,
+          label: this.$t(item.labelKey),
+        }));
+      }
+      if (this.$route.path.startsWith("/dnd/5e")) {
+        return dnd5eNav.map((item) => ({
           path: item.path,
           icon: item.icon,
           label: this.$t(item.labelKey),

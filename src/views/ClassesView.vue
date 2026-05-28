@@ -68,7 +68,10 @@ export default {
       return this.$t(`classes.complexity.${n}`);
     },
     goTo(item) {
-      router.push("/dnd/2024/wiki/classes/" + item.routeKey);
+      const prefix = this.$route.path.startsWith("/dnd/5e/")
+        ? "/dnd/5e/wiki/classes/"
+        : "/dnd/2024/wiki/classes/";
+      router.push(prefix + item.routeKey);
     },
   },
   computed: {

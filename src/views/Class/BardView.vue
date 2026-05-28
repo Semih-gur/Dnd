@@ -154,12 +154,14 @@
 
 <script>
 import router from "@/router";
-import data from "./bard.json";
 
 export default {
   data() {
+    const classData = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/Class/bard.json")
+      : require("./bard.json");
     return {
-      data,
+      data: classData,
       openPanels: [0],
     };
   },

@@ -4,7 +4,7 @@
     <div class="hero">
       <div class="hero-overlay">
         <div class="hero-content">
-          <h1 class="hero-title">{{ $t("wikiHome.title") }}</h1>
+          <h1 class="hero-title">{{ wikiTitle }}</h1>
         </div>
       </div>
     </div>
@@ -49,10 +49,18 @@ const artMap = {
 export default {
   methods: {
     goTo(page) {
-      router.push("/dnd/2024/wiki/" + page);
+      const prefix = this.$route.path.startsWith("/dnd/5e/")
+        ? "/dnd/5e/wiki/"
+        : "/dnd/2024/wiki/";
+      router.push(prefix + page);
     },
   },
   computed: {
+    wikiTitle() {
+      return this.$route.path.startsWith("/dnd/5e/")
+        ? "D&D 5e Wiki"
+        : this.$t("wikiHome.title");
+    },
     sections() {
       return this.$tm("wikiHome.sections").map((s) => ({
         ...s,

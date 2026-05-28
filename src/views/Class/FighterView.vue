@@ -163,12 +163,14 @@
 
 <script>
 import router from "@/router";
-import data from "./fighter.json";
 
 export default {
   data() {
+    const classData = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/Class/fighter.json")
+      : require("./fighter.json");
     return {
-      data,
+      data: classData,
       openPanels: [0],
     };
   },

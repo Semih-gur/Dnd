@@ -160,12 +160,14 @@
 
 <script>
 import router from "@/router";
-import data from "./warlock.json";
 
 export default {
   data() {
+    const classData = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/Class/warlock.json")
+      : require("./warlock.json");
     return {
-      data,
+      data: classData,
       openPanels: [0],
     };
   },

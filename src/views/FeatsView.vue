@@ -128,21 +128,19 @@
 </template>
 
 <script>
-import feats from "@/views/feats.json";
-
 export default {
   computed: {
     origin() {
-      return feats.find((f) => f.typ === "origin")?.feats ?? [];
+      return this.feats.find((f) => f.typ === "origin")?.feats ?? [];
     },
     general() {
-      return feats.find((f) => f.typ === "general")?.feats ?? [];
+      return this.feats.find((f) => f.typ === "general")?.feats ?? [];
     },
     fightStyle() {
-      return feats.find((f) => f.typ === "fightStyle")?.feats ?? [];
+      return this.feats.find((f) => f.typ === "fightStyle")?.feats ?? [];
     },
     epic() {
-      return feats.find((f) => f.typ === "epic")?.feats ?? [];
+      return this.feats.find((f) => f.typ === "epic")?.feats ?? [];
     },
     currentFeats() {
       return (
@@ -171,6 +169,9 @@ export default {
   },
 
   data() {
+    const feats = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/feats.json")
+      : require("@/views/feats.json");
     return {
       tab: "origin",
       feats,

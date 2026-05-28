@@ -79,8 +79,6 @@
 </template>
 
 <script>
-import races from "./races.json";
-
 export default {
   computed: {
     compRace() {
@@ -94,6 +92,9 @@ export default {
   },
 
   data() {
+    const races = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/races.json")
+      : require("./races.json");
     return {
       url: this.$route.href.split("/").pop(),
       races,

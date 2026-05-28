@@ -84,10 +84,12 @@
 
 <script>
 import router from "@/router";
-import allSpells from "@/views/SpellView/allSpells.json";
 
 export default {
   data() {
+    const allSpells = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/SpellView/allSpells.json")
+      : require("@/views/SpellView/allSpells.json");
     return {
       tab: "0",
       allSpells,
@@ -193,7 +195,7 @@ export default {
     },
     goToSpell(spell) {
       router.push(
-        "/dnd/2024/wiki/spells/" + this.$route.params.className + "/" + spell.name,
+        (this.$route.path.startsWith("/dnd/5e/") ? "/dnd/5e/wiki/spells/" : "/dnd/2024/wiki/spells/") + this.$route.params.className + "/" + spell.name,
       );
     },
     setSort(key) {

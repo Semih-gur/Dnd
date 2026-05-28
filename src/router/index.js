@@ -202,6 +202,128 @@ const routes = [
     component: ConditionsView,
   },
 
+  // ── D&D 5e ───────────────────────────────────────
+  {
+    path: "/dnd/5e",
+    component: HomeViewVue,
+  },
+  {
+    path: "/dnd/5e/wiki",
+    component: WikiHomeView,
+  },
+  {
+    path: "/dnd/5e/wiki/species",
+    component: RacesView,
+  },
+  {
+    path: "/dnd/5e/wiki/species/:label",
+    component: SRaceView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes",
+    component: ClassesView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/barbarian",
+    component: BarbarianView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/bard",
+    component: BardView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/cleric",
+    component: ClericView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/druid",
+    component: DruidView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/fighter",
+    component: FighterView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/monk",
+    component: MonkView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/paladin",
+    component: PaladinView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/ranger",
+    component: RangerView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/rogue",
+    component: RogueView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/sorcerer",
+    component: SorcererView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/warlock",
+    component: WarlockView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/wizard",
+    component: WizardView,
+  },
+  {
+    path: "/dnd/5e/wiki/classes/:class/:subclass",
+    component: SubclassView,
+  },
+  {
+    path: "/dnd/5e/wiki/spells",
+    component: SpellsView,
+  },
+  {
+    path: "/dnd/5e/wiki/spells/:className",
+    component: CspellView,
+  },
+  {
+    path: "/dnd/5e/wiki/spells/:className/:spellName",
+    component: SpellDesc,
+  },
+  {
+    path: "/dnd/5e/wiki/backgrounds",
+    component: BackgroundsView,
+  },
+  {
+    path: "/dnd/5e/wiki/backgrounds/:background",
+    component: BackgrView,
+  },
+  {
+    path: "/dnd/5e/wiki/feats",
+    component: FeatsView,
+  },
+  {
+    path: "/dnd/5e/wiki/items",
+    component: ItemsView,
+  },
+  {
+    path: "/dnd/5e/wiki/items/weapons",
+    component: WeaponsView,
+  },
+  {
+    path: "/dnd/5e/wiki/items/armors",
+    component: ArmorsView,
+  },
+  {
+    path: "/dnd/5e/wiki/items/potions",
+    component: PotionsView,
+  },
+  {
+    path: "/dnd/5e/wiki/items/magic_items",
+    component: MagicItems,
+  },
+  {
+    path: "/dnd/5e/wiki/conditions",
+    component: ConditionsView,
+  },
+
   // ── Legacy redirects ──────────────────────────────
   { path: "/wiki", redirect: "/dnd/2024/wiki" },
   { path: "/wiki/:pathMatch(.*)*", redirect: (to) => "/dnd/2024/wiki/" + to.params.pathMatch },

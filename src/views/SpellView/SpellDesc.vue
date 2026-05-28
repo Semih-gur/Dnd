@@ -86,22 +86,26 @@
 </template>
 
 <script>
-import allSpells from "@/views/SpellView/allSpells.json";
-
 export default {
+  data() {
+    const allSpells = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/SpellView/allSpells.json")
+      : require("@/views/SpellView/allSpells.json");
+    return { allSpells };
+  },
   computed: {
     spellName() {
       return this.$route.params.spellName || "";
     },
     spell() {
-      for (const levelEntry of allSpells) {
+      for (const levelEntry of this.allSpells) {
         const found = levelEntry.spells.find((s) => s.name === this.spellName);
         if (found) return found;
       }
       return null;
     },
     levelLabel() {
-      for (const levelEntry of allSpells) {
+      for (const levelEntry of this.allSpells) {
         const found = levelEntry.spells.find((s) => s.name === this.spellName);
         if (found) {
           return levelEntry.level === "0"

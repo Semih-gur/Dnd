@@ -29,10 +29,11 @@
 </template>
 
 <script>
-import conditions from "./conditions.json";
-
 export default {
   data() {
+    const conditions = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/Conditions/conditions.json")
+      : require("./conditions.json");
     return { conditions };
   },
 };

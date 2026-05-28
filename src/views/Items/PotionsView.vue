@@ -56,10 +56,11 @@
 </template>
 
 <script>
-import potions from "./potions.json";
-
 export default {
   data() {
+    const potions = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/Items/potions.json")
+      : require("./potions.json");
     return {
       tab: potions[0].type,
       potions,

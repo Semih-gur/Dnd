@@ -69,8 +69,6 @@
 </template>
 
 <script>
-import backgrounds from "@/views/backgrounds.json";
-
 export default {
   methods: {
     capitalize(str) {
@@ -83,6 +81,9 @@ export default {
     },
   },
   data() {
+    const backgrounds = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/backgrounds.json")
+      : require("@/views/backgrounds.json");
     return {
       backgrounds,
       dialog: false,

@@ -139,10 +139,11 @@
 </template>
 
 <script>
-import magicItems from "./magicItems.json";
-
 export default {
   data() {
+    const magicItems = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/Items/magicItems.json")
+      : require("./magicItems.json");
     return {
       items: magicItems,
       tab: magicItems[0].type,

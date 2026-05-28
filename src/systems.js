@@ -18,8 +18,8 @@ export const systems = [
       {
         id: "5e",
         label: "5e (2014)",
-        available: false,
-        basePath: "/dnd/5e/wiki",
+        available: true,
+        basePath: "/dnd/5e",
       },
     ],
   },
@@ -52,6 +52,44 @@ export const systems = [
         basePath: "/wod/mage",
       },
     ],
+  },
+];
+
+export const dnd5eNav = [
+  {
+    path: "dnd/5e/wiki/species",
+    icon: "mdi-account",
+    labelKey: "nav.species",
+  },
+  {
+    path: "dnd/5e/wiki/classes",
+    icon: "mdi-sword-cross",
+    labelKey: "nav.classes",
+  },
+  {
+    path: "dnd/5e/wiki/spells",
+    icon: "mdi-auto-fix",
+    labelKey: "nav.spells",
+  },
+  {
+    path: "dnd/5e/wiki/backgrounds",
+    icon: "mdi-map-marker-radius",
+    labelKey: "nav.backgrounds",
+  },
+  {
+    path: "dnd/5e/wiki/feats",
+    icon: "mdi-star-circle-outline",
+    labelKey: "nav.feats",
+  },
+  {
+    path: "dnd/5e/wiki/items",
+    icon: "mdi-bag-personal",
+    labelKey: "nav.items",
+  },
+  {
+    path: "dnd/5e/wiki/conditions",
+    icon: "mdi-alert-circle-outline",
+    labelKey: "nav.conditions",
   },
 ];
 

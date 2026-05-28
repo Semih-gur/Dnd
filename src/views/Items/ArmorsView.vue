@@ -71,10 +71,11 @@
 </template>
 
 <script>
-import weapons from "./armors.json";
-
 export default {
   data() {
+    const weapons = this.$route.path.startsWith("/dnd/5e/")
+      ? require("@/views/dnd5e/Items/armors.json")
+      : require("./armors.json");
     return {
       tab: weapons[0].type,
       weapons,

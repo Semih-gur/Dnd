@@ -69,44 +69,49 @@ import router from "@/router";
 export default {
   methods: {
     goWiki() {
-      router.push("/dnd/2024/wiki");
+      router.push(this.wikiBase);
     },
     goChar() {
       router.push("/character_creator");
     },
   },
   computed: {
+    wikiBase() {
+      return this.$route.path.startsWith("/dnd/5e")
+        ? "/dnd/5e/wiki"
+        : "/dnd/2024/wiki";
+    },
     quickLinks() {
       return [
         {
           label: this.$t("nav.classes"),
           icon: "mdi-sword-cross",
-          path: "/dnd/2024/wiki/classes",
+          path: this.wikiBase + "/classes",
         },
         {
           label: this.$t("nav.species"),
           icon: "mdi-account",
-          path: "/dnd/2024/wiki/species",
+          path: this.wikiBase + "/species",
         },
         {
           label: this.$t("nav.spells"),
           icon: "mdi-auto-fix",
-          path: "/dnd/2024/wiki/spells",
+          path: this.wikiBase + "/spells",
         },
         {
           label: this.$t("nav.backgrounds"),
           icon: "mdi-map-marker-radius",
-          path: "/dnd/2024/wiki/backgrounds",
+          path: this.wikiBase + "/backgrounds",
         },
         {
           label: this.$t("nav.feats"),
           icon: "mdi-star-circle-outline",
-          path: "/dnd/2024/wiki/feats",
+          path: this.wikiBase + "/feats",
         },
         {
           label: this.$t("nav.items"),
           icon: "mdi-bag-personal",
-          path: "/dnd/2024/wiki/items",
+          path: this.wikiBase + "/items",
         },
       ];
     },
