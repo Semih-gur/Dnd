@@ -10,11 +10,11 @@
         <p class="hero-discord">
           {{ $t("home.discordText") }}
           <a
-            href="https://discord.gg/bg5cPMJe"
+            href="https://discord.gg/8tsZRYmmH5"
             target="_blank"
             class="discord-link"
           >
-            <v-icon size="16">mdi-discord</v-icon> Discord
+            <font-awesome-icon :icon="['fab', 'discord']" style="font-size:16px" /> Discord
           </a>
         </p>
       </div>
@@ -97,11 +97,11 @@
               <v-icon size="20">mdi-patreon</v-icon>
             </a>
             <a
-              href="https://discord.gg/bg5cPMJe"
+              href="https://discord.gg/8tsZRYmmH5"
               target="_blank"
               class="social-link"
             >
-              <v-icon size="20">mdi-discord</v-icon>
+              <font-awesome-icon :icon="['fab', 'discord']" style="font-size:20px" />
             </a>
           </div>
         </div>
@@ -149,7 +149,7 @@
               >
             </li>
             <li>
-              <a href="https://discord.gg/bg5cPMJe" target="_blank">{{
+              <a href="https://discord.gg/8tsZRYmmH5" target="_blank">{{
                 $t("home.footer.joinDiscord")
               }}</a>
             </li>
