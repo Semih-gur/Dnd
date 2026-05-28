@@ -14,7 +14,11 @@
             target="_blank"
             class="discord-link"
           >
-            <font-awesome-icon :icon="['fab', 'discord']" style="font-size:16px" /> Discord
+            <font-awesome-icon
+              :icon="['fab', 'discord']"
+              style="font-size: 16px"
+            />
+            Discord
           </a>
         </p>
       </div>
@@ -90,7 +94,7 @@
           <p class="footer-tagline">{{ $t("home.footer.tagline") }}</p>
           <div class="footer-socials">
             <a
-              href="https://www.patreon.com/YOUR_PAGE"
+              href="https://www.patreon.com/BeholdersTavern"
               target="_blank"
               class="social-link"
             >
@@ -101,7 +105,10 @@
               target="_blank"
               class="social-link"
             >
-              <font-awesome-icon :icon="['fab', 'discord']" style="font-size:20px" />
+              <font-awesome-icon
+                :icon="['fab', 'discord']"
+                style="font-size: 20px"
+              />
             </a>
           </div>
         </div>
@@ -144,7 +151,7 @@
           <h3 class="footer-heading">{{ $t("home.footer.support") }}</h3>
           <ul class="footer-links">
             <li>
-              <a href="https://www.patreon.com/YOUR_PAGE" target="_blank"
+              <a href="https://www.patreon.com/BeholdersTavern" target="_blank"
                 >Patreon</a
               >
             </li>
