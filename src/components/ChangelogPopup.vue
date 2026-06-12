@@ -35,7 +35,7 @@
 <script>
 // Bump this version string with every update you want users to see.
 // Changing it causes the popup to show again for everyone.
-const CHANGELOG_VERSION = "1.0.0";
+const CHANGELOG_VERSION = "1.0.1";
 
 export default {
   name: "ChangelogPopup",
@@ -44,14 +44,18 @@ export default {
     return {
       visible: false,
       changelog: {
-        title: "Beholder's Tavern is Live!",
+        title: "Changelog",
         date: "May 2026",
         changes: [
           {
-            type: "new",
-            text: "Full D&D 5.5 Wiki — classes, species, spells, items, feats, backgrounds",
+            type: "fix",
+            text: "Aasimar image fixed.",
           },
-          { type: "new", text: "Character Creator with PDF export" },
+          {
+            type: "fix",
+            text: "On mobile spell tables were not behaving correctly.",
+          },
+          { type: "fix", text: "Minor padding and margin problems on mobile." },
         ],
       },
     };

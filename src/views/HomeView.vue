@@ -341,6 +341,9 @@ export default {
   .features-grid {
     grid-template-columns: 1fr;
   }
+  .hero {
+    padding-top: 5.5rem;
+  }
   .hero-title {
     font-size: 2.5rem;
   }
