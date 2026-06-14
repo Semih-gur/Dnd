@@ -224,10 +224,86 @@ export default {
 
 <style scoped>
 .home-page {
-  margin-top: 5%;
   min-height: 100vh;
   background: var(--bg-page);
   color: var(--text-body);
+}
+
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7rem 2rem 4rem;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(var(--accent-rgb), 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(var(--accent-rgb), 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 60%, rgba(var(--accent-rgb), 0.06) 0%, transparent 40%);
+}
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg-page);
+  opacity: 0.6;
+}
+.hero-content {
+  position: relative;
+  max-width: 680px;
+  z-index: 1;
+}
+.hero-eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--text-subtle);
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-discord {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.discord-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.discord-link:hover {
+  text-decoration: underline;
 }
 
 /* ── Feature cards ──────────────────────────────── */
@@ -244,9 +320,6 @@ export default {
 @media (max-width: 640px) {
   .features-grid {
     grid-template-columns: 1fr;
-  }
-  .hero-title {
-    font-size: 2.5rem;
   }
 }
 .feature-card {
@@ -371,5 +444,91 @@ export default {
 }
 .quick-card:hover .quick-label {
   color: var(--accent);
+}
+
+/* ── Footer ─────────────────────────────────────── */
+.site-footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+  padding: 3rem 1.5rem 1.5rem;
+}
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-faint);
+}
+.footer-logo {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 0.5rem;
+}
+.footer-tagline {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+.social-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.social-link:hover {
+  color: var(--accent);
+}
+.footer-heading {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}
+.footer-bottom {
+  max-width: 900px;
+  margin: 1.25rem auto 0;
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 5.5rem;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 </style>

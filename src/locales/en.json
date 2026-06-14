@@ -17,7 +17,7 @@
     "chooseGame": "Choose your game",
     "welcomeTo": "Welcome to",
     "title": "Beholder's Tavern",
-    "subtitle": "Your complete companion for tabletop RPGs. Explore rules, classes, spells, lore and more — everything you need at the table, all in one place.",
+    "subtitle": "Your complete companion for tabletop RPGs. Explore rules, classes, spells, and more — everything you need at the table, all in one place.",
     "discordText": "Join our community on",
     "wiki": {
       "title": "Wiki",
@@ -32,6 +32,7 @@
     "quickAccess": "Quick Access",
     "footer": {
       "tagline": "Your TTRPG companion. Not affiliated with any publisher.",
+      "wiki": "Wiki",
       "contact": "Contact",
       "contactDesc": "Have a suggestion or found an error? Drop us a message.",
       "support": "Support",
