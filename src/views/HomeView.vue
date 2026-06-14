@@ -1,5 +1,25 @@
 <template>
   <div class="home-page">
+    <!-- Hero section -->
+    <div class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">{{ $t("home.welcomeTo") }}</span>
+        <h1 class="hero-title">{{ $t("home.title") }}</h1>
+        <p class="hero-subtitle">{{ $t("home.subtitle") }}</p>
+        <p class="hero-discord">
+          {{ $t("home.discordText") }}
+          <a
+            href="https://discord.gg/bg5cPMJe"
+            target="_blank"
+            class="discord-link"
+          >
+            <v-icon size="16">mdi-discord</v-icon> Discord
+          </a>
+        </p>
+      </div>
+    </div>
+
     <!-- Feature cards -->
     <div class="features-section">
       <div class="features-grid">
@@ -60,6 +80,89 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <span class="footer-logo">Beholder's Tavern</span>
+          <p class="footer-tagline">{{ $t("home.footer.tagline") }}</p>
+          <div class="footer-socials">
+            <a
+              href="https://www.patreon.com/YOUR_PAGE"
+              target="_blank"
+              class="social-link"
+            >
+              <v-icon size="20">mdi-patreon</v-icon>
+            </a>
+            <a
+              href="https://discord.gg/bg5cPMJe"
+              target="_blank"
+              class="social-link"
+            >
+              <v-icon size="20">mdi-discord</v-icon>
+            </a>
+          </div>
+        </div>
+
+        <!-- Wiki links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">{{ $t("home.footer.wiki") }}</h3>
+          <ul class="footer-links">
+            <li>
+              <router-link to="/wiki/classes">{{
+                $t("nav.classes")
+              }}</router-link>
+            </li>
+            <li>
+              <router-link to="/wiki/species">{{
+                $t("nav.species")
+              }}</router-link>
+            </li>
+            <li>
+              <router-link to="/wiki/spells">{{
+                $t("nav.spells")
+              }}</router-link>
+            </li>
+            <li>
+              <router-link to="/wiki/backgrounds">{{
+                $t("nav.backgrounds")
+              }}</router-link>
+            </li>
+            <li>
+              <router-link to="/wiki/feats">{{ $t("nav.feats") }}</router-link>
+            </li>
+            <li>
+              <router-link to="/wiki/items">{{ $t("nav.items") }}</router-link>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Support links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">{{ $t("home.footer.support") }}</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.patreon.com/YOUR_PAGE" target="_blank"
+                >Patreon</a
+              >
+            </li>
+            <li>
+              <a href="https://discord.gg/bg5cPMJe" target="_blank">{{
+                $t("home.footer.joinDiscord")
+              }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          {{ $t("home.footer.copyright", { year: new Date().getFullYear() }) }}
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -141,6 +244,9 @@ export default {
 @media (max-width: 640px) {
   .features-grid {
     grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2.5rem;
   }
 }
 .feature-card {

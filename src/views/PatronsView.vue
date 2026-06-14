@@ -171,7 +171,9 @@ export default {
 
   async mounted() {
     try {
-      const res = await fetch("http://localhost:3000/api/patrons");
+      const res = await fetch(
+        "https://beholders-tavern-api.asemihgur.workers.dev/api/patrons",
+      );
       if (!res.ok) throw new Error("Failed to fetch");
       this.patrons = await res.json();
     } catch (err) {

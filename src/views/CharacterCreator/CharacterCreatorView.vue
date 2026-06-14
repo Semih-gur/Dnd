@@ -3,7 +3,6 @@
     <!-- Header -->
     <div class="creator-header">
       <div class="header-inner">
-        <span class="header-eyebrow">Beholder's Tavern</span>
         <h1 class="header-title">Character Creator</h1>
         <p class="header-sub">Build your Level 1 character for D&D 5.5</p>
       </div>
@@ -2388,7 +2387,7 @@ export default {
 
 <style scoped>
 .creator-page {
-  margin-top: 30px;
+  margin-top: 10%;
   min-height: 100vh;
   background: var(--bg-page);
   color: var(--text-body);
@@ -3904,7 +3903,7 @@ export default {
 
 @media (max-width: 640px) {
   .creator-header {
-    padding: 2rem 1.25rem 1.5rem;
+    padding: 4rem 1.25rem 1.5rem;
   }
   .header-title {
     font-size: 1.75rem;

@@ -461,5 +461,35 @@ export default {
   .hero-overlay {
     padding: 1.25rem 1.5rem;
   }
+
+  .page-content {
+    padding: 1rem 0.5rem 3rem;
+  }
+
+  /* Hide least-essential columns on mobile */
+  .col-range,
+  .col-components {
+    display: none;
+  }
+
+  .spell-table {
+    table-layout: auto;
+    font-size: 0.78rem;
+  }
+
+  .spell-table th,
+  .spell-table td {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .col-name { width: 32%; }
+  .col-school { width: 22%; }
+  .col-casting_time { width: 26%; }
+  .col-duration { width: 20%; }
+
+  .school-badge {
+    font-size: 0.62rem;
+    padding: 2px 5px;
+  }
 }
 </style>
